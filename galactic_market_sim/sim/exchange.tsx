@@ -92,6 +92,7 @@ class Exchange {
       console.log("\t", company.executionRoll.toString());
       console.log("\t", company.impactRoll.toString());
       console.log("\t", company.analysisRoll.toString());
+      console.log("\t", company.price);
 
       // change trends
       if (company.executionRoll.isCriticalSuccess()) {
