@@ -5,6 +5,7 @@ export class Company {
   public traits: Trait[] = [];
   public executionRoll: Roll = new Roll(RollTarget.None, 20);
   public impactRoll: Roll = new Roll(RollTarget.None, 20);
+  public analysisRoll: Roll = new Roll(RollTarget.None, 20);
 
   constructor(
     public name: string,

@@ -4,6 +4,7 @@ export enum RollTarget {
   None = "None",
   Execution = "Execution",
   Impact = "Impact",
+  Analysis = "Analysis",
 }
 
 export enum RollType {
@@ -76,7 +77,14 @@ export class Roll {
     return this._type;
   }
 
-  modified() {
+  modified(negative: boolean = false) {
+    if (negative) {
+      return this._modifiers.reduce(
+        (acc, mod) => acc - mod.value,
+        this._original
+      );
+    }
+
     return this._modifiers.reduce(
       (acc, mod) => acc + mod.value,
       this._original
@@ -88,7 +96,11 @@ export class Roll {
   }
 
   toString() {
-    var base = `Rolled ${this.modified()}`;
+    var base = `${this._target} Roll: ${this.modified()}`;
+
+    if (this._requirement > 0) {
+      base += ` / ${this._requirement}`;
+    }
 
     if (this._type === RollType.Advantage) {
       base += " (Advantage)";

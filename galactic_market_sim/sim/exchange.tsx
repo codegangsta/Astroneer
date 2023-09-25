@@ -3,10 +3,10 @@ import { Roll, RollTarget } from "./roll";
 
 class Exchange {
   // Game variables, consider moving to an interface
-  public trendPositiveNormal: number = 2;
-  public trendNegativeNormal: number = -2;
-  public trendPositiveCritical: number = 6;
-  public trendNegativeCritical: number = -6;
+  public trendPositiveNormal: number = 1;
+  public trendNegativeNormal: number = -1;
+  public trendPositiveCritical: number = 5;
+  public trendNegativeCritical: number = -3;
 
   constructor(
     public name: string,
@@ -33,18 +33,29 @@ class Exchange {
   strategyPhase() {}
 
   executionPhase() {
+    // Each company rolls
     this.companies.forEach((company) => {
-      company.executionRoll = new Roll(RollTarget.Execution, 20, 11);
+      const trend = this.categories[company.forecast];
+
+      const requirement = 10 + Math.round((trend.score - 10) / 2);
+      company.executionRoll = new Roll(RollTarget.Execution, 20, requirement);
+    });
+
+    // Each company modifies their roll (or others) based on their traits
+    this.companies.forEach((company) => {
       company.traits.forEach((trait) => trait.process(company.executionRoll));
-      company.log(company.executionRoll.toString());
     });
   }
 
   impactPhase() {
+    // Each company rolls
     this.companies.forEach((company) => {
       company.impactRoll = new Roll(RollTarget.Impact, 20);
+    });
+
+    // Each company modifies their roll (or others) based on their traits
+    this.companies.forEach((company) => {
       company.traits.forEach((trait) => trait.process(company.impactRoll));
-      company.log(company.impactRoll.toString());
     });
   }
 
@@ -52,8 +63,46 @@ class Exchange {
   // and the companies stock prices are updated accordingly
   analysisPhase() {
     this.companies.forEach((company) => {
+      company.analysisRoll = new Roll(RollTarget.Analysis, 20);
+    });
+
+    // Each company modifies their roll (or others) based on their traits
+    this.companies.forEach((company) => {
+      company.traits.forEach((trait) => trait.process(company.analysisRoll));
+    });
+
+    // Calculate the price change for each company
+    this.companies.forEach((company) => {
+      const trend = this.categories[company.forecast];
+
+      const isNegative = company.executionRoll.isFailure();
+      const multiplier = isNegative ? -1 : 1;
+
+      var priceChangePercent =
+        ((company.impactRoll.modified(isNegative) *
+          company.analysisRoll.modified(isNegative) *
+          (trend.score / 2)) /
+          100) *
+        multiplier;
+
+      const changeValue = (company.price * priceChangePercent) / 100;
+      company.price += changeValue;
+
+      console.log(`[${company.name}] Price change:`, priceChangePercent + "%");
+      console.log("\t", `Forecast: ${company.forecast} (${trend.score})`);
+      console.log("\t", company.executionRoll.toString());
+      console.log("\t", company.impactRoll.toString());
+      console.log("\t", company.analysisRoll.toString());
+
+      // change trends
       if (company.executionRoll.isCriticalSuccess()) {
-        this.categories[company.forecast].score += this.trendNegativeCritical;
+        trend.score += this.trendPositiveCritical;
+      } else if (company.executionRoll.isSuccess()) {
+        trend.score += this.trendPositiveNormal;
+      } else if (company.executionRoll.isCriticalFailure()) {
+        trend.score += this.trendNegativeCritical;
+      } else if (company.executionRoll.isFailure()) {
+        trend.score += this.trendNegativeNormal;
       }
     });
   }
