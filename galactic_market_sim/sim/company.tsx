@@ -13,6 +13,10 @@ export class Company {
     public units: number,
     public forecast: Category
   ) {}
+
+  log(...messages: any) {
+    console.log(`[${this.name}]`, ...messages);
+  }
 }
 
 export enum Category {

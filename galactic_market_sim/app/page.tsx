@@ -1,5 +1,7 @@
+"use client";
 import { Category, Company, Trends } from "@/sim/company";
 import Exchange from "@/sim/exchange";
+import { rollD } from "@/sim/util";
 
 const trends: Trends = {
   [Category.HabsAndCockpits]: { score: rollD(20) },
@@ -26,11 +28,23 @@ const companies: Company[] = [
 const exchange = new Exchange("Trade Authority Exchange", companies, trends);
 
 export default function Home() {
+  const onClick = () => {
+    exchange.tick();
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        Hello worlds
+        {companies.map((company) => (
+          <div
+            key={company.symbol}
+            className="flex flex-col items-center justify-between"
+          >
+            {company.name} = {company.price}
+          </div>
+        ))}
       </div>
+      <button onClick={() => exchange.tick()}>Next</button>
     </main>
   );
 }

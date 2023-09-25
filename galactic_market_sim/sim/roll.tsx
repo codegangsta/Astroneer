@@ -1,3 +1,5 @@
+import { rollD } from "./util";
+
 export enum RollTarget {
   None = "None",
   Execution = "Execution",
@@ -20,7 +22,11 @@ export class Roll {
   private _modifiers: RollModifier[] = [];
   private _type: RollType = RollType.Normal;
 
-  constructor(private _target: RollTarget, private _sides: number) {
+  constructor(
+    private _target: RollTarget,
+    private _sides: number,
+    private _requirement: number = 0
+  ) {
     this._original = rollD(_sides);
   }
 
@@ -34,6 +40,22 @@ export class Roll {
   disadvantage() {
     this._type = RollType.Disadvantage;
     this._original = Math.min(rollD(this._sides), rollD(this._sides));
+  }
+
+  isSuccess() {
+    return this.modified() >= this._requirement;
+  }
+
+  isFailure() {
+    return this.modified() < this._requirement;
+  }
+
+  isCriticalSuccess() {
+    return this._original === this._sides;
+  }
+
+  isCriticalFailure() {
+    return this._original === 1;
   }
 
   // Rerolls this roll as a normal roll
@@ -66,8 +88,34 @@ export class Roll {
   }
 
   toString() {
-    return `${this._original} + ${this._modifiers
-      .map((mod) => `${mod.value} (${mod.name})`)
-      .join(" + ")} = ${this.modified()}`;
+    var base = `Rolled ${this.modified()}`;
+
+    if (this._type === RollType.Advantage) {
+      base += " (Advantage)";
+    } else if (this._type === RollType.Disadvantage) {
+      base += " (Disadvantage)";
+    }
+
+    if (this._requirement > 0) {
+      if (this.isCriticalSuccess()) {
+        base += " (Critical Success)";
+      } else if (this.isSuccess()) {
+        base += " (Success)";
+      } else if (this.isCriticalFailure()) {
+        base += " (Critical Failure)";
+      } else if (this.isFailure()) {
+        base += " (Failure)";
+      }
+    }
+
+    // modifiers
+    if (this._modifiers.length > 0) {
+      base += "\n";
+      base += this._modifiers
+        .map((mod) => `${mod.name} ${mod.value > 0 ? "+" : ""}${mod.value}`)
+        .join(", ");
+    }
+
+    return base;
   }
 }
