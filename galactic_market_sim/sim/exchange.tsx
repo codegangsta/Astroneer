@@ -36,8 +36,8 @@ class Exchange {
     // Each company rolls
     this.companies.forEach((company) => {
       const trend = this.categories[company.forecast];
-
       const requirement = 10 + Math.round((trend.score - 10) / 2);
+
       company.executionRoll = new Roll(RollTarget.Execution, 20, requirement);
     });
 
@@ -76,14 +76,13 @@ class Exchange {
       const trend = this.categories[company.forecast];
 
       const isNegative = company.executionRoll.isFailure();
-      const multiplier = isNegative ? -1 : 1;
 
       var priceChangePercent =
         ((company.impactRoll.modified(isNegative) *
           company.analysisRoll.modified(isNegative) *
           (trend.score / 2)) /
           100) *
-        multiplier;
+        (isNegative ? -1 : 1);
 
       const changeValue = (company.price * priceChangePercent) / 100;
       company.price += changeValue;
