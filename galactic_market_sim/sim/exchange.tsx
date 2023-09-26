@@ -80,12 +80,15 @@ class Exchange {
       var priceChangePercent =
         ((company.impactRoll.modified(isNegative) *
           company.analysisRoll.modified(isNegative) *
-          (trend.score / 2)) /
+          10) / //todo: rework trend score
           100) *
-        (isNegative ? -1 : 1);
+        (isNegative ? -0.75 : 1);
 
-      const changeValue = (company.price * priceChangePercent) / 100;
-      company.price += changeValue;
+      if (isNegative) {
+        priceChangePercent = Math.max(priceChangePercent, -17);
+      }
+
+      company.changePrice(priceChangePercent);
 
       console.log(`[${company.name}] Price change:`, priceChangePercent + "%");
       console.log("\t", `Forecast: ${company.forecast} (${trend.score})`);

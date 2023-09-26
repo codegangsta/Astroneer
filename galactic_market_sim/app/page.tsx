@@ -1,7 +1,18 @@
 "use client";
+import { CompanySymbol } from "@/components/company-symbol";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { Category, Company, Trends } from "@/sim/company";
 import Exchange from "@/sim/exchange";
 import { rollD } from "@/sim/util";
+import { useState } from "react";
 
 const trends: Trends = {
   [Category.HabsAndCockpits]: { score: rollD(20) },
@@ -26,25 +37,51 @@ const companies: Company[] = [
 ];
 
 const exchange = new Exchange("Trade Authority Exchange", companies, trends);
+for (let i = 0; i < 144; i++) {
+  exchange.tick();
+}
 
 export default function Home() {
+  const [i, setI] = useState<number>(0);
+
   const onClick = () => {
     exchange.tick();
+    setI(i + 1);
   };
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        {companies.map((company) => (
-          <div
-            key={company.symbol}
-            className="flex flex-col items-center justify-between"
-          >
-            {company.name} = {company.price}
-          </div>
-        ))}
+      <div className="z-10 max-w-5xl w-full gap-3 grid grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle>Trade Authority Exchange</CardTitle>
+            <CardDescription>
+              This is a description for the Trade Authority Exchange
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-col">
+              <Separator></Separator>
+              {companies.map((company) => (
+                <div key={company.symbol}>
+                  <CompanySymbol company={company} />
+                  <Separator></Separator>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Supply and Demand</CardTitle>
+            <CardDescription>
+              This is a description for the Supply and Demand
+            </CardDescription>
+          </CardHeader>
+          <CardContent></CardContent>
+        </Card>
       </div>
-      <button onClick={() => exchange.tick()}>Next</button>
+      <Button onClick={onClick}>Next</Button>
     </main>
   );
 }
