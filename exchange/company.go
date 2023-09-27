@@ -5,10 +5,11 @@ type Company struct {
 	Symbol       string
 	Price        float64
 	PriceHistory []float64
-	Units        uint64
+	// TODO: Derive price from history?
+	Units uint64
 	// TODO: some sort of serializable ref?
-	Category string
-	Traits   []Trait
+	CategoryID string
+	Traits     []Trait
 
 	executionRoll *Roll
 	impactRoll    *Roll
@@ -20,10 +21,10 @@ func (c *Company) UpdatePrice(changePercent float64) {
 	c.PriceHistory = append(c.PriceHistory, c.Price)
 }
 
-func (c *Company) GetCategory(e *Exchange) *Category {
+func (c *Company) Category(e *Exchange) *Category {
 	for _, category := range e.Categories {
-		if category.Name == c.Category {
-			return &category
+		if category.ID == c.CategoryID {
+			return category
 		}
 	}
 	return nil

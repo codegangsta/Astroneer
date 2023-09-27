@@ -13,8 +13,8 @@ var phases = []func(*Exchange) error{
 type Exchange struct {
 	Name string
 
-	Companies  []Company
-	Categories []Category
+	Companies  []*Company
+	Categories []*Category
 }
 
 func New(name string) *Exchange {
@@ -35,7 +35,7 @@ func (e *Exchange) tick() error {
 func (e *Exchange) forecastPhase() error {
 	// each company picks a random category
 	for _, company := range e.Companies {
-		company.Category = e.Categories[rand.Intn(len(e.Categories))].Name
+		company.Category = e.Categories[rand.Intn(len(e.Categories))].ID
 	}
 
 	return nil

@@ -44,7 +44,7 @@ type Roll struct {
 	modifiers   []rollModifier
 }
 
-func NewRole(target RollTarget, sides uint) *Roll {
+func NewRoll(target RollTarget, sides uint) *Roll {
 	return (&Roll{
 		target: target,
 		kind:   RollKindNormal,
