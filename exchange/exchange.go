@@ -107,6 +107,14 @@ func (e *Exchange) analysisPhase() error {
 		demandMultiplier := float64(company.Category(e).Demand) * DEMAND_MULTIPLIER
 		var priceChangePercent float64
 
+		if company.executionRoll.isCriticalSuccess() {
+			company.impactRoll.WithModifier("Critical Success", rollDice(6))
+		}
+
+		if company.executionRoll.isCriticalFailure() {
+			company.impactRoll.WithModifier("Critical Failure", rollDice(6))
+		}
+
 		if isNegative {
 			priceChangePercent =
 				float64(company.impactRoll.ModifiedInverse()) *

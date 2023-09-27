@@ -64,7 +64,7 @@ func main() {
 			PriceHistory: []float64{20.00},
 			Units:        100000000,
 			Traits: []exchange.Trait{
-				&traits.Leader{},
+				&traits.Leader2{},
 			},
 		},
 		{
@@ -168,7 +168,7 @@ func main() {
 	}
 
 	// 90 times
-	for i := 1; i <= 3600; i++ {
+	for i := 1; i <= 90; i++ {
 		e.Tick()
 		fmt.Printf("\n=== Day %d ===\n", i)
 		for _, company := range e.Companies {

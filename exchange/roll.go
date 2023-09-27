@@ -93,7 +93,7 @@ func (r *Roll) Modified() int {
 func (r *Roll) ModifiedInverse() int {
 	modified := max(r.sides-r.original, 1)
 	for _, modifier := range r.modifiers {
-		modified += modifier.value
+		modified -= modifier.value
 	}
 	return max(modified, 1)
 }
