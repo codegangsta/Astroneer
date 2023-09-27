@@ -28,7 +28,7 @@ export function CompanySymbol({ company }: Props) {
           <Badge
             variant="secondary"
             className={cn(
-              company.changePercent > 0 ? "bg-green-500" : "bg-red-500"
+              company.changePercent > 0 ? "bg-green-600" : "bg-red-600"
             )}
           >
             <div className="text-center w-full">

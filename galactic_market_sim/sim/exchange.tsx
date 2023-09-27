@@ -1,11 +1,11 @@
-import { Company, Trends } from "./company";
+import { Category, Company, Trends } from "./company";
 import { Roll, RollTarget } from "./roll";
 
 class Exchange {
   // Game variables, consider moving to an interface
   public trendPositiveNormal: number = 1;
   public trendNegativeNormal: number = -1;
-  public trendPositiveCritical: number = 5;
+  public trendPositiveCritical: number = 3;
   public trendNegativeCritical: number = -3;
 
   constructor(
@@ -26,7 +26,11 @@ class Exchange {
 
   // Each company chooses a category to invest in
   forecastPhase() {
-    this.companies.forEach((company) => {});
+    this.companies.forEach((company) => {
+      company.forecast = Object.keys(this.categories)[
+        Math.floor(Math.random() * Object.keys(this.categories).length)
+      ] as Category;
+    });
   }
 
   // Each company chooses a strategy for the next phase
@@ -80,7 +84,7 @@ class Exchange {
       var priceChangePercent =
         ((company.impactRoll.modified(isNegative) *
           company.analysisRoll.modified(isNegative) *
-          10) / //todo: rework trend score
+          (trend.score / 2)) / //todo: rework trend score
           100) *
         (isNegative ? -0.75 : 1);
 
@@ -96,16 +100,26 @@ class Exchange {
       console.log("\t", company.impactRoll.toString());
       console.log("\t", company.analysisRoll.toString());
       console.log("\t", company.price);
+    });
 
-      // change trends
+    this.companies.forEach((company) => {
+      const trend = this.categories[company.forecast];
       if (company.executionRoll.isCriticalSuccess()) {
         trend.score += this.trendPositiveCritical;
+        trend.score = Math.min(trend.score, 20);
+        trend.score = Math.max(trend.score, 1);
       } else if (company.executionRoll.isSuccess()) {
         trend.score += this.trendPositiveNormal;
+        trend.score = Math.min(trend.score, 20);
+        trend.score = Math.max(trend.score, 1);
       } else if (company.executionRoll.isCriticalFailure()) {
         trend.score += this.trendNegativeCritical;
+        trend.score = Math.min(trend.score, 20);
+        trend.score = Math.max(trend.score, 1);
       } else if (company.executionRoll.isFailure()) {
         trend.score += this.trendNegativeNormal;
+        trend.score = Math.min(trend.score, 20);
+        trend.score = Math.max(trend.score, 1);
       }
     });
   }

@@ -1,5 +1,5 @@
 import { Roll, RollTarget } from "./roll";
-import Trait from "./trait";
+import { Trait } from "./traits/base";
 
 export class Company {
   public traits: Trait[] = [];
