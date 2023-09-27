@@ -16,6 +16,6 @@ func (t *Leader) Description() string {
 func (t *Leader) Apply(r *exchange.Roll) {
 	if r.Target() == exchange.RollTargetImpact {
 		// r.WithModifier("Leader", 2)
-		r.WithAdvantage()
+		// r.WithAdvantage()
 	}
 }

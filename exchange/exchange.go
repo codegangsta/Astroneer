@@ -10,7 +10,7 @@ const (
 	// How much successful price calculations are multiplied by
 	SUCCESS_MULTIPLIER = 1
 	// How much failed price calculations are multiplied by
-	FAILURE_MULTIPLIER = -0.5
+	FAILURE_MULTIPLIER = -0.85
 	// How much demand is multiplied by when calculating price changes
 	DEMAND_MULTIPLIER = 0.33
 )
