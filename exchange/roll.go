@@ -38,13 +38,13 @@ func (r *rollModifier) String() string {
 type Roll struct {
 	target      RollTarget
 	kind        RollKind
-	sides       uint
-	original    uint
-	requirement uint
+	sides       int
+	original    int
+	requirement int
 	modifiers   []rollModifier
 }
 
-func NewRoll(target RollTarget, sides uint) *Roll {
+func NewRoll(target RollTarget, sides int) *Roll {
 	return (&Roll{
 		target: target,
 		kind:   RollKindNormal,
@@ -57,7 +57,7 @@ func (r *Roll) Roll() *Roll {
 	return r
 }
 
-func (r *Roll) WithRequirement(requirement uint) *Roll {
+func (r *Roll) WithRequirement(requirement int) *Roll {
 	r.requirement = requirement
 	return r
 }
@@ -82,12 +82,20 @@ func (r *Roll) WithModifier(description string, value int) *Roll {
 	return r
 }
 
-func (r *Roll) Modified() uint {
+func (r *Roll) Modified() int {
 	modified := r.original
 	for _, modifier := range r.modifiers {
-		modified += uint(modifier.value)
+		modified += modifier.value
 	}
-	return modified
+	return max(modified, 1)
+}
+
+func (r *Roll) ModifiedInverse() int {
+	modified := max(r.sides-r.original, 1)
+	for _, modifier := range r.modifiers {
+		modified += modifier.value
+	}
+	return max(modified, 1)
 }
 
 func (r *Roll) Target() RollTarget {
@@ -139,6 +147,6 @@ func (r *Roll) isCriticalFailure() bool {
 	return r.original == 1
 }
 
-func rollDice(sides uint) uint {
-	return uint(1 + rand.Intn(int(sides)))
+func rollDice(sides int) int {
+	return 1 + rand.Intn(int(sides))
 }
