@@ -1,4 +1,4 @@
-package simulator
+package exchange
 
 type Category struct {
 	Name        string

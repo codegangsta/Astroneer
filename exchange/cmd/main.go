@@ -3,11 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/codegangsta/astroneering/simulator"
+	"github.com/codegangsta/astroneering/exchange"
 )
 
 func main() {
-	roll := simulator.NewRole(simulator.RollTargetExecution, 20).
+	roll := exchange.NewRole(exchange.RollTargetExecution, 20).
 		WithModifier("Cargo Specialist", 2).
 		WithAdvantage().
 		WithRequirement(14)

@@ -1,4 +1,4 @@
-package simulator
+package exchange
 
 import "math/rand"
 
@@ -15,6 +15,12 @@ type Exchange struct {
 
 	Companies  []Company
 	Categories []Category
+}
+
+func New(name string) *Exchange {
+	return &Exchange{
+		Name: name,
+	}
 }
 
 func (e *Exchange) tick() error {

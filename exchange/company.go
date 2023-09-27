@@ -1,4 +1,4 @@
-package simulator
+package exchange
 
 type Company struct {
 	Name         string
