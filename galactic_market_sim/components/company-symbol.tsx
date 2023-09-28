@@ -1,9 +1,9 @@
 "use client";
 
-import { Company } from "@/sim/company";
 import { Badge } from "./ui/badge";
 import { cn } from "@/lib/utils";
 import { SparkLine } from "./sparkline";
+import { Company } from "@/types/exchange";
 
 interface Props {
   company: Company;
@@ -18,8 +18,8 @@ export function CompanySymbol({ company }: Props) {
       </div>
       <div className="flex items-center">
         <SparkLine
-          series={{ name: company.symbol, data: company.priceHistory }}
-          color={company.changePercent > 0 ? "#22C55E" : "#EF4444"}
+          series={{ name: company.symbol, data: company.price_history }}
+          color={company.change_percent > 0 ? "#22C55E" : "#EF4444"}
         />
       </div>
       <div className="flex flex-col text-right min-w-[80px]">
@@ -28,11 +28,11 @@ export function CompanySymbol({ company }: Props) {
           <Badge
             variant="secondary"
             className={cn(
-              company.changePercent > 0 ? "bg-green-600" : "bg-red-600"
+              company.change_percent > 0 ? "bg-green-600" : "bg-red-600"
             )}
           >
             <div className="text-center w-full">
-              {company.changePercent.toFixed(2)}%
+              {company.change_percent.toFixed(2)}%
             </div>
           </Badge>
         </div>

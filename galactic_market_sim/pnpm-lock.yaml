@@ -122,6 +122,9 @@ dependencies:
   eslint-config-next:
     specifier: 13.5.2
     version: 13.5.2(eslint@8.50.0)(typescript@5.2.2)
+  nats.ws:
+    specifier: ^1.18.0
+    version: 1.18.0
   next:
     specifier: 13.5.2
     version: 13.5.2(react-dom@18.2.0)(react@18.2.0)
@@ -3376,6 +3379,12 @@ packages:
     hasBin: true
     dev: false
 
+  /nats.ws@1.18.0:
+    resolution: {integrity: sha512-5ITvGO2gd4vAVK733u494ysEOuorfygpig9pqqLapV3FuiFWp4APsZdtZ893zXCC5UclF9MYUzdiTj2cKPDxAA==}
+    optionalDependencies:
+      nkeys.js: 1.0.5
+    dev: false
+
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: false
@@ -3431,6 +3440,15 @@ packages:
       - '@babel/core'
       - babel-plugin-macros
     dev: false
+
+  /nkeys.js@1.0.5:
+    resolution: {integrity: sha512-u25YnRPHiGVsNzwyHnn+PT90sgAhnS8jUJ1nxmkHMFYCJ6+Ic0lv291w7uhRBpJVJ3PH2GWbYqA151lGCRrB5g==}
+    engines: {node: '>=10.0.0'}
+    requiresBuild: true
+    dependencies:
+      tweetnacl: 1.0.3
+    dev: false
+    optional: true
 
   /node-releases@2.0.13:
     resolution: {integrity: sha512-uYr7J37ae/ORWdZeQ1xxMJe3NtdmqMC/JZK+geofDrkLUApKRHPd18/TxtBOJ4A0/+uUIliorNrfYV6s1b02eQ==}
@@ -4237,6 +4255,12 @@ packages:
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     dev: false
+
+  /tweetnacl@1.0.3:
+    resolution: {integrity: sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==}
+    requiresBuild: true
+    dev: false
+    optional: true
 
   /type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}

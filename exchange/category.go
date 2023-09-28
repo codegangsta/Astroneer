@@ -1,10 +1,10 @@
 package exchange
 
 type Category struct {
-	ID          string
-	Name        string
-	Description string
-	Demand      int
+	ID          string `json:"id"`
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	Demand      int    `json:"demand"`
 }
 
 func (c *Category) UpdateDemand(v int) {

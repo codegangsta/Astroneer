@@ -31,11 +31,11 @@ var dailyPhases = []func(*Exchange) error{
 }
 
 type Exchange struct {
-	Name string
-	Day  int
+	Name string `json:"name"`
+	Day  int    `json:"day"`
 
-	Companies  []*Company
-	Categories []*Category
+	Companies  []*Company  `json:"companies"`
+	Categories []*Category `json:"categories"`
 }
 
 func New(name string) *Exchange {

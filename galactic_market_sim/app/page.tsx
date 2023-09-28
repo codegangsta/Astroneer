@@ -10,22 +10,63 @@ import {
 } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
-import { Category, Company, Trends } from "@/sim/company";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { NatsConnection, connect, StringCodec } from "nats.ws";
+import { Exchange } from "@/types/exchange";
+
+const sc = StringCodec();
 
 export default function Home() {
   const [i, setI] = useState<number>(0);
+  const [conn, setConn] = useState<NatsConnection>();
+  const [exchange, setExchange] = useState<Exchange>();
 
-  const onClick = () => {
-    setI(i + 1);
-  };
+  useEffect(() => {
+    connect({ servers: ["ws://localhost:7422"] })
+      .then(setConn)
+      .catch(console.error);
+  }, []);
 
-  const companies: Company[] = [];
-  const trends = {} as Trends;
+  useEffect(() => {
+    if (!conn) return;
+    conn.request("astroneering.get_exchange", "").then((msg) => {
+      const exchange = JSON.parse(sc.decode(msg.data));
+      setExchange(exchange);
+    });
+  }, [conn]);
+
+  const advanceQuarter = useCallback(() => {
+    if (!conn) return;
+    conn.request("astroneering.next_quarter", "").then((msg) => {
+      const exchange = JSON.parse(sc.decode(msg.data));
+      setExchange(exchange);
+    });
+  }, [conn]);
+
+  const advanceDay = useCallback(() => {
+    if (!conn) return;
+    conn.request("astroneering.next_day", "").then((msg) => {
+      const exchange = JSON.parse(sc.decode(msg.data));
+      setExchange(exchange);
+    });
+  }, [conn]);
+
+  if (!exchange) return null;
+
+  const { companies, categories } = exchange;
+
+  if (!companies || !categories) return null;
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Button onClick={onClick}>Next</Button>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 gap-8">
+      <div className="flex flex-row gap-3 items-center w-full">
+        <span className="text-2xl font-semibold text-gray-100">
+          Day {exchange.day}
+        </span>
+        <span className="flex-grow"></span>
+        <Button onClick={advanceQuarter}>Next Quarter</Button>
+        <Button onClick={advanceDay}>Next Day</Button>
+      </div>
       <div className="z-10 max-w-5xl w-full gap-3 grid grid-cols-2">
         <Card>
           <CardHeader>
@@ -54,10 +95,10 @@ export default function Home() {
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-3">
-            {Object.keys(trends).map((trend) => (
-              <div key={trend}>
-                <span>{trend}</span>
-                <Progress value={trends[trend as Category].score * 5} />
+            {categories.map((category) => (
+              <div key={category.id}>
+                <span>{category.name}</span>
+                <Progress value={category.demand * 5} />
               </div>
             ))}
           </CardContent>

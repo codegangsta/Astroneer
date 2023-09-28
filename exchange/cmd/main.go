@@ -32,14 +32,25 @@ func main() {
 		r.RespondJSON(e)
 	}), micro.WithEndpointSubject("astroneering.get_exchange"))
 
-	service.AddEndpoint("advance", micro.HandlerFunc(func(r micro.Request) {
+	service.AddEndpoint("next_quarter", micro.HandlerFunc(func(r micro.Request) {
 		err := e.TickQuarter()
 		if err != nil {
 			// TODO: Handle error better
 			r.Error("internal_error", err.Error(), nil)
 		}
 		r.RespondJSON(e)
-	}), micro.WithEndpointSubject("astroneering.advance"))
+	}), micro.WithEndpointSubject("astroneering.next_quarter"))
+
+	service.AddEndpoint("next_day", micro.HandlerFunc(func(r micro.Request) {
+		err := e.TickDay()
+		if err != nil {
+			// TODO: Handle error better
+			r.Error("internal_error", err.Error(), nil)
+		}
+		r.RespondJSON(e)
+	}), micro.WithEndpointSubject("astroneering.next_day"))
+
+	e.TickQuarter()
 
 	runtime.Goexit()
 }
