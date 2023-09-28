@@ -29,9 +29,9 @@ func (c *Company) UpdatePrice(changePercent float64) {
 	c.PriceHistory = append(c.PriceHistory, c.Price)
 }
 
-func (c *Company) ApplyTraits(r *Roll) {
+func (c *Company) ApplyTraits(r *Roll, e *Exchange) {
 	for _, trait := range c.Traits {
-		trait.Apply(r)
+		trait.Apply(r, c, e)
 	}
 }
 

@@ -13,11 +13,7 @@ func (t *Leader) Description() string {
 	return "This company's leader is a visionary. +X to impact rolls."
 }
 
-func (t *Leader) Apply(r *exchange.Roll) {
-	if r.Target() == exchange.RollTargetImpact {
-		// r.WithModifier("Leader", 1)
-		r.WithAdvantage()
-	}
+func (t *Leader) Apply(r *exchange.Roll, c *exchange.Company, e *exchange.Exchange) {
 }
 
 type Leader2 struct {
@@ -31,7 +27,7 @@ func (t *Leader2) Description() string {
 	return "This company's leader is a visionary. +X to impact rolls."
 }
 
-func (t *Leader2) Apply(r *exchange.Roll) {
+func (t *Leader2) Apply(r *exchange.Roll, c *exchange.Company, e *exchange.Exchange) {
 	if r.Target() == exchange.RollTargetImpact {
 		r.WithModifier("Leader", 3)
 	}

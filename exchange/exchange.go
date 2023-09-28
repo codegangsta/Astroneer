@@ -1,6 +1,7 @@
 package exchange
 
 import (
+	"fmt"
 	"math"
 	"math/rand"
 )
@@ -10,9 +11,12 @@ const (
 	// How much successful price calculations are multiplied by
 	SUCCESS_MULTIPLIER = 1
 	// How much failed price calculations are multiplied by
-	FAILURE_MULTIPLIER = -0.85
+	FAILURE_MULTIPLIER = -0.9
 	// How much demand is multiplied by when calculating price changes
 	DEMAND_MULTIPLIER = 0.33
+
+	// The dice to roll in the case of a critical success
+	CRIT_DICE = 6
 )
 
 var phases = []func(*Exchange) error{
@@ -76,7 +80,7 @@ func (e *Exchange) executionPhase() error {
 	}
 
 	for _, company := range e.Companies {
-		company.ApplyTraits(company.executionRoll)
+		company.ApplyTraits(company.executionRoll, e)
 	}
 	return nil
 }
@@ -87,7 +91,7 @@ func (e *Exchange) impactPhase() error {
 	}
 
 	for _, company := range e.Companies {
-		company.ApplyTraits(company.impactRoll)
+		company.ApplyTraits(company.impactRoll, e)
 	}
 	return nil
 }
@@ -98,7 +102,7 @@ func (e *Exchange) analysisPhase() error {
 	}
 
 	for _, company := range e.Companies {
-		company.ApplyTraits(company.analysisRoll)
+		company.ApplyTraits(company.analysisRoll, e)
 	}
 
 	// Calculate price changes
@@ -108,11 +112,11 @@ func (e *Exchange) analysisPhase() error {
 		var priceChangePercent float64
 
 		if company.executionRoll.isCriticalSuccess() {
-			company.impactRoll.WithModifier("Critical Success", rollDice(6))
+			company.impactRoll.WithModifier("Critical Success", rollDice(CRIT_DICE))
 		}
 
 		if company.executionRoll.isCriticalFailure() {
-			company.impactRoll.WithModifier("Critical Failure", rollDice(6))
+			company.impactRoll.WithModifier("Critical Failure", rollDice(CRIT_DICE))
 		}
 
 		if isNegative {
@@ -143,4 +147,25 @@ func (e *Exchange) analysisPhase() error {
 	}
 
 	return nil
+}
+
+func (e *Exchange) Category(id string) *Category {
+	for _, category := range e.Categories {
+		if category.ID == id {
+			return category
+		}
+	}
+	return nil
+}
+
+func (e *Exchange) Specialization(categoryID string, value uint) Trait {
+	category := e.Category(categoryID)
+
+	return NewSpecialization(
+		fmt.Sprintf("%s Specialist", category.Name),
+		fmt.Sprintf("+%d to Execution rolls in the '%s' category", value, category.Name),
+		RollTargetExecution,
+		category.ID,
+		int(value),
+	)
 }
