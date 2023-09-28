@@ -13,15 +13,18 @@ const (
 	// How much failed price calculations are multiplied by
 	FAILURE_MULTIPLIER = -0.9
 	// How much demand is multiplied by when calculating price changes
-	DEMAND_MULTIPLIER = 0.33
+	DEMAND_MULTIPLIER = 0.15
 
 	// The dice to roll in the case of a critical success
 	CRIT_DICE = 6
 )
 
-var phases = []func(*Exchange) error{
+var quarterlyPhases = []func(*Exchange) error{
 	(*Exchange).forecastPhase,
 	(*Exchange).strategyPhase,
+}
+
+var dailyPhases = []func(*Exchange) error{
 	(*Exchange).executionPhase,
 	(*Exchange).impactPhase,
 	(*Exchange).analysisPhase,
@@ -29,6 +32,7 @@ var phases = []func(*Exchange) error{
 
 type Exchange struct {
 	Name string
+	Day  int
 
 	Companies  []*Company
 	Categories []*Category
@@ -40,8 +44,26 @@ func New(name string) *Exchange {
 	}
 }
 
-func (e *Exchange) Tick() error {
-	for _, phase := range phases {
+func (e *Exchange) TickQuarter() error {
+	for _, phase := range quarterlyPhases {
+		if err := phase(e); err != nil {
+			return err
+		}
+	}
+
+	// tick for 90 days
+	for i := 1; i <= 90; i++ {
+		if err := e.TickDay(); err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+func (e *Exchange) TickDay() error {
+	e.Day++
+	for _, phase := range dailyPhases {
 		if err := phase(e); err != nil {
 			return err
 		}

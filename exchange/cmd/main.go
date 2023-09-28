@@ -269,9 +269,9 @@ func main() {
 	*/
 
 	// 90 times
-	for i := 1; i <= 900; i++ {
-		e.Tick()
-		fmt.Printf("\n=== Day %d ===\n", i)
+	for i := 1; i <= 12; i++ {
+		e.TickQuarter()
+		fmt.Printf("\n=== Q%d ===\n", i)
 		for _, company := range e.Companies {
 			fmt.Println(company)
 		}
