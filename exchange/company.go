@@ -27,6 +27,10 @@ func (c *Company) UpdatePrice(changePercent float64) {
 	c.Price = c.Price + (c.Price * changePercent / 100)
 	c.Price = math.Round(c.Price*100) / 100
 	c.PriceHistory = append(c.PriceHistory, c.Price)
+	// cap price history at 90
+	if len(c.PriceHistory) > 90 {
+		c.PriceHistory = c.PriceHistory[len(c.PriceHistory)-90:]
+	}
 }
 
 func (c *Company) ApplyTraits(r *Roll, e *Exchange) {
