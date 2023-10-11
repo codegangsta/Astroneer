@@ -8,3 +8,8 @@ Float Property ChangePercentToday auto
 Int Property Units auto
 String Property Category auto
 ; TODO: Add traits
+
+Function OnInit()
+  Price = 20.0
+  Units = 100000000
+EndFunction
