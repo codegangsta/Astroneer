@@ -8,11 +8,11 @@ Astroneer is an _in-development_ mod for Starfield that let's you take on the ro
 
 - ![Static Badge](https://img.shields.io/badge/status-WIP-yellow) Become a Starship designer for your favorite ship manufacturer.
 - ![Static Badge](https://img.shields.io/badge/status-WIP-yellow) Earn credits for designing ships that meet the specification.
-- ![Static Badge](https://img.shields.io/badge/status-planned-purple) See your ship designs appear in the wild.
-- ![Static Badge](https://img.shields.io/badge/status-planned-purple) Progress your ship building career by earning promotions and climbing the corporate ladder.
-- ![Static Badge](https://img.shields.io/badge/status-concept-purple) Paricipate in a broader stock market simulation.
-- ![Static Badge](https://img.shields.io/badge/status-concept-purple) Become the CXO of your corporation and compete with other companies.
-- ![Static Badge](https://img.shields.io/badge/status-concept-purple) Befriend and romance a fully-voiced companion.
+- ![Static Badge](https://img.shields.io/badge/status-planned-blue) See your ship designs appear in the wild.
+- ![Static Badge](https://img.shields.io/badge/status-planned-blue) Progress your ship building career by earning promotions and climbing the corporate ladder.
+- ![Static Badge](https://img.shields.io/badge/status-concept-blue) Paricipate in a broader stock market simulation.
+- ![Static Badge](https://img.shields.io/badge/status-concept-blue) Become the CXO of your corporation and compete with other companies.
+- ![Static Badge](https://img.shields.io/badge/status-concept-blue) Befriend and romance a fully-voiced companion.
 
 ## Current State
 
