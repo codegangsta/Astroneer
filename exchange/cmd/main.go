@@ -23,6 +23,9 @@ func main() {
 		Name:        "astroneering",
 		Description: "Astroneering is a galactic stock exchange simulator for Starfield.",
 		Version:     "0.0.1",
+		ErrorHandler: micro.ErrHandler(func(s micro.Service, n *micro.NATSError) {
+			log.Println(n.Error())
+		}),
 	})
 	if err != nil {
 		log.Fatal(err)

@@ -31,6 +31,7 @@ export default function Home() {
     if (!conn) return;
     conn.request("astroneering.get_exchange", "").then((msg) => {
       const exchange = JSON.parse(sc.decode(msg.data));
+      console.log(exchange);
       setExchange(exchange);
     });
   }, [conn]);
@@ -98,7 +99,7 @@ export default function Home() {
             {categories.map((category) => (
               <div key={category.id}>
                 <span>{category.name}</span>
-                <Progress value={category.demand * 5} />
+                <Progress value={category.demand / 10} />
               </div>
             ))}
           </CardContent>

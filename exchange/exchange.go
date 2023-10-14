@@ -2,21 +2,20 @@ package exchange
 
 import (
 	"fmt"
-	"math"
 	"math/rand"
+	"sort"
 )
 
 // Game constants
 const (
 	// How much successful price calculations are multiplied by
-	SUCCESS_MULTIPLIER = 1
+	SuccessMultiplier = 1
 	// How much failed price calculations are multiplied by
-	FAILURE_MULTIPLIER = -0.9
+	FailureMultiplier = -0.9
 	// How much demand is multiplied by when calculating price changes
-	DEMAND_MULTIPLIER = 0.15
-
+	DemandMultiplier = 0.0025
 	// The dice to roll in the case of a critical success
-	CRIT_DICE = 6
+	CritDice = 6
 )
 
 var quarterlyPhases = []func(*Exchange) error{
@@ -73,8 +72,22 @@ func (e *Exchange) TickDay() error {
 
 func (e *Exchange) forecastPhase() error {
 	// each company picks a random category
+
+	categories := make([]*Category, len(e.Categories))
+	copy(categories, e.Categories)
+	sort.Sort(ByDemand(categories))
+
+	// TODO: Write a basic set of AI profiles
 	for _, company := range e.Companies {
-		company.CategoryID = e.Categories[rand.Intn(len(e.Categories))].ID
+		if company.Symbol == "STEK" {
+			// pick the lowest demand category
+			company.CategoryID = categories[0].ID
+		} else if company.Symbol == "HPTC" {
+			// pick the highest demand category
+			company.CategoryID = categories[len(categories)-1].ID
+		} else {
+			company.CategoryID = e.Categories[rand.Intn(len(e.Categories))].ID
+		}
 	}
 
 	return nil
@@ -88,14 +101,7 @@ func (e *Exchange) strategyPhase() error {
 
 func (e *Exchange) executionPhase() error {
 	for _, company := range e.Companies {
-		demand := company.Category(e).Demand
-		factor := math.Round(float64(demand) / 2)
-		if demand <= 10 {
-			factor = factor * -1
-		}
-		factor = max(factor, 1)
-
-		requirement := 10 + factor
+		requirement := 13
 
 		company.executionRoll = NewRoll(RollTargetExecution, 20).
 			WithRequirement(int(requirement))
@@ -130,42 +136,45 @@ func (e *Exchange) analysisPhase() error {
 	// Calculate price changes
 	for _, company := range e.Companies {
 		isNegative := company.executionRoll.isFailure()
-		demandMultiplier := float64(company.Category(e).Demand) * DEMAND_MULTIPLIER
+		demandMultiplier := float64(company.Category(e).Demand) * DemandMultiplier
 		var priceChangePercent float64
 
 		if company.executionRoll.isCriticalSuccess() {
-			company.impactRoll.WithModifier("Critical Success", rollDice(CRIT_DICE))
+			company.impactRoll.WithModifier("Critical Success", rollDice(CritDice))
 		}
 
 		if company.executionRoll.isCriticalFailure() {
-			company.impactRoll.WithModifier("Critical Failure", rollDice(CRIT_DICE))
+			company.impactRoll.WithModifier("Critical Failure", rollDice(CritDice))
 		}
 
 		if isNegative {
 			priceChangePercent =
 				float64(company.impactRoll.ModifiedInverse()) *
 					float64(company.analysisRoll.ModifiedInverse()) *
-					demandMultiplier / 100 * FAILURE_MULTIPLIER
+					demandMultiplier / 100 * FailureMultiplier
 		} else {
 			priceChangePercent =
 				float64(company.impactRoll.Modified()) *
 					float64(company.analysisRoll.Modified()) *
-					demandMultiplier / 100 * SUCCESS_MULTIPLIER
+					demandMultiplier / 100 * SuccessMultiplier
 		}
 		company.UpdatePrice(priceChangePercent)
 	}
 
 	for _, company := range e.Companies {
 		category := company.Category(e)
-		if company.executionRoll.isCriticalSuccess() {
-			category.UpdateDemand(category.Demand + 3)
-		} else if company.executionRoll.isCriticalFailure() {
-			category.UpdateDemand(category.Demand - 3)
-		} else if company.executionRoll.isSuccess() {
-			category.UpdateDemand(category.Demand + 1)
-		} else {
-			category.UpdateDemand(category.Demand - 1)
-		}
+		// if company.executionRoll.isCriticalSuccess() {
+		// 	category.UpdateDemand(category.Demand + 100)
+		// } else if company.executionRoll.isCriticalFailure() {
+		// 	category.UpdateDemand(category.Demand - 100)
+		// } else if company.executionRoll.isSuccess() {
+		// 	category.UpdateDemand(category.Demand + 5)
+		// } else {
+		// 	category.UpdateDemand(category.Demand - 5)
+		// }
+
+		category.UpdateDemand(category.Demand + company.executionRoll.Modified())
+		category.UpdateDemand(category.Demand - company.impactRoll.Modified())
 	}
 
 	return nil
