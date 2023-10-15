@@ -16,7 +16,7 @@ Astroneer is an _in-development_ mod for Starfield that let's you take on the ro
 
 ## Current State
 
-This mod is under heavy intial development. Check back later for more concrete details about it's release
+This mod is under heavy intial development. Check back later for more concrete details about it's release.
 
 ## Roadmap
 
