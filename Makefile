@@ -1,9 +1,12 @@
 include .env
 
-all: scp compile
+all: remote_sync remote_compile
 
-scp::
-	scp -r src jerem@pc:/Users/jerem/Documents/Code/
+remote_sync::
+	rsync -avz --exclude-from '.gitignore' --exclude '.git' --delete -e ssh ./ jeremy@pc-wsl:/mnt/c/Users/jerem/Documents/Code/astroneer
 
-compile::
-	ssh jerem@pc 'cd C:\Users\jerem\Documents\Code\Scripts && ..\bin\Caprica.exe --import ..\starfield-src\script --output "..\..\My Games\Starfield\Data\Scripts" .'
+remote_compile::
+	ssh jerem@pc 'cd C:\Users\jerem\Documents\Code\astroneer; ..\Caprica.exe --import ..\starfield-src\script\ src'
+
+ssh::
+	s..sh jeremy@pc-wsl -t 'cd astroneer && bash -l'
