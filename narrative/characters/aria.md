@@ -8,7 +8,7 @@
 
 - Graceful and of average height, with a constant air of determination.
 - Long, curly auburn hair that she frequently ties into intricate updos.
-- Wears fashionable, tailored smart-clothing that both exudes professionalism and displays dynamic holographic Taiyo promotions.
+- Wears fashionable, tailored smart-clothing that both exudes professionalism.
 
 **Backstory:**
 Coming from a modest background on a distant colony, Aria won a scholarship to study Interstellar Marketing at a prestigious galactic university. Armed with her education, she joined Taiyo, determined to rise and ensure her family's comfort. However, the corporate world turned out to be more competitive and cutthroat than she anticipated.
@@ -40,4 +40,3 @@ Her ambition often puts her in the crosshairs of corporate politics. Balancing h
 ---
 
 Aria Collins offers a dynamic character journey, blending the intrigue of corporate ladder-climbing with the genuine enthusiasm of space exploration. Her evolving relationship with the player can provide emotional depth and complexity to her narrative.
-yer can provide emotional depth and complexity to her narrative.
