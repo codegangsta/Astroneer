@@ -18,6 +18,10 @@ install::
 clean::
 	ssh jerem@pc 'rm -r C:\Users\jerem\Documents\Code\astroneer\out'
 
+# Tail logs
+tail::
+	ssh jerem@pc 'Get-Content -Path ".\Documents\My Games\Starfield\Logs\Script\Papyrus.0.log" -Tail 10 -Wait'
+
 ## SSH into windows
 ssh::
 	ssh jerem@pc
