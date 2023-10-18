@@ -15,6 +15,7 @@ import (
 var suggestions = []prompt.Suggest{}
 var serverAddr = "http://pc:55555"
 var command string
+var history = []string{}
 
 func main() {
 	flag.StringVar(&serverAddr, "server", serverAddr, "The address of the Starfield server")
@@ -43,7 +44,16 @@ func main() {
 	p := prompt.New(
 		executeCommand,
 		completer,
-		prompt.OptionPrefix("> "),
+		prompt.OptionPrefix("[Starfield] "),
+		prompt.OptionCompletionOnDown(),
+		prompt.OptionSuggestionBGColor(prompt.Black),
+		prompt.OptionSuggestionTextColor(prompt.White),
+		prompt.OptionDescriptionBGColor(prompt.Black),
+		prompt.OptionDescriptionTextColor(prompt.LightGray),
+		prompt.OptionSelectedSuggestionBGColor(prompt.DarkGray),
+		prompt.OptionSelectedSuggestionTextColor(prompt.White),
+		prompt.OptionSelectedDescriptionBGColor(prompt.DarkGray),
+		prompt.OptionHistory(history),
 	)
 
 	p.Run()
@@ -60,6 +70,7 @@ func executeCommand(cmd string) {
 	buf := new(bytes.Buffer)
 	buf.ReadFrom(resp.Body)
 	fmt.Println(buf.String())
+	history = append(history, cmd)
 }
 
 func fillSuggestions() {
@@ -91,8 +102,11 @@ func fillSuggestions() {
 }
 
 func completer(d prompt.Document) []prompt.Suggest {
-	if d.TextBeforeCursor() == "" {
+
+	// if the user types something that starts with / then we will show completions
+	if d.TextBeforeCursor() == "" || d.TextBeforeCursor()[0] != '/' {
 		return []prompt.Suggest{}
 	}
-	return prompt.FilterFuzzy(suggestions, d.GetWordBeforeCursor(), true)
+
+	return prompt.FilterFuzzy(suggestions, d.TextBeforeCursor()[1:], true)
 }
