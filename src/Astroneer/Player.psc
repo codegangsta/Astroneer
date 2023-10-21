@@ -7,6 +7,11 @@ Function OnInit()
   Self.RegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
 EndFunction
 
+spaceshipreference Function GetContractShip()
+  Trace("GetContractShip()")
+  return ContractShip
+EndFunction
+
 Event OnMenuOpenCloseEvent(String asMenuName, Bool abOpening)
   Trace("OnMenuOpenCloseEvent(" + asMenuName + ", " + abOpening + ")")
   if(asMenuName == "SpaceshipEditorMenu" && abOpening && ContractShip as Bool)
@@ -29,10 +34,10 @@ Function AcceptContract()
     return
   endif
 
-  Form shipForm = Game.GetForm(0x00215E9B)
+  Form shipForm = Game.GetForm(0x0003e13e)
 
   Trace("Spawning ship " + shipForm + " to world")
-  spaceshipreference ship = GetLandingMarker().PlaceShipAtMe(shipForm, 1, False, True, True, False, None, None, None, True) as spaceshipreference
+  spaceshipreference ship = GetLandingMarker().PlaceShipAtMe(shipForm, 1, True, True, True, False, None, None, None, True) as spaceshipreference
 
   Keyword cannotBeSoldShipKeyword = Game.GetForm(0x003413f2) as Keyword
   Trace("Adding keyword " + cannotBeSoldShipKeyword + " to ship")
@@ -78,7 +83,7 @@ Function CompleteContract()
   ; TODO: Add to reflist of spawnable ships
   ; TODO: Add to list of ships that can be sold by faction ship vendor
 
-  Self.ContractShip = None
+  ;Self.ContractShip = None
   Debug.Notification("Ship XXX removed from hangar")
 EndFunction
 

@@ -1,3 +1,6 @@
 [submodule "starfield-scripts"]
 	path = starfield-scripts
 	url = git@github.com:claydegruchy/starfield-modding-misc-extract.git
+[submodule "starfield_src"]
+	path = starfield-modding-misc-extract
+	url = git@github.com:claydegruchy/starfield-modding-misc-extract.git
