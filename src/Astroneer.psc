@@ -46,16 +46,13 @@ EndFunction
 Function DebugPlaceShip() global
   Astroneer:Player player = Game.GetPlayer() as Astroneer:Player
 
-;spaceshipreference Function PlaceShipAtMe(Form akFormToPlace, Int aiLevelMod, Bool abPlayFx, Bool abForcePersist, Bool abInitiallyDisabled, Bool abDeleteWhenAble, Float[] akOffsetValues, Alias akAliasToFill, Location akEncLoc, Bool abSnapOffsetToNavmesh) Native
-  ;player.GetLandingMarker().PlaceShipAtMe(player.ContractShip.GetBaseObject(), 1, False, False, False, False, None, None, None, True)
-  ;player.ContractShip.Enable(True)
-  ;player.ContractShip.MoveTo(Game.GetPlayerHomeSpaceShip(), 0, 0, 100, True, True)
-  ;player.ContractShip.EnableAI(true, false)
-  ;player.ContractShip.EvaluatePackage(true)
-
   DebugTrace("Contract Ship " + player.ContractShip)
   spaceshipreference playerShip = Game.GetPlayerHomeSpaceShip()
   spaceshipreference ship = player.ContractShip
+
+  ; reset ship
+  DebugTrace("Resetting Ship")
+  ship.Reset(None)
 
   SQ_TrafficManagerScript trafficManager = Game.GetForm(0x0021b8bd) as SQ_TrafficManagerScript
   DebugTrace("TrafficManager " + trafficManager)
@@ -72,6 +69,7 @@ Function DebugPlaceShip() global
   ship.EnableAI(True, True)
   ship.EnableWithGravJump()
   ship.SetForwardVelocity(1.0)
+  ship.GetSpaceshipAutopilotAI().ForceMovementSpeed(-1.0)
   ship.SetLinkedRef(DestinationLink, trafficManager.LinkKeywordDestination, False) ; #DEBUG_LINE_NO:122
   DebugTrace("AI Enabled? " + ship.IsAIEnabled())
 

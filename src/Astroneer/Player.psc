@@ -96,8 +96,6 @@ Function CancelContract()
   sq_playershipscript playerShip = Game.GetForm(95394) as sq_playershipscript
   playerShip.RemovePlayerShip(ContractShip)
 
-  ; FIXME: Cannot delete ship, maybe there is a better way to clean up this ref?
-  ; ContractShip.Delete()
   Self.ContractShip = None
   Debug.Notification("Ship XXX removed from hangar")
 EndFunction
