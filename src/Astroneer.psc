@@ -4,9 +4,62 @@ Function DebugInit() global
   DebugTrace("=DebugInit==============================================")
   Astroneer:Player player = Game.GetPlayer() as Astroneer:Player
 
-  SQ_TrafficManagerScript trafficManager = Game.GetForm(0x0039469d) as SQ_TrafficManagerScript
-  DebugTrace("TrafficManager " + trafficManager)
-  DebugTrace("Exit Points " + trafficManager.Alias_ExitPoints)
+  spaceshipreference playerShip = Game.GetPlayerHomeSpaceShip()
+  DebugTrace("Player Ship " + playerShip)
+
+  ActorValue SpaceshipMass = Game.GetForm(0x0000ACDB) as ActorValue
+  DebugTrace("Player Ship mass " + playerShip.GetValue(SpaceshipMass))
+
+  ActorValue SpaceshipMaxPower = Game.GetForm(0x00001018) as ActorValue
+  DebugTrace("Player Reactor power " + playerShip.GetValue(SpaceshipMaxPower))
+
+  ActorValue SpaceshipEnginePower = Game.GetForm(0x00000ff6) as ActorValue
+  DebugTrace("Player Ship engine power " + playerShip.GetValue(SpaceshipEnginePower))
+
+  ActorValue ShipSystemDamageWeightWeapon = Game.GetForm(0x001d3d7a) as ActorValue
+  DebugTrace("Player ship damage weight weapon " + playerShip.GetValue(ShipSystemDamageWeightWeapon))
+
+  Keyword SpaceshipEnergyWeapon = Game.GetForm(0x00008eba) as Keyword
+  DebugTrace("Exterior refs" + playerShip.GetExteriorRefs(SpaceshipEnergyWeapon))
+
+  ActorValue ShipSystemWeaponGroup1Health = Game.GetForm(0x000003a3) as ActorValue
+  DebugTrace("Player Ship weapon group 1 " + playerShip.GetWeaponGroupBaseObject(ShipSystemWeaponGroup1Health))
+  DebugTrace("Player Ship weapon group 1 power " + playerShip.GetPartPower(1,1))
+
+  ActorValue TestAV = Game.GetForm(0x00278988) as ActorValue
+  DebugTrace("Top speed " + playerShip.GetValue(TestAV))
+EndFunction
+
+Function DebugAddMissions() global
+  MissionParentScript missionParent = Game.GetForm(0x00015300) as MissionParentScript
+  DebugTrace("MissionParent " + missionParent)
+  DebugTrace("MissionTypes " + missionParent.MissionTypes)
+
+  Keyword MissionTypeShipContract = Game.GetForm(0x02000803) as Keyword
+  GlobalVariable MissionCompletedShipContract = Game.GetForm(0x02000802) as GlobalVariable
+
+  MissionParentScript:MissionType shipContract = new MissionParentScript:MissionType
+  shipContract.missionTypeKeyword = MissionTypeShipContract
+  shipContract.MissionCompletedCount = MissionCompletedShipContract
+  shipContract.RandomStoryEventOrder = True
+
+  if(missionParent.MissionTypes.FindStruct("missionTypeKeyword", MissionTypeShipContract) < 0)
+    DebugTrace("Adding Mission type " + shipContract)
+    missionParent.MissionTypes.Add(shipContract)
+  endif
+
+  ; Add contracts if they don't exist in the list of all contracts
+  MissionQuestScript shipContract01 = Game.GetForm(0x02000800) as MissionQuestScript
+  if(missionParent.missionQuests.Find(shipContract01) < 0)
+    DebugTrace("Adding Mission " + shipContract01)
+    missionParent.missionQuests.Add(shipContract01)
+  endif
+
+  ; Force a reset of missions on the mission board
+  DebugTrace("Resetting missions on the mission board")
+  missionParent.DebugResetMissions()
+  Debug.Notification("Added ship contract missions")
+
 EndFunction
 
 Function DebugContract() global

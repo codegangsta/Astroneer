@@ -4,7 +4,7 @@ all: remote_sync remote_compile install reload_scripts debug_init
 
 ## Perform an rsync to a running WSL instance on my windows computer
 remote_sync::
-	rsync -avz --exclude-from '.gitignore' --exclude '.git' --delete -e ssh ./ jeremy@pc-wsl:/mnt/c/Users/jerem/Documents/Code/astroneer
+	rsync -avz --exclude-from '.gitignore' --exclude '.git' --exclude "starfield-modding-misc-extract" --delete -e ssh ./ jeremy@pc-wsl:/mnt/c/Users/jerem/Documents/Code/astroneer
 
 ## Perform compilation on Windows. No WSL here as it's super slow
 remote_compile::
@@ -24,6 +24,8 @@ debug_init::
 reload_scripts::
 	sfc 'ReloadScript "Astroneer"'
 	sfc 'ReloadScript "Astroneer:Player"'
+	sfc 'ReloadScript "Astroneer:ShipContractMissionScript"'
+	sfc 'ReloadScript "Astroneer:ShipContractFighterMissionScript"'
 
 # Tail logs
 tail::

@@ -54,6 +54,7 @@ func main() {
 		prompt.OptionSelectedSuggestionTextColor(prompt.White),
 		prompt.OptionSelectedDescriptionBGColor(prompt.DarkGray),
 		prompt.OptionHistory(history),
+		prompt.OptionMaxSuggestion(12),
 	)
 
 	p.Run()
