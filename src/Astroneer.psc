@@ -19,12 +19,21 @@ Function DebugInit() global
   ActorValue ShipSystemDamageWeightWeapon = Game.GetForm(0x001d3d7a) as ActorValue
   DebugTrace("Player ship damage weight weapon " + playerShip.GetValue(ShipSystemDamageWeightWeapon))
 
-  Keyword SpaceshipEnergyWeapon = Game.GetForm(0x00008eba) as Keyword
-  DebugTrace("Exterior refs" + playerShip.GetExteriorRefs(SpaceshipEnergyWeapon))
+  Keyword SpaceshipFromShipModule = Game.GetForm(0x001bb401) as Keyword
+  Keyword LinkShipModule = Game.GetForm(0x002c1001) as Keyword
+  Keyword SBShip_Hab = Game.GetForm(0x002ac927) as Keyword
+
+  ObjectReference[] exteriorRefs = playerShip.GetExteriorRefs(SBShip_Hab)
+  Int i = 0
+  While(i < exteriorRefs.length)
+    ObjectReference exteriorRef = exteriorRefs[0]
+    DebugTrace("Exterior ref " + exteriorRef.GetBaseObject())
+    i += 1
+  EndWhile
 
   ActorValue ShipSystemWeaponGroup1Health = Game.GetForm(0x000003a3) as ActorValue
   DebugTrace("Player Ship weapon group 1 " + playerShip.GetWeaponGroupBaseObject(ShipSystemWeaponGroup1Health))
-  DebugTrace("Player Ship weapon group 1 power " + playerShip.GetPartPower(1,1))
+  DebugTrace("Player Ship weapon group 1 is energyweaopon " + playerShip.GetWeaponGroupBaseObject(ShipSystemWeaponGroup1Health).GetState())
 
   ActorValue TestAV = Game.GetForm(0x00278988) as ActorValue
   DebugTrace("Top speed " + playerShip.GetValue(TestAV))
