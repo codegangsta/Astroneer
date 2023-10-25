@@ -42,7 +42,7 @@ Event OnQuestInit()
 
   ForEach Form mission in AstroneerMBQuests
     Trace("Adding mission... " + mission)
-    MB_Parent.missionQuests.Add(mission as MissionQuestScript)
+    MB_Parent.missionQuests.Add(mission as Astroneer:ShipContractMissionScript)
   EndForEach
 
   MB_Parent.DebugResetMissions()
@@ -89,6 +89,12 @@ ObjectReference Function GetLandingMarker()
 	; this should never happen
 	Trace("GetLandingMarker Milestone D")
 	Return (Player as ObjectReference)
+EndFunction
+
+Int Function GetObjectiveValue(spaceshipreference ship, Keyword objectiveType)
+  Trace("NOT IMPLEMENTED: GetObjectiveValue")
+
+  Return -1
 EndFunction
 
 Function Trace(string message)
