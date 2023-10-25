@@ -24,6 +24,7 @@ debug_init::
 reload_scripts::
 	sfc 'ReloadScript "Astroneer"'
 	sfc 'ReloadScript "Astroneer:ParentQuest"'
+	sfc 'ReloadScript "Astroneer:ShipContractMissionScript"'
 
 # Tail logs
 tail::

@@ -19,6 +19,13 @@ Group ActorValues
   ActorValue Property ShipWeaponSystemGroup1Health Auto Const Mandatory
 EndGroup
 
+Group ObjectiveKeywords
+  Keyword Property ShipContractObjectiveCargo Auto Const Mandatory
+  Keyword Property ShipContractObjectiveEnginePower Auto Const Mandatory
+  Keyword Property ShipContractObjectiveGravJumpRange Auto Const Mandatory
+  Keyword Property ShipContractObjectiveMass Auto Const Mandatory
+EndGroup
+
 Group QuestData
   sq_playershipscript Property PlayerShipQuest Auto Const Mandatory
   MissionParentScript Property MB_Parent Auto Const Mandatory
@@ -62,6 +69,8 @@ spaceshipreference Function AddContractShip(Form shipform, Message nameOverride)
   EndIf
 
   PlayerShipQuest.AddPlayerOwnedShip(ship)
+
+  return ship
 EndFunction
 
 ObjectReference Function GetLandingMarker()
@@ -91,10 +100,23 @@ ObjectReference Function GetLandingMarker()
 	Return (Player as ObjectReference)
 EndFunction
 
-Int Function GetObjectiveValue(spaceshipreference ship, Keyword objectiveType)
-  Trace("NOT IMPLEMENTED: GetObjectiveValue")
+Float Function GetObjectiveValue(spaceshipreference ship, Keyword objectiveType)
+  if (objectiveType == ShipContractObjectiveCargo)
+    return ship.GetShipMaxCargoWeight()
 
-  Return -1
+  elseif (objectiveType == ShipContractObjectiveEnginePower)
+    return ship.GetValue(SpaceshipEnginePower)
+
+  elseif (objectiveType == ShipContractObjectiveGravJumpRange)
+    return ship.GetGravJumpRange()
+
+  elseif (objectiveType == ShipContractObjectiveMass)
+    return ship.GetValue(SpaceshipMass)
+
+  else
+    Trace("GetObjectiveValue: Unknown objective type: " + objectiveType)
+    return -1
+  endif
 EndFunction
 
 Function Trace(string message)
