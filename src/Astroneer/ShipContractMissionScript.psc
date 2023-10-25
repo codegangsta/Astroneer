@@ -5,6 +5,7 @@ ScriptName Astroneer:ShipContractMissionScript Extends missionquestscript
 
 ;-- Properties --------------------------------------
 spaceshipreference Property ContractShip Auto
+Astroneer:ParentQuest Property AstroneerParent Auto Const Mandatory
 
 Group ShipStats
   GlobalVariable Property ShipStat1 Auto Const
@@ -27,7 +28,7 @@ EndGroup
 
 Event OnQuestStarted()
   Trace("OnQuestStarted")
-  SetShipRequirements()
+  UpdateShipRequirements()
   Parent.OnQuestStarted()
 EndEvent
 
@@ -35,44 +36,16 @@ Function StageAccepted()
   Trace("StageAccepted")
   Self.SetObjectiveDisplayed(10, True, False)
 
-  ; TODO: This should be a property
+  ; FIXME: these should come from a property
   Form shipForm = Game.GetForm(0x0003e13e)
+  Message shipName = Game.GetForm(0x003fe6d8) as Message
 
-  Trace("Spawning ship " + shipForm + " to world")
-  spaceshipreference ship = GetLandingMarker().PlaceShipAtMe(shipForm, 1, True, True, True, False, None, None, None, True)
+  Trace("Spawning ship " + shipForm)
+  Self.ContractShip = AstroneerParent.AddContractShip(shipForm, shipName)
 
-  ; TODO: Make these properties
-  Keyword cannotBeSoldShipKeyword = Game.GetForm(0x003413f2) as Keyword
-  Trace("Adding keyword " + cannotBeSoldShipKeyword + " to ship")
-  ship.AddKeyword(cannotBeSoldShipKeyword)
+  UpdateShipValues()
 
-  Keyword cannotBeHomeShipKeyword = Game.GetForm(0x0014fc8d) as Keyword
-  Trace("Adding keyword " + cannotBeHomeShipKeyword + " to ship")
-  ship.AddKeyword(cannotBeHomeShipKeyword)
-
-  Keyword cannotBeCountedAgainstMaxShipsKeyword = Game.GetForm(0x00107b20) as Keyword
-  Trace("Adding keyword " + cannotBeCountedAgainstMaxShipsKeyword + " to ship")
-  ship.AddKeyword(cannotBeCountedAgainstMaxShipsKeyword)
-
-  ; TODO: Pull this from a formlist
-  Message shipNameMessage = Game.GetForm(0x003fe6d8) as Message
-  Trace("Renaming ship to " + shipNameMessage)
-  ship.SetOverrideName(shipNameMessage)
-
-  ; TODO: Make this a property
-  ActorValue spaceshipRegistration = Game.GetForm(0x000C55B1) as ActorValue
-  ship.SetValue(spaceshipRegistration, 1.0)
-
-  ; TODO: Use a property here as well
-  Trace("Adding ship " + ship + " to player ships")
-  sq_playershipscript playerShipQuest = Game.GetForm(95394) as sq_playershipscript
-  playerShipQuest.AddPlayerOwnedShip(ship)
-  Self.ContractShip = ship
-
-  ; TODO: Add Ships
-  SetShipValues()
-
-  ; TODO: This should use a message
+  ; FIXME: This should use a message
   Debug.Notification("Ship XXX added to hangar")
 EndFunction
 
@@ -81,40 +54,12 @@ Function StageCompleted()
   Self.MissionComplete()
 EndFunction
 
-Function SetShipRequirements()
+Function UpdateShipRequirements()
   ; Override this in child scripts
 EndFunction
 
-Function SetShipValues()
+Function UpdateShipValues()
   ; Override this in child scripts
-EndFunction
-
-ObjectReference Function GetLandingMarker()
-	; easy way
-	SQ_PlayerShipScript PlayerShipQuest = (Game.GetForm(0x174A2) as Quest) as SQ_PlayerShipScript
-	ObjectReference LandingMarkerA = PlayerShipQuest.PlayerShipLandingMarker.GetReference()
-	If (LandingMarkerA as Bool)
-		Trace("GetLandingMarker Milestone A")
-		Return LandingMarkerA
-	EndIf
-	; a bit advanced
-	SpaceshipReference PlayerShipA = PlayerShipQuest.PlayerShip.GetShipReference()
-	ObjectReference LandingMarkerB = PlayerShipA.GetLinkedRef(PlayerShipQuest.LandingMarkerKeyword)
-	If (LandingMarkerB as Bool)
-		Trace("GetLandingMarker Milestone B")
-		Return LandingMarkerB
-	EndIf
-	; alias issue?
-	Actor Player = Game.GetForm(0x14) as Actor
-	SpaceshipReference PlayerShipB = Player.GetCurrentShipRef()
-	ObjectReference LandingMarkerC = PlayerShipB.GetLinkedRef(Game.GetForm(0x1940B) as Keyword)
-	If (LandingMarkerC as Bool)
-		Trace("GetLandingMarker Milestone C")
-		Return LandingMarkerC
-	EndIf
-	; this should never happen
-	Trace("GetLandingMarker Milestone D")
-	Return (Player as ObjectReference)
 EndFunction
 
 Function Trace(string message)

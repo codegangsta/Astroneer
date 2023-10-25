@@ -8,7 +8,7 @@ remote_sync::
 
 ## Perform compilation on Windows. No WSL here as it's super slow
 remote_compile::
-	ssh jerem@pc 'cd C:\Users\jerem\Documents\Code\astroneer; ..\Caprica.exe -R --import ..\starfield-src\script\ --output ./out src'
+	ssh jerem@pc 'cd C:\Users\jerem\Documents\Code\astroneer; ..\Caprica.exe --enable-language-extensions=1 -R --import ..\starfield-src\script\ --output ./out src'
 
 ## Installs scripts into starfield folder
 install::
@@ -23,9 +23,7 @@ debug_init::
 # Reloads scripts in game
 reload_scripts::
 	sfc 'ReloadScript "Astroneer"'
-	sfc 'ReloadScript "Astroneer:Player"'
-	sfc 'ReloadScript "Astroneer:ShipContractMissionScript"'
-	sfc 'ReloadScript "Astroneer:ShipContractFighterMissionScript"'
+	sfc 'ReloadScript "Astroneer:ParentQuest"'
 
 # Tail logs
 tail::

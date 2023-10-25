@@ -2,6 +2,13 @@ ScriptName Astroneer
 
 Function DebugInit() global
   DebugTrace("=DebugInit==============================================")
+
+  Astroneer:ParentQuest astroneer = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  DebugTrace("Astroneer " + astroneer)
+  DebugTrace("CannotBeSoldShipKeyword: " + astroneer.CannotBeSoldShipKeyword)
+EndFunction
+
+Function DebugShipValues() global
   Astroneer:Player player = Game.GetPlayer() as Astroneer:Player
 
   spaceshipreference playerShip = Game.GetPlayerHomeSpaceShip()
