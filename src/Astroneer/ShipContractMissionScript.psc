@@ -38,6 +38,14 @@ Group ShipObjectives
   GlobalVariable Property ObjectiveTotal_05 Auto Const
 EndGroup
 
+Group ObjectiveIndexes
+  Int Property ShipObjective_01 = 11 Auto Const
+  Int Property ShipObjective_02 = 12 Auto Const
+  Int Property ShipObjective_03 = 13 Auto Const
+  Int Property ShipObjective_04 = 14 Auto Const
+  Int Property ShipObjective_05 = 15 Auto Const
+EndGroup
+
 ;-- Functions ---------------------------------------
 
 Event OnQuestStarted()
@@ -61,11 +69,11 @@ EndEvent
 Function StageAccepted()
   Trace("StageAccepted")
   ; FIXME: Put objective indexes in consts
-  Self.SetObjectiveDisplayed(11, True, False)
-  Self.SetObjectiveDisplayed(12, True, False)
-  Self.SetObjectiveDisplayed(13, True, False)
-  Self.SetObjectiveDisplayed(14, True, False)
-  Self.SetObjectiveDisplayed(15, True, False)
+  Self.SetObjectiveDisplayed(ShipObjective_01, True, False)
+  Self.SetObjectiveDisplayed(ShipObjective_02, True, False)
+  Self.SetObjectiveDisplayed(ShipObjective_03, True, False)
+  Self.SetObjectiveDisplayed(ShipObjective_04, True, False)
+  Self.SetObjectiveDisplayed(ShipObjective_05, True, False)
 
   ; FIXME: these should come from a property
   Form shipForm = Game.GetForm(0x0003e13e)
@@ -108,6 +116,27 @@ Function UpdateObjectiveTargets()
   UpdateObjectiveTarget(ObjectiveTotal_05, ObjectiveTarget_05)
 EndFunction
 
+Bool Function ShipObjectivesComplete()
+  Trace("ShipObjectivesComplete")
+  if(HasObjective(ShipObjective_01) && !IsObjectiveCompleted(ShipObjective_01))
+    return False
+  endif
+  if(HasObjective(ShipObjective_02) && !IsObjectiveCompleted(ShipObjective_02))
+    return False
+  endif
+  if(HasObjective(ShipObjective_03) && !IsObjectiveCompleted(ShipObjective_03))
+    return False
+  endif
+  if(HasObjective(ShipObjective_04) && !IsObjectiveCompleted(ShipObjective_04))
+    return False
+  endif
+  if(HasObjective(ShipObjective_05) && !IsObjectiveCompleted(ShipObjective_05))
+    return False
+  endif
+
+  return True
+EndFunction
+
 Function UpdateObjectiveTarget(GlobalVariable total, Float value)
   if(total != None)
     total.SetValue(value)
@@ -117,11 +146,11 @@ EndFunction
 
 Function UpdateObjectiveValues()
   Trace("UpdateObjectiveValues")
-  UpdateObjectiveValue(ObjectiveValue_01, ObjectiveType_01, 11, ObjectiveTarget_01)
-  UpdateObjectiveValue(ObjectiveValue_02, ObjectiveType_02, 12, ObjectiveTarget_02)
-  UpdateObjectiveValue(ObjectiveValue_03, ObjectiveType_03, 13, ObjectiveTarget_03)
-  UpdateObjectiveValue(ObjectiveValue_04, ObjectiveType_04, 14, ObjectiveTarget_04)
-  UpdateObjectiveValue(ObjectiveValue_05, ObjectiveType_05, 15, ObjectiveTarget_05)
+  UpdateObjectiveValue(ObjectiveValue_01, ObjectiveType_01, ShipObjective_01, ObjectiveTarget_01)
+  UpdateObjectiveValue(ObjectiveValue_02, ObjectiveType_02, ShipObjective_02, ObjectiveTarget_02)
+  UpdateObjectiveValue(ObjectiveValue_03, ObjectiveType_03, ShipObjective_03, ObjectiveTarget_03)
+  UpdateObjectiveValue(ObjectiveValue_04, ObjectiveType_04, ShipObjective_04, ObjectiveTarget_04)
+  UpdateObjectiveValue(ObjectiveValue_05, ObjectiveType_05, ShipObjective_05, ObjectiveTarget_05)
 EndFunction
 
 Function UpdateObjectiveValue(GlobalVariable value, Keyword objectiveType, Int objective, Float target)
