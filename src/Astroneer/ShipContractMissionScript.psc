@@ -44,7 +44,11 @@ Group ObjectiveIndexes
   Int Property ShipObjective_03 = 13 Auto Const
   Int Property ShipObjective_04 = 14 Auto Const
   Int Property ShipObjective_05 = 15 Auto Const
+  Int Property CompleteObjective = 100 Auto Const
 EndGroup
+
+Message Property CompleteMessage Auto Const Mandatory
+{ Message to display when the player visits the mission board after finishing the ship }
 
 ;-- Functions ---------------------------------------
 
@@ -103,6 +107,11 @@ Event Actor.OnPlayerModifiedShip(Actor akActor, spaceshipreference akShip)
   Trace("OnPlayerModifiedShip")
   if(akShip == Self.ContractShip)
     UpdateObjectiveValues()
+
+    if AllShipObjectivesComplete()
+      Int turnIn = CompleteMessage.Show(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+      ;SetObjectiveDisplayedAtTop(CompleteObjective)
+    endif
   endif
 EndEvent
 
@@ -116,7 +125,7 @@ Function UpdateObjectiveTargets()
   UpdateObjectiveTarget(ObjectiveTotal_05, ObjectiveTarget_05)
 EndFunction
 
-Bool Function ShipObjectivesComplete()
+Bool Function AllShipObjectivesComplete()
   Trace("ShipObjectivesComplete")
   if(HasObjective(ShipObjective_01) && !IsObjectiveCompleted(ShipObjective_01))
     return False
