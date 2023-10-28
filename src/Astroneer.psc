@@ -12,21 +12,21 @@ Function DebugScene() global
   Astroneer:DebugScene debugScene = astroneer.SceneMissionBoardIntro as Astroneer:DebugScene
   DebugTrace("Parent quest " + astroneer)
 
-  Actor sarah = (astroneer.GetAlias(0) as ReferenceAlias).GetReference() as Actor
-  DebugTrace("Sarah " + sarah)
+  Form ariaForm = Game.GetForm(0x02000835) as Form
+  Game.GetPlayer().PlaceAtMe(ariaForm, 1, False, False, False, None, None, False)
 
-  sarah.Enable(false)
-  sarah.SetAlpha(0.0, false)
-  sarah.MoveTo(Game.GetPlayer(), 0.0, 0.0, 0.0, True, False)
+  ;sarah.Enable(false)
+  ;sarah.SetAlpha(0.0, false)
+  ;sarah.MoveTo(Game.GetPlayer(), 0.0, 0.0, 0.0, True, False)
   ;sarah.Disable(false)
 
-  debugScene.ForceStart()
-  astroneer.SetStage(100)
+  ;debugScene.ForceStart()
+  ;astroneer.SetStage(100)
 
-  DebugTrace("Mission Board Intro " + debugScene)
-  DebugTrace("Mission Board Playing " + debugScene.IsPlaying())
-  DebugTrace("Mission Board OwningQuest " + debugScene.GetOwningQuest())
-  DebugTrace("ParentQuest " + astroneer.GetCurrentStageID())
+  ;DebugTrace("Mission Board Intro " + debugScene)
+  ;DebugTrace("Mission Board Playing " + debugScene.IsPlaying())
+  ;DebugTrace("Mission Board OwningQuest " + debugScene.GetOwningQuest())
+  ;DebugTrace("ParentQuest " + astroneer.GetCurrentStageID())
 EndFunction
 
 Function DebugShipValues() global
