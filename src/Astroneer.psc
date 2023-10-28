@@ -12,14 +12,16 @@ Function DebugScene() global
   Astroneer:DebugScene debugScene = astroneer.SceneMissionBoardIntro as Astroneer:DebugScene
   DebugTrace("Parent quest " + astroneer)
 
-  debugScene.Start()
-  astroneer.SetStage(100)
-  
   Actor sarah = (astroneer.GetAlias(0) as ReferenceAlias).GetReference() as Actor
   DebugTrace("Sarah " + sarah)
 
-  sarah.MoveTo(Game.GetPlayer(), 0.0, 0.0, 0.0, True, False)
   sarah.Enable(false)
+  sarah.SetAlpha(0.0, false)
+  sarah.MoveTo(Game.GetPlayer(), 0.0, 0.0, 0.0, True, False)
+  ;sarah.Disable(false)
+
+  debugScene.ForceStart()
+  astroneer.SetStage(100)
 
   DebugTrace("Mission Board Intro " + debugScene)
   DebugTrace("Mission Board Playing " + debugScene.IsPlaying())
