@@ -32,7 +32,27 @@ Group QuestData
   FormList Property AstroneerMBQuests Auto Const Mandatory
 EndGroup
 
+Group ShipData
+  ObjectReference[] Property ShipCollection Auto
+EndGroup
+
 Event OnQuestInit()
+  Trace("OnQuestInit")
+  Actor PlayerREF = Game.GetPlayer()
+  Self.RegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerLoadGame")
+  AddMissions()
+EndEvent
+
+Event Actor.OnPlayerLoadGame(Actor akActor)
+  AddMissions()
+EndEvent
+
+Function AddMissions()
+  if(ShipCollection == None)
+    Trace("Adding ship collection...")
+    ShipCollection = new ObjectReference[0]
+  endif
+
   Trace("Adding ship contract missions...")
 
   ; FIXME: Bind these to the script
@@ -53,7 +73,7 @@ Event OnQuestInit()
   EndForEach
 
   MB_Parent.DebugResetMissions()
-EndEvent
+EndFunction
 
 ; Creates a ContractShip and adds it to the player's ship list
 spaceshipreference Function AddContractShip(Form shipform, Message nameOverride)

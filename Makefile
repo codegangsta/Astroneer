@@ -6,6 +6,9 @@ all: remote_sync remote_compile install reload_scripts debug_init
 remote_sync::
 	rsync -avz --exclude-from '.gitignore' --exclude '.git' --exclude "starfield-modding-misc-extract" --delete -e ssh ./ jeremy@pc-wsl:/mnt/c/Users/jerem/Documents/Code/astroneer
 
+sync_esm::
+	rsync -avz -e ssh jeremy@pc-wsl:/mnt/d/SteamLibrary/steamapps/common/Starfield/Data/Astroneer.esm ./records
+
 ## Perform compilation on Windows. No WSL here as it's super slow
 remote_compile::
 	ssh jerem@pc 'cd C:\Users\jerem\Documents\Code\astroneer; ..\Caprica.exe --enable-language-extensions=1 -R --import ..\starfield-src\script\ --output ./out src'
@@ -28,11 +31,14 @@ reload_scripts::
 
 # Tail logs
 tail::
-	ssh jerem@pc 'Get-Content -Path ".\Documents\My Games\Starfield\Logs\Script\Papyrus.0.log" -Tail 10 -Wait'
+	ssh jerem@pc 'Get-Con.tent -Path ".\Documents\My Games\Starfield\Logs\Script\Papyrus.0.log" -Tail 10 -Wait'
 
 # Start a remote starfield console
 console::
 	@sfc
+
+load_save::
+	sfc "LoadGame CleanMBSave"
 
 stop_game:
 	sfc "QuitGame"

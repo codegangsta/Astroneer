@@ -88,6 +88,7 @@ Function StageAccepted()
 
   Actor PlayerREF = Game.GetPlayer() ; #DEBUG_LINE_NO:74
   Self.RegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerModifiedShip")
+  Self.RegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
 
   UpdateObjectiveValues()
 
@@ -97,20 +98,35 @@ EndFunction
 
 Function StageCompleted()
   Trace("StageCompleted")
-  Self.MissionComplete()
 
   Actor PlayerREF = Game.GetPlayer()
   Self.UnRegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerModifiedShip")
+  Self.UnRegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
+
+  AstroneerParent.PlayerShipQuest.RemovePlayerShip(Self.ContractShip)
+  AstroneerParent.ShipCollection.Add(Self.ContractShip)
+  Self.ContractShip = None
+
+  Self.MissionComplete()
 EndFunction
 
 Event Actor.OnPlayerModifiedShip(Actor akActor, spaceshipreference akShip)
   Trace("OnPlayerModifiedShip")
   if(akShip == Self.ContractShip)
     UpdateObjectiveValues()
+  endif
+EndEvent
+
+Event OnMenuOpenCloseEvent(String menuName, bool opening)
+  Trace("OnMenuOpenCloseEvent")
+  if(menuName == "SpaceshipEditorMenu" && !opening)
+
 
     if AllShipObjectivesComplete()
       Int turnIn = CompleteMessage.Show(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-      ;SetObjectiveDisplayedAtTop(CompleteObjective)
+      if(turnIn == 0)
+        StageCompleted()
+      endif
     endif
   endif
 EndEvent
@@ -160,6 +176,10 @@ Function UpdateObjectiveValues()
   UpdateObjectiveValue(ObjectiveValue_03, ObjectiveType_03, ShipObjective_03, ObjectiveTarget_03)
   UpdateObjectiveValue(ObjectiveValue_04, ObjectiveType_04, ShipObjective_04, ObjectiveTarget_04)
   UpdateObjectiveValue(ObjectiveValue_05, ObjectiveType_05, ShipObjective_05, ObjectiveTarget_05)
+
+  if AllShipObjectivesComplete()
+    SetObjectiveDisplayedAtTop(CompleteObjective)
+  endif
 EndFunction
 
 Function UpdateObjectiveValue(GlobalVariable value, Keyword objectiveType, Int objective, Float target)
