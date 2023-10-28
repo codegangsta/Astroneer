@@ -32,6 +32,10 @@ Group QuestData
   FormList Property AstroneerMBQuests Auto Const Mandatory
 EndGroup
 
+Group Scenes
+  Scene Property SceneMissionBoardIntro Auto Const Mandatory
+EndGroup
+
 Group ShipData
   ObjectReference[] Property ShipCollection Auto
 EndGroup

@@ -2,6 +2,22 @@ ScriptName Astroneer
 
 Function DebugInit() global
   DebugTrace("=DebugInit==============================================")
+  DebugScene()
+EndFunction
+
+Function DebugScene() global
+  DebugTrace("=DebugScene==============================================")
+
+  Astroneer:ParentQuest astroneer = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  DebugTrace("Parent quest " + astroneer)
+
+  astroneer.SceneMissionBoardIntro.Start()
+  astroneer.SetStage(100)
+
+  DebugTrace("Mission Board Intro " + astroneer.SceneMissionBoardIntro)
+  DebugTrace("Mission Board Playing " + astroneer.SceneMissionBoardIntro.IsPlaying())
+  DebugTrace("Mission Board OwningQuest " + astroneer.SceneMissionBoardIntro.GetOwningQuest())
+  DebugTrace("ParentQuest " + astroneer.GetCurrentStageID())
 EndFunction
 
 Function DebugShipValues() global
