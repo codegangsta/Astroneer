@@ -19,16 +19,11 @@ Function DebugScene() global
   Actor aria = Game.GetPlayer().PlaceActorAtMe(ariaForm, 1, None, True, False, False, None, False) as Actor
   DebugTrace("Aria " + aria)
   (astroneer.GetAlias(0) as ReferenceAlias).ForceRefTo(aria)
-  aria.AllowPCDialogue(True)
-  astroneer.SetStage(100)
-  debugScene.Start()
 
   ;sarah.Enable(false)
   ;sarah.SetAlpha(0.0, false)
   ;sarah.MoveTo(Game.GetPlayer(), 0.0, 0.0, 0.0, True, False)
   ;sarah.Disable(false)
-
-  ;debugScene.ForceStart()
 
   ;DebugTrace("Mission Board Intro " + debugScene)
   ;DebugTrace("Mission Board Playing " + debugScene.IsPlaying())
