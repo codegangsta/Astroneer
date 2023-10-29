@@ -6,7 +6,9 @@ Event OnActivate(ObjectReference akActionRef)
   Topic greetTopic = Game.GetForm(0x02000838) as Topic
   Trace("Aria OnActivate " + greetTopic)
 
-  Self.Say(greetTopic, None, True, None)
+  Astroneer:ParentQuest astroneer = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  Astroneer:DebugScene debugScene = astroneer.SceneMissionBoardIntro as Astroneer:DebugScene
+  debugScene.Start()
 EndEvent
 
 Function Trace(string message)
