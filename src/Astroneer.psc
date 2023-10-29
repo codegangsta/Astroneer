@@ -2,7 +2,10 @@ ScriptName Astroneer
 
 Function DebugInit() global
   DebugTrace("=DebugInit==============================================")
-  DebugScene()
+  ;DebugScene()
+  Astroneer:ParentQuest astroneer = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  DebugTrace("Parent quest " + astroneer)
+  DebugTrace("Isfilled " + astroneer.GetAlias(0).IsFilled())
 EndFunction
 
 Function DebugScene() global
@@ -12,8 +15,13 @@ Function DebugScene() global
   Astroneer:DebugScene debugScene = astroneer.SceneMissionBoardIntro as Astroneer:DebugScene
   DebugTrace("Parent quest " + astroneer)
 
-  Form ariaForm = Game.GetForm(0x02000835) as Form
-  Game.GetPlayer().PlaceAtMe(ariaForm, 1, False, False, False, None, None, False)
+  ActorBase ariaForm = Game.GetForm(0x02000835) as ActorBase
+  Actor aria = Game.GetPlayer().PlaceActorAtMe(ariaForm, 1, None, True, False, False, None, False) as Actor
+  DebugTrace("Aria " + aria)
+  (astroneer.GetAlias(0) as ReferenceAlias).ForceRefTo(aria)
+  aria.AllowPCDialogue(True)
+  astroneer.SetStage(100)
+  debugScene.Start()
 
   ;sarah.Enable(false)
   ;sarah.SetAlpha(0.0, false)
@@ -21,7 +29,6 @@ Function DebugScene() global
   ;sarah.Disable(false)
 
   ;debugScene.ForceStart()
-  ;astroneer.SetStage(100)
 
   ;DebugTrace("Mission Board Intro " + debugScene)
   ;DebugTrace("Mission Board Playing " + debugScene.IsPlaying())
