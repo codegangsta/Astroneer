@@ -6,6 +6,24 @@ Function DebugInit() global
   Astroneer:ParentQuest astroneer = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
   DebugTrace("Parent quest " + astroneer)
   DebugTrace("Isfilled " + astroneer.GetAlias(0).IsFilled())
+
+  Cell spaceport = Game.GetForm(0x00014cb3) as Cell
+  if (spaceport.IsLoaded())
+    DebugTrace("Spaceport is loaded")
+    DebugTrace("player parent cell " + Game.GetPlayer().GetParentCell())
+  else
+    DebugTrace("Spaceport is not loaded")
+  endif
+
+EndFunction
+
+Function DebugIntercom() global
+  Activator intercomForm = Game.GetForm(0x02000843) as Activator
+  DebugTrace("Intercom " + intercomForm)
+
+  ObjectReference intercom = Game.GetPlayer().PlaceAtMe(intercomForm, 1, False, False, False, None, None, True)
+  intercom.SetPosition(-828.62, 1603.28, -165.53)
+  intercom.SetAngle(-0.00, -0.00, -137.15)
 EndFunction
 
 Function DebugScene() global

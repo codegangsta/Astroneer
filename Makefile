@@ -29,6 +29,7 @@ reload_scripts::
 	sfc 'ReloadScript "Astroneer:ParentQuest"'
 	sfc 'ReloadScript "Astroneer:ShipContractMissionScript"'
 	sfc 'ReloadScript "Astroneer:Aria"'
+	sfc 'ReloadScript "Astroneer:DebugScene"'
 
 # Tail logs
 tail::

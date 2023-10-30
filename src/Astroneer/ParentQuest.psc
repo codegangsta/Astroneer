@@ -30,21 +30,36 @@ Group QuestData
   sq_playershipscript Property PlayerShipQuest Auto Const Mandatory
   MissionParentScript Property MB_Parent Auto Const Mandatory
   FormList Property AstroneerMBQuests Auto Const Mandatory
-EndGroup
-
-Group Scenes
   Scene Property SceneMissionBoardIntro Auto Const Mandatory
-EndGroup
-
-Group ShipData
   ObjectReference[] Property ShipCollection Auto
 EndGroup
+
 
 Event OnQuestInit()
   Trace("OnQuestInit")
   Actor PlayerREF = Game.GetPlayer()
+  Trace("Registering for events...")
   Self.RegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerLoadGame")
+  Self.RegisterForRemoteEvent(PlayerREF as ObjectReference, "OnCellAttach")
   AddMissions()
+EndEvent
+
+Event ObjectReference.OnCellAttach(ObjectReference akRef)
+  Trace("OnCellAttach")
+
+  Cell spaceport = Game.GetForm(0x00014cb3) as Cell
+  if (spaceport.IsLoaded())
+    Activator intercomForm = Game.GetForm(0x02000843) as Activator
+    Trace("Intercom " + intercomForm)
+
+    ; FIXME: force this to an alias and check before placing
+    ObjectReference intercom = Game.GetPlayer().PlaceAtMe(intercomForm, 1, False, False, False, None, None, True)
+    intercom.SetPosition(-828.62, 1603.28, -165.53)
+    intercom.SetAngle(-0.00, -0.00, -137.15)
+
+    ; FIXME: use a property here
+    (Self.GetAlias(1) as ReferenceAlias).ForceRefTo(intercom)
+  endif
 EndEvent
 
 Event Actor.OnPlayerLoadGame(Actor akActor)

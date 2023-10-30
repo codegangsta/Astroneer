@@ -1,8 +1,26 @@
 ScriptName Astroneer:DebugScene extends Scene
 
-Event OnAction(int actionID,  ReferenceAlias akAlias)
-  Trace("OnAction " + actionID + " " + akAlias)
-EndEvent
+Group Phases
+  Int Property PhaseGreet = 1 Auto Const
+  Int Property PhaseTopics = 2 Auto Const
+  Int Property PhaseModifyShip = 3 Auto Const
+  Int Property PhaseCompleteContract = 4 Auto Const
+EndGroup
+
+Function ModifyShip()
+  Trace("ModifyShip")
+  Game.GetPlayer().ShowHangarMenu(0, GetAria(), None, False)
+  Stop()
+EndFunction
+
+Function CompleteContract()
+  Trace("CompleteContract")
+  Stop()
+EndFunction
+
+Actor Function GetAria()
+  return (GetOwningQuest().GetAlias(0) as ReferenceAlias).GetActorReference()
+EndFunction
 
 Event OnBegin()
   Trace("OnBegin")
@@ -12,12 +30,22 @@ Event OnEnd()
   Trace("OnEnd")
 EndEvent
 
-Event OnPhaseBegin(Int auiPhaseIndex)
-  Trace("OnPhaseBegin " + auiPhaseIndex)
+Event OnPhaseBegin(Int phase)
+  Trace("OnPhaseBegin " + phase)
 EndEvent
 
-Event OnPhaseEnd(Int auiPhaseIndex)
-  Trace("OnPhaseEnd " + auiPhaseIndex)
+Event OnPhaseEnd(Int phase)
+  Trace("OnPhaseEnd " + phase)
+
+  if phase == PhaseGreet
+    Trace("Greet")
+  elseif phase == PhaseTopics
+    Trace("Topics")
+  elseif phase == PhaseModifyShip
+    ModifyShip()
+  elseif phase == PhaseCompleteContract
+    CompleteContract()
+  endif
 EndEvent
 
 Function Trace(string message)
