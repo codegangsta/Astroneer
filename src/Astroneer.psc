@@ -1,5 +1,55 @@
 ScriptName Astroneer
 
+Struct Mission
+{ Represents a ship contract mission on the mission board }
+
+  String ID
+  { Unique ID of the mission, used for testing and debugging }
+
+  Message Name
+  { Name of the mission }
+
+  Message Description
+  { Description of the mission }
+
+  Keyword Archetype
+  { Archetype of the ship }
+
+  Form ShipTemplate
+  { Template of the ship to spawn }
+
+  Keyword MissionDifficulty
+  { Difficulty of the mission }
+
+  Keyword MissionReward
+  { Reward tier for the mission }
+
+  ; Ship contract Objectives
+  Message ObjectiveText_01
+  Keyword ObjectiveType_01
+  Int ObjectectiveTarget_01
+
+  Message ObjectiveText_02
+  Keyword ObjectiveType_02
+  Int ObjectectiveTarget_02
+
+  Message ObjectiveText_03
+  Keyword ObjectiveType_03
+  Int ObjectectiveTarget_03
+
+  Message ObjectiveText_04
+  Keyword ObjectiveType_04
+  Int ObjectectiveTarget_04
+
+  Message ObjectiveText_05
+  Keyword ObjectiveType_05
+  Int ObjectectiveTarget_05
+EndStruct
+
+Function RegisterMission(m Mission) global
+  DebugTrace("Registering mission " + m.Name)
+EndFunction
+
 Function DebugInit() global
   DebugTrace("=DebugInit==============================================")
   ;DebugScene()
