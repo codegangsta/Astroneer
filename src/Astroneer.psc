@@ -6,10 +6,10 @@ Struct Mission
   String ID
   { Unique ID of the mission, used for testing and debugging }
 
-  Message Name
+  Message NameOverride
   { Name of the mission }
 
-  Message Description
+  Message DescriptionOverride
   { Description of the mission }
 
   Keyword Archetype
@@ -18,35 +18,43 @@ Struct Mission
   Form ShipTemplate
   { Template of the ship to spawn }
 
-  Keyword MissionDifficulty
+  Keyword Difficulty
   { Difficulty of the mission }
 
-  Keyword MissionReward
+  GlobalVariable MissionReward
   { Reward tier for the mission }
 
   ; Ship contract Objectives
-  Message ObjectiveText_01
   Keyword ObjectiveType_01
   Int ObjectectiveTarget_01
 
-  Message ObjectiveText_02
   Keyword ObjectiveType_02
   Int ObjectectiveTarget_02
 
-  Message ObjectiveText_03
   Keyword ObjectiveType_03
   Int ObjectectiveTarget_03
 
-  Message ObjectiveText_04
   Keyword ObjectiveType_04
   Int ObjectectiveTarget_04
 
-  Message ObjectiveText_05
   Keyword ObjectiveType_05
   Int ObjectectiveTarget_05
 EndStruct
 
 Function RegisterMission(m Mission) global
+
+  m.ID = "my_awesome_mission"
+  m.Difficulty = options.DifficultyTier1
+  m.MissionReward = options.MissionRewardTier1
+  m.Archetype = options.ArchetypeFighter
+
+  m.ObjectiveType_01 = options.ObjectiveCargo
+  m.ObjectiveTarget_01 = 1000
+
+  m.ObjectiveType_02 = options.ObjectiveMass
+  m.ObjectiveTarget_02 = 1000
+
+
   DebugTrace("Registering mission " + m.Name)
 EndFunction
 
