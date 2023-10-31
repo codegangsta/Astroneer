@@ -26,19 +26,19 @@ Struct Mission
 
   ; Ship contract Objectives
   Keyword ObjectiveType_01
-  Int ObjectectiveTarget_01
+  Float ObjectectiveTarget_01
 
   Keyword ObjectiveType_02
-  Int ObjectectiveTarget_02
+  Float ObjectectiveTarget_02
 
   Keyword ObjectiveType_03
-  Int ObjectectiveTarget_03
+  Float ObjectectiveTarget_03
 
   Keyword ObjectiveType_04
-  Int ObjectectiveTarget_04
+  Float ObjectectiveTarget_04
 
   Keyword ObjectiveType_05
-  Int ObjectectiveTarget_05
+  Float ObjectectiveTarget_05
 EndStruct
 
 Struct Options

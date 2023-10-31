@@ -38,6 +38,18 @@ Group ShipObjectives
   GlobalVariable Property ObjectiveTotal_05 Auto Const
 EndGroup
 
+Group Aliases
+  ReferenceAlias Property MissionText Auto Const
+  ReferenceAlias Property Archetype Auto Const
+  ReferenceAlias Property Difficulty Auto Const
+
+  ReferenceAlias Property Objective_01 Auto Const
+  ReferenceAlias Property Objective_02 Auto Const
+  ReferenceAlias Property Objective_03 Auto Const
+  ReferenceAlias Property Objective_04 Auto Const
+  ReferenceAlias Property Objective_05 Auto Const
+EndGroup
+
 Group ObjectiveIndexes
   Int Property ShipObjective_01 = 11 Auto Const
   Int Property ShipObjective_02 = 12 Auto Const
@@ -47,13 +59,42 @@ Group ObjectiveIndexes
   Int Property CompleteObjective = 100 Auto Const
 EndGroup
 
+Group FormLists
+  FormList Property ObjectiveTypes Auto Const Mandatory
+  FormList Property MissionTexts Auto Const Mandatory
+  Form Property Blank Auto Const Mandatory
+EndGroup
+
+
 Message Property CompleteMessage Auto Const Mandatory
 { Message to display when the player visits the mission board after finishing the ship }
+
+Astroneer:Plugin:Mission Property Mission Auto
 
 ;-- Functions ---------------------------------------
 
 Event OnQuestStarted()
   Trace("OnQuestStarted")
+
+  ; Generate a new mission
+  Mission = new Astroneer:Plugin:Mission
+  Mission.ID = "my_awesome_mission"
+  Mission.ObjectiveType_01 = AstroneerParent.ShipContractObjectiveCargo
+  Mission.ObjectiveTarget_01 = 100.0
+
+  Actor Player = Game.GetPlayer()
+
+  ; Fill refs
+  Message mt = MissionTexts.GetAt(0) as Message
+  Player.PlaceAtMe(Blank, 0, True, True, False, None, MissionText, False)
+  MissionText.GetRef().SetOverrideName(mt)
+
+  FillObjectiveRef(Objective_01, ObjectiveType_01)
+  FillObjectiveRef(Objective_02, ObjectiveType_02)
+  FillObjectiveRef(Objective_03, ObjectiveType_03)
+  FillObjectiveRef(Objective_04, ObjectiveType_04)
+  FillObjectiveRef(Objective_05, ObjectiveType_05)
+
   UpdateObjectiveTargets()
   Parent.OnQuestStarted()
 EndEvent
@@ -70,9 +111,18 @@ Event OnStageSet(Int stageId, Int itemId)
   endif
 EndEvent
 
+Function FillObjectiveRef(ReferenceAlias objectiveAlias, Keyword objectiveType)
+  Actor Player = Game.GetPlayer()
+
+  if objectiveType != None
+    Form objectiveForm = ObjectiveTypes.GetAt(0) ;FIXME: Search by keyword here
+    Player.PlaceAtMe(objectiveForm, 0, True, True, False, None, objectiveAlias, False)
+  endif
+EndFunction
+
 Function StageAccepted()
   Trace("StageAccepted")
-  ; FIXME: Put objective indexes in consts
+
   Self.SetObjectiveDisplayed(ShipObjective_01, True, False)
   Self.SetObjectiveDisplayed(ShipObjective_02, True, False)
   Self.SetObjectiveDisplayed(ShipObjective_03, True, False)
