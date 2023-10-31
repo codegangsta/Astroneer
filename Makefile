@@ -28,12 +28,11 @@ reload_scripts::
 	sfc 'ReloadScript "Astroneer"'
 	sfc 'ReloadScript "Astroneer:ParentQuest"'
 	sfc 'ReloadScript "Astroneer:ShipContractMissionScript"'
-	sfc 'ReloadScript "Astroneer:Aria"'
-	sfc 'ReloadScript "Astroneer:DebugScene"'
+	sfc 'ReloadScript "Astroneer:ShipContractMissionPack1"'
 
 # Tail logs
 tail::
-	ssh jerem@pc 'Get-Content -Path ".\Documents\My Games\Starfield\Logs\Script\Papyrus.0.log" -Tail 10 -Wait'
+	ssh jerem@pc 'Get-Content -Path ".\Documents\My Games\Starfield\Logs\Script\Papyrus.0.log" -Tail 1000 -Wait'
 
 # Start a remote starfield console
 console::

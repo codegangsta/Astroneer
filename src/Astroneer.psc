@@ -5,15 +5,15 @@ Function DebugInit() global
   ;DebugScene()
   Astroneer:ParentQuest astroneer = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
   DebugTrace("Parent quest " + astroneer)
-  DebugTrace("Isfilled " + astroneer.GetAlias(0).IsFilled())
 
-  Cell spaceport = Game.GetForm(0x00014cb3) as Cell
-  if (spaceport.IsLoaded())
-    DebugTrace("Spaceport is loaded")
-    DebugTrace("player parent cell " + Game.GetPlayer().GetParentCell())
-  else
-    DebugTrace("Spaceport is not loaded")
-  endif
+  DebugTrace("Random Mission " + astroneer.GetRandomMission())
+
+  Astroneer:ShipContractMissionScript mission = Game.GetForm(0x02000800) as Astroneer:ShipContractMissionScript
+  Alias missionText = mission.GetAlias(9)
+  ;missionText.RefillAlias()
+  DebugTrace("Alias " + missionText as ReferenceAlias)
+  DebugTrace("Alias ref" + (missionText as ReferenceAlias).GetReference())
+
 
 EndFunction
 
@@ -87,36 +87,10 @@ Function DebugShipValues() global
   DebugTrace("Top speed " + playerShip.GetValue(TestAV))
 EndFunction
 
-Function DebugAddMissions() global
+Function DebugResetMissions() global
   MissionParentScript missionParent = Game.GetForm(0x00015300) as MissionParentScript
-  DebugTrace("MissionParent " + missionParent)
-  DebugTrace("MissionTypes " + missionParent.MissionTypes)
-
-  Keyword MissionTypeShipContract = Game.GetForm(0x02000803) as Keyword
-  GlobalVariable MissionCompletedShipContract = Game.GetForm(0x02000802) as GlobalVariable
-
-  MissionParentScript:MissionType shipContract = new MissionParentScript:MissionType
-  shipContract.missionTypeKeyword = MissionTypeShipContract
-  shipContract.MissionCompletedCount = MissionCompletedShipContract
-  shipContract.RandomStoryEventOrder = True
-
-  if(missionParent.MissionTypes.FindStruct("missionTypeKeyword", MissionTypeShipContract) < 0)
-    DebugTrace("Adding Mission type " + shipContract)
-    missionParent.MissionTypes.Add(shipContract)
-  endif
-
-  ; Add contracts if they don't exist in the list of all contracts
-  MissionQuestScript shipContract01 = Game.GetForm(0x02000800) as MissionQuestScript
-  if(missionParent.missionQuests.Find(shipContract01) < 0)
-    DebugTrace("Adding Mission " + shipContract01)
-    missionParent.missionQuests.Add(shipContract01)
-  endif
-
-  ; Force a reset of missions on the mission board
   DebugTrace("Resetting missions on the mission board")
   missionParent.DebugResetMissions()
-  Debug.Notification("Added ship contract missions")
-
 EndFunction
 
 Function DebugContract() global

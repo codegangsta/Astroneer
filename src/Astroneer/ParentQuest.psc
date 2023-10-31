@@ -19,13 +19,6 @@ Group ActorValues
   ActorValue Property ShipWeaponSystemGroup1Health Auto Const Mandatory
 EndGroup
 
-Group ObjectiveKeywords
-  Keyword Property ShipContractObjectiveCargo Auto Const Mandatory
-  Keyword Property ShipContractObjectiveEnginePower Auto Const Mandatory
-  Keyword Property ShipContractObjectiveGravJumpRange Auto Const Mandatory
-  Keyword Property ShipContractObjectiveMass Auto Const Mandatory
-EndGroup
-
 Group QuestData
   sq_playershipscript Property PlayerShipQuest Auto Const Mandatory
   MissionParentScript Property MB_Parent Auto Const Mandatory
@@ -107,6 +100,47 @@ spaceshipreference Function AddContractShip(Form shipform, Message nameOverride)
   return ship
 EndFunction
 
+Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
+  Astroneer:Pack consts = (Self as ScriptObject) as Astroneer:Pack
+
+  if (objectiveType == consts.ObjectiveCargo)
+    return ship.GetShipMaxCargoWeight()
+
+  elseif (objectiveType == consts.ObjectiveEnginePower)
+    return ship.GetValue(SpaceshipEnginePower)
+
+  elseif (objectiveType == consts.ObjectiveGravJumpRange)
+    return ship.GetGravJumpRange()
+
+  elseif (objectiveType == consts.ObjectiveMass)
+    return ship.GetValue(SpaceshipMass)
+
+  else
+    Trace("GetObjectiveValue: Unknown objective type: " + objectiveType)
+    return -1
+  endif
+EndFunction
+
+; TODO: Run this on startup and cache the results
+Astroneer:Pack:Mission Function GetRandomMission()
+  Astroneer:Pack:Mission[] missions = new Astroneer:Pack:Mission[0]
+  String[] missionPacks = new String[0]
+  
+  missionPacks.Add("Astroneer:ShipContractMissionPack1")
+
+  ForEach String pack in missionPacks
+    Var[] args = new Var[0]
+    args.Add((Self as ScriptObject) as Astroneer:Pack)
+    Astroneer:Pack:Mission[] packMissions = Utility.CallGlobalFunction(pack, "Missions", args) as Astroneer:Pack:Mission[]
+    ForEach Astroneer:Pack:Mission m in packMissions
+      Trace("GetRandomMission: " + m)
+      missions.Add(m)
+    EndForEach
+  EndForEach
+
+  return missions[Utility.RandomInt(0, missions.Length-1)] 
+EndFunction
+
 ObjectReference Function GetLandingMarker()
 	; easy way
 	ObjectReference LandingMarkerA = PlayerShipQuest.PlayerShipLandingMarker.GetReference()
@@ -132,44 +166,6 @@ ObjectReference Function GetLandingMarker()
 	; this should never happen
 	Trace("GetLandingMarker Milestone D")
 	Return (Player as ObjectReference)
-EndFunction
-
-Float Function GetObjectiveValue(spaceshipreference ship, Keyword objectiveType)
-  if (objectiveType == ShipContractObjectiveCargo)
-    return ship.GetShipMaxCargoWeight()
-
-  elseif (objectiveType == ShipContractObjectiveEnginePower)
-    return ship.GetValue(SpaceshipEnginePower)
-
-  elseif (objectiveType == ShipContractObjectiveGravJumpRange)
-    return ship.GetGravJumpRange()
-
-  elseif (objectiveType == ShipContractObjectiveMass)
-    return ship.GetValue(SpaceshipMass)
-
-  else
-    Trace("GetObjectiveValue: Unknown objective type: " + objectiveType)
-    return -1
-  endif
-EndFunction
-
-Astroneer:Pack:Mission Function GetRandomMission()
-  Astroneer:Pack:Mission[] missions = new Astroneer:Pack:Mission[0]
-  String[] missionPacks = new String[0]
-  
-  missionPacks.Add("Astroneer:ShipContractMissionPack1")
-
-  ForEach String pack in missionPacks
-    Var[] args = new Var[0]
-    args.Add((Self as ScriptObject) as Astroneer:Pack)
-    Astroneer:Pack:Mission[] packMissions = Utility.CallGlobalFunction(pack, "Missions", args) as Astroneer:Pack:Mission[]
-    ForEach Astroneer:Pack:Mission m in packMissions
-      Trace("GetRandomMission: " + m)
-      missions.Add(m)
-    EndForEach
-  EndForEach
-
-  return missions[Utility.RandomInt(0, missions.Length)] 
 EndFunction
 
 Function Trace(string message)

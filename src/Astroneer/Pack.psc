@@ -32,6 +32,8 @@ EndGroup
 
 Group Objectives
   Message Property ObjectiveCargo Auto Const Mandatory
+  Message Property ObjectiveEnginePower Auto Const Mandatory
+  Message Property ObjectiveGravJumpRange Auto Const Mandatory
   Message Property ObjectiveMass Auto Const Mandatory
 EndGroup
 

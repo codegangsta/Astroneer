@@ -1,8 +1,8 @@
 ScriptName Astroneer:ShipContractMissionPack1
 
-Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p)
-  Astroneer:Pack:Mission[] missions = new Astroneer:Pack:Mission[0]
+Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
 
+  Astroneer:Pack:Mission[] missions = new Astroneer:Pack:Mission[0]
   Astroneer:Pack:Mission m = new Astroneer:Pack:Mission
   m.ID = "debug"
   m.Text = p.MissionTextDefault
@@ -14,6 +14,8 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p)
   m.ObjectiveTarget01 = 2000
   m.Objective02 = p.ObjectiveMass
   m.ObjectiveTarget02 = 100
+  missions.Add(m)
 
   return missions
+
 EndFunction

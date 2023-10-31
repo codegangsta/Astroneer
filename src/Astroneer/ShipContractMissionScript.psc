@@ -1,53 +1,32 @@
 ScriptName Astroneer:ShipContractMissionScript Extends missionquestscript
-{ for ship contract missions }
 
 ;-- Variables ---------------------------------------
 
 ;-- Properties --------------------------------------
-spaceshipreference Property ContractShip Auto
-Astroneer:ParentQuest Property AstroneerParent Auto Const Mandatory
 
-Group ShipObjectives
-  Keyword Property ObjectiveType_01 Auto Const
-  { The type of objective, referenced by a keyword }
-  Float Property ObjectiveTarget_01 Auto Const
-  { The target value for the objective }
+Group ObjectiveGlobals
   GlobalVariable Property ObjectiveValue_01 Auto Const
-  { Global representing the current value of the objective, used for display }
-  GlobalVariable Property ObjectiveTotal_01 Auto Const
-  { Global representing the total value of the objective, used for display }
-
-  Keyword Property ObjectiveType_02 Auto Const
-  Float Property ObjectiveTarget_02 Auto Const
   GlobalVariable Property ObjectiveValue_02 Auto Const
-  GlobalVariable Property ObjectiveTotal_02 Auto Const
-
-  Keyword Property ObjectiveType_03 Auto Const
-  Float Property ObjectiveTarget_03 Auto Const
   GlobalVariable Property ObjectiveValue_03 Auto Const
-  GlobalVariable Property ObjectiveTotal_03 Auto Const
-
-  Keyword Property ObjectiveType_04 Auto Const
-  Float Property ObjectiveTarget_04 Auto Const
   GlobalVariable Property ObjectiveValue_04 Auto Const
-  GlobalVariable Property ObjectiveTotal_04 Auto Const
-
-  Keyword Property ObjectiveType_05 Auto Const
-  Float Property ObjectiveTarget_05 Auto Const
   GlobalVariable Property ObjectiveValue_05 Auto Const
+
+  GlobalVariable Property ObjectiveTotal_01 Auto Const
+  GlobalVariable Property ObjectiveTotal_02 Auto Const
+  GlobalVariable Property ObjectiveTotal_03 Auto Const
+  GlobalVariable Property ObjectiveTotal_04 Auto Const
   GlobalVariable Property ObjectiveTotal_05 Auto Const
 EndGroup
 
 Group Aliases
-  ReferenceAlias Property MissionText Auto Const
-  ReferenceAlias Property Archetype Auto Const
-  ReferenceAlias Property Difficulty Auto Const
+  ;ReferenceAlias Property MissionText Auto Const Mandatory
+  ;ReferenceAlias Property Difficulty Auto Const Mandatory
 
-  ReferenceAlias Property Objective_01 Auto Const
-  ReferenceAlias Property Objective_02 Auto Const
-  ReferenceAlias Property Objective_03 Auto Const
-  ReferenceAlias Property Objective_04 Auto Const
-  ReferenceAlias Property Objective_05 Auto Const
+  ;ReferenceAlias Property Objective_01 Auto Const Mandatory
+  ;ReferenceAlias Property Objective_02 Auto Const Mandatory
+  ;ReferenceAlias Property Objective_03 Auto Const Mandatory
+  ;ReferenceAlias Property Objective_04 Auto Const Mandatory
+  ;ReferenceAlias Property Objective_05 Auto Const Mandatory
 EndGroup
 
 Group ObjectiveIndexes
@@ -61,35 +40,39 @@ EndGroup
 
 Group FormLists
   FormList Property ObjectiveTypes Auto Const Mandatory
-  FormList Property MissionTexts Auto Const Mandatory
-  Form Property Blank Auto Const Mandatory
 EndGroup
 
+Astroneer:ParentQuest Property AstroneerParent Auto Const Mandatory
 Message Property CompleteMessage Auto Const Mandatory
+
+; Blank form (book) used for text replacement
+Form Property TextReplacementForm Auto Const Mandatory
+
+Astroneer:Pack:Mission Property Mission Auto
+spaceshipreference Property ContractShip Auto
 
 ;-- Functions ---------------------------------------
 
 Event OnQuestStarted()
   Trace("OnQuestStarted")
-
-  Actor Player = Game.GetPlayer()
-
-  ; Fill refs
-  Message mt = MissionTexts.GetAt(0) as Message
-  Player.PlaceAtMe(Blank, 0, True, True, False, None, MissionText, False)
-  MissionText.GetRef().SetOverrideName(mt)
-
-  FillObjectiveRef(Objective_01, ObjectiveType_01)
-  FillObjectiveRef(Objective_02, ObjectiveType_02)
-  FillObjectiveRef(Objective_03, ObjectiveType_03)
-  FillObjectiveRef(Objective_04, ObjectiveType_04)
-  FillObjectiveRef(Objective_05, ObjectiveType_05)
-
-  UpdateObjectiveTargets()
   Parent.OnQuestStarted()
 EndEvent
 
 Event OnStageSet(Int stageId, Int itemId)
+  if(stageId == ReadyStage)
+    Self.Mission = AstroneerParent.GetRandomMission()
+    FillRef(Self.GetAlias(9) as ReferenceAlias, Mission.Text)
+    ;Trace("Fill ref Difficulty")
+    ;FillRef(Difficulty, Mission.Difficulty)
+    ;Trace("Fill ref Objectives")
+    ;FillRef(Objective_01, Mission.Objective01)
+    ;FillRef(Objective_02, Mission.Objective02)
+    ;FillRef(Objective_03, Mission.Objective03)
+    ;FillRef(Objective_04, Mission.Objective04)
+    ;FillRef(Objective_05, Mission.Objective05)
+    UpdateObjectiveTargets()
+  endif
+
   if(stageId == AcceptStage)
     StageAccepted()
     return
@@ -101,12 +84,14 @@ Event OnStageSet(Int stageId, Int itemId)
   endif
 EndEvent
 
-Function FillObjectiveRef(ReferenceAlias objectiveAlias, Keyword objectiveType)
-  Actor Player = Game.GetPlayer()
-
-  if objectiveType != None
-    Form objectiveForm = ObjectiveTypes.GetAt(0) ;FIXME: Search by keyword here
-    Player.PlaceAtMe(objectiveForm, 0, True, True, False, None, objectiveAlias, False)
+Function FillRef(ReferenceAlias akAlias, Message akMessage)
+  Trace("FillRef " + akAlias + " " + akMessage)
+  if akMessage != None
+    ObjectReference item = Game.GetPlayer().PlaceAtMe(TextReplacementForm, 1, True, True, False, None, None, False)
+    Trace("SetOverrideName " + item + " " + akMessage)
+    item.SetOverrideName(akMessage)
+    akAlias.ForceRefTo(item)
+    Trace("Alias reference " + akAlias.GetReference())
   endif
 EndFunction
 
@@ -171,16 +156,6 @@ Event OnMenuOpenCloseEvent(String menuName, bool opening)
   endif
 EndEvent
 
-Function UpdateObjectiveTargets()
-  Trace("UpdateObjectiveTargets")
-
-  UpdateObjectiveTarget(ObjectiveTotal_01, ObjectiveTarget_01)
-  UpdateObjectiveTarget(ObjectiveTotal_02, ObjectiveTarget_02)
-  UpdateObjectiveTarget(ObjectiveTotal_03, ObjectiveTarget_03)
-  UpdateObjectiveTarget(ObjectiveTotal_04, ObjectiveTarget_04)
-  UpdateObjectiveTarget(ObjectiveTotal_05, ObjectiveTarget_05)
-EndFunction
-
 Bool Function AllShipObjectivesComplete()
   Trace("ShipObjectivesComplete")
   if(HasObjective(ShipObjective_01) && !IsObjectiveCompleted(ShipObjective_01))
@@ -202,6 +177,16 @@ Bool Function AllShipObjectivesComplete()
   return True
 EndFunction
 
+Function UpdateObjectiveTargets()
+  Trace("UpdateObjectiveTargets")
+
+  UpdateObjectiveTarget(ObjectiveTotal_01, Mission.ObjectiveTarget01)
+  UpdateObjectiveTarget(ObjectiveTotal_02, Mission.ObjectiveTarget02)
+  UpdateObjectiveTarget(ObjectiveTotal_03, Mission.ObjectiveTarget03)
+  UpdateObjectiveTarget(ObjectiveTotal_04, Mission.ObjectiveTarget04)
+  UpdateObjectiveTarget(ObjectiveTotal_05, Mission.ObjectiveTarget05)
+EndFunction
+
 Function UpdateObjectiveTarget(GlobalVariable total, Float value)
   if(total != None)
     total.SetValue(value)
@@ -211,20 +196,20 @@ EndFunction
 
 Function UpdateObjectiveValues()
   Trace("UpdateObjectiveValues")
-  UpdateObjectiveValue(ObjectiveValue_01, ObjectiveType_01, ShipObjective_01, ObjectiveTarget_01)
-  UpdateObjectiveValue(ObjectiveValue_02, ObjectiveType_02, ShipObjective_02, ObjectiveTarget_02)
-  UpdateObjectiveValue(ObjectiveValue_03, ObjectiveType_03, ShipObjective_03, ObjectiveTarget_03)
-  UpdateObjectiveValue(ObjectiveValue_04, ObjectiveType_04, ShipObjective_04, ObjectiveTarget_04)
-  UpdateObjectiveValue(ObjectiveValue_05, ObjectiveType_05, ShipObjective_05, ObjectiveTarget_05)
+  UpdateObjectiveValue(ObjectiveValue_01, Mission.Objective01, ShipObjective_01, Mission.ObjectiveTarget01)
+  UpdateObjectiveValue(ObjectiveValue_02, Mission.Objective02, ShipObjective_02, Mission.ObjectiveTarget02)
+  UpdateObjectiveValue(ObjectiveValue_03, Mission.Objective03, ShipObjective_03, Mission.ObjectiveTarget03)
+  UpdateObjectiveValue(ObjectiveValue_04, Mission.Objective04, ShipObjective_04, Mission.ObjectiveTarget04)
+  UpdateObjectiveValue(ObjectiveValue_05, Mission.Objective05, ShipObjective_05, Mission.ObjectiveTarget05)
 
   if AllShipObjectivesComplete()
     SetObjectiveDisplayedAtTop(CompleteObjective)
   endif
 EndFunction
 
-Function UpdateObjectiveValue(GlobalVariable value, Keyword objectiveType, Int objective, Float target)
+Function UpdateObjectiveValue(GlobalVariable value, Form objectiveType, Int objective, Float target)
   Trace("UpdateObjectiveValue " + objectiveType + " - " + value)
-  if(value != None && objectiveType != None)
+  if(objectiveType != None)
     value.SetValue(0) ;set to 0 since we are using mod
     Float val = AstroneerParent.GetObjectiveValue(ContractShip, objectiveType)
     Trace("Updating objective " + objectiveType + " to " + val)
