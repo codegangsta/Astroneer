@@ -65,22 +65,12 @@ Group FormLists
   Form Property Blank Auto Const Mandatory
 EndGroup
 
-
 Message Property CompleteMessage Auto Const Mandatory
-{ Message to display when the player visits the mission board after finishing the ship }
-
-Astroneer:Plugin:Mission Property Mission Auto
 
 ;-- Functions ---------------------------------------
 
 Event OnQuestStarted()
   Trace("OnQuestStarted")
-
-  ; Generate a new mission
-  Mission = new Astroneer:Plugin:Mission
-  Mission.ID = "my_awesome_mission"
-  Mission.ObjectiveType_01 = AstroneerParent.ShipContractObjectiveCargo
-  Mission.ObjectiveTarget_01 = 100.0
 
   Actor Player = Game.GetPlayer()
 

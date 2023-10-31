@@ -31,7 +31,7 @@ Group QuestData
   MissionParentScript Property MB_Parent Auto Const Mandatory
   FormList Property AstroneerMBQuests Auto Const Mandatory
   Scene Property SceneMissionBoardIntro Auto Const Mandatory
-  ObjectReference[] Property ShipCollection Auto
+  ObjectReference[] Property ShipCollection Auto Const Mandatory
 EndGroup
 
 
@@ -67,11 +67,6 @@ Event Actor.OnPlayerLoadGame(Actor akActor)
 EndEvent
 
 Function AddMissions()
-  if(ShipCollection == None)
-    Trace("Adding ship collection...")
-    ShipCollection = new ObjectReference[0]
-  endif
-
   Trace("Adding ship contract missions...")
 
   ; FIXME: Bind these to the script
@@ -156,6 +151,25 @@ Float Function GetObjectiveValue(spaceshipreference ship, Keyword objectiveType)
     Trace("GetObjectiveValue: Unknown objective type: " + objectiveType)
     return -1
   endif
+EndFunction
+
+Astroneer:Pack:Mission Function GetRandomMission()
+  Astroneer:Pack:Mission[] missions = new Astroneer:Pack:Mission[0]
+  String[] missionPacks = new String[0]
+  
+  missionPacks.Add("Astroneer:ShipContractMissionPack1")
+
+  ForEach String pack in missionPacks
+    Var[] args = new Var[0]
+    args.Add((Self as ScriptObject) as Astroneer:Pack)
+    Astroneer:Pack:Mission[] packMissions = Utility.CallGlobalFunction(pack, "Missions", args) as Astroneer:Pack:Mission[]
+    ForEach Astroneer:Pack:Mission m in packMissions
+      Trace("GetRandomMission: " + m)
+      missions.Add(m)
+    EndForEach
+  EndForEach
+
+  return missions[Utility.RandomInt(0, missions.Length)] 
 EndFunction
 
 Function Trace(string message)
