@@ -91,6 +91,7 @@ Function DebugResetMissions() global
   MissionParentScript missionParent = Game.GetForm(0x00015300) as MissionParentScript
   DebugTrace("Resetting missions on the mission board")
   missionParent.DebugResetMissions()
+  Game.ShowMissionBoardMenu(None, 0)
 EndFunction
 
 Function DebugContract() global

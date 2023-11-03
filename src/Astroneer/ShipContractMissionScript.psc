@@ -70,7 +70,7 @@ Event OnStageSet(Int stageId, Int itemId)
     ;FillRef(Objective_03, Mission.Objective03)
     ;FillRef(Objective_04, Mission.Objective04)
     ;FillRef(Objective_05, Mission.Objective05)
-    UpdateObjectiveTargets()
+    ;UpdateObjectiveTargets()
   endif
 
   if(stageId == AcceptStage)
