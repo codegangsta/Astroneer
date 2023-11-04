@@ -147,8 +147,22 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
     ActorValue shieldAV = Game.GetForm(0x0001ecce) as ActorValue
     return Math.Round(1.0 / ship.GetValue(shieldAV))
 
+  elseif (objectiveType == consts.ObjectiveTopSpeed)
+    ActorValue speedAV = Game.GetForm(0x00278988) as ActorValue
+    return ship.GetValue(speedAV)
+
+  elseif (objectiveType == consts.ObjectiveTotalWeaponPower)
+    ActorValue wg1AV = Game.GetForm(0x00219625) as ActorValue
+    ActorValue wg2AV = Game.GetForm(0x00219624) as ActorValue
+    ActorValue wg3AV = Game.GetForm(0x00219623) as ActorValue
+    return Math.Round((1.0/ship.GetValue(wg1AV)) + (1.0/ship.GetValue(wg2AV)) + (1.0/ship.GetValue(wg3AV)))
+
+  elseif (objectiveType == consts.ObjectiveWindows)
+    Keyword SbShip_Window = Game.GetForm(0x00143b37) as Keyword
+    return ship.GetExteriorRefs(SBShip_Window).length
+
   else
-    ;Trace("GetObjectiveValue: Unknown objective type: " + objectiveType)
+    Trace("GetObjectiveValue: Unknown objective type: " + objectiveType)
     return -1
   endif
 EndFunction
