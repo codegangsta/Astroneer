@@ -162,8 +162,40 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
     return ship.GetExteriorRefs(SBShip_Window).length
 
   else
+    Trace("Fuel " + ship.GetValue(Game.GetForm(0x0000854f) as ActorValue))
+    Trace("Shield Health " + ship.GetValue(Game.GetForm(0x0005bfa8) as ActorValue))
+    Trace("Forward Force per power " + ship.GetValue(Game.GetForm(0x000fc913) as ActorValue))
+    Trace("Reactor Power " + ship.GetValue(Game.GetForm(0x00001018) as ActorValue))
+    Trace("Shielded Cargo " + ship.GetValue(Game.GetForm(0x0002b344) as ActorValue))
+    Trace("Hull " + ship.GetValue(Game.GetForm(0x000002d4) as ActorValue))
+    Trace("Laser Power " + GetWeaponTypePower(ship, Game.GetForm(0x0002226a) as Keyword))
+    Trace("Ballistic Power " + GetWeaponTypePower(ship, Game.GetForm(0x00022269) as Keyword))
+    Trace("Missile Power " + GetWeaponTypePower(ship, Game.GetForm(0x00155c6c) as Keyword))
     Trace("GetObjectiveValue: Unknown objective type: " + objectiveType)
+
+    Trace("Links " + ship.GetLinkedRefChain(None, 100))
+
     return -1
+  endif
+EndFunction
+
+Float Function GetWeaponTypePower(spaceshipreference ship, Keyword type)
+  ActorValue wg1AV = Game.GetForm(0x00219625) as ActorValue
+  ActorValue wg2AV = Game.GetForm(0x00219624) as ActorValue
+  ActorValue wg3AV = Game.GetForm(0x00219623) as ActorValue
+
+  Weapon group1 = ship.GetWeaponGroupBaseObject(ShipWeaponSystemGroup1Health)
+  Weapon group2 = ship.GetWeaponGroupBaseObject(ShipWeaponSystemGroup2Health)
+  Weapon group3 = ship.GetWeaponGroupBaseObject(ShipWeaponSystemGroup3Health)
+
+  if group1 != None && group1.HasKeyword(type)
+    return 1.0 / ship.GetValue(wg1AV)
+  elseif group2 != None && group2.HasKeyword(type)
+    return 1.0 / ship.GetValue(wg2AV)
+  elseif group3 != None && group3.HasKeyword(type)
+    return 1.0 / ship.GetValue(wg3AV)
+  else
+    return 0
   endif
 EndFunction
 
