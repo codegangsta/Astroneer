@@ -17,6 +17,8 @@ Group ActorValues
   ActorValue Property SpaceshipEnginePower Auto Const Mandatory
   ActorValue Property SpaceshipTopSpeed Auto Const Mandatory
   ActorValue Property ShipWeaponSystemGroup1Health Auto Const Mandatory
+  ActorValue Property ShipWeaponSystemGroup2Health Auto Const Mandatory
+  ActorValue Property ShipWeaponSystemGroup3Health Auto Const Mandatory
 EndGroup
 
 Group QuestData
@@ -24,7 +26,7 @@ Group QuestData
   MissionParentScript Property MB_Parent Auto Const Mandatory
   FormList Property AstroneerMBQuests Auto Const Mandatory
   Scene Property SceneMissionBoardIntro Auto Const Mandatory
-  ObjectReference[] Property ShipCollection Auto Const Mandatory
+  ObjectReference[] Property ShipCollection Auto Const
 EndGroup
 
 
@@ -69,7 +71,7 @@ Function AddMissions()
   MissionParentScript:MissionType shipContract = new MissionParentScript:MissionType
   shipContract.missionTypeKeyword = MissionTypeShipContract
   shipContract.MissionCompletedCount = MissionCompletedShipContract
-  shipContract.RandomStoryEventOrder = True
+  shipContract.RandomStoryEventOrder = False
 
   Trace("Adding mission type... " + shipContract)
   MB_Parent.MissionTypes.Add(shipContract)
@@ -80,6 +82,11 @@ Function AddMissions()
   EndForEach
 
   MB_Parent.DebugResetMissions()
+  Trace("missiontypes " + MB_Parent.MissionTypes)
+
+  ForEach missionquestscript mission in MB_Parent.MissionQuests
+    Trace("mission " + mission)
+  EndForEach
 EndFunction
 
 ; Creates a ContractShip and adds it to the player's ship list
@@ -125,12 +132,13 @@ EndFunction
 Astroneer:Pack:Mission Function GetRandomMission()
   Astroneer:Pack:Mission[] missions = new Astroneer:Pack:Mission[0]
   String[] missionPacks = new String[0]
+  Astroneer:Pack consts = (Self as ScriptObject) as Astroneer:Pack
   
   missionPacks.Add("Astroneer:ShipContractMissionPack1")
 
   ForEach String pack in missionPacks
     Var[] args = new Var[0]
-    args.Add((Self as ScriptObject) as Astroneer:Pack)
+    args.Add(consts)
     Astroneer:Pack:Mission[] packMissions = Utility.CallGlobalFunction(pack, "Missions", args) as Astroneer:Pack:Mission[]
     ForEach Astroneer:Pack:Mission m in packMissions
       Trace("GetRandomMission: " + m)
@@ -138,7 +146,21 @@ Astroneer:Pack:Mission Function GetRandomMission()
     EndForEach
   EndForEach
 
-  return missions[Utility.RandomInt(0, missions.Length-1)] 
+  Astroneer:Pack:Mission mission = missions[Utility.RandomInt(0, missions.Length-1)] 
+  if mission.Title == None
+    mission.Title = consts.MissionTextDefault
+  endif
+  if mission.Text == None
+    mission.Text = consts.MissionTextDefault
+  endif
+  if mission.ShipTemplate == None
+    mission.ShipTemplate = consts.ShipTemplateDefault
+  endif
+  if mission.Difficulty == None
+    mission.Difficulty = consts.DifficultyTier1
+  endif
+  
+  return mission
 EndFunction
 
 ObjectReference Function GetLandingMarker()

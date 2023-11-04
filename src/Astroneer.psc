@@ -8,13 +8,7 @@ Function DebugInit() global
 
   DebugTrace("Random Mission " + astroneer.GetRandomMission())
 
-  Astroneer:ShipContractMissionScript mission = Game.GetForm(0x02000800) as Astroneer:ShipContractMissionScript
-  Alias missionText = mission.GetAlias(9)
-  ;missionText.RefillAlias()
-  DebugTrace("Alias " + missionText as ReferenceAlias)
-  DebugTrace("Alias ref" + (missionText as ReferenceAlias).GetReference())
-
-
+  astroneer.AddMissions()
 EndFunction
 
 Function DebugIntercom() global
@@ -34,7 +28,7 @@ Function DebugScene() global
   DebugTrace("Parent quest " + astroneer)
 
   ActorBase ariaForm = Game.GetForm(0x02000835) as ActorBase
-  Actor aria = Game.GetPlayer().PlaceActorAtMe(ariaForm, 1, None, True, False, False, None, False) as Actor
+  Actor aria = Game.GetPlayer().PlaceActorAtMe(ariaForm, 1, None, True, False, False, None, False)
   DebugTrace("Aria " + aria)
   (astroneer.GetAlias(0) as ReferenceAlias).ForceRefTo(aria)
 

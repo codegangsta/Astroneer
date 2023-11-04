@@ -5,6 +5,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   Astroneer:Pack:Mission[] missions = new Astroneer:Pack:Mission[0]
   Astroneer:Pack:Mission m = new Astroneer:Pack:Mission
   m.ID = "debug"
+  m.Title = p.MissionTitleDefault
   m.Text = p.MissionTextDefault
   m.ShipTemplate = p.ShipTemplateDefault
   m.Difficulty = p.DifficultyTier1

@@ -18,7 +18,7 @@ Group ObjectiveGlobals
   GlobalVariable Property ObjectiveTotal_05 Auto Const
 EndGroup
 
-Group Aliases
+;Group Aliases
   ;ReferenceAlias Property MissionText Auto Const Mandatory
   ;ReferenceAlias Property Difficulty Auto Const Mandatory
 
@@ -27,7 +27,7 @@ Group Aliases
   ;ReferenceAlias Property Objective_03 Auto Const Mandatory
   ;ReferenceAlias Property Objective_04 Auto Const Mandatory
   ;ReferenceAlias Property Objective_05 Auto Const Mandatory
-EndGroup
+;EndGroup
 
 Group ObjectiveIndexes
   Int Property ShipObjective_01 = 11 Auto Const
@@ -47,6 +47,7 @@ Message Property CompleteMessage Auto Const Mandatory
 
 ; Blank form (book) used for text replacement
 Form Property TextReplacementForm Auto Const Mandatory
+Message Property BlankMessage Auto Const Mandatory
 
 Astroneer:Pack:Mission Property Mission Auto
 spaceshipreference Property ContractShip Auto
@@ -55,22 +56,25 @@ spaceshipreference Property ContractShip Auto
 
 Event OnQuestStarted()
   Trace("OnQuestStarted")
+  Self.Mission = AstroneerParent.GetRandomMission()
+
+  UpdateObjectiveTargets()
   Parent.OnQuestStarted()
 EndEvent
 
 Event OnStageSet(Int stageId, Int itemId)
   if(stageId == ReadyStage)
-    Self.Mission = AstroneerParent.GetRandomMission()
     FillRef(Self.GetAlias(9) as ReferenceAlias, Mission.Text)
-    ;Trace("Fill ref Difficulty")
-    ;FillRef(Difficulty, Mission.Difficulty)
-    ;Trace("Fill ref Objectives")
-    ;FillRef(Objective_01, Mission.Objective01)
-    ;FillRef(Objective_02, Mission.Objective02)
-    ;FillRef(Objective_03, Mission.Objective03)
-    ;FillRef(Objective_04, Mission.Objective04)
-    ;FillRef(Objective_05, Mission.Objective05)
-    ;UpdateObjectiveTargets()
+    FillRef(Self.GetAlias(10) as ReferenceAlias, Mission.Title)
+    FillRef(Self.GetAlias(11) as ReferenceAlias, Mission.Difficulty)
+    FillRef(Self.GetAlias(12) as ReferenceAlias, Mission.Objective01)
+    FillRef(Self.GetAlias(13) as ReferenceAlias, Mission.Objective02)
+    FillRef(Self.GetAlias(14) as ReferenceAlias, Mission.Objective03)
+    FillRef(Self.GetAlias(15) as ReferenceAlias, Mission.Objective04)
+    FillRef(Self.GetAlias(16) as ReferenceAlias, Mission.Objective05)
+
+    UpdateObjectiveTargets()
+    return
   endif
 
   if(stageId == AcceptStage)
@@ -86,12 +90,13 @@ EndEvent
 
 Function FillRef(ReferenceAlias akAlias, Message akMessage)
   Trace("FillRef " + akAlias + " " + akMessage)
+  ObjectReference item = Game.GetPlayer().PlaceAtMe(TextReplacementForm, 1, True, True, False, None, None, False)
+  akAlias.ForceRefTo(item)
+
   if akMessage != None
-    ObjectReference item = Game.GetPlayer().PlaceAtMe(TextReplacementForm, 1, True, True, False, None, None, False)
-    Trace("SetOverrideName " + item + " " + akMessage)
     item.SetOverrideName(akMessage)
-    akAlias.ForceRefTo(item)
-    Trace("Alias reference " + akAlias.GetReference())
+  else
+    item.SetOverrideName(BlankMessage)
   endif
 EndFunction
 

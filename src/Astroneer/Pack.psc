@@ -2,6 +2,7 @@ ScriptName Astroneer:Pack Extends ScriptObject
 
 Struct Mission
   String ID
+  Message Title
   Message Text
   Form ShipTemplate
   Message Difficulty
@@ -24,6 +25,10 @@ Group DifficultyTiers
   Message Property DifficultyTier2 Auto Const Mandatory ; Advanced
   Message Property DifficultyTier3 Auto Const Mandatory ; Expert
   Message Property DifficultyTier4 Auto Const Mandatory ; Master
+EndGroup
+
+Group MissionTitles
+  Message Property MissionTitleDefault Auto Const Mandatory
 EndGroup
 
 Group MissionTexts

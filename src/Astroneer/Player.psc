@@ -37,7 +37,7 @@ Function AcceptContract()
   Form shipForm = Game.GetForm(0x0003e13e)
 
   Trace("Spawning ship " + shipForm + " to world")
-  spaceshipreference ship = GetLandingMarker().PlaceShipAtMe(shipForm, 1, True, True, True, False, None, None, None, True) as spaceshipreference
+  spaceshipreference ship = GetLandingMarker().PlaceShipAtMe(shipForm, 1, True, True, True, False, None, None, None, True)
 
   Keyword cannotBeSoldShipKeyword = Game.GetForm(0x003413f2) as Keyword
   Trace("Adding keyword " + cannotBeSoldShipKeyword + " to ship")
