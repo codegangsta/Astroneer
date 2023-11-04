@@ -103,11 +103,21 @@ EndFunction
 Function StageAccepted()
   Trace("StageAccepted")
 
-  Self.SetObjectiveDisplayed(ShipObjective_01, True, False)
-  Self.SetObjectiveDisplayed(ShipObjective_02, True, False)
-  Self.SetObjectiveDisplayed(ShipObjective_03, True, False)
-  Self.SetObjectiveDisplayed(ShipObjective_04, True, False)
-  Self.SetObjectiveDisplayed(ShipObjective_05, True, False)
+  if Mission.Objective01 != None
+    Self.SetObjectiveDisplayed(ShipObjective_01, True, False)
+  endif
+  if Mission.Objective02 != None
+    Self.SetObjectiveDisplayed(ShipObjective_02, True, False)
+  endif
+  if Mission.Objective03 != None
+    Self.SetObjectiveDisplayed(ShipObjective_03, True, False)
+  endif
+  if Mission.Objective04 != None
+    Self.SetObjectiveDisplayed(ShipObjective_04, True, False)
+  endif
+  if Mission.Objective05 != None
+    Self.SetObjectiveDisplayed(ShipObjective_05, True, False)
+  endif
 
   ; FIXME: these should come from a property
   Form shipForm = Game.GetForm(0x0003e13e)
@@ -163,19 +173,19 @@ EndEvent
 
 Bool Function AllShipObjectivesComplete()
   Trace("ShipObjectivesComplete")
-  if(HasObjective(ShipObjective_01) && !IsObjectiveCompleted(ShipObjective_01))
+  if(Mission.Objective01 != None && !IsObjectiveCompleted(ShipObjective_01))
     return False
   endif
-  if(HasObjective(ShipObjective_02) && !IsObjectiveCompleted(ShipObjective_02))
+  if(Mission.Objective02 != None && !IsObjectiveCompleted(ShipObjective_02))
     return False
   endif
-  if(HasObjective(ShipObjective_03) && !IsObjectiveCompleted(ShipObjective_03))
+  if(Mission.Objective03 != None && !IsObjectiveCompleted(ShipObjective_03))
     return False
   endif
-  if(HasObjective(ShipObjective_04) && !IsObjectiveCompleted(ShipObjective_04))
+  if(Mission.Objective04 != None && !IsObjectiveCompleted(ShipObjective_04))
     return False
   endif
-  if(HasObjective(ShipObjective_05) && !IsObjectiveCompleted(ShipObjective_05))
+  if(Mission.Objective05 != None && !IsObjectiveCompleted(ShipObjective_05))
     return False
   endif
 
