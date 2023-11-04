@@ -82,11 +82,6 @@ Function AddMissions()
   EndForEach
 
   MB_Parent.DebugResetMissions()
-  Trace("missiontypes " + MB_Parent.MissionTypes)
-
-  ForEach missionquestscript mission in MB_Parent.MissionQuests
-    Trace("mission " + mission)
-  EndForEach
 EndFunction
 
 ; Creates a ContractShip and adds it to the player's ship list
@@ -98,6 +93,11 @@ spaceshipreference Function AddContractShip(Form shipform, Message nameOverride)
   ship.AddKeyword(CannotBeCountedAgainstMaxShipsKeyword)
   ship.SetValue(SpaceshipRegistration, 1.0)
 
+  ; Set ship allocations to zero for accurate
+  ; objective value calculations
+  SetAllPartPowers(ship, 0)
+  SetAllPartPowers(ship, 1)
+
   If (nameOverride as Bool)
     ship.SetOverrideName(nameOverride)
   EndIf
@@ -107,6 +107,19 @@ spaceshipreference Function AddContractShip(Form shipform, Message nameOverride)
   return ship
 EndFunction
 
+Function SetAllPartPowers(spaceshipreference ship, Int power)
+  Int partType = 0
+  While partType < 4
+    Int partCount = ship.GetPartCount(partType)
+    Int partIndex = 0
+    While partIndex < partCount
+      ship.SetPartPower(partType, partIndex, power)
+      partIndex += 1
+    EndWhile
+    partType += 1
+  EndWhile
+EndFunction
+
 Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
   Astroneer:Pack consts = (Self as ScriptObject) as Astroneer:Pack
 
@@ -114,16 +127,28 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
     return ship.GetShipMaxCargoWeight()
 
   elseif (objectiveType == consts.ObjectiveEnginePower)
-    return ship.GetValue(SpaceshipEnginePower)
+    ActorValue engineAV = Game.GetForm(0x0000ACD9) as ActorValue
+    return Math.Round(1.0 / ship.GetValue(engineAV))
 
   elseif (objectiveType == consts.ObjectiveGravJumpRange)
     return ship.GetGravJumpRange()
 
+  elseif (objectiveType == consts.ObjectiveHabs)
+    return ship.GetExteriorRefs(SBShip_Hab).length
+
   elseif (objectiveType == consts.ObjectiveMass)
     return ship.GetValue(SpaceshipMass)
 
+  elseif (objectiveType == consts.ObjectivePassengers)
+    ActorValue crewSlotsAV = Game.GetForm(0x002CC9EA) as ActorValue
+    return ship.GetValue(crewSlotsAV)
+
+  elseif (objectiveType == consts.ObjectiveShieldpower)
+    ActorValue shieldAV = Game.GetForm(0x0001ecce) as ActorValue
+    return Math.Round(1.0 / ship.GetValue(shieldAV))
+
   else
-    Trace("GetObjectiveValue: Unknown objective type: " + objectiveType)
+    ;Trace("GetObjectiveValue: Unknown objective type: " + objectiveType)
     return -1
   endif
 EndFunction

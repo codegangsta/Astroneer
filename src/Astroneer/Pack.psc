@@ -39,7 +39,14 @@ Group Objectives
   Message Property ObjectiveCargo Auto Const Mandatory
   Message Property ObjectiveEnginePower Auto Const Mandatory
   Message Property ObjectiveGravJumpRange Auto Const Mandatory
+  Message Property ObjectiveHabs Auto Const Mandatory
   Message Property ObjectiveMass Auto Const Mandatory
+  Message Property ObjectivePassengers Auto Const Mandatory
+  Message Property ObjectiveShieldPower Auto Const Mandatory
+  Message Property ObjectiveTopSpeed Auto Const Mandatory
+  Message Property ObjectiveTotalWeaponPower Auto Const Mandatory
+  Message Property ObjectiveWeaponGroups Auto Const Mandatory
+  Message Property ObjectiveWindows Auto Const Mandatory
 EndGroup
 
 Group ShipTemplates

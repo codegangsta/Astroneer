@@ -18,17 +18,6 @@ Group ObjectiveGlobals
   GlobalVariable Property ObjectiveTotal_05 Auto Const
 EndGroup
 
-;Group Aliases
-  ;ReferenceAlias Property MissionText Auto Const Mandatory
-  ;ReferenceAlias Property Difficulty Auto Const Mandatory
-
-  ;ReferenceAlias Property Objective_01 Auto Const Mandatory
-  ;ReferenceAlias Property Objective_02 Auto Const Mandatory
-  ;ReferenceAlias Property Objective_03 Auto Const Mandatory
-  ;ReferenceAlias Property Objective_04 Auto Const Mandatory
-  ;ReferenceAlias Property Objective_05 Auto Const Mandatory
-;EndGroup
-
 Group ObjectiveIndexes
   Int Property ShipObjective_01 = 11 Auto Const
   Int Property ShipObjective_02 = 12 Auto Const

@@ -2,13 +2,7 @@ ScriptName Astroneer
 
 Function DebugInit() global
   DebugTrace("=DebugInit==============================================")
-  ;DebugScene()
-  Astroneer:ParentQuest astroneer = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
-  DebugTrace("Parent quest " + astroneer)
-
-  DebugTrace("Random Mission " + astroneer.GetRandomMission())
-
-  astroneer.AddMissions()
+  DebugShipObjectives()
 EndFunction
 
 Function DebugIntercom() global
@@ -43,7 +37,29 @@ Function DebugScene() global
   ;DebugTrace("ParentQuest " + astroneer.GetCurrentStageID())
 EndFunction
 
-Function DebugShipValues() global
+Function DebugShipObjectives() global
+  Astroneer:ParentQuest astroneer = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  Astroneer:Pack consts = (astroneer as ScriptObject) as Astroneer:Pack
+  spaceshipreference playerShip = Game.GetPlayerHomeSpaceShip()
+
+  astroneer.SetAllPartPowers(playerShip, 0)
+  astroneer.SetAllPartPowers(playerShip, 1)
+
+  DebugTrace("Player Ship " + playerShip)
+  DebugTrace("ObjectiveCargo " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveCargo))
+  DebugTrace("ObjectiveEnginePower " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveEnginePower))
+  DebugTrace("ObjectiveGravJumpRange " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveGravJumpRange))
+  DebugTrace("ObjectiveHabs " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveHabs))
+  DebugTrace("ObjectiveMass " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveMass))
+  DebugTrace("ObjectivePassengers " + astroneer.GetObjectiveValue(playerShip, consts.ObjectivePassengers))
+  DebugTrace("ObjectiveShieldPower " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveShieldPower))
+  DebugTrace("ObjectiveTopSpeed " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveTopSpeed))
+  DebugTrace("ObjectiveTotalWeaponPower " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveTotalWeaponPower))
+  DebugTrace("ObjectiveWeaponGroups " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveWeaponGroups))
+  DebugTrace("ObjectiveWindows " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveWindows))
+EndFunction
+
+Function DebugShipTests() global
   Astroneer:Player player = Game.GetPlayer() as Astroneer:Player
 
   spaceshipreference playerShip = Game.GetPlayerHomeSpaceShip()
@@ -156,5 +172,5 @@ Function DebugPlaceShip() global
 EndFunction
 
 Function DebugTrace(String Text) Global
-	Debug.Trace("[Astroneer] " + Text, 0)
+	Debug.Trace("[astroneer] " + Text, 0)
 EndFunction
