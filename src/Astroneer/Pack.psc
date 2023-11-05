@@ -62,7 +62,13 @@ Group Objectives
 EndGroup
 
 Group ShipTemplates
+  ; TODO: Rename to ShipTemplateGeneric
   Form Property ShipTemplateDefault Auto Const Mandatory
+  Form Property ShipTemplateExplorer Auto Const Mandatory
+  Form Property ShipTemplateFighter Auto Const Mandatory
+  Form Property ShipTemplateHauler Auto Const Mandatory
+  Form Property ShipTemplateInterceptor Auto Const Mandatory
+  Form Property ShipTemplateLuxury Auto Const Mandatory
 EndGroup
 
 Group ShipTypes
