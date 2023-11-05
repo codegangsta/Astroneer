@@ -5,6 +5,7 @@ Struct Mission
   Message Title
   Message Text
   Form ShipTemplate
+  Message ShipType
   Message Difficulty
   Int RewardCredits
   Int RewardXP
@@ -62,4 +63,13 @@ EndGroup
 
 Group ShipTemplates
   Form Property ShipTemplateDefault Auto Const Mandatory
+EndGroup
+
+Group ShipTypes
+  Message Property ShipTypeExplorer Auto Const Mandatory
+  Message Property ShipTypeFighter Auto Const Mandatory
+  Message Property ShipTypeGeneric Auto Const Mandatory
+  Message Property ShipTypeHauler Auto Const Mandatory
+  Message Property ShipTypeInterceptor Auto Const Mandatory
+  Message Property ShipTypeLuxury Auto Const Mandatory
 EndGroup

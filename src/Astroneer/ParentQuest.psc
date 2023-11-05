@@ -265,6 +265,9 @@ Astroneer:Pack:Mission Function GetRandomMission()
   if mission.Difficulty == None
     mission.Difficulty = consts.DifficultyTier1
   endif
+  if mission.ShipType == None
+    mission.ShipType = consts.ShipTypeGeneric
+  endif
   
   return mission
 EndFunction

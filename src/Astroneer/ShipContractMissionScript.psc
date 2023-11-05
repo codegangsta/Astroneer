@@ -51,6 +51,10 @@ Event OnQuestStarted()
   Parent.OnQuestStarted()
 EndEvent
 
+Int Function GetActualReward()
+  return Mission.RewardCredits
+EndFunction
+
 Event OnStageSet(Int stageId, Int itemId)
   if(stageId == ReadyStage)
     FillRef(Self.GetAlias(9) as ReferenceAlias, Mission.Text)
@@ -61,6 +65,7 @@ Event OnStageSet(Int stageId, Int itemId)
     FillRef(Self.GetAlias(14) as ReferenceAlias, Mission.Objective03)
     FillRef(Self.GetAlias(15) as ReferenceAlias, Mission.Objective04)
     FillRef(Self.GetAlias(16) as ReferenceAlias, Mission.Objective05)
+    FillRef(Self.GetAlias(17) as ReferenceAlias, Mission.ShipType)
 
     UpdateObjectiveTargets()
     return
