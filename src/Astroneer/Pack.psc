@@ -37,15 +37,26 @@ EndGroup
 
 Group Objectives
   Message Property ObjectiveCargo Auto Const Mandatory
+  Message Property ObjectiveCrewSlots Auto Const Mandatory
   Message Property ObjectiveEnginePower Auto Const Mandatory
+  Message Property ObjectiveFuel Auto Const Mandatory
   Message Property ObjectiveGravJumpRange Auto Const Mandatory
   Message Property ObjectiveHabs Auto Const Mandatory
+  Message Property ObjectiveHull Auto Const Mandatory
   Message Property ObjectiveMass Auto Const Mandatory
-  Message Property ObjectivePassengers Auto Const Mandatory
+  Message Property ObjectiveReactorPower Auto Const Mandatory
+  Message Property ObjectiveShieldedCargo Auto Const Mandatory
+  Message Property ObjectiveShieldHealth Auto Const Mandatory
   Message Property ObjectiveShieldPower Auto Const Mandatory
   Message Property ObjectiveTopSpeed Auto Const Mandatory
   Message Property ObjectiveTotalWeaponPower Auto Const Mandatory
-  Message Property ObjectiveWeaponGroups Auto Const Mandatory
+  Message Property ObjectiveWeaponPowerBallistic Auto Const Mandatory
+  Message Property ObjectiveWeaponPowerContinuousBeam Auto Const Mandatory
+  Message Property ObjectiveWeaponPowerEM Auto Const Mandatory
+  Message Property ObjectiveWeaponPowerEnergy Auto Const Mandatory
+  Message Property ObjectiveWeaponPowerMissile Auto Const Mandatory
+  Message Property ObjectiveWeaponPowerParticle Auto Const Mandatory
+  Message Property ObjectiveWeaponPowerPlasma Auto Const Mandatory
   Message Property ObjectiveWindows Auto Const Mandatory
 EndGroup
 
