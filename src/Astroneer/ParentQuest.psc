@@ -30,6 +30,7 @@ Group QuestData
   ObjectReference[] Property ShipCollection Auto Const
 EndGroup
 
+Astroneer:Pack:Mission[] Missions = None
 
 Event OnQuestInit()
   Trace("OnQuestInit")
@@ -82,7 +83,27 @@ Function AddMissions()
     MB_Parent.missionQuests.Add(mission as Astroneer:ShipContractMissionScript)
   EndForEach
 
+  Trace("Loading mission packs...")
+  LoadMissionPacks()
+
   MB_Parent.DebugResetMissions()
+EndFunction
+
+Function LoadMissionPacks()
+  Missions = new Astroneer:Pack:Mission[0]
+  Astroneer:Pack consts = (Self as ScriptObject) as Astroneer:Pack
+  String[] missionPacks = new String[0]
+  missionPacks.Add("Astroneer:ShipContractMissionPack1")
+
+  ForEach String pack in missionPacks
+    Trace("Loading Mission Pack: " + pack)
+    Var[] args = new Var[0]
+    args.Add(consts)
+    Astroneer:Pack:Mission[] packMissions = Utility.CallGlobalFunction(pack, "Missions", args) as Astroneer:Pack:Mission[]
+    ForEach Astroneer:Pack:Mission m in packMissions
+      missions.Add(m)
+    EndForEach
+  EndForEach
 EndFunction
 
 ; Creates a ContractShip and adds it to the player's ship list
@@ -229,27 +250,19 @@ Float Function GetWeaponTypePower(spaceshipreference ship, Keyword type)
   endif
 EndFunction
 
-; TODO: Run this on startup and cache the results
 Astroneer:Pack:Mission Function GenerateMission(String missionID)
-  Astroneer:Pack:Mission[] missions = new Astroneer:Pack:Mission[0]
-  String[] missionPacks = new String[0]
   Astroneer:Pack consts = (Self as ScriptObject) as Astroneer:Pack
-  astroneer:pack:mission mission = None
-  
-  missionPacks.Add("Astroneer:ShipContractMissionPack1")
+  Astroneer:Pack:Mission mission = None
 
-  ForEach String pack in missionPacks
-    Var[] args = new Var[0]
-    args.Add(consts)
-    Astroneer:Pack:Mission[] packMissions = Utility.CallGlobalFunction(pack, "Missions", args) as Astroneer:Pack:Mission[]
-    ForEach Astroneer:Pack:Mission m in packMissions
-      missions.Add(m)
-
+  ; Force a mission id if it's provided
+  if missionID == ""
+    ForEach Astroneer:Pack:Mission m in Missions
       if m.ID == missionID
         mission = m
+        break
       endif
     EndForEach
-  EndForEach
+  endif
 
   if mission == None
     mission = missions[Utility.RandomInt(0, missions.Length-1)] 

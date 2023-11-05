@@ -46,13 +46,20 @@ EndFunction
 
 Function DebugAcceptMission(String missionID) global
   Astroneer:ParentQuest astroneer = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
-  Astroneer:Pack consts = (astroneer as ScriptObject) as Astroneer:Pack
   Astroneer:ShipContractMissionScript mission = astroneer.AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
 
+  astroneer.LoadMissionPacks()
   mission.ForceMissionID = missionID
   mission.Start()
   mission.MissionAccepted(true)
   mission.ForceMissionID = ""
+EndFunction
+
+Function DebugRejectMission() global
+  Astroneer:ParentQuest astroneer = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  Astroneer:ShipContractMissionScript mission = astroneer.AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
+
+  mission.MissionFailed()
 EndFunction
 
 Function DebugResetMissions() global
