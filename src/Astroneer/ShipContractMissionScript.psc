@@ -221,13 +221,19 @@ Function UpdateObjectiveValues()
   endif
 EndFunction
 
-Function UpdateObjectiveValue(GlobalVariable value, Form objectiveType, Int objective, Float target)
+Function UpdateObjectiveValue(GlobalVariable value, Message objectiveType, Int objective, Float target)
   Trace("UpdateObjectiveValue " + objectiveType + " - " + value)
   if(objectiveType != None)
+    Astroneer:Pack consts = (AstroneerParent as ScriptObject) as Astroneer:Pack
+
     value.SetValue(0) ;set to 0 since we are using mod
     Float val = AstroneerParent.GetObjectiveValue(ContractShip, objectiveType)
     Trace("Updating objective " + objectiveType + " to " + val)
-    ModObjectiveGlobal(val, value, objective, target, True, True, True, True)
+    if objectiveType == consts.ObjectiveMass
+      ModObjectiveGlobal(val, value, objective, target, False, True, True, True)
+    else
+      ModObjectiveGlobal(val, value, objective, target, True, True, True, True)
+    endif
   endif
 EndFunction
 
