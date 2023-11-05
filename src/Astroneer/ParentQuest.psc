@@ -94,11 +94,6 @@ spaceshipreference Function AddContractShip(Form shipform)
   ship.AddKeyword(CannotBeCountedAgainstMaxShipsKeyword)
   ship.SetValue(SpaceshipRegistration, 1.0)
 
-  ; Set ship allocations to zero for accurate
-  ; objective value calculations
-  SetAllPartPowers(ship, 0)
-  SetAllPartPowers(ship, 1)
-
   Message shipName = ShipNames.GetAt(Utility.RandomInt(0, ShipNames.GetSize()-1)) as Message
   ship.SetOverrideName(shipName)
 

@@ -204,6 +204,12 @@ EndFunction
 
 Function UpdateObjectiveValues()
   Trace("UpdateObjectiveValues")
+
+  ; Set ship allocations to zero for accurate
+  ; objective value calculations
+  AstroneerParent.SetAllPartPowers(ContractShip, 0)
+  AstroneerParent.SetAllPartPowers(ContractShip, 1)
+
   UpdateObjectiveValue(ObjectiveValue_01, Mission.Objective01, ShipObjective_01, Mission.ObjectiveTarget01)
   UpdateObjectiveValue(ObjectiveValue_02, Mission.Objective02, ShipObjective_02, Mission.ObjectiveTarget02)
   UpdateObjectiveValue(ObjectiveValue_03, Mission.Objective03, ShipObjective_03, Mission.ObjectiveTarget03)

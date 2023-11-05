@@ -8,6 +8,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m.Title = p.MissionTitleDefault
   m.Text = p.MissionTextDefault
   m.ShipTemplate = p.ShipTemplateDefault
+  m.ShipType = p.ShipTypeGeneric
   m.Difficulty = p.DifficultyTier1
   m.RewardCredits = 100000
   m.RewardXP = 250
