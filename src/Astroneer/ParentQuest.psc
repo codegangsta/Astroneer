@@ -25,6 +25,7 @@ Group QuestData
   sq_playershipscript Property PlayerShipQuest Auto Const Mandatory
   MissionParentScript Property MB_Parent Auto Const Mandatory
   FormList Property AstroneerMBQuests Auto Const Mandatory
+  FormList Property ShipNames Auto Const Mandatory
   Scene Property SceneMissionBoardIntro Auto Const Mandatory
   ObjectReference[] Property ShipCollection Auto Const
 EndGroup
@@ -85,7 +86,7 @@ Function AddMissions()
 EndFunction
 
 ; Creates a ContractShip and adds it to the player's ship list
-spaceshipreference Function AddContractShip(Form shipform, Message nameOverride)
+spaceshipreference Function AddContractShip(Form shipform)
   spaceshipreference ship = GetLandingMarker().PlaceShipAtMe(shipForm, 1, True, True, True, False, None, None, None, True)
 
   ship.AddKeyword(CannotBeSoldShipKeyword)
@@ -98,9 +99,8 @@ spaceshipreference Function AddContractShip(Form shipform, Message nameOverride)
   SetAllPartPowers(ship, 0)
   SetAllPartPowers(ship, 1)
 
-  If (nameOverride as Bool)
-    ship.SetOverrideName(nameOverride)
-  EndIf
+  Message shipName = ShipNames.GetAt(Utility.RandomInt(0, ShipNames.GetSize()-1)) as Message
+  ship.SetOverrideName(shipName)
 
   PlayerShipQuest.AddPlayerOwnedShip(ship)
 
