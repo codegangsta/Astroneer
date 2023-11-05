@@ -126,9 +126,17 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
   if (objectiveType == consts.ObjectiveCargo)
     return ship.GetShipMaxCargoWeight()
 
+  elseif (objectiveType == consts.ObjectiveCrewSlots)
+    ActorValue crewSlotsAV = Game.GetForm(0x002CC9EA) as ActorValue
+    return ship.GetValue(crewSlotsAV)
+
   elseif (objectiveType == consts.ObjectiveEnginePower)
     ActorValue engineAV = Game.GetForm(0x0000ACD9) as ActorValue
     return Math.Round(1.0 / ship.GetValue(engineAV))
+
+  elseif (objectiveType == consts.ObjectiveFuel)
+    ActorValue fuelAV = Game.GetForm(0x0000854f) as ActorValue
+    return Math.Round(1.0 / ship.GetValue(fuelAV))
 
   elseif (objectiveType == consts.ObjectiveGravJumpRange)
     return ship.GetGravJumpRange()
@@ -136,12 +144,24 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
   elseif (objectiveType == consts.ObjectiveHabs)
     return ship.GetExteriorRefs(SBShip_Hab).length
 
+  elseif (objectiveType == consts.ObjectiveHull)
+    ActorValue hullAV = Game.GetForm(0x000002d4) as ActorValue
+    return ship.GetValue(hullAV)
+
   elseif (objectiveType == consts.ObjectiveMass)
     return ship.GetValue(SpaceshipMass)
 
-  elseif (objectiveType == consts.ObjectiveCrewSlots)
-    ActorValue crewSlotsAV = Game.GetForm(0x002CC9EA) as ActorValue
-    return ship.GetValue(crewSlotsAV)
+  elseif (objectiveType == consts.ObjectiveReactorPower)
+    ActorValue reactorAV = Game.GetForm(0x00001018) as ActorValue
+    return ship.GetValue(reactorAV)
+
+  elseif (objectiveType == consts.ObjectiveShieldedCargo)
+    ActorValue shieldedCargoAV = Game.GetForm(0x0002b344) as ActorValue
+    return ship.GetValue(shieldedCargoAV)
+
+  elseif (objectiveType == consts.ObjectiveShieldHealth)
+    ActorValue shieldHealthAV = Game.GetForm(0x0005bfa8) as ActorValue
+    return ship.GetValue(shieldHealthAV)
 
   elseif (objectiveType == consts.ObjectiveShieldpower)
     ActorValue shieldAV = Game.GetForm(0x0001ecce) as ActorValue
@@ -157,28 +177,39 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
     ActorValue wg3AV = Game.GetForm(0x00219623) as ActorValue
     return Math.Round((1.0/ship.GetValue(wg1AV)) + (1.0/ship.GetValue(wg2AV)) + (1.0/ship.GetValue(wg3AV)))
 
+  elseif (objectiveType == consts.ObjectiveWeaponPowerBallistic)
+    Keyword WeaponTypeBallistic = Game.GetForm(0x00022269) as Keyword
+    return GetWeaponTypePower(ship, WeaponTypeBallistic)
+
+  elseif (objectiveType == consts.ObjectiveWeaponPowerContinuousBeam)
+    Keyword WeaponTypeContinuousBeam = Game.GetForm(0x00146b11) as Keyword
+    return GetWeaponTypePower(ship, WeaponTypeContinuousBeam)
+
+  elseif (objectiveType == consts.ObjectiveWeaponPowerEM)
+    Keyword WeaponTypeEM = Game.GetForm(0x0002226b) as Keyword
+    return GetWeaponTypePower(ship, WeaponTypeEM)
+
+  elseif (objectiveType == consts.ObjectiveWeaponPowerEnergy)
+    Keyword WeaponTypeEnergy = Game.GetForm(0x0002226a) as Keyword
+    return GetWeaponTypePower(ship, WeaponTypeEnergy)
+
+  elseif (objectiveType == consts.ObjectiveWeaponPowerMissile)
+    Keyword WeaponTypeMissile = Game.GetForm(0x00155c6c) as Keyword
+    return GetWeaponTypePower(ship, WeaponTypeMissile)
+
+  elseif (objectiveType == consts.ObjectiveWeaponPowerParticle)
+    Keyword WeaponTypeParticle = Game.GetForm(0x001557aa) as Keyword
+    return GetWeaponTypePower(ship, WeaponTypeParticle)
+
+  elseif (objectiveType == consts.ObjectiveWeaponPowerPlasma)
+    Keyword WeaponTypePlasma = Game.GetForm(0x00146b38) as Keyword
+    return GetWeaponTypePower(ship, WeaponTypePlasma)
+
   elseif (objectiveType == consts.ObjectiveWindows)
     Keyword SbShip_Window = Game.GetForm(0x00143b37) as Keyword
     return ship.GetExteriorRefs(SBShip_Window).length
 
   else
-    Trace("Fuel " + ship.GetValue(Game.GetForm(0x0000854f) as ActorValue))
-    Trace("Shield Health " + ship.GetValue(Game.GetForm(0x0005bfa8) as ActorValue))
-    Trace("Forward Force per power " + ship.GetValue(Game.GetForm(0x000fc913) as ActorValue))
-    Trace("Reactor Power " + ship.GetValue(Game.GetForm(0x00001018) as ActorValue))
-    Trace("Shielded Cargo " + ship.GetValue(Game.GetForm(0x0002b344) as ActorValue))
-    Trace("Hull " + ship.GetValue(Game.GetForm(0x000002d4) as ActorValue))
-    Trace("Energy Weapon Power " + GetWeaponTypePower(ship, Game.GetForm(0x0002226a) as Keyword))
-    Trace("Kinetic Weapon Power " + GetWeaponTypePower(ship, Game.GetForm(0x00022269) as Keyword))
-    Trace("Missile Weapon Power " + GetWeaponTypePower(ship, Game.GetForm(0x00155c6c) as Keyword))
-    Trace("Particle Weapon Power " + GetWeaponTypePower(ship, Game.GetForm(0x001557aa) as Keyword))
-    Trace("Plasma Weapon Power " + GetWeaponTypePower(ship, Game.GetForm(0x00146b38) as Keyword))
-    Trace("EM Weapon Power " + GetWeaponTypePower(ship, Game.GetForm(0x0002226b) as Keyword))
-    Trace("Continuous Beam Weapon Power " + GetWeaponTypePower(ship, Game.GetForm(0x00146b11) as Keyword))
-    Trace("GetObjectiveValue: Unknown objective type: " + objectiveType)
-
-    Trace("Links " + ship.GetLinkedRefChain(None, 100))
-
     return -1
   endif
 EndFunction
