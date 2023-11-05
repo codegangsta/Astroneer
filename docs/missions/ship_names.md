@@ -1,46 +1,46 @@
-Astral Arbiter
-Big Banger
-Blackhole Buccaneer
-Blackspace Barge
-Celestial Cyclone
-Cosmic Cartographer
-Cosmic Cocktail
-Deep Void Drifter
-Entangled Odyssey
-Fortune's Frontier
-Galactic Gambler
-Galaxy's Grit
-Gravity's Gambit
-Haul & Drift
-Hubble's Heirloom
-Jupiter's Jewel
-Luminous Lark
-Merchant's Mirage
-Meteor Maverick
-Milky Whey
-Nebula Navigator
-Nomad's Haven
-Orion's Odyssey
-Pioneering Spirit
-Profit Pioneer
-Pulsar's Pursuit
-Quantum Quest
-Redshift Runner
-Relativity's Riddle
-Rogue Relic
-Rust & Stardust
-Solar Flare
-Solar Silhouette
-Solstice Sentinel
-Spacetime Shimmy
-Spectrum Seeker
-Star Steed
-Stardancer
-Starry McStarface
-Starry Night Sloop
-Starshade
-Supernova Sentinel
-Tranquil Tempest
-Venture's Veil
-Void Voyager
-Wanderlust
+ShipNameAstralArbiter Astral Arbiter
+ShipNameBigBanger Big Banger
+ShipNameBlackholeBuccaneer BlackholeBuccaneer
+ShipNameBlackspaceBarge Blackspace Barge
+ShipNameCelestialCyclone Celestial Cyclone
+ShipNameCosmicCartographer Cosmic Cartographer
+ShipNameCosmicCocktail Cosmic Cocktail
+ShipNameDeepVoidDrifter Deep Void Drifter
+ShipNameEntangledOdyssey Entangled Odyssey
+ShipNameFortunesFrontier Fortune's Frontier
+ShipNameGalacticGambler Galactic Gambler
+ShipNameGalaxysGrit Galaxy's Grit
+ShipNameGravitysGambit Gravity's Gambit
+ShipNameHaulandDrift Haul & Drift
+ShipNameHubblesHeirloom Hubble's Heirloom
+ShipNameJupitersJewel Jupiter's Jewel
+ShipNameLuminousLark Luminous Lark
+ShipNameMerchantsMirage Merchant's Mirage
+ShipNameMeteorMaverick Meteor Maverick
+ShipNameMilkyWhey Milky Whey
+ShipNameNebulaNavigator Nebula Navigator
+ShipNameNomadsHaven Nomad's Haven
+ShipNameOrionsOdyssey Orion's Odyssey
+ShipNamePioneeringSpirit Pioneering Spirit
+ShipNameProfitPioneer Profit Pioneer
+ShipNamePulsarsPursuit Pulsar's Pursuit
+ShipNameQuantumQuest Quantum Quest
+ShipNameRedshiftRunner Redshift Runner
+ShipNameRelativitysRiddle Relativity's Riddle
+ShipNameRogueRelic Rogue Relic
+ShipNameRustandStardust Rust & Stardust
+ShipNameSolarFlare Solar Flare
+ShipNameSolarSilhouette Solar Silhouette
+ShipNameSolsticeSentinel Solstice Sentinel
+ShipNameSpacetimeShimmy Spacetime Shimmy
+ShipNameSpectrumSeeker Spectrum Seeker
+ShipNameStarSteed Star Steed
+ShipNameStardancer Stardancer
+ShipNameStarryMcStarface Starry McStarface
+ShipNameStarryNight Sloop Starry Night Sloop
+ShipNameStarshade Starshade
+ShipNameSupernovaSentinel Supernova Sentinel
+ShipNameTranquilTempest Tranquil Tempest
+ShipNameVenturesVeil Venture's Veil
+ShipNameVoidVoyager Void Voyager
+ShipNameWanderlust Wanderlust
