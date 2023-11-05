@@ -1,7 +1,5 @@
 ScriptName Astroneer:ShipContractMissionScript Extends missionquestscript
 
-;-- Variables ---------------------------------------
-
 ;-- Properties --------------------------------------
 
 Group ObjectiveGlobals
@@ -41,11 +39,14 @@ Message Property BlankMessage Auto Const Mandatory
 Astroneer:Pack:Mission Property Mission Auto
 spaceshipreference Property ContractShip Auto
 
+; Force a particular mission id, useful for debugging
+String Property ForceMissionID = "" Auto
+
 ;-- Functions ---------------------------------------
 
 Event OnQuestStarted()
   Trace("OnQuestStarted")
-  Self.Mission = AstroneerParent.GetRandomMission()
+  Self.Mission = AstroneerParent.GenerateMission(ForceMissionID)
 
   UpdateObjectiveTargets()
   Parent.OnQuestStarted()

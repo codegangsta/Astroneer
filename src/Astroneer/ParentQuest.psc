@@ -230,10 +230,11 @@ Float Function GetWeaponTypePower(spaceshipreference ship, Keyword type)
 EndFunction
 
 ; TODO: Run this on startup and cache the results
-Astroneer:Pack:Mission Function GetRandomMission()
+Astroneer:Pack:Mission Function GenerateMission(String missionID)
   Astroneer:Pack:Mission[] missions = new Astroneer:Pack:Mission[0]
   String[] missionPacks = new String[0]
   Astroneer:Pack consts = (Self as ScriptObject) as Astroneer:Pack
+  astroneer:pack:mission mission = None
   
   missionPacks.Add("Astroneer:ShipContractMissionPack1")
 
@@ -242,12 +243,17 @@ Astroneer:Pack:Mission Function GetRandomMission()
     args.Add(consts)
     Astroneer:Pack:Mission[] packMissions = Utility.CallGlobalFunction(pack, "Missions", args) as Astroneer:Pack:Mission[]
     ForEach Astroneer:Pack:Mission m in packMissions
-      Trace("GetRandomMission: " + m)
       missions.Add(m)
+
+      if m.ID == missionID
+        mission = m
+      endif
     EndForEach
   EndForEach
 
-  Astroneer:Pack:Mission mission = missions[Utility.RandomInt(0, missions.Length-1)] 
+  if mission == None
+    mission = missions[Utility.RandomInt(0, missions.Length-1)] 
+  endif
   if mission.Title == None
     mission.Title = consts.MissionTextDefault
   endif
