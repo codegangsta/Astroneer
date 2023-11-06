@@ -6,60 +6,65 @@ Function DebugInit() global
 EndFunction
 
 Function PrintCurrentShipObjectives() global
-  Astroneer:ParentQuest astroneer = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
-  Astroneer:Pack consts = (astroneer as ScriptObject) as Astroneer:Pack
+  Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  Astroneer:Pack consts = (pq as ScriptObject) as Astroneer:Pack
   spaceshipreference playerShip = Game.GetPlayerHomeSpaceShip()
 
-  astroneer.SetAllPartPowers(playerShip, 0)
-  astroneer.SetAllPartPowers(playerShip, 1)
+  pq.SetAllPartPowers(playerShip, 0)
+  pq.SetAllPartPowers(playerShip, 1)
 
-  Astroneer:ShipContractMissionScript mission = astroneer.AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
+  Astroneer:ShipContractMissionScript mission = pq.AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
   if mission.ContractShip != None
     playerShip = mission.ContractShip
   endif
 
   DebugTrace("Current Ship " + playerShip)
   DebugTrace("=Objectives==============================================")
-  DebugTrace("ObjectiveCargo " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveCargo))
-  DebugTrace("ObjectiveCrewSlots " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveCrewSlots))
-  DebugTrace("ObjectiveEnginePower " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveEnginePower))
-  DebugTrace("ObjectiveFuel " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveFuel))
-  DebugTrace("ObjectiveGravJumpRange " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveGravJumpRange))
-  DebugTrace("ObjectiveHabs " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveHabs))
-  DebugTrace("ObjectiveHull " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveHull))
-  DebugTrace("ObjectiveMass " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveMass))
-  DebugTrace("ObjectiveReactorPower " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveReactorPower))
-  DebugTrace("ObjectiveShieldedCargo " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveShieldedCargo))
-  DebugTrace("ObjectiveShieldHealth " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveShieldHealth))
-  DebugTrace("ObjectiveShieldPower " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveShieldPower))
-  DebugTrace("ObjectiveTopSpeed " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveTopSpeed))
-  DebugTrace("ObjectiveTotalWeaponPower " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveTotalWeaponPower))
-  DebugTrace("ObjectiveWeaponPowerBallistic " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerBallistic))
-  DebugTrace("ObjectiveWeaponPowerContinuousBeam " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerContinuousBeam))
-  DebugTrace("ObjectiveWeaponPowerEM " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerEM))
-  DebugTrace("ObjectiveWeaponPowerEnergy " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerEnergy))
-  DebugTrace("ObjectiveWeaponPowerMissile " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerMissile))
-  DebugTrace("ObjectiveWeaponPowerParticle " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerParticle))
-  DebugTrace("ObjectiveWeaponPowerPlasma " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerPlasma))
-  DebugTrace("ObjectiveWindows " + astroneer.GetObjectiveValue(playerShip, consts.ObjectiveWindows))
+  DebugTrace("ObjectiveCargo " + pq.GetObjectiveValue(playerShip, consts.ObjectiveCargo))
+  DebugTrace("ObjectiveCrewSlots " + pq.GetObjectiveValue(playerShip, consts.ObjectiveCrewSlots))
+  DebugTrace("ObjectiveEnginePower " + pq.GetObjectiveValue(playerShip, consts.ObjectiveEnginePower))
+  DebugTrace("ObjectiveFuel " + pq.GetObjectiveValue(playerShip, consts.ObjectiveFuel))
+  DebugTrace("ObjectiveGravJumpRange " + pq.GetObjectiveValue(playerShip, consts.ObjectiveGravJumpRange))
+  DebugTrace("ObjectiveHabs " + pq.GetObjectiveValue(playerShip, consts.ObjectiveHabs))
+  DebugTrace("ObjectiveHull " + pq.GetObjectiveValue(playerShip, consts.ObjectiveHull))
+  DebugTrace("ObjectiveMass " + pq.GetObjectiveValue(playerShip, consts.ObjectiveMass))
+  DebugTrace("ObjectiveReactorPower " + pq.GetObjectiveValue(playerShip, consts.ObjectiveReactorPower))
+  DebugTrace("ObjectiveShieldedCargo " + pq.GetObjectiveValue(playerShip, consts.ObjectiveShieldedCargo))
+  DebugTrace("ObjectiveShieldHealth " + pq.GetObjectiveValue(playerShip, consts.ObjectiveShieldHealth))
+  DebugTrace("ObjectiveShieldPower " + pq.GetObjectiveValue(playerShip, consts.ObjectiveShieldPower))
+  DebugTrace("ObjectiveTopSpeed " + pq.GetObjectiveValue(playerShip, consts.ObjectiveTopSpeed))
+  DebugTrace("ObjectiveTotalWeaponPower " + pq.GetObjectiveValue(playerShip, consts.ObjectiveTotalWeaponPower))
+  DebugTrace("ObjectiveWeaponPowerBallistic " + pq.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerBallistic))
+  DebugTrace("ObjectiveWeaponPowerContinuousBeam " + pq.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerContinuousBeam))
+  DebugTrace("ObjectiveWeaponPowerEM " + pq.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerEM))
+  DebugTrace("ObjectiveWeaponPowerEnergy " + pq.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerEnergy))
+  DebugTrace("ObjectiveWeaponPowerMissile " + pq.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerMissile))
+  DebugTrace("ObjectiveWeaponPowerParticle " + pq.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerParticle))
+  DebugTrace("ObjectiveWeaponPowerPlasma " + pq.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerPlasma))
+  DebugTrace("ObjectiveWindows " + pq.GetObjectiveValue(playerShip, consts.ObjectiveWindows))
 EndFunction
 
-Function DebugAcceptMission(String missionID) global
-  Astroneer:ParentQuest astroneer = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
-  Astroneer:ShipContractMissionScript mission = astroneer.AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
+Function DebugReadyMission() global
+  Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  Astroneer:ShipContractMissionScript mission = pq.AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
 
-  astroneer.LoadMissionPacks()
-  mission.ForceMissionID = missionID
-  mission.Start()
+  pq.LoadMissionPacks()
+  Keyword MissionTypeShipContract = Game.GetForm(0x02000803) as Keyword
+  MissionTypeShipContract.SendStoryEvent(None, None, None, 0, 0)
+EndFunction
+
+Function DebugAcceptMission() global
+  Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  Astroneer:ShipContractMissionScript mission = pq.AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
+
   mission.MissionAccepted(true)
-  mission.ForceMissionID = ""
 EndFunction
 
-Function DebugRejectMission() global
-  Astroneer:ParentQuest astroneer = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
-  Astroneer:ShipContractMissionScript mission = astroneer.AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
+Function DebugCompleteMission() global
+  Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  Astroneer:ShipContractMissionScript mission = pq.AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
 
-  mission.MissionFailed()
+  mission.StageCompleted()
 EndFunction
 
 Function DebugResetMissions() global
@@ -70,11 +75,12 @@ Function DebugResetMissions() global
 EndFunction
 
 Function DebugPlaceShip() global
-  Astroneer:Player player = Game.GetPlayer() as Astroneer:Player
+  Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  Astroneer:ShipContractMissionScript mission = pq.AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
 
-  DebugTrace("Contract Ship " + player.ContractShip)
+  DebugTrace("Contract Ship " + mission.ContractShip)
   spaceshipreference playerShip = Game.GetPlayerHomeSpaceShip()
-  spaceshipreference ship = player.ContractShip
+  spaceshipreference ship = mission.ContractShip
 
   ; reset ship
   DebugTrace("Resetting Ship")

@@ -39,14 +39,11 @@ Message Property BlankMessage Auto Const Mandatory
 Astroneer:Pack:Mission Property Mission Auto
 spaceshipreference Property ContractShip Auto
 
-; Force a particular mission id, useful for debugging
-String Property ForceMissionID = "" Auto
-
 ;-- Functions ---------------------------------------
 
 Event OnQuestStarted()
   Trace("OnQuestStarted")
-  Self.Mission = AstroneerParent.GenerateMission(ForceMissionID)
+  Self.Mission = AstroneerParent.GenerateMission()
 
   UpdateObjectiveTargets()
   Parent.OnQuestStarted()
@@ -141,17 +138,13 @@ Function StageCompleted()
 EndFunction
 
 Event Actor.OnPlayerModifiedShip(Actor akActor, spaceshipreference akShip)
-  Trace("OnPlayerModifiedShip")
   if(akShip == Self.ContractShip)
     UpdateObjectiveValues()
   endif
 EndEvent
 
 Event OnMenuOpenCloseEvent(String menuName, bool opening)
-  Trace("OnMenuOpenCloseEvent")
   if(menuName == "SpaceshipEditorMenu" && !opening)
-
-
     if AllShipObjectivesComplete()
       Int turnIn = CompleteMessage.Show(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
       if(turnIn == 0)

@@ -23,7 +23,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m1.ObjectiveTarget04 = 6
   m1.Objective05 = p.ObjectiveWeaponPowerBallistic
   m1.ObjectiveTarget05 = 6
-  missions.Add(m1)
 
   ;= Hauler 01 =================================================
   Astroneer:Pack:Mission m2 = new Astroneer:Pack:Mission
@@ -42,7 +41,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m2.ObjectiveTarget03 = 80
   m2.Objective04 = p.ObjectiveReactorPower
   m2.ObjectiveTarget04 = 6
-  missions.Add(m2)
 
   ;= Luxury 01 =================================================
   Astroneer:Pack:Mission m3 = new Astroneer:Pack:Mission
@@ -61,7 +59,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m3.ObjectiveTarget03 = 500
   m3.Objective04 = p.ObjectiveWeaponPowerEM
   m3.ObjectiveTarget04 = 6
-  missions.Add(m3)
 
   ;= Explorer 01 =================================================
   Astroneer:Pack:Mission m4 = new Astroneer:Pack:Mission
@@ -82,7 +79,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m4.ObjectiveTarget04 = 750
   m4.Objective05 = p.ObjectiveShieldHealth
   m4.ObjectiveTarget05 = 500
-  missions.Add(m4)
 
   ;= Interceptor 01 =================================================
   Astroneer:Pack:Mission m5 = new Astroneer:Pack:Mission
@@ -103,9 +99,11 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
 
   ;m5.Objective04 = p.ObjectiveThrusters
   ;m5.ObjectiveTarget04 = 750
-  missions.Add(m5)
-
-
+  missions.Add(m1)
+  ;missions.Add(m2)
+  ;missions.Add(m3)
+  ;missions.Add(m4)
+  ;missions.Add(m5)
   return missions
 
 EndFunction

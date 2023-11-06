@@ -248,19 +248,9 @@ Float Function GetWeaponTypePower(spaceshipreference ship, Keyword type)
   endif
 EndFunction
 
-Astroneer:Pack:Mission Function GenerateMission(String missionID)
+Astroneer:Pack:Mission Function GenerateMission()
   Astroneer:Pack consts = (Self as ScriptObject) as Astroneer:Pack
   Astroneer:Pack:Mission mission = None
-
-  ; Force a mission id if it's provided
-  if missionID == ""
-    ForEach Astroneer:Pack:Mission m in Missions
-      if m.ID == missionID
-        mission = m
-        break
-      endif
-    EndForEach
-  endif
 
   if mission == None
     mission = missions[Utility.RandomInt(0, missions.Length-1)] 

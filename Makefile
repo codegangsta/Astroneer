@@ -30,6 +30,15 @@ reload_scripts::
 	sfc 'ReloadScript "Astroneer:ShipContractMissionScript"'
 	sfc 'ReloadScript "Astroneer:ShipContractMissionPack1"'
 
+ready_mission::
+	sfc 'cgf "Astroneer.DebugReadyMission"'
+
+accept_mission::
+	sfc 'cgf "Astroneer.DebugAcceptMission"'
+
+complete_mission::
+	sfc 'cgf "Astroneer.DebugCompleteMission"'
+
 # Tail logs
 tail::
 	ssh jerem@pc 'Get-Content -Path ".\Documents\My Games\Starfield\Logs\Script\Papyrus.0.log" -Tail 1000 -Wait'
