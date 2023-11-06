@@ -168,6 +168,28 @@ The third phase, "Red Ocean," transforms the ship-building sector into an intric
 
 ### Is Astroneer safe to install?
 
+In short, yes. Astroneer has been meticulously crafted with a strong emphasis on safety and compatibility.
+
+The mod does not modify or overwrite any existing scripts, records, or assets from the original Starfield game. Instead, Astroneer introduces entirely new code and records, significantly minimizing the risk of conflicts. This also means that Astroneer is relatively safe to uninstall mid-game, though it's still recommended to keep it installed for the duration of your playthrough.
+
+The development of Astroneer utilized the most recent versions of SF1Edit and the Caprica script compiler for optimal stability.
+
+However, it's important to note that modding for Starfield is still emerging, and this mod is part of that pioneering wave. While every precaution has been taken to ensure safety, as with any mod, there's always a small chance of unexpected issues arising.
+
+### Upset that this wasn't in Starfield's vanilla experience?
+
+It's understandable to feel passionate about the content of the games you love. If you find yourself frustrated, consider stepping away for a moment. A breath of fresh air and a change of scenery can do wonders.
+
+Remember, expressing dissatisfaction won't change the game. Instead, why not use that passion constructively? Your energy could greatly contribute to enhancing this mod and the community's experience!
+
+### How can I contribute to Astroneer?
+
+Your involvement is what shapes the future of Astroneer. We're on the lookout for players who can test and offer insights on mission balance and overall gameplay.
+
+Feedback is welcome through GitHub Issues, GitHub Discussions, or on Nexus Mods.
+
+For those interested in a more hands-on role, such as mod authors looking to contribute directly to Astroneer's development, please initiate a conversation via GitHub Discussions. Let's collaborate to make something incredible!
+
 ## Credits
 
 @codegangsta - Game design, scripting, narrative crafting
