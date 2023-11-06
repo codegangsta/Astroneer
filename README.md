@@ -1,26 +1,26 @@
 # Astroneer - Starship Manufacturing Tycoon
 
-Astroneer is an ambitious new mode for Starfield that allows you to become a world-renown ship designer. It updates Starfield with all new mechanics, narrative elements, and emergent gameplay.
+Embark on a journey of innovation and prestige in Starfield with Astroneer, the groundbreaking new mod that transforms you into a galaxy-renowned starship architect. This mod revolutionizes the game with fresh mechanics, captivating story developments, and dynamic gameplay experiences.
 
 ## Features
 
-### Become a Freelance Ship Designer
+### Forge Your Path as a Starship Artisan
 
-Astroneer adds a new type of mission to the mission boards: **Ship Contracts**. Ship contracts are radiant quests that require you to modify a ship to meet certain thematic requirements. Finishing a ship contract rewards you with credits, XP, and more!
+Astroneer introduces a new mission category to the mission boards: Ship Contracts. These radiant quests challenge you to customize starships to meet specific thematic criteria. Successful completion of a ship contract garners you credits, experience points, and more, fueling your rise to interstellar fame.
 
-### Meet Aria Collins and Atlas Astronautics
+### Collaborate with Aria Collins and Atlas Astronautics
 
-All ship contracts are managed by **Atlas Astronautics**, a small-time ship manufacturer and refitter. As Astroneer continues to develop, you'll witness Atlas go from underdog to top of the foodchain in ship manufacturing.
+At the heart of these ship contracts is Atlas Astronautics, an emerging name in starship manufacturing and retrofitting. Journey through the Astroneer narrative and watch Atlas ascend from a fledgling company to a behemoth in the cosmos of ship production.
 
-Aria Collins is a brand new, fully voiced NPC that will be your point person for all ship contracts. Continue playing Astroneer to discover more about Aria and her motivations.
+Meet Aria Collins, a new, fully voiced NPC who will guide you through your ship contract endeavors. Engage with the unfolding story to uncover Aria's past and her driving forces.
 
-### See your creations in the wild
+### Witness Your Masterpieces in Action
 
-When you complete a ship contract, you'll have a chance to see your marvelous creation in space, at a vendor, or maybe even planetside. Buy it, steal it, or blow it up - You are, in fact, it's designer.
+Upon fulfilling a ship contract, your stellar designs will appear across the universe—be it in the void of space, docked at a trading post, or landed on a foreign planet. Whether you choose to purchase your creation, commandeer it, or engage in a bit of space piracy, remember that it was brought to life by your hands.
 
-### ...and much more to come
+### ...and the Voyage Continues
 
-Astroneer is an ambitious mod with many cool updates planned. See our [Roadmap](#Roadmap) for future updates.
+Astroneer is not just a mod; it's a commitment to continuous expansion and enrichment. Peek at our Roadmap for a glimpse into the future enhancements we have in store.
 
 ## Installation
 
@@ -34,7 +34,7 @@ Download the latest version of Astroneer, and extract the zip file into your Sta
 
 Add `Astroneer.esm` to your Plugins.txt
 
-## Gameplay Systems
+## Gameplay Enhancements
 
 Astroneer introduces a variety of new systems, most having to do with ship design system and its modularity.
 
@@ -51,7 +51,7 @@ Ship Contracts can be obtained at the Mission Board, one at a time. A ship contr
 
 ### Ship Types
 
-Ship types help Astroneer organize ships thematically, and give the ship contract mechanic a bit of flair to guide the player in a build.
+Ship types categorize vessels within thematic lines, adding a layer of depth and direction to the ship contract mechanic:
 
 The following ship types are currently supported:
 
@@ -61,11 +61,11 @@ The following ship types are currently supported:
 - **Luxury**: Designed for opulence and wealthy buyers. Typically focused on amenities, crew slots, habs and protection.
 - **Interceptor**: Designed for speed. Typically focused on top speed, manueverability and balance.
 
-### Objective Types
+### Design Objectives
 
-Each ship contract includes 1-5 objectives for the mission. Each objective represents a requirement for the ship build.
+Each contract comes with objectives that dictate the requirements for the ship's design, ranging from cargo space to weapon power.
 
-The following objective types are currently supported:
+We're open to community suggestions for additional ship attributes to be included in future contracts.
 
 - **Cargo**: Cargo capacity
 - **CrewSlots**: # of crew slots
@@ -90,13 +90,11 @@ The following objective types are currently supported:
 - **Weapon Power Plasma**: Max plasma weapon power
 - **Windows**: Number of windows
 
-If you feel like there is a ship attribute you'd like to see as part of a contract, feel free to reach out and we will see if it can be implemented.
-
 ### Mission Packs
 
 Astroneer was designed to be modular, making it easy to add and update missions as part of the core mod or as an addon mod. Whether you are mod author who wants to add support for your ship mod to Astroneer, or you just want to put together some cool new ship contract missions, Astroneer has been designed with that in mind.
 
-**Mission Packs** provide an API for creating and loading new ship contracts into the game, it requires only papyrus scripting and is very easy to implement. Here is an example of how one might implement a mission pack:
+**Mission Packs** offer an API for crafting and integrating new ship contracts, requiring minimal papyrus scripting to implement. Below is a sample framework for a mission pack:
 
 ```
 ScriptName MyAwesomeMissionPack
@@ -138,11 +136,33 @@ TODO: Add a tutorial for adding your own mission pack
 
 ## Roadmap
 
+Astroneer is set to evolve with a series of updates that will enrich the gameplay, narrative, and systems over time. As the mod matures, you'll have the opportunity to advance your reputation as a master starship designer and observe the growth of Atlas Astronautics and its key players.
+
 ### Chapter 1: Freelancer
+
+The current release of Astroneer, "Freelancer" contains the following features
+
+- Ship Contract System
+- Mission Packs
+- Space encounters for ship designs
 
 ### Chapter 2: Titans of Industry
 
+The forthcoming expansion, "Titans of Industry," charts the ascent of Atlas Astronautics:
+
+- Embark on a journey with Atlas, starting as an up-and-coming designer and soaring to industry prominence.
+- Unlock new research projects as you turn in ship designs.
+- Delve deeper into Aria's personal and professional narrative.
+- Engage with your creations in new planetside encounters.
+
 ### Chapter 3: Red Ocean
+
+The third phase, "Red Ocean," transforms the ship-building sector into an intricate market simulation:
+
+- Rise through the ranks to become an executive at Atlas Astronautics.
+- Engage in corporate warfare against rival manufacturers, making key decisions in Marketing, R&D, and supply chain management.
+- Strategize to outmaneuver the competition in a cutthroat industry.
+- Shape your legacy as a benevolent innovator or a ruthless industrial magnate.
 
 ## FAQ
 
@@ -150,5 +170,5 @@ TODO: Add a tutorial for adding your own mission pack
 
 ## Credits
 
-@codegangsta - Game design, scripting, narrative
-Elisabeth Saenz - VO (Aria), narrative
+@codegangsta - Game design, scripting, narrative crafting
+Elisabeth Saenz - Voice of Aria, narrative contributor
