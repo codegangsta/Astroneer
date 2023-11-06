@@ -107,17 +107,14 @@ Function LoadMissionPacks()
 EndFunction
 
 ; Creates a ContractShip and adds it to the player's ship list
-spaceshipreference Function AddContractShip(Form shipform)
-  spaceshipreference ship = GetLandingMarker().PlaceShipAtMe(shipForm, 1, True, True, True, False, None, None, None, True)
+spaceshipreference Function AddContractShip(Astroneer:Pack:Mission m)
+  spaceshipreference ship = GetLandingMarker().PlaceShipAtMe(m.ShipTemplate, 1, True, True, True, False, None, None, None, True)
 
   ship.AddKeyword(CannotBeSoldShipKeyword)
   ship.AddKeyword(CannotBeHomeShipKeyword)
   ship.AddKeyword(CannotBeCountedAgainstMaxShipsKeyword)
   ship.SetValue(SpaceshipRegistration, 1.0)
-
-  Message shipName = ShipNames.GetAt(Utility.RandomInt(0, ShipNames.GetSize()-1)) as Message
-  ship.SetOverrideName(shipName)
-
+  ship.SetOverrideName(m.Title)
   PlayerShipQuest.AddPlayerOwnedShip(ship)
 
   return ship
@@ -152,7 +149,7 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
 
   elseif (objectiveType == consts.ObjectiveFuel)
     ActorValue fuelAV = Game.GetForm(0x0000854f) as ActorValue
-    return Math.Round(1.0 / ship.GetValue(fuelAV))
+    return ship.GetBaseValue(fuelAV)
 
   elseif (objectiveType == consts.ObjectiveGravJumpRange)
     return ship.GetGravJumpRange()
@@ -191,6 +188,7 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
     ActorValue wg1AV = Game.GetForm(0x00219625) as ActorValue
     ActorValue wg2AV = Game.GetForm(0x00219624) as ActorValue
     ActorValue wg3AV = Game.GetForm(0x00219623) as ActorValue
+    ; TODO: fix divide by zero bug here
     return Math.Round((1.0/ship.GetValue(wg1AV)) + (1.0/ship.GetValue(wg2AV)) + (1.0/ship.GetValue(wg3AV)))
 
   elseif (objectiveType == consts.ObjectiveWeaponPowerBallistic)
@@ -268,7 +266,7 @@ Astroneer:Pack:Mission Function GenerateMission(String missionID)
     mission = missions[Utility.RandomInt(0, missions.Length-1)] 
   endif
   if mission.Title == None
-    mission.Title = consts.MissionTextDefault
+    mission.Title = ShipNames.GetAt(Utility.RandomInt(0, ShipNames.GetSize()-1)) as Message
   endif
   if mission.Text == None
     mission.Text = consts.MissionTextDefault

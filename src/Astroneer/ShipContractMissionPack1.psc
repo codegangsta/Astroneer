@@ -7,7 +7,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ;= Fighter 01 =================================================
   Astroneer:Pack:Mission m1 = new Astroneer:Pack:Mission
   m1.ID = "MP01_Fighter01"
-  m1.Title = p.MissionTitleFighter01
   m1.Text = p.MissionTextFighter01
   m1.ShipTemplate = p.ShipTemplateFighter
   m1.ShipType = p.ShipTypeFighter
@@ -29,7 +28,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ;= Hauler 01 =================================================
   Astroneer:Pack:Mission m2 = new Astroneer:Pack:Mission
   m2.ID = "MP01_Hauler01"
-  m2.Title = p.MissionTitleHauler01
   m2.Text = p.MissionTextHauler01
   m2.ShipTemplate = p.ShipTemplateHauler
   m2.ShipType = p.ShipTypeHauler
@@ -49,7 +47,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ;= Luxury 01 =================================================
   Astroneer:Pack:Mission m3 = new Astroneer:Pack:Mission
   m3.ID = "MP01_Luxury01"
-  m3.Title = p.MissionTitleLuxury01
   m3.Text = p.MissionTextLuxury01
   m3.ShipTemplate = p.ShipTemplateLuxury
   m3.ShipType = p.ShipTypeLuxury
@@ -69,7 +66,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ;= Explorer 01 =================================================
   Astroneer:Pack:Mission m4 = new Astroneer:Pack:Mission
   m4.ID = "MP01_Explorer01"
-  m4.Title = p.MissionTitleExplorer01
   m4.Text = p.MissionTextExplorer01
   m4.ShipTemplate = p.ShipTemplateExplorer
   m4.ShipType = p.ShipTypeExplorer
@@ -91,7 +87,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ;= Interceptor 01 =================================================
   Astroneer:Pack:Mission m5 = new Astroneer:Pack:Mission
   m5.ID = "MP01_Interceptor01"
-  m5.Title = p.MissionTitleInterceptor01
   m5.Text = p.MissionTextInterceptor01
   m5.ShipTemplate = p.ShipTemplateInterceptor
   m5.ShipType = p.ShipTypeInterceptor

@@ -28,15 +28,6 @@ Group DifficultyTiers
   Message Property DifficultyTier4 Auto Const Mandatory ; Master
 EndGroup
 
-Group MissionTitles
-  Message Property MissionTitleDefault Auto Const Mandatory
-  Message Property MissionTitleExplorer01 Auto Const Mandatory
-  Message Property MissionTitleFighter01 Auto Const Mandatory
-  Message Property MissionTitleHauler01 Auto Const Mandatory
-  Message Property MissionTitleInterceptor01 Auto Const Mandatory
-  Message Property MissionTitleLuxury01 Auto Const Mandatory
-EndGroup
-
 Group MissionTexts
   Message Property MissionTextDefault Auto Const Mandatory
   Message Property MissionTextExplorer01 Auto Const Mandatory

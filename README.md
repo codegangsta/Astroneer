@@ -106,7 +106,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ;= Fighter 01 =================================================
   Astroneer:Pack:Mission m1 = new Astroneer:Pack:Mission
   m1.ID = "MP01_Fighter01"
-  m1.Title = p.MissionTitleFighter01
   m1.Text = p.MissionTextFighter01
   m1.ShipTemplate = p.ShipTemplateFighter
   m1.ShipType = p.ShipTypeFighter

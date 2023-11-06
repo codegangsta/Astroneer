@@ -114,11 +114,7 @@ Function StageAccepted()
     Self.SetObjectiveDisplayed(ShipObjective_05, True, False)
   endif
 
-  ; FIXME: these should come from a property
-  Form shipForm = Game.GetForm(0x0003e13e)
-
-  Trace("Spawning ship " + shipForm)
-  Self.ContractShip = AstroneerParent.AddContractShip(shipForm)
+  Self.ContractShip = AstroneerParent.AddContractShip(Mission)
 
   Actor PlayerREF = Game.GetPlayer() ; #DEBUG_LINE_NO:74
   Self.RegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerModifiedShip")
