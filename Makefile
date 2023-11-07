@@ -29,6 +29,7 @@ reload_scripts::
 	sfc 'ReloadScript "Astroneer:ParentQuest"'
 	sfc 'ReloadScript "Astroneer:ShipContractMissionScript"'
 	sfc 'ReloadScript "Astroneer:ShipContractMissionPack1"'
+	sfc 'ReloadScript "Astroneer:Aria"'
 
 ready_mission::
 	sfc 'cgf "Astroneer.DebugReadyMission"'
