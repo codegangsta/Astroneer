@@ -94,6 +94,11 @@ EndFunction
 
 Function StageAccepted()
   Trace("StageAccepted")
+    Self.SetObjectiveDisplayed(0, True, False)
+EndFunction
+
+Function StageShipDesign()
+  Trace("StageShipDesign")
 
   if Mission.Objective01 != None
     Self.SetObjectiveDisplayed(ShipObjective_01, True, False)

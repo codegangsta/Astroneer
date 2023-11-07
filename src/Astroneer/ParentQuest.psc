@@ -28,6 +28,8 @@ Group QuestData
   FormList Property ShipNames Auto Const Mandatory
   Scene Property SceneMissionBoardIntro Auto Const Mandatory
   ObjectReference[] Property ShipCollection Auto Const
+  ReferenceAlias Property AtlasIntercom Auto Const
+  ReferenceAlias Property Aria Auto Const
 EndGroup
 
 Astroneer:Pack:Mission[] Missions = None
@@ -39,28 +41,40 @@ Event OnQuestInit()
   Self.RegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerLoadGame")
   Self.RegisterForRemoteEvent(PlayerREF as ObjectReference, "OnCellAttach")
   AddMissions()
+  InitIntercom()
 EndEvent
 
 Event ObjectReference.OnCellAttach(ObjectReference akRef)
   Trace("OnCellAttach")
+  InitIntercom()
+EndEvent
 
+Function InitIntercom()
   Cell spaceport = Game.GetForm(0x00014cb3) as Cell
-  if (spaceport.IsLoaded())
-    Activator intercomForm = Game.GetForm(0x02000843) as Activator
-    Trace("Intercom " + intercomForm)
+  Activator intercomForm = Game.GetForm(0x02000843) as Activator
+  ActorBase ariaForm = Game.GetForm(0x02000835) as ActorBase
 
-    ; FIXME: force this to an alias and check before placing
-    ObjectReference intercom = Game.GetPlayer().PlaceAtMe(intercomForm, 1, False, False, False, None, None, True)
+  if (spaceport.IsLoaded() && !AtlasIntercom.IsFilled())
+    ObjectReference intercom = Game.GetPlayer().PlaceAtMe(intercomForm, 1, True, False, False, None, None, True)
     intercom.SetPosition(-828.62, 1603.28, -165.53)
     intercom.SetAngle(-0.00, -0.00, -137.15)
-
-    ; FIXME: use a property here
-    (Self.GetAlias(1) as ReferenceAlias).ForceRefTo(intercom)
+    Trace("Created intercom and setting ref " + intercom)
+    AtlasIntercom.ForceRefTo(intercom)
   endif
-EndEvent
+
+  if (spaceport.IsLoaded() && !Aria.IsFilled())
+    Actor ariaRef = AtlasIntercom.GetReference().PlaceActorAtMe(ariaForm, 1, None, True, False, False, None, True)
+    ariaRef.SetPosition(-828.62, 1603.28, -165.53)
+    ariaRef.SetAngle(-0.00, -0.00, -137.15)
+    ariaRef.EnableAI(False, False)
+    Trace("Created aria and setting ref " + ariaRef)
+    Aria.ForceRefTo(ariaRef)
+  endif
+EndFunction
 
 Event Actor.OnPlayerLoadGame(Actor akActor)
   AddMissions()
+  InitIntercom()
 EndEvent
 
 Function AddMissions()

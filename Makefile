@@ -48,7 +48,7 @@ console::
 	@sfc
 
 load_save::
-	sfc "LoadGame CleanSave"
+	sfc "LoadGame ref_save_1"
 
 stop_game:
 	sfc "QuitGame"
