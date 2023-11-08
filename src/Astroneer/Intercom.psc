@@ -3,7 +3,8 @@ ScriptName Astroneer:Intercom Extends ObjectReference
 Astroneer:ParentQuest Property ParentQuest Auto Const Mandatory
 
 Event OnActivate(ObjectReference akActionRef)
-  Trace("OnActivate")
+  ParentQuest.PlaceAria()
+  ParentQuest.SceneMissionBoardIntro.Start()
 EndEvent
 
 Function Trace(string message)

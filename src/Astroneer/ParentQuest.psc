@@ -60,7 +60,6 @@ Function InitIntercom()
     intercom.SetAngle(-0.00, -0.00, -137.15)
     Trace("Created intercom and setting ref " + intercom)
     AtlasIntercom.ForceRefTo(intercom)
-    Self.RegisterForRemoteEvent(intercom as ScriptObject, "OnActivate")
   endif
 
   if (spaceport.IsLoaded() && !Aria.IsFilled())
@@ -83,14 +82,6 @@ Function PlaceAria()
   ariaRef.SetGhost(True)
   ariaRef.SetMotionType(ariaRef.Motion_Dynamic, True)
 EndFunction
-
-Event ObjectReference.OnActivate(ObjectReference akSender, ObjectReference akActionRef)
-  Trace("Intercom Onactivate")
-  Game.GetPlayer().SetPosition(-827.13, 1604.70, -165.53)
-  Game.GetPlayer().SetAngle(0, 0, 227.21)
-  PlaceAria()
-  SceneMissionBoardIntro.Start()
-EndEvent
 
 Event Actor.OnPlayerLoadGame(Actor akActor)
   AddMissions()
