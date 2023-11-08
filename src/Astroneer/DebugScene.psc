@@ -35,17 +35,6 @@ Event OnPhaseBegin(Int phase)
 EndEvent
 
 Event OnPhaseEnd(Int phase)
-  Trace("OnPhaseEnd " + phase)
-
-  if phase == PhaseGreet
-    Trace("Greet")
-  elseif phase == PhaseTopics
-    Trace("Topics")
-  elseif phase == PhaseModifyShip
-    ModifyShip()
-  elseif phase == PhaseCompleteContract
-    CompleteContract()
-  endif
 EndEvent
 
 Function Trace(string message)

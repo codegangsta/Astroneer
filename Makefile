@@ -29,7 +29,7 @@ reload_scripts::
 	sfc 'ReloadScript "Astroneer:ParentQuest"'
 	sfc 'ReloadScript "Astroneer:ShipContractMissionScript"'
 	sfc 'ReloadScript "Astroneer:ShipContractMissionPack1"'
-	sfc 'ReloadScript "Astroneer:Intercom"'
+	sfc 'ReloadScript "Astroneer:Dialogue"'
 
 ready_mission::
 	sfc 'cgf "Astroneer.DebugReadyMission"'
@@ -49,7 +49,7 @@ console::
 	@sfc
 
 load_save::
-	sfc "LoadGame ref_save_1"
+	sfc "LoadGame ref_save_2"
 
 stop_game:
 	sfc "QuitGame"

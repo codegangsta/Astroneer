@@ -39,6 +39,8 @@ Message Property BlankMessage Auto Const Mandatory
 Astroneer:Pack:Mission Property Mission Auto
 spaceshipreference Property ContractShip Auto
 
+Int Property DesignStage = 20 Auto Const
+
 ;-- Functions ---------------------------------------
 
 Event OnQuestStarted()
@@ -54,6 +56,7 @@ Int Function GetActualReward()
 EndFunction
 
 Event OnStageSet(Int stageId, Int itemId)
+  Trace("OnStageSet " + stageId + " " + itemId)
   if(stageId == ReadyStage)
     FillRef(Self.GetAlias(9) as ReferenceAlias, Mission.Text)
     FillRef(Self.GetAlias(10) as ReferenceAlias, Mission.Title)
@@ -71,6 +74,11 @@ Event OnStageSet(Int stageId, Int itemId)
 
   if(stageId == AcceptStage)
     StageAccepted()
+    return
+  endif
+
+  if(stageId == DesignStage)
+    StageDesign()
     return
   endif
 
@@ -97,8 +105,9 @@ Function StageAccepted()
     Self.SetObjectiveDisplayed(0, True, False)
 EndFunction
 
-Function StageShipDesign()
-  Trace("StageShipDesign")
+Function StageDesign()
+  Trace("StageDesign")
+  Self.SetObjectiveCompleted(0, True)
 
   if Mission.Objective01 != None
     Self.SetObjectiveDisplayed(ShipObjective_01, True, False)
@@ -123,9 +132,6 @@ Function StageShipDesign()
   Self.RegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
 
   UpdateObjectiveValues()
-
-  ; FIXME: This should use a message
-  Debug.Notification("Ship XXX added to hangar")
 EndFunction
 
 Function StageCompleted()
