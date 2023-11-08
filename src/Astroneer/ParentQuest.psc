@@ -67,14 +67,29 @@ Function InitIntercom()
     Actor ariaRef = AtlasIntercom.GetReference().PlaceActorAtMe(ariaForm, 1, None, True, False, False, None, True)
     ariaRef.SetPosition(-828.62, 1603.28, -165.53)
     ariaRef.SetAngle(-0.00, -0.00, -137.15)
-    ;ariaRef.EnableAI(False, False)
     Trace("Created aria and setting ref " + ariaRef)
     Aria.ForceRefTo(ariaRef)
+    PlaceAria()
   endif
+EndFunction
+
+; Dirty hack to get aria to appear near the intercom
+Function PlaceAria()
+  Actor ariaRef = Aria.GetActorReference()
+  ariaRef.SetMotionType(ariaRef.Motion_Keyframed, True)
+  ariaRef.SetPosition(-828.8, 1603.2, -165.8)
+  ariaRef.SetAngle(0.00, 0.00, -137.15)
+  ariaRef.SetAlpha(0.0, False)
+  ariaRef.SetGhost(True)
+  ariaRef.SetMotionType(ariaRef.Motion_Dynamic, True)
 EndFunction
 
 Event ObjectReference.OnActivate(ObjectReference akSender, ObjectReference akActionRef)
   Trace("Intercom Onactivate")
+  Game.GetPlayer().SetPosition(-827.13, 1604.70, -165.53)
+  Game.GetPlayer().SetAngle(0, 0, 227.21)
+  PlaceAria()
+  SceneMissionBoardIntro.Start()
 EndEvent
 
 Event Actor.OnPlayerLoadGame(Actor akActor)

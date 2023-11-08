@@ -2,7 +2,7 @@ ScriptName Astroneer
 
 Function DebugInit() global
   DebugTrace("=DebugInit==============================================")
-  PrintCurrentShipObjectives()
+  Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
 EndFunction
 
 Function PrintCurrentShipObjectives() global
