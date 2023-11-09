@@ -75,11 +75,8 @@ EndFunction
 
 Function DebugPlaceShip() global
   Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
-  Astroneer:ShipContractMissionScript mission = pq.AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
-
-  DebugTrace("Contract Ship " + mission.ContractShip)
   spaceshipreference playerShip = Game.GetPlayerHomeSpaceShip()
-  spaceshipreference ship = mission.ContractShip
+  spaceshipreference ship = pq.ShipCollection[0]
 
   ; reset ship
   DebugTrace("Resetting Ship")
@@ -96,15 +93,14 @@ Function DebugPlaceShip() global
 
   Int tempdestinationpoint = Utility.RandomInt(0, trafficManager.Alias_ExitPoints.GetCount() - 1) ; #DEBUG_LINE_NO:110
   ObjectReference DestinationLink = trafficManager.Alias_ExitPoints.GetAt(tempdestinationpoint) ; #DEBUG_LINE_NO:112 
-  ship.EvaluatePackage(True)
-  ship.EnableAI(True, True)
   ship.EnableWithGravJump()
+  ;ship.EnableAI(True, True)
+  DebugTrace("DestinationLink " + DestinationLink)
+  ship.SetLinkedRef(DestinationLink, trafficManager.LinkKeywordDestination, False) ; #DEBUG_LINE_NO:122
+  ;ship.EvaluatePackage(True)
   ship.SetForwardVelocity(1.0)
   ship.GetSpaceshipAutopilotAI().ForceMovementSpeed(-1.0)
-  ship.SetLinkedRef(DestinationLink, trafficManager.LinkKeywordDestination, False) ; #DEBUG_LINE_NO:122
-  DebugTrace("AI Enabled? " + ship.IsAIEnabled())
-
-  ;spaceshipreference enemyShipRef = playerShip.PlaceShipNearMe(player.ContractShip, ship.CONST_NearPosition_ForwardWide, ship.CONST_NearDistance_Close, ship.CONST_NearFacing_Direct, 4, True, False, False, True, None) ; #DEBUG_LINE_NO:23
+  ship.GetSpaceshipAutopilotAI().EvaluatePackage()
 EndFunction
 
 Function DebugTrace(String Text) Global
