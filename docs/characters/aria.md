@@ -1,42 +1,43 @@
+# Aria Collins
+
 **Name:** Aria Collins
 
-**Occupation:** Junior Marketing Executive for Taiyo Engineering
+**Occupation:** Project Manager & Aspiring Ship Designer, Atlas Astronautics
 
 **Age:** 27
 
 **Appearance:**
 
-- Graceful and of average height, with a constant air of determination.
-- Long, curly auburn hair that she frequently ties into intricate updos.
-- Wears fashionable, tailored smart-clothing that both exudes professionalism.
+- Standing at an unassuming height, she radiates a mix of focus and potential energy.
+- Her auburn hair is often a cascade of curls, sometimes restrained to signal her shift from manager to engineer.
+- Her attire is a hybrid of smart-clothing that suits her dual role—practical yet with a flair that hints at her creative spirit.
 
 **Backstory:**
-Coming from a modest background on a distant colony, Aria won a scholarship to study Interstellar Marketing at a prestigious galactic university. Armed with her education, she joined Taiyo, determined to rise and ensure her family's comfort. However, the corporate world turned out to be more competitive and cutthroat than she anticipated.
+Aria grew up on a space colony, tinkering with old starship parts from a young age. Her technical skill and design vision earned her a scholarship at a top academy. Despite her ambitions, the bureaucratic slow-moving giants of the industry left her disillusioned. Atlas Astronautics, with its nimble nature and openness to radical ideas, is her proving ground, her chance to transition from manager to visionary.
 
 **Personality:**
-Bright, witty, and resourceful, Aria's likability is her ace card. Beneath her amiable demeanor, she's constantly strategizing her next move. Her ambition is evident, but she's also genuinely passionate about starships and space exploration, making her job more than just a stepping stone.
+Aria combines managerial acumen with a tinkerer's joy for creation. Her humor is as much a tool as her wrench, keeping her team light-hearted yet driven. She's full of theoretical knowledge yearning for practical application, and her ambition is now fueled by opportunity.
 
 **Skills and Abilities:**
 
-- Brilliant orator and presenter.
-- Has an extensive network of contacts.
-- Adept at reading people and situations, a skill she's honed to navigate corporate politics.
+- Exceptionally talented with theoretical ship design, eager for real-world application.
+- A resourceful problem-solver, able to quickly adapt theories into workable solutions.
+- Inspiring leadership qualities that can motivate a team towards innovation.
+- An expansive understanding of starship components and potential synergies.
 
 **Motivations:**
-While her primary drive is to ascend Taiyo's ranks, Aria is also motivated by a desire to showcase the wonders of space travel to every corner of the galaxy. She believes in Taiyo's mission and envisions a future where everyone can touch the stars.
+Aria is determined to transition from the theoretical to the practical, to make a tangible impact on the future of starship design. She's driven by the dream of engineering breakthroughs that could redefine space travel.
 
 **Relationships:**
-She has a few allies in Taiyo, mentors who recognize her potential. But she also has rivals envious of her swift rise. Over time, her interactions with the player can evolve from professional to personal, offering depths of trust and affection.
+She's mentored by the founder of Atlas, who sees the latent potential in her. Her dynamic with the player can grow from professional respect to a deep collaborative partnership, as they work together to bring Aria's designs to fruition.
 
 **Role in the Game:**
-Aria could approach the player for collaborative missions: testing and promoting new Taiyo models, gathering intel on competitors, or even mitigating PR crises. As the player gets to know her, they discover her vulnerabilities and dreams, potentially leading to a deeper relationship.
+Aria seeks the player's expertise to help her break into the actual design aspect of shipbuilding. Their joint projects could become pivotal in shaping her career and the future of Atlas Astronautics.
 
 **Character Arc:**
-Aria starts as an ambitious corporate player but, through her experiences with the player and the broader galaxy, she might come to redefine what success means to her. This can lead to branching pathways: she could continue her corporate ascent, pivot to a more philanthropic venture, or even choose a life of adventure with the player.
+Starting as a project manager, Aria's arc is her journey to becoming a celebrated ship designer. Her path is paved with challenges that test her innovation and resolve, with the player's influence crucial in her rise to prominence.
 
 **Challenges:**
-Her ambition often puts her in the crosshairs of corporate politics. Balancing her genuine passion for the job with the need to advance can be taxing. Personal relationships, especially a budding romance with the player, can both challenge and bolster her resolve.
+Aria faces the challenge of translating her vast theoretical knowledge into practical, groundbreaking designs. She must navigate the doubts of those who see her only as a manager, and with the player's help, she strives to unveil her true potential as a designer.
 
----
-
-Aria Collins offers a dynamic character journey, blending the intrigue of corporate ladder-climbing with the genuine enthusiasm of space exploration. Her evolving relationship with the player can provide emotional depth and complexity to her narrative.
+This iteration of Aria's bio emphasizes her current position on the brink of her desired career. It highlights her potential and sets the stage for a narrative of growth, where her partnership with the player becomes a catalyst for her ascent in the field of ship design.
