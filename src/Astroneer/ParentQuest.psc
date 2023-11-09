@@ -27,9 +27,9 @@ Group QuestData
   FormList Property AstroneerMBQuests Auto Const Mandatory
   FormList Property ShipNames Auto Const Mandatory
   Scene Property SceneMissionBoardIntro Auto Const Mandatory
-  ObjectReference[] Property ShipCollection Auto Const
   ReferenceAlias Property AtlasIntercom Auto Const
   ReferenceAlias Property Aria Auto Const
+  spaceshipreference[] Property ShipCollection Auto
 EndGroup
 
 Astroneer:Pack:Mission[] Missions = None
@@ -133,7 +133,11 @@ EndFunction
 
 ; Creates a ContractShip and adds it to the player's ship list
 spaceshipreference Function AddContractShip(Astroneer:Pack:Mission m)
-  spaceshipreference ship = GetLandingMarker().PlaceShipAtMe(m.ShipTemplate, 1, True, True, True, False, None, None, None, True)
+  ; HACK: This is a hack to get around the fact that the ship builder
+  ; mutates the form it is given.
+  Form ShipTemplate = Game.GetForm(m.ShipTemplate)
+  spaceshipreference ship = GetLandingMarker().PlaceShipAtMe(ShipTemplate, 1, True, True, True, False, None, None, None, True)
+  Trace("Created ship " + ship + " from template " + m.ShipTemplate)
 
   ship.AddKeyword(CannotBeSoldShipKeyword)
   ship.AddKeyword(CannotBeHomeShipKeyword)
@@ -143,6 +147,21 @@ spaceshipreference Function AddContractShip(Astroneer:Pack:Mission m)
   PlayerShipQuest.AddPlayerOwnedShip(ship)
 
   return ship
+EndFunction
+
+Function RemoveContractShip(spaceshipreference ship)
+  Trace("Removing ship " + ship)
+  PlayerShipQuest.RemovePlayerShip(ship)
+  ship.RemoveKeyword(CannotBeSoldShipKeyword)
+  ship.RemoveKeyword(CannotBeHomeShipKeyword)
+  ship.RemoveKeyword(CannotBeCountedAgainstMaxShipsKeyword)
+  ship.SetValue(SpaceshipRegistration, 0.0)
+
+  if(ShipCollection == None)
+    ShipCollection = new spaceshipreference[0]
+  endif
+
+  ShipCollection.Add(ship)
 EndFunction
 
 Function SetAllPartPowers(spaceshipreference ship, Int power)
@@ -286,7 +305,7 @@ Astroneer:Pack:Mission Function GenerateMission()
   if mission.Text == None
     mission.Text = consts.MissionTextDefault
   endif
-  if mission.ShipTemplate == None
+  if mission.ShipTemplate == 0
     mission.ShipTemplate = consts.ShipTemplateDefault
   endif
   if mission.Difficulty == None

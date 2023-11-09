@@ -40,12 +40,15 @@ Astroneer:Pack:Mission Property Mission Auto
 spaceshipreference Property ContractShip Auto
 
 Int Property DesignStage = 20 Auto Const
+Int Property TurnInStage = 30 Auto Const
 
 ;-- Functions ---------------------------------------
 
 Event OnQuestStarted()
   Trace("OnQuestStarted")
   Self.Mission = AstroneerParent.GenerateMission()
+  Trace("Mission generated " + Self.Mission)
+  Trace("Mission ship template " + Self.Mission.ShipTemplate)
 
   UpdateObjectiveTargets()
   Parent.OnQuestStarted()
@@ -58,17 +61,7 @@ EndFunction
 Event OnStageSet(Int stageId, Int itemId)
   Trace("OnStageSet " + stageId + " " + itemId)
   if(stageId == ReadyStage)
-    FillRef(Self.GetAlias(9) as ReferenceAlias, Mission.Text)
-    FillRef(Self.GetAlias(10) as ReferenceAlias, Mission.Title)
-    FillRef(Self.GetAlias(11) as ReferenceAlias, Mission.Difficulty)
-    FillRef(Self.GetAlias(12) as ReferenceAlias, Mission.Objective01)
-    FillRef(Self.GetAlias(13) as ReferenceAlias, Mission.Objective02)
-    FillRef(Self.GetAlias(14) as ReferenceAlias, Mission.Objective03)
-    FillRef(Self.GetAlias(15) as ReferenceAlias, Mission.Objective04)
-    FillRef(Self.GetAlias(16) as ReferenceAlias, Mission.Objective05)
-    FillRef(Self.GetAlias(17) as ReferenceAlias, Mission.ShipType)
-
-    UpdateObjectiveTargets()
+    StageReady()
     return
   endif
 
@@ -82,27 +75,34 @@ Event OnStageSet(Int stageId, Int itemId)
     return
   endif
 
+  if(stageId == TurnInStage)
+    StageTurnIn()
+    return
+  endif
+
   if(stageId == CompleteStage)
     StageCompleted()
     return
   endif
 EndEvent
 
-Function FillRef(ReferenceAlias akAlias, Message akMessage)
-  Trace("FillRef " + akAlias + " " + akMessage)
-  ObjectReference item = Game.GetPlayer().PlaceAtMe(TextReplacementForm, 1, True, True, False, None, None, False)
-  akAlias.ForceRefTo(item)
+Function StageReady()
+    FillRef(Self.GetAlias(9) as ReferenceAlias, Mission.Text)
+    FillRef(Self.GetAlias(10) as ReferenceAlias, Mission.Title)
+    FillRef(Self.GetAlias(11) as ReferenceAlias, Mission.Difficulty)
+    FillRef(Self.GetAlias(12) as ReferenceAlias, Mission.Objective01)
+    FillRef(Self.GetAlias(13) as ReferenceAlias, Mission.Objective02)
+    FillRef(Self.GetAlias(14) as ReferenceAlias, Mission.Objective03)
+    FillRef(Self.GetAlias(15) as ReferenceAlias, Mission.Objective04)
+    FillRef(Self.GetAlias(16) as ReferenceAlias, Mission.Objective05)
+    FillRef(Self.GetAlias(17) as ReferenceAlias, Mission.ShipType)
 
-  if akMessage != None
-    item.SetOverrideName(akMessage)
-  else
-    item.SetOverrideName(BlankMessage)
-  endif
+    UpdateObjectiveTargets()
 EndFunction
 
 Function StageAccepted()
   Trace("StageAccepted")
-    Self.SetObjectiveDisplayed(0, True, False)
+  Self.SetObjectiveDisplayed(0, True, False)
 EndFunction
 
 Function StageDesign()
@@ -129,7 +129,6 @@ Function StageDesign()
 
   Actor PlayerREF = Game.GetPlayer() ; #DEBUG_LINE_NO:74
   Self.RegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerModifiedShip")
-  Self.RegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
 
   UpdateObjectiveValues()
 EndFunction
@@ -141,25 +140,39 @@ Function StageCompleted()
   Self.UnRegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerModifiedShip")
   Self.UnRegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
 
-  AstroneerParent.PlayerShipQuest.RemovePlayerShip(Self.ContractShip)
-  AstroneerParent.ShipCollection.Add(Self.ContractShip)
+  AstroneerParent.RemoveContractShip(Self.ContractShip)
   Self.ContractShip = None
-
-  Self.MissionComplete()
 EndFunction
+
+Function StageTurnIn()
+EndFunction
+
+Function FillRef(ReferenceAlias akAlias, Message akMessage)
+  Trace("FillRef " + akAlias + " " + akMessage)
+  ObjectReference item = Game.GetPlayer().PlaceAtMe(TextReplacementForm, 1, True, True, False, None, None, False)
+  akAlias.ForceRefTo(item)
+
+  if akMessage != None
+    item.SetOverrideName(akMessage)
+  else
+    item.SetOverrideName(BlankMessage)
+  endif
+EndFunction
+
 
 Event Actor.OnPlayerModifiedShip(Actor akActor, spaceshipreference akShip)
   if(akShip == Self.ContractShip)
     UpdateObjectiveValues()
-  endif
-EndEvent
 
-Event OnMenuOpenCloseEvent(String menuName, bool opening)
-  if(menuName == "SpaceshipEditorMenu" && !opening)
     if AllShipObjectivesComplete()
-      Int turnIn = CompleteMessage.Show(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-      if(turnIn == 0)
-        StageCompleted()
+      SetObjectiveDisplayedAtTop(CompleteObjective)
+      if GetCurrentStageID() != TurnInStage
+        SetStage(TurnInStage)
+      endif
+    else
+      SetObjectiveDisplayed(CompleteObjective, False, False)
+      if GetCurrentStageID() != DesignStage
+        SetStage(DesignStage)
       endif
     endif
   endif
@@ -216,10 +229,6 @@ Function UpdateObjectiveValues()
   UpdateObjectiveValue(ObjectiveValue_03, Mission.Objective03, ShipObjective_03, Mission.ObjectiveTarget03)
   UpdateObjectiveValue(ObjectiveValue_04, Mission.Objective04, ShipObjective_04, Mission.ObjectiveTarget04)
   UpdateObjectiveValue(ObjectiveValue_05, Mission.Objective05, ShipObjective_05, Mission.ObjectiveTarget05)
-
-  if AllShipObjectivesComplete()
-    SetObjectiveDisplayedAtTop(CompleteObjective)
-  endif
 EndFunction
 
 Function UpdateObjectiveValue(GlobalVariable value, Message objectiveType, Int objective, Float target)

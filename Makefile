@@ -49,7 +49,9 @@ console::
 	@sfc
 
 load_save::
-	sfc "LoadGame ref_save_2"
+	# sfc "LoadGame ref_save_1"
+	# sfc "LoadGame ref_save_2"
+	sfc "LoadGame ref_save_3"
 
 stop_game:
 	sfc "QuitGame"

@@ -4,7 +4,7 @@ Struct Mission
   String ID
   Message Title
   Message Text
-  Form ShipTemplate
+  Int ShipTemplate
   Message ShipType
   Message Difficulty
   Int RewardCredits
@@ -62,14 +62,15 @@ Group Objectives
   Message Property ObjectiveWindows Auto Const Mandatory
 EndGroup
 
+; Ship templates must be IDs instead of forms because the game
+; overrwrites the ship form when the player customizes a ship.
 Group ShipTemplates
-  ; TODO: Rename to ShipTemplateGeneric
-  Form Property ShipTemplateDefault Auto Const Mandatory
-  Form Property ShipTemplateExplorer Auto Const Mandatory
-  Form Property ShipTemplateFighter Auto Const Mandatory
-  Form Property ShipTemplateHauler Auto Const Mandatory
-  Form Property ShipTemplateInterceptor Auto Const Mandatory
-  Form Property ShipTemplateLuxury Auto Const Mandatory
+  Int Property ShipTemplateDefault = 0x0003e13e Auto Const
+  Int Property ShipTemplateExplorer = 0x0005B554 Auto Const
+  Int Property ShipTemplateFighter = 0x0003e13e Auto Const
+  Int Property ShipTemplateHauler = 0x000FAFD8 Auto Const
+  Int Property ShipTemplateInterceptor = 0x0033CA69 Auto Const
+  Int Property ShipTemplateLuxury = 0x001EB556 Auto Const
 EndGroup
 
 Group ShipTypes
