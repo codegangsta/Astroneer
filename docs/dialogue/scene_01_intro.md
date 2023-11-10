@@ -12,4 +12,10 @@
 "Once you're done, bring her back so we can give her the old spaceworthy stamp. Keep your sensors peeled out there—your handiwork will be zipping around the galaxy before you know it."
 
 [AriaIntro04]
-"And if you find yourself spinning in zero-g with questions, just hit the intercom. I'm more helpful than a pocketful of wormholes and only slightly less likely to lead to unexpected adventures. Aria out—don't be a stranger, or do, but come back with stories!"
+"If you find yourself spinning in zero-g with questions, just hit the intercom. I'm more helpful than a pocketful of wormholes and only slightly less likely to lead to unexpected adventures."
+
+[AriaIntro05]
+"And since you might end up captaining one of these beauties, I'm dubbing you 'Cap.' Plus, it's easier than saying 'Hey, you!' every time."
+
+[AriaIntro06]
+"Aria out—don't be a stranger, or do, but come back with stories!"
