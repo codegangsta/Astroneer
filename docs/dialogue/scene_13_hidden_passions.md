@@ -30,13 +30,13 @@
 ## Aria's Follow-up Responses
 
 [AriaPassionResponseToAppreciative]
-Aria: "Grounded, or maybe just keeping my sanity in the vastness of it all. Those passions remind me there's more to life than just metal and circuits."
+"Grounded, or maybe just keeping my sanity in the vastness of it all. Those passions remind me there's more to life than just metal and circuits."
 
 [AriaPassionResponseToIntrigued]
-Aria: "Defying the norm is what I do best, Cap. Why should my hobbies be any different? They're the fuel for my creative engine."
+"Defying the norm is what I do best, Cap. Why should my hobbies be any different? They're the fuel for my creative engine."
 
 [AriaPassionResponseToTeasing]
-Aria: "A woman of many layers—that's me. Life's too short for one-dimensional characters, don't you think?"
+"A woman of many layers—that's me. Life's too short for one-dimensional characters, don't you think?"
 
 [AriaPassionResponseToChallenging]
-Aria: "They're not just escapes; they're part of who I am. Racing and music, they help me find balance. They're my personal rebellion against the routine."
+"They're not just escapes; they're part of who I am. Racing and music, they help me find balance. They're my personal rebellion against the routine."
