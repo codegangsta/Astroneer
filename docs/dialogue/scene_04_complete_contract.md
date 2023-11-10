@@ -202,7 +202,7 @@ _Context: The player has finished building the ship according to the contract sp
 "The old freighter was a draft horse—sturdy and reliable. You've turned it into a thoroughbred, Cap."
 
 [AriaCompleteContractHauler09]
-"I used to think this hauler could only be loved by its captain. Now, I think it might just be the belle of the spaceways."
+"I used to think this hauler could only be loved by its captain. Now, I think it might just be the darling of the spaceways."
 
 [AriaCompleteContractHauler10]
 "Cap, this freighter's now a fortress with a hyperdrive. It's not just moving cargo—it's guarding it."
@@ -284,7 +284,7 @@ _Context: The player has finished building the ship according to the contract sp
 "I thought I knew what luxury was until I saw this. You've turned a space cruise into a space conquest of class."
 
 [AriaCompleteContractLuxury05]
-"They say space is cold, but on this ship, it's always a warm welcome. It's a five-star resort with a warp drive."
+"They say space is cold, but on this ship, it's always a warm welcome. It's a five-star resort with a grav drive."
 
 [AriaCompleteContractLuxury06]
 "You've made this more than a luxury vessel; it's a masterpiece that's ready to paint the stars with elegance."
