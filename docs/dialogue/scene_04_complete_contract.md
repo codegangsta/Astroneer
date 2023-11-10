@@ -32,7 +32,7 @@ _Context: The player has finished building the ship according to the contract sp
 "The ship's reimagined, per your vision."
 
 [PlayerCompleteContract10]
-"Ship redesign submitted. It's a fresh take on an old classic."
+"Ship is done. It's a fresh take on an old classic."
 
 ## Aria's Response: Generic
 
@@ -96,7 +96,7 @@ _Context: The player has finished building the ship according to the contract sp
 "You've taken 'sleek' to new levels. This baby could slip through a meteor shower unscathed."
 
 [AriaCompleteContractFighter05]
-"I would say 'good job,' but that wouldn't cover it. You've crafted a star predator here."
+"I would say 'good job,' but that wouldn't cover it. You've crafted something reaaaally special here."
 
 [AriaCompleteContractFighter06]
 "Impressive. You've managed to make speed and agility shake hands. That's one harmonious fighter."
@@ -105,7 +105,7 @@ _Context: The player has finished building the ship according to the contract sp
 "I've seen shooting stars bulkier than this. You've really trimmed the fat and boosted the muscle."
 
 [AriaCompleteContractFighter08]
-"The engines purr like a kitten, but we both know this thing roars like a tiger in the black."
+"The engines purr like a kitten, but we both know this thing roars like a tiger in the void."
 
 [AriaCompleteContractFighter09]
 "By the stars, you've turned a blunt instrument into a scalpel. Precision and power in one package—beautiful."
