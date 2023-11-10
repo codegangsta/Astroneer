@@ -2,7 +2,7 @@
 
 **Name:** Aria Collins
 
-**Occupation:** Project Manager & Aspiring Ship Designer, Atlas Astronautics
+**Occupation:** Project Manager & Ship Designer, Atlas Astronautics
 
 **Age:** 27
 

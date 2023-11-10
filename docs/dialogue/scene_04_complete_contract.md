@@ -14,7 +14,7 @@ _Context: The player has finished building the ship according to the contract sp
 "Completed the contract. What's your take on the final product?"
 
 [PlayerCompleteContract04]
-"Just submitted my design. Will it pass the Aria test?"
+"Just finished my design. Will it pass the Aria test?"
 
 [PlayerCompleteContract05]
 "Redesign's done. Does it have the Aria stamp of approval?"
