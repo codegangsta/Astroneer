@@ -6,6 +6,7 @@
 Player: "How do you feel about your work here, compared to your old job?"
 
 [AriaWorkSatisfactionResponse]
+
 [AriaWorkSatisfactionResponseLiberating]
 "It's liberating. Every line I draw, every model I build—it's a step towards the future I want to create."
 

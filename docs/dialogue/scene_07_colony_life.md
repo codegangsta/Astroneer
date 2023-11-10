@@ -3,7 +3,7 @@
 [SceneAriaColonyLife]
 
 [PlayerColonyInquiry]
-Player: "I heard you grew up on a colony. What was that like?"
+Player: "You said you grew up on a colony. What was that like?"
 
 [AriaColonyResponse]
 
