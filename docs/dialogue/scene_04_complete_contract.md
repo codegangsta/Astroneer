@@ -131,140 +131,140 @@ _Context: The player has finished building the ship according to the contract sp
 ## Aria's Response: Hauler Ship Type
 
 [AriaCompleteContractHauler01]
-"Cap, this hauler used to lug cargo. Now? It's a veritable treasure trove on thrusters. The pirates will be green with envy."
+"This hauler's not just for cargo anymore; it's a floating treasure chest. Pirates might just retire and take notes!"
 
 [AriaCompleteContractHauler02]
-"I never thought a freighter could look chic. You've managed to blend form and function beautifully. It's a mobile masterpiece."
+"Who knew a freighter could strut? You've turned hauling into a high-fashion statement!"
 
 [AriaCompleteContractHauler03]
-"The cargo bay had room, but you've given it a whole new dimension! I'm expecting it to start its own trade route with all that space."
+"It's not just spacious; it's an interstellar warehouse. We're going to need a bigger map for all this cargo!"
 
 [AriaCompleteContractHauler04]
-"You've turned this bulky freighter into the belle of the ball. It's not just carrying goods, it's parading them!"
+"From bulky to belle of the ball! It's not just carrying goods; it's flaunting them."
 
 [AriaCompleteContractHauler05]
-"With this redesign, I'm starting to think 'hauler' is an understatement. This beast could move moons!"
+"This redesign's a moon mover! It's like you strapped rockets to a planet and called it a day."
 
 [AriaCompleteContractHauler06]
-"This freighter's got more hidden compartments than a spy's suitcase now. Smugglers and merchants alike would pay top credit for this kind of craft."
+"Secret compartments galore! It's like a magician's hat – endless surprises and space rabbits!"
 
 [AriaCompleteContractHauler07]
-"Well, I'll be! You've turned this slow-moving giant into a sleek cargo sprinter. It's the Olympic athlete of freighters!"
+"It's sprinting like a star racer! This hauler's got dreams of being the first at the finish line."
 
 [AriaCompleteContractHauler08]
-"The old freighter was a draft horse—sturdy and reliable. You've turned it into a thoroughbred, Cap."
+"Draft horse to racehorse! This freighter's setting speed records with cargo on board."
 
 [AriaCompleteContractHauler09]
-"I used to think this hauler could only be loved by its captain. Now, I think it might just be the darling of the spaceways."
+"It's the new darling of the shipping lanes. From humble to haute couture!"
 
 [AriaCompleteContractHauler10]
-"Cap, this freighter's now a fortress with a hyperdrive. It's not just moving cargo—it's guarding it."
+"With these upgrades, it's a cargo fortress. It's not just moving goods; it's defending them."
 
 [AriaCompleteContractHauler11]
-"This was once a simple vessel of trade, now it's a titan of transport. You've given commerce a new chariot."
+"From simple trade to titan of transport. It's a legend in the making, this one."
 
 [AriaCompleteContractHauler12]
-"You've somehow made this hauler both more spacious and streamlined. It's like you've bent the laws of space inside out."
+"Spacious and sleek – you've turned physics on its head in the best way possible."
 
 [AriaCompleteContractHauler13]
-"This freighter was as anonymous as a grain of sand on a beach. Now? It's the pearl—unmistakable and invaluable."
+"Once a background player, now a star of the show. This hauler's got its own spotlight!"
 
 [AriaCompleteContractHauler14]
-"I'm used to freighters that groan under the weight of their cargo. This one seems ready to dance between the stars."
+"Dancing through the stars, this freighter's got moves. Who says cargo can't be graceful?"
 
 [AriaCompleteContractHauler15]
-"You didn’t just redesign it, you reinvented it. This hauler's ready to write its own legend in the history of interstellar trade."
+"It's not just a redesign; it's a reinvention. This hauler's writing its own epic in the annals of space trade."
 
 ## Aria's Response: Interceptor Ship Type
 
 [AriaCompleteContractInterceptor01]
-"Cap, you’ve turned this into the slickest shadow in the galaxy. It could sneak up on silence itself now."
+"This interceptor's a shadow with an attitude. It's like sneaking up on the speed of light itself!"
 
 [AriaCompleteContractInterceptor02]
-"This interceptor was fast before, but you've made it a blur. The stars are going to need to squint."
+"It's not just fast; it's a blur. Blink, and it's on the other side of the galaxy."
 
 [AriaCompleteContractInterceptor03]
-"I knew this ship was quick, but you’ve just broken the speed record for making my jaw drop."
+"Quick as a comet! It's like you strapped it to a shooting star with an extra kick."
 
 [AriaCompleteContractInterceptor04]
-"You've given 'rapid response' a new meaning. This vessel's so fast, it leaves echoes in the vacuum."
+"Rapid response? More like instant. This ship's redefining 'fast action.'"
 
 [AriaCompleteContractInterceptor05]
-"Who knew this old speedster had such an elegant side? It's like a lightning bolt in a tuxedo now."
+"Who knew speed could look so good? It's the sports model of space interceptors."
 
 [AriaCompleteContractInterceptor06]
-"This interceptor's engines used to roar. Now, they purr with power. Stealth and speed in perfect harmony."
+"Sleek, silent, and speedy. It's a stealth artist with a need for speed."
 
 [AriaCompleteContractInterceptor07]
-"Cap, you've taken high-speed to new heights. This thing's going to need its own time zone."
+"Breaking speed barriers and looking good doing it. It's ahead of its time—literally."
 
 [AriaCompleteContractInterceptor08]
-"The control panel used to look like a museum piece. Now, it's a master class in efficiency. You're an artist."
+"Control panel's a work of art. Efficiency and elegance in every button."
 
 [AriaCompleteContractInterceptor09]
-"This vessel was meant to chase comets. After your work, I think comets will be chasing it!"
+"It's not just chasing comets now; it's leading the race!"
 
 [AriaCompleteContractInterceptor10]
-"Interceptors are born fast, but you’ve given this one wings. Figuratively speaking, of course."
+"Fast as lightning and just as striking. It's a thunderbolt ready to zoom."
 
 [AriaCompleteContractInterceptor11]
-"With this kind of speed, we don't need to outrun them; we just circle around and wave goodbye."
+"With speed like this, who needs to outrun when you can out-maneuver?"
 
 [AriaCompleteContractInterceptor12]
-"Cap, you’ve injected such ferocity into this interceptor, I’m half expecting it to just take off on its own."
+"Such ferocity! It's like it's itching to leap into hyperspace on its own."
 
 [AriaCompleteContractInterceptor13]
-"It's not just an interceptor anymore, it's a celestial cheetah. It could catch photons if it wanted to."
+"Definitely a celestial cheetah. I bet it could give a photon a run for its money."
 
 [AriaCompleteContractInterceptor14]
-"You've not just redesigned it; you've redefined what it means to be 'fast'. This interceptor is in a league of its own."
+"Redefining 'fast'? You've launched it into a new dimension of speed!"
 
 [AriaCompleteContractInterceptor15]
-"This speedster could give a black hole a run for its money—and with your upgrades, I'd bet on the ship!"
+"This interceptor's in a league of its own. It's not just fast; it's a flash of genius."
 
 ## Aria's Response: Luxury Ship Type
 
 [AriaCompleteContractLuxury01]
-"Cap, stepping onto this ship is like walking into an intergalactic opera house. The high society of the stars will be lining up for a tour."
+"Stepping onto this ship feels like entering a cosmic palace. It's luxury with a touch of starlight!"
 
 [AriaCompleteContractLuxury02]
-"You've taken luxury to the next level. This vessel doesn't just travel through space; it saunters."
+"You've elevated luxury to stellar heights. It's like a cruise through the cosmos with class."
 
 [AriaCompleteContractLuxury03]
-"This yacht was plush before, but now? It's like you've woven comfort and opulence into every atom."
+"This yacht's more than plush; it's a floating masterpiece. Every corner whispers elegance."
 
 [AriaCompleteContractLuxury04]
-"I thought I knew what luxury was until I saw this. You've turned a space cruise into a space conquest of class."
+"You've transformed it into a space odyssey of opulence. It's a voyage of luxury, redefined."
 
 [AriaCompleteContractLuxury05]
-"They say space is cold, but on this ship, it's always a warm welcome. It's a five-star resort with a grav drive."
+"Space might be cold, but this ship's all warmth and splendor. It's a five-star universe in here."
 
 [AriaCompleteContractLuxury06]
-"You've made this more than a luxury vessel; it's a masterpiece that's ready to paint the stars with elegance."
+"It's not just luxurious; it's a trendsetter. This ship will be the talk of the galaxy's high society."
 
 [AriaCompleteContractLuxury07]
-"Wow, Cap. This yacht used to host parties. Now, it's the event everyone's universe will revolve around."
+"This yacht's the new 'it' spot. From parties to galas, it's the center of the social cosmos."
 
 [AriaCompleteContractLuxury08]
-"This isn't just a ship; it's a statement. One that says, 'I've arrived, and I brought the horizon with me.'"
+"It's a statement piece now. This ship doesn't just travel; it arrives with flair."
 
 [AriaCompleteContractLuxury09]
-"The opulence onboard used to whisper. Now, it sings. I can almost hear the cosmic applause."
+"Opulence that sings! I wouldn't be surprised if it started attracting celestial admirers."
 
 [AriaCompleteContractLuxury10]
-"Cap, you've turned this luxury liner into a symphony of sophistication. It's music for the eyes."
+"It's a symphony of sophistication. This liner's got style that could make the stars jealous."
 
 [AriaCompleteContractLuxury11]
-"This vessel was the crown jewel of fleets before, but you've turned it into the entire crown."
+"It's gone from crown jewel to the crown itself. This yacht's in a regal league of its own."
 
 [AriaCompleteContractLuxury12]
-"The harmony of design and comfort here—it's like you've choreographed a ballet of luxury."
+"You've choreographed a dance of luxury and comfort. It's elegance in motion."
 
 [AriaCompleteContractLuxury13]
-"I've seen luxury, but this? This is legendary. You've crafted a floating myth, a spaceship of lore."
+"It's not just luxurious; it's legendary. You've crafted a myth in the form of a spaceship."
 
 [AriaCompleteContractLuxury14]
-"This yacht was already a dream, but now? It's a dream that's transcending into a higher realm of opulence."
+"From dream to reality, and then some. This yacht's a vision of futuristic extravagance."
 
 [AriaCompleteContractLuxury15]
-"The detailing here is exquisite. Every inch now tells a tale of luxury so rich, even the stars might come down for a closer look."
+"The detail's exquisite. Every inch tells a story of unrivaled luxury. It's a masterpiece."
