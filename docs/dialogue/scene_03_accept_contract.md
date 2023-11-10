@@ -31,53 +31,6 @@ _Context: The player has accepted a mission from the mission board, and has walk
 [PlayerAcceptContract09]
 "What's the word on that new contract?"
 
-## Aria's Response: Generic
-
-[AriaAcceptContractGeneric01]
-"Here she is, Cap. She's a canvas that's seen a few cosmic storms, but I know you'll turn her into a masterpiece."
-
-[AriaAcceptContractGeneric02]
-"This ship's got a history, and with your touch, I bet she'll have quite the future."
-
-[AriaAcceptContractGeneric03]
-"All yours. She might not look like much now, but I've seen your work. She's in good hands."
-
-[AriaAcceptContractGeneric04]
-"Got a new project for you. She’s a bit of a relic, but there's plenty of life in her yet."
-
-[AriaAcceptContractGeneric05]
-"This beauty's had her glory days—time to bring 'em back, don't you think?"
-
-[AriaAcceptContractGeneric06]
-"Take good care of her. I'm expecting this old ship to break some new ground once you're done."
-
-[AriaAcceptContractGeneric07]
-"She's ready for your hangar. I’m eager to see this transformation—make her shine."
-
-[AriaAcceptContractGeneric08]
-"Remember, it's not just about the specs. Give her some character, something that'll turn heads in the hangar."
-
-[AriaAcceptContractGeneric09]
-"This contract's a big one. No pressure, but I'm pretty sure you're going to knock it out of the park."
-
-[AriaAcceptContractGeneric10]
-"She’s served us well, and now it's time for a new chapter. I'm looking forward to your revisions."
-
-[AriaAcceptContractGeneric11]
-"A bit of a fixer-upper, sure, but give her the time she deserves, and she'll fly true."
-
-[AriaAcceptContractGeneric12]
-"I've done my part, now it's all you. She might be old, but there's still speed in those engines."
-
-[AriaAcceptContractGeneric13]
-"She's in your capable hands now. Just remember, every great ship has a bit of its designer's soul in it."
-
-[AriaAcceptContractGeneric14]
-"This ship's seen the edges of the galaxy, and now with your help, she'll see them once more. Excited to see where you take her, Cap."
-
-[AriaAcceptContractGeneric15]
-"It's not every day you get to refurbish a classic. Can't wait to see her after you work your magic."
-
 ## Aria's Response: Fighter Ship Type
 
 [AriaAcceptContractFighter01]

@@ -34,146 +34,99 @@ _Context: The player has finished building the ship according to the contract sp
 [PlayerCompleteContract10]
 "Ship is done. It's a fresh take on an old classic."
 
-## Aria's Response: Generic
-
-[AriaCompleteContractGeneric01]
-"Cap, you've given this vessel a new heartbeat. It's almost as if it's breathing the cosmos."
-
-[AriaCompleteContractGeneric02]
-"This redesign... it's like you took the ship's dreams and turned them into a reality. Simply stunning."
-
-[AriaCompleteContractGeneric03]
-"You've not just changed the ship; you've transformed the way it'll carve its path through the stars."
-
-[AriaCompleteContractGeneric04]
-"I always say a ship has personality, but this? You've given it a soul, and a rather charismatic one at that."
-
-[AriaCompleteContractGeneric05]
-"The craftsmanship here is sublime. You've taken ship design from a profession to an art form."
-
-[AriaCompleteContractGeneric06]
-"You've made turning heads into an interstellar sport with this design. Bravo, Cap."
-
-[AriaCompleteContractGeneric07]
-"I've seen ships with flair, but this is something else. It's like the universe tailor-made it."
-
-[AriaCompleteContractGeneric08]
-"This ship used to whisper through the void. Now, it sings. And what a beautiful song it's chosen."
-
-[AriaCompleteContractGeneric09]
-"You've managed to capture the essence of flight in this design. It's poetry in motion, even while docked."
-
-[AriaCompleteContractGeneric10]
-"Every once in a while, a ship comes along that reminds us why we took to the stars. This is that ship."
-
-[AriaCompleteContractGeneric11]
-"Cap, this ship's not just ready to face the galaxy; it's ready to become its legend."
-
-[AriaCompleteContractGeneric12]
-"The lines, the form, the exquisite detail... you've not just redesigned a ship; you've reimagined what it means to travel the stars."
-
-[AriaCompleteContractGeneric13]
-"There's a fine line between a ship and a symphony. You, my friend, have composed a masterpiece."
-
-[AriaCompleteContractGeneric14]
-"This vessel now has the kind of allure that could make a black hole think twice about swallowing it up."
-
-[AriaCompleteContractGeneric15]
-"It's one thing to make a ship functional, another to make it beautiful, but you've done both—with style to spare."
-
 ## Aria's Response: Fighter Ship Type
 
 [AriaCompleteContractFighter01]
-"Cap, you’ve turned this fighter into a celestial falcon. Those wings aren't just for show, huh?"
+"Talk about an upgrade! This fighter's not just ready for action; it's practically auditioning for the lead role in a space saga."
 
 [AriaCompleteContractFighter02]
-"Wow, it's like you gave it claws and a cloaking device. This fighter's ready to dance with the stars."
+"It's like you armed it with stealth and style. Ready to tango with the toughest out there."
 
 [AriaCompleteContractFighter03]
-"Is it just me, or did you somehow make the vacuum of space afraid of this ship? That's some fierce redesign."
+"Wow, you've turned it fierce! Space might think twice before picking a fight with this one."
 
 [AriaCompleteContractFighter04]
-"You've taken 'sleek' to new levels. This baby could slip through a meteor shower unscathed."
+"Sleek and sharp – it's like the sports car of space fighters. Ready to dodge stars and break hearts!"
 
 [AriaCompleteContractFighter05]
-"I would say 'good job,' but that wouldn't cover it. You've crafted something reaaaally special here."
+"'Good job'? More like a stellar triumph! This fighter's ready to star in its own space epic."
 
 [AriaCompleteContractFighter06]
-"Impressive. You've managed to make speed and agility shake hands. That's one harmonious fighter."
+"Speed and agility in perfect harmony – like a ballet dancer with a blaster. It's poetry in motion!"
 
 [AriaCompleteContractFighter07]
-"I've seen shooting stars bulkier than this. You've really trimmed the fat and boosted the muscle."
+"This fighter's gone from bulky to balletic. It's slim, trim, and ready for a cosmic gym."
 
 [AriaCompleteContractFighter08]
-"The engines purr like a kitten, but we both know this thing roars like a tiger in the void."
+"Those engines are purring with power. It's a beast in the best way possible."
 
 [AriaCompleteContractFighter09]
-"By the stars, you've turned a blunt instrument into a scalpel. Precision and power in one package—beautiful."
+"Precision and power, all in one package. It's like you've crafted a space scalpel."
 
 [AriaCompleteContractFighter10]
-"You've given this fighter a sting that would make a wasp jealous. I wouldn't want to be on the receiving end."
+"It's got a sting to rival a squadron of space wasps. Watch out, galaxy, this fighter's got attitude."
 
 [AriaCompleteContractFighter11]
-"I always say a ship has to have spirit, and you've given this one a soul. A fast, furious soul, but a soul nonetheless."
+"You've infused it with spirit – this fighter's got more personality than some pilots I know!"
 
 [AriaCompleteContractFighter12]
-"The thrusters! Did you do something with the thrusters? Because it feels like it's ready to jump out of its own hull."
+"The thrusters feel supercharged! It's like they're raring to rip through the cosmos."
 
 [AriaCompleteContractFighter13]
-"This fighter looks like it could cut through space-time. Did you add a few extra dimensions to it or what?"
+"This isn't just a fighter; it's a space slicer. Looks like it could carve up constellations!"
 
 [AriaCompleteContractFighter14]
-"I've heard of putting a tiger in your tank, but you put one in the whole ship! It's ready to pounce on any challenge."
+"You've turned it into a cosmic predator – sleek, swift, and a little scary. I love it!"
 
 [AriaCompleteContractFighter15]
-"That’s not just a redesign, it's a reimagining. You've not only raised the bar, you've shot it into orbit!"
+"What a transformation! This isn't just an upgrade; it's a revolution. The fighter's in a whole new galaxy of cool."
 
 ## Aria's Response: Explorer Ship Type
 
 [AriaCompleteContractExplorer01]
-"Cap, this isn't just an explorer—it's a cosmic cartographer now. The stars are going to line up for a peek inside!"
+"Wow, this explorer's now a cosmic mapmaker. It's got flair and function!"
 
 [AriaCompleteContractExplorer02]
-"I always knew this hull had secrets, but you've turned it into a library of the universe. Well done!"
+"It's a universe on wheels! Or should I say thrusters? Great touch with the library vibe."
 
 [AriaCompleteContractExplorer03]
-"The sensors on this vessel used to whisper, now they sing symphonies about distant galaxies. You've outdone yourself."
+"The sensors are singing about galaxies far away. You've really dialed up their tune."
 
 [AriaCompleteContractExplorer04]
-"You've turned a simple explorer into a pioneer's dream. It's like a compass pointing straight to the heart of adventure."
+"You've given it a pioneer's spirit. This ship's ready to write its own odyssey."
 
 [AriaCompleteContractExplorer05]
-"With this redesign, I'm half expecting it to unfold into a space station. You've packed in everything but the kitchen sink—wait, is that a kitchen sink?"
+"This ship's a Swiss Army knife of space! Is there a button for brewing coffee too?"
 
 [AriaCompleteContractExplorer06]
-"You've not just crossed the 'T's and dotted the 'I's, you rewrote the whole alphabet. This research vessel is a thesis in space engineering."
+"It's not just equipped; it's enlightened. This research vessel's got a Ph.D. in Awesome."
 
 [AriaCompleteContractExplorer07]
-"The labs were cramped and the living quarters were... quaint. Now? It's a five-star hotel with a science wing. Impressive."
+"Space and luxury! Researchers will queue up for this. It's a lab with a view."
 
 [AriaCompleteContractExplorer08]
-"You took the 'explore' in explorer seriously. This ship's ready to chart wormholes, not just star systems!"
+"Ready to nose-dive into black holes now, eh? It's a cosmic detective!"
 
 [AriaCompleteContractExplorer09]
-"That old explorer had charm, but now it's got charisma. The onboard AI is going to develop a crush on you!"
+"Smart and stylish – the AI might start giving fashion tips next!"
 
 [AriaCompleteContractExplorer10]
-"You've turned our little explorer into a beacon of discovery. It's practically itching to unravel the mysteries of the cosmos."
+"This ship's ready to spill the universe's secrets over a cup of cosmic tea."
 
 [AriaCompleteContractExplorer11]
-"I thought this vessel was ready for retirement, not reincarnation! You've given it a whole new life as a trailblazer."
+"Old explorer, new tricks. It's jazzed up for some serious star-hopping."
 
 [AriaCompleteContractExplorer12]
-"The last time I saw an explorer this decked out, it was in a historical holovid. You've made history here, Cap."
+"You've turned it into a time traveler's dream. This ship's history in the making."
 
 [AriaCompleteContractExplorer13]
-"This ship used to be about stargazing and note-taking. Now, it's about rewriting the astrophysics textbooks."
+"From stargazing to star-blazing! It's a mobile masterclass in astrophysics."
 
 [AriaCompleteContractExplorer14]
-"I've seen researchers with less gear than this ship now. You sure we're not accidentally creating a new branch of science?"
+"This ship's got gadgets Galileo would envy. Ready for some high-tech treasure hunts!"
 
 [AriaCompleteContractExplorer15]
-"With this kind of tech, the ship isn't just exploring the universe; it's ready to teach it a few lessons. Stellar work!"
+"It's not just exploring; it's tutoring the cosmos. A real mentorship in motion!"
 
 ## Aria's Response: Hauler Ship Type
 
