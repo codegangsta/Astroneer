@@ -4,10 +4,10 @@
             "id": "DialogueTest",
             "speaker": "AriaCollins",
             "startScene": "Scene_Aria_Greet",
-            "startScenePhase": "Foobar",
-            "script": "Astroneer:Dialogue",
-            "onBegin": "DoSomething",
-            "onEnd": "DoSomethingElse",
+            "startScenePhase": "TestPhase",
+            "script": "Astroneer:Dialog",
+            "onBegin": "OnBegin",
+            "onEnd": "OnBegin",
             "infos": [
                 {
                     "id": "DialogueTest01",

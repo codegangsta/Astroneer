@@ -59,3 +59,7 @@ stop_game:
 ## SSH into windows
 ssh::
 	ssh jerem@pc
+
+records/dialogue.json: records/dialogue.cue
+	cue export records/dialogue.cue -f -o records/dialogue.json
+
