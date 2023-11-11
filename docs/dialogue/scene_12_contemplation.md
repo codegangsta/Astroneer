@@ -3,7 +3,7 @@
 [SceneAriaContemplation]
 
 [AriaContemplation]
-Aria: "Staring out into the abyss of space, it sometimes feels like it gazes back, probing the decisions I've made. It's a bit unnerving. Does space ever get under your skin, Cap?"
+Aria: "Staring out into the abyss of space, it sometimes feels like it gazes back, probing every decision I've made. It's a bit unnerving. Does space ever get under your skin, Cap?"
 
 ## Player Response Options
 

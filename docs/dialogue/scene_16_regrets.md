@@ -1,43 +1,43 @@
-# Scene 16: Aria Reflects on Regrets
+# Scene 16: Aria Reflects on Family and Regrets
 
 [SceneAriaRegret]
-_In this scene, the player probes into Aria's past decisions and potential regrets, allowing her to open up about her life's trajectory and the personal costs of her ambition. It reveals the depth of her character and offers the player an opportunity to deepen their connection with her._
+In this scene, the player delves into Aria's personal life, particularly her family ties, which she sacrificed for her career. Her openness about this sensitive topic illustrates her depth and vulnerability, offering the player a chance to connect with her on a more personal level.
 
-[PlayeRegretInquiry]
-Player: "Looking back, is there a choice or a path you wish you'd taken differently?"
+[PlayerRegretInquiry]
+Player: "Do you ever think about how your career choices affected your family life?"
 
 ## Aria's Responses
 
 [AriaRegret01]
-Aria: "I wonder about the roads not taken, the adventures not pursued. I stayed in safe orbits instead of launching toward riskier routes. Maybe I should've been bolder in my youth, trusted the unknown a bit more."
+Aria: "Every day. I was so focused on reaching the stars, I forgot the ones waiting for me at home. Missed birthdays, anniversaries... I always thought I'd make it up to them 'one day.' But you know how fast 'one day' flies by in space."
 
 [AriaRegret02]
-Aria: "There were friends along the way, stars that burned bright and then faded. I was always chasing the next project, the next idea. Sometimes I think I should've paused, spent more time in their gravity."
+Aria: "I left home young, chasing dreams across the galaxy. I told myself I was doing it for them, for a better future. But deep down, I know I also did it for me. And the cost... was more moments with them than I care to count."
 
 ## Player Response Options
 
-[PlayerRegretResponseEncouraging]
-"It's never too late to chart a new course, Aria. The universe is full of second chances."
+[PlayerRegretResponseUnderstanding]
+"Family always understands, Aria. Maybe it's time to reconnect, share your successes and dreams with them."
 
-[PlayerRegretResponseConservative]
-"Caution might have shielded you from worse fates. There's wisdom in the path you chose."
+[PlayerRegretResponseRealistic]
+"Your ambitions brought you here, and that's not something to regret. Maybe there's a way to bridge the distance now."
 
-[PlayerRegretResponseFriendship]
-"Friendships are the constellations in our personal universes. It's never too late to reconnect."
+[PlayerRegretResponseReflective]
+"It's tough, balancing dreams with family. But those dreams are also a legacy you're building for them."
 
-[PlayerRegretResponsePragmatic]
-"Moving forward means leaving some things behind. You focused on what was essential for you."
+[PlayerRegretResponseHopeful]
+"It's never too late to make new memories, Aria. The stars you've chased can light the way back home."
 
 ## Aria's Follow-up Responses
 
-[AriaRegretResponseToEncouraging]
-"I like that—second chances. Maybe it's time to ignite the boosters and take a leap. Thanks for the nudge."
+[AriaRegretResponseToUnderstanding]
+"You're right. I think they've always been my silent cheerleaders. It's time I shared more of my world with them. Thanks for the reminder."
 
-[AriaRegretResponseToConservative]
-"That's a comforting thought. Each careful step was a lesson that led me here. I guess you're right; the path I walked built the foundation I stand on."
+[AriaRegretResponseToRealistic]
+"That's one way to look at it. I've been building bridges in the stars, maybe it's time to build a few back to home."
 
-[AriaRegretResponseToFriendship]
-"You have a point. Some stars may be hidden by the light of new ones, but they're still there. Maybe it's time to navigate back to them."
+[AriaRegretResponseToReflective]
+"That's a comforting perspective. I've been leaving trails in the stars for them, in a way. Now, maybe it's time to walk some of those trails together."
 
-[AriaRegretResponseToPragmatic]
-"Practical and true. We chart our courses and hope they lead us to our destinies. I chose mine with the stars in mind, and I've got to own that."
+[AriaRegretResponseToHopeful]
+"New memories... I like that. It's not just about what I missed, but what I can still create. I've always been good at building things, after all."
