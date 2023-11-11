@@ -1,43 +1,43 @@
 # Scene 16: Aria Reflects on Family and Regrets
 
 [SceneAriaRegret]
-In this scene, the player delves into Aria's personal life, particularly her family ties, which she sacrificed for her career. Her openness about this sensitive topic illustrates her depth and vulnerability, offering the player a chance to connect with her on a more personal level.
+_This emotionally complex scene starts with Aria's rare moment of vulnerability about her family, which she either opens up more about or distances herself from, depending on the player's approach._
 
 [PlayerRegretInquiry]
-Player: "Do you ever think about how your career choices affected your family life?"
+Player: "Your dedication to your career is clear, Aria. But how has this journey affected your ties with family?"
 
 ## Aria's Responses
 
 [AriaRegret01]
-Aria: "Every day. I was so focused on reaching the stars, I forgot the ones waiting for me at home. Missed birthdays, anniversaries... I always thought I'd make it up to them 'one day.' But you know how fast 'one day' flies by in space."
+_Aria's facade momentarily slips, revealing a raw, emotional undercurrent._ "It's... it's been hard. I've been so wrapped up in my work, I've let those connections fade. It's one of those things you don't notice until it hits you."
 
 [AriaRegret02]
-Aria: "I left home young, chasing dreams across the galaxy. I told myself I was doing it for them, for a better future. But deep down, I know I also did it for me. And the cost... was more moments with them than I care to count."
+_Her voice quivers slightly, then steadies._ "I left for the stars so young, so eager. I told myself it was for the greater good, but... I missed so much back home. It's a silence that's grown too loud to ignore."
 
 ## Player Response Options
 
-[PlayerRegretResponseUnderstanding]
-"Family always understands, Aria. Maybe it's time to reconnect, share your successes and dreams with them."
+[PlayerRegretResponseCompassionate]
+"It's a tough balance to strike. Maybe it's not too late to start bridging that gap, to reconnect."
 
-[PlayerRegretResponseRealistic]
-"Your ambitions brought you here, and that's not something to regret. Maybe there's a way to bridge the distance now."
+[PlayerRegretResponsePractical]
+"Your achievements are incredible, but sometimes, reconnecting with family can bring a different sense of accomplishment."
 
-[PlayerRegretResponseReflective]
-"It's tough, balancing dreams with family. But those dreams are also a legacy you're building for them."
+[PlayerRegretResponseProbing]
+"Is that silence something you're thinking of addressing? It might bring you a different kind of peace."
 
-[PlayerRegretResponseHopeful]
-"It's never too late to make new memories, Aria. The stars you've chased can light the way back home."
+[PlayerRegretResponseDismissive]
+"Well, sacrifices are part of the job, right? You can’t reach the stars without leaving something behind."
 
 ## Aria's Follow-up Responses
 
-[AriaRegretResponseToUnderstanding]
-"You're right. I think they've always been my silent cheerleaders. It's time I shared more of my world with them. Thanks for the reminder."
+[AriaRegretResponseToCompassionate]
+_The vulnerability in Aria’s voice is palpable, her usual confidence replaced by a rare sense of fear._ "You might be right, but... it terrifies me. The thought of reaching out after all this time, facing them... it feels like standing on the edge of a black hole. I don't know if I'm ready to confront that darkness yet."
 
-[AriaRegretResponseToRealistic]
-"That's one way to look at it. I've been building bridges in the stars, maybe it's time to build a few back to home."
+[AriaRegretResponseToPractical]
+_There's a shift in her demeanor, a mix of acceptance and hesitation._ "You have a point. My work has always been my focus, but... maybe there's room for both in my life."
 
-[AriaRegretResponseToReflective]
-"That's a comforting perspective. I've been leaving trails in the stars for them, in a way. Now, maybe it's time to walk some of those trails together."
+[AriaRegretResponseToProbing]
+_A brief flicker of contemplation crosses her face, then she retreats slightly._ "It's something I'm wrestling with. Maybe addressing it will bring peace, but... let's just say I'm not there yet."
 
-[AriaRegretResponseToHopeful]
-"New memories... I like that. It's not just about what I missed, but what I can still create. I've always been good at building things, after all."
+[AriaRegretResponseToDismissive]
+_Her defenses snap back up, the vulnerability gone._ "Exactly. You get it. Can't make an omelet without breaking a few eggs, right? I've made my choice, for better or worse."

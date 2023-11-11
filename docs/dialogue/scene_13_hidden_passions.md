@@ -1,42 +1,42 @@
-# Scene 13: Hidden Passions
+# Scene 13: Hidden Passions - Humble Revelations
 
 [SceneAriaPassion]
 
 [PlayerPassionInquiry]
-"Apart from crafting vessels for the stars, what else sparks excitement for you, Aria?"
+"What's your downtime look like, Aria? Any unique hobbies outside of your ship work?"
 
 ## Aria's Responses
 
-[AriaPassionMusic]
-"Melodies of old Earth. There's an authenticity in vintage tunes, a raw emotion. It's as vast and deep as space itself but in a way that touches the soul."
+[AriaPassionCooking]
+"I've taken up cooking. I'm no chef, mind you. Half the time, it's more of an experiment than a meal. But there's something satisfying about creating with your hands, even if it's just a quirky sandwich."
 
-[AriaPassionSpeed]
-"Oh! And the thrill of velocity. Whether it's a race in the atmosphere or a sprint through an asteroid field, it's that speed that makes me feel truly alive."
+[AriaPassionAmateurAstronomy]
+"And I dabble in amateur astronomy. I’m not particularly great at it – I can barely tell the constellations apart! But gazing at the stars, not as a designer but just as myself, it's kind of liberating."
 
 ## Player Response Options
 
-[PlayerPassionResponseAppreciative]
-"That's an intriguing contrast to your day job. It's great to have passions that keep you grounded."
+[PlayerPassionResponseEncouraging]
+"Exploring new territories, even in the kitchen or the night sky. That's exciting, even if it's not about perfection."
 
-[PlayerPassionResponseIntrigued]
-"Old tunes and high speeds, huh? Seems like you have a knack for things that defy time and gravity."
+[PlayerPassionResponseLightTease]
+"Chef Aria and the star-gazer who can't find Orion? Sounds like you're enjoying the learning curve."
 
-[PlayerPassionResponseTeasing]
-"So, a need for speed and a heart for old ballads? You're full of surprises, Aria."
+[PlayerPassionResponseUnderstanding]
+"Those sound like great ways to unwind. It's not always about being the best, but enjoying the process."
 
-[PlayerPassionResponseChallenging]
-"Music and racing, those are quite the escapes. Do they give you a break from the pressures of ship design?"
+[PlayerPassionResponseReflective]
+"It’s good to hear you doing things just for the joy of it, not just for the end result. That’s important."
 
 ## Aria's Follow-up Responses
 
-[AriaPassionResponseToAppreciative]
-"Grounded, or maybe just keeping my sanity in the vastness of it all. Those passions remind me there's more to life than just metal and circuits."
+[AriaPassionResponseToEncouraging]
+_Aria chuckles, a touch of self-deprecation in her tone._ "Exciting and a little humbling! But you're right, it's not about perfection. It's about the joy of trying, of creating."
 
-[AriaPassionResponseToIntrigued]
-"Defying the norm is what I do best, Cap. Why should my hobbies be any different? They're the fuel for my creative engine."
+[AriaPassionResponseToLightTease]
+_Her laughter is genuine, tinged with a hint of embarrassment._ "Yeah, I'm embracing the 'amateur' in both! There's freedom in just being a novice, a learner. It's a nice change of pace."
 
-[AriaPassionResponseToTeasing]
-"A woman of many layers—that's me. Life's too short for one-dimensional characters, don't you think?"
+[AriaPassionResponseToUnderstanding]
+_She nods appreciatively, a reflective look in her eyes._ "Exactly. For so long, I've been driven by the need to excel. It's refreshing to do something just for the sheer enjoyment, even if I'm not the best at it."
 
-[AriaPassionResponseToChallenging]
-"They're not just escapes; they're part of who I am. Racing and music, they help me find balance. They're my personal rebellion against the routine."
+[AriaPassionResponseToReflective]
+_There's a moment of vulnerability in her expression._ "You've hit the nail on the head. I'm used to valuing time for productivity. Learning to value it just for the experience – that's new for me."# Scene 13: Hidden Passions

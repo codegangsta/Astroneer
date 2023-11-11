@@ -12,10 +12,10 @@
 "Once you're done, bring her back so we can give her the old spaceworthy stamp. Keep your sensors peeled out there—your handiwork will be zipping around the galaxy before you know it."
 
 [AriaIntro04]
-"If you find yourself spinning in zero-g with questions, just hit the intercom. I'm more helpful than a pocketful of wormholes and only slightly less likely to lead to unexpected adventures."
+"Got questions, or floating in confusion? Buzz me on this line. I'm like a walking, talking encyclopedia of space oddities, minus the boring parts."
 
 [AriaIntro05]
-"And since you might end up captaining one of these beauties, I'm dubbing you 'Cap.' Plus, it's easier than saying 'Hey, you!' every time."
+"I hear you're quite the pilot. So I'm calling you 'Cap' from here on out! Beats saying 'O Great Shipbuilder' every time, right?"
 
 [AriaIntro06]
-"Aria out—don't be a stranger, or do, but come back with stories!"
+"Alright, Cap. Aria signing off—don't be a stranger, or do, but come back with stories!"

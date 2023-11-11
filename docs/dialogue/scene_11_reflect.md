@@ -1,34 +1,35 @@
 # Scene 11: Reflecting on Personal Growth
 
 [SceneAriaReflect]
+_In this scene, Aria starts off guarded, her usual self-assurance masking deeper uncertainties. As the player engages, she gradually reveals more of her introspective side._
 
 [AriaReflectInquiry]
-Aria: "You know, I've been so caught up in alloys and engine schematics, I barely noticed the stars. How do you find time to reflect on your journey among them?"
+Aria, maintaining a composed exterior: "Cap, do you ever think we get so wrapped up in our goals that we miss... life happening around us? Not that I'm second-guessing myself, it's just a thought."
 
 ## Player Response Options
 
-[PlayerReflectResponseBalance]
-"Finding balance isn't easy, but I try to take a step back now and then to enjoy the view."
-
-[PlayerReflectResponseDriven]
-"To be honest, I'm too driven to stop and ponder. The journey's only a means to an end for me."
-
-[PlayerReflectResponsePhilosophical]
-"I see each star as a milestone, a story in my journey. It's not just about the destination, you know?"
+[PlayerReflectResponseUnderstanding]
+"It's natural to wonder, Aria. Maybe it's not about changing course, but just taking a moment to appreciate where you are."
 
 [PlayerReflectResponsePractical]
-"Reflection is a luxury. In this line of work, you focus on the job at hand, or you're space dust."
+"Focused as we are, it's easy to lose sight of other things. But balance is important, isn't it?"
+
+[PlayerReflectResponseCurious]
+"That's quite introspective. Are you feeling like you're at a turning point, perhaps?"
+
+[PlayerReflectResponseCandid]
+"Overdrive can make us miss the finer details of life. Maybe slowing down a bit isn't such a bad idea."
 
 ## Aria's Responses to Player's Reflection
 
-[AriaReflectResponseToBalance]
-"That's a wise approach. Maybe I should install a window in the workshop, keep the cosmic perspective alive. Thanks for the reminder, Cap."
-
-[AriaReflectResponseToDriven]
-"I get that. The finish line keeps moving in this industry. Just don't burn out before you get to enjoy your victories, alright?"
-
-[AriaReflectResponseToPhilosophical]
-"I like that. Each system we pass through, each world we chart—it's part of us. Maybe I'll start collecting stars instead of stress."
+[AriaReflectResponseToUnderstanding]
+_She offers a small, contemplative smile._ "I suppose you're right. It wouldn't hurt to stop and look around once in a while. There's more to life than just the next achievement."
 
 [AriaReflectResponseToPractical]
-"Harsh but fair. This galaxy waits for no one. Still, don't let the dust blind you to what we're out here for. Even a moment's peace can save your sanity."
+_With a slight nod, she acknowledges the wisdom._ "Balance... That's something I've not been great at. Maybe it's time to recalibrate a little."
+
+[AriaReflectResponseToCurious]
+_There's a pause as she ponders._ "Turning point? I don't know about that, but it's healthy to question things, right? To make sure we're still on track."
+
+[AriaReflectResponseToCandid]
+_Initially bristling, she then concedes._ "I've always been pedal to the metal, but you've got a point. Maybe I do need to ease off the accelerator and enjoy the ride more."

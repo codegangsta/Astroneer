@@ -1,21 +1,21 @@
 # Scene: Player Cannot Complete Contract
 
 [SceneAriaContractIncomplete]
-_In this scene, the player communicates to Aria their inability to complete a specific ship contract, prompting a supportive and lighthearted response from Aria. She reassures the player, offers to reassign the contract, and updates the mission board with new options, maintaining a positive and encouraging atmosphere._
+_When the player admits they can't complete a ship contract, Aria responds with her trademark humor and understanding, offering to rearrange the contract and suggesting new opportunities._
 
 [PlayerContractIncomplete]
-Player: "Looks like I've hit a bit of a snag with this contract. Can we arrange something else?"
+Player: "I'm having trouble with this contract. Can we switch it up?"
 
 ## Aria's Responses
 
 [AriaContractIncomplete01]
-"Hey, Cap! So, the contract's turning into a bit of a space odyssey, huh? No worries, we've all been there. Navigating the cosmic currents isn't always smooth sailing."
+"No problem, Cap! Not every ship is a perfect match. I'll find this one a new captain."
 
 [AriaContractIncomplete02]
-"I'll take that contract off your hands and find it a cozy new home. Maybe with someone who doesn't mind a bit of space turbulence."
+"I'm updating the mission board right now. Let's find you a project that's more your speed."
 
 [AriaContractIncomplete03]
-"In the meantime, let's get you something more your style. I'm updating the mission board as we speak – think of it as a fresh start, or a second launch!"
+"Sometimes a detour is part of the journey. Let's get you on a path that feels right."
 
 [AriaContractIncomplete04]
-"Keep those spirits high, Cap. The galaxy's full of opportunities, and there's always a new adventure waiting just beyond the next asteroid belt."
+"Keep your chin up. Space is vast, and there's always something else out there for you."

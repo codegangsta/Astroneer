@@ -1,42 +1,42 @@
-# Scene 14: Legacy and Impact[PlayerQuestionsLegacy]
+# Scene 14: Legacy and Impact - Vulnerability and Defensiveness
 
 [SceneAriaLegacy]
 
 [PlayerLegacyInquiry]
-Player: "With all the work you put into these ships, Aria, what do you hope to leave behind?"
+Player: "You're pouring so much into these ship designs, Aria. What kind of legacy are you hoping to build?"
 
 ## Aria's Responses
 
 [AriaLegacy01]
-"I'm crafting vessels that'll endure the test of time and space. I want my name to be synonymous with innovation, to be whispered in every shipyard and academy."
+_Aria's voice carries a mix of passion and a hint of defensiveness._ "Legacy? I'm here to revolutionize space travel. To be a name that changed the industry, not just a footnote in its history."
 
 [AriaLegacy02]
-"To me, it's about the here and now—making a ship that changes a life today, not just one that's idolized tomorrow. If I can do that, I've succeeded."
+_She softens slightly,_ "But it's not just about making a name. It's about today's work impacting tomorrow. If my ships can inspire or protect, then I've done my job."
 
 ## Player Response Options
 
-[PlayerLegacyResponseAdmiration]
-"That’s a noble pursuit. To create something that lasts beyond ourselves, it's the dream of every true engineer."
+[PlayerLegacyResponseSupport]
+"Your determination is admirable. You're not just building ships; you're building the future. That's a legacy in itself."
 
-[PlayerLegacyResponseRealistic]
-"Remember, the most enduring legacy is the advancements we make, not the recognition we get."
+[PlayerLegacyResponseThoughtful]
+"It's good to aim high, but remember, the greatest legacies are often the unexpected impacts, the ripples we create."
 
-[PlayerLegacyResponseCautious]
-"It's important to have goals, but make sure you're also living in the moment, not just for the future."
+[PlayerLegacyResponseConcern]
+"It's great to have goals, Aria, but don't get lost chasing them. Sometimes the best legacy is a life well-lived, not just well-worked."
 
-[PlayerLegacyResponseProvocative]
-"Legacy is a heavy load to carry. Are you building for the ages, or are you searching for something else in your work?"
+[PlayerLegacyResponseChallenging]
+"A legacy, huh? Is this about making a mark, or is there something deeper you're searching for in your work?"
 
 ## Aria's Follow-up Responses
 
-[AriaLegacyReponseToAdmiration]
-"Thank you, Cap. It's the kind of dream that keeps you up at night—in a good way. And when one of my ships launches, it feels like a piece of that dream becoming real."
+[AriaLegacyResponseToSupport]
+_She nods, her eyes bright._ "Thanks, that's the plan. To push the boundaries, to leave something lasting and meaningful."
 
-[AriaLegacyResponseToRealistic]
-"That's true. The stars don't care about fame, do they? It's the journey there, the breakthroughs that make the trip possible—that's the real legacy."
+[AriaLegacyResponseToThoughtful]
+_Her gaze drifts, contemplative._ "I never thought of it that way. Maybe the legacy isn't just the ships, but the journeys they enable, the stories they become part of."
 
-[AriaLegacyResponseToCautious]
-"You've got a point. Sometimes I'm so focused on the blueprint in front of me that I forget to look up and just watch the stars."
+[AriaLegacyResponseToConcern]
+_A moment of genuine reflection crosses her face._ "You're right; it's easy to get caught up. I've been so focused on the destination, I might be missing the journey."
 
-[AriaLegacyResponseToProvocative]
-"Maybe it is a bit of both. I pour my heart into these ships, but maybe... maybe I'm also trying to chart my own course, find where I truly belong among the stars."
+[AriaLegacyResponseToChallenging]
+_Aria's response is tinged with defensiveness, her expression firm._ "Look, I know what I'm doing. This isn't just about making my mark. It's about fulfilling a vision, a purpose. Sure, I'm driven, but who isn't in this field? I'm here to make a difference, and that's exactly what I plan to do."

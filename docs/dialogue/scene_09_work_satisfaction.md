@@ -1,43 +1,43 @@
 # Scene 9 - Work Satisfaction
 
 [SceneAriaWorkSatisfaction]
-_In this scene, the player explores Aria's sense of satisfaction and well-being in her current role, touching on themes of freedom, creativity, and the pressures of a high-stakes work environment. Aria's responses reveal her drive and dedication, as well as her awareness of the balance required to maintain her passion without burning out._
+_In this scene, Aria discusses her transition from a structured corporate environment to a dynamic startup. Her responses show her enthusiasm and the personal connection she feels with her work, while subtly acknowledging the challenges._
 
 [PlayerWorkSatisfactionInquiry]
-Player: "You’ve moved on from corporate life to a startup environment. Are you happier with the work you’re doing now?"
+Player: "Moving from a big corporation to a startup must be a big change. How do you feel about your work now?"
 
 ## Aria’s responses
 
 [AriaWorkSatisfaction01]
-Aria: "It's like I’ve been given a new dimension to explore. At the corporation, I was painting by numbers; here, I’m free to throw the paint however I see fit. It’s more than satisfaction—it’s exhilaration."
+Aria: "It's liberating. I used to follow strict guidelines, but here I get to experiment. It’s thrilling to turn my ideas into reality, even with the ups and downs."
 
 [AriaWorkSatisfaction02]
-Aria: "This pressure—it’s like a star being born. It's intense, sure, but it's also where new ideas forge into reality. It's demanding, but in that demand, I find my best work."
+Aria: "The pressure's real, but it's a good kind. It pushes me to be creative, to really dive into my work. It's tough, but it’s where I see my true potential shine."
 
 ## Player Response Options
 
 [PlayerWorkSatisfactionResponsePraiseFreedom]
-"Sounds like you've found your space. It must be rewarding to see your own ideas take flight."
+"That sounds empowering. Seeing your own concepts come to life must be incredibly fulfilling."
 
 [PlayerWorkSatisfactionResponseQuestionFreedom]
-"Freedom’s great, but does it ever get overwhelming? Without the corporate structure, I mean."
+"Do you ever find that freedom overwhelming, without the structure of a big company?"
 
 [PlayerWorkSatisfactionResponseAdmirePressure]
-"It's inspiring to see someone thrive under pressure and use it to fuel their passion."
+"Using pressure as a catalyst for creativity? That’s impressive. It shows your dedication."
 
 [PlayerWorkSatisfactionResponseConcernPressure]
-"That kind of pressure can also be a fast track to burnout. You taking care of yourself?"
+"It’s great to be driven, but don’t forget to unwind. Balance is key, right?"
 
 ## Aria’s Follow-up Responses
 
 [AriaWorkSatisfactionResponseToPraiseFreedom]
-Aria: "Rewarding is an understatement. It’s like watching a piece of your soul launch into the cosmos. Every success feels personal, and every setback, a lesson."
+Aria: "It really is. Every project feels like a part of me is taking off. It’s personal, every win and every challenge."
 
 [AriaWorkSatisfactionResponseToQuestionFreedom]
-Aria: "Oh, it can be a whirlwind, but I’d rather ride the storm than watch from the shore. Structure is safe, but it’s not where I thrive."
+Aria: "Sometimes, yes. But I prefer it. I thrive in this kind of environment where every day is different, and every challenge is a chance to innovate."
 
 [AriaWorkSatisfactionResponseToAdmirePressure]
-Aria: "I like to think I’m a diamond being polished—this pressure is just part of the process. And the end result? It's worth every second."
+Aria: "Thanks, I believe in turning challenges into opportunities. It's demanding but seeing my ideas come alive? Worth it."
 
 [AriaWorkSatisfactionResponseToConcernPressure]
-Aria: "You sound like my wellness AI. But you have a point. I do have my off-switch moments, staring at the stars, remembering to breathe. Don't worry, I won't let the fire consume me."
+Aria: "Good advice. I try to keep a balance – a moment under the stars can be as refreshing as a day in the workshop. Keeps me grounded."

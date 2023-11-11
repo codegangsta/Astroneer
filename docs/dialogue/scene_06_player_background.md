@@ -1,28 +1,26 @@
-# Scene 6 - Player's Background
+## Scene 6 - Player's Background
 
 [SceneAriaBackgroundInquiry]
 
 [AriaBackgroundInquiry]
-Aria: "So, Cap, what brings you to this neck of the galaxy? Fame? Fortune? Or just chasing the horizon?"
+Aria: "So, Cap, what's your story? Here for the thrill, the cash, or something more?"
 
-## Player Response Options
-
+Player Response Options
 [PlayerBackgroundResponseAmbition]
-"I'm here for the adventure, and the credits aren't bad either."
+"I'm all about the adventure. And hey, the money's a nice bonus."
 
 [PlayerBackgroundResponseKinship]
-"Just like you, looking to make my mark out here."
+"Got big dreams, like you. I want to leave my mark out here."
 
 [PlayerBackgroundResponseHorizon]
-"The horizon's a good start. What's beyond that is what I'm after."
+"I'm chasing what's beyond the horizon. Always looking further."
 
-## Aria's Response
-
+Aria's Response
 [AriaBackgroundResponseToAmbition]
-Aria: "Adventure with a side of credits, huh? That's a combo I can respect. Just remember that out here, the adventure often spends the credits for you."
+Aria: "Thrills and bills, a classic mix. Just watch your back; adventure can be costly out here."
 
 [AriaBackgroundResponseToKinship]
-Aria: "Ah, a fellow dreamer and doer! There's plenty of marks to be made, and with the right ship, you'll carve your name among the stars."
+Aria: "Another star chaser, huh? Good. The galaxy's vast, and there's plenty of room for names like ours."
 
 [AriaBackgroundResponseToHorizon]
-Aria: "Always one to aim for the stars and beyond, I see. Well, Cap, in this vast canvas of darkness, you're bound to find some light. Let's find it together, eh?"
+Aria: "The eternal explorer, huh? Good choice. There's more out there than we can imagine. Let's uncover it together."

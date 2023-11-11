@@ -1,43 +1,43 @@
 # Scene 15: Sacrifices
 
 [SceneAriaSacrifice]
-_In this scene, the player digs into the personal costs of Aria's career, prompting her to consider her choices and their repercussions, which allows for a multifaceted exploration of her character's depth and resilience._
+_This scene delves into the complex nature of Aria's career-driven life, challenging her to confront the personal costs and momentarily revealing the vulnerability behind her confident facade._
 
 [PlayerSacrificeInquiry]
-Player: "Every big leap comes at a cost. What's been yours in reaching for the stars, Aria?"
+Player: "You’ve climbed high in your field, Aria. But I have to wonder, what personal costs came with that ascent?"
 
 ## Aria's Responses
 
 [AriaSacrifice01]
-"I've traded the possibility of a 'normal' life for this dream. You know, picket fences don't travel well in zero-G. As for relationships, they're tough when you're always moving at escape velocity."
+With a flicker of defensiveness, Aria responds, "Sacrifice is part of the game. I’ve let go of the conventional, sure. But what I’m doing here... it’s worth more than any traditional path."
 
 [AriaSacrifice02]
-"Simplicity is a luxury I gave up. These days, I find beauty in the complexity of a starship's schematics rather than in a quiet, simple moment."
+"There's an edge to her voice. "I’ve traded simplicity for complexity, and I don't regret it. I’m not one for stillness; I need the rush of creation, of discovery."
 
 ## Player Response Options
 
-[PlayerSacrificeResponseSympathetic]
-"It takes a strong person to make those choices, Aria. But the stars are lucky to have you."
+[PlayerSacrificeResponseUnderstanding]
+"Your focus and dedication are truly remarkable. Just be careful not to lose yourself completely in the pursuit."
 
 [PlayerSacrificeResponseInquisitive]
-"Do you ever regret it? Trading stillness for the stars?"
+"But doesn't that ever weigh on you? The things you've had to leave behind in chasing this dream?"
 
-[PlayerSacrificeResponsePhilosophical]
-"There's a certain beauty in complexity too. Maybe it's just a different kind of simple life you've found."
+[PlayerSacrificeResponseSupportive]
+"It's clear you're exactly where you're meant to be, Aria. Your work speaks volumes about your passion and commitment."
 
-[PlayerSacrificeResponseBlunt]
-"Hard sacrifices. Just don't let your work become your only world."
+[PlayerSacrificeResponseIntimate]
+"Ever think about what a different Aria, one with a quieter life, might be like? Sometimes the roads not taken are worth a thought too."
 
 ## Aria's Follow-up Responses
 
-[AriaSacrificeResponseToSympathetic]
-"That means a lot, coming from you. Sure, it's tough sometimes, but then I see a ship I designed cutting across the cosmos, and I know I've chosen the right path."
+[AriaSacrificeResponseToUnderstanding]
+_Aria nods, her confidence intact._ "I'm well aware of what I've chosen. This is my world, and I wouldn’t have it any other way."
 
 [AriaSacrificeResponseToInquisitive]
-"Regret's a tricky thing. It's like an asteroid field—you navigate through it, not dwell on it. I look back, but I don't stare."
+_She responds briskly_ "Sure, it weighs on me. But regret is a distraction. I’m here to push boundaries, not dwell on what-ifs."
 
-[AriaSacrificeResponseToPhilosophical]
-"I like that—beauty in complexity. Maybe I've been looking at it all wrong. It's not what I've given up; it's what I've gained in its place."
+[AriaSacrificeResponseToSupportive]
+_Her expression brightens, reaffirming her path._ "Thank you. I’ve never been one for the sidelines. I'm here to make waves, to make a difference."
 
-[AriaSacrificeResponseToBlunt]
-"I hear you. There's a whole universe out there, and sometimes I forget to explore it beyond the blueprints. I'll try to remember that, thanks."
+[AriaSacrificeResponseToIntimate]
+_Caught off guard, her usual composure falters._ "A quieter life..." She pauses, reflecting. "I don't often let myself think about that. Maybe... maybe I should, even if just for a moment."

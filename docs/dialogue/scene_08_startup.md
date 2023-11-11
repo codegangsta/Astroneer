@@ -1,43 +1,43 @@
 # Scene 8: Startup vs Corporations
 
 [SceneAriaStartup]
-_In this scene, Aria articulates her motivations for leaving a predictable corporate path for the vibrant uncertainty of a startup, reflecting on both the challenges and the excitement that come with such a bold move._
+In this scene, Aria explains her choice of leaving a stable corporate job for a dynamic startup environment, subtly indicating her personal drive and aspiration despite the inherent risks.
 
 [PlayerStartupInquiry]
-Player: "What made you trade corporate security for the uncertainty of a startup?"
+Player: "Why leave the stability of a big corporation for a startup?"
 
 ## Aria's Responses
 
 [AriaStartup01]
-Aria: "In the corporate world, you're part of a massive system, a structure where every gear turns the same way. I needed to turn differently, to build ships with soul, not just ones that satisfied shareholders."
+Aria: "In corporations, you're a cog in a vast machine. I needed more than that. I wanted to create, to have my designs mean something more than just profit."
 
 [AriaStartup02]
-Aria: "And Atlas Astronautics? It's like the early days of space exploration—bold, brash, and a little bit wild. It's a place where risks are encouraged, and that's where breakthroughs happen. I didn't just want a job; I wanted a mission."
+Aria: "Atlas Astronautics? It's uncharted territory, full of risk, sure, but alive with potential. It's not just a job; it's a chance to make real impact, to innovate."
 
 ## Player Response Options
 
 [PlayerStartupResponseUnderstandingCorporate]
-"Sounds like you were searching for purpose, not just a paycheck. That's admirable."
+"Seems like you were after something meaningful, not just routine. That's impressive."
 
 [PlayerStartupResponseCriticalCorporate]
-"But aren't corporations stable? Isn't there a risk of a startup failing before it even gets off the ground?"
+"But there's a lot at stake with startups. Aren't you worried about stability?"
 
 [PlayerStartupResponseEnthusiasticStartup]
-"Risk-taking is at the heart of innovation. Sounds like you found the right launchpad for your ideas."
+"Risk is part of progress. You must be excited to have that freedom for your ideas."
 
 [PlayerStartupResponseSkepticalStartup]
-"Taking risks is one thing, but how do you know it's not just recklessness disguised as bravery?"
+"Is it worth the risk, though? How do you balance that with the need for security?"
 
 ## Aria's Follow-up Responses
 
 [AriaStartupResponseToUnderstandingCorporate]
-Aria: "Exactly. Don't get me wrong, stability is nice, but it's not thrilling. There's no adventure in following a script. At Atlas, I'm part of a story, and we're writing it together."
+Aria: "Right. Stability is comforting, but there's no real growth in comfort. At Atlas, every day is a chance to be part of something new, something big."
 
 [AriaStartupResponseToCriticalCorporate]
-Aria: "Stability is a double-edged sword. Yes, the ground is firmer, but sometimes you need to be in freefall to really find your wings. Atlas might crash, but oh, we'll soar first."
+Aria: "It's a gamble, I won't lie. But sometimes, you have to risk the safety net to reach higher. We might stumble, but we're also free to soar."
 
 [AriaStartupResponseToEnthusiasticStartup]
-Aria: "You get it! The thrum of a startup—it's like the hum of engines on launch day. It's addictive, this feeling that you're part of something on the cusp of greatness."
+Aria: "Exactly, it's exhilarating! There's this energy here, a buzz of creating something from scratch. That's where true innovation happens."
 
 [AriaStartupResponseToSkepticalStartup]
-Aria: "There's a fine line, I'll give you that. But there's a method to the madness at Atlas. We're not just throwing darts in the dark; we're aiming for the stars with precision."
+Aria: "It's a tough call. But I believe in calculated risks. Atlas is a leap, but it's not blind faith. It's about chasing something bigger, something meaningful."

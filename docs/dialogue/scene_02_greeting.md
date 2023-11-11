@@ -4,99 +4,83 @@ _Context: The player has just accepted a mission from the mission board and has 
 
 _Note: This response is typically played after the introductory quest, so Aria has already been introduced to the player._
 
+[SceneAriaGreet]
+
 [AriaGreet01]
-"Ah, my favorite cosmic collaborator! What challenge are we tackling with our combined genius today?"
+"Hey there, Cap! What ship are we tackling today?"
 
 [AriaGreet02]
-"Look who's traversed the stars to grace us with their presence! What interstellar intrigue are we unraveling today?"
+"Back for more? Let's see what's on the docket."
 
 [AriaGreet03]
-"Salutations! Just in time for a fresh batch of cosmic conundrums. Ready to dive in?"
+"Hello again! Ready to jump into another design?"
 
 [AriaGreet04]
-"Welcome! Our design deck awaits your esteemed input. Shall we make some magic?"
+"Got a new ship on your mind? Let's hear it."
 
 [AriaGreet05]
-"Ah, the maestro of the schematics! What masterpiece shall we conjure up today?"
+"Ah, the master shipwright returns. What's the plan?"
 
 [AriaGreet06]
-"Touchdown! Ready for a brainstorm, or is it a brain hurricane with you? Either way, it'll be epic."
+"Hey! What exciting project are we looking at today?"
 
 [AriaGreet07]
-"Captain of innovation at the helm! What's today's mission in the great blueprint yonder?"
+"Welcome back! Any new adventures in ship design?"
 
 [AriaGreet08]
-"Hey there! Whether it's contracts or constellations, I'm ready if you are. What's first on the agenda?"
+"Hi there! What ship will we be shaping up today?"
 
 [AriaGreet09]
-"Star traveler and design maverick! I've got ideas brewing that are hotter than a supernova. Care to taste?"
+"Ready for another round of shipbuilding?"
 
 [AriaGreet10]
-"Greetings! Let's blend your vision with my tech for another day of legendary ship crafting, shall we?"
+"Great to see you! What's our design mission this time?"
 
-[AriaGreet11]
-"Welcome back to the forge of the future. Ready to hammer out some new legends?"
+## Scene 2b: Aria Greets the Player (funny/bored) - Fresh Humor
 
-[AriaGreet12]
-"Ah, the prodigal shipwright returns! The galaxy's canvas awaits your next stroke of brilliance."
-
-[AriaGreet13]
-"Step right up to the cosmic carousel! What fantastical ride shall we craft today?"
-
-[AriaGreet14]
-"Good to see you! The stars have aligned for some creativity. Let's not keep them waiting."
-
-[AriaGreet15]
-"Welcome, spacefarer! Got your gear? Good. I've got plans and a penchant for the extraordinary."
-
-[AriaGreet16]
-"Back for more galactic artistry? Excellent. Our design studio is a nebula of potential today."
-
-# Scene 2b: Aria Greets the player (funny/bored)
-
-_Context: Identical to the previous scene, but shows off even more of Aria's quirky side. Aria is suffering from boredom becuase Atlas Astronautics is currently under construction, keeping her away from the ship bays where she wants to be, and sequestered to her tiny New Atlantis apartment, where it's often just her and her radio receiver. She's obviously going a bit stir crazy._
+[SceneAriaGreetFunny]
 
 [AriaGreetFunny01]
-"Hello, you've reached Aria, your friendly neighborhood shipwright. If you hear snoring, just yell into the mic—I'm probably under a pile of blueprints dreaming of engines."
+"Hello from Aria's isolation station! If I start making spaceship noises, just go with it."
 
 [AriaGreetFunny02]
-"If you're hearing this, congrats! You've successfully hailed the most star-struck ship designer between here and Andromeda. Now, let's talk ships before I start talking to the furniture."
+"Atlas’s remote ship designer here, where my biggest debate is talking to the toaster or the TV. What’s your crisis?"
 
 [AriaGreetFunny03]
-"Aria’s interstellar answering service, star-date today! Press 1 for ship designs, press 2 for cosmic banter, or stay on the line to help me escape the black hole of boredom."
+"Day 47 in the apartment wilderness, and I've started assigning starship roles to my furniture. What can I do for you?"
 
 [AriaGreetFunny04]
-"Good [morning/afternoon/evening]! Aria’s voice beaming to you from the depths of my design den—where the coffee's strong and the ideas are stronger. What's the buzz?"
+"Reporting from Fort Couch Cushion. If I don't design something soon, I might start crafting a spaceship out of pillows. Help?"
 
 [AriaGreetFunny05]
-"You’ve reached Aria Collins: half-ship designer, half-space DJ. Spin that dial for tunes, or let's design ships that'll make the Kessel Run in record time."
+"Aria’s remote work hub, where the space adventures are imaginary, but the boredom is real. Got any projects to save me?"
 
 [AriaGreetFunny06]
-"Psst, it’s Aria. Quick, before my indoor plant becomes my new design assistant, tell me you've got something exciting for us to work on!"
+"Hey, Cap! Ready to swap my solo monologue for some actual dialogue. What’s on the drawing board?"
 
 [AriaGreetFunny07]
-"Do you read me? This is Aria broadcasting live from the land of schematics and caffeine! Ready to transmit some electrifying ideas?"
+"Greetings from my personal space dock – also known as the living room. Let's brainstorm before I start chatting with the ceiling fan."
 
 [AriaGreetFunny08]
-"Is it a bird? Is it a plane? Nope, it's just me, Aria, stuck in my apartment waiting for your call. So, what spaceship are we going to conquer the universe with today?"
+"Stir-crazy ship designer Aria here, currently debating space ethics with my reflection. What's our mission?"
 
 [AriaGreetFunny09]
-"Hey, space cadet! I've resorted to making paper airplanes, so let's design something a bit more advanced, shall we?"
+"Shuttle commander of the S.S. Sofa at your service. Shall we embark on a design journey today?"
 
 [AriaGreetFunny10]
-"Aria here, reporting from my living room command center, featuring a couch that doubles as a makeshift cockpit. What's our flight plan for today?"
+"Aria, reporting from the homefront! I'm one cup of coffee away from teaching my plant astrophysics. What's on the agenda?"
 
 [AriaGreetFunny11]
-"Greetings, Earthling! This is your favorite ship designer, Aria, speaking to you from the great beyond... of my apartment. Got any galactic news?"
+"Your trusty starship engineer, now doubling as an apartment explorer. Found anything interesting out there in the real world?"
 
 [AriaGreetFunny12]
-"Incoming transmission from Aria: I've officially named all my appliances after celestial bodies. So, what's our mission before I start talking to them about thruster mechanics?"
+"Broadcasting live from Aria’s space station (aka my kitchen). Let's talk ships before I start making rocket ships out of cutlery."
 
 [AriaGreetFunny13]
-"Knock knock. Who's there? Aria, stuck on the comms channel, waiting to unleash some cosmic creativity. Beam us up some fun, will you?"
+"Who's there? Oh, just me, Aria, chatting with the door again. Let's focus on something productive, shall we?"
 
 [AriaGreetFunny14]
-"Cap, this is Aria, your intergalactic pen pal. I've just about rearranged my furniture into a spaceship. How about we design the real deal instead?"
+"Mission control (aka my window seat) to Cap. I'm ready for some actual work before I start mapping constellations in my coffee."
 
 [AriaGreetFunny15]
-"You’ve reached the one-woman spacecraft think tank. I’ve been floating in a sea of solitude here, so your voice is a welcome docking request!"
+"Welcome to Aria's interstellar talk show, where the guest list is... well, nonexistent. Let's make some spaceship magic!"
