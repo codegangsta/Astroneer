@@ -1,0 +1,24 @@
+{
+    "foo": "bar",
+    "topics": [
+        {
+            "id": "DialogueTest",
+            "speaker": "AriaCollins",
+            "startScene": "Scene_Aria_Greet",
+            "startScenePhase": "Foobar",
+            "script": "Astroneer:Dialogue",
+            "onBegin": "DoSomething",
+            "onEnd": "DoSomethingElse",
+            "infos": [
+                {
+                    "id": "DialogueTest01",
+                    "responses": [
+                        {
+                            "text": "Hello world"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
