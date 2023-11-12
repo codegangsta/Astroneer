@@ -1,8 +1,9 @@
 package scenes
 
 scene_03_accept_contract: {
-	id:   "03_AcceptContract"
-	name: "Player Accepts Contract"
+	id:    "03_AcceptContract"
+	name:  "Player Accepts Contract"
+	notes: "The player has accepted a mission from the mission board, and has walked over to the Atlas Astronautics intercom to speak with Aria. Aria greets the player, then the player chooses to ask about the contract they've just accepted. Based on the type of Ship contract, a randomly generated response from Aria will be chosen. The intent is to have enough dialog and variety that each mission feels fresh and new"
 	topics: [
 		{
 			id:      "03_Player"

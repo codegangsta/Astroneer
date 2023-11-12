@@ -13,4 +13,5 @@ scenes: [
 	s.scene_05_background,
 	s.scene_06_player_background,
 	s.scene_07_colony_life,
+	s.scene_08_startup,
 ]
