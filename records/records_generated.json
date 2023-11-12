@@ -2121,6 +2121,543 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "11_Reflect",
+            "name": "Reflecting on Personal Growth",
+            "notes": "In this scene, Aria starts off guarded, her usual self-assurance masking deeper uncertainties. As the player engages, she gradually reveals more of her introspective side.",
+            "topics": [
+                {
+                    "id": "11_AriaInquiry",
+                    "speaker": "AriaCollins",
+                    "notes": "Aria, maintaining a composed exterior",
+                    "infos": [
+                        {
+                            "id": "11_AriaInquiry01",
+                            "responses": [
+                                {
+                                    "text": "Cap, do you ever think we get so wrapped up in our goals that we miss... life happening around us? Not that I'm second-guessing myself, it's just a thought."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "11_PlayerResponseUnderstanding",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "11_PlayerResponseUnderstanding01",
+                            "responses": [
+                                {
+                                    "text": "It's natural to wonder, Aria. Maybe it's not about changing course, but just taking a moment to appreciate where you are."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "11_PlayerResponsePractical",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "11_PlayerResponsePractical01",
+                            "responses": [
+                                {
+                                    "text": "Focused as we are, it's easy to lose sight of other things. But balance is important, isn't it?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "11_PlayerResponseCurious",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "11_PlayerResponseCurious01",
+                            "responses": [
+                                {
+                                    "text": "That's quite introspective. Are you feeling like you're at a turning point, perhaps?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "11_PlayerResponseCandid",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "11_PlayerResponseCandid01",
+                            "responses": [
+                                {
+                                    "text": "Overdrive can make us miss the finer details of life. Maybe slowing down a bit isn't such a bad idea."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "11_AriaResponseToUnderstanding",
+                    "speaker": "AriaCollins",
+                    "notes": "She offers a small, contemplative smile.",
+                    "infos": [
+                        {
+                            "id": "11_AriaResponseToUnderstanding01",
+                            "responses": [
+                                {
+                                    "text": "I suppose you're right. It wouldn't hurt to stop and look around once in a while. There's more to life than just the next achievement."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "11_AriaResponseToPractical",
+                    "speaker": "AriaCollins",
+                    "notes": "With a slight nod, she acknowledges the wisdom.",
+                    "infos": [
+                        {
+                            "id": "11_AriaResponseToPractical01",
+                            "responses": [
+                                {
+                                    "text": "Balance... That's something I've not been great at. Maybe it's time to recalibrate a little."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "11_AriaResponseToCurious",
+                    "speaker": "AriaCollins",
+                    "notes": "There's a pause as she ponders.",
+                    "infos": [
+                        {
+                            "id": "11_AriaResponseToCurious01",
+                            "responses": [
+                                {
+                                    "text": "Turning point? I don't know about that, but it's healthy to question things, right? To make sure we're still on track."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "11_AriaResponseToCandid",
+                    "speaker": "AriaCollins",
+                    "notes": "Initially bristling, she then concedes.",
+                    "infos": [
+                        {
+                            "id": "11_AriaResponseToCandid01",
+                            "responses": [
+                                {
+                                    "text": "I've always been pedal to the metal, but you've got a point. Maybe I do need to ease off the accelerator and enjoy the ride more."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "12_BadNews",
+            "name": "Bad News from Home",
+            "notes": "Aria is subdued, and the player can sense something is wrong. Aria reveals that her sister is ill, and she's feeling the distance from home. The player can offer support and encouragement.",
+            "topics": [
+                {
+                    "id": "12_AriaInquiry",
+                    "speaker": "AriaCollins",
+                    "notes": "Aria appears on the intercom, her usual vibrancy dimmed, her tone subdued.",
+                    "infos": [
+                        {
+                            "id": "12_AriaInquiry01",
+                            "responses": [
+                                {
+                                    "text": "Hey, Cap... Sorry, I'm a bit out of sorts today. What's up?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_PlayerResponseConcerned",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "12_PlayerResponseConcerned01",
+                            "responses": [
+                                {
+                                    "text": "You don’t seem yourself. Anything you want to share?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_PlayerResponseGentleProbing",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "12_PlayerResponseGentleProbing01",
+                            "responses": [
+                                {
+                                    "text": "You're usually more animated, Aria. Is something troubling you?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_PlayerResponseRespectfulDistance",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "12_PlayerResponseRespectfulDistance01",
+                            "responses": [
+                                {
+                                    "text": "If you're not up for talking, that's okay. We can keep it work-related if you prefer."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_PlayerResponseDirect",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "12_PlayerResponseDirect01",
+                            "responses": [
+                                {
+                                    "text": "You look like something's weighing on you. If you want to talk, I'm here."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_AriaResponseToConcerned",
+                    "speaker": "AriaCollins",
+                    "notes": "She hesitates, offering a strained smile.",
+                    "infos": [
+                        {
+                            "id": "12_AriaResponseToConcerned01",
+                            "responses": [
+                                {
+                                    "text": "Just family things, you know? It's tough being so far away sometimes."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_AriaResponseToGentleProbing",
+                    "speaker": "AriaCollins",
+                    "notes": "Aria lets out a soft sigh.",
+                    "infos": [
+                        {
+                            "id": "12_AriaResponseToGentleProbing01",
+                            "responses": [
+                                {
+                                    "text": "It's hard to hide anything from you, isn't it? Just some news from back home. Makes you think about life choices."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_AriaResponseToRespectfulDistance",
+                    "speaker": "AriaCollins",
+                    "notes": "Gratefully nodding",
+                    "infos": [
+                        {
+                            "id": "12_AriaResponseToRespectfulDistance01",
+                            "responses": [
+                                {
+                                    "text": "Thanks for understanding. Let's just focus on work today. Helps to keep the mind occupied."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_AriaResponseToDirect",
+                    "speaker": "AriaCollins",
+                    "notes": "Pausing briefly",
+                    "infos": [
+                        {
+                            "id": "12_AriaResponseToDirect01",
+                            "responses": [
+                                {
+                                    "text": "I appreciate your straightforwardness. It's my little sister; shes ill. And I'm here, worlds away."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_PlayerFollowupResponseSympathetic",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "12_PlayerFollowupResponseSympathetic01",
+                            "responses": [
+                                {
+                                    "text": "It's tough, being so far. If talking about it helps, I'm here to listen."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_PlayerFollowupResponseInquisitive",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "12_PlayerFollowupResponseInquisitive01",
+                            "responses": [
+                                {
+                                    "text": "Do you feel like being here, pursuing your dreams, is worth the distance from family?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_PlayerFollowupResponseSupportive",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "12_PlayerFollowupResponseSupportive01",
+                            "responses": [
+                                {
+                                    "text": "Focus on what you can control, Aria. You're doing important work here."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_PlayerFollowupResponseNonIntrusive",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "12_PlayerFollowupResponseNonIntrusive01",
+                            "responses": [
+                                {
+                                    "text": "We don’t have to talk about it more if you don’t want to. Just know, you’re not alone."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_PlayerResponseEmpathy",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "12_PlayerResponseEmpathy01",
+                            "responses": [
+                                {
+                                    "text": "It's never easy to be away from family, especially in times like these. If you need to talk or just take a break, I'm here."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_PlayerResponsePracticalSupport",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "12_PlayerResponsePracticalSupport01",
+                            "responses": [
+                                {
+                                    "text": "That's tough to hear. Are there ways we can help from here? Maybe there's something we can do, even from afar."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_PlayerResponseSharedExperience",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "12_PlayerResponseSharedExperience01",
+                            "responses": [
+                                {
+                                    "text": "I've been there, Aria. Distance can make these things harder. Just remember, she knows you're thinking of her."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_PlayerResponseEncouragingOptimism",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "12_PlayerResponseEncouragingOptimism01",
+                            "responses": [
+                                {
+                                    "text": "I'm sorry about your sister. Let's hold onto hope, though. Sometimes, good news can travel just as fast as the bad."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_PlayerResponseOfferSpace",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "12_PlayerResponseOfferSpace01",
+                            "responses": [
+                                {
+                                    "text": "If you need some time to process this or make a call, take all the time you need. Work can wait."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_AriaResponseToEmpathy",
+                    "speaker": "AriaCollins",
+                    "notes": "Aria's eyes reflect gratitude.",
+                    "infos": [
+                        {
+                            "id": "12_AriaResponseToEmpathy01",
+                            "responses": [
+                                {
+                                    "text": "Thanks. It means a lot just knowing you're here to listen. Makes the distance feel a little less vast."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_AriaResponseToPracticalSupport",
+                    "speaker": "AriaCollins",
+                    "notes": "She considers this.",
+                    "infos": [
+                        {
+                            "id": "12_AriaResponseToPracticalSupport01",
+                            "responses": [
+                                {
+                                    "text": "That's a kind thought. Maybe there's something we can do from here. I'll think about it. Thank you."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_AriaResponseToSharedExperience",
+                    "speaker": "AriaCollins",
+                    "notes": "You can see the comfort in her expression.",
+                    "infos": [
+                        {
+                            "id": "12_AriaResponseToSharedExperience01",
+                            "responses": [
+                                {
+                                    "text": "It helps to know someone understands. Just having people around who get it... it's a big deal."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_AriaResponseToEncouragingOptimism",
+                    "speaker": "AriaCollins",
+                    "notes": "Her smile is small but genuine.",
+                    "infos": [
+                        {
+                            "id": "12_AriaResponseToEncouragingOptimism01",
+                            "responses": [
+                                {
+                                    "text": "Optimism, right? I need a bit of that right now. Thanks for the reminder to stay hopeful."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_AriaResponseToOfferSpace",
+                    "speaker": "AriaCollins",
+                    "notes": "Relief washes over her.",
+                    "infos": [
+                        {
+                            "id": "12_AriaResponseToOfferSpace01",
+                            "responses": [
+                                {
+                                    "text": "I might take you up on that. Just a little time to gather my thoughts could help. Thanks, Cap."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_AriaFollowupResponseToSympathetic",
+                    "speaker": "AriaCollins",
+                    "notes": "Her eyes soften.",
+                    "infos": [
+                        {
+                            "id": "12_AriaFollowupResponseToSympathetic01",
+                            "responses": [
+                                {
+                                    "text": "Thanks, it means a lot. Sometimes I wonder if I made the right choice, being here while my family's back there."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_AriaFollowupResponseToInquisitive",
+                    "speaker": "AriaCollins",
+                    "notes": "She looks thoughtful.",
+                    "infos": [
+                        {
+                            "id": "12_AriaFollowupResponseToInquisitive01",
+                            "responses": [
+                                {
+                                    "text": "That's the question, isn't it? I believe in what I'm doing here, but at moments like this, I question the cost."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_AriaFollowupResponseToSupportive",
+                    "speaker": "AriaCollins",
+                    "notes": "A nod of acknowledgement.",
+                    "infos": [
+                        {
+                            "id": "12_AriaFollowupResponseToSupportive01",
+                            "responses": [
+                                {
+                                    "text": "You're right. I chose this path for a reason. Just need to remember why on days like this."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "12_AriaFollowupResponseToNonIntrusive",
+                    "speaker": "AriaCollins",
+                    "notes": "There's a hint of relief in her voice.",
+                    "infos": [
+                        {
+                            "id": "12_AriaFollowupResponseToNonIntrusive01",
+                            "responses": [
+                                {
+                                    "text": "I appreciate that, really. Sometimes just knowing someone's there to listen is enough."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

@@ -16,4 +16,6 @@ scenes: [
 	s.scene_08_startup,
 	s.scene_09_work_satisfaction,
 	s.scene_10_alternate_paths,
+	s.scene_11_reflect,
+	s.scene_12_bad_news,
 ]
