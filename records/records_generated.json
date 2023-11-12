@@ -440,44 +440,19 @@
                             "responses": [
                                 {
                                     "text": "Whoa, an intercom call? That's a rare vintage. Aria here—your ship-building maestro and Atlas Astronautics' semi-official welcome wagon."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "01_AriaIntro02",
-                            "responses": [
+                                },
                                 {
                                     "text": "Let's talk ship. You're about to dive into the nuts and bolts of starship customization. I'll transfer the bare bones to your hangar, and you put the soul into the machine. Match the contract specs, and we're golden."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "01_AriaIntro03",
-                            "responses": [
+                                },
                                 {
                                     "text": "Once you're done, bring her back so we can give her the old spaceworthy stamp. Keep your sensors peeled out there—your handiwork will be zipping around the galaxy before you know it."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "01_AriaIntro04",
-                            "responses": [
+                                },
                                 {
                                     "text": "Got questions, or floating in confusion? Buzz me on this line. I'm like a walking, talking encyclopedia of space oddities, minus the boring parts."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "01_AriaIntro05",
-                            "responses": [
+                                },
                                 {
                                     "text": "I hear you're quite the pilot. So I'm calling you 'Cap' from here on out! Beats saying 'O Great Shipbuilder' every time, right?"
-                                }
-                            ]
-                        },
-                        {
-                            "id": "01_AriaIntro06",
-                            "responses": [
+                                },
                                 {
                                     "text": "Alright, Cap. Aria signing off—don't be a stranger, or do, but come back with stories!"
                                 }
