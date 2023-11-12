@@ -18,4 +18,10 @@ scenes: [
 	s.scene_10_alternate_paths,
 	s.scene_11_reflect,
 	s.scene_12_bad_news,
+	s.scene_13_hidden_passions,
+	s.scene_14_legacy,
+	s.scene_15_sacrifices,
+	s.scene_16_regrets,
+	s.scene_17_intercom,
+	s.scene_18_abandon_contract,
 ]

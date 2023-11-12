@@ -2658,6 +2658,759 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "13_HiddenPassions",
+            "name": "Hidden Passions - Humble Revelations",
+            "notes": "Aria reveals her hobbies and the joy of learning for its own sake.",
+            "topics": [
+                {
+                    "id": "13_PlayerInquiry",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "13_PlayerInquiry01",
+                            "responses": [
+                                {
+                                    "text": "What's your downtime look like, Aria? Any unique hobbies outside of your ship work?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "13_AriaResponse",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "13_AriaResponse01",
+                            "responses": [
+                                {
+                                    "text": "I've taken up cooking. I'm no chef, mind you. Half the time, it's more of an experiment than a meal. But there's something satisfying about creating with your hands, even if it's just a quirky sandwich."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "13_AriaResponse02",
+                            "responses": [
+                                {
+                                    "text": "And I dabble in amateur astronomy. I’m not particularly great at it – I can barely tell the constellations apart! But gazing at the stars, not as a designer but just as myself, it's kind of liberating."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "13_PlayerResponseEncouraging",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "13_PlayerResponseEncouraging01",
+                            "responses": [
+                                {
+                                    "text": "Exploring new territories, even in the kitchen or the night sky. That's exciting, even if it's not about perfection."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "13_PlayerResponseLightTease",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "13_PlayerResponseLightTease01",
+                            "responses": [
+                                {
+                                    "text": "Chef Aria and the star-gazer who can't find Orion? Sounds like you're enjoying the learning curve."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "13_PlayerResponseUnderstanding",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "13_PlayerResponseUnderstanding01",
+                            "responses": [
+                                {
+                                    "text": "Those sound like great ways to unwind. It's not always about being the best, but enjoying the process."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "13_PlayerResponseReflective",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "13_PlayerResponseReflective01",
+                            "responses": [
+                                {
+                                    "text": "It’s good to hear you doing things just for the joy of it, not just for the end result. That’s important."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "13_AriaResponseToEncouraging",
+                    "speaker": "AriaCollins",
+                    "notes": "Aria chuckles, a touch of self-deprecation in her tone.",
+                    "infos": [
+                        {
+                            "id": "13_AriaResponseToEncouraging01",
+                            "responses": [
+                                {
+                                    "text": "Exciting and a little humbling! But you're right, it's not about perfection. It's about the joy of trying, of creating."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "13_AriaResponseToLightTease",
+                    "speaker": "AriaCollins",
+                    "notes": "Her laughter is genuine, tinged with a hint of embarrassment.",
+                    "infos": [
+                        {
+                            "id": "13_AriaResponseToLightTease01",
+                            "responses": [
+                                {
+                                    "text": "Yeah, I'm embracing the 'amateur' in both! There's freedom in just being a novice, a learner. It's a nice change of pace."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "13_AriaResponseToUnderstanding",
+                    "speaker": "AriaCollins",
+                    "notes": "She nods appreciatively, a reflective look in her eyes.",
+                    "infos": [
+                        {
+                            "id": "13_AriaResponseToUnderstanding01",
+                            "responses": [
+                                {
+                                    "text": "Exactly. For so long, I've been driven by the need to excel. It's refreshing to do something just for the sheer enjoyment, even if I'm not the best at it."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "13_AriaResponseToReflective",
+                    "speaker": "AriaCollins",
+                    "notes": "There's a moment of vulnerability in her expression.",
+                    "infos": [
+                        {
+                            "id": "13_AriaResponseToReflective01",
+                            "responses": [
+                                {
+                                    "text": "You've hit the nail on the head. I'm used to valuing time for productivity. Learning to value it just for the experience – that's new for me."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "14_Legacy",
+            "name": "Legacy and Impact",
+            "topics": [
+                {
+                    "id": "14_PlayerInquiry",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "14_PlayerInquiry01",
+                            "responses": [
+                                {
+                                    "text": "You're pouring so much into these ship designs, Aria. What kind of legacy are you hoping to build?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "14_AriaResponse",
+                    "speaker": "AriaCollins",
+                    "notes": "Aria's voice carries a mix of passion and a hint of defensiveness.",
+                    "infos": [
+                        {
+                            "id": "14_AriaResponse01",
+                            "responses": [
+                                {
+                                    "text": "Legacy? I'm here to revolutionize space travel. To be a name that changed the industry, not just a footnote in its history."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "14_AriaResponse02",
+                            "responses": [
+                                {
+                                    "text": "But it's not just about making a name. It's about today's work impacting tomorrow. If my ships can inspire or protect, then I've done my job."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "14_PlayerResponseSupport",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "14_PlayerResponseSupport01",
+                            "responses": [
+                                {
+                                    "text": "Your determination is admirable. You're not just building ships; you're building the future. That's a legacy in itself."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "14_PlayerResponseThoughtful",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "14_PlayerResponseThoughtful01",
+                            "responses": [
+                                {
+                                    "text": "It's good to aim high, but remember, the greatest legacies are often the unexpected impacts, the ripples we create."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "14_PlayerResponseConcern",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "14_PlayerResponseConcern01",
+                            "responses": [
+                                {
+                                    "text": "It's great to have goals, Aria, but don't get lost chasing them. Sometimes the best legacy is a life well-lived, not just well-worked."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "14_PlayerResponseChallenging",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "14_PlayerResponseChallenging01",
+                            "responses": [
+                                {
+                                    "text": "A legacy, huh? Is this about making a mark, or is there something deeper you're searching for in your work?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "14_AriaResponseToSupport",
+                    "speaker": "AriaCollins",
+                    "notes": "She nods, her eyes bright.",
+                    "infos": [
+                        {
+                            "id": "14_AriaResponseToSupport01",
+                            "responses": [
+                                {
+                                    "text": "Thanks, that's the plan. To push the boundaries, to leave something lasting and meaningful."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "14_AriaResponseToThoughtful",
+                    "speaker": "AriaCollins",
+                    "notes": "Her gaze drifts, contemplative.",
+                    "infos": [
+                        {
+                            "id": "14_AriaResponseToThoughtful01",
+                            "responses": [
+                                {
+                                    "text": "I never thought of it that way. Maybe the legacy isn't just the ships, but the journeys they enable, the stories they become part of."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "14_AriaResponseToConcern",
+                    "speaker": "AriaCollins",
+                    "notes": "A moment of genuine reflection crosses her face.",
+                    "infos": [
+                        {
+                            "id": "14_AriaResponseToConcern01",
+                            "responses": [
+                                {
+                                    "text": "You're right; it's easy to get caught up. I've been so focused on the destination, I might be missing the journey."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "14_AriaResponseToChallenging",
+                    "speaker": "AriaCollins",
+                    "notes": "Aria's response is tinged with defensiveness, her expression firm.",
+                    "infos": [
+                        {
+                            "id": "14_AriaResponseToChallenging01",
+                            "responses": [
+                                {
+                                    "text": "Look, I know what I'm doing. This isn't just about making my mark. It's about fulfilling a vision, a purpose. Sure, I'm driven, but who isn't in this field? I'm here to make a difference, and that's exactly what I plan to do."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "15_Sacrifices",
+            "name": "Sacrifices",
+            "notes": "This scene delves into the complex nature of Aria's career-driven life, challenging her to confront the personal costs and momentarily revealing the vulnerability behind her confident facade.",
+            "topics": [
+                {
+                    "id": "15_PlayerInquiry",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "15_PlayerInquiry01",
+                            "responses": [
+                                {
+                                    "text": "You’ve climbed high in your field, Aria. But I have to wonder, what personal costs came with that ascent?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "15_AriaResponse",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "15_AriaResponse01",
+                            "responses": [
+                                {
+                                    "text": "Sacrifice is part of the game. I’ve let go of the conventional, sure. But what I’m doing here... it’s worth more than any traditional path."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "15_AriaResponse02",
+                            "responses": [
+                                {
+                                    "text": "There's an edge to her voice. I’ve traded simplicity for complexity, and I don't regret it. I’m not one for stillness; I need the rush of creation, of discovery."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "15_PlayerResponseUnderstanding",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "15_PlayerResponseUnderstanding01",
+                            "responses": [
+                                {
+                                    "text": "Your focus and dedication are truly remarkable. Just be careful not to lose yourself completely in the pursuit."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "15_PlayerResponseInquisitive",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "15_PlayerResponseInquisitive01",
+                            "responses": [
+                                {
+                                    "text": "But doesn't that ever weigh on you? The things you've had to leave behind in chasing this dream?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "15_PlayerResponseSupportive",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "15_PlayerResponseSupportive01",
+                            "responses": [
+                                {
+                                    "text": "It's clear you're exactly where you're meant to be, Aria. Your work speaks volumes about your passion and commitment."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "15_PlayerResponseIntimate",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "15_PlayerResponseIntimate01",
+                            "responses": [
+                                {
+                                    "text": "Ever think about what a different Aria, one with a quieter life, might be like? Sometimes the roads not taken are worth a thought too."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "15_AriaResponseToUnderstanding",
+                    "speaker": "AriaCollins",
+                    "notes": "Aria nods, her confidence intact.",
+                    "infos": [
+                        {
+                            "id": "15_AriaResponseToUnderstanding01",
+                            "responses": [
+                                {
+                                    "text": "I'm well aware of what I've chosen. This is my world, and I wouldn’t have it any other way."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "15_AriaResponseToInquisitive",
+                    "speaker": "AriaCollins",
+                    "notes": "She responds briskly.",
+                    "infos": [
+                        {
+                            "id": "15_AriaResponseToInquisitive01",
+                            "responses": [
+                                {
+                                    "text": "Sure, it weighs on me. But regret is a distraction. I’m here to push boundaries, not dwell on what-ifs."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "15_AriaResponseToSupportive",
+                    "speaker": "AriaCollins",
+                    "notes": "Her expression brightens, reaffirming her path.",
+                    "infos": [
+                        {
+                            "id": "15_AriaResponseToSupportive01",
+                            "responses": [
+                                {
+                                    "text": "Thank you. I’ve never been one for the sidelines. I'm here to make waves, to make a difference."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "15_AriaResponseToIntimate",
+                    "speaker": "AriaCollins",
+                    "notes": "Caught off guard, her usual composure falters.",
+                    "infos": [
+                        {
+                            "id": "15_AriaResponseToIntimate01",
+                            "responses": [
+                                {
+                                    "text": "A quieter life... I don't often let myself think about that. Maybe... maybe I should, even if just for a moment."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "16_regrets",
+            "name": "Aria Reflects on Family and Regrets",
+            "notes": "This emotionally complex scene starts with Aria's rare moment of vulnerability about her family, which she either opens up more about or distances herself from, depending on the player's approach.",
+            "topics": [
+                {
+                    "id": "16_PlayerInquiry",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "16_PlayerInquiry01",
+                            "responses": [
+                                {
+                                    "text": "Your dedication to your career is clear, Aria. But how has this journey affected your ties with family?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "16_AriaResponse",
+                    "speaker": "AriaCollins",
+                    "notes": "Aria's facade momentarily slips, revealing a raw, emotional undercurrent.",
+                    "infos": [
+                        {
+                            "id": "16_AriaResponse01",
+                            "responses": [
+                                {
+                                    "text": "It's... it's been hard. I've been so wrapped up in my work, I've let those connections fade. It's one of those things you don't notice until it hits you."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "16_AriaResponse02",
+                            "responses": [
+                                {
+                                    "text": "I left for the stars so young, so eager. I told myself it was for the greater good, but... I missed so much back home. It's a silence that's grown too loud to ignore."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "16_PlayerResponseCompassionate",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "16_PlayerResponseCompassionate01",
+                            "responses": [
+                                {
+                                    "text": "It's a tough balance to strike. Maybe it's not too late to start bridging that gap, to reconnect."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "16_PlayerResponsePractical",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "16_PlayerResponsePractical01",
+                            "responses": [
+                                {
+                                    "text": "Your achievements are incredible, but sometimes, reconnecting with family can bring a different sense of accomplishment."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "16_PlayerResponseProbing",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "16_PlayerResponseProbing01",
+                            "responses": [
+                                {
+                                    "text": "Is that silence something you're thinking of addressing? It might bring you a different kind of peace."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "16_PlayerResponseDismissive",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "16_PlayerResponseDismissive01",
+                            "responses": [
+                                {
+                                    "text": "Well, sacrifices are part of the job, right? You can’t reach the stars without leaving something behind."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "16_AriaResponseToCompassionate",
+                    "speaker": "AriaCollins",
+                    "notes": "The vulnerability in Aria’s voice is palpable, her usual confidence replaced by a rare sense of fear.",
+                    "infos": [
+                        {
+                            "id": "16_AriaResponseToCompassionate01",
+                            "responses": [
+                                {
+                                    "text": "You might be right, but... it terrifies me. The thought of reaching out after all this time, facing them... it feels like standing on the edge of a black hole. I don't know if I'm ready to confront that darkness yet."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "16_AriaResponseToPractical",
+                    "speaker": "AriaCollins",
+                    "notes": "There's a shift in her demeanor, a mix of acceptance and hesitation.",
+                    "infos": [
+                        {
+                            "id": "16_AriaResponseToPractical01",
+                            "responses": [
+                                {
+                                    "text": "You have a point. My work has always been my focus, but... maybe there's room for both in my life."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "16_AriaResponseToProbing",
+                    "speaker": "AriaCollins",
+                    "notes": "A brief flicker of contemplation crosses her face, then she retreats slightly.",
+                    "infos": [
+                        {
+                            "id": "16_AriaResponseToProbing01",
+                            "responses": [
+                                {
+                                    "text": "It's something I'm wrestling with. Maybe addressing it will bring peace, but... let's just say I'm not there yet."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "16_AriaResponseToDismissive",
+                    "speaker": "AriaCollins",
+                    "notes": "Her defenses snap back up, the vulnerability gone.",
+                    "infos": [
+                        {
+                            "id": "16_AriaResponseToDismissive01",
+                            "responses": [
+                                {
+                                    "text": "Exactly. You get it. Can't make an omelet without breaking a few eggs, right? I've made my choice, for better or worse."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "17_Intercom",
+            "name": "Intercom",
+            "topics": [
+                {
+                    "id": "17_PlayerInquiry",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "17_PlayerInquiry01",
+                            "responses": [
+                                {
+                                    "text": "Why do we have to use the intercom to communicate?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "17_AriaResponse",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "17_AriaResponse01",
+                            "responses": [
+                                {
+                                    "text": "Ah, well, the workshop's in full reno mode. Picture this: a rogue drone, a misplaced laser cutter, and poof—suddenly you're embracing the minimalist aesthetic. Who knew drones were such critics of industrial design?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "17_AriaResponse02",
+                            "responses": [
+                                {
+                                    "text": "Which means I'm marooned in my apartment, turning ship schematics and not much else. I've memorized every crack in the ceiling and named all my plant life. They're terrible conversationalists, by the way."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "17_AriaResponse03",
+                            "responses": [
+                                {
+                                    "text": "Working remote's the new rage, they say. It's all fun and games until you realize your fridge doesn't stock itself and your cat's been the boss all along. But hey, at least the commute's a breeze!"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "17_AriaResponse04",
+                            "responses": [
+                                {
+                                    "text": "Anyway, enough about my four-wall odyssey. Let's get back to spaceships and stars—because if I stare at this paint dry any longer, I might just start talking back to it."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "18_AbandonContract",
+            "name": "Abandon Contract",
+            "topics": [
+                {
+                    "id": "18_PlayerInquiry",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "18_PlayerInquiry01",
+                            "responses": [
+                                {
+                                    "text": "I'm having trouble with this contract. Can we switch it up?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "18_AriaResponse",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "18_AriaResponse01",
+                            "responses": [
+                                {
+                                    "text": "No problem, Cap! Not every ship is a perfect match. I'll find this one a new captain."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "18_AriaResponse02",
+                            "responses": [
+                                {
+                                    "text": "I'm updating the mission board right now. Let's find you a project that's more your speed."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "18_AriaResponse03",
+                            "responses": [
+                                {
+                                    "text": "Sometimes a detour is part of the journey. Let's get you on a path that feels right."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "18_AriaResponse04",
+                            "responses": [
+                                {
+                                    "text": "Keep your chin up. Space is vast, and there's always something else out there for you."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
