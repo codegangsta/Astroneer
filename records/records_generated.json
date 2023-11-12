@@ -570,6 +570,132 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "id": "02_AriaGreetingFunny",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "02_AriaGreetingFunny01",
+                            "responses": [
+                                {
+                                    "text": "Hello from Aria's isolation station! If I start making spaceship noises, just go with it."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreetingFunny02",
+                            "responses": [
+                                {
+                                    "text": "Atlas’s remote ship designer here, where my biggest debate is talking to the toaster or the TV. What’s your crisis?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreetingFunny03",
+                            "responses": [
+                                {
+                                    "text": "Day 47 in the apartment wilderness, and I've started assigning starship roles to my furniture. What can I do for you?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreetingFunny04",
+                            "responses": [
+                                {
+                                    "text": "Reporting from Fort Couch Cushion. If I don't design something soon, I might start crafting a spaceship out of pillows. Help?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreetingFunny05",
+                            "responses": [
+                                {
+                                    "text": "Aria’s remote work hub, where the space adventures are imaginary, but the boredom is real. Got any projects to save me?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreetingFunny06",
+                            "responses": [
+                                {
+                                    "text": "Hey, Cap! Ready to swap my solo monologue for some actual dialogue. What’s on the drawing board?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreetingFunny07",
+                            "responses": [
+                                {
+                                    "text": "Greetings from my personal space dock – also known as the living room. Let's brainstorm before I start chatting with the ceiling fan."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreetingFunny08",
+                            "responses": [
+                                {
+                                    "text": "Stir-crazy ship designer Aria here, currently debating space ethics with my reflection. What's our mission?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreetingFunny09",
+                            "responses": [
+                                {
+                                    "text": "Shuttle commander of the S.S. Sofa at your service. Shall we embark on a design journey today?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreetingFunny10",
+                            "responses": [
+                                {
+                                    "text": "Aria, reporting from the homefront! I'm one cup of coffee away from teaching my plant astrophysics. What's on the agenda?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreetingFunny11",
+                            "responses": [
+                                {
+                                    "text": "Your trusty starship engineer, now doubling as an apartment explorer. Found anything interesting out there in the real world?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreetingFunny12",
+                            "responses": [
+                                {
+                                    "text": "Broadcasting live from Aria’s space station (aka my kitchen). Let's talk ships before I start making rocket ships out of cutlery."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreetingFunny13",
+                            "responses": [
+                                {
+                                    "text": "Who's there? Oh, just me, Aria, chatting with the door again. Let's focus on something productive, shall we?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreetingFunny14",
+                            "responses": [
+                                {
+                                    "text": "Mission control (aka my window seat) to Cap. I'm ready for some actual work before I start mapping constellations in my coffee."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreetingFunny15",
+                            "responses": [
+                                {
+                                    "text": "Welcome to Aria's interstellar talk show, where the guest list is... well, nonexistent. Let's make some spaceship magic!"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
