@@ -1012,6 +1012,328 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "04_CompleteContract",
+            "name": "Player Accepts Contract",
+            "topics": [
+                {
+                    "id": "04_Player",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "04_Player01",
+                            "responses": [
+                                {
+                                    "text": "Design's in. Does it capture what you were looking for?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_Player02",
+                            "responses": [
+                                {
+                                    "text": "Finished with the ship. How does it measure up to our standards?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_Player03",
+                            "responses": [
+                                {
+                                    "text": "Completed the contract. What's your take on the final product?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_Player04",
+                            "responses": [
+                                {
+                                    "text": "Just finished my design. Will it pass the Aria test?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_Player05",
+                            "responses": [
+                                {
+                                    "text": "Redesign's done. Does it have the Aria stamp of approval?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_Player06",
+                            "responses": [
+                                {
+                                    "text": "Contract's done. I'm eager to hear your thoughts."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_Player07",
+                            "responses": [
+                                {
+                                    "text": "Wrapped up the ship. It should meet the mark."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_Player08",
+                            "responses": [
+                                {
+                                    "text": "Finished the upgrade. It's ready for your review."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_Player09",
+                            "responses": [
+                                {
+                                    "text": "The ship's reimagined, per your vision."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_Player10",
+                            "responses": [
+                                {
+                                    "text": "Ship is done. It's a fresh take on an old classic."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "04_AriaFighter",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "04_AriaFighter01",
+                            "responses": [
+                                {
+                                    "text": "Nice work! This fighter's gone from zero to hero."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaFighter02",
+                            "responses": [
+                                {
+                                    "text": "Looks sharp! It’s got stealth and swagger in spades."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaFighter03",
+                            "responses": [
+                                {
+                                    "text": "You've turned it tough! It's ready to rumble now."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaFighter04",
+                            "responses": [
+                                {
+                                    "text": "Sleek job! It's like a race car of the skies."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaFighter05",
+                            "responses": [
+                                {
+                                    "text": "Stellar work! This fighter's ready for its own saga."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "04_AriaExplorer",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "04_AriaExplorer01",
+                            "responses": [
+                                {
+                                    "text": "Great update! It's a real cosmic explorer now."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaExplorer02",
+                            "responses": [
+                                {
+                                    "text": "It's a star-traveler's dream! Love the new look."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaExplorer03",
+                            "responses": [
+                                {
+                                    "text": "Those sensors are top-notch. It's a galaxy whisperer now."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaExplorer04",
+                            "responses": [
+                                {
+                                    "text": "You've given it a real adventurous edge. Nice!"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaExplorer05",
+                            "responses": [
+                                {
+                                    "text": "Love it! It's like a toolbox of space wonders."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "04_AriaHauler",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "04_AriaHauler01",
+                            "responses": [
+                                {
+                                    "text": "This hauler's a real gem now. It's got style and space!"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaHauler02",
+                            "responses": [
+                                {
+                                    "text": "You turned it chic! It's a fashion-forward freighter."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaHauler03",
+                            "responses": [
+                                {
+                                    "text": "Massive upgrade! It's a cargo metropolis now."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaHauler04",
+                            "responses": [
+                                {
+                                    "text": "From sturdy to stunning! It's a cargo showstopper."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaHauler05",
+                            "responses": [
+                                {
+                                    "text": "Wow, talk about an upgrade! It's a planet mover!"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "04_AriaInterceptor",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "04_AriaInterceptor01",
+                            "responses": [
+                                {
+                                    "text": "This interceptor's slick and secretive now. Nice touch!"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaInterceptor02",
+                            "responses": [
+                                {
+                                    "text": "That's some speed! It's a real cosmic blur."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaInterceptor03",
+                            "responses": [
+                                {
+                                    "text": "Super quick! It's got an extra dose of zoom."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaInterceptor04",
+                            "responses": [
+                                {
+                                    "text": "Instant action! This ship's redefining speed."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaInterceptor05",
+                            "responses": [
+                                {
+                                    "text": "Sleek and fast! It's a racer's dream."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "04_AriaLuxury",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "04_AriaLuxury01",
+                            "responses": [
+                                {
+                                    "text": "It's like a floating palace. Absolutely luxurious!"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaLuxury02",
+                            "responses": [
+                                {
+                                    "text": "You've raised the bar! It's luxury cruising at its best."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaLuxury03",
+                            "responses": [
+                                {
+                                    "text": "Pure elegance! Every inch whispers class."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaLuxury04",
+                            "responses": [
+                                {
+                                    "text": "Opulent and grand! It's a journey in style."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaLuxury05",
+                            "responses": [
+                                {
+                                    "text": "Cozy and lavish! It's a five-star trip through space."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

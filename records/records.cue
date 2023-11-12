@@ -9,4 +9,5 @@ scenes: [
 	s.scene_01_intro,
 	s.scene_02_greeting,
 	s.scene_03_accept_contract,
+	s.scene_04_complete_contract,
 ]
