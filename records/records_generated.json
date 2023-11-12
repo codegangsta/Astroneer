@@ -1811,6 +1811,161 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "09_WorkSatisfaction",
+            "name": "Work Satisfaction",
+            "notes": "Aria talks about her work at Atlas and how she feels about it.",
+            "topics": [
+                {
+                    "id": "09_PlayerInquiry",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "09_PlayerInquiry01",
+                            "responses": [
+                                {
+                                    "text": "Moving from a big corporation to a startup must be a big change. How do you feel about your work now?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "09_AriaResponse",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "09_AriaResponse01",
+                            "responses": [
+                                {
+                                    "text": "It's liberating. I used to follow strict guidelines, but here I get to experiment. It’s thrilling to turn my ideas into reality, even with the ups and downs."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "09_AriaResponse02",
+                            "responses": [
+                                {
+                                    "text": "The pressure's real, but it's a good kind. It pushes me to be creative, to really dive into my work. It's tough, but it’s where I see my true potential shine."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "09_PlayerResponsePraiseFreedom",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "09_PlayerResponsePraiseFreedom01",
+                            "responses": [
+                                {
+                                    "text": "That sounds empowering. Seeing your own concepts come to life must be incredibly fulfilling."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "09_PlayerResponseQuestionFreedom",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "09_PlayerResponseQuestionFreedom01",
+                            "responses": [
+                                {
+                                    "text": "Do you ever find that freedom overwhelming, without the structure of a big company?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "09_PlayerResponseAdmirePressure",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "09_PlayerResponseAdmirePressure01",
+                            "responses": [
+                                {
+                                    "text": "Using pressure as a catalyst for creativity? That’s impressive. It shows your dedication."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "09_PlayerResponseConcernPressure",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "09_PlayerResponseConcernPressure01",
+                            "responses": [
+                                {
+                                    "text": "It’s great to be driven, but don’t forget to unwind. Balance is key, right?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "09_AriaResponseToPraiseFreedom",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "09_AriaResponseToPraiseFreedom01",
+                            "responses": [
+                                {
+                                    "text": "It really is. Every project feels like a part of me is taking off. It’s personal, every win and every challenge."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "09_AriaResponseToQuestionFreedom",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "09_AriaResponseToQuestionFreedom01",
+                            "responses": [
+                                {
+                                    "text": "Sometimes, yes. But I prefer it. I thrive in this kind of environment where every day is different, and every challenge is a chance to innovate."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "09_AriaResponseToAdmirePressure",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "09_AriaResponseToAdmirePressure01",
+                            "responses": [
+                                {
+                                    "text": "Thanks, I believe in turning challenges into opportunities. It's demanding but seeing my ideas come alive? Worth it."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "09_AriaResponseToConcernPressure",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "09_AriaResponseToConcernPressure01",
+                            "responses": [
+                                {
+                                    "text": "Good advice. I try to keep a balance – a moment under the stars can be as refreshing as a day in the workshop. Keeps me grounded."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
