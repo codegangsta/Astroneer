@@ -2,7 +2,7 @@ package scenes
 
 scene_04_complete_contract: {
 	id:   "04_CompleteContract"
-	name: "Player Accepts Contract"
+	name: "Player Completes Contract"
 	topics: [
 		{
 			id:      "04_Player"

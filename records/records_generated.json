@@ -1015,7 +1015,7 @@
         },
         {
             "id": "04_CompleteContract",
-            "name": "Player Accepts Contract",
+            "name": "Player Completes Contract",
             "topics": [
                 {
                     "id": "04_Player",
@@ -1328,6 +1328,324 @@
                             "responses": [
                                 {
                                     "text": "Cozy and lavish! It's a five-star trip through space."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "05_Background",
+            "name": "Aria's Background",
+            "topics": [
+                {
+                    "id": "05_PlayerInquiry",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "05_PlayerInquiry01",
+                            "responses": [
+                                {
+                                    "text": "Can you tell me more about yourself?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "05_AriaResponse",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "05_AriaResponse01",
+                            "responses": [
+                                {
+                                    "text": "More about me? Well, let's see... I'm a product of the colonies. A tiny speck on the edge of the frontier that you won't find on any tourist brochure. The scrapyard was my playground, I dreamt of one day inventing something big and important, something that would propel humanity forward. My folks figured I'd be a mechanic, but I had my eyes on the stars and my mind on the ships that could reach them."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "05_AriaResponse02",
+                            "responses": [
+                                {
+                                    "text": "So, I made it off-world, thanks to a scholarship at the University here. It was my shot, my big break. I was going to build the future. But the corporate shipyards weren't buying what a starry-eyed colony kid was selling."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "05_AriaResponse03",
+                            "responses": [
+                                {
+                                    "text": "But then, Atlas Astronautics happened. A startup with ambition and, more importantly, a willingness to gamble on a wildcard like me. They needed someone who could think outside the proverbial box—or ship, in this case. So I jumped ship—literally—and it's been a wild ride since."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "05_AriaResponse04",
+                            "responses": [
+                                {
+                                    "text": "I'm not just building ships here. I'm building dreams—my dreams—into every hull, every thruster array. And yeah, I miss home sometimes, but this place... it's where I can make a real impact. It's where I belong."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "05_AriaResponse05",
+                            "responses": [
+                                {
+                                    "text": "And when things get too serious, I just remind myself that no matter how advanced our tech gets, we're still a bunch of primates trying to figure out how to not crash into the nearest celestial body. It's grounding, in an anti-gravity sort of way."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "05_AriaResponse06",
+                            "responses": [
+                                {
+                                    "text": "What else would you like to know?"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "06_PlayerBackground",
+            "name": "Player's Background",
+            "topics": [
+                {
+                    "id": "06_AriaInquiry",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "06_AriaInquiry01",
+                            "responses": [
+                                {
+                                    "text": "So, Cap, what's your story? Here for the thrill, the cash, or something more?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "06_PlayerResponseAmbition",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "06_PlayerResponseAmbition01",
+                            "responses": [
+                                {
+                                    "text": "I'm all about the adventure. And hey, the money's a nice bonus."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "06_PlayerResponseKinship",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "06_PlayerResponseKinship01",
+                            "responses": [
+                                {
+                                    "text": "Got big dreams, like you. I want to leave my mark out here."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "06_PlayerResponseHorizon",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "06_PlayerResponseHorizon01",
+                            "responses": [
+                                {
+                                    "text": "I'm chasing what's beyond the horizon. Always looking further."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "06_AriaResponseToAmbition",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "06_AriaResponseToAmbition01",
+                            "responses": [
+                                {
+                                    "text": "Thrills and bills, a classic mix. Just watch your back; adventure can be costly out here."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "06_AriaResponseToKinship",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "06_AriaResponseToKinship01",
+                            "responses": [
+                                {
+                                    "text": "Another star chaser, huh? Good. The galaxy's vast, and there's plenty of room for names like ours."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "06_AriaResponseToHorizon",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "06_AriaResponseToHorizon01",
+                            "responses": [
+                                {
+                                    "text": "The eternal explorer, huh? Good choice. There's more out there than we can imagine. Let's uncover it together."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "07_ColonyLife",
+            "name": "Colony Life",
+            "topics": [
+                {
+                    "id": "07_PlayerInquiry",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "07_PlayerInquiry01",
+                            "responses": [
+                                {
+                                    "text": "Growing up on a colony must have been unique. How did that shape who you are today?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "07_AriaResponse",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "07_AriaResponse01",
+                            "responses": [
+                                {
+                                    "text": "It was a mix of hardship and creativity. Building dreams out of scraps, I always knew there was more out there for me. I miss the simplicity at times, but the stars called louder than the past."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "07_AriaResponse02",
+                            "responses": [
+                                {
+                                    "text": "Life there was about making do and dreaming big. I learned to be resourceful, to see potential in everything. It's a part of me, but there's a part that always yearned for something... more."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "07_PlayerResponseAdmireImagination",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "07_PlayerResponseAdmireImagination01",
+                            "responses": [
+                                {
+                                    "text": "Sounds like it was the perfect breeding ground for your creativity and drive."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "07_PlayerResponseCuriousImagination",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "07_PlayerResponseCuriousImagination01",
+                            "responses": [
+                                {
+                                    "text": "Do you think your childhood dreams pushed you to pursue such ambitious goals?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "07_PlayerResponseAdmireResilience",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "07_PlayerResponseAdmireResilience01",
+                            "responses": [
+                                {
+                                    "text": "Your resilience is inspiring. From small beginnings to grand achievements."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "07_PlayerResponseCuriousResilience",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "07_PlayerResponseCuriousResilience01",
+                            "responses": [
+                                {
+                                    "text": "It seems like your roots gave you both the strength and vision for your journey."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "07_AriaResponseToAdmireImagination",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "07_AriaResponseToAdmireImagination01",
+                            "responses": [
+                                {
+                                    "text": "Definitely. My imagination took root there, but it always stretched towards the stars. Can't help but wonder sometimes though, about the roads not taken."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "07_AriaResponseToCuriousImagination",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "07_AriaResponseToCuriousImagination01",
+                            "responses": [
+                                {
+                                    "text": "They did. I was always reaching for the next big thing. I guess a part of me still clings to those simple days, even if I don't admit it often."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "07_AriaResponseToAdmireResilience",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "07_AriaResponseToAdmireResilience01",
+                            "responses": [
+                                {
+                                    "text": "It's been quite the journey. I've come far, but the lessons from back then keep me grounded... in a way."
                                 }
                             ]
                         }
