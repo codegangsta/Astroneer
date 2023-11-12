@@ -6,7 +6,7 @@ scene_01_intro: {
 	topics: [
 		{
 			id:      "01_AriaIntro"
-			speaker: "AriaCollins"
+			speaker: #consts.Aria
 			infos:   (#SimpleInfos & {in: {
 				prefix: "01_AriaIntro"
 				texts: [

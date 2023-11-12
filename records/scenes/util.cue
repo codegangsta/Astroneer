@@ -1,5 +1,10 @@
 package scenes
 
+#consts: {
+	Aria:   "AriaCollins"
+	Player: "Player"
+}
+
 #ID: {
 	name: string
 	idx:  int

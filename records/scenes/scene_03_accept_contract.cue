@@ -6,7 +6,7 @@ scene_03_accept_contract: {
 	topics: [
 		{
 			id:      "03_Player"
-			speaker: "Player"
+			speaker: #consts.Player
 			infos:   (#SimpleInfos & {in: {
 				prefix: "03_Player"
 				texts: [
@@ -24,7 +24,7 @@ scene_03_accept_contract: {
 		},
 		{
 			id:      "03_AriaFighter"
-			speaker: "AriaCollins"
+			speaker: #consts.Aria
 			infos:   (#SimpleInfos & {in: {
 				prefix: "03_AriaFighter"
 				texts: [
