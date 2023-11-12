@@ -15,4 +15,5 @@ scenes: [
 	s.scene_07_colony_life,
 	s.scene_08_startup,
 	s.scene_09_work_satisfaction,
+	s.scene_10_alternate_paths,
 ]
