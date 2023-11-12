@@ -40,17 +40,16 @@ begin
   for i := 0 to Pred(ElementCount(group)) do begin
     rec := ElementByIndex(group, i);
     if GetElementEditValues(rec, 'EDID') = editorID then begin
-      AddMessage('Found existing record: ' + editorID);
       Result := rec;
       Exit;
     end;
   end;
 
-    AddMessage('Creating new record: ' + editorID);
-    rec := Add(parent, signature, true);
-    SetEditorID(rec, editorID);
+  AddMessage('Creating new record: ' + editorID);
+  rec := Add(parent, signature, true);
+  SetEditorID(rec, editorID);
 
-    Result := rec;
+  Result := rec;
 end;
 
 function FindRecordByEditorID(const editorID, recordSignature: String): IInterface;
@@ -96,7 +95,6 @@ begin
   // Add fragments
   if onBegin <> '' then
   begin
-    AddMessage('Adding onBegin: ' + onBegin);
     fragment := Add(fragments, 'Fragment', True);
     SetElementEditValues(fragment, 'Unknown', '0');
     SetElementEditValues(fragment, 'ScriptName', scriptName);
@@ -105,7 +103,6 @@ begin
 
   if onEnd <> '' then
   begin
-    AddMessage('Adding onEnd: ' + onEnd);
     fragment := Add(fragments, 'Fragment', True);
     SetElementEditValues(fragment, 'Unknown', '1');
     SetElementEditValues(fragment, 'ScriptName', scriptName);
@@ -125,6 +122,10 @@ function Process(e: IInterface): Integer;
 var
     scenes: TJsonArray;
     scene: TJsonObject;
+    sceneRecord: IInterface;
+    actors: TJsonArray;
+    actorsRecord: IInterface;
+    actorRecord: IInterface;
     topics: TJsonArray;
     topic: TJsonObject;
     topicRecord: IInterface;
@@ -137,7 +138,7 @@ var
     responsesRecord: IInterface;
     responseRecord: IInterface;
     speakerRecord: IInterface;
-    sceneRecord: IInterface;
+    startSceneRecord: IInterface;
     file: IInterface;
     si: Integer;
     i: Integer;
@@ -153,12 +154,29 @@ begin
     // loop over scenes
     for si := 0 to scenes.Count -1 do begin
       scene := scenes.O[si];
+      sceneRecord := FindOrCreateChildRecord(e, 'SCEN', scene.S['id']);
+      SetElementEditValues(sceneRecord, 'FULL', scene.S['name']);
+      SetElementEditValues(sceneRecord, 'NNAM', scene.S['notes']);
+      SetElementEditValues(sceneRecord, 'PNAM', GetEditValue(e));
+
+      actors := scene.A['actors'];
+      actorsRecord := ElementByPath(sceneRecord, 'Actors');
+      if Assigned(actorsRecord) then
+        Remove(actorsRecord);
+      actorsRecord := Add(sceneRecord, 'Actors', True);
+
+      for i := 0 to actors.Count - 1 do begin
+        actorRecord := Add(actorsRecord, 'Actor', True);
+        SetElementEditValues(actorRecord, 'ALID - Alias ID', actors.I[i]);
+      end;
+
       topics := scene.A['topics'];
 
       for i := 0 to topics.Count - 1 do begin
           topic := topics.O[i];
           topicRecord := FindOrCreateChildRecord(e, 'DIAL', topic.S['id']);
           SetElementEditValues(topicRecord, 'QNAM', GetEditValue(e));
+          SetElementEditValues(topicRecord, 'FULL', topic.S['notes']);
           topicDataRecord := ElementBySignature(topicRecord, 'DATA');
 
           if not Assigned(topicDataRecord) then
@@ -174,7 +192,6 @@ begin
 
               // Set the speaker
               if topic.S['speaker'] <> '' then begin
-                  AddMessage('Setting speaker: ' + topic.S['speaker']);
                   speakerRecord := FindRecordByEditorID(topic.S['speaker'], 'NPC_');
                   if not Assigned(speakerRecord) then begin
                       AddMessage('Could not find speaker: ' + topic.S['speaker']);
@@ -186,34 +203,27 @@ begin
 
               // Set Start Scene
               if topic.S['startScene'] <> '' then begin
-                  AddMessage('Setting start scene: ' + topic.S['startScene']);
-                  sceneRecord := FindChildRecord(e, 'SCEN', topic.S['startScene']);
-                  if not Assigned(sceneRecord) then begin
+                  startSceneRecord := FindChildRecord(e, 'SCEN', topic.S['startScene']);
+                  if not Assigned(startSceneRecord) then begin
                       AddMessage('Could not find scene: ' + topic.S['startScene']);
                   end
                   else begin
-                      SetElementEditValues(infoRecord, 'TSCE', GetEditValue(sceneRecord));
+                      SetElementEditValues(infoRecord, 'TSCE', GetEditValue(startSceneRecord));
                   end;
               end;
 
               // Set start scene phase
               if topic.S['startScenePhase'] <> '' then begin
-                  AddMessage('Setting start scene phase: ' + topic.S['startScenePhase']);
                   SetElementEditValues(infoRecord, 'NAM0', topic.S['startScenePhase']);
               end;
 
               // Set VMAD script
               if topic.S['script'] <> '' then begin
-                  AddMessage('Setting script: ' + topic.S['script']);
                   AddInfoScript(infoRecord, topic.S['script'], topic.S['onBegin'], topic.S['onEnd']);
               end;
 
               // Set responses
               responses := info.A['responses'];
-              responsesRecord := ElementByName(infoRecord, 'Responses');
-              // Remove existing responses
-              if Assigned(responsesRecord) then
-                  Remove(responseRecord);
               // add new responses
               responsesRecord := Add(infoRecord, 'Responses', true);
               // Remove first element thats generated
@@ -221,7 +231,6 @@ begin
 
               for k := 0 to responses.Count - 1 do begin
                   response := responses.O[k];
-                  AddMessage('Adding response: ' + response.S['text']);
                   responseRecord := Add(responsesRecord, 'Response', true);
                   SetElementEditValues(responseRecord, 'NAM1', response.S['text']);
 

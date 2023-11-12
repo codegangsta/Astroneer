@@ -1,9 +1,10 @@
 package scenes
 
 scene_00_misc: {
-	id:    "00_Misc"
-	name:  "Miscellaneous"
-	notes: "Miscellaneous topics to be used as filler or transitions between scenes."
+	id:     "00_Misc"
+	name:   "Miscellaneous"
+	notes:  "Miscellaneous topics to be used as filler or transitions between scenes."
+	actors: #consts.Actors
 	topics: [
 		{
 			id:      "00_AriaGreeting"
@@ -34,7 +35,7 @@ scene_00_misc: {
 			speaker: #consts.Aria
 			infos:   (#SimpleInfos & {in: {
 				prefix: "00_AriaAffirmative"
-				texts: ["Sure thing!", "Yes!", "You got it!", "Absolutely!", "Of course!"]
+				texts: ["Sure things!", "Yes!", "You got it!", "Absolutely!", "Of course!"]
 			}}).out
 		},
 		{

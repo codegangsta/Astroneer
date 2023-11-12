@@ -1,9 +1,10 @@
 package scenes
 
 scene_10_alternate_paths: {
-	id:    "10_AlternatePaths"
-	name:  "Alternate Paths"
-	notes: "In this scene, Aria reflects on her career choices, showing a blend of confidence in her decision and awareness of what she's left behind. The player's responses probe deeper, revealing Aria's introspective side and her commitment to her path despite acknowledging the trade-offs."
+	id:     "10_AlternatePaths"
+	name:   "Alternate Paths"
+	notes:  "In this scene, Aria reflects on her career choices, showing a blend of confidence in her decision and awareness of what she's left behind. The player's responses probe deeper, revealing Aria's introspective side and her commitment to her path despite acknowledging the trade-offs."
+	actors: #consts.Actors
 	topics: [
 		{
 			id:      "10_PlayerInquiry"

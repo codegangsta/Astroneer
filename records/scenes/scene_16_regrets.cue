@@ -1,9 +1,10 @@
 package scenes
 
 scene_16_regrets: {
-	id:    "16_regrets"
-	name:  "Aria Reflects on Family and Regrets"
-	notes: "This emotionally complex scene starts with Aria's rare moment of vulnerability about her family, which she either opens up more about or distances herself from, depending on the player's approach."
+	id:     "16_Regrets"
+	name:   "Aria Reflects on Family and Regrets"
+	notes:  "This emotionally complex scene starts with Aria's rare moment of vulnerability about her family, which she either opens up more about or distances herself from, depending on the player's approach."
+	actors: #consts.Actors
 	topics: [
 		{
 			id:      "16_PlayerInquiry"

@@ -1,8 +1,9 @@
 package scenes
 
 scene_18_abandon_contract: {
-	id:   "18_AbandonContract"
-	name: "Abandon Contract"
+	id:     "18_AbandonContract"
+	name:   "Abandon Contract"
+	actors: #consts.Actors
 	topics: [
 		{
 			id:      "18_PlayerInquiry"

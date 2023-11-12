@@ -1,9 +1,10 @@
 package scenes
 
 scene_02_greeting: {
-	id:    "02_Greeting"
-	name:  "Aria Greets the Player"
-	notes: "The player has just accepted a mission from the mission board and has walked over to the Atlas Astronautics intercom to speak with Aria. Upon pushing the 'Call' button, Aria responds from the intercom. This response is typically played after the introductory quest, so Aria has already been introduced to the player."
+	id:     "02_Greeting"
+	name:   "Aria Greets the Player"
+	notes:  "The player has just accepted a mission from the mission board and has walked over to the Atlas Astronautics intercom to speak with Aria. Upon pushing the 'Call' button, Aria responds from the intercom. This response is typically played after the introductory quest, so Aria has already been introduced to the player."
+	actors: #consts.Actors
 	topics: [
 		{
 			id:      "02_AriaGreeting"

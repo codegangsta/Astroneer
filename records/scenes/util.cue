@@ -1,8 +1,11 @@
 package scenes
 
 #consts: {
-	Aria:   "AriaCollins"
-	Player: "Player"
+	Aria:        "AriaCollins"
+	Player:      "Player"
+	AliasAria:   0
+	AliasPlayer: -2
+	Actors: [AliasPlayer]
 }
 
 #ID: {

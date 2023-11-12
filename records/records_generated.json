@@ -4,6 +4,9 @@
             "id": "00_Misc",
             "name": "Miscellaneous",
             "notes": "Miscellaneous topics to be used as filler or transitions between scenes.",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "00_AriaGreeting",
@@ -151,7 +154,7 @@
                             "id": "00_AriaAffirmative01",
                             "responses": [
                                 {
-                                    "text": "Sure thing!"
+                                    "text": "Sure things!"
                                 }
                             ]
                         },
@@ -424,6 +427,9 @@
         {
             "id": "01_Intro",
             "name": "Aria is Introduced to the Player",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "01_AriaIntro",
@@ -485,6 +491,9 @@
             "id": "02_Greeting",
             "name": "Aria Greets the Player",
             "notes": "The player has just accepted a mission from the mission board and has walked over to the Atlas Astronautics intercom to speak with Aria. Upon pushing the 'Call' button, Aria responds from the intercom. This response is typically played after the introductory quest, so Aria has already been introduced to the player.",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "02_AriaGreeting",
@@ -704,6 +713,9 @@
             "id": "03_AcceptContract",
             "name": "Player Accepts Contract",
             "notes": "The player has accepted a mission from the mission board, and has walked over to the Atlas Astronautics intercom to speak with Aria. Aria greets the player, then the player chooses to ask about the contract they've just accepted. Based on the type of Ship contract, a randomly generated response from Aria will be chosen. The intent is to have enough dialog and variety that each mission feels fresh and new",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "03_Player",
@@ -1019,6 +1031,9 @@
             "id": "04_CompleteContract",
             "name": "Player Completes Contract",
             "notes": "The player has finished building the ship according to the contract specs, and is ready to turn it in to Aria.",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "04_Player",
@@ -1341,6 +1356,9 @@
         {
             "id": "05_Background",
             "name": "Aria's Background",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "05_PlayerInquiry",
@@ -1415,6 +1433,9 @@
         {
             "id": "06_PlayerBackground",
             "name": "Player's Background",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "06_AriaInquiry",
@@ -1520,6 +1541,9 @@
             "id": "07_ColonyLife",
             "name": "Colony Life",
             "notes": "In this scene, Aria fondly recalls her upbringing in a space colony, subtly hinting at the contrast between her ambitious career path and the simpler life she left behind. Her responses subtly reflect her inner conflict, though she remains somewhat steadfast in her choices.",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "07_PlayerInquiry",
@@ -1661,6 +1685,9 @@
             "id": "08_Startup",
             "name": "Startup vs Corporations",
             "notes": "In this scene, Aria explains her choice of leaving a stable corporate job for a dynamic startup environment, subtly indicating her personal drive and aspiration despite the inherent risks.",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "08_PlayerInquiry",
@@ -1816,6 +1843,9 @@
             "id": "09_WorkSatisfaction",
             "name": "Work Satisfaction",
             "notes": "Aria talks about her work at Atlas and how she feels about it.",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "09_PlayerInquiry",
@@ -1971,6 +2001,9 @@
             "id": "10_AlternatePaths",
             "name": "Alternate Paths",
             "notes": "In this scene, Aria reflects on her career choices, showing a blend of confidence in her decision and awareness of what she's left behind. The player's responses probe deeper, revealing Aria's introspective side and her commitment to her path despite acknowledging the trade-offs.",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "10_PlayerInquiry",
@@ -2126,6 +2159,9 @@
             "id": "11_Reflect",
             "name": "Reflecting on Personal Growth",
             "notes": "In this scene, Aria starts off guarded, her usual self-assurance masking deeper uncertainties. As the player engages, she gradually reveals more of her introspective side.",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "11_AriaInquiry",
@@ -2264,6 +2300,9 @@
             "id": "12_BadNews",
             "name": "Bad News from Home",
             "notes": "Aria is subdued, and the player can sense something is wrong. Aria reveals that her sister is ill, and she's feeling the distance from home. The player can offer support and encouragement.",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "12_AriaInquiry",
@@ -2663,6 +2702,9 @@
             "id": "13_HiddenPassions",
             "name": "Hidden Passions - Humble Revelations",
             "notes": "Aria reveals her hobbies and the joy of learning for its own sake.",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "13_PlayerInquiry",
@@ -2821,6 +2863,9 @@
         {
             "id": "14_Legacy",
             "name": "Legacy and Impact",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "14_PlayerInquiry",
@@ -2981,6 +3026,9 @@
             "id": "15_Sacrifices",
             "name": "Sacrifices",
             "notes": "This scene delves into the complex nature of Aria's career-driven life, challenging her to confront the personal costs and momentarily revealing the vulnerability behind her confident facade.",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "15_PlayerInquiry",
@@ -3137,9 +3185,12 @@
             ]
         },
         {
-            "id": "16_regrets",
+            "id": "16_Regrets",
             "name": "Aria Reflects on Family and Regrets",
             "notes": "This emotionally complex scene starts with Aria's rare moment of vulnerability about her family, which she either opens up more about or distances herself from, depending on the player's approach.",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "16_PlayerInquiry",
@@ -3299,6 +3350,9 @@
         {
             "id": "17_Intercom",
             "name": "Intercom",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "17_PlayerInquiry",
@@ -3357,6 +3411,9 @@
         {
             "id": "18_AbandonContract",
             "name": "Abandon Contract",
+            "actors": [
+                -2
+            ],
             "topics": [
                 {
                     "id": "18_PlayerInquiry",

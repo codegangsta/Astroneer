@@ -41,6 +41,8 @@ package records
 	name: string
 	// Optional notes for the scene
 	notes?: string
+	// Actor aliases
+	actors: [...int]
 	// List of phases in the scene
 	topics: [...#Topic]
 }

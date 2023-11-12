@@ -1,8 +1,9 @@
 package scenes
 
 scene_05_background: {
-	id:   "05_Background"
-	name: "Aria's Background"
+	id:     "05_Background"
+	name:   "Aria's Background"
+	actors: #consts.Actors
 	topics: [
 		{
 			id:      "05_PlayerInquiry"

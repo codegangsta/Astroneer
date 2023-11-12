@@ -1,9 +1,10 @@
 package scenes
 
 scene_07_colony_life: {
-	id:    "07_ColonyLife"
-	name:  "Colony Life"
-	notes: "In this scene, Aria fondly recalls her upbringing in a space colony, subtly hinting at the contrast between her ambitious career path and the simpler life she left behind. Her responses subtly reflect her inner conflict, though she remains somewhat steadfast in her choices."
+	id:     "07_ColonyLife"
+	name:   "Colony Life"
+	notes:  "In this scene, Aria fondly recalls her upbringing in a space colony, subtly hinting at the contrast between her ambitious career path and the simpler life she left behind. Her responses subtly reflect her inner conflict, though she remains somewhat steadfast in her choices."
+	actors: #consts.Actors
 	topics: [
 		{
 			id:      "07_PlayerInquiry"

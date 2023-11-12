@@ -1,9 +1,10 @@
 package scenes
 
 scene_08_startup: {
-	id:    "08_Startup"
-	name:  "Startup vs Corporations"
-	notes: "In this scene, Aria explains her choice of leaving a stable corporate job for a dynamic startup environment, subtly indicating her personal drive and aspiration despite the inherent risks."
+	id:     "08_Startup"
+	name:   "Startup vs Corporations"
+	notes:  "In this scene, Aria explains her choice of leaving a stable corporate job for a dynamic startup environment, subtly indicating her personal drive and aspiration despite the inherent risks."
+	actors: #consts.Actors
 	topics: [
 		{
 			id:      "08_PlayerInquiry"

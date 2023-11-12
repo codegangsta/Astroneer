@@ -1,8 +1,9 @@
 package scenes
 
 scene_14_legacy: {
-	id:   "14_Legacy"
-	name: "Legacy and Impact"
+	id:     "14_Legacy"
+	name:   "Legacy and Impact"
+	actors: #consts.Actors
 	topics: [
 		{
 			id:      "14_PlayerInquiry"

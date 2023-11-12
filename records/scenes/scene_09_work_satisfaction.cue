@@ -1,9 +1,10 @@
 package scenes
 
 scene_09_work_satisfaction: {
-	id:    "09_WorkSatisfaction"
-	name:  "Work Satisfaction"
-	notes: "Aria talks about her work at Atlas and how she feels about it."
+	id:     "09_WorkSatisfaction"
+	name:   "Work Satisfaction"
+	notes:  "Aria talks about her work at Atlas and how she feels about it."
+	actors: #consts.Actors
 	topics: [
 		{
 			id:      "09_PlayerInquiry"

@@ -1,9 +1,10 @@
 package scenes
 
 scene_13_hidden_passions: {
-	id:    "13_HiddenPassions"
-	name:  "Hidden Passions - Humble Revelations"
-	notes: "Aria reveals her hobbies and the joy of learning for its own sake."
+	id:     "13_HiddenPassions"
+	name:   "Hidden Passions - Humble Revelations"
+	notes:  "Aria reveals her hobbies and the joy of learning for its own sake."
+	actors: #consts.Actors
 	topics: [
 		{
 			id:      "13_PlayerInquiry"

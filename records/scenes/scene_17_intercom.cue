@@ -1,8 +1,9 @@
 package scenes
 
 scene_17_intercom: {
-	id:   "17_Intercom"
-	name: "Intercom"
+	id:     "17_Intercom"
+	name:   "Intercom"
+	actors: #consts.Actors
 	topics: [
 		{
 			id:      "17_PlayerInquiry"
