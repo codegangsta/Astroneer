@@ -19,13 +19,19 @@ scene_13_hidden_passions: {
 		{
 			id:      "13_AriaResponse"
 			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
-				prefix: "13_AriaResponse"
-				texts: [
-					"I've taken up cooking. I'm no chef, mind you. Half the time, it's more of an experiment than a meal. But there's something satisfying about creating with your hands, even if it's just a quirky sandwich.",
-					"And I dabble in amateur astronomy. I’m not particularly great at it – I can barely tell the constellations apart! But gazing at the stars, not as a designer but just as myself, it's kind of liberating.",
-				]
-			}}).out
+			infos: [
+				{
+					id: "13_AriaResponse01"
+					responses: [
+						{
+							text: "I've taken up cooking. I'm no chef, mind you. Half the time, it's more of an experiment than a meal. But there's something satisfying about creating with your hands, even if it's just a quirky sandwich."
+						},
+						{
+							text: "And I dabble in amateur astronomy. I’m not particularly great at it – I can barely tell the constellations apart! But gazing at the stars, not as a designer but just as myself, it's kind of liberating."
+						},
+					]
+				},
+			]
 		},
 		{
 			id:      "13_PlayerResponseEncouraging"

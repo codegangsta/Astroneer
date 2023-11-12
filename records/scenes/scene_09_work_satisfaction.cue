@@ -19,13 +19,19 @@ scene_09_work_satisfaction: {
 		{
 			id:      "09_AriaResponse"
 			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
-				prefix: "09_AriaResponse"
-				texts: [
-					"It's liberating. I used to follow strict guidelines, but here I get to experiment. It’s thrilling to turn my ideas into reality, even with the ups and downs.",
-					"The pressure's real, but it's a good kind. It pushes me to be creative, to really dive into my work. It's tough, but it’s where I see my true potential shine.",
-				]
-			}}).out
+			infos: [
+				{
+					id: "09_AriaResponse01"
+					responses: [
+						{
+							text: "It's liberating. I used to follow strict guidelines, but here I get to experiment. It’s thrilling to turn my ideas into reality, even with the ups and downs."
+						},
+						{
+							text: "The pressure's real, but it's a good kind. It pushes me to be creative, to really dive into my work. It's tough, but it’s where I see my true potential shine."
+						},
+					]
+				},
+			]
 		},
 		{
 			id:      "09_PlayerResponsePraiseFreedom"

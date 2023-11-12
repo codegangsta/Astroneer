@@ -19,13 +19,20 @@ scene_08_startup: {
 		{
 			id:      "08_AriaResponse"
 			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
-				prefix: "08_AriaResponse"
-				texts: [
-					"In corporations, you're a cog in a vast machine. I needed more than that. I wanted to create, to have my designs mean something more than just profit.",
-					"Atlas Astronautics? It's uncharted territory, full of risk, sure, but alive with potential. It's not just a job; it's a chance to make real impact, to innovate.",
-				]
-			}}).out
+			infos: [
+				{
+					id: "08_AriaResponse01"
+					responses: [
+						{
+							text: "In corporations, you're a cog in a vast machine. I needed more than that. I wanted to create, to have my designs mean something more than just profit."
+						},
+						{
+							text: "Atlas Astronautics? It's uncharted territory, full of risk, sure, but alive with potential. It's not just a job; it's a chance to make real impact, to innovate."
+						},
+
+					]
+				},
+			]
 		},
 		{
 			id:      "08_PlayerResponseUnderstandingCorporate"

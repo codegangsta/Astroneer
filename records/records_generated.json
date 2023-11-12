@@ -1358,46 +1358,18 @@
                             "responses": [
                                 {
                                     "text": "More about me? Well, let's see... I'm a product of the colonies. A tiny speck on the edge of the frontier that you won't find on any tourist brochure. The scrapyard was my playground, I dreamt of one day inventing something big and important, something that would propel humanity forward. My folks figured I'd be a mechanic, but I had my eyes on the stars and my mind on the ships that could reach them."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "05_AriaResponse02",
-                            "responses": [
+                                },
                                 {
                                     "text": "So, I made it off-world, thanks to a scholarship at the University here. It was my shot, my big break. I was going to build the future. But the corporate shipyards weren't buying what a starry-eyed colony kid was selling."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "05_AriaResponse03",
-                            "responses": [
+                                },
                                 {
                                     "text": "But then, Atlas Astronautics happened. A startup with ambition and, more importantly, a willingness to gamble on a wildcard like me. They needed someone who could think outside the proverbial box—or ship, in this case. So I jumped ship—literally—and it's been a wild ride since."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "05_AriaResponse04",
-                            "responses": [
+                                },
                                 {
                                     "text": "I'm not just building ships here. I'm building dreams—my dreams—into every hull, every thruster array. And yeah, I miss home sometimes, but this place... it's where I can make a real impact. It's where I belong."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "05_AriaResponse05",
-                            "responses": [
+                                },
                                 {
                                     "text": "And when things get too serious, I just remind myself that no matter how advanced our tech gets, we're still a bunch of primates trying to figure out how to not crash into the nearest celestial body. It's grounding, in an anti-gravity sort of way."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "05_AriaResponse06",
-                            "responses": [
-                                {
-                                    "text": "What else would you like to know?"
                                 }
                             ]
                         }
@@ -1543,12 +1515,7 @@
                             "responses": [
                                 {
                                     "text": "It was a mix of hardship and creativity. Building dreams out of scraps, I always knew there was more out there for me. I miss the simplicity at times, but the stars called louder than the past."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "07_AriaResponse02",
-                            "responses": [
+                                },
                                 {
                                     "text": "Life there was about making do and dreaming big. I learned to be resourceful, to see potential in everything. It's a part of me, but there's a part that always yearned for something... more."
                                 }
@@ -1687,12 +1654,7 @@
                             "responses": [
                                 {
                                     "text": "In corporations, you're a cog in a vast machine. I needed more than that. I wanted to create, to have my designs mean something more than just profit."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "08_AriaResponse02",
-                            "responses": [
+                                },
                                 {
                                     "text": "Atlas Astronautics? It's uncharted territory, full of risk, sure, but alive with potential. It's not just a job; it's a chance to make real impact, to innovate."
                                 }
@@ -1845,12 +1807,7 @@
                             "responses": [
                                 {
                                     "text": "It's liberating. I used to follow strict guidelines, but here I get to experiment. It’s thrilling to turn my ideas into reality, even with the ups and downs."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "09_AriaResponse02",
-                            "responses": [
+                                },
                                 {
                                     "text": "The pressure's real, but it's a good kind. It pushes me to be creative, to really dive into my work. It's tough, but it’s where I see my true potential shine."
                                 }
@@ -2003,12 +1960,7 @@
                             "responses": [
                                 {
                                     "text": "Sometimes, I think about it. The corporate route would've been smoother, sure. But then I solve a tough design problem or see my ideas take flight, and I know I chose right. It's these moments that validate my decision."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "10_AriaResponse02",
-                            "responses": [
+                                },
                                 {
                                     "text": "The 'what ifs' used to bug me more. What if I took the safer route, climbed the corporate ladder? But I prefer the roads less traveled. It’s uncertain, but it feels real, and the rewards are mine to cherish."
                                 }
@@ -2704,12 +2656,7 @@
                             "responses": [
                                 {
                                     "text": "I've taken up cooking. I'm no chef, mind you. Half the time, it's more of an experiment than a meal. But there's something satisfying about creating with your hands, even if it's just a quirky sandwich."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "13_AriaResponse02",
-                            "responses": [
+                                },
                                 {
                                     "text": "And I dabble in amateur astronomy. I’m not particularly great at it – I can barely tell the constellations apart! But gazing at the stars, not as a designer but just as myself, it's kind of liberating."
                                 }
@@ -2866,12 +2813,7 @@
                             "responses": [
                                 {
                                     "text": "Legacy? I'm here to revolutionize space travel. To be a name that changed the industry, not just a footnote in its history."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "14_AriaResponse02",
-                            "responses": [
+                                },
                                 {
                                     "text": "But it's not just about making a name. It's about today's work impacting tomorrow. If my ships can inspire or protect, then I've done my job."
                                 }
@@ -3022,20 +2964,16 @@
                 {
                     "id": "15_AriaResponse",
                     "speaker": "AriaCollins",
+                    "notes": "There's an edge to her voice. ",
                     "infos": [
                         {
                             "id": "15_AriaResponse01",
                             "responses": [
                                 {
                                     "text": "Sacrifice is part of the game. I’ve let go of the conventional, sure. But what I’m doing here... it’s worth more than any traditional path."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "15_AriaResponse02",
-                            "responses": [
+                                },
                                 {
-                                    "text": "There's an edge to her voice. I’ve traded simplicity for complexity, and I don't regret it. I’m not one for stillness; I need the rush of creation, of discovery."
+                                    "text": "I’ve traded simplicity for complexity, and I don't regret it. I’m not one for stillness; I need the rush of creation, of discovery."
                                 }
                             ]
                         }
@@ -3191,12 +3129,7 @@
                             "responses": [
                                 {
                                     "text": "It's... it's been hard. I've been so wrapped up in my work, I've let those connections fade. It's one of those things you don't notice until it hits you."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "16_AriaResponse02",
-                            "responses": [
+                                },
                                 {
                                     "text": "I left for the stars so young, so eager. I told myself it was for the greater good, but... I missed so much back home. It's a silence that's grown too loud to ignore."
                                 }
@@ -3352,28 +3285,13 @@
                             "responses": [
                                 {
                                     "text": "Ah, well, the workshop's in full reno mode. Picture this: a rogue drone, a misplaced laser cutter, and poof—suddenly you're embracing the minimalist aesthetic. Who knew drones were such critics of industrial design?"
-                                }
-                            ]
-                        },
-                        {
-                            "id": "17_AriaResponse02",
-                            "responses": [
+                                },
                                 {
                                     "text": "Which means I'm marooned in my apartment, turning ship schematics and not much else. I've memorized every crack in the ceiling and named all my plant life. They're terrible conversationalists, by the way."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "17_AriaResponse03",
-                            "responses": [
+                                },
                                 {
                                     "text": "Working remote's the new rage, they say. It's all fun and games until you realize your fridge doesn't stock itself and your cat's been the boss all along. But hey, at least the commute's a breeze!"
-                                }
-                            ]
-                        },
-                        {
-                            "id": "17_AriaResponse04",
-                            "responses": [
+                                },
                                 {
                                     "text": "Anyway, enough about my four-wall odyssey. Let's get back to spaceships and stars—because if I stare at this paint dry any longer, I might just start talking back to it."
                                 }
@@ -3413,28 +3331,13 @@
                             "responses": [
                                 {
                                     "text": "No problem, Cap! Not every ship is a perfect match. I'll find this one a new captain."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "18_AriaResponse02",
-                            "responses": [
+                                },
                                 {
                                     "text": "I'm updating the mission board right now. Let's find you a project that's more your speed."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "18_AriaResponse03",
-                            "responses": [
+                                },
                                 {
                                     "text": "Sometimes a detour is part of the journey. Let's get you on a path that feels right."
-                                }
-                            ]
-                        },
-                        {
-                            "id": "18_AriaResponse04",
-                            "responses": [
+                                },
                                 {
                                     "text": "Keep your chin up. Space is vast, and there's always something else out there for you."
                                 }

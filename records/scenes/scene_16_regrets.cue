@@ -20,13 +20,19 @@ scene_16_regrets: {
 			id:      "16_AriaResponse"
 			speaker: #consts.Aria
 			notes:   "Aria's facade momentarily slips, revealing a raw, emotional undercurrent."
-			infos:   (#SimpleInfos & {in: {
-				prefix: "16_AriaResponse"
-				texts: [
-					"It's... it's been hard. I've been so wrapped up in my work, I've let those connections fade. It's one of those things you don't notice until it hits you.",
-					"I left for the stars so young, so eager. I told myself it was for the greater good, but... I missed so much back home. It's a silence that's grown too loud to ignore.",
-				]
-			}}).out
+			infos: [
+				{
+					id: "16_AriaResponse01"
+					responses: [
+						{
+							text: "It's... it's been hard. I've been so wrapped up in my work, I've let those connections fade. It's one of those things you don't notice until it hits you."
+						},
+						{
+							text: "I left for the stars so young, so eager. I told myself it was for the greater good, but... I missed so much back home. It's a silence that's grown too loud to ignore."
+						},
+					]
+				},
+			]
 		},
 		{
 			id:      "16_PlayerResponseCompassionate"

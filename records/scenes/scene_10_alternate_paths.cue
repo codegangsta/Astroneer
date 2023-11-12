@@ -19,13 +19,19 @@ scene_10_alternate_paths: {
 		{
 			id:      "10_AriaResponse"
 			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
-				prefix: "10_AriaResponse"
-				texts: [
-					"Sometimes, I think about it. The corporate route would've been smoother, sure. But then I solve a tough design problem or see my ideas take flight, and I know I chose right. It's these moments that validate my decision.",
-					"The 'what ifs' used to bug me more. What if I took the safer route, climbed the corporate ladder? But I prefer the roads less traveled. It’s uncertain, but it feels real, and the rewards are mine to cherish.",
-				]
-			}}).out
+			infos: [
+				{
+					id: "10_AriaResponse01"
+					responses: [
+						{
+							text: "Sometimes, I think about it. The corporate route would've been smoother, sure. But then I solve a tough design problem or see my ideas take flight, and I know I chose right. It's these moments that validate my decision."
+						},
+						{
+							text: "The 'what ifs' used to bug me more. What if I took the safer route, climbed the corporate ladder? But I prefer the roads less traveled. It’s uncertain, but it feels real, and the rewards are mine to cherish."
+						},
+					]
+				},
+			]
 		},
 		{
 			id:      "10_PlayerResponseEncouraging"

@@ -19,13 +19,19 @@ scene_07_colony_life: {
 		{
 			id:      "07_AriaResponse"
 			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
-				prefix: "07_AriaResponse"
-				texts: [
-					"It was a mix of hardship and creativity. Building dreams out of scraps, I always knew there was more out there for me. I miss the simplicity at times, but the stars called louder than the past.",
-					"Life there was about making do and dreaming big. I learned to be resourceful, to see potential in everything. It's a part of me, but there's a part that always yearned for something... more.",
-				]
-			}}).out
+			infos: [
+				{
+					id: "07_AriaResponse01"
+					responses: [
+						{
+							text: "It was a mix of hardship and creativity. Building dreams out of scraps, I always knew there was more out there for me. I miss the simplicity at times, but the stars called louder than the past."
+						},
+						{
+							text: "Life there was about making do and dreaming big. I learned to be resourceful, to see potential in everything. It's a part of me, but there's a part that always yearned for something... more."
+						},
+					]
+				},
+			]
 		},
 		{
 			id:      "07_PlayerResponseAdmireImagination"

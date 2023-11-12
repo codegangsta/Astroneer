@@ -19,14 +19,20 @@ scene_15_sacrifices: {
 		{
 			id:      "15_AriaResponse"
 			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
-				prefix: "15_AriaResponse"
-				notes:  "With a flicker of defensiveness, Aria responds."
-				texts: [
-					"Sacrifice is part of the game. I’ve let go of the conventional, sure. But what I’m doing here... it’s worth more than any traditional path.",
-					"There's an edge to her voice. I’ve traded simplicity for complexity, and I don't regret it. I’m not one for stillness; I need the rush of creation, of discovery.",
-				]
-			}}).out
+			notes:   "There's an edge to her voice. "
+			infos: [
+				{
+					id: "15_AriaResponse01"
+					responses: [
+						{
+							text: "Sacrifice is part of the game. I’ve let go of the conventional, sure. But what I’m doing here... it’s worth more than any traditional path."
+						},
+						{
+							text: "I’ve traded simplicity for complexity, and I don't regret it. I’m not one for stillness; I need the rush of creation, of discovery."
+						},
+					]
+				},
+			]
 		},
 		{
 			id:      "15_PlayerResponseUnderstanding"

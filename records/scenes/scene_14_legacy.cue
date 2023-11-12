@@ -19,13 +19,19 @@ scene_14_legacy: {
 			id:      "14_AriaResponse"
 			speaker: #consts.Aria
 			notes:   "Aria's voice carries a mix of passion and a hint of defensiveness."
-			infos:   (#SimpleInfos & {in: {
-				prefix: "14_AriaResponse"
-				texts: [
-					"Legacy? I'm here to revolutionize space travel. To be a name that changed the industry, not just a footnote in its history.",
-					"But it's not just about making a name. It's about today's work impacting tomorrow. If my ships can inspire or protect, then I've done my job.",
-				]
-			}}).out
+			infos: [
+				{
+					id: "14_AriaResponse01"
+					responses: [
+						{
+							text: "Legacy? I'm here to revolutionize space travel. To be a name that changed the industry, not just a footnote in its history."
+						},
+						{
+							text: "But it's not just about making a name. It's about today's work impacting tomorrow. If my ships can inspire or protect, then I've done my job."
+						},
+					]
+				},
+			]
 		},
 		{
 			id:      "14_PlayerResponseSupport"
