@@ -1,23 +1,8 @@
 {
-    "topics": [
+    "scenes": [
         {
-            "id": "DialogueTest",
-            "speaker": "AriaCollins",
-            "startScene": "Scene_Aria_Greet",
-            "startScenePhase": "TestPhase",
-            "script": "Astroneer:Dialog",
-            "onBegin": "OnBegin",
-            "onEnd": "OnBegin",
-            "infos": [
-                {
-                    "id": "DialogueTest01",
-                    "responses": [
-                        {
-                            "text": "Hello world"
-                        }
-                    ]
-                }
-            ]
+            "id": "00_Misc",
+            "topics": []
         }
     ]
 }
