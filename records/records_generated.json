@@ -700,6 +700,190 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "id": "03_AriaExplorer",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "03_AriaExplorer01",
+                            "responses": [
+                                {
+                                    "text": "An explorer's waiting. It's got more miles than my coffee machine and twice the untapped potential."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaExplorer02",
+                            "responses": [
+                                {
+                                    "text": "I’ve got an explorer that’s seen galaxies galore. Ready to turn it into a space legend?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaExplorer03",
+                            "responses": [
+                                {
+                                    "text": "There's a research ship that's been flirting with black holes. Needs a bit of your charm now."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaExplorer04",
+                            "responses": [
+                                {
+                                    "text": "This explorer's got wanderlust. Think you can make it the envy of the cosmos?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaExplorer05",
+                            "responses": [
+                                {
+                                    "text": "Here’s an explorer that's craving adventure. Ready to be its genie?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "03_AriaHauler",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "03_AriaHauler01",
+                            "responses": [
+                                {
+                                    "text": "Got a hauler that's been lugging more than cargo. Time to jazz up its routine."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaHauler02",
+                            "responses": [
+                                {
+                                    "text": "There's a sturdy hauler here. Could use a touch of pizzazz. Fancy giving it some sparkle?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaHauler03",
+                            "responses": [
+                                {
+                                    "text": "Here's a freighter with dreams of being a starship. Think you can grant its wish?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaHauler04",
+                            "responses": [
+                                {
+                                    "text": "This old freighter's solid but could use some fun. How about disco lights in the cargo bay?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaHauler05",
+                            "responses": [
+                                {
+                                    "text": "There’s a hauler here with space to spare. Maybe add a bowling alley?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "03_AriaInterceptor",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "03_AriaInterceptor01",
+                            "responses": [
+                                {
+                                    "text": "Interceptor in the bay is ready for some zing. Think you can make it zoom and boom?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaInterceptor02",
+                            "responses": [
+                                {
+                                    "text": "Got an interceptor that’s quick but not slick. Fancy giving it a secret identity?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaInterceptor03",
+                            "responses": [
+                                {
+                                    "text": "There’s a need-for-speed ship here. Think you can make it go 'vroom' with style?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaInterceptor04",
+                            "responses": [
+                                {
+                                    "text": "An interceptor's lined up. It’s fast, but can you make it furious?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaInterceptor05",
+                            "responses": [
+                                {
+                                    "text": "Here's a racer that's been dreaming of rocket boosters. Fancy turning it into a speed demon?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "03_AriaLuxury",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "03_AriaLuxury01",
+                            "responses": [
+                                {
+                                    "text": "There's a luxury cruiser that's more plain Jane than star queen. Ready for a royal makeover?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaLuxury02",
+                            "responses": [
+                                {
+                                    "text": "Got a fancy vessel that's feeling a bit old-fashioned. Time to bring it into the space age?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaLuxury03",
+                            "responses": [
+                                {
+                                    "text": "There’s a floating five-star hotel here. Think you can add a sixth star?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaLuxury04",
+                            "responses": [
+                                {
+                                    "text": "Ever fancied decking out a spaceship like a Hollywood mansion? Here’s your chance."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaLuxury05",
+                            "responses": [
+                                {
+                                    "text": "Got a luxury ship here that's secretly a diva. Ready to dress it for the red carpet?"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
