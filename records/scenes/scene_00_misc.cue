@@ -1,331 +1,81 @@
 package scenes
 
 scene_00_misc: {
-	id: "00_Misc"
+	id:    "00_Misc"
+	name:  "Miscellaneous"
+	notes: "Miscellaneous topics to be used as filler or transitions between scenes."
 	topics: [
 		{
 			id:      "00_AriaGreeting"
 			speaker: "AriaCollins"
-			infos: [
-				{
-					id: "00_AriaGreeting01"
-					responses: [
-						{text: "Hey, Cap!"},
-					]
-				},
-				{
-					id: "00_AriaGreeting02"
-					responses: [
-						{text: "Back again?"},
-					]
-				},
-				{
-					id: "00_AriaGreeting03"
-					responses: [
-						{text: "What's up?"},
-					]
-				},
-				{
-					id: "00_AriaGreeting04"
-					responses: [
-						{text: "You're here!"},
-					]
-				},
-				{
-					id: "00_AriaGreeting05"
-					responses: [
-						{text: "Hello!"},
-					]
-				},
-			]
+			infos:   (#SimpleInfos & {in: {
+				prefix: "00_AriaGreeting"
+				texts: ["Hey, Cap!", "Back again?", "What's up?", "You're here!", "Hello!"]
+			}}).out
 		},
 		{
 			id:      "00_AriaGoodbye"
 			speaker: "AriaCollins"
-			infos: [
-				{
-					id: "00_AriaGoodbye01"
-					responses: [
-						{text: "Catch ya!"},
-					]
-				},
-				{
-					id: "00_AriaGoodbye02"
-					responses: [
-						{text: "Fly safe!"},
-					]
-				},
-				{
-					id: "00_AriaGoodbye03"
-					responses: [
-						{text: "Later!"},
-					]
-				},
-				{
-					id: "00_AriaGoodbye04"
-					responses: [
-						{text: "Good luck!"},
-					]
-				},
-				{
-					id: "00_AriaGoodbye05"
-					responses: [
-						{text: "Signing off!"},
-					]
-				},
-			]
+			infos:   (#SimpleInfos & {in: {
+				prefix: "00_AriaGoodbye"
+				texts: ["Catch ya!", "Fly safe!", "Later!", "Good luck!", "Signing off!"]
+			}}).out
 		},
 		{
 			id:      "00_AriaNegative"
 			speaker: "AriaCollins"
-			infos: [
-				{
-					id: "00_AriaNegative01"
-					responses: [
-						{text: "No go."},
-					]
-				},
-				{
-					id: "00_AriaNegative02"
-					responses: [
-						{text: "That's a no."},
-					]
-				},
-				{
-					id: "00_AriaNegative03"
-					responses: [
-						{text: "Won't work."},
-					]
-				},
-				{
-					id: "00_AriaNegative04"
-					responses: [
-						{text: "Can't do it."},
-					]
-				},
-				{
-					id: "00_AriaNegative05"
-					responses: [
-						{text: "Nope."},
-					]
-				},
-			]
+			infos:   (#SimpleInfos & {in: {
+				prefix: "00_AriaNegative"
+				texts: ["No go.", "That's a no.", "Won't work.", "Can't do it.", "Nope."]
+			}}).out
 		},
 		{
 			id:      "00_AriaAffirmative"
 			speaker: "AriaCollins"
-			infos: [
-				{
-					id: "00_AriaAffirmative01"
-					responses: [
-						{text: "Sure thing!"},
-					]
-				},
-				{
-					id: "00_AriaAffirmative02"
-					responses: [
-						{text: "Yes!"},
-					]
-				},
-				{
-					id: "00_AriaAffirmative03"
-					responses: [
-						{text: "You got it!"},
-					]
-				},
-				{
-					id: "00_AriaAffirmative04"
-					responses: [
-						{text: "Absolutely!"},
-					]
-				},
-				{
-					id: "00_AriaAffirmative05"
-					responses: [
-						{text: "Of course!"},
-					]
-				},
-			]
+			infos:   (#SimpleInfos & {in: {
+				prefix: "00_AriaAffirmative"
+				texts: ["Sure thing!", "Yes!", "You got it!", "Absolutely!", "Of course!"]
+			}}).out
 		},
 		{
 			id:      "00_AriaRedirection"
 			speaker: "AriaCollins"
-			infos: [
-				{
-					id: "00_AriaRedirection01"
-					responses: [
-						{text: "Let's switch gears."},
-					]
-				},
-				{
-					id: "00_AriaRedirection02"
-					responses: [
-						{text: "Moving on to the next topic."},
-					]
-				},
-				{
-					id: "00_AriaRedirection03"
-					responses: [
-						{text: "Changing course."},
-					]
-				},
-				{
-					id: "00_AriaRedirection04"
-					responses: [
-						{text: "Let's pivot here."},
-					]
-				},
-				{
-					id: "00_AriaRedirection05"
-					responses: [
-						{text: "Time for a new direction."},
-					]
-				},
-			]
+			infos:   (#SimpleInfos & {in: {
+				prefix: "00_AriaRedirection"
+				texts: ["Let's switch gears.", "Moving on to the next topic.", "Changing course.", "Let's pivot here.", "Time for a new direction."]
+			}}).out
 		},
 		{
 			id:      "00_AriaGratitude"
 			speaker: "AriaCollins"
-			infos: [
-				{
-					id: "00_AriaGratitude01"
-					responses: [
-						{text: "Thanks, Cap!"},
-					]
-				},
-				{
-					id: "00_AriaGratitude02"
-					responses: [
-						{text: "Appreciate it!"},
-					]
-				},
-				{
-					id: "00_AriaGratitude03"
-					responses: [
-						{text: "Grateful for that."},
-					]
-				},
-				{
-					id: "00_AriaGratitude04"
-					responses: [
-						{text: "Much obliged!"},
-					]
-				},
-				{
-					id: "00_AriaGratitude05"
-					responses: [
-						{text: "Cheers for that!"},
-					]
-				},
-			]
+			infos:   (#SimpleInfos & {in: {
+				prefix: "00_AriaGratitude"
+				texts: ["Thanks, Cap!", "Appreciate it!", "Grateful for that.", "Much obliged!", "Cheers for that!"]
+			}}).out
 		},
 		{
 			id:      "00_AriaQuery"
 			speaker: "AriaCollins"
-			infos: [
-				{
-					id: "00_AriaQuery01"
-					responses: [
-						{text: "What's your take?"},
-					]
-				},
-				{
-					id: "00_AriaQuery02"
-					responses: [
-						{text: "Thoughts, Cap?"},
-					]
-				},
-				{
-					id: "00_AriaQuery03"
-					responses: [
-						{text: "Your opinion?"},
-					]
-				},
-				{
-					id: "00_AriaQuery04"
-					responses: [
-						{text: "Any input on this?"},
-					]
-				},
-				{
-					id: "00_AriaQuery05"
-					responses: [
-						{text: "How do you see it?"},
-					]
-				},
-			]
+			infos:   (#SimpleInfos & {in: {
+				prefix: "00_AriaQuery"
+				texts: ["What's up?", "What's on your mind?", "What's the plan?", "What's the word?", "What's the deal?"]
+			}}).out
 		},
 		{
 			id:      "00_AriaConfirmation"
 			speaker: "AriaCollins"
-			infos: [
-				{
-					id: "00_AriaConfirmation01"
-					responses: [
-						{text: "Got it."},
-					]
-				},
-				{
-					id: "00_AriaConfirmation02"
-					responses: [
-						{text: "Understood."},
-					]
-				},
-				{
-					id: "00_AriaConfirmation03"
-					responses: [
-						{text: "Roger that."},
-					]
-				},
-				{
-					id: "00_AriaConfirmation04"
-					responses: [
-						{text: "Clear on that."},
-					]
-				},
-				{
-					id: "00_AriaConfirmation05"
-					responses: [
-						{text: "Acknowledged."},
-					]
-				},
-			]
+			infos:   (#SimpleInfos & {in: {
+				prefix: "00_AriaConfirmation"
+				texts: ["Got it.", "Understood.", "Roger that.", "Clear on that.", "Acknowledged."]
+			}}).out
 		},
 		{
 			id:      "00_AriaInterest"
 			speaker: "AriaCollins"
-			infos: [
-				{
-					id: "00_AriaInterest01"
-					responses: [
-						{text: "Tell me more."},
-					]
-				},
-				{
-					id: "00_AriaInterest02"
-					responses: [
-						{text: "Interesting..."},
-					]
-				},
-				{
-					id: "00_AriaInterest03"
-					responses: [
-						{text: "I'm intrigued."},
-					]
-				},
-				{
-					id: "00_AriaInterest04"
-					responses: [
-						{text: "Go on..."},
-					]
-				},
-				{
-					id: "00_AriaInterest05"
-					responses: [
-						{text: "Keep talking."},
-					]
-				},
-			]
+			infos:   (#SimpleInfos & {in: {
+				prefix: "00_AriaInterest"
+				texts: ["Tell me more.", "Interesting...", "I'm intrigued.", "Go on...", "Keep talking."]
+			}}).out
 		},
 	]
 }

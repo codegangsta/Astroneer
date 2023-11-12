@@ -2,6 +2,8 @@
     "scenes": [
         {
             "id": "00_Misc",
+            "name": "Miscellaneous",
+            "notes": "Miscellaneous topics to be used as filler or transitions between scenes.",
             "topics": [
                 {
                     "id": "00_AriaGreeting",
@@ -287,7 +289,7 @@
                             "id": "00_AriaQuery01",
                             "responses": [
                                 {
-                                    "text": "What's your take?"
+                                    "text": "What's up?"
                                 }
                             ]
                         },
@@ -295,7 +297,7 @@
                             "id": "00_AriaQuery02",
                             "responses": [
                                 {
-                                    "text": "Thoughts, Cap?"
+                                    "text": "What's on your mind?"
                                 }
                             ]
                         },
@@ -303,7 +305,7 @@
                             "id": "00_AriaQuery03",
                             "responses": [
                                 {
-                                    "text": "Your opinion?"
+                                    "text": "What's the plan?"
                                 }
                             ]
                         },
@@ -311,7 +313,7 @@
                             "id": "00_AriaQuery04",
                             "responses": [
                                 {
-                                    "text": "Any input on this?"
+                                    "text": "What's the word?"
                                 }
                             ]
                         },
@@ -319,7 +321,7 @@
                             "id": "00_AriaQuery05",
                             "responses": [
                                 {
-                                    "text": "How do you see it?"
+                                    "text": "What's the deal?"
                                 }
                             ]
                         }
@@ -412,6 +414,288 @@
                             "responses": [
                                 {
                                     "text": "Keep talking."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "01_Intro",
+            "name": "Aria is Introduced to the Player",
+            "topics": [
+                {
+                    "id": "01_AriaIntro",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "01_AriaIntro01",
+                            "responses": [
+                                {
+                                    "text": "Whoa, an intercom call? That's a rare vintage. Aria here—your ship-building maestro and Atlas Astronautics' semi-official welcome wagon."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "01_AriaIntro02",
+                            "responses": [
+                                {
+                                    "text": "Let's talk ship. You're about to dive into the nuts and bolts of starship customization. I'll transfer the bare bones to your hangar, and you put the soul into the machine. Match the contract specs, and we're golden."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "01_AriaIntro03",
+                            "responses": [
+                                {
+                                    "text": "Once you're done, bring her back so we can give her the old spaceworthy stamp. Keep your sensors peeled out there—your handiwork will be zipping around the galaxy before you know it."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "01_AriaIntro04",
+                            "responses": [
+                                {
+                                    "text": "Got questions, or floating in confusion? Buzz me on this line. I'm like a walking, talking encyclopedia of space oddities, minus the boring parts."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "01_AriaIntro05",
+                            "responses": [
+                                {
+                                    "text": "I hear you're quite the pilot. So I'm calling you 'Cap' from here on out! Beats saying 'O Great Shipbuilder' every time, right?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "01_AriaIntro06",
+                            "responses": [
+                                {
+                                    "text": "Alright, Cap. Aria signing off—don't be a stranger, or do, but come back with stories!"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "02_Greeting",
+            "name": "Aria Greets the Player",
+            "topics": [
+                {
+                    "id": "02_AriaGreeting",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "02_AriaGreeting01",
+                            "responses": [
+                                {
+                                    "text": "Hey there, Cap! What ship are we tackling today?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreeting02",
+                            "responses": [
+                                {
+                                    "text": "Back for more? Let's see what's on the docket."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreeting03",
+                            "responses": [
+                                {
+                                    "text": "Hello again! Ready to jump into another design?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreeting04",
+                            "responses": [
+                                {
+                                    "text": "Got a new ship on your mind? Let's hear it."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreeting05",
+                            "responses": [
+                                {
+                                    "text": "Ah, the master shipwright returns. What's the plan?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreeting06",
+                            "responses": [
+                                {
+                                    "text": "Hey! What exciting project are we looking at today?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreeting07",
+                            "responses": [
+                                {
+                                    "text": "Welcome back! Any new adventures in ship design?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreeting08",
+                            "responses": [
+                                {
+                                    "text": "Hi there! What ship will we be shaping up today?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreeting09",
+                            "responses": [
+                                {
+                                    "text": "Ready for another round of shipbuilding?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "02_AriaGreeting10",
+                            "responses": [
+                                {
+                                    "text": "Great to see you! What's our design mission this time?"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "03_AcceptContract",
+            "name": "Player Accepts Contract",
+            "topics": [
+                {
+                    "id": "03_Player",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "03_Player01",
+                            "responses": [
+                                {
+                                    "text": "Any ships in need of a hand today?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_Player02",
+                            "responses": [
+                                {
+                                    "text": "Is there a new vessel for me to take under my wing?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_Player03",
+                            "responses": [
+                                {
+                                    "text": "Got a ship that needs some love?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_Player04",
+                            "responses": [
+                                {
+                                    "text": "I'm here for that contract—what's the assignment?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_Player05",
+                            "responses": [
+                                {
+                                    "text": "What's the latest ship on the roster?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_Player06",
+                            "responses": [
+                                {
+                                    "text": "Ready for a new project; what have you got?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_Player07",
+                            "responses": [
+                                {
+                                    "text": "Looking for a ship that could use a tune-up?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_Player08",
+                            "responses": [
+                                {
+                                    "text": "Heard about a ship needing a fix, is it mine to take?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_Player09",
+                            "responses": [
+                                {
+                                    "text": "What's the word on that new contract?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "03_AriaFighter",
+                    "speaker": "AriaCollins",
+                    "infos": [
+                        {
+                            "id": "03_AriaFighter01",
+                            "responses": [
+                                {
+                                    "text": "Got a fighter that's seen better days. Time to turn it from a zero to a hero."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaFighter02",
+                            "responses": [
+                                {
+                                    "text": "There's a fighter itching for some speed. Think you can make it break the sound barrier... quietly?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaFighter03",
+                            "responses": [
+                                {
+                                    "text": "Here’s a fighter that's begging for some flair. Ready to spice it up?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaFighter04",
+                            "responses": [
+                                {
+                                    "text": "This one's a zippy fighter, but it's more mouse than lion right now. Fancy beefing it up?"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "03_AriaFighter05",
+                            "responses": [
+                                {
+                                    "text": "Got a veteran fighter here. Fancy turning its old stories into new legends?"
                                 }
                             ]
                         }
