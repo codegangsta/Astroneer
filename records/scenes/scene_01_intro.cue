@@ -4,6 +4,21 @@ scene_01_intro: {
 	id:     "01_Intro"
 	name:   "Aria is Introduced to the Player"
 	actors: #consts.Actors
+	phases: [
+		{name: "Intro"},
+	]
+	actions: [
+		{
+			type:  "Dialogue"
+			topic: "01_AriaIntro"
+			name:  "hi"
+		},
+		{
+			type:  "Dialogue"
+			topic: "01_AriaIntro"
+			name:  "hi again"
+		},
+	]
 	topics: [
 		{
 			id:      "01_AriaIntro"

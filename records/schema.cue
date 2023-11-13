@@ -1,5 +1,29 @@
 package records
 
+#Action: {
+	type:        "Dialogue" | "Player Dialogue"
+	name?:       string
+	startPhase?: int
+	endPhase?:   int
+
+	if type == "Dialogue" {
+		topic: string
+	}
+
+	if type == "Player Dialogue" {
+		choices: [
+			...{
+				topic:     string
+				response?: string
+			},
+		]
+	}
+}
+
+#Phase: {
+	name: string
+}
+
 // Represents a DIAL record on a QUST
 #Topic: {
 	// Editor ID of the DIAL record to generate
@@ -42,9 +66,13 @@ package records
 	// Optional notes for the scene
 	notes?: string
 	// Actor aliases
-	actors: [...int]
+	actors?: [...int]
 	// List of phases in the scene
-	topics: [...#Topic]
+	phases?: [...#Phase]
+	// List of actions in the scene
+	actions?: [...#Action]
+	// List of phases in the scene
+	topics?: [...#Topic]
 }
 
 scenes: [ ...#Scene]

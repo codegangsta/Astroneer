@@ -123,6 +123,11 @@ var
     scenes: TJsonArray;
     scene: TJsonObject;
     sceneRecord: IInterface;
+    actions: TJsonArray;
+    action: TJsonObject;
+    actionsRecord: IInterface;
+    actionRecord: IInterface;
+    typeSpecificActionRecord: IInterface;
     actors: TJsonArray;
     actorsRecord: IInterface;
     actorRecord: IInterface;
@@ -169,6 +174,30 @@ begin
         actorRecord := Add(actorsRecord, 'Actor', True);
         SetElementEditValues(actorRecord, 'ALID - Alias ID', actors.I[i]);
       end;
+
+      actions := scene.A['actions'];
+      actionsRecord := ElementByPath(sceneRecord, 'Actions');
+      if Assigned(actionsRecord) then
+        Remove(actionsRecord);
+      actionsRecord := Add(sceneRecord, 'Actions', True);
+
+      for i := 0 to actions.Count - 1 do begin
+        action := actions.O[i];
+        actionRecord := Add(actionsRecord, 'Action', True);
+        SetElementEditValues(actionRecord, 'INAM - Index', i);
+        SetElementEditValues(actionRecord, 'NAM0 - Name', action.S['name']);
+        SetElementEditValues(actionRecord, 'ANAM - Type', action.S['type']);
+        SetElementEditValues(actionRecord, 'SNAM - Start Phase', action.I['startPhase']);
+        SetElementEditValues(actionRecord, 'ENAM - End Phase', action.I['endPhase']);
+
+        if action.S['type'] = 'Dialogue' then begin
+          AddMessage('topic: ' + action.S['topic']);
+          typeSpecificActionRecord := Add(actionRecord, 'Dialogue', True);
+          SetElementEditValues(typeSpecificActionRecord, 'DATA - Topic', action.S['topic']);
+        end;
+      end;
+      // Remove first element thats generated
+      Remove(ElementByIndex(actionsRecord, 0));
 
       topics := scene.A['topics'];
 

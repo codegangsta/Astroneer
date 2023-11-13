@@ -430,6 +430,23 @@
             "actors": [
                 -2
             ],
+            "phases": [
+                {
+                    "name": "Intro"
+                }
+            ],
+            "actions": [
+                {
+                    "type": "Dialogue",
+                    "topic": "01_AriaIntro",
+                    "name": "hi"
+                },
+                {
+                    "type": "Dialogue",
+                    "topic": "01_AriaIntro",
+                    "name": "hi again"
+                }
+            ],
             "topics": [
                 {
                     "id": "01_AriaIntro",
