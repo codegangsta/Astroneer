@@ -60,3 +60,5 @@ stop_game:
 ssh::
 	ssh jerem@pc
 
+vo_script::
+	gomplate -f ./docs/vo_script.md.tmpl -d records=./records/records_generated.json -o ./docs/vo_script.md
