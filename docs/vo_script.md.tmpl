@@ -79,9 +79,9 @@ _{{ $topic.notes }}_
 {{- end -}}
 {{ range $responseIndex, $response := $topic.infos }}
 
-`[{{ $response.id }}]`
+`{{ $response.id }}.wav`
 {{ range $textIndex, $text := $response.responses -}}
-{{ $text.text }}
+> {{ $text.text }}
 {{ end }}
 {{- end -}}
 {{- end }}
