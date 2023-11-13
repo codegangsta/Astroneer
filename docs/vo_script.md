@@ -1436,8 +1436,17 @@ _Her defenses snap back up, the vulnerability gone._
 
 `18_AriaResponse01.wav`
 > No problem, Cap! Not every ship is a perfect match. I'll find this one a new captain.
+
+
+`18_AriaResponse02.wav`
 > I'm updating the mission board right now. Let's find you a project that's more your speed.
+
+
+`18_AriaResponse03.wav`
 > Sometimes a detour is part of the journey. Let's get you on a path that feels right.
+
+
+`18_AriaResponse04.wav`
 > Keep your chin up. Space is vast, and there's always something else out there for you.
 
 ---

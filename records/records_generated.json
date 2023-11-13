@@ -3348,13 +3348,28 @@
                             "responses": [
                                 {
                                     "text": "No problem, Cap! Not every ship is a perfect match. I'll find this one a new captain."
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "id": "18_AriaResponse02",
+                            "responses": [
                                 {
                                     "text": "I'm updating the mission board right now. Let's find you a project that's more your speed."
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "id": "18_AriaResponse03",
+                            "responses": [
                                 {
                                     "text": "Sometimes a detour is part of the journey. Let's get you on a path that feels right."
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "id": "18_AriaResponse04",
+                            "responses": [
                                 {
                                     "text": "Keep your chin up. Space is vast, and there's always something else out there for you."
                                 }
