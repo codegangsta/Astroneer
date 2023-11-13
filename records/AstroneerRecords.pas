@@ -251,22 +251,23 @@ begin
                   AddInfoScript(infoRecord, topic.S['script'], topic.S['onBegin'], topic.S['onEnd']);
               end;
 
-              // Set responses
               responses := info.A['responses'];
+
               // add new responses
+              responsesRecord := ElementByPath(infoRecord, 'Responses');
+              if Assigned(responsesRecord) then
+                Remove(responsesRecord);
               responsesRecord := Add(infoRecord, 'Responses', true);
-              // Remove first element thats generated
-              Remove(ElementByIndex(responsesRecord, 0));
 
               for k := 0 to responses.Count - 1 do begin
                   response := responses.O[k];
                   responseRecord := Add(responsesRecord, 'Response', true);
                   SetElementEditValues(responseRecord, 'NAM1', response.S['text']);
-
+              
                   // Set none for emotion for now, maybe this can be configurable later
                   SetElementEditValues(responseRecord, 'TRDA - Response Data\Emotion', 'FFFFFFFF');
               end;
-
+              Remove(ElementByIndex(responsesRecord, 0));
           end;
       end;
     end;
