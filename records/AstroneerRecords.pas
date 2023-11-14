@@ -192,8 +192,9 @@ begin
 
         if action.S['type'] = 'Dialogue' then begin
           AddMessage('topic: ' + action.S['topic']);
-          typeSpecificActionRecord := Add(actionRecord, 'Dialogue', True);
-          SetElementEditValues(typeSpecificActionRecord, 'DATA - Topic', action.S['topic']);
+          topicRecord := FindChildRecord(e, 'DIAL', action.S['topic']);
+          typeSpecificActionRecord := Add(actionRecord, 'DATA', True);
+          SetElementEditValues(typeSpecificActionRecord, 'DATA', GetEditValue(topicRecord));
         end;
       end;
       // Remove first element thats generated
