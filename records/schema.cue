@@ -65,6 +65,8 @@ package records
 	id: string
 	// Name of the scene, used for internal reference
 	name: string
+	// Flags to set on the scene
+	flags?: string
 	// Optional notes for the scene
 	notes?: string
 	// Actor aliases

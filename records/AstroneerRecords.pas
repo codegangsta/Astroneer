@@ -168,6 +168,8 @@ begin
 		SetElementEditValues(sceneRecord, 'FULL', scene.S['name']);
 		SetElementEditValues(sceneRecord, 'NNAM', scene.S['notes']);
 		SetElementEditValues(sceneRecord, 'PNAM', GetEditValue(e));
+		if scene.S['flags'] <> '' then
+			SetElementEditValues(sceneRecord, 'FNAM', scene.S['flags']);
 
 		// ============================================================
 		// Set scene phases

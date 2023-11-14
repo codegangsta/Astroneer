@@ -1,6 +1,52 @@
 {
     "scenes": [
         {
+            "id": "MAIN_topics",
+            "name": "Main Topics",
+            "notes": "This is the main topics scene",
+            "actors": [
+                -2
+            ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Topics"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 3,
+                    "choices": [
+                        {
+                            "topic": "03_Player"
+                        },
+                        {
+                            "topic": "04_Player"
+                        },
+                        {
+                            "topic": "MAIN_PlayerModifyShips"
+                        }
+                    ]
+                }
+            ],
+            "topics": [
+                {
+                    "id": "MAIN_PlayerModifyShips",
+                    "speaker": "Player",
+                    "infos": [
+                        {
+                            "id": "MAIN_PlayerModifyShips01",
+                            "responses": [
+                                {
+                                    "text": "I'd like to modify my ships"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": "00_Misc",
             "name": "Miscellaneous",
             "notes": "Miscellaneous topics to be used as filler or transitions between scenes.",
@@ -430,6 +476,7 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
             "phases": [
                 {
                     "name": "Intro"

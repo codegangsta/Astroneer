@@ -5,6 +5,7 @@ import (
 )
 
 scenes: [
+	s.scene_MAIN_topics,
 	s.scene_00_misc,
 	s.scene_01_intro,
 	s.scene_02_greeting,

@@ -15,20 +15,6 @@ scene_02_greeting: {
 			type:  #consts.ActionDialogue
 			topic: "02_AriaGreeting"
 		},
-		{
-			name: "Player Responses"
-			type: #consts.ActionPlayerDialogue
-			choices: [
-				{
-					topic:    "03_Player"
-					response: "00_AriaAffirmative"
-				},
-				{
-					topic:    "Player_StartQuest"
-					response: "00_AriaAffirmative"
-				},
-			]
-		},
 	]
 
 	topics: [

@@ -8,6 +8,7 @@ package scenes
 	Actors: [AliasPlayer]
 	ActionDialogue:       0
 	ActionPlayerDialogue: 3
+	SceneFlags:           "0000100000001"
 }
 
 #ID: {

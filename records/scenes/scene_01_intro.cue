@@ -4,6 +4,7 @@ scene_01_intro: {
 	id:     "01_Intro"
 	name:   "Aria is Introduced to the Player"
 	actors: #consts.Actors
+	flags:  #consts.SceneFlags
 	phases: [
 		{name: "Intro"},
 	]
