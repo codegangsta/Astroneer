@@ -435,23 +435,6 @@
                     "name": "Intro"
                 }
             ],
-            "actions": [
-                {
-                    "type": 0,
-                    "topic": "01_AriaIntro",
-                    "name": "hi"
-                },
-                {
-                    "type": 3,
-                    "name": "Test Player Dialogue",
-                    "choices": [
-                        {
-                            "topic": "01_AriaIntro",
-                            "response": "01_AriaIntro"
-                        }
-                    ]
-                }
-            ],
             "topics": [
                 {
                     "id": "01_AriaIntro",

@@ -130,6 +130,9 @@ var
 	dialogueListItemRecord: IInterface;
 	typeSpecificActionRecord: IInterface;
 	dialogueListRecord: IInterface;
+	phases: TJsonArray;
+	phasesRecord: IInterface;
+	phaseRecord: IInterface;
 	actors: TJsonArray;
 	actorsRecord: IInterface;
 	actorRecord: IInterface;
@@ -166,6 +169,24 @@ begin
 		SetElementEditValues(sceneRecord, 'NNAM', scene.S['notes']);
 		SetElementEditValues(sceneRecord, 'PNAM', GetEditValue(e));
 
+		// ============================================================
+		// Set scene phases
+		// ============================================================
+		phases := scene.A['phases'];
+		phasesRecord := ElementByPath(sceneRecord, 'Phases');
+		if Assigned(phasesRecord) then
+			Remove(phasesRecord);
+		phasesRecord := Add(sceneRecord, 'Phases', True);
+
+		for i := 0 to phases.Count - 1 do begin
+			phaseRecord := Add(phasesRecord, 'Phase', True);
+			SetElementEditValues(phaseRecord, 'NAM0 - Name', phases.O[i].S['name']);
+		end;
+		Remove(ElementByIndex(phasesRecord, 0));
+
+		// ============================================================
+		// Set scene actors
+		// ============================================================
 		actors := scene.A['actors'];
 		actorsRecord := ElementByPath(sceneRecord, 'Actors');
 		if Assigned(actorsRecord) then
@@ -177,6 +198,9 @@ begin
 			SetElementEditValues(actorRecord, 'ALID - Alias ID', actors.I[i]);
 		end;
 
+		// ============================================================
+		// Set scene actions
+		// ============================================================
 		actions := scene.A['actions'];
 		actionsRecord := ElementByPath(sceneRecord, 'Actions');
 		if Assigned(actionsRecord) then
@@ -220,11 +244,9 @@ begin
 				Remove(ElementByIndex(dialogueListRecord, 0));
 			end;
 		end;
-		// Remove first element thats generated
 		Remove(ElementByIndex(actionsRecord, 0));
 
 		topics := scene.A['topics'];
-
 		for i := 0 to topics.Count - 1 do begin
 			topic := topics.O[i];
 			topicRecord := FindOrCreateChildRecord(e, 'DIAL', topic.S['id']);

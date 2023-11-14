@@ -7,23 +7,6 @@ scene_01_intro: {
 	phases: [
 		{name: "Intro"},
 	]
-	actions: [
-		{
-			type:  #consts.ActionDialogue
-			topic: "01_AriaIntro"
-			name:  "hi"
-		},
-		{
-			type: #consts.ActionPlayerDialogue
-			name: "Test Player Dialogue"
-			choices: [
-				{
-					topic:    "01_AriaIntro"
-					response: "01_AriaIntro"
-				},
-			]
-		},
-	]
 	topics: [
 		{
 			id:      "01_AriaIntro"
