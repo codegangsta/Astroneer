@@ -219,15 +219,15 @@ begin
 			// Dialogue
 			if action.I['type'] = 0 then begin
 				topicRecord := FindChildRecord(e, 'DIAL', action.S['topic']);
-				typeSpecificActionRecord := Add(actionRecord, 'DATA', True);
+				typeSpecificActionRecord := FindChildRecord(e, 'SCEN', 'RefScene');
+				typeSpecificActionRecord := ElementByPath(typeSpecificActionRecord, 'Actions\[0]\Dialogue');
+				typeSpecificActionRecord := ElementAssign(actionRecord, 8, typeSpecificActionRecord, False);
 				SetElementEditValues(typeSpecificActionRecord, 'DATA', GetEditValue(topicRecord));
 			end;
 			// Player dialogue
 			if action.I['type'] = 3 then begin
-				// HACK: Workaround to get player dialogue to show up
-				// TODO: use AssignTemplateByName here
 				typeSpecificActionRecord := FindChildRecord(e, 'SCEN', 'RefScene');
-				typeSpecificActionRecord := ElementByPath(typeSpecificActionRecord, 'Actions\Action\Player Dialogue');
+				typeSpecificActionRecord := ElementByPath(typeSpecificActionRecord, 'Actions\[1]\Player Dialogue');
 				typeSpecificActionRecord := ElementAssign(actionRecord, 8, typeSpecificActionRecord, False);
 				dialogueListRecord := ElementByPath(typeSpecificActionRecord, 'Dialogue List');
 				playerDialogueChoices := action.A['choices'];

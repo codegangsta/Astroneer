@@ -7,6 +7,13 @@ scene_01_intro: {
 	phases: [
 		{name: "Intro"},
 	]
+	actions: [
+		{
+			name:  "Aria Intro Dialogue"
+			type:  #consts.ActionDialogue
+			topic: "01_AriaIntro"
+		},
+	]
 	topics: [
 		{
 			id:      "01_AriaIntro"

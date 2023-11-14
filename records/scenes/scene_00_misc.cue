@@ -35,7 +35,7 @@ scene_00_misc: {
 			speaker: #consts.Aria
 			infos:   (#SimpleInfos & {in: {
 				prefix: "00_AriaAffirmative"
-				texts: ["Sure things!", "Yes!", "You got it!", "Absolutely!", "Of course!"]
+				texts: ["Sure thing!", "Yes!", "You got it!", "Absolutely!", "Of course!"]
 			}}).out
 		},
 		{

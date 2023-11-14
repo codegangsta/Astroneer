@@ -5,6 +5,32 @@ scene_02_greeting: {
 	name:   "Aria Greets the Player"
 	notes:  "The player has just accepted a mission from the mission board and has walked over to the Atlas Astronautics intercom to speak with Aria. Upon pushing the 'Call' button, Aria responds from the intercom. This response is typically played after the introductory quest, so Aria has already been introduced to the player."
 	actors: #consts.Actors
+	phases: [
+		{name: "Greet"},
+	]
+
+	actions: [
+		{
+			name:  "Aria Greeting"
+			type:  #consts.ActionDialogue
+			topic: "02_AriaGreeting"
+		},
+		{
+			name: "Player Responses"
+			type: #consts.ActionPlayerDialogue
+			choices: [
+				{
+					topic:    "03_Player"
+					response: "00_AriaAffirmative"
+				},
+				{
+					topic:    "Player_StartQuest"
+					response: "00_AriaAffirmative"
+				},
+			]
+		},
+	]
+
 	topics: [
 		{
 			id:      "02_AriaGreeting"
