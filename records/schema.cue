@@ -1,16 +1,18 @@
 package records
 
 #Action: {
-	type:        "Dialogue" | "Player Dialogue"
+	type:        0 | 3
 	name?:       string
 	startPhase?: int
 	endPhase?:   int
 
-	if type == "Dialogue" {
+	// Dialogue
+	if type == 0 {
 		topic: string
 	}
 
-	if type == "Player Dialogue" {
+	// Player Dialogue
+	if type == 3 {
 		choices: [
 			...{
 				topic:     string

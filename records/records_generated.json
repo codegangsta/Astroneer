@@ -437,14 +437,19 @@
             ],
             "actions": [
                 {
-                    "type": "Dialogue",
+                    "type": 0,
                     "topic": "01_AriaIntro",
                     "name": "hi"
                 },
                 {
-                    "type": "Dialogue",
-                    "topic": "01_AriaIntro",
-                    "name": "hi again"
+                    "type": 3,
+                    "name": "Test Player Dialogue",
+                    "choices": [
+                        {
+                            "topic": "01_AriaIntro",
+                            "response": "01_AriaIntro"
+                        }
+                    ]
                 }
             ],
             "topics": [

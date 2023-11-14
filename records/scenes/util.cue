@@ -6,8 +6,8 @@ package scenes
 	AliasAria:   0
 	AliasPlayer: -2
 	Actors: [AliasPlayer]
-	ActionDialogue:       "Dialogue"
-	ActionPlayerDialogue: "Player Dialogue"
+	ActionDialogue:       0
+	ActionPlayerDialogue: 3
 }
 
 #ID: {

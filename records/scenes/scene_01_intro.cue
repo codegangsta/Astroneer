@@ -9,14 +9,19 @@ scene_01_intro: {
 	]
 	actions: [
 		{
-			type:  "Dialogue"
+			type:  #consts.ActionDialogue
 			topic: "01_AriaIntro"
 			name:  "hi"
 		},
 		{
-			type:  "Dialogue"
-			topic: "01_AriaIntro"
-			name:  "hi again"
+			type: #consts.ActionPlayerDialogue
+			name: "Test Player Dialogue"
+			choices: [
+				{
+					topic:    "01_AriaIntro"
+					response: "01_AriaIntro"
+				},
+			]
 		},
 	]
 	topics: [
