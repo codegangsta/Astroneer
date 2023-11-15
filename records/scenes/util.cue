@@ -9,6 +9,7 @@ package scenes
 	ActionDialogue:       0
 	ActionPlayerDialogue: 3
 	SceneFlags:           "0000100000001"
+	InfoFlagsRandom:      "01"
 }
 
 #ID: {
@@ -26,6 +27,7 @@ package scenes
 	in: {
 		prefix: string
 		texts: [...string]
+		flags?: string
 		conditions?: [
 			...{
 				function: string
@@ -42,6 +44,9 @@ package scenes
 			]
 			if in.conditions != _|_ {
 				conditions: in.conditions
+			}
+			if in.flags != _|_ {
+				flags: in.flags
 			}
 		},
 	]

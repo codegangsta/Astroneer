@@ -303,6 +303,11 @@ begin
 					AddInfoScript(infoRecord, topic.S['script'], topic.S['onBegin'], topic.S['onEnd']);
 				end;
 
+				if info.S['flags'] <> '' then begin
+					Add(infoRecord, 'ENAM', True);
+					SetElementEditValues(infoRecord, 'ENAM - Response Flags\Flags', info.S['flags']);
+				end;
+
 				// add new responses
 				responses := info.A['responses'];
 				responsesRecord := ElementByPath(infoRecord, 'Responses');

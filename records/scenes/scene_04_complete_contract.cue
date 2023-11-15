@@ -23,6 +23,13 @@ scene_04_complete_contract: {
 					"The ship's reimagined, per your vision.",
 					"Ship is done. It's a fresh take on an old classic.",
 				]
+				conditions: [
+					{
+						function: "GetStage"
+						quest:    "ShipContractMission"
+						equals:   30.0
+					},
+				]
 			}}).out
 		},
 		{

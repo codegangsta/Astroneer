@@ -100,7 +100,7 @@ Function DebugPlaceShip() global
   ;ship.EvaluatePackage(True)
   ship.SetForwardVelocity(1.0)
   ship.GetSpaceshipAutopilotAI().ForceMovementSpeed(-1.0)
-  ship.GetSpaceshipAutopilotAI().EvaluatePackage()
+  ship.GetSpaceshipAutopilotAI().EvaluatePackage(True)
 EndFunction
 
 Function DebugTrace(String Text) Global

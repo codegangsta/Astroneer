@@ -544,9 +544,11 @@
                 {
                     "id": "02_AriaGreeting",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "infos": [
                         {
                             "id": "02_AriaGreeting01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Hey there, Cap! What ship are we tackling today?"
@@ -555,6 +557,7 @@
                         },
                         {
                             "id": "02_AriaGreeting02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Back for more? Let's see what's on the docket."
@@ -563,6 +566,7 @@
                         },
                         {
                             "id": "02_AriaGreeting03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Hello again! Ready to jump into another design?"
@@ -571,6 +575,7 @@
                         },
                         {
                             "id": "02_AriaGreeting04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Got a new ship on your mind? Let's hear it."
@@ -579,6 +584,7 @@
                         },
                         {
                             "id": "02_AriaGreeting05",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Ah, the master shipwright returns. What's the plan?"
@@ -587,6 +593,7 @@
                         },
                         {
                             "id": "02_AriaGreeting06",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Hey! What exciting project are we looking at today?"
@@ -595,6 +602,7 @@
                         },
                         {
                             "id": "02_AriaGreeting07",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Welcome back! Any new adventures in ship design?"
@@ -603,6 +611,7 @@
                         },
                         {
                             "id": "02_AriaGreeting08",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Hi there! What ship will we be shaping up today?"
@@ -611,6 +620,7 @@
                         },
                         {
                             "id": "02_AriaGreeting09",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Ready for another round of shipbuilding?"
@@ -619,6 +629,7 @@
                         },
                         {
                             "id": "02_AriaGreeting10",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Great to see you! What's our design mission this time?"
@@ -1154,6 +1165,13 @@
                                 {
                                     "text": "Design's in. Does it capture what you were looking for?"
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 30.0
+                                }
                             ]
                         },
                         {
@@ -1161,6 +1179,13 @@
                             "responses": [
                                 {
                                     "text": "Finished with the ship. How does it measure up to our standards?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 30.0
                                 }
                             ]
                         },
@@ -1170,6 +1195,13 @@
                                 {
                                     "text": "Completed the contract. What's your take on the final product?"
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 30.0
+                                }
                             ]
                         },
                         {
@@ -1177,6 +1209,13 @@
                             "responses": [
                                 {
                                     "text": "Just finished my design. Will it pass the Aria test?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 30.0
                                 }
                             ]
                         },
@@ -1186,6 +1225,13 @@
                                 {
                                     "text": "Redesign's done. Does it have the Aria stamp of approval?"
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 30.0
+                                }
                             ]
                         },
                         {
@@ -1193,6 +1239,13 @@
                             "responses": [
                                 {
                                     "text": "Contract's done. I'm eager to hear your thoughts."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 30.0
                                 }
                             ]
                         },
@@ -1202,6 +1255,13 @@
                                 {
                                     "text": "Wrapped up the ship. It should meet the mark."
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 30.0
+                                }
                             ]
                         },
                         {
@@ -1209,6 +1269,13 @@
                             "responses": [
                                 {
                                     "text": "Finished the upgrade. It's ready for your review."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 30.0
                                 }
                             ]
                         },
@@ -1218,6 +1285,13 @@
                                 {
                                     "text": "The ship's reimagined, per your vision."
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 30.0
+                                }
                             ]
                         },
                         {
@@ -1225,6 +1299,13 @@
                             "responses": [
                                 {
                                     "text": "Ship is done. It's a fresh take on an old classic."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 30.0
                                 }
                             ]
                         }

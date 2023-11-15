@@ -50,6 +50,8 @@ package records
 			// ID of the INFO record to generate. Useful for linking to other topics.
 			// Required to keep generation generally idempotent
 			id: string
+			// response flags
+			flags?: string
 			// List of responses in the INFO record
 			responses: [
 				...{

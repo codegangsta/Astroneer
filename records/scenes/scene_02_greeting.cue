@@ -19,10 +19,12 @@ scene_02_greeting: {
 
 	topics: [
 		{
-			id:      "02_AriaGreeting"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "02_AriaGreeting"
+			speaker:    #consts.Aria
+			startScene: "MAIN_topics"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "02_AriaGreeting"
+				flags:  #consts.InfoFlagsRandom
 				texts: [
 					"Hey there, Cap! What ship are we tackling today?",
 					"Back for more? Let's see what's on the docket.",
