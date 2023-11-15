@@ -4331,16 +4331,55 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Aria Response"
+                },
+                {
+                    "name": "Player Response"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 0,
+                    "topic": "16_AriaResponse"
+                },
+                {
+                    "type": 3,
+                    "startPhase": 1,
+                    "endPhase": 1,
+                    "choices": [
+                        {
+                            "topic": "16_PlayerResponseCompassionate",
+                            "response": "16_AriaResponseToCompassionate"
+                        },
+                        {
+                            "topic": "16_PlayerResponsePractical",
+                            "response": "16_AriaResponseToPractical"
+                        },
+                        {
+                            "topic": "16_PlayerResponseProbing",
+                            "response": "16_AriaResponseToProbing"
+                        },
+                        {
+                            "topic": "16_PlayerResponseDismissive",
+                            "response": "16_AriaResponseToDismissive"
+                        }
+                    ]
+                }
+            ],
             "topics": [
                 {
                     "id": "16_PlayerInquiry",
                     "speaker": "",
+                    "startScene": "16_Regrets",
                     "infos": [
                         {
                             "id": "16_PlayerInquiry01",
                             "responses": [
                                 {
-                                    "text": "Your dedication to your career is clear, Aria. But how has this journey affected your ties with family?"
+                                    "text": "How has your career affected ties with family?"
                                 }
                             ]
                         }
@@ -4423,6 +4462,7 @@
                 {
                     "id": "16_AriaResponseToCompassionate",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "The vulnerability in Aria’s voice is palpable, her usual confidence replaced by a rare sense of fear.",
                     "infos": [
                         {
@@ -4438,6 +4478,7 @@
                 {
                     "id": "16_AriaResponseToPractical",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "There's a shift in her demeanor, a mix of acceptance and hesitation.",
                     "infos": [
                         {
@@ -4453,6 +4494,7 @@
                 {
                     "id": "16_AriaResponseToProbing",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "A brief flicker of contemplation crosses her face, then she retreats slightly.",
                     "infos": [
                         {
@@ -4468,6 +4510,7 @@
                 {
                     "id": "16_AriaResponseToDismissive",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "Her defenses snap back up, the vulnerability gone.",
                     "infos": [
                         {

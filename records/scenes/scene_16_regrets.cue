@@ -5,14 +5,49 @@ scene_16_regrets: {
 	name:   "Aria Reflects on Family and Regrets"
 	notes:  "This emotionally complex scene starts with Aria's rare moment of vulnerability about her family, which she either opens up more about or distances herself from, depending on the player's approach."
 	actors: #consts.Actors
+	flags:  #consts.SceneFlags
+	phases: [
+		{name: "Aria Response"},
+		{name: "Player Response"},
+	]
+	actions: [
+		{
+			type:  #consts.ActionDialogue
+			topic: "16_AriaResponse"
+		},
+		{
+			type:       #consts.ActionPlayerDialogue
+			startPhase: 1
+			endPhase:   1
+			choices: [
+				{
+					topic:    "16_PlayerResponseCompassionate"
+					response: "16_AriaResponseToCompassionate"
+				},
+				{
+					topic:    "16_PlayerResponsePractical"
+					response: "16_AriaResponseToPractical"
+				},
+				{
+					topic:    "16_PlayerResponseProbing"
+					response: "16_AriaResponseToProbing"
+				},
+				{
+					topic:    "16_PlayerResponseDismissive"
+					response: "16_AriaResponseToDismissive"
+				},
+			]
+		},
+	]
 	topics: [
 		{
-			id:      "16_PlayerInquiry"
-			speaker: #consts.Player
-			infos:   (#SimpleInfos & {in: {
+			id:         "16_PlayerInquiry"
+			speaker:    #consts.Player
+			startScene: "16_Regrets"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "16_PlayerInquiry"
 				texts: [
-					"Your dedication to your career is clear, Aria. But how has this journey affected your ties with family?",
+					"How has your career affected ties with family?",
 				]
 			}}).out
 		},
@@ -75,10 +110,11 @@ scene_16_regrets: {
 			}}).out
 		},
 		{
-			id:      "16_AriaResponseToCompassionate"
-			speaker: #consts.Aria
-			notes:   "The vulnerability in Aria’s voice is palpable, her usual confidence replaced by a rare sense of fear."
-			infos:   (#SimpleInfos & {in: {
+			id:         "16_AriaResponseToCompassionate"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "The vulnerability in Aria’s voice is palpable, her usual confidence replaced by a rare sense of fear."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "16_AriaResponseToCompassionate"
 				texts: [
 					"You might be right, but... it terrifies me. The thought of reaching out after all this time, facing them... it feels like standing on the edge of a black hole. I don't know if I'm ready to confront that darkness yet.",
@@ -86,10 +122,11 @@ scene_16_regrets: {
 			}}).out
 		},
 		{
-			id:      "16_AriaResponseToPractical"
-			speaker: #consts.Aria
-			notes:   "There's a shift in her demeanor, a mix of acceptance and hesitation."
-			infos:   (#SimpleInfos & {in: {
+			id:         "16_AriaResponseToPractical"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "There's a shift in her demeanor, a mix of acceptance and hesitation."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "16_AriaResponseToPractical"
 				texts: [
 					"You have a point. My work has always been my focus, but... maybe there's room for both in my life.",
@@ -97,10 +134,11 @@ scene_16_regrets: {
 			}}).out
 		},
 		{
-			id:      "16_AriaResponseToProbing"
-			speaker: #consts.Aria
-			notes:   "A brief flicker of contemplation crosses her face, then she retreats slightly."
-			infos:   (#SimpleInfos & {in: {
+			id:         "16_AriaResponseToProbing"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "A brief flicker of contemplation crosses her face, then she retreats slightly."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "16_AriaResponseToProbing"
 				texts: [
 					"It's something I'm wrestling with. Maybe addressing it will bring peace, but... let's just say I'm not there yet.",
@@ -108,10 +146,11 @@ scene_16_regrets: {
 			}}).out
 		},
 		{
-			id:      "16_AriaResponseToDismissive"
-			speaker: #consts.Aria
-			notes:   "Her defenses snap back up, the vulnerability gone."
-			infos:   (#SimpleInfos & {in: {
+			id:         "16_AriaResponseToDismissive"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "Her defenses snap back up, the vulnerability gone."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "16_AriaResponseToDismissive"
 				texts: [
 					"Exactly. You get it. Can't make an omelet without breaking a few eggs, right? I've made my choice, for better or worse.",
