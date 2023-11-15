@@ -2795,16 +2795,55 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Aria Response"
+                },
+                {
+                    "name": "Player Response"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 0,
+                    "topic": "09_AriaResponse"
+                },
+                {
+                    "type": 3,
+                    "startPhase": 1,
+                    "endPhase": 1,
+                    "choices": [
+                        {
+                            "topic": "09_PlayerResponsePraiseFreedom",
+                            "response": "09_AriaResponseToPraiseFreedom"
+                        },
+                        {
+                            "topic": "09_PlayerResponseQuestionFreedom",
+                            "response": "09_AriaResponseToQuestionFreedom"
+                        },
+                        {
+                            "topic": "09_PlayerResponseAdmirePressure",
+                            "response": "09_AriaResponseToAdmirePressure"
+                        },
+                        {
+                            "topic": "09_PlayerResponseConcernPressure",
+                            "response": "09_AriaResponseToConcernPressure"
+                        }
+                    ]
+                }
+            ],
             "topics": [
                 {
                     "id": "09_PlayerInquiry",
                     "speaker": "",
+                    "startScene": "09_WorkSatisfaction",
                     "infos": [
                         {
                             "id": "09_PlayerInquiry01",
                             "responses": [
                                 {
-                                    "text": "Moving from a big corporation to a startup must be a big change. How do you feel about your work now?"
+                                    "text": "How do you feel about your work now?"
                                 }
                             ]
                         }
@@ -2886,6 +2925,7 @@
                 {
                     "id": "09_AriaResponseToPraiseFreedom",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "09_AriaResponseToPraiseFreedom01",
@@ -2900,6 +2940,7 @@
                 {
                     "id": "09_AriaResponseToQuestionFreedom",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "09_AriaResponseToQuestionFreedom01",
@@ -2914,6 +2955,7 @@
                 {
                     "id": "09_AriaResponseToAdmirePressure",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "09_AriaResponseToAdmirePressure01",
@@ -2928,6 +2970,7 @@
                 {
                     "id": "09_AriaResponseToConcernPressure",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "09_AriaResponseToConcernPressure01",
