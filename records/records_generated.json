@@ -3929,16 +3929,55 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Aria Response"
+                },
+                {
+                    "name": "Player Response"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 0,
+                    "topic": "14_AriaResponse"
+                },
+                {
+                    "type": 3,
+                    "startPhase": 1,
+                    "endPhase": 1,
+                    "choices": [
+                        {
+                            "topic": "14_PlayerResponseSupport",
+                            "response": "14_AriaResponseToSupport"
+                        },
+                        {
+                            "topic": "14_PlayerResponseThoughtful",
+                            "response": "14_AriaResponseToThoughtful"
+                        },
+                        {
+                            "topic": "14_PlayerResponseConcern",
+                            "response": "14_AriaResponseToConcern"
+                        },
+                        {
+                            "topic": "14_PlayerResponseChallenging",
+                            "response": "14_AriaResponseToChallenging"
+                        }
+                    ]
+                }
+            ],
             "topics": [
                 {
                     "id": "14_PlayerInquiry",
                     "speaker": "",
+                    "startScene": "14_Legacy",
                     "infos": [
                         {
                             "id": "14_PlayerInquiry01",
                             "responses": [
                                 {
-                                    "text": "You're pouring so much into these ship designs, Aria. What kind of legacy are you hoping to build?"
+                                    "text": "What kind of legacy are you hoping to build?"
                                 }
                             ]
                         }
@@ -4021,6 +4060,7 @@
                 {
                     "id": "14_AriaResponseToSupport",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "She nods, her eyes bright.",
                     "infos": [
                         {
@@ -4036,6 +4076,7 @@
                 {
                     "id": "14_AriaResponseToThoughtful",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "Her gaze drifts, contemplative.",
                     "infos": [
                         {
@@ -4051,6 +4092,7 @@
                 {
                     "id": "14_AriaResponseToConcern",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "A moment of genuine reflection crosses her face.",
                     "infos": [
                         {
@@ -4066,6 +4108,7 @@
                 {
                     "id": "14_AriaResponseToChallenging",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "Aria's response is tinged with defensiveness, her expression firm.",
                     "infos": [
                         {

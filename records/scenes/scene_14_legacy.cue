@@ -4,14 +4,49 @@ scene_14_legacy: {
 	id:     "14_Legacy"
 	name:   "Legacy and Impact"
 	actors: #consts.Actors
+	flags:  #consts.SceneFlags
+	phases: [
+		{name: "Aria Response"},
+		{name: "Player Response"},
+	]
+	actions: [
+		{
+			type:  #consts.ActionDialogue
+			topic: "14_AriaResponse"
+		},
+		{
+			type:       #consts.ActionPlayerDialogue
+			startPhase: 1
+			endPhase:   1
+			choices: [
+				{
+					topic:    "14_PlayerResponseSupport"
+					response: "14_AriaResponseToSupport"
+				},
+				{
+					topic:    "14_PlayerResponseThoughtful"
+					response: "14_AriaResponseToThoughtful"
+				},
+				{
+					topic:    "14_PlayerResponseConcern"
+					response: "14_AriaResponseToConcern"
+				},
+				{
+					topic:    "14_PlayerResponseChallenging"
+					response: "14_AriaResponseToChallenging"
+				},
+			]
+		},
+	]
 	topics: [
 		{
-			id:      "14_PlayerInquiry"
-			speaker: #consts.Player
-			infos:   (#SimpleInfos & {in: {
+			id:         "14_PlayerInquiry"
+			speaker:    #consts.Player
+			startScene: "14_Legacy"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "14_PlayerInquiry"
 				texts: [
-					"You're pouring so much into these ship designs, Aria. What kind of legacy are you hoping to build?",
+					"What kind of legacy are you hoping to build?",
 				]
 			}}).out
 		},
@@ -74,10 +109,11 @@ scene_14_legacy: {
 			}}).out
 		},
 		{
-			id:      "14_AriaResponseToSupport"
-			speaker: #consts.Aria
-			notes:   "She nods, her eyes bright."
-			infos:   (#SimpleInfos & {in: {
+			id:         "14_AriaResponseToSupport"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "She nods, her eyes bright."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "14_AriaResponseToSupport"
 				texts: [
 					"Thanks, that's the plan. To push the boundaries, to leave something lasting and meaningful.",
@@ -85,10 +121,11 @@ scene_14_legacy: {
 			}}).out
 		},
 		{
-			id:      "14_AriaResponseToThoughtful"
-			speaker: #consts.Aria
-			notes:   "Her gaze drifts, contemplative."
-			infos:   (#SimpleInfos & {in: {
+			id:         "14_AriaResponseToThoughtful"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "Her gaze drifts, contemplative."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "14_AriaResponseToThoughtful"
 				texts: [
 					"I never thought of it that way. Maybe the legacy isn't just the ships, but the journeys they enable, the stories they become part of.",
@@ -96,10 +133,11 @@ scene_14_legacy: {
 			}}).out
 		},
 		{
-			id:      "14_AriaResponseToConcern"
-			speaker: #consts.Aria
-			notes:   "A moment of genuine reflection crosses her face."
-			infos:   (#SimpleInfos & {in: {
+			id:         "14_AriaResponseToConcern"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "A moment of genuine reflection crosses her face."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "14_AriaResponseToConcern"
 				texts: [
 					"You're right; it's easy to get caught up. I've been so focused on the destination, I might be missing the journey.",
@@ -107,10 +145,11 @@ scene_14_legacy: {
 			}}).out
 		},
 		{
-			id:      "14_AriaResponseToChallenging"
-			speaker: #consts.Aria
-			notes:   "Aria's response is tinged with defensiveness, her expression firm."
-			infos:   (#SimpleInfos & {in: {
+			id:         "14_AriaResponseToChallenging"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "Aria's response is tinged with defensiveness, her expression firm."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "14_AriaResponseToChallenging"
 				texts: [
 					"Look, I know what I'm doing. This isn't just about making my mark. It's about fulfilling a vision, a purpose. Sure, I'm driven, but who isn't in this field? I'm here to make a difference, and that's exactly what I plan to do.",
