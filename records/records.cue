@@ -25,4 +25,5 @@ scenes: [
 	s.scene_16_regrets,
 	s.scene_17_intercom,
 	s.scene_18_abandon_contract,
+	s.scene_19_questions,
 ]

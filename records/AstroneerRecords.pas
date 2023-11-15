@@ -346,8 +346,8 @@ begin
 					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Run On', 'Subject');
 					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Parameter #1', GetEditValue(FindRecordByEditorID(condition.S['quest'], 'QUST')));
 					if condition.S['variable'] <> '' then begin
-						SetElementEditValues(conditionRecord, 'CTDA - CTDA\Parameter #2', condition.S['variable']);
-						SetElementEditValues(conditionRecord, 'CIS2 Parameter #2', condition.S['variable']);
+						SetElementEditValues(conditionRecord, 'CTDA - CTDA\Parameter #2', '::' + condition.S['variable'] + '_var');
+						SetElementEditValues(conditionRecord, 'CIS2 Parameter #2', '::' + condition.S['variable'] + '_var');
 					end;
 				end;
 				Remove(ElementByIndex(conditionsRecord, 0));

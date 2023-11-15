@@ -5,6 +5,7 @@ scene_03_accept_contract: {
 	name:   "Player Accepts Contract"
 	notes:  "The player has accepted a mission from the mission board, and has walked over to the Atlas Astronautics intercom to speak with Aria. Aria greets the player, then the player chooses to ask about the contract they've just accepted. Based on the type of Ship contract, a randomly generated response from Aria will be chosen. The intent is to have enough dialog and variety that each mission feels fresh and new"
 	actors: #consts.Actors
+	flags:  #consts.SceneFlags
 	phases: [
 		{name: "Responses"},
 	]
@@ -63,11 +64,12 @@ scene_03_accept_contract: {
 			}}).out
 		},
 		{
-			id:      "03_AriaFighter"
-			speaker: #consts.Aria
-			script:  "Astroneer:Dialogue"
-			onBegin: "SetDesignStage"
-			infos:   (#SimpleInfos & {in: {
+			id:         "03_AriaFighter"
+			speaker:    #consts.Aria
+			startScene: "MAIN_topics"
+			script:     "Astroneer:Dialogue"
+			onBegin:    "SetDesignStage"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaFighter"
 				flags:  #consts.InfoFlagsRandom
 				conditions: [
@@ -88,11 +90,12 @@ scene_03_accept_contract: {
 			}}).out
 		},
 		{
-			id:      "03_AriaExplorer"
-			speaker: #consts.Aria
-			script:  "Astroneer:Dialogue"
-			onBegin: "SetDesignStage"
-			infos:   (#SimpleInfos & {in: {
+			id:         "03_AriaExplorer"
+			speaker:    #consts.Aria
+			startScene: "MAIN_topics"
+			script:     "Astroneer:Dialogue"
+			onBegin:    "SetDesignStage"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaExplorer"
 				flags:  #consts.InfoFlagsRandom
 				conditions: [
@@ -113,11 +116,12 @@ scene_03_accept_contract: {
 			}}).out
 		},
 		{
-			id:      "03_AriaHauler"
-			speaker: #consts.Aria
-			script:  "Astroneer:Dialogue"
-			onBegin: "SetDesignStage"
-			infos:   (#SimpleInfos & {in: {
+			id:         "03_AriaHauler"
+			speaker:    #consts.Aria
+			startScene: "MAIN_topics"
+			script:     "Astroneer:Dialogue"
+			onBegin:    "SetDesignStage"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaHauler"
 				flags:  #consts.InfoFlagsRandom
 				conditions: [
@@ -138,11 +142,12 @@ scene_03_accept_contract: {
 			}}).out
 		},
 		{
-			id:      "03_AriaInterceptor"
-			speaker: #consts.Aria
-			script:  "Astroneer:Dialogue"
-			onBegin: "SetDesignStage"
-			infos:   (#SimpleInfos & {in: {
+			id:         "03_AriaInterceptor"
+			speaker:    #consts.Aria
+			startScene: "MAIN_topics"
+			script:     "Astroneer:Dialogue"
+			onBegin:    "SetDesignStage"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaInterceptor"
 				flags:  #consts.InfoFlagsRandom
 				conditions: [
@@ -163,11 +168,12 @@ scene_03_accept_contract: {
 			}}).out
 		},
 		{
-			id:      "03_AriaLuxury"
-			speaker: #consts.Aria
-			script:  "Astroneer:Dialogue"
-			onBegin: "SetDesignStage"
-			infos:   (#SimpleInfos & {in: {
+			id:         "03_AriaLuxury"
+			speaker:    #consts.Aria
+			startScene: "MAIN_topics"
+			script:     "Astroneer:Dialogue"
+			onBegin:    "SetDesignStage"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaLuxury"
 				flags:  #consts.InfoFlagsRandom
 				conditions: [

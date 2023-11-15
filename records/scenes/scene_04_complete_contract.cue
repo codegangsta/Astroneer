@@ -5,12 +5,43 @@ scene_04_complete_contract: {
 	name:   "Player Completes Contract"
 	notes:  "The player has finished building the ship according to the contract specs, and is ready to turn it in to Aria."
 	actors: #consts.Actors
+	flags:  #consts.SceneFlags
+	phases: [
+		{name: "Responses"},
+	]
+
+	// Each response is a random selection of one of the following, depending on
+	// the type of ship contract:
+	actions: [
+		{
+			type:  #consts.ActionDialogue
+			topic: "04_AriaFighter"
+		},
+		{
+			type:  #consts.ActionDialogue
+			topic: "04_AriaExplorer"
+		},
+		{
+			type:  #consts.ActionDialogue
+			topic: "04_AriaHauler"
+		},
+		{
+			type:  #consts.ActionDialogue
+			topic: "04_AriaInterceptor"
+		},
+		{
+			type:  #consts.ActionDialogue
+			topic: "04_AriaLuxury"
+		},
+	]
 	topics: [
 		{
-			id:      "04_Player"
-			speaker: #consts.Player
-			infos:   (#SimpleInfos & {in: {
+			id:         "04_Player"
+			speaker:    #consts.Player
+			startScene: "04_CompleteContract"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "04_Player"
+				flags:  #consts.InfoFlagsRandom
 				texts: [
 					"Design's in. Does it capture what you were looking for?",
 					"Finished with the ship. How does it measure up to our standards?",
@@ -33,10 +64,22 @@ scene_04_complete_contract: {
 			}}).out
 		},
 		{
-			id:      "04_AriaFighter"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "04_AriaFighter"
+			speaker:    #consts.Aria
+			startScene: "MAIN_topics"
+			script:     "Astroneer:Dialogue"
+			onBegin:    "CompleteContract"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "04_AriaFighter"
+				flags:  #consts.InfoFlagsRandom
+				conditions: [
+					{
+						function: "GetVMQuestVariable"
+						quest:    "ShipContractMission"
+						variable: "ShipType"
+						equals:   0.0
+					},
+				]
 				texts: [
 					"Nice work! This fighter's gone from zero to hero.",
 					"Looks sharp! It’s got stealth and swagger in spades.",
@@ -47,10 +90,22 @@ scene_04_complete_contract: {
 			}}).out
 		},
 		{
-			id:      "04_AriaExplorer"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "04_AriaExplorer"
+			speaker:    #consts.Aria
+			startScene: "MAIN_topics"
+			script:     "Astroneer:Dialogue"
+			onBegin:    "CompleteContract"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "04_AriaExplorer"
+				flags:  #consts.InfoFlagsRandom
+				conditions: [
+					{
+						function: "GetVMQuestVariable"
+						quest:    "ShipContractMission"
+						variable: "ShipType"
+						equals:   1.0
+					},
+				]
 				texts: [
 					"Great update! It's a real cosmic explorer now.",
 					"It's a star-traveler's dream! Love the new look.",
@@ -61,10 +116,22 @@ scene_04_complete_contract: {
 			}}).out
 		},
 		{
-			id:      "04_AriaHauler"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "04_AriaHauler"
+			speaker:    #consts.Aria
+			startScene: "MAIN_topics"
+			script:     "Astroneer:Dialogue"
+			onBegin:    "CompleteContract"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "04_AriaHauler"
+				flags:  #consts.InfoFlagsRandom
+				conditions: [
+					{
+						function: "GetVMQuestVariable"
+						quest:    "ShipContractMission"
+						variable: "ShipType"
+						equals:   2.0
+					},
+				]
 				texts: [
 					"This hauler's a real gem now. It's got style and space!",
 					"You turned it chic! It's a fashion-forward freighter.",
@@ -75,10 +142,22 @@ scene_04_complete_contract: {
 			}}).out
 		},
 		{
-			id:      "04_AriaInterceptor"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "04_AriaInterceptor"
+			speaker:    #consts.Aria
+			startScene: "MAIN_topics"
+			script:     "Astroneer:Dialogue"
+			onBegin:    "CompleteContract"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "04_AriaInterceptor"
+				flags:  #consts.InfoFlagsRandom
+				conditions: [
+					{
+						function: "GetVMQuestVariable"
+						quest:    "ShipContractMission"
+						variable: "ShipType"
+						equals:   3.0
+					},
+				]
 				texts: [
 					"This interceptor's slick and secretive now. Nice touch!",
 					"That's some speed! It's a real cosmic blur.",
@@ -89,10 +168,22 @@ scene_04_complete_contract: {
 			}}).out
 		},
 		{
-			id:      "04_AriaLuxury"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "04_AriaLuxury"
+			speaker:    #consts.Aria
+			startScene: "MAIN_topics"
+			script:     "Astroneer:Dialogue"
+			onBegin:    "CompleteContract"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "04_AriaLuxury"
+				flags:  #consts.InfoFlagsRandom
+				conditions: [
+					{
+						function: "GetVMQuestVariable"
+						quest:    "ShipContractMission"
+						variable: "ShipType"
+						equals:   4.0
+					},
+				]
 				texts: [
 					"It's like a floating palace. Absolutely luxurious!",
 					"You've raised the bar! It's luxury cruising at its best.",

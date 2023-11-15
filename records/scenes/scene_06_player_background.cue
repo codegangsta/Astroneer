@@ -4,6 +4,31 @@ scene_06_player_background: {
 	id:     "06_PlayerBackground"
 	name:   "Player's Background"
 	actors: #consts.Actors
+	flags:  #consts.SceneFlags
+	phases: [{name: "Background"}]
+	actions: [
+		{
+			type:  #consts.ActionDialogue
+			topic: "06_AriaInquiry"
+		},
+		{
+			type: #consts.ActionPlayerDialogue
+			choices: [
+				{
+					topic:    "06_PlayerResponseAmbition"
+					response: "06_AriaResponseToAmbition"
+				},
+				{
+					topic:    "06_PlayerResponseKinship"
+					response: "06_AriaResponseToKinship"
+				},
+				{
+					topic:    "06_PlayerResponseHorizon"
+					response: "06_AriaResponseToHorizon"
+				},
+			]
+		},
+	]
 	topics: [
 		{
 			id:      "06_AriaInquiry"
@@ -11,6 +36,8 @@ scene_06_player_background: {
 			infos:   (#SimpleInfos & {in: {
 				prefix: "06_AriaInquiry"
 				texts: [
+					// TODO: Maybe make this a bit more playful. She was just a bit vulnerable
+					// so maybe she tries to lighten the mood and redirect
 					"So, Cap, what's your story? Here for the thrill, the cash, or something more?",
 				]
 			}}).out
@@ -46,9 +73,10 @@ scene_06_player_background: {
 			}}).out
 		},
 		{
-			id:      "06_AriaResponseToAmbition"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "06_AriaResponseToAmbition"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "06_AriaResponseToAmbition"
 				texts: [
 					"Thrills and bills, a classic mix. Just watch your back; adventure can be costly out here.",
@@ -56,9 +84,10 @@ scene_06_player_background: {
 			}}).out
 		},
 		{
-			id:      "06_AriaResponseToKinship"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "06_AriaResponseToKinship"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "06_AriaResponseToKinship"
 				texts: [
 					"Another star chaser, huh? Good. The galaxy's vast, and there's plenty of room for names like ours.",
@@ -66,9 +95,10 @@ scene_06_player_background: {
 			}}).out
 		},
 		{
-			id:      "06_AriaResponseToHorizon"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "06_AriaResponseToHorizon"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "06_AriaResponseToHorizon"
 				texts: [
 					"The eternal explorer, huh? Good choice. There's more out there than we can imagine. Let's uncover it together.",

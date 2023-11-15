@@ -24,8 +24,15 @@
                             "topic": "04_Player"
                         },
                         {
+                            "topic": "18_PlayerInquiry"
+                        },
+                        {
                             "topic": "MAIN_PlayerModifyShips",
-                            "response": "Aria_ModifyShip"
+                            "response": "MAIN_AriaModifyShipsResponse"
+                        },
+                        {
+                            "topic": "MAIN_PlayerQuestions",
+                            "response": "MAIN_AriaQuestionsResponse"
                         }
                     ]
                 }
@@ -40,6 +47,87 @@
                             "responses": [
                                 {
                                     "text": "I'd like to modify my ships"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "MAIN_AriaModifyShipsResponse",
+                    "speaker": "",
+                    "infos": [
+                        {
+                            "id": "MAIN_AriaModifyShipsResponse01",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Sure thing!"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "MAIN_AriaModifyShipsResponse02",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "You got it!"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "MAIN_AriaModifyShipsResponse03",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Absolutely!"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "MAIN_AriaModifyShipsResponse04",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Of course!"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "MAIN_PlayerQuestions",
+                    "speaker": "",
+                    "infos": [
+                        {
+                            "id": "MAIN_PlayerQuestions01",
+                            "responses": [
+                                {
+                                    "text": "Mind if I ask you a few questions?"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "MAIN_AriaQuestionsResponse",
+                    "speaker": "",
+                    "startScene": "19_Questions",
+                    "infos": [
+                        {
+                            "id": "MAIN_AriaQuestionsResponse01",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Don't mind at all!"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "MAIN_AriaQuestionsResponse02",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "What's on your mind, Cap?"
                                 }
                             ]
                         }
@@ -529,6 +617,7 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
             "phases": [
                 {
                     "name": "Greet"
@@ -789,6 +878,7 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
             "phases": [
                 {
                     "name": "Responses"
@@ -971,6 +1061,7 @@
                 {
                     "id": "03_AriaFighter",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "script": "Astroneer:Dialogue",
                     "onBegin": "SetDesignStage",
                     "infos": [
@@ -1064,6 +1155,7 @@
                 {
                     "id": "03_AriaExplorer",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "script": "Astroneer:Dialogue",
                     "onBegin": "SetDesignStage",
                     "infos": [
@@ -1157,6 +1249,7 @@
                 {
                     "id": "03_AriaHauler",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "script": "Astroneer:Dialogue",
                     "onBegin": "SetDesignStage",
                     "infos": [
@@ -1250,6 +1343,7 @@
                 {
                     "id": "03_AriaInterceptor",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "script": "Astroneer:Dialogue",
                     "onBegin": "SetDesignStage",
                     "infos": [
@@ -1343,6 +1437,7 @@
                 {
                     "id": "03_AriaLuxury",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "script": "Astroneer:Dialogue",
                     "onBegin": "SetDesignStage",
                     "infos": [
@@ -1442,13 +1537,43 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Responses"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 0,
+                    "topic": "04_AriaFighter"
+                },
+                {
+                    "type": 0,
+                    "topic": "04_AriaExplorer"
+                },
+                {
+                    "type": 0,
+                    "topic": "04_AriaHauler"
+                },
+                {
+                    "type": 0,
+                    "topic": "04_AriaInterceptor"
+                },
+                {
+                    "type": 0,
+                    "topic": "04_AriaLuxury"
+                }
+            ],
             "topics": [
                 {
                     "id": "04_Player",
                     "speaker": "",
+                    "startScene": "04_CompleteContract",
                     "infos": [
                         {
                             "id": "04_Player01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Design's in. Does it capture what you were looking for?"
@@ -1464,6 +1589,7 @@
                         },
                         {
                             "id": "04_Player02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Finished with the ship. How does it measure up to our standards?"
@@ -1479,6 +1605,7 @@
                         },
                         {
                             "id": "04_Player03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Completed the contract. What's your take on the final product?"
@@ -1494,6 +1621,7 @@
                         },
                         {
                             "id": "04_Player04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Just finished my design. Will it pass the Aria test?"
@@ -1509,6 +1637,7 @@
                         },
                         {
                             "id": "04_Player05",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Redesign's done. Does it have the Aria stamp of approval?"
@@ -1524,6 +1653,7 @@
                         },
                         {
                             "id": "04_Player06",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Contract's done. I'm eager to hear your thoughts."
@@ -1539,6 +1669,7 @@
                         },
                         {
                             "id": "04_Player07",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Wrapped up the ship. It should meet the mark."
@@ -1554,6 +1685,7 @@
                         },
                         {
                             "id": "04_Player08",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Finished the upgrade. It's ready for your review."
@@ -1569,6 +1701,7 @@
                         },
                         {
                             "id": "04_Player09",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "The ship's reimagined, per your vision."
@@ -1584,6 +1717,7 @@
                         },
                         {
                             "id": "04_Player10",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Ship is done. It's a fresh take on an old classic."
@@ -1602,44 +1736,92 @@
                 {
                     "id": "04_AriaFighter",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
+                    "script": "Astroneer:Dialogue",
+                    "onBegin": "CompleteContract",
                     "infos": [
                         {
                             "id": "04_AriaFighter01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Nice work! This fighter's gone from zero to hero."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 0.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaFighter02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Looks sharp! It’s got stealth and swagger in spades."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 0.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaFighter03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "You've turned it tough! It's ready to rumble now."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 0.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaFighter04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Sleek job! It's like a race car of the skies."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 0.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaFighter05",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Stellar work! This fighter's ready for its own saga."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 0.0
                                 }
                             ]
                         }
@@ -1648,44 +1830,92 @@
                 {
                     "id": "04_AriaExplorer",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
+                    "script": "Astroneer:Dialogue",
+                    "onBegin": "CompleteContract",
                     "infos": [
                         {
                             "id": "04_AriaExplorer01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Great update! It's a real cosmic explorer now."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 1.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaExplorer02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "It's a star-traveler's dream! Love the new look."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 1.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaExplorer03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Those sensors are top-notch. It's a galaxy whisperer now."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 1.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaExplorer04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "You've given it a real adventurous edge. Nice!"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 1.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaExplorer05",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Love it! It's like a toolbox of space wonders."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 1.0
                                 }
                             ]
                         }
@@ -1694,44 +1924,92 @@
                 {
                     "id": "04_AriaHauler",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
+                    "script": "Astroneer:Dialogue",
+                    "onBegin": "CompleteContract",
                     "infos": [
                         {
                             "id": "04_AriaHauler01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "This hauler's a real gem now. It's got style and space!"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 2.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaHauler02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "You turned it chic! It's a fashion-forward freighter."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 2.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaHauler03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Massive upgrade! It's a cargo metropolis now."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 2.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaHauler04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "From sturdy to stunning! It's a cargo showstopper."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 2.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaHauler05",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Wow, talk about an upgrade! It's a planet mover!"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 2.0
                                 }
                             ]
                         }
@@ -1740,44 +2018,92 @@
                 {
                     "id": "04_AriaInterceptor",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
+                    "script": "Astroneer:Dialogue",
+                    "onBegin": "CompleteContract",
                     "infos": [
                         {
                             "id": "04_AriaInterceptor01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "This interceptor's slick and secretive now. Nice touch!"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 3.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaInterceptor02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "That's some speed! It's a real cosmic blur."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 3.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaInterceptor03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Super quick! It's got an extra dose of zoom."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 3.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaInterceptor04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Instant action! This ship's redefining speed."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 3.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaInterceptor05",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Sleek and fast! It's a racer's dream."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 3.0
                                 }
                             ]
                         }
@@ -1786,44 +2112,92 @@
                 {
                     "id": "04_AriaLuxury",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
+                    "script": "Astroneer:Dialogue",
+                    "onBegin": "CompleteContract",
                     "infos": [
                         {
                             "id": "04_AriaLuxury01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "It's like a floating palace. Absolutely luxurious!"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 4.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaLuxury02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "You've raised the bar! It's luxury cruising at its best."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 4.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaLuxury03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Pure elegance! Every inch whispers class."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 4.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaLuxury04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Opulent and grand! It's a journey in style."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 4.0
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaLuxury05",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Cozy and lavish! It's a five-star trip through space."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 4.0
                                 }
                             ]
                         }
@@ -1837,10 +2211,23 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Background"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 0,
+                    "topic": "05_AriaResponse"
+                }
+            ],
             "topics": [
                 {
                     "id": "05_PlayerInquiry",
                     "speaker": "",
+                    "startScene": "05_Background",
                     "infos": [
                         {
                             "id": "05_PlayerInquiry01",
@@ -1855,12 +2242,16 @@
                 {
                     "id": "05_AriaResponse",
                     "speaker": "AriaCollins",
+                    "startScene": "06_PlayerBackground",
                     "infos": [
                         {
                             "id": "05_AriaResponse01",
                             "responses": [
                                 {
-                                    "text": "More about me? Well, let's see... I'm a product of the colonies. A tiny speck on the edge of the frontier that you won't find on any tourist brochure. The scrapyard was my playground, I dreamt of one day inventing something big and important, something that would propel humanity forward. My folks figured I'd be a mechanic, but I had my eyes on the stars and my mind on the ships that could reach them."
+                                    "text": "More about me? Well, let's see... I'm a product of the colonies. A tiny speck on the edge of the frontier that you won't find on any tourist brochure. The scrapyard was my playground,"
+                                },
+                                {
+                                    "text": "I dreamt of one day inventing something big and important, something that would propel humanity forward. My folks figured I'd be a mechanic, but I had my eyes on the stars and my mind on the ships that could reach them."
                                 },
                                 {
                                     "text": "So, I made it off-world, thanks to a scholarship at the University here. It was my shot, my big break. I was going to build the future. But the corporate shipyards weren't buying what a starry-eyed colony kid was selling."
@@ -1885,6 +2276,35 @@
             "name": "Player's Background",
             "actors": [
                 -2
+            ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Background"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 0,
+                    "topic": "06_AriaInquiry"
+                },
+                {
+                    "type": 3,
+                    "choices": [
+                        {
+                            "topic": "06_PlayerResponseAmbition",
+                            "response": "06_AriaResponseToAmbition"
+                        },
+                        {
+                            "topic": "06_PlayerResponseKinship",
+                            "response": "06_AriaResponseToKinship"
+                        },
+                        {
+                            "topic": "06_PlayerResponseHorizon",
+                            "response": "06_AriaResponseToHorizon"
+                        }
+                    ]
+                }
             ],
             "topics": [
                 {
@@ -1946,6 +2366,7 @@
                 {
                     "id": "06_AriaResponseToAmbition",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "06_AriaResponseToAmbition01",
@@ -1960,6 +2381,7 @@
                 {
                     "id": "06_AriaResponseToKinship",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "06_AriaResponseToKinship01",
@@ -1974,6 +2396,7 @@
                 {
                     "id": "06_AriaResponseToHorizon",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "06_AriaResponseToHorizon01",
@@ -3860,6 +4283,57 @@
                                     "text": "Keep your chin up. Space is vast, and there's always something else out there for you."
                                 }
                             ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "19_Questions",
+            "name": "Personal Questions for Aria",
+            "notes": "This scene is a container for the personal questions that the player will ask Aria.",
+            "actors": [
+                -2
+            ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Questions"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 3,
+                    "choices": [
+                        {
+                            "topic": "05_PlayerInquiry"
+                        },
+                        {
+                            "topic": "07_PlayerInquiry"
+                        },
+                        {
+                            "topic": "08_PlayerInquiry"
+                        },
+                        {
+                            "topic": "09_PlayerInquiry"
+                        },
+                        {
+                            "topic": "10_PlayerInquiry"
+                        },
+                        {
+                            "topic": "13_PlayerInquiry"
+                        },
+                        {
+                            "topic": "14_PlayerInquiry"
+                        },
+                        {
+                            "topic": "15_PlayerInquiry"
+                        },
+                        {
+                            "topic": "16_PlayerInquiry"
+                        },
+                        {
+                            "topic": "17_PlayerInquiry"
                         }
                     ]
                 }
