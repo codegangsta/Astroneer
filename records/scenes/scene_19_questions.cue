@@ -19,6 +19,7 @@ scene_19_questions: {
 					// Background
 					topic: "05_PlayerInquiry"
 				},
+
 				{
 					// Colony life
 					topic: "07_PlayerInquiry"
@@ -31,6 +32,7 @@ scene_19_questions: {
 					// Work Satisfaction
 					topic: "09_PlayerInquiry"
 				},
+
 				{
 					// Alternate Paths
 					topic: "10_PlayerInquiry"

@@ -5,11 +5,46 @@ scene_15_sacrifices: {
 	name:   "Sacrifices"
 	notes:  "This scene delves into the complex nature of Aria's career-driven life, challenging her to confront the personal costs and momentarily revealing the vulnerability behind her confident facade."
 	actors: #consts.Actors
+	flags:  #consts.SceneFlags
+	phases: [
+		{name: "Aria Response"},
+		{name: "Player Response"},
+	]
+	actions: [
+		{
+			type:  #consts.ActionDialogue
+			topic: "15_AriaResponse"
+		},
+		{
+			type:       #consts.ActionPlayerDialogue
+			startPhase: 1
+			endPhase:   1
+			choices: [
+				{
+					topic:    "15_PlayerResponseUnderstanding"
+					response: "15_AriaResponseToUnderstanding"
+				},
+				{
+					topic:    "15_PlayerResponseInquisitive"
+					response: "15_AriaResponseToInquisitive"
+				},
+				{
+					topic:    "15_PlayerResponseSupportive"
+					response: "15_AriaResponseToSupportive"
+				},
+				{
+					topic:    "15_PlayerResponseIntimate"
+					response: "15_AriaResponseToIntimate"
+				},
+			]
+		},
+	]
 	topics: [
 		{
-			id:      "15_PlayerInquiry"
-			speaker: #consts.Player
-			infos:   (#SimpleInfos & {in: {
+			id:         "15_PlayerInquiry"
+			speaker:    #consts.Player
+			startScene: "15_Sacrifices"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "15_PlayerInquiry"
 				texts: [
 					"You’ve climbed high in your field, Aria. But I have to wonder, what personal costs came with that ascent?",
@@ -75,10 +110,11 @@ scene_15_sacrifices: {
 			}}).out
 		},
 		{
-			id:      "15_AriaResponseToUnderstanding"
-			speaker: #consts.Aria
-			notes:   "Aria nods, her confidence intact."
-			infos:   (#SimpleInfos & {in: {
+			id:         "15_AriaResponseToUnderstanding"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "Aria nods, her confidence intact."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "15_AriaResponseToUnderstanding"
 				texts: [
 					"I'm well aware of what I've chosen. This is my world, and I wouldn’t have it any other way.",
@@ -86,10 +122,11 @@ scene_15_sacrifices: {
 			}}).out
 		},
 		{
-			id:      "15_AriaResponseToInquisitive"
-			speaker: #consts.Aria
-			notes:   "She responds briskly."
-			infos:   (#SimpleInfos & {in: {
+			id:         "15_AriaResponseToInquisitive"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "She responds briskly."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "15_AriaResponseToInquisitive"
 				texts: [
 					"Sure, it weighs on me. But regret is a distraction. I’m here to push boundaries, not dwell on what-ifs.",
@@ -97,10 +134,11 @@ scene_15_sacrifices: {
 			}}).out
 		},
 		{
-			id:      "15_AriaResponseToSupportive"
-			speaker: #consts.Aria
-			notes:   "Her expression brightens, reaffirming her path."
-			infos:   (#SimpleInfos & {in: {
+			id:         "15_AriaResponseToSupportive"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "Her expression brightens, reaffirming her path."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "15_AriaResponseToSupportive"
 				texts: [
 					"Thank you. I’ve never been one for the sidelines. I'm here to make waves, to make a difference.",
@@ -108,10 +146,11 @@ scene_15_sacrifices: {
 			}}).out
 		},
 		{
-			id:      "15_AriaResponseToIntimate"
-			speaker: #consts.Aria
-			notes:   "Caught off guard, her usual composure falters."
-			infos:   (#SimpleInfos & {in: {
+			id:         "15_AriaResponseToIntimate"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "Caught off guard, her usual composure falters."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "15_AriaResponseToIntimate"
 				texts: [
 					"A quieter life... I don't often let myself think about that. Maybe... maybe I should, even if just for a moment.",

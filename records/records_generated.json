@@ -4130,10 +4130,49 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Aria Response"
+                },
+                {
+                    "name": "Player Response"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 0,
+                    "topic": "15_AriaResponse"
+                },
+                {
+                    "type": 3,
+                    "startPhase": 1,
+                    "endPhase": 1,
+                    "choices": [
+                        {
+                            "topic": "15_PlayerResponseUnderstanding",
+                            "response": "15_AriaResponseToUnderstanding"
+                        },
+                        {
+                            "topic": "15_PlayerResponseInquisitive",
+                            "response": "15_AriaResponseToInquisitive"
+                        },
+                        {
+                            "topic": "15_PlayerResponseSupportive",
+                            "response": "15_AriaResponseToSupportive"
+                        },
+                        {
+                            "topic": "15_PlayerResponseIntimate",
+                            "response": "15_AriaResponseToIntimate"
+                        }
+                    ]
+                }
+            ],
             "topics": [
                 {
                     "id": "15_PlayerInquiry",
                     "speaker": "",
+                    "startScene": "15_Sacrifices",
                     "infos": [
                         {
                             "id": "15_PlayerInquiry01",
@@ -4222,6 +4261,7 @@
                 {
                     "id": "15_AriaResponseToUnderstanding",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "Aria nods, her confidence intact.",
                     "infos": [
                         {
@@ -4237,6 +4277,7 @@
                 {
                     "id": "15_AriaResponseToInquisitive",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "She responds briskly.",
                     "infos": [
                         {
@@ -4252,6 +4293,7 @@
                 {
                     "id": "15_AriaResponseToSupportive",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "Her expression brightens, reaffirming her path.",
                     "infos": [
                         {
@@ -4267,6 +4309,7 @@
                 {
                     "id": "15_AriaResponseToIntimate",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "Caught off guard, her usual composure falters.",
                     "infos": [
                         {
