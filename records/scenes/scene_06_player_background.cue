@@ -5,14 +5,19 @@ scene_06_player_background: {
 	name:   "Player's Background"
 	actors: #consts.Actors
 	flags:  #consts.SceneFlags
-	phases: [{name: "Background"}]
+	phases: [
+		{name: "Aria's Inquiry"},
+		{name: "Player's Response"},
+	]
 	actions: [
 		{
 			type:  #consts.ActionDialogue
 			topic: "06_AriaInquiry"
 		},
 		{
-			type: #consts.ActionPlayerDialogue
+			type:       #consts.ActionPlayerDialogue
+			startPhase: 1
+			endPhase:   1
 			choices: [
 				{
 					topic:    "06_PlayerResponseAmbition"

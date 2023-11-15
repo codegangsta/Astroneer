@@ -4,11 +4,20 @@ scene_17_intercom: {
 	id:     "17_Intercom"
 	name:   "Intercom"
 	actors: #consts.Actors
+	flags:  #consts.SceneFlags
+	phases: [{name: "Intercom"}]
+	actions: [
+		{
+			type:  #consts.ActionDialogue
+			topic: "17_AriaResponse"
+		},
+	]
 	topics: [
 		{
-			id:      "17_PlayerInquiry"
-			speaker: #consts.Player
-			infos:   (#SimpleInfos & {in: {
+			id:         "17_PlayerInquiry"
+			speaker:    #consts.Player
+			startScene: "17_Intercom"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "17_PlayerInquiry"
 				texts: [
 					"Why do we have to use the intercom to communicate?",
@@ -16,8 +25,9 @@ scene_17_intercom: {
 			}}).out
 		},
 		{
-			id:      "17_AriaResponse"
-			speaker: #consts.Aria
+			id:         "17_AriaResponse"
+			startScene: "MAIN_topics"
+			speaker:    #consts.Aria
 			infos: [
 				{
 					id: "17_AriaResponse01"

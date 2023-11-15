@@ -5,11 +5,46 @@ scene_08_startup: {
 	name:   "Startup vs Corporations"
 	notes:  "In this scene, Aria explains her choice of leaving a stable corporate job for a dynamic startup environment, subtly indicating her personal drive and aspiration despite the inherent risks."
 	actors: #consts.Actors
+	flags:  #consts.SceneFlags
+	phases: [
+		{name: "Aria's Response"},
+		{name: "Player's Response"},
+	]
+	actions: [
+		{
+			type:  #consts.ActionDialogue
+			topic: "08_AriaResponse"
+		},
+		{
+			type:       #consts.ActionPlayerDialogue
+			startPhase: 1
+			endPhase:   1
+			choices: [
+				{
+					topic:    "08_PlayerResponseUnderstandingCorporate"
+					response: "08_AriaResponseToUnderstandingCorporate"
+				},
+				{
+					topic:    "08_PlayerResponseCriticalCorporate"
+					response: "08_AriaResponseToCriticalCorporate"
+				},
+				{
+					topic:    "08_PlayerResponseEnthusiasticStartup"
+					response: "08_AriaResponseToEnthusiasticStartup"
+				},
+				{
+					topic:    "08_PlayerResponseSkepticalStartup"
+					response: "08_AriaResponseToSkepticalStartup"
+				},
+			]
+		},
+	]
 	topics: [
 		{
-			id:      "08_PlayerInquiry"
-			speaker: #consts.Player
-			infos:   (#SimpleInfos & {in: {
+			id:         "08_PlayerInquiry"
+			speaker:    #consts.Player
+			startScene: "08_Startup"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "08_PlayerInquiry"
 				texts: [
 					"Why leave the stability of a big corporation for a startup?",
@@ -75,9 +110,10 @@ scene_08_startup: {
 			}}).out
 		},
 		{
-			id:      "08_AriaResponseToUnderstandingCorporate"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "08_AriaResponseToUnderstandingCorporate"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "08_AriaResponseToUnderstandingCorporate"
 				texts: [
 					"Right. Stability is comforting, but there's no real growth in comfort. At Atlas, every day is a chance to be part of something new, something big.",
@@ -85,9 +121,10 @@ scene_08_startup: {
 			}}).out
 		},
 		{
-			id:      "08_AriaResponseToCriticalCorporate"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "08_AriaResponseToCriticalCorporate"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "08_AriaResponseToCriticalCorporate"
 				texts: [
 					"It's a gamble, I won't lie. But sometimes, you have to risk the safety net to reach higher. We might stumble, but we're also free to soar.",
@@ -95,9 +132,10 @@ scene_08_startup: {
 			}}).out
 		},
 		{
-			id:      "08_AriaResponseToEnthusiasticStartup"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "08_AriaResponseToEnthusiasticStartup"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "08_AriaResponseToEnthusiasticStartup"
 				texts: [
 					"Exactly, it's exhilarating! There's this energy here, a buzz of creating something from scratch. That's where true innovation happens.",
@@ -105,9 +143,10 @@ scene_08_startup: {
 			}}).out
 		},
 		{
-			id:      "08_AriaResponseToSkepticalStartup"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "08_AriaResponseToSkepticalStartup"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "08_AriaResponseToSkepticalStartup"
 				texts: [
 					"It's a tough call. But I believe in calculated risks. Atlas is a leap, but it's not blind faith. It's about chasing something bigger, something meaningful.",

@@ -5,14 +5,49 @@ scene_07_colony_life: {
 	name:   "Colony Life"
 	notes:  "In this scene, Aria fondly recalls her upbringing in a space colony, subtly hinting at the contrast between her ambitious career path and the simpler life she left behind. Her responses subtly reflect her inner conflict, though she remains somewhat steadfast in her choices."
 	actors: #consts.Actors
+	flags:  #consts.SceneFlags
+	phases: [
+		{name: "Aria Response"},
+		{name: "Player Response"},
+	]
+	actions: [
+		{
+			type:  #consts.ActionDialogue
+			topic: "07_AriaResponse"
+		},
+		{
+			type:       #consts.ActionPlayerDialogue
+			startPhase: 1
+			endPhase:   1
+			choices: [
+				{
+					topic:    "07_PlayerResponseAdmireImagination"
+					response: "07_AriaResponseToAdmireImagination"
+				},
+				{
+					topic:    "07_PlayerResponseCuriousImagination"
+					response: "07_AriaResponseToCuriousImagination"
+				},
+				{
+					topic:    "07_PlayerResponseAdmireResilience"
+					response: "07_AriaResponseToAdmireResilience"
+				},
+				// {
+				// 	topic:    "07_PlayerResponseCuriousResilience"
+				// 	response: "07_AriaResponseToCuriousResilience"
+				// },
+			]
+		},
+	]
 	topics: [
 		{
-			id:      "07_PlayerInquiry"
-			speaker: #consts.Player
-			infos:   (#SimpleInfos & {in: {
+			id:         "07_PlayerInquiry"
+			speaker:    #consts.Player
+			startScene: "07_ColonyLife"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "07_PlayerInquiry"
 				texts: [
-					"Growing up on a colony must have been unique. How did that shape who you are today?",
+					"Growing up on a colony must have been unique. What was it like?",
 				]
 			}}).out
 		},
@@ -74,9 +109,10 @@ scene_07_colony_life: {
 			}}).out
 		},
 		{
-			id:      "07_AriaResponseToAdmireImagination"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "07_AriaResponseToAdmireImagination"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "07_AriaResponseToAdmireImagination"
 				texts: [
 					"Definitely. My imagination took root there, but it always stretched towards the stars. Can't help but wonder sometimes though, about the roads not taken.",
@@ -84,9 +120,10 @@ scene_07_colony_life: {
 			}}).out
 		},
 		{
-			id:      "07_AriaResponseToCuriousImagination"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "07_AriaResponseToCuriousImagination"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "07_AriaResponseToCuriousImagination"
 				texts: [
 					"They did. I was always reaching for the next big thing. I guess a part of me still clings to those simple days, even if I don't admit it often.",
@@ -94,9 +131,10 @@ scene_07_colony_life: {
 			}}).out
 		},
 		{
-			id:      "07_AriaResponseToAdmireResilience"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "07_AriaResponseToAdmireResilience"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "07_AriaResponseToAdmireResilience"
 				texts: [
 					"It's been quite the journey. I've come far, but the lessons from back then keep me grounded... in a way.",

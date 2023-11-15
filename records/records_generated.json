@@ -2280,7 +2280,10 @@
             "flags": "0000100000001",
             "phases": [
                 {
-                    "name": "Background"
+                    "name": "Aria's Inquiry"
+                },
+                {
+                    "name": "Player's Response"
                 }
             ],
             "actions": [
@@ -2290,6 +2293,8 @@
                 },
                 {
                     "type": 3,
+                    "startPhase": 1,
+                    "endPhase": 1,
                     "choices": [
                         {
                             "topic": "06_PlayerResponseAmbition",
@@ -2417,16 +2422,51 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Aria Response"
+                },
+                {
+                    "name": "Player Response"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 0,
+                    "topic": "07_AriaResponse"
+                },
+                {
+                    "type": 3,
+                    "startPhase": 1,
+                    "endPhase": 1,
+                    "choices": [
+                        {
+                            "topic": "07_PlayerResponseAdmireImagination",
+                            "response": "07_AriaResponseToAdmireImagination"
+                        },
+                        {
+                            "topic": "07_PlayerResponseCuriousImagination",
+                            "response": "07_AriaResponseToCuriousImagination"
+                        },
+                        {
+                            "topic": "07_PlayerResponseAdmireResilience",
+                            "response": "07_AriaResponseToAdmireResilience"
+                        }
+                    ]
+                }
+            ],
             "topics": [
                 {
                     "id": "07_PlayerInquiry",
                     "speaker": "",
+                    "startScene": "07_ColonyLife",
                     "infos": [
                         {
                             "id": "07_PlayerInquiry01",
                             "responses": [
                                 {
-                                    "text": "Growing up on a colony must have been unique. How did that shape who you are today?"
+                                    "text": "Growing up on a colony must have been unique. What was it like?"
                                 }
                             ]
                         }
@@ -2508,6 +2548,7 @@
                 {
                     "id": "07_AriaResponseToAdmireImagination",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "07_AriaResponseToAdmireImagination01",
@@ -2522,6 +2563,7 @@
                 {
                     "id": "07_AriaResponseToCuriousImagination",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "07_AriaResponseToCuriousImagination01",
@@ -2536,6 +2578,7 @@
                 {
                     "id": "07_AriaResponseToAdmireResilience",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "07_AriaResponseToAdmireResilience01",
@@ -2556,10 +2599,49 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Aria's Response"
+                },
+                {
+                    "name": "Player's Response"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 0,
+                    "topic": "08_AriaResponse"
+                },
+                {
+                    "type": 3,
+                    "startPhase": 1,
+                    "endPhase": 1,
+                    "choices": [
+                        {
+                            "topic": "08_PlayerResponseUnderstandingCorporate",
+                            "response": "08_AriaResponseToUnderstandingCorporate"
+                        },
+                        {
+                            "topic": "08_PlayerResponseCriticalCorporate",
+                            "response": "08_AriaResponseToCriticalCorporate"
+                        },
+                        {
+                            "topic": "08_PlayerResponseEnthusiasticStartup",
+                            "response": "08_AriaResponseToEnthusiasticStartup"
+                        },
+                        {
+                            "topic": "08_PlayerResponseSkepticalStartup",
+                            "response": "08_AriaResponseToSkepticalStartup"
+                        }
+                    ]
+                }
+            ],
             "topics": [
                 {
                     "id": "08_PlayerInquiry",
                     "speaker": "",
+                    "startScene": "08_Startup",
                     "infos": [
                         {
                             "id": "08_PlayerInquiry01",
@@ -2647,6 +2729,7 @@
                 {
                     "id": "08_AriaResponseToUnderstandingCorporate",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "08_AriaResponseToUnderstandingCorporate01",
@@ -2661,6 +2744,7 @@
                 {
                     "id": "08_AriaResponseToCriticalCorporate",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "08_AriaResponseToCriticalCorporate01",
@@ -2675,6 +2759,7 @@
                 {
                     "id": "08_AriaResponseToEnthusiasticStartup",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "08_AriaResponseToEnthusiasticStartup01",
@@ -2689,6 +2774,7 @@
                 {
                     "id": "08_AriaResponseToSkepticalStartup",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "08_AriaResponseToSkepticalStartup01",
@@ -4187,10 +4273,23 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Intercom"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 0,
+                    "topic": "17_AriaResponse"
+                }
+            ],
             "topics": [
                 {
                     "id": "17_PlayerInquiry",
                     "speaker": "",
+                    "startScene": "17_Intercom",
                     "infos": [
                         {
                             "id": "17_PlayerInquiry01",
@@ -4204,6 +4303,7 @@
                 },
                 {
                     "id": "17_AriaResponse",
+                    "startScene": "MAIN_topics",
                     "speaker": "AriaCollins",
                     "infos": [
                         {
@@ -4290,8 +4390,8 @@
         },
         {
             "id": "19_Questions",
-            "name": "Personal Questions for Aria",
-            "notes": "This scene is a container for the personal questions that the player will ask Aria.",
+            "name": "Questions for Aria",
+            "notes": "This scene is a container for the standard questions that the player will ask Aria.",
             "actors": [
                 -2
             ],
@@ -4305,6 +4405,9 @@
                 {
                     "type": 3,
                     "choices": [
+                        {
+                            "topic": "17_PlayerInquiry"
+                        },
                         {
                             "topic": "05_PlayerInquiry"
                         },
@@ -4331,9 +4434,6 @@
                         },
                         {
                             "topic": "16_PlayerInquiry"
-                        },
-                        {
-                            "topic": "17_PlayerInquiry"
                         }
                     ]
                 }
