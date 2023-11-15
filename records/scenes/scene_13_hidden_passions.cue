@@ -5,14 +5,49 @@ scene_13_hidden_passions: {
 	name:   "Hidden Passions - Humble Revelations"
 	notes:  "Aria reveals her hobbies and the joy of learning for its own sake."
 	actors: #consts.Actors
+	flags:  #consts.SceneFlags
+	phases: [
+		{name: "Aria Response"},
+		{name: "Player Response"},
+	]
+	actions: [
+		{
+			type:  #consts.ActionDialogue
+			topic: "13_AriaResponse"
+		},
+		{
+			type:       #consts.ActionPlayerDialogue
+			startPhase: 1
+			endPhase:   1
+			choices: [
+				{
+					topic:    "13_PlayerResponseEncouraging"
+					response: "13_AriaResponseToEncouraging"
+				},
+				{
+					topic:    "13_PlayerResponseLightTease"
+					response: "13_AriaResponseToLightTease"
+				},
+				{
+					topic:    "13_PlayerResponseUnderstanding"
+					response: "13_AriaResponseToUnderstanding"
+				},
+				{
+					topic:    "13_PlayerResponseReflective"
+					response: "13_AriaResponseToReflective"
+				},
+			]
+		},
+	]
 	topics: [
 		{
-			id:      "13_PlayerInquiry"
-			speaker: #consts.Player
-			infos:   (#SimpleInfos & {in: {
+			id:         "13_PlayerInquiry"
+			speaker:    #consts.Player
+			startScene: "13_HiddenPassions"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "13_PlayerInquiry"
 				texts: [
-					"What's your downtime look like, Aria? Any unique hobbies outside of your ship work?",
+					"Any unique hobbies outside of your ship work?",
 				]
 			}}).out
 		},
@@ -74,10 +109,11 @@ scene_13_hidden_passions: {
 			}}).out
 		},
 		{
-			id:      "13_AriaResponseToEncouraging"
-			speaker: #consts.Aria
-			notes:   "Aria chuckles, a touch of self-deprecation in her tone."
-			infos:   (#SimpleInfos & {in: {
+			id:         "13_AriaResponseToEncouraging"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "Aria chuckles, a touch of self-deprecation in her tone."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "13_AriaResponseToEncouraging"
 				texts: [
 					"Exciting and a little humbling! But you're right, it's not about perfection. It's about the joy of trying, of creating.",
@@ -85,10 +121,11 @@ scene_13_hidden_passions: {
 			}}).out
 		},
 		{
-			id:      "13_AriaResponseToLightTease"
-			speaker: #consts.Aria
-			notes:   "Her laughter is genuine, tinged with a hint of embarrassment."
-			infos:   (#SimpleInfos & {in: {
+			id:         "13_AriaResponseToLightTease"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "Her laughter is genuine, tinged with a hint of embarrassment."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "13_AriaResponseToLightTease"
 				texts: [
 					"Yeah, I'm embracing the 'amateur' in both! There's freedom in just being a novice, a learner. It's a nice change of pace.",
@@ -96,10 +133,11 @@ scene_13_hidden_passions: {
 			}}).out
 		},
 		{
-			id:      "13_AriaResponseToUnderstanding"
-			speaker: #consts.Aria
-			notes:   "She nods appreciatively, a reflective look in her eyes."
-			infos:   (#SimpleInfos & {in: {
+			id:         "13_AriaResponseToUnderstanding"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "She nods appreciatively, a reflective look in her eyes."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "13_AriaResponseToUnderstanding"
 				texts: [
 					"Exactly. For so long, I've been driven by the need to excel. It's refreshing to do something just for the sheer enjoyment, even if I'm not the best at it.",
@@ -107,10 +145,11 @@ scene_13_hidden_passions: {
 			}}).out
 		},
 		{
-			id:      "13_AriaResponseToReflective"
-			speaker: #consts.Aria
-			notes:   "There's a moment of vulnerability in her expression."
-			infos:   (#SimpleInfos & {in: {
+			id:         "13_AriaResponseToReflective"
+			speaker:    #consts.Aria
+			startScene: "19_Questions"
+			notes:      "There's a moment of vulnerability in her expression."
+			infos:      (#SimpleInfos & {in: {
 				prefix: "13_AriaResponseToReflective"
 				texts: [
 					"You've hit the nail on the head. I'm used to valuing time for productivity. Learning to value it just for the experience – that's new for me.",

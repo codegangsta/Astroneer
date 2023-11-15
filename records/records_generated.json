@@ -3730,16 +3730,55 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Aria Response"
+                },
+                {
+                    "name": "Player Response"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 0,
+                    "topic": "13_AriaResponse"
+                },
+                {
+                    "type": 3,
+                    "startPhase": 1,
+                    "endPhase": 1,
+                    "choices": [
+                        {
+                            "topic": "13_PlayerResponseEncouraging",
+                            "response": "13_AriaResponseToEncouraging"
+                        },
+                        {
+                            "topic": "13_PlayerResponseLightTease",
+                            "response": "13_AriaResponseToLightTease"
+                        },
+                        {
+                            "topic": "13_PlayerResponseUnderstanding",
+                            "response": "13_AriaResponseToUnderstanding"
+                        },
+                        {
+                            "topic": "13_PlayerResponseReflective",
+                            "response": "13_AriaResponseToReflective"
+                        }
+                    ]
+                }
+            ],
             "topics": [
                 {
                     "id": "13_PlayerInquiry",
                     "speaker": "",
+                    "startScene": "13_HiddenPassions",
                     "infos": [
                         {
                             "id": "13_PlayerInquiry01",
                             "responses": [
                                 {
-                                    "text": "What's your downtime look like, Aria? Any unique hobbies outside of your ship work?"
+                                    "text": "Any unique hobbies outside of your ship work?"
                                 }
                             ]
                         }
@@ -3821,6 +3860,7 @@
                 {
                     "id": "13_AriaResponseToEncouraging",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "Aria chuckles, a touch of self-deprecation in her tone.",
                     "infos": [
                         {
@@ -3836,6 +3876,7 @@
                 {
                     "id": "13_AriaResponseToLightTease",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "Her laughter is genuine, tinged with a hint of embarrassment.",
                     "infos": [
                         {
@@ -3851,6 +3892,7 @@
                 {
                     "id": "13_AriaResponseToUnderstanding",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "She nods appreciatively, a reflective look in her eyes.",
                     "infos": [
                         {
@@ -3866,6 +3908,7 @@
                 {
                     "id": "13_AriaResponseToReflective",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "notes": "There's a moment of vulnerability in her expression.",
                     "infos": [
                         {
