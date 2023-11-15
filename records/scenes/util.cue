@@ -26,6 +26,13 @@ package scenes
 	in: {
 		prefix: string
 		texts: [...string]
+		conditions?: [
+			...{
+				function: string
+				quest:    string
+				equals:   float
+			},
+		]
 	}
 	out: [
 		for index, info in in.texts {
@@ -33,6 +40,9 @@ package scenes
 			responses: [
 				{text: info},
 			]
+			if in.conditions != _|_ {
+				conditions: in.conditions
+			}
 		},
 	]
 }

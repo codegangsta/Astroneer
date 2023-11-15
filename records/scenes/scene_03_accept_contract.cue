@@ -22,6 +22,13 @@ scene_03_accept_contract: {
 					"Heard about a ship needing a fix, is it mine to take?",
 					"What's the word on that new contract?",
 				]
+				conditions: [
+					{
+						function: "GetStage"
+						quest:    "ShipContractMission"
+						equals:   10.0
+					},
+				]
 			}}).out
 		},
 		{

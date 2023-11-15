@@ -56,6 +56,13 @@ package records
 					text: string
 				},
 			]
+			conditions?: [
+				...{
+					function: string
+					quest:    string
+					equals:   float
+				},
+			]
 		},
 	]
 }

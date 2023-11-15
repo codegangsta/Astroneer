@@ -538,20 +538,6 @@
                     "name": "Aria Greeting",
                     "type": 0,
                     "topic": "02_AriaGreeting"
-                },
-                {
-                    "name": "Player Responses",
-                    "type": 3,
-                    "choices": [
-                        {
-                            "topic": "03_Player",
-                            "response": "00_AriaAffirmative"
-                        },
-                        {
-                            "topic": "Player_StartQuest",
-                            "response": "00_AriaAffirmative"
-                        }
-                    ]
                 }
             ],
             "topics": [
@@ -787,6 +773,13 @@
                                 {
                                     "text": "Any ships in need of a hand today?"
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 10.0
+                                }
                             ]
                         },
                         {
@@ -794,6 +787,13 @@
                             "responses": [
                                 {
                                     "text": "Is there a new vessel for me to take under my wing?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 10.0
                                 }
                             ]
                         },
@@ -803,6 +803,13 @@
                                 {
                                     "text": "Got a ship that needs some love?"
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 10.0
+                                }
                             ]
                         },
                         {
@@ -810,6 +817,13 @@
                             "responses": [
                                 {
                                     "text": "I'm here for that contract—what's the assignment?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 10.0
                                 }
                             ]
                         },
@@ -819,6 +833,13 @@
                                 {
                                     "text": "What's the latest ship on the roster?"
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 10.0
+                                }
                             ]
                         },
                         {
@@ -826,6 +847,13 @@
                             "responses": [
                                 {
                                     "text": "Ready for a new project; what have you got?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 10.0
                                 }
                             ]
                         },
@@ -835,6 +863,13 @@
                                 {
                                     "text": "Looking for a ship that could use a tune-up?"
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 10.0
+                                }
                             ]
                         },
                         {
@@ -843,6 +878,13 @@
                                 {
                                     "text": "Heard about a ship needing a fix, is it mine to take?"
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 10.0
+                                }
                             ]
                         },
                         {
@@ -850,6 +892,13 @@
                             "responses": [
                                 {
                                     "text": "What's the word on that new contract?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 10.0
                                 }
                             ]
                         }

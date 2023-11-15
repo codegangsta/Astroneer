@@ -143,6 +143,10 @@ var
 	infos: TJsonArray;
 	info: TJsonObject;
 	infoRecord: IInterface;
+	conditions: TJsonArray;
+	condition: TJsonObject;
+	conditionsRecord: IInterface;
+	conditionRecord: IInterface;
 	responses: TJsonArray;
 	response: TJsonObject;
 	responsesRecord: IInterface;
@@ -299,9 +303,8 @@ begin
 					AddInfoScript(infoRecord, topic.S['script'], topic.S['onBegin'], topic.S['onEnd']);
 				end;
 
-				responses := info.A['responses'];
-
 				// add new responses
+				responses := info.A['responses'];
 				responsesRecord := ElementByPath(infoRecord, 'Responses');
 				if Assigned(responsesRecord) then
 					Remove(responsesRecord);
@@ -316,6 +319,23 @@ begin
 					SetElementEditValues(responseRecord, 'TRDA - Response Data\Emotion', 'FFFFFFFF');
 				end;
 				Remove(ElementByIndex(responsesRecord, 0));
+
+				// add conditions
+				conditions := info.A['conditions'];
+				conditionsRecord := ElementByPath(infoRecord, 'Conditions');
+				if Assigned(conditionsRecord) then
+					Remove(conditionsRecord);
+				conditionsRecord := Add(infoRecord, 'Conditions', true);
+
+				for k := 0 to conditions.Count - 1 do begin
+					condition := conditions.O[k];
+					conditionRecord := Add(conditionsRecord, 'Condition', true);
+					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Function', condition.S['function']);
+					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Comparison Value', condition.S['equals']);
+					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Parameter #1', GetEditValue(FindRecordByEditorID(condition.S['quest'], 'QUST')));
+					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Run On', 'Subject');
+				end;
+				Remove(ElementByIndex(conditionsRecord, 0));
 			end;
 		end;
 	end;
