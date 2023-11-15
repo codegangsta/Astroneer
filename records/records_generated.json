@@ -2991,10 +2991,49 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Aria Response"
+                },
+                {
+                    "name": "Player Response"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 0,
+                    "topic": "10_AriaResponse"
+                },
+                {
+                    "type": 3,
+                    "startPhase": 1,
+                    "endPhase": 1,
+                    "choices": [
+                        {
+                            "topic": "10_PlayerResponseEncouraging",
+                            "response": "10_AriaResponseToEncouraging"
+                        },
+                        {
+                            "topic": "10_PlayerResponseInquisitive",
+                            "response": "10_AriaResponseToInquisitive"
+                        },
+                        {
+                            "topic": "10_PlayerResponseSupportive",
+                            "response": "10_AriaResponseToSupportive"
+                        },
+                        {
+                            "topic": "10_PlayerResponseRealistic",
+                            "response": "10_AriaResponseToRealistic"
+                        }
+                    ]
+                }
+            ],
             "topics": [
                 {
                     "id": "10_PlayerInquiry",
                     "speaker": "",
+                    "startScene": "10_AlternatePaths",
                     "infos": [
                         {
                             "id": "10_PlayerInquiry01",
@@ -3082,6 +3121,7 @@
                 {
                     "id": "10_AriaResponseToEncouraging",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "10_AriaResponseToEncouraging01",
@@ -3096,6 +3136,7 @@
                 {
                     "id": "10_AriaResponseToInquisitive",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "10_AriaResponseToInquisitive01",
@@ -3110,6 +3151,7 @@
                 {
                     "id": "10_AriaResponseToSupportive",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "10_AriaResponseToSupportive01",
@@ -3124,6 +3166,7 @@
                 {
                     "id": "10_AriaResponseToRealistic",
                     "speaker": "AriaCollins",
+                    "startScene": "19_Questions",
                     "infos": [
                         {
                             "id": "10_AriaResponseToRealistic01",
