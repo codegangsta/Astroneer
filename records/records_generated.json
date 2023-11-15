@@ -24,7 +24,8 @@
                             "topic": "04_Player"
                         },
                         {
-                            "topic": "MAIN_PlayerModifyShips"
+                            "topic": "MAIN_PlayerModifyShips",
+                            "response": "Aria_ModifyShip"
                         }
                     ]
                 }
@@ -32,7 +33,7 @@
             "topics": [
                 {
                     "id": "MAIN_PlayerModifyShips",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "MAIN_PlayerModifyShips01",
@@ -644,6 +645,7 @@
                     "infos": [
                         {
                             "id": "02_AriaGreetingFunny01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Hello from Aria's isolation station! If I start making spaceship noises, just go with it."
@@ -652,6 +654,7 @@
                         },
                         {
                             "id": "02_AriaGreetingFunny02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Atlas’s remote ship designer here, where my biggest debate is talking to the toaster or the TV. What’s your crisis?"
@@ -660,6 +663,7 @@
                         },
                         {
                             "id": "02_AriaGreetingFunny03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Day 47 in the apartment wilderness, and I've started assigning starship roles to my furniture. What can I do for you?"
@@ -668,6 +672,7 @@
                         },
                         {
                             "id": "02_AriaGreetingFunny04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Reporting from Fort Couch Cushion. If I don't design something soon, I might start crafting a spaceship out of pillows. Help?"
@@ -676,6 +681,7 @@
                         },
                         {
                             "id": "02_AriaGreetingFunny05",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Aria’s remote work hub, where the space adventures are imaginary, but the boredom is real. Got any projects to save me?"
@@ -684,6 +690,7 @@
                         },
                         {
                             "id": "02_AriaGreetingFunny06",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Hey, Cap! Ready to swap my solo monologue for some actual dialogue. What’s on the drawing board?"
@@ -692,6 +699,7 @@
                         },
                         {
                             "id": "02_AriaGreetingFunny07",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Greetings from my personal space dock – also known as the living room. Let's brainstorm before I start chatting with the ceiling fan."
@@ -700,6 +708,7 @@
                         },
                         {
                             "id": "02_AriaGreetingFunny08",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Stir-crazy ship designer Aria here, currently debating space ethics with my reflection. What's our mission?"
@@ -708,6 +717,7 @@
                         },
                         {
                             "id": "02_AriaGreetingFunny09",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Shuttle commander of the S.S. Sofa at your service. Shall we embark on a design journey today?"
@@ -716,6 +726,7 @@
                         },
                         {
                             "id": "02_AriaGreetingFunny10",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Aria, reporting from the homefront! I'm one cup of coffee away from teaching my plant astrophysics. What's on the agenda?"
@@ -724,6 +735,7 @@
                         },
                         {
                             "id": "02_AriaGreetingFunny11",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Your trusty starship engineer, now doubling as an apartment explorer. Found anything interesting out there in the real world?"
@@ -732,6 +744,7 @@
                         },
                         {
                             "id": "02_AriaGreetingFunny12",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Broadcasting live from Aria’s space station (aka my kitchen). Let's talk ships before I start making rocket ships out of cutlery."
@@ -740,6 +753,7 @@
                         },
                         {
                             "id": "02_AriaGreetingFunny13",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Who's there? Oh, just me, Aria, chatting with the door again. Let's focus on something productive, shall we?"
@@ -748,6 +762,7 @@
                         },
                         {
                             "id": "02_AriaGreetingFunny14",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Mission control (aka my window seat) to Cap. I'm ready for some actual work before I start mapping constellations in my coffee."
@@ -756,6 +771,7 @@
                         },
                         {
                             "id": "02_AriaGreetingFunny15",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Welcome to Aria's interstellar talk show, where the guest list is... well, nonexistent. Let's make some spaceship magic!"
@@ -773,13 +789,42 @@
             "actors": [
                 -2
             ],
+            "phases": [
+                {
+                    "name": "Responses"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 0,
+                    "topic": "03_AriaFighter"
+                },
+                {
+                    "type": 0,
+                    "topic": "03_AriaExplorer"
+                },
+                {
+                    "type": 0,
+                    "topic": "03_AriaHauler"
+                },
+                {
+                    "type": 0,
+                    "topic": "03_AriaInterceptor"
+                },
+                {
+                    "type": 0,
+                    "topic": "03_AriaLuxury"
+                }
+            ],
             "topics": [
                 {
                     "id": "03_Player",
-                    "speaker": "Player",
+                    "speaker": "",
+                    "startScene": "03_AcceptContract",
                     "infos": [
                         {
                             "id": "03_Player01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Any ships in need of a hand today?"
@@ -795,6 +840,7 @@
                         },
                         {
                             "id": "03_Player02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Is there a new vessel for me to take under my wing?"
@@ -810,6 +856,7 @@
                         },
                         {
                             "id": "03_Player03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Got a ship that needs some love?"
@@ -825,6 +872,7 @@
                         },
                         {
                             "id": "03_Player04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "I'm here for that contract—what's the assignment?"
@@ -840,6 +888,7 @@
                         },
                         {
                             "id": "03_Player05",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "What's the latest ship on the roster?"
@@ -855,6 +904,7 @@
                         },
                         {
                             "id": "03_Player06",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Ready for a new project; what have you got?"
@@ -870,6 +920,7 @@
                         },
                         {
                             "id": "03_Player07",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Looking for a ship that could use a tune-up?"
@@ -885,6 +936,7 @@
                         },
                         {
                             "id": "03_Player08",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Heard about a ship needing a fix, is it mine to take?"
@@ -900,6 +952,7 @@
                         },
                         {
                             "id": "03_Player09",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "What's the word on that new contract?"
@@ -918,44 +971,91 @@
                 {
                     "id": "03_AriaFighter",
                     "speaker": "AriaCollins",
+                    "script": "Astroneer:Dialogue",
+                    "onBegin": "SetDesignStage",
                     "infos": [
                         {
                             "id": "03_AriaFighter01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Got a fighter that's seen better days. Time to turn it from a zero to a hero."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 0.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaFighter02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "There's a fighter itching for some speed. Think you can make it break the sound barrier... quietly?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 0.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaFighter03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Here’s a fighter that's begging for some flair. Ready to spice it up?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 0.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaFighter04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "This one's a zippy fighter, but it's more mouse than lion right now. Fancy beefing it up?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 0.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaFighter05",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Got a veteran fighter here. Fancy turning its old stories into new legends?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 0.0
                                 }
                             ]
                         }
@@ -964,44 +1064,91 @@
                 {
                     "id": "03_AriaExplorer",
                     "speaker": "AriaCollins",
+                    "script": "Astroneer:Dialogue",
+                    "onBegin": "SetDesignStage",
                     "infos": [
                         {
                             "id": "03_AriaExplorer01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "An explorer's waiting. It's got more miles than my coffee machine and twice the untapped potential."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 1.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaExplorer02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "I’ve got an explorer that’s seen galaxies galore. Ready to turn it into a space legend?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 1.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaExplorer03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "There's a research ship that's been flirting with black holes. Needs a bit of your charm now."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 1.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaExplorer04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "This explorer's got wanderlust. Think you can make it the envy of the cosmos?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 1.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaExplorer05",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Here’s an explorer that's craving adventure. Ready to be its genie?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 1.0
                                 }
                             ]
                         }
@@ -1010,44 +1157,91 @@
                 {
                     "id": "03_AriaHauler",
                     "speaker": "AriaCollins",
+                    "script": "Astroneer:Dialogue",
+                    "onBegin": "SetDesignStage",
                     "infos": [
                         {
                             "id": "03_AriaHauler01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Got a hauler that's been lugging more than cargo. Time to jazz up its routine."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 2.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaHauler02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "There's a sturdy hauler here. Could use a touch of pizzazz. Fancy giving it some sparkle?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 2.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaHauler03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Here's a freighter with dreams of being a starship. Think you can grant its wish?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 2.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaHauler04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "This old freighter's solid but could use some fun. How about disco lights in the cargo bay?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 2.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaHauler05",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "There’s a hauler here with space to spare. Maybe add a bowling alley?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 2.0
                                 }
                             ]
                         }
@@ -1056,44 +1250,91 @@
                 {
                     "id": "03_AriaInterceptor",
                     "speaker": "AriaCollins",
+                    "script": "Astroneer:Dialogue",
+                    "onBegin": "SetDesignStage",
                     "infos": [
                         {
                             "id": "03_AriaInterceptor01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Interceptor in the bay is ready for some zing. Think you can make it zoom and boom?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 3.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaInterceptor02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Got an interceptor that’s quick but not slick. Fancy giving it a secret identity?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 3.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaInterceptor03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "There’s a need-for-speed ship here. Think you can make it go 'vroom' with style?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 3.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaInterceptor04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "An interceptor's lined up. It’s fast, but can you make it furious?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 3.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaInterceptor05",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Here's a racer that's been dreaming of rocket boosters. Fancy turning it into a speed demon?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 3.0
                                 }
                             ]
                         }
@@ -1102,44 +1343,91 @@
                 {
                     "id": "03_AriaLuxury",
                     "speaker": "AriaCollins",
+                    "script": "Astroneer:Dialogue",
+                    "onBegin": "SetDesignStage",
                     "infos": [
                         {
                             "id": "03_AriaLuxury01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "There's a luxury cruiser that's more plain Jane than star queen. Ready for a royal makeover?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 4.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaLuxury02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Got a fancy vessel that's feeling a bit old-fashioned. Time to bring it into the space age?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 4.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaLuxury03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "There’s a floating five-star hotel here. Think you can add a sixth star?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 4.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaLuxury04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Ever fancied decking out a spaceship like a Hollywood mansion? Here’s your chance."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 4.0
                                 }
                             ]
                         },
                         {
                             "id": "03_AriaLuxury05",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Got a luxury ship here that's secretly a diva. Ready to dress it for the red carpet?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ShipContractMission",
+                                    "variable": "ShipType",
+                                    "equals": 4.0
                                 }
                             ]
                         }
@@ -1157,7 +1445,7 @@
             "topics": [
                 {
                     "id": "04_Player",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "04_Player01",
@@ -1552,7 +1840,7 @@
             "topics": [
                 {
                     "id": "05_PlayerInquiry",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "05_PlayerInquiry01",
@@ -1615,7 +1903,7 @@
                 },
                 {
                     "id": "06_PlayerResponseAmbition",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "06_PlayerResponseAmbition01",
@@ -1629,7 +1917,7 @@
                 },
                 {
                     "id": "06_PlayerResponseKinship",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "06_PlayerResponseKinship01",
@@ -1643,7 +1931,7 @@
                 },
                 {
                     "id": "06_PlayerResponseHorizon",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "06_PlayerResponseHorizon01",
@@ -1709,7 +1997,7 @@
             "topics": [
                 {
                     "id": "07_PlayerInquiry",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "07_PlayerInquiry01",
@@ -1740,7 +2028,7 @@
                 },
                 {
                     "id": "07_PlayerResponseAdmireImagination",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "07_PlayerResponseAdmireImagination01",
@@ -1754,7 +2042,7 @@
                 },
                 {
                     "id": "07_PlayerResponseCuriousImagination",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "07_PlayerResponseCuriousImagination01",
@@ -1768,7 +2056,7 @@
                 },
                 {
                     "id": "07_PlayerResponseAdmireResilience",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "07_PlayerResponseAdmireResilience01",
@@ -1782,7 +2070,7 @@
                 },
                 {
                     "id": "07_PlayerResponseCuriousResilience",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "07_PlayerResponseCuriousResilience01",
@@ -1848,7 +2136,7 @@
             "topics": [
                 {
                     "id": "08_PlayerInquiry",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "08_PlayerInquiry01",
@@ -1879,7 +2167,7 @@
                 },
                 {
                     "id": "08_PlayerResponseUnderstandingCorporate",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "08_PlayerResponseUnderstandingCorporate01",
@@ -1893,7 +2181,7 @@
                 },
                 {
                     "id": "08_PlayerResponseCriticalCorporate",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "08_PlayerResponseCriticalCorporate01",
@@ -1907,7 +2195,7 @@
                 },
                 {
                     "id": "08_PlayerResponseEnthusiasticStartup",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "08_PlayerResponseEnthusiasticStartup01",
@@ -1921,7 +2209,7 @@
                 },
                 {
                     "id": "08_PlayerResponseSkepticalStartup",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "08_PlayerResponseSkepticalStartup01",
@@ -2001,7 +2289,7 @@
             "topics": [
                 {
                     "id": "09_PlayerInquiry",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "09_PlayerInquiry01",
@@ -2032,7 +2320,7 @@
                 },
                 {
                     "id": "09_PlayerResponsePraiseFreedom",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "09_PlayerResponsePraiseFreedom01",
@@ -2046,7 +2334,7 @@
                 },
                 {
                     "id": "09_PlayerResponseQuestionFreedom",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "09_PlayerResponseQuestionFreedom01",
@@ -2060,7 +2348,7 @@
                 },
                 {
                     "id": "09_PlayerResponseAdmirePressure",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "09_PlayerResponseAdmirePressure01",
@@ -2074,7 +2362,7 @@
                 },
                 {
                     "id": "09_PlayerResponseConcernPressure",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "09_PlayerResponseConcernPressure01",
@@ -2154,7 +2442,7 @@
             "topics": [
                 {
                     "id": "10_PlayerInquiry",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "10_PlayerInquiry01",
@@ -2185,7 +2473,7 @@
                 },
                 {
                     "id": "10_PlayerResponseEncouraging",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "10_PlayerResponseEncouraging01",
@@ -2199,7 +2487,7 @@
                 },
                 {
                     "id": "10_PlayerResponseInquisitive",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "10_PlayerResponseInquisitive01",
@@ -2213,7 +2501,7 @@
                 },
                 {
                     "id": "10_PlayerResponseSupportive",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "10_PlayerResponseSupportive01",
@@ -2227,7 +2515,7 @@
                 },
                 {
                     "id": "10_PlayerResponseRealistic",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "10_PlayerResponseRealistic01",
@@ -2322,7 +2610,7 @@
                 },
                 {
                     "id": "11_PlayerResponseUnderstanding",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "11_PlayerResponseUnderstanding01",
@@ -2336,7 +2624,7 @@
                 },
                 {
                     "id": "11_PlayerResponsePractical",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "11_PlayerResponsePractical01",
@@ -2350,7 +2638,7 @@
                 },
                 {
                     "id": "11_PlayerResponseCurious",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "11_PlayerResponseCurious01",
@@ -2364,7 +2652,7 @@
                 },
                 {
                     "id": "11_PlayerResponseCandid",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "11_PlayerResponseCandid01",
@@ -2463,7 +2751,7 @@
                 },
                 {
                     "id": "12_PlayerResponseConcerned",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "12_PlayerResponseConcerned01",
@@ -2477,7 +2765,7 @@
                 },
                 {
                     "id": "12_PlayerResponseGentleProbing",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "12_PlayerResponseGentleProbing01",
@@ -2491,7 +2779,7 @@
                 },
                 {
                     "id": "12_PlayerResponseRespectfulDistance",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "12_PlayerResponseRespectfulDistance01",
@@ -2505,7 +2793,7 @@
                 },
                 {
                     "id": "12_PlayerResponseDirect",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "12_PlayerResponseDirect01",
@@ -2579,7 +2867,7 @@
                 },
                 {
                     "id": "12_PlayerFollowupResponseSympathetic",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "12_PlayerFollowupResponseSympathetic01",
@@ -2593,7 +2881,7 @@
                 },
                 {
                     "id": "12_PlayerFollowupResponseInquisitive",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "12_PlayerFollowupResponseInquisitive01",
@@ -2607,7 +2895,7 @@
                 },
                 {
                     "id": "12_PlayerFollowupResponseSupportive",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "12_PlayerFollowupResponseSupportive01",
@@ -2621,7 +2909,7 @@
                 },
                 {
                     "id": "12_PlayerFollowupResponseNonIntrusive",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "12_PlayerFollowupResponseNonIntrusive01",
@@ -2635,7 +2923,7 @@
                 },
                 {
                     "id": "12_PlayerResponseEmpathy",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "12_PlayerResponseEmpathy01",
@@ -2649,7 +2937,7 @@
                 },
                 {
                     "id": "12_PlayerResponsePracticalSupport",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "12_PlayerResponsePracticalSupport01",
@@ -2663,7 +2951,7 @@
                 },
                 {
                     "id": "12_PlayerResponseSharedExperience",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "12_PlayerResponseSharedExperience01",
@@ -2677,7 +2965,7 @@
                 },
                 {
                     "id": "12_PlayerResponseEncouragingOptimism",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "12_PlayerResponseEncouragingOptimism01",
@@ -2691,7 +2979,7 @@
                 },
                 {
                     "id": "12_PlayerResponseOfferSpace",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "12_PlayerResponseOfferSpace01",
@@ -2850,7 +3138,7 @@
             "topics": [
                 {
                     "id": "13_PlayerInquiry",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "13_PlayerInquiry01",
@@ -2881,7 +3169,7 @@
                 },
                 {
                     "id": "13_PlayerResponseEncouraging",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "13_PlayerResponseEncouraging01",
@@ -2895,7 +3183,7 @@
                 },
                 {
                     "id": "13_PlayerResponseLightTease",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "13_PlayerResponseLightTease01",
@@ -2909,7 +3197,7 @@
                 },
                 {
                     "id": "13_PlayerResponseUnderstanding",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "13_PlayerResponseUnderstanding01",
@@ -2923,7 +3211,7 @@
                 },
                 {
                     "id": "13_PlayerResponseReflective",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "13_PlayerResponseReflective01",
@@ -3006,7 +3294,7 @@
             "topics": [
                 {
                     "id": "14_PlayerInquiry",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "14_PlayerInquiry01",
@@ -3038,7 +3326,7 @@
                 },
                 {
                     "id": "14_PlayerResponseSupport",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "14_PlayerResponseSupport01",
@@ -3052,7 +3340,7 @@
                 },
                 {
                     "id": "14_PlayerResponseThoughtful",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "14_PlayerResponseThoughtful01",
@@ -3066,7 +3354,7 @@
                 },
                 {
                     "id": "14_PlayerResponseConcern",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "14_PlayerResponseConcern01",
@@ -3080,7 +3368,7 @@
                 },
                 {
                     "id": "14_PlayerResponseChallenging",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "14_PlayerResponseChallenging01",
@@ -3164,7 +3452,7 @@
             "topics": [
                 {
                     "id": "15_PlayerInquiry",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "15_PlayerInquiry01",
@@ -3196,7 +3484,7 @@
                 },
                 {
                     "id": "15_PlayerResponseUnderstanding",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "15_PlayerResponseUnderstanding01",
@@ -3210,7 +3498,7 @@
                 },
                 {
                     "id": "15_PlayerResponseInquisitive",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "15_PlayerResponseInquisitive01",
@@ -3224,7 +3512,7 @@
                 },
                 {
                     "id": "15_PlayerResponseSupportive",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "15_PlayerResponseSupportive01",
@@ -3238,7 +3526,7 @@
                 },
                 {
                     "id": "15_PlayerResponseIntimate",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "15_PlayerResponseIntimate01",
@@ -3322,7 +3610,7 @@
             "topics": [
                 {
                     "id": "16_PlayerInquiry",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "16_PlayerInquiry01",
@@ -3354,7 +3642,7 @@
                 },
                 {
                     "id": "16_PlayerResponseCompassionate",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "16_PlayerResponseCompassionate01",
@@ -3368,7 +3656,7 @@
                 },
                 {
                     "id": "16_PlayerResponsePractical",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "16_PlayerResponsePractical01",
@@ -3382,7 +3670,7 @@
                 },
                 {
                     "id": "16_PlayerResponseProbing",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "16_PlayerResponseProbing01",
@@ -3396,7 +3684,7 @@
                 },
                 {
                     "id": "16_PlayerResponseDismissive",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "16_PlayerResponseDismissive01",
@@ -3479,7 +3767,7 @@
             "topics": [
                 {
                     "id": "17_PlayerInquiry",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "17_PlayerInquiry01",
@@ -3525,7 +3813,7 @@
             "topics": [
                 {
                     "id": "18_PlayerInquiry",
-                    "speaker": "Player",
+                    "speaker": "",
                     "infos": [
                         {
                             "id": "18_PlayerInquiry01",

@@ -21,7 +21,8 @@ scene_MAIN_topics: {
 				},
 				{
 					// Modifying ships
-					topic: "MAIN_PlayerModifyShips"
+					topic:    "MAIN_PlayerModifyShips"
+					response: "Aria_ModifyShip"
 				},
 			]
 		},

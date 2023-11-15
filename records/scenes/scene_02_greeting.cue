@@ -44,6 +44,7 @@ scene_02_greeting: {
 			speaker: #consts.Aria
 			infos:   (#SimpleInfos & {in: {
 				prefix: "02_AriaGreetingFunny"
+				flags:  #consts.InfoFlagsRandom
 				texts: [
 					"Hello from Aria's isolation station! If I start making spaceship noises, just go with it.",
 					"Atlas’s remote ship designer here, where my biggest debate is talking to the toaster or the TV. What’s your crisis?",

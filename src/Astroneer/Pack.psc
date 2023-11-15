@@ -74,8 +74,8 @@ Group ShipTemplates
 EndGroup
 
 Group ShipTypes
-  Message Property ShipTypeExplorer Auto Const Mandatory
   Message Property ShipTypeFighter Auto Const Mandatory
+  Message Property ShipTypeExplorer Auto Const Mandatory
   Message Property ShipTypeGeneric Auto Const Mandatory
   Message Property ShipTypeHauler Auto Const Mandatory
   Message Property ShipTypeInterceptor Auto Const Mandatory

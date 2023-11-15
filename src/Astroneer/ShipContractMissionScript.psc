@@ -1,4 +1,4 @@
-ScriptName Astroneer:ShipContractMissionScript Extends missionquestscript
+ScriptName Astroneer:ShipContractMissionScript Extends missionquestscript Conditional
 
 ;-- Properties --------------------------------------
 
@@ -42,13 +42,15 @@ spaceshipreference Property ContractShip Auto
 Int Property DesignStage = 20 Auto Const
 Int Property TurnInStage = 30 Auto Const
 
+Int Property ShipType = 0 Auto Conditional
+
 ;-- Functions ---------------------------------------
 
 Event OnQuestStarted()
   Trace("OnQuestStarted")
   Self.Mission = AstroneerParent.GenerateMission()
-  Trace("Mission generated " + Self.Mission)
-  Trace("Mission ship template " + Self.Mission.ShipTemplate)
+  Self.ShipType = GetShipType()
+  Trace("ShipType: " + Self.ShipType)
 
   UpdateObjectiveTargets()
   Parent.OnQuestStarted()
@@ -244,6 +246,22 @@ Function UpdateObjectiveValue(GlobalVariable value, Message objectiveType, Int o
     else
       ModObjectiveGlobal(val, value, objective, target, True, True, True, True)
     endif
+  endif
+EndFunction
+
+Int Function GetShipType()
+  Astroneer:Pack consts = (AstroneerParent as ScriptObject) as Astroneer:Pack
+
+  if(Mission.ShipType == consts.ShipTypeFighter)
+    return 0
+  elseif(Mission.ShipType == consts.ShipTypeExplorer)
+    return 1
+  elseif(Mission.ShipType == consts.ShipTypeHauler)
+    return 2
+  elseif(Mission.ShipType == consts.ShipTypeInterceptor)
+    return 3
+  elseif(Mission.ShipType == consts.ShipTypeLuxury)
+    return 4
   endif
 EndFunction
 

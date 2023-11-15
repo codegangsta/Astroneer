@@ -5,12 +5,43 @@ scene_03_accept_contract: {
 	name:   "Player Accepts Contract"
 	notes:  "The player has accepted a mission from the mission board, and has walked over to the Atlas Astronautics intercom to speak with Aria. Aria greets the player, then the player chooses to ask about the contract they've just accepted. Based on the type of Ship contract, a randomly generated response from Aria will be chosen. The intent is to have enough dialog and variety that each mission feels fresh and new"
 	actors: #consts.Actors
-	topics: [
+	phases: [
+		{name: "Responses"},
+	]
+
+	// Each response is a random selection of one of the following, depending on
+	// the type of ship contract:
+	actions: [
 		{
-			id:      "03_Player"
-			speaker: #consts.Player
-			infos:   (#SimpleInfos & {in: {
+			type:  #consts.ActionDialogue
+			topic: "03_AriaFighter"
+		},
+		{
+			type:  #consts.ActionDialogue
+			topic: "03_AriaExplorer"
+		},
+		{
+			type:  #consts.ActionDialogue
+			topic: "03_AriaHauler"
+		},
+		{
+			type:  #consts.ActionDialogue
+			topic: "03_AriaInterceptor"
+		},
+		{
+			type:  #consts.ActionDialogue
+			topic: "03_AriaLuxury"
+		},
+	]
+	topics: [
+		// This topic kicks off the conversation.
+		{
+			id:         "03_Player"
+			speaker:    #consts.Player
+			startScene: "03_AcceptContract"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "03_Player"
+				flags:  #consts.InfoFlagsRandom
 				texts: [
 					"Any ships in need of a hand today?",
 					"Is there a new vessel for me to take under my wing?",
@@ -34,8 +65,19 @@ scene_03_accept_contract: {
 		{
 			id:      "03_AriaFighter"
 			speaker: #consts.Aria
+			script:  "Astroneer:Dialogue"
+			onBegin: "SetDesignStage"
 			infos:   (#SimpleInfos & {in: {
 				prefix: "03_AriaFighter"
+				flags:  #consts.InfoFlagsRandom
+				conditions: [
+					{
+						function: "GetVMQuestVariable"
+						quest:    "ShipContractMission"
+						variable: "ShipType"
+						equals:   0.0
+					},
+				]
 				texts: [
 					"Got a fighter that's seen better days. Time to turn it from a zero to a hero.",
 					"There's a fighter itching for some speed. Think you can make it break the sound barrier... quietly?",
@@ -48,8 +90,19 @@ scene_03_accept_contract: {
 		{
 			id:      "03_AriaExplorer"
 			speaker: #consts.Aria
+			script:  "Astroneer:Dialogue"
+			onBegin: "SetDesignStage"
 			infos:   (#SimpleInfos & {in: {
 				prefix: "03_AriaExplorer"
+				flags:  #consts.InfoFlagsRandom
+				conditions: [
+					{
+						function: "GetVMQuestVariable"
+						quest:    "ShipContractMission"
+						variable: "ShipType"
+						equals:   1.0
+					},
+				]
 				texts: [
 					"An explorer's waiting. It's got more miles than my coffee machine and twice the untapped potential.",
 					"I’ve got an explorer that’s seen galaxies galore. Ready to turn it into a space legend?",
@@ -62,8 +115,19 @@ scene_03_accept_contract: {
 		{
 			id:      "03_AriaHauler"
 			speaker: #consts.Aria
+			script:  "Astroneer:Dialogue"
+			onBegin: "SetDesignStage"
 			infos:   (#SimpleInfos & {in: {
 				prefix: "03_AriaHauler"
+				flags:  #consts.InfoFlagsRandom
+				conditions: [
+					{
+						function: "GetVMQuestVariable"
+						quest:    "ShipContractMission"
+						variable: "ShipType"
+						equals:   2.0
+					},
+				]
 				texts: [
 					"Got a hauler that's been lugging more than cargo. Time to jazz up its routine.",
 					"There's a sturdy hauler here. Could use a touch of pizzazz. Fancy giving it some sparkle?",
@@ -76,8 +140,19 @@ scene_03_accept_contract: {
 		{
 			id:      "03_AriaInterceptor"
 			speaker: #consts.Aria
+			script:  "Astroneer:Dialogue"
+			onBegin: "SetDesignStage"
 			infos:   (#SimpleInfos & {in: {
 				prefix: "03_AriaInterceptor"
+				flags:  #consts.InfoFlagsRandom
+				conditions: [
+					{
+						function: "GetVMQuestVariable"
+						quest:    "ShipContractMission"
+						variable: "ShipType"
+						equals:   3.0
+					},
+				]
 				texts: [
 					"Interceptor in the bay is ready for some zing. Think you can make it zoom and boom?",
 					"Got an interceptor that’s quick but not slick. Fancy giving it a secret identity?",
@@ -90,8 +165,19 @@ scene_03_accept_contract: {
 		{
 			id:      "03_AriaLuxury"
 			speaker: #consts.Aria
+			script:  "Astroneer:Dialogue"
+			onBegin: "SetDesignStage"
 			infos:   (#SimpleInfos & {in: {
 				prefix: "03_AriaLuxury"
+				flags:  #consts.InfoFlagsRandom
+				conditions: [
+					{
+						function: "GetVMQuestVariable"
+						quest:    "ShipContractMission"
+						variable: "ShipType"
+						equals:   4.0
+					},
+				]
 				texts: [
 					"There's a luxury cruiser that's more plain Jane than star queen. Ready for a royal makeover?",
 					"Got a fancy vessel that's feeling a bit old-fashioned. Time to bring it into the space age?",

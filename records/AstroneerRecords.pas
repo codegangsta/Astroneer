@@ -69,8 +69,8 @@ end;
 
 function AddInfoScript(infoRecord: IInterface; scriptName: string; onBegin: string; onEnd: string): IInterface;
 var
-	vmadSubrecord, scripts, script, properties, fragment, fragments: IInterface;
-	i Integer;
+	vmadSubrecord,script, properties, fragment, fragments: IInterface;
+	i: Integer;
 begin
 	// Add or get VMAD subrecord
 	vmadSubrecord := ElementByPath(infoRecord, 'VMAD');
@@ -82,14 +82,17 @@ begin
 	SetElementEditValues(vmadSubrecord, 'Object Format', '2');
 
 	// Add script
-	scripts := ElementByPath(vmadSubrecord, 'Script Fragments\Script');
+	script := ElementByPath(vmadSubrecord, 'Script Fragments\Script');
 	SetElementEditValues(script, 'ScriptName', scriptName);
+	script := ElementByPath(vmadSubrecord, 'Script Fragments\Flags');
+	SetEditValue(script, '11');
 
 	fragments := ElementByPath(vmadSubrecord, 'Script Fragments\Fragments');
 	// loop over fragments and remove them
 	for i := 0 to Pred(ElementCount(fragments)) do begin
-		RemoveByIndex(fragment, i);
+		Remove(ElementByIndex(fragments, i));
 	end;
+
 
 	// Add fragments
 	if onBegin <> '' then
@@ -280,6 +283,9 @@ begin
 					else begin
 						SetElementEditValues(infoRecord, 'ANAM', GetEditValue(speakerRecord));
 					end;
+				end
+				else begin
+					Remove(ElementByPath(infoRecord, 'ANAM'));
 				end;
 
 				// Set Start Scene
@@ -337,8 +343,12 @@ begin
 					conditionRecord := Add(conditionsRecord, 'Condition', true);
 					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Function', condition.S['function']);
 					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Comparison Value', condition.S['equals']);
-					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Parameter #1', GetEditValue(FindRecordByEditorID(condition.S['quest'], 'QUST')));
 					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Run On', 'Subject');
+					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Parameter #1', GetEditValue(FindRecordByEditorID(condition.S['quest'], 'QUST')));
+					if condition.S['variable'] <> '' then begin
+						SetElementEditValues(conditionRecord, 'CTDA - CTDA\Parameter #2', condition.S['variable']);
+						SetElementEditValues(conditionRecord, 'CIS2 Parameter #2', condition.S['variable']);
+					end;
 				end;
 				Remove(ElementByIndex(conditionsRecord, 0));
 			end;

@@ -2,7 +2,7 @@ package scenes
 
 #consts: {
 	Aria:        "AriaCollins"
-	Player:      "Player"
+	Player:      "" // Keep blank to make null
 	AliasAria:   0
 	AliasPlayer: -2
 	Actors: [AliasPlayer]
@@ -30,9 +30,10 @@ package scenes
 		flags?: string
 		conditions?: [
 			...{
-				function: string
-				quest:    string
-				equals:   float
+				function:  string
+				quest:     string
+				variable?: string
+				equals:    float
 			},
 		]
 	}

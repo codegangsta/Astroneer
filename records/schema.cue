@@ -60,9 +60,10 @@ package records
 			]
 			conditions?: [
 				...{
-					function: string
-					quest:    string
-					equals:   float
+					function:  string
+					quest:     string
+					variable?: string
+					equals:    float
 				},
 			]
 		},
