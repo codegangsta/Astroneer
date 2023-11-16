@@ -72,7 +72,7 @@ scene_MAIN_topics: {
 			infos:      (#SimpleInfos & {in: {
 				prefix: "MAIN_AriaQuestionsResponse"
 				flags:  #consts.InfoFlagsRandom
-				texts: ["Don't mind at all!", "What's on your mind, Cap?"]
+				texts: ["Don't mind at all!", "What's on your mind, Cap?", "Sure, shoot!", "Go ahead!", "Ask away!"]
 			}}).out
 		},
 	]

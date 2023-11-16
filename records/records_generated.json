@@ -132,6 +132,33 @@
                                     "text": "What's on your mind, Cap?"
                                 }
                             ]
+                        },
+                        {
+                            "id": "MAIN_AriaQuestionsResponse03",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Sure, shoot!"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "MAIN_AriaQuestionsResponse04",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Go ahead!"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "MAIN_AriaQuestionsResponse05",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Ask away!"
+                                }
+                            ]
                         }
                     ]
                 }

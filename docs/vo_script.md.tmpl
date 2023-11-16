@@ -72,6 +72,7 @@ This revised bio emphasizes Aria's personal growth and the eventual realization 
 {{ if index $scene "notes" }}
 _Notes: {{ $scene.notes }}_
 {{- end -}}
+{{- if index $scene "topics" -}}
 {{ range $topicIndex, $topic := $scene.topics }}
 ### `{{ $topic.id }}`
 {{- if index $topic "notes" }}
@@ -85,5 +86,6 @@ _{{ $topic.notes }}_
 {{ end }}
 {{- end -}}
 {{- end }}
+{{- end -}}
 ---
 {{ end }}
