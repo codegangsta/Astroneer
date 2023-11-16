@@ -12,7 +12,6 @@ scene_05_background: {
 			topic: "05_AriaResponse"
 		},
 	]
-
 	topics: [
 		{
 			id:         "05_PlayerInquiry"
@@ -20,6 +19,14 @@ scene_05_background: {
 			startScene: "05_Background"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "05_PlayerInquiry"
+				conditions: [
+					{
+						function: "GetVMQuestVariable"
+						quest:    "ParentQuest"
+						variable: "DialogueBackgroundComplete"
+						equals:   0.0
+					},
+				]
 				texts: [
 					"Can you tell me more about yourself?",
 				]
@@ -31,6 +38,8 @@ scene_05_background: {
 			// Aria asks about the player's background
 			// after she shares hers
 			startScene: "06_PlayerBackground"
+			script:     "Astroneer:Dialogue"
+			onEnd:      "CompleteDialogueBackground"
 			infos: [
 				{
 					id: "05_AriaResponse01"

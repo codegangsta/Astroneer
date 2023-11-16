@@ -30,10 +30,22 @@ package scenes
 		flags?: string
 		conditions?: [
 			...{
-				function:  string
-				quest:     string
-				variable?: string
-				equals:    float
+				function: string
+
+				if function == "GetStage" {
+					quest:  string
+					equals: float
+				}
+
+				if function == "GetVMQuestVariable" {
+					quest:    string
+					equals:   float
+					variable: string
+				}
+
+				if function == "GetRandomPercent" {
+					lessThanOrEqualTo: float
+				}
 			},
 		]
 	}

@@ -342,12 +342,23 @@ begin
 					condition := conditions.O[k];
 					conditionRecord := Add(conditionsRecord, 'Condition', true);
 					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Function', condition.S['function']);
-					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Comparison Value', condition.S['equals']);
 					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Run On', 'Subject');
-					SetElementEditValues(conditionRecord, 'CTDA - CTDA\Parameter #1', GetEditValue(FindRecordByEditorID(condition.S['quest'], 'QUST')));
-					if condition.S['variable'] <> '' then begin
+
+					if condition.S['function'] = 'GetStage' then begin
+						SetElementEditValues(conditionRecord, 'CTDA - CTDA\Comparison Value', condition.S['equals']);
+						SetElementEditValues(conditionRecord, 'CTDA - CTDA\Parameter #1', GetEditValue(FindRecordByEditorID(condition.S['quest'], 'QUST')));
+					end;
+
+					if condition.S['function'] = 'GetVMQuestVariable' then begin
+						SetElementEditValues(conditionRecord, 'CTDA - CTDA\Comparison Value', condition.S['equals']);
+						SetElementEditValues(conditionRecord, 'CTDA - CTDA\Parameter #1', GetEditValue(FindRecordByEditorID(condition.S['quest'], 'QUST')));
 						SetElementEditValues(conditionRecord, 'CTDA - CTDA\Parameter #2', '::' + condition.S['variable'] + '_var');
 						SetElementEditValues(conditionRecord, 'CIS2 Parameter #2', '::' + condition.S['variable'] + '_var');
+					end;
+
+					if condition.S['function'] = 'GetRandomPercent' then begin
+						SetElementEditValues(conditionRecord, 'CTDA - CTDA\Comparison Value', condition.S['lessThanOrEqualTo']);
+						SetElementEditValues(conditionRecord, 'CTDA - CTDA\Type', '10100000');
 					end;
 				end;
 				Remove(ElementByIndex(conditionsRecord, 0));

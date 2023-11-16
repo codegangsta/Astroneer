@@ -9,6 +9,26 @@ Function ModifyShips(ObjectReference speaker)
   Game.GetPlayer().ShowHangarMenu(0, GetAria(), None, False)
 EndFunction
 
+Function CompleteIntro(ObjectReference speaker)
+  Astroneer:ParentQuest pq = GetOwningQuest() as Astroneer:ParentQuest
+  pq.DialogueIntroComplete = 1
+EndFunction
+
+Function CompleteDialogueReflect(ObjectReference speaker)
+  Astroneer:ParentQuest pq = GetOwningQuest() as Astroneer:ParentQuest
+  pq.DialogueReflectComplete = 1
+EndFunction
+
+Function CompleteDialogueBackground(ObjectReference speaker)
+  Astroneer:ParentQuest pq = GetOwningQuest() as Astroneer:ParentQuest
+  pq.DialogueBackgroundComplete = 1
+EndFunction
+
+Function CompleteDialogueBadNews(ObjectReference speaker)
+  Astroneer:ParentQuest pq = GetOwningQuest() as Astroneer:ParentQuest
+  pq.DialogueBadNewsComplete = 1
+EndFunction
+
 Function SetDesignStage(ObjectReference speaker)
   Astroneer:ShipContractMissionScript mission = GetMission()
   mission.SetStage(mission.DesignStage)

@@ -1,4 +1,4 @@
-ScriptName Astroneer:ParentQuest extends Quest
+ScriptName Astroneer:ParentQuest extends Quest Conditional
 ; Parent Quest for all astroneer based functionality
 ; Provides some utility functions and easy access to key
 ; forms and refs.
@@ -30,6 +30,13 @@ Group QuestData
   ReferenceAlias Property AtlasIntercom Auto Const
   ReferenceAlias Property Aria Auto Const
   spaceshipreference[] Property ShipCollection Auto
+EndGroup
+
+Group DialogueData
+  Int Property DialogueIntroComplete = 0 Auto Conditional
+  Int Property DialogueReflectComplete = 0 Auto Conditional
+  Int Property DialogueBadNewsComplete = 0 Auto Conditional
+  Int Property DialogueBackgroundComplete = 0 Auto Conditional
 EndGroup
 
 Astroneer:Pack:Mission[] Missions = None

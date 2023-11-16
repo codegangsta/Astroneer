@@ -9,15 +9,28 @@ scene_02_greeting: {
 	phases: [
 		{name: "Greet"},
 	]
-
 	actions: [
+		{
+			name:  "Aria's Reflection"
+			type:  #consts.ActionDialogue
+			topic: "11_AriaInquiry"
+		},
+		{
+			name:  "Intro Dialogue"
+			type:  #consts.ActionDialogue
+			topic: "01_AriaIntro"
+		},
+		{
+			name:  "Aria Funny Greetings"
+			type:  #consts.ActionDialogue
+			topic: "02_AriaGreetingFunny"
+		},
 		{
 			name:  "Aria Greeting"
 			type:  #consts.ActionDialogue
 			topic: "02_AriaGreeting"
 		},
 	]
-
 	topics: [
 		{
 			id:         "02_AriaGreeting"
@@ -41,11 +54,18 @@ scene_02_greeting: {
 			}}).out
 		},
 		{
-			id:      "02_AriaGreetingFunny"
-			speaker: #consts.Aria
-			infos:   (#SimpleInfos & {in: {
+			id:         "02_AriaGreetingFunny"
+			speaker:    #consts.Aria
+			startScene: "MAIN_topics"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "02_AriaGreetingFunny"
 				flags:  #consts.InfoFlagsRandom
+				conditions: [
+					{
+						function:          "GetRandomPercent"
+						lessThanOrEqualTo: 3.0
+					},
+				]
 				texts: [
 					"Hello from Aria's isolation station! If I start making spaceship noises, just go with it.",
 					"Atlas’s remote ship designer here, where my biggest debate is talking to the toaster or the TV. What’s your crisis?",

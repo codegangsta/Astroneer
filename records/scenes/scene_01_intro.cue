@@ -17,11 +17,22 @@ scene_01_intro: {
 	]
 	topics: [
 		{
-			id:      "01_AriaIntro"
-			speaker: #consts.Aria
+			id:         "01_AriaIntro"
+			speaker:    #consts.Aria
+			startScene: "MAIN_topics"
+			script:     "Astroneer:Dialogue"
+			onEnd:      "CompleteIntro"
 			infos: [
 				{
 					id: "01_AriaIntro01"
+					conditions: [
+						{
+							function: "GetVMQuestVariable"
+							quest:    "ParentQuest"
+							variable: "DialogueIntroComplete"
+							equals:   0.0
+						},
+					]
 					responses: [
 						{text: "Whoa, an intercom call? That's a rare vintage. Aria here—your ship-building maestro and Atlas Astronautics' semi-official welcome wagon."},
 						{text: "Let's talk ship. You're about to dive into the nuts and bolts of starship customization. I'll transfer the bare bones to your hangar, and you put the soul into the machine. Match the contract specs, and we're golden."},

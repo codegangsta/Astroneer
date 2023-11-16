@@ -582,9 +582,20 @@
                 {
                     "id": "01_AriaIntro",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
+                    "script": "Astroneer:Dialogue",
+                    "onEnd": "CompleteIntro",
                     "infos": [
                         {
                             "id": "01_AriaIntro01",
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ParentQuest",
+                                    "variable": "DialogueIntroComplete",
+                                    "equals": 0.0
+                                }
+                            ],
                             "responses": [
                                 {
                                     "text": "Whoa, an intercom call? That's a rare vintage. Aria here—your ship-building maestro and Atlas Astronautics' semi-official welcome wagon."
@@ -624,6 +635,21 @@
                 }
             ],
             "actions": [
+                {
+                    "name": "Aria's Reflection",
+                    "type": 0,
+                    "topic": "11_AriaInquiry"
+                },
+                {
+                    "name": "Intro Dialogue",
+                    "type": 0,
+                    "topic": "01_AriaIntro"
+                },
+                {
+                    "name": "Aria Funny Greetings",
+                    "type": 0,
+                    "topic": "02_AriaGreetingFunny"
+                },
                 {
                     "name": "Aria Greeting",
                     "type": 0,
@@ -731,6 +757,7 @@
                 {
                     "id": "02_AriaGreetingFunny",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "infos": [
                         {
                             "id": "02_AriaGreetingFunny01",
@@ -738,6 +765,12 @@
                             "responses": [
                                 {
                                     "text": "Hello from Aria's isolation station! If I start making spaceship noises, just go with it."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
                                 }
                             ]
                         },
@@ -748,6 +781,12 @@
                                 {
                                     "text": "Atlas’s remote ship designer here, where my biggest debate is talking to the toaster or the TV. What’s your crisis?"
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
+                                }
                             ]
                         },
                         {
@@ -756,6 +795,12 @@
                             "responses": [
                                 {
                                     "text": "Day 47 in the apartment wilderness, and I've started assigning starship roles to my furniture. What can I do for you?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
                                 }
                             ]
                         },
@@ -766,6 +811,12 @@
                                 {
                                     "text": "Reporting from Fort Couch Cushion. If I don't design something soon, I might start crafting a spaceship out of pillows. Help?"
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
+                                }
                             ]
                         },
                         {
@@ -774,6 +825,12 @@
                             "responses": [
                                 {
                                     "text": "Aria’s remote work hub, where the space adventures are imaginary, but the boredom is real. Got any projects to save me?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
                                 }
                             ]
                         },
@@ -784,6 +841,12 @@
                                 {
                                     "text": "Hey, Cap! Ready to swap my solo monologue for some actual dialogue. What’s on the drawing board?"
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
+                                }
                             ]
                         },
                         {
@@ -792,6 +855,12 @@
                             "responses": [
                                 {
                                     "text": "Greetings from my personal space dock – also known as the living room. Let's brainstorm before I start chatting with the ceiling fan."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
                                 }
                             ]
                         },
@@ -802,6 +871,12 @@
                                 {
                                     "text": "Stir-crazy ship designer Aria here, currently debating space ethics with my reflection. What's our mission?"
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
+                                }
                             ]
                         },
                         {
@@ -810,6 +885,12 @@
                             "responses": [
                                 {
                                     "text": "Shuttle commander of the S.S. Sofa at your service. Shall we embark on a design journey today?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
                                 }
                             ]
                         },
@@ -820,6 +901,12 @@
                                 {
                                     "text": "Aria, reporting from the homefront! I'm one cup of coffee away from teaching my plant astrophysics. What's on the agenda?"
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
+                                }
                             ]
                         },
                         {
@@ -828,6 +915,12 @@
                             "responses": [
                                 {
                                     "text": "Your trusty starship engineer, now doubling as an apartment explorer. Found anything interesting out there in the real world?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
                                 }
                             ]
                         },
@@ -838,6 +931,12 @@
                                 {
                                     "text": "Broadcasting live from Aria’s space station (aka my kitchen). Let's talk ships before I start making rocket ships out of cutlery."
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
+                                }
                             ]
                         },
                         {
@@ -846,6 +945,12 @@
                             "responses": [
                                 {
                                     "text": "Who's there? Oh, just me, Aria, chatting with the door again. Let's focus on something productive, shall we?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
                                 }
                             ]
                         },
@@ -856,6 +961,12 @@
                                 {
                                     "text": "Mission control (aka my window seat) to Cap. I'm ready for some actual work before I start mapping constellations in my coffee."
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
+                                }
                             ]
                         },
                         {
@@ -864,6 +975,12 @@
                             "responses": [
                                 {
                                     "text": "Welcome to Aria's interstellar talk show, where the guest list is... well, nonexistent. Let's make some spaceship magic!"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 3.0
                                 }
                             ]
                         }
@@ -2235,6 +2352,14 @@
                                 {
                                     "text": "Can you tell me more about yourself?"
                                 }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ParentQuest",
+                                    "variable": "DialogueBackgroundComplete",
+                                    "equals": 0.0
+                                }
                             ]
                         }
                     ]
@@ -2243,6 +2368,8 @@
                     "id": "05_AriaResponse",
                     "speaker": "AriaCollins",
                     "startScene": "06_PlayerBackground",
+                    "script": "Astroneer:Dialogue",
+                    "onEnd": "CompleteDialogueBackground",
                     "infos": [
                         {
                             "id": "05_AriaResponse01",
@@ -3187,10 +3314,47 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Aria Response"
+                },
+                {
+                    "name": "Player Response"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 3,
+                    "startPhase": 1,
+                    "endPhase": 1,
+                    "choices": [
+                        {
+                            "topic": "11_PlayerResponseUnderstanding",
+                            "response": "11_AriaResponseToUnderstanding"
+                        },
+                        {
+                            "topic": "11_PlayerResponsePractical",
+                            "response": "11_AriaResponseToPractical"
+                        },
+                        {
+                            "topic": "11_PlayerResponseCurious",
+                            "response": "11_AriaResponseToCurious"
+                        },
+                        {
+                            "topic": "11_PlayerResponseCandid",
+                            "response": "11_AriaResponseToCandid"
+                        }
+                    ]
+                }
+            ],
             "topics": [
                 {
                     "id": "11_AriaInquiry",
                     "speaker": "AriaCollins",
+                    "startScene": "11_Reflect",
+                    "script": "Astroneer:Dialogue",
+                    "onEnd": "CompleteDialogueReflect",
                     "notes": "Aria, maintaining a composed exterior",
                     "infos": [
                         {
@@ -3198,6 +3362,30 @@
                             "responses": [
                                 {
                                     "text": "Cap, do you ever think we get so wrapped up in our goals that we miss... life happening around us? Not that I'm second-guessing myself, it's just a thought."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 30.0
+                                },
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ParentQuest",
+                                    "variable": "DialogueIntroComplete",
+                                    "equals": 1.0
+                                },
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ParentQuest",
+                                    "variable": "DialogueBackgroundComplete",
+                                    "equals": 1.0
+                                },
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ParentQuest",
+                                    "variable": "DialogueReflectComplete",
+                                    "equals": 0.0
                                 }
                             ]
                         }
@@ -3262,6 +3450,7 @@
                 {
                     "id": "11_AriaResponseToUnderstanding",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "notes": "She offers a small, contemplative smile.",
                     "infos": [
                         {
@@ -3277,6 +3466,7 @@
                 {
                     "id": "11_AriaResponseToPractical",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "notes": "With a slight nod, she acknowledges the wisdom.",
                     "infos": [
                         {
@@ -3292,6 +3482,7 @@
                 {
                     "id": "11_AriaResponseToCurious",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "notes": "There's a pause as she ponders.",
                     "infos": [
                         {
@@ -3307,6 +3498,7 @@
                 {
                     "id": "11_AriaResponseToCandid",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "notes": "Initially bristling, she then concedes.",
                     "infos": [
                         {
