@@ -49,6 +49,8 @@ scene_MAIN_topics: {
 		{
 			id:      "MAIN_AriaModifyShipsResponse"
 			speaker: #consts.Player
+			script:  "Astroneer:Dialogue"
+			onEnd:   "ModifyShips"
 			infos:   (#SimpleInfos & {in: {
 				prefix: "MAIN_AriaModifyShipsResponse"
 				flags:  #consts.InfoFlagsRandom

@@ -55,6 +55,8 @@
                 {
                     "id": "MAIN_AriaModifyShipsResponse",
                     "speaker": "",
+                    "script": "Astroneer:Dialogue",
+                    "onEnd": "ModifyShips",
                     "infos": [
                         {
                             "id": "MAIN_AriaModifyShipsResponse01",
