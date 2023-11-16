@@ -82,6 +82,11 @@ Event OnStageSet(Int stageId, Int itemId)
     StageCompleted()
     return
   endif
+
+  if(stageId == FailStage)
+    StageFailed()
+    return
+  endif
 EndEvent
 
 Function StageReady()
@@ -138,7 +143,18 @@ Function StageCompleted()
   Self.UnRegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerModifiedShip")
   Self.UnRegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
 
-  AstroneerParent.RemoveContractShip(Self.ContractShip)
+  AstroneerParent.RemoveContractShip(Self.ContractShip, True)
+  Self.ContractShip = None
+EndFunction
+
+Function StageFailed()
+  Trace("StageFailed")
+
+  Actor PlayerREF = Game.GetPlayer()
+  Self.UnRegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerModifiedShip")
+  Self.UnRegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
+
+  AstroneerParent.RemoveContractShip(Self.ContractShip, False)
   Self.ContractShip = None
 EndFunction
 

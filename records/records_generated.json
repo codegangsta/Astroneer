@@ -24,11 +24,11 @@
                             "topic": "04_Player"
                         },
                         {
-                            "topic": "18_PlayerInquiry"
-                        },
-                        {
                             "topic": "MAIN_PlayerModifyShips",
                             "response": "MAIN_AriaModifyShipsResponse"
+                        },
+                        {
+                            "topic": "18_PlayerInquiry"
                         },
                         {
                             "topic": "MAIN_PlayerQuestions",

@@ -156,7 +156,7 @@ spaceshipreference Function AddContractShip(Astroneer:Pack:Mission m)
   return ship
 EndFunction
 
-Function RemoveContractShip(spaceshipreference ship)
+Function RemoveContractShip(spaceshipreference ship, Bool addToCollection)
   Trace("Removing ship " + ship)
   PlayerShipQuest.RemovePlayerShip(ship)
   ship.RemoveKeyword(CannotBeSoldShipKeyword)
@@ -164,11 +164,12 @@ Function RemoveContractShip(spaceshipreference ship)
   ship.RemoveKeyword(CannotBeCountedAgainstMaxShipsKeyword)
   ship.SetValue(SpaceshipRegistration, 0.0)
 
-  if(ShipCollection == None)
-    ShipCollection = new spaceshipreference[0]
+  if (addToCollection)
+    if(ShipCollection == None)
+      ShipCollection = new spaceshipreference[0]
+    endif
+    ShipCollection.Add(ship)
   endif
-
-  ShipCollection.Add(ship)
 EndFunction
 
 Function SetAllPartPowers(spaceshipreference ship, Int power)
@@ -301,11 +302,8 @@ EndFunction
 
 Astroneer:Pack:Mission Function GenerateMission()
   Astroneer:Pack consts = (Self as ScriptObject) as Astroneer:Pack
-  Astroneer:Pack:Mission mission = None
+  Astroneer:Pack:Mission mission = Astroneer:Pack.Copy(missions[Utility.RandomInt(0, missions.Length-1)]) 
 
-  if mission == None
-    mission = missions[Utility.RandomInt(0, missions.Length-1)] 
-  endif
   if mission.Title == None
     mission.Title = ShipNames.GetAt(Utility.RandomInt(0, ShipNames.GetSize()-1)) as Message
   endif

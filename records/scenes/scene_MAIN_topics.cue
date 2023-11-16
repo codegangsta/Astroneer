@@ -20,13 +20,13 @@ scene_MAIN_topics: {
 					topic: "04_Player"
 				},
 				{
-					// Trouble with a contract
-					topic: "18_PlayerInquiry"
-				},
-				{
 					// Modifying ships
 					topic:    "MAIN_PlayerModifyShips"
 					response: "MAIN_AriaModifyShipsResponse"
+				},
+				{
+					// Trouble with a contract
+					topic: "18_PlayerInquiry"
 				},
 				{
 					// Asking questions

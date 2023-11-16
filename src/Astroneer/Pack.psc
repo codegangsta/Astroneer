@@ -21,6 +21,29 @@ Struct Mission
   Float ObjectiveTarget05
 EndStruct
 
+Mission Function Copy(Mission m) global
+  Mission newMission = new Mission
+  newMission.ID = m.ID
+  newMission.Title = m.Title
+  newMission.Text = m.Text
+  newMission.ShipTemplate = m.ShipTemplate
+  newMission.ShipType = m.ShipType
+  newMission.Difficulty = m.Difficulty
+  newMission.RewardCredits = m.RewardCredits
+  newMission.RewardXP = m.RewardXP
+  newMission.Objective01 = m.Objective01
+  newMission.ObjectiveTarget01 = m.ObjectiveTarget01
+  newMission.Objective02 = m.Objective02
+  newMission.ObjectiveTarget02 = m.ObjectiveTarget02
+  newMission.Objective03 = m.Objective03
+  newMission.ObjectiveTarget03 = m.ObjectiveTarget03
+  newMission.Objective04 = m.Objective04
+  newMission.ObjectiveTarget04 = m.ObjectiveTarget04
+  newMission.Objective05 = m.Objective05
+  newMission.ObjectiveTarget05 = m.ObjectiveTarget05
+  return newMission
+EndFunction
+
 Group DifficultyTiers
   Message Property DifficultyTier1 Auto Const Mandatory ; Novice
   Message Property DifficultyTier2 Auto Const Mandatory ; Advanced
