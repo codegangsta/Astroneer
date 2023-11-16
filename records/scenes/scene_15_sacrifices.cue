@@ -47,7 +47,7 @@ scene_15_sacrifices: {
 			infos:      (#SimpleInfos & {in: {
 				prefix: "15_PlayerInquiry"
 				texts: [
-					"You’ve climbed high in your field, Aria. But I have to wonder, what personal costs came with that ascent?",
+					"Your work is so impressive, Aria. What have you had to give up to get here?",
 				]
 			}}).out
 		},

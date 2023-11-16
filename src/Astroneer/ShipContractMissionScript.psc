@@ -25,10 +25,6 @@ Group ObjectiveIndexes
   Int Property CompleteObjective = 100 Auto Const
 EndGroup
 
-Group FormLists
-  FormList Property ObjectiveTypes Auto Const Mandatory
-EndGroup
-
 Astroneer:ParentQuest Property AstroneerParent Auto Const Mandatory
 Message Property CompleteMessage Auto Const Mandatory
 
