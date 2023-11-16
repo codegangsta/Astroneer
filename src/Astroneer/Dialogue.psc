@@ -34,6 +34,13 @@ Function SetDesignStage(ObjectReference speaker)
   mission.SetStage(mission.DesignStage)
 EndFunction
 
+Function AbandonContract(ObjectReference speaker)
+  GetMission().MissionFailed()
+  GetMission().Stop()
+  GetMission().Reset()
+  GetMission().MissionParent.DebugResetMissions()
+EndFunction
+
 Actor Function GetAria()
   return (GetOwningQuest().GetAlias(0) as ReferenceAlias).GetActorReference()
 EndFunction

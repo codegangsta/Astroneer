@@ -5055,16 +5055,36 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Responses"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 0,
+                    "topic": "18_AriaResponse"
+                }
+            ],
             "topics": [
                 {
                     "id": "18_PlayerInquiry",
                     "speaker": "",
+                    "startScene": "18_AbandonContract",
                     "infos": [
                         {
                             "id": "18_PlayerInquiry01",
                             "responses": [
                                 {
                                     "text": "I'm having trouble with this contract. Can we switch it up?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 20.0
                                 }
                             ]
                         }
@@ -5073,9 +5093,12 @@
                 {
                     "id": "18_AriaResponse",
                     "speaker": "AriaCollins",
+                    "script": "Astroneer:Dialogue",
+                    "onBegin": "AbandonContract",
                     "infos": [
                         {
                             "id": "18_AriaResponse01",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "No problem, Cap! Not every ship is a perfect match. I'll find this one a new captain."
@@ -5084,6 +5107,7 @@
                         },
                         {
                             "id": "18_AriaResponse02",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "I'm updating the mission board right now. Let's find you a project that's more your speed."
@@ -5092,6 +5116,7 @@
                         },
                         {
                             "id": "18_AriaResponse03",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Sometimes a detour is part of the journey. Let's get you on a path that feels right."
@@ -5100,6 +5125,7 @@
                         },
                         {
                             "id": "18_AriaResponse04",
+                            "flags": "01",
                             "responses": [
                                 {
                                     "text": "Keep your chin up. Space is vast, and there's always something else out there for you."
