@@ -16,6 +16,11 @@ scene_02_greeting: {
 			topic: "11_AriaInquiry"
 		},
 		{
+			name:  "Bad news from home"
+			type:  #consts.ActionDialogue
+			topic: "12_AriaInquiry"
+		},
+		{
 			name:  "Intro Dialogue"
 			type:  #consts.ActionDialogue
 			topic: "01_AriaIntro"

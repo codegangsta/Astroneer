@@ -19,6 +19,7 @@ scenes: [
 	s.scene_10_alternate_paths,
 	s.scene_11_reflect,
 	s.scene_12_bad_news,
+	s.scene_12b_bad_news,
 	s.scene_13_hidden_passions,
 	s.scene_14_legacy,
 	s.scene_15_sacrifices,
@@ -26,4 +27,7 @@ scenes: [
 	s.scene_17_intercom,
 	s.scene_18_abandon_contract,
 	s.scene_19_questions,
+	s.scene_19b_work_questions,
+	s.scene_19c_background_questions,
+	s.scene_19d_personal_questions,
 ]

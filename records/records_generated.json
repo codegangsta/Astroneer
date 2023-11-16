@@ -641,6 +641,11 @@
                     "topic": "11_AriaInquiry"
                 },
                 {
+                    "name": "Bad news from home",
+                    "type": 0,
+                    "topic": "12_AriaInquiry"
+                },
+                {
                     "name": "Intro Dialogue",
                     "type": 0,
                     "topic": "01_AriaIntro"
@@ -3520,10 +3525,78 @@
             "actors": [
                 -2
             ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Aria Response"
+                },
+                {
+                    "name": "Player Response"
+                },
+                {
+                    "name": "Player Followup Responses"
+                },
+                {
+                    "name": "Player Deeper Responses"
+                }
+            ],
+            "actions": [
+                {
+                    "name": "Player Responses",
+                    "type": 3,
+                    "startPhase": 1,
+                    "endPhase": 1,
+                    "choices": [
+                        {
+                            "topic": "12_PlayerResponseConcerned",
+                            "response": "12_AriaResponseToConcerned"
+                        },
+                        {
+                            "topic": "12_PlayerResponseGentleProbing",
+                            "response": "12_AriaResponseToGentleProbing"
+                        },
+                        {
+                            "topic": "12_PlayerResponseRespectfulDistance",
+                            "response": "12_AriaResponseToRespectfulDistance"
+                        },
+                        {
+                            "topic": "12_PlayerResponseDirect",
+                            "response": "12_AriaResponseToDirect"
+                        }
+                    ]
+                },
+                {
+                    "name": "Player Followup Responses",
+                    "type": 3,
+                    "startPhase": 2,
+                    "endPhase": 2,
+                    "choices": [
+                        {
+                            "topic": "12_PlayerFollowupResponseSympathetic",
+                            "response": "12_AriaFollowupResponseToSympathetic"
+                        },
+                        {
+                            "topic": "12_PlayerFollowupResponseInquisitive",
+                            "response": "12_AriaFollowupResponseToInquisitive"
+                        },
+                        {
+                            "topic": "12_PlayerFollowupResponseSupportive",
+                            "response": "12_AriaFollowupResponseToSupportive"
+                        },
+                        {
+                            "topic": "12_PlayerFollowupResponseNonIntrusive",
+                            "response": "12_AriaFollowupResponseToNonIntrusive"
+                        }
+                    ]
+                }
+            ],
             "topics": [
                 {
                     "id": "12_AriaInquiry",
                     "speaker": "AriaCollins",
+                    "startScene": "12_BadNews",
+                    "script": "Astroneer:Dialogue",
+                    "onEnd": "CompleteDialogueBadNews",
                     "notes": "Aria appears on the intercom, her usual vibrancy dimmed, her tone subdued.",
                     "infos": [
                         {
@@ -3531,6 +3604,30 @@
                             "responses": [
                                 {
                                     "text": "Hey, Cap... Sorry, I'm a bit out of sorts today. What's up?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetRandomPercent",
+                                    "lessThanOrEqualTo": 20.0
+                                },
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ParentQuest",
+                                    "variable": "DialogueIntroComplete",
+                                    "equals": 1.0
+                                },
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ParentQuest",
+                                    "variable": "DialogueBackgroundComplete",
+                                    "equals": 1.0
+                                },
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ParentQuest",
+                                    "variable": "DialogueBadNewsComplete",
+                                    "equals": 0.0
                                 }
                             ]
                         }
@@ -3611,12 +3708,13 @@
                     "id": "12_AriaResponseToGentleProbing",
                     "speaker": "AriaCollins",
                     "notes": "Aria lets out a soft sigh.",
+                    "startScene": "12b_BadNews",
                     "infos": [
                         {
                             "id": "12_AriaResponseToGentleProbing01",
                             "responses": [
                                 {
-                                    "text": "It's hard to hide anything from you, isn't it? Just some news from back home. Makes you think about life choices."
+                                    "text": "It's hard to hide anything from you, isn't it? It's my little sister; shes ill. And I'm here, worlds away. Makes you think about life choices."
                                 }
                             ]
                         }
@@ -3625,6 +3723,7 @@
                 {
                     "id": "12_AriaResponseToRespectfulDistance",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "notes": "Gratefully nodding",
                     "infos": [
                         {
@@ -3641,6 +3740,7 @@
                     "id": "12_AriaResponseToDirect",
                     "speaker": "AriaCollins",
                     "notes": "Pausing briefly",
+                    "startScene": "12b_BadNews",
                     "infos": [
                         {
                             "id": "12_AriaResponseToDirect01",
@@ -3781,6 +3881,7 @@
                 {
                     "id": "12_AriaResponseToEmpathy",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "notes": "Aria's eyes reflect gratitude.",
                     "infos": [
                         {
@@ -3797,6 +3898,7 @@
                     "id": "12_AriaResponseToPracticalSupport",
                     "speaker": "AriaCollins",
                     "notes": "She considers this.",
+                    "startScene": "MAIN_topics",
                     "infos": [
                         {
                             "id": "12_AriaResponseToPracticalSupport01",
@@ -3811,6 +3913,7 @@
                 {
                     "id": "12_AriaResponseToSharedExperience",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "notes": "You can see the comfort in her expression.",
                     "infos": [
                         {
@@ -3826,6 +3929,7 @@
                 {
                     "id": "12_AriaResponseToEncouragingOptimism",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "notes": "Her smile is small but genuine.",
                     "infos": [
                         {
@@ -3841,6 +3945,7 @@
                 {
                     "id": "12_AriaResponseToOfferSpace",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "notes": "Relief washes over her.",
                     "infos": [
                         {
@@ -3856,6 +3961,7 @@
                 {
                     "id": "12_AriaFollowupResponseToSympathetic",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "notes": "Her eyes soften.",
                     "infos": [
                         {
@@ -3871,6 +3977,7 @@
                 {
                     "id": "12_AriaFollowupResponseToInquisitive",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "notes": "She looks thoughtful.",
                     "infos": [
                         {
@@ -3886,6 +3993,7 @@
                 {
                     "id": "12_AriaFollowupResponseToSupportive",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "notes": "A nod of acknowledgement.",
                     "infos": [
                         {
@@ -3901,6 +4009,7 @@
                 {
                     "id": "12_AriaFollowupResponseToNonIntrusive",
                     "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
                     "notes": "There's a hint of relief in her voice.",
                     "infos": [
                         {
@@ -3910,6 +4019,52 @@
                                     "text": "I appreciate that, really. Sometimes just knowing someone's there to listen is enough."
                                 }
                             ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "12b_BadNews",
+            "name": "Bad News followup scene",
+            "actors": [
+                -2
+            ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Aria Response"
+                },
+                {
+                    "name": "Player Response"
+                }
+            ],
+            "actions": [
+                {
+                    "name": "Player Deeper Responses",
+                    "type": 3,
+                    "startPhase": 1,
+                    "endPhase": 1,
+                    "choices": [
+                        {
+                            "topic": "12_PlayerResponseEmpathy",
+                            "response": "12_AriaResponseToEmpathy"
+                        },
+                        {
+                            "topic": "12_PlayerResponsePracticalSupport",
+                            "response": "12_AriaResponseToPracticalSupport"
+                        },
+                        {
+                            "topic": "12_PlayerResponseSharedExperience",
+                            "response": "12_AriaResponseToSharedExperience"
+                        },
+                        {
+                            "topic": "12_PlayerResponseEncouragingOptimism",
+                            "response": "12_AriaResponseToEncouragingOptimism"
+                        },
+                        {
+                            "topic": "12_PlayerResponseOfferSpace",
+                            "response": "12_AriaResponseToOfferSpace"
                         }
                     ]
                 }
@@ -4862,8 +5017,34 @@
                             "topic": "05_PlayerInquiry"
                         },
                         {
-                            "topic": "07_PlayerInquiry"
+                            "topic": "19b_PlayerInquiry"
                         },
+                        {
+                            "topic": "19c_PlayerInquiry"
+                        },
+                        {
+                            "topic": "19d_PlayerInquiry"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "19b_WorkQuestions",
+            "name": "Work Questions for Aria",
+            "actors": [
+                -2
+            ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Work Questions"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 3,
+                    "choices": [
                         {
                             "topic": "08_PlayerInquiry"
                         },
@@ -4872,10 +5053,103 @@
                         },
                         {
                             "topic": "10_PlayerInquiry"
+                        }
+                    ]
+                }
+            ],
+            "topics": [
+                {
+                    "id": "19b_PlayerInquiry",
+                    "speaker": "",
+                    "startScene": "19b_WorkQuestions",
+                    "infos": [
+                        {
+                            "id": "19b_PlayerInquiry01",
+                            "responses": [
+                                {
+                                    "text": "About your work..."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ParentQuest",
+                                    "variable": "DialogueBackgroundComplete",
+                                    "equals": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "19c_BackgroundQuestions",
+            "name": "Background Questions for Aria",
+            "actors": [
+                -2
+            ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Background Questions"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 3,
+                    "choices": [
+                        {
+                            "topic": "07_PlayerInquiry"
                         },
                         {
                             "topic": "13_PlayerInquiry"
-                        },
+                        }
+                    ]
+                }
+            ],
+            "topics": [
+                {
+                    "id": "19c_PlayerInquiry",
+                    "speaker": "",
+                    "startScene": "19c_BackgroundQuestions",
+                    "infos": [
+                        {
+                            "id": "19c_PlayerInquiry01",
+                            "responses": [
+                                {
+                                    "text": "About your background..."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ParentQuest",
+                                    "variable": "DialogueBackgroundComplete",
+                                    "equals": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "19d_PersonalQuestions",
+            "name": "Personal Questions for Aria",
+            "actors": [
+                -2
+            ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Personal Questions"
+                }
+            ],
+            "actions": [
+                {
+                    "type": 3,
+                    "choices": [
                         {
                             "topic": "14_PlayerInquiry"
                         },
@@ -4884,6 +5158,31 @@
                         },
                         {
                             "topic": "16_PlayerInquiry"
+                        }
+                    ]
+                }
+            ],
+            "topics": [
+                {
+                    "id": "19d_PlayerInquiry",
+                    "speaker": "",
+                    "startScene": "19d_PersonalQuestions",
+                    "infos": [
+                        {
+                            "id": "19d_PlayerInquiry01",
+                            "responses": [
+                                {
+                                    "text": "About something personal..."
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetVMQuestVariable",
+                                    "quest": "ParentQuest",
+                                    "variable": "DialogueBackgroundComplete",
+                                    "equals": 1.0
+                                }
+                            ]
                         }
                     ]
                 }

@@ -19,39 +19,17 @@ scene_19_questions: {
 					// Background
 					topic: "05_PlayerInquiry"
 				},
-
 				{
-					// Colony life
-					topic: "07_PlayerInquiry"
+					// About your work...
+					topic: "19b_PlayerInquiry"
 				},
 				{
-					// Startup
-					topic: "08_PlayerInquiry"
+					// About your background...
+					topic: "19c_PlayerInquiry"
 				},
 				{
-					// Work Satisfaction
-					topic: "09_PlayerInquiry"
-				},
-
-				{
-					// Alternate Paths
-					topic: "10_PlayerInquiry"
-				},
-				{
-					// Hidden Passions
-					topic: "13_PlayerInquiry"
-				},
-				{
-					// Legacy
-					topic: "14_PlayerInquiry"
-				},
-				{
-					// Sacrifices
-					topic: "15_PlayerInquiry"
-				},
-				{
-					// Regrets
-					topic: "16_PlayerInquiry"
+					// About something personal...
+					topic: "19d_PlayerInquiry"
 				},
 			]
 		},
