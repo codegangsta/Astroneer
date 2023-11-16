@@ -33,6 +33,10 @@ scene_04_complete_contract: {
 			type:  #consts.ActionDialogue
 			topic: "04_AriaLuxury"
 		},
+		{
+			type:  #consts.ActionDialogue
+			topic: "04_AriaClosing"
+		},
 	]
 	topics: [
 		{
@@ -64,12 +68,9 @@ scene_04_complete_contract: {
 			}}).out
 		},
 		{
-			id:         "04_AriaFighter"
-			speaker:    #consts.Aria
-			startScene: "MAIN_topics"
-			script:     "Astroneer:Dialogue"
-			onBegin:    "CompleteContract"
-			infos:      (#SimpleInfos & {in: {
+			id:      "04_AriaFighter"
+			speaker: #consts.Aria
+			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaFighter"
 				flags:  #consts.InfoFlagsRandom
 				conditions: [
@@ -90,12 +91,9 @@ scene_04_complete_contract: {
 			}}).out
 		},
 		{
-			id:         "04_AriaExplorer"
-			speaker:    #consts.Aria
-			startScene: "MAIN_topics"
-			script:     "Astroneer:Dialogue"
-			onBegin:    "CompleteContract"
-			infos:      (#SimpleInfos & {in: {
+			id:      "04_AriaExplorer"
+			speaker: #consts.Aria
+			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaExplorer"
 				flags:  #consts.InfoFlagsRandom
 				conditions: [
@@ -116,12 +114,9 @@ scene_04_complete_contract: {
 			}}).out
 		},
 		{
-			id:         "04_AriaHauler"
-			speaker:    #consts.Aria
-			startScene: "MAIN_topics"
-			script:     "Astroneer:Dialogue"
-			onBegin:    "CompleteContract"
-			infos:      (#SimpleInfos & {in: {
+			id:      "04_AriaHauler"
+			speaker: #consts.Aria
+			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaHauler"
 				flags:  #consts.InfoFlagsRandom
 				conditions: [
@@ -142,12 +137,9 @@ scene_04_complete_contract: {
 			}}).out
 		},
 		{
-			id:         "04_AriaInterceptor"
-			speaker:    #consts.Aria
-			startScene: "MAIN_topics"
-			script:     "Astroneer:Dialogue"
-			onBegin:    "CompleteContract"
-			infos:      (#SimpleInfos & {in: {
+			id:      "04_AriaInterceptor"
+			speaker: #consts.Aria
+			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaInterceptor"
 				flags:  #consts.InfoFlagsRandom
 				conditions: [
@@ -168,12 +160,9 @@ scene_04_complete_contract: {
 			}}).out
 		},
 		{
-			id:         "04_AriaLuxury"
-			speaker:    #consts.Aria
-			startScene: "MAIN_topics"
-			script:     "Astroneer:Dialogue"
-			onBegin:    "CompleteContract"
-			infos:      (#SimpleInfos & {in: {
+			id:      "04_AriaLuxury"
+			speaker: #consts.Aria
+			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaLuxury"
 				flags:  #consts.InfoFlagsRandom
 				conditions: [
@@ -190,6 +179,29 @@ scene_04_complete_contract: {
 					"Pure elegance! Every inch whispers class.",
 					"Opulent and grand! It's a journey in style.",
 					"Cozy and lavish! It's a five-star trip through space.",
+				]
+			}}).out
+		},
+		{
+			id:         "04_AriaClosing"
+			speaker:    #consts.Aria
+			startScene: "MAIN_topics"
+			script:     "Astroneer:Dialogue"
+			onBegin:    "CompleteContract"
+			infos:      (#SimpleInfos & {in: {
+				prefix: "04_AriaClosing"
+				flags:  #consts.InfoFlagsRandom
+				texts: [
+					"Credits transferred. Aria signing off.",
+					"Payment made. Until next time, Cap.",
+					"Your reward's been sent. Aria out.",
+					"Job well done. Credits in your account. Catch you later.",
+					"Contract complete, payment processed. Nice doing business with you, Cap.",
+					"Signing off with your credits on the way. Stay stellar, Cap.",
+					"That's a wrap on this one. Your pay's been sorted. Out for now.",
+					"Mission accomplished, reward sent. Aria out until the next call.",
+					"Credits are en route. Good work, Cap. Signing off.",
+					"Contract closed and paid. Keep an eye out for more. Aria out.",
 				]
 			}}).out
 		},

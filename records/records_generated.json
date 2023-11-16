@@ -1687,6 +1687,10 @@
                 {
                     "type": 0,
                     "topic": "04_AriaLuxury"
+                },
+                {
+                    "type": 0,
+                    "topic": "04_AriaClosing"
                 }
             ],
             "topics": [
@@ -1860,9 +1864,6 @@
                 {
                     "id": "04_AriaFighter",
                     "speaker": "AriaCollins",
-                    "startScene": "MAIN_topics",
-                    "script": "Astroneer:Dialogue",
-                    "onBegin": "CompleteContract",
                     "infos": [
                         {
                             "id": "04_AriaFighter01",
@@ -1954,9 +1955,6 @@
                 {
                     "id": "04_AriaExplorer",
                     "speaker": "AriaCollins",
-                    "startScene": "MAIN_topics",
-                    "script": "Astroneer:Dialogue",
-                    "onBegin": "CompleteContract",
                     "infos": [
                         {
                             "id": "04_AriaExplorer01",
@@ -2048,9 +2046,6 @@
                 {
                     "id": "04_AriaHauler",
                     "speaker": "AriaCollins",
-                    "startScene": "MAIN_topics",
-                    "script": "Astroneer:Dialogue",
-                    "onBegin": "CompleteContract",
                     "infos": [
                         {
                             "id": "04_AriaHauler01",
@@ -2142,9 +2137,6 @@
                 {
                     "id": "04_AriaInterceptor",
                     "speaker": "AriaCollins",
-                    "startScene": "MAIN_topics",
-                    "script": "Astroneer:Dialogue",
-                    "onBegin": "CompleteContract",
                     "infos": [
                         {
                             "id": "04_AriaInterceptor01",
@@ -2236,9 +2228,6 @@
                 {
                     "id": "04_AriaLuxury",
                     "speaker": "AriaCollins",
-                    "startScene": "MAIN_topics",
-                    "script": "Astroneer:Dialogue",
-                    "onBegin": "CompleteContract",
                     "infos": [
                         {
                             "id": "04_AriaLuxury01",
@@ -2322,6 +2311,105 @@
                                     "quest": "ShipContractMission",
                                     "variable": "ShipType",
                                     "equals": 4.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "04_AriaClosing",
+                    "speaker": "AriaCollins",
+                    "startScene": "MAIN_topics",
+                    "script": "Astroneer:Dialogue",
+                    "onBegin": "CompleteContract",
+                    "infos": [
+                        {
+                            "id": "04_AriaClosing01",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Credits transferred. Aria signing off."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaClosing02",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Payment made. Until next time, Cap."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaClosing03",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Your reward's been sent. Aria out."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaClosing04",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Job well done. Credits in your account. Catch you later."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaClosing05",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Contract complete, payment processed. Nice doing business with you, Cap."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaClosing06",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Signing off with your credits on the way. Stay stellar, Cap."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaClosing07",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "That's a wrap on this one. Your pay's been sorted. Out for now."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaClosing08",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Mission accomplished, reward sent. Aria out until the next call."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaClosing09",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Credits are en route. Good work, Cap. Signing off."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "04_AriaClosing10",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Contract closed and paid. Keep an eye out for more. Aria out."
                                 }
                             ]
                         }
