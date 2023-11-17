@@ -307,17 +307,27 @@ Astroneer:Pack:Mission Function GenerateMission()
   if mission.Title == None
     mission.Title = ShipNames.GetAt(Utility.RandomInt(0, ShipNames.GetSize()-1)) as Message
   endif
+  if mission.ShipType == None
+    mission.ShipType = consts.ShipTypeFighter
+  endif
   if mission.Text == None
-    mission.Text = consts.MissionTextDefault
+    if mission.ShipType == consts.ShipTypeFighter
+      mission.Text = consts.MissionTextsFighter.GetAt(Utility.RandomInt(0, consts.MissionTextsFighter.GetSize()-1)) as Message
+    elseif mission.ShipType == consts.ShipTypeExplorer
+      mission.Text = consts.MissionTextsExplorer.GetAt(Utility.RandomInt(0, consts.MissionTextsExplorer.GetSize()-1)) as Message
+    elseif mission.ShipType == consts.ShipTypeHauler
+      mission.Text = consts.MissionTextsHauler.GetAt(Utility.RandomInt(0, consts.MissionTextsHauler.GetSize()-1)) as Message
+    elseif mission.ShipType == consts.ShipTypeInterceptor
+      mission.Text = consts.MissionTextsInterceptor.GetAt(Utility.RandomInt(0, consts.MissionTextsInterceptor.GetSize()-1)) as Message
+    elseif mission.ShipType == consts.ShipTypeLuxury
+      mission.Text = consts.MissionTextsLuxury.GetAt(Utility.RandomInt(0, consts.MissionTextsLuxury.GetSize()-1)) as Message
+    endif
   endif
   if mission.ShipTemplate == 0
     mission.ShipTemplate = consts.ShipTemplateDefault
   endif
   if mission.Difficulty == None
     mission.Difficulty = consts.DifficultyTier1
-  endif
-  if mission.ShipType == None
-    mission.ShipType = consts.ShipTypeGeneric
   endif
   
   return mission

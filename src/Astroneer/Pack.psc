@@ -52,12 +52,11 @@ Group DifficultyTiers
 EndGroup
 
 Group MissionTexts
-  Message Property MissionTextDefault Auto Const Mandatory
-  Message Property MissionTextExplorer01 Auto Const Mandatory
-  Message Property MissionTextFighter01 Auto Const Mandatory
-  Message Property MissionTextHauler01 Auto Const Mandatory
-  Message Property MissionTextInterceptor01 Auto Const Mandatory
-  Message Property MissionTextLuxury01 Auto Const Mandatory
+  FormList Property MissionTextsExplorer Auto Const Mandatory
+  FormList Property MissionTextsFighter Auto Const Mandatory
+  FormList Property MissionTextsHauler Auto Const Mandatory
+  FormList Property MissionTextsInterceptor Auto Const Mandatory
+  FormList Property MissionTextsLuxury Auto Const Mandatory
 EndGroup
 
 Group Objectives
