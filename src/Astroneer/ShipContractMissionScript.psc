@@ -141,7 +141,6 @@ Function StageCompleted()
 
   Actor PlayerREF = Game.GetPlayer()
   Self.UnRegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerModifiedShip")
-  Self.UnRegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
 
   AstroneerParent.RemoveContractShip(Self.ContractShip, True)
   Self.ContractShip = None
@@ -152,7 +151,6 @@ Function StageFailed()
 
   Actor PlayerREF = Game.GetPlayer()
   Self.UnRegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerModifiedShip")
-  Self.UnRegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
 
   AstroneerParent.RemoveContractShip(Self.ContractShip, False)
   Self.ContractShip = None

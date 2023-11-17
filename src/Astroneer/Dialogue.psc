@@ -6,8 +6,24 @@ Function CompleteContract(ObjectReference speaker)
 EndFunction
 
 Function ModifyShips(ObjectReference speaker)
+  Trace("ModifyShips")
+  Astroneer:ParentQuest pq = GetOwningQuest() as Astroneer:ParentQuest
   Astroneer:ShipContractMissionScript mission = GetMission()
-  Game.GetPlayer().ShowHangarMenu(0, GetAria(), None, False)
+
+  RefCollectionAlias ships = pq.PlayerShipQuest.PlayerShips
+  Keyword CannotBeModified = Game.GetForm(0x003413f3) as Keyword
+  pq.AtlasWorkshopMode = True
+
+  Int i = 0
+  While i < ships.GetCount()
+    spaceshipreference ship = ships.GetAt(i) as spaceshipreference
+    if ship != mission.ContractShip
+      ship.AddKeyword(CannotBeModified)
+    endif
+    i += 1
+  EndWhile
+
+  Game.GetPlayer().ShowHangarMenu(0, GetAria(), mission.ContractShip, False)
 EndFunction
 
 Function CompleteIntro(ObjectReference speaker)

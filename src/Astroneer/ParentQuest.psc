@@ -39,6 +39,8 @@ Group DialogueData
   Int Property DialogueBackgroundComplete = 0 Auto Conditional
 EndGroup
 
+Bool Property AtlasWorkshopMode = False auto
+
 Astroneer:Pack:Mission[] Missions = None
 
 Event OnQuestInit()
@@ -47,8 +49,29 @@ Event OnQuestInit()
   Trace("Registering for events...")
   Self.RegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerLoadGame")
   Self.RegisterForRemoteEvent(PlayerREF as ObjectReference, "OnCellAttach")
+  Self.RegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
+
   AddMissions()
   InitIntercom()
+EndEvent
+
+Event OnMenuOpenCloseEvent(String menuName, Bool open)
+  Trace("OnMenuOpenCloseEvent " + menuName + " " + open)
+  if menuName == "SpaceshipEditorMenu" && AtlasWorkshopMode && !open
+    RefCollectionAlias ships = PlayerShipQuest.PlayerShips
+    Keyword CannotBeModified = Game.GetForm(0x003413f3) as Keyword
+    Astroneer:ShipContractMissionScript mission = AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
+
+    Int i = 0
+    While i < ships.GetCount()
+      spaceshipreference ship = ships.GetAt(i) as spaceshipreference
+      if ship != mission.ContractShip
+        ship.RemoveKeyword(CannotBeModified)
+      endif
+      i += 1
+    EndWhile
+    AtlasWorkshopMode = False
+  endif
 EndEvent
 
 Event ObjectReference.OnCellAttach(ObjectReference akRef)
@@ -93,6 +116,8 @@ EndFunction
 Event Actor.OnPlayerLoadGame(Actor akActor)
   AddMissions()
   InitIntercom()
+  Self.UnregisterForAllMenuOpenCloseEvents()
+  Self.RegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
 EndEvent
 
 Function AddMissions()
