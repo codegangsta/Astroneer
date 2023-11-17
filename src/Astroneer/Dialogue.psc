@@ -6,6 +6,7 @@ Function CompleteContract(ObjectReference speaker)
 EndFunction
 
 Function ModifyShips(ObjectReference speaker)
+  Astroneer:ShipContractMissionScript mission = GetMission()
   Game.GetPlayer().ShowHangarMenu(0, GetAria(), None, False)
 EndFunction
 

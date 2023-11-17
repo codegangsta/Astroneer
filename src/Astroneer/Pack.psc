@@ -67,9 +67,10 @@ Group Objectives
   Message Property ObjectiveHull Auto Const Mandatory
   Message Property ObjectiveMass Auto Const Mandatory
   Message Property ObjectiveReactorPower Auto Const Mandatory
-  Message Property ObjectiveShieldedCargo Auto Const Mandatory
   Message Property ObjectiveShieldHealth Auto Const Mandatory
   Message Property ObjectiveShieldPower Auto Const Mandatory
+  Message Property ObjectiveShieldedCargo Auto Const Mandatory
+  Message Property ObjectiveThrust Auto Const Mandatory
   Message Property ObjectiveTopSpeed Auto Const Mandatory
   Message Property ObjectiveTotalWeaponPower Auto Const Mandatory
   Message Property ObjectiveWeaponPowerBallistic Auto Const Mandatory

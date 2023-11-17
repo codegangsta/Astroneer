@@ -275,6 +275,10 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
     Keyword SbShip_Window = Game.GetForm(0x00143b37) as Keyword
     return ship.GetExteriorRefs(SBShip_Window).length
 
+  elseif (objectiveType == consts.ObjectiveThrust)
+    ActorValue Thrust = Game.GetForm(0x0000ACDC) as ActorValue
+    return ship.GetValue(Thrust)
+
   else
     return -1
   endif

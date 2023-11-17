@@ -85,18 +85,13 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m5.ObjectiveTarget02 = 300
   m5.Objective03 = p.ObjectiveWeaponPowerEM
   m5.ObjectiveTarget03 = 7
-  ; TODO: Thrusters?
+  m5.Objective04 = p.ObjectiveThrust
+  m5.ObjectiveTarget04 = 8000
 
-  m5.ObjectiveTarget01 = 2000
-  m5.ObjectiveTarget02 = 100
-  m5.ObjectiveTarget03 = 0
-
-  ;m5.Objective04 = p.ObjectiveThrusters
-  ;m5.ObjectiveTarget04 = 750
-  ;missions.Add(m1)
-  ;missions.Add(m2)
-  ;missions.Add(m3)
-  ;missions.Add(m4)
+  missions.Add(m1)
+  missions.Add(m2)
+  missions.Add(m3)
+  missions.Add(m4)
   missions.Add(m5)
 
   return missions
