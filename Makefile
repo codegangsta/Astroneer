@@ -49,12 +49,16 @@ console::
 	@sfc
 
 load_save::
-	# sfc "LoadGame ref_save_1"
-	sfc "LoadGame ref_save_2"
-	# sfc "LoadGame ref_save_3"
+	# sfc "LoadGame ref_save_1" # cleanish save
+	# sfc "LoadGame ref_save_2" # intercom
+	# sfc "LoadGame ref_save_3" # space
+	sfc "LoadGame ref_save_4" # research
 
 stop_game:
 	sfc "QuitGame"
+
+add_starship_design_perk:
+	sfc "player.addperk 002c59dc"
 
 ## SSH into windows
 ssh::
