@@ -11,7 +11,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m1.ShipType = p.ShipTypeFighter
   m1.Difficulty = p.DifficultyTier1
   m1.RewardCredits = 100000
-  m1.RewardXP = 250
   m1.Objective01 = p.ObjectiveMass
   m1.ObjectiveTarget01 = 2000
   m1.Objective02 = p.ObjectiveShieldHealth
@@ -30,7 +29,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m2.ShipType = p.ShipTypeHauler
   m2.Difficulty = p.DifficultyTier1
   m2.RewardCredits = 100000
-  m2.RewardXP = 250
   m2.Objective01 = p.ObjectiveCargo
   m2.ObjectiveTarget01 = 2000
   m2.Objective02 = p.ObjectiveEnginePower
@@ -47,7 +45,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m3.ShipType = p.ShipTypeLuxury
   m3.Difficulty = p.DifficultyTier1
   m3.RewardCredits = 100000
-  m3.RewardXP = 250
   m3.Objective01 = p.ObjectiveHabs
   m3.ObjectiveTarget01 = 4
   m3.Objective02 = p.ObjectiveWindows
@@ -64,7 +61,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m4.ShipType = p.ShipTypeExplorer
   m4.Difficulty = p.DifficultyTier1
   m4.RewardCredits = 100000
-  m4.RewardXP = 250
   m4.Objective01 = p.ObjectiveMass
   m4.ObjectiveTarget01 = 2000
   m4.Objective02 = p.ObjectiveGravJumpRange
@@ -83,7 +79,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m5.ShipType = p.ShipTypeInterceptor
   m5.Difficulty = p.DifficultyTier1
   m5.RewardCredits = 100000
-  m5.RewardXP = 250
   m5.Objective01 = p.ObjectiveMass
   m5.ObjectiveTarget01 = 1200
   m5.Objective02 = p.ObjectiveTopSpeed

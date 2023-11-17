@@ -8,7 +8,6 @@ Struct Mission
   Message ShipType
   Message Difficulty
   Int RewardCredits
-  Int RewardXP
   Message Objective01
   Float ObjectiveTarget01
   Message Objective02
@@ -30,7 +29,6 @@ Mission Function Copy(Mission m) global
   newMission.ShipType = m.ShipType
   newMission.Difficulty = m.Difficulty
   newMission.RewardCredits = m.RewardCredits
-  newMission.RewardXP = m.RewardXP
   newMission.Objective01 = m.Objective01
   newMission.ObjectiveTarget01 = m.ObjectiveTarget01
   newMission.Objective02 = m.Objective02
