@@ -2,6 +2,7 @@ package scenes
 
 scene_17_intercom: {
 	id:     "17_Intercom"
+	quest:  "ParentQuest"
 	name:   "Intercom"
 	actors: #consts.Actors
 	flags:  #consts.SceneFlags

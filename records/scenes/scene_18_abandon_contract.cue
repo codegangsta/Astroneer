@@ -2,6 +2,7 @@ package scenes
 
 scene_18_abandon_contract: {
 	id:     "18_AbandonContract"
+	quest:  "ParentQuest"
 	name:   "Abandon Contract"
 	actors: #consts.Actors
 	flags:  #consts.SceneFlags

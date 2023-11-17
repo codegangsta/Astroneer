@@ -2,6 +2,7 @@ package scenes
 
 scene_15_sacrifices: {
 	id:     "15_Sacrifices"
+	quest:  "ParentQuest"
 	name:   "Sacrifices"
 	notes:  "This scene delves into the complex nature of Aria's career-driven life, challenging her to confront the personal costs and momentarily revealing the vulnerability behind her confident facade."
 	actors: #consts.Actors

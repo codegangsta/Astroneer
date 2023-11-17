@@ -2,6 +2,7 @@ package scenes
 
 scene_11_reflect: {
 	id:     "11_Reflect"
+	quest:  "ParentQuest"
 	name:   "Reflecting on Personal Growth"
 	notes:  "In this scene, Aria starts off guarded, her usual self-assurance masking deeper uncertainties. As the player engages, she gradually reveals more of her introspective side."
 	actors: #consts.Actors

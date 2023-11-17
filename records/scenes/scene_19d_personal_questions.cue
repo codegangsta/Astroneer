@@ -2,6 +2,7 @@ package scenes
 
 scene_19d_personal_questions: {
 	id:     "19d_PersonalQuestions"
+	quest:  "ParentQuest"
 	name:   "Personal Questions for Aria"
 	actors: #consts.Actors
 	flags:  #consts.SceneFlags

@@ -2,6 +2,7 @@
     "scenes": [
         {
             "id": "MAIN_topics",
+            "quest": "ParentQuest",
             "name": "Main Topics",
             "notes": "This is the main topics scene",
             "actors": [
@@ -166,6 +167,7 @@
         },
         {
             "id": "00_Misc",
+            "quest": "ParentQuest",
             "name": "Miscellaneous",
             "notes": "Miscellaneous topics to be used as filler or transitions between scenes.",
             "actors": [
@@ -590,6 +592,7 @@
         },
         {
             "id": "01_Intro",
+            "quest": "ParentQuest",
             "name": "Aria is Introduced to the Player",
             "actors": [
                 -2
@@ -652,6 +655,7 @@
         },
         {
             "id": "02_Greeting",
+            "quest": "ParentQuest",
             "name": "Aria Greets the Player",
             "notes": "The player has just accepted a mission from the mission board and has walked over to the Atlas Astronautics intercom to speak with Aria. Upon pushing the 'Call' button, Aria responds from the intercom. This response is typically played after the introductory quest, so Aria has already been introduced to the player.",
             "actors": [
@@ -1024,6 +1028,7 @@
         },
         {
             "id": "03_AcceptContract",
+            "quest": "ParentQuest",
             "name": "Player Accepts Contract",
             "notes": "The player has accepted a mission from the mission board, and has walked over to the Atlas Astronautics intercom to speak with Aria. Aria greets the player, then the player chooses to ask about the contract they've just accepted. Based on the type of Ship contract, a randomly generated response from Aria will be chosen. The intent is to have enough dialog and variety that each mission feels fresh and new",
             "actors": [
@@ -1683,6 +1688,7 @@
         },
         {
             "id": "04_CompleteContract",
+            "quest": "ParentQuest",
             "name": "Player Completes Contract",
             "notes": "The player has finished building the ship according to the contract specs, and is ready to turn it in to Aria.",
             "actors": [
@@ -2446,6 +2452,7 @@
         },
         {
             "id": "05_Background",
+            "quest": "ParentQuest",
             "name": "Aria's Background",
             "actors": [
                 -2
@@ -2522,6 +2529,7 @@
         },
         {
             "id": "06_PlayerBackground",
+            "quest": "ParentQuest",
             "name": "Player's Background",
             "actors": [
                 -2
@@ -2666,6 +2674,7 @@
         },
         {
             "id": "07_ColonyLife",
+            "quest": "ParentQuest",
             "name": "Colony Life",
             "notes": "In this scene, Aria fondly recalls her upbringing in a space colony, subtly hinting at the contrast between her ambitious career path and the simpler life she left behind. Her responses subtly reflect her inner conflict, though she remains somewhat steadfast in her choices.",
             "actors": [
@@ -2843,6 +2852,7 @@
         },
         {
             "id": "08_Startup",
+            "quest": "ParentQuest",
             "name": "Startup vs Corporations",
             "notes": "In this scene, Aria explains her choice of leaving a stable corporate job for a dynamic startup environment, subtly indicating her personal drive and aspiration despite the inherent risks.",
             "actors": [
@@ -3039,6 +3049,7 @@
         },
         {
             "id": "09_WorkSatisfaction",
+            "quest": "ParentQuest",
             "name": "Work Satisfaction",
             "notes": "Aria talks about her work at Atlas and how she feels about it.",
             "actors": [
@@ -3235,6 +3246,7 @@
         },
         {
             "id": "10_AlternatePaths",
+            "quest": "ParentQuest",
             "name": "Alternate Paths",
             "notes": "In this scene, Aria reflects on her career choices, showing a blend of confidence in her decision and awareness of what she's left behind. The player's responses probe deeper, revealing Aria's introspective side and her commitment to her path despite acknowledging the trade-offs.",
             "actors": [
@@ -3431,6 +3443,7 @@
         },
         {
             "id": "11_Reflect",
+            "quest": "ParentQuest",
             "name": "Reflecting on Personal Growth",
             "notes": "In this scene, Aria starts off guarded, her usual self-assurance masking deeper uncertainties. As the player engages, she gradually reveals more of her introspective side.",
             "actors": [
@@ -3637,6 +3650,7 @@
         },
         {
             "id": "12_BadNews",
+            "quest": "ParentQuest",
             "name": "Bad News from Home",
             "notes": "Aria is subdued, and the player can sense something is wrong. Aria reveals that her sister is ill, and she's feeling the distance from home. The player can offer support and encouragement.",
             "actors": [
@@ -4143,6 +4157,7 @@
         },
         {
             "id": "12b_BadNews",
+            "quest": "ParentQuest",
             "name": "Bad News followup scene",
             "actors": [
                 -2
@@ -4189,6 +4204,7 @@
         },
         {
             "id": "13_HiddenPassions",
+            "quest": "ParentQuest",
             "name": "Hidden Passions - Humble Revelations",
             "notes": "Aria reveals her hobbies and the joy of learning for its own sake.",
             "actors": [
@@ -4389,6 +4405,7 @@
         },
         {
             "id": "14_Legacy",
+            "quest": "ParentQuest",
             "name": "Legacy and Impact",
             "actors": [
                 -2
@@ -4589,6 +4606,7 @@
         },
         {
             "id": "15_Sacrifices",
+            "quest": "ParentQuest",
             "name": "Sacrifices",
             "notes": "This scene delves into the complex nature of Aria's career-driven life, challenging her to confront the personal costs and momentarily revealing the vulnerability behind her confident facade.",
             "actors": [
@@ -4790,6 +4808,7 @@
         },
         {
             "id": "16_Regrets",
+            "quest": "ParentQuest",
             "name": "Aria Reflects on Family and Regrets",
             "notes": "This emotionally complex scene starts with Aria's rare moment of vulnerability about her family, which she either opens up more about or distances herself from, depending on the player's approach.",
             "actors": [
@@ -4991,6 +5010,7 @@
         },
         {
             "id": "17_Intercom",
+            "quest": "ParentQuest",
             "name": "Intercom",
             "actors": [
                 -2
@@ -5051,6 +5071,7 @@
         },
         {
             "id": "18_AbandonContract",
+            "quest": "ParentQuest",
             "name": "Abandon Contract",
             "actors": [
                 -2
@@ -5138,6 +5159,7 @@
         },
         {
             "id": "19_Questions",
+            "quest": "ParentQuest",
             "name": "Questions for Aria",
             "notes": "This scene is a container for the standard questions that the player will ask Aria.",
             "actors": [
@@ -5174,6 +5196,7 @@
         },
         {
             "id": "19b_WorkQuestions",
+            "quest": "ParentQuest",
             "name": "Work Questions for Aria",
             "actors": [
                 -2
@@ -5228,6 +5251,7 @@
         },
         {
             "id": "19c_BackgroundQuestions",
+            "quest": "ParentQuest",
             "name": "Background Questions for Aria",
             "actors": [
                 -2
@@ -5279,6 +5303,7 @@
         },
         {
             "id": "19d_PersonalQuestions",
+            "quest": "ParentQuest",
             "name": "Personal Questions for Aria",
             "actors": [
                 -2
@@ -5329,6 +5354,673 @@
                         }
                     ]
                 }
+            ]
+        }
+    ],
+    "messages": [
+        {
+            "id": "ShipName00",
+            "message": "Astral Arbiter",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName01",
+            "message": "Big Bang",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName02",
+            "message": "Blackhole Buccaneer",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName03",
+            "message": "Celestial Cyclone",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName04",
+            "message": "Cosmic Cartographer",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName05",
+            "message": "Cosmic Cocktail",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName06",
+            "message": "Deep Void Drifter",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName07",
+            "message": "Entangled Odyssey",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName08",
+            "message": "Fortune's Frontier",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName09",
+            "message": "Galactic Gambler",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName10",
+            "message": "Galaxy's Grit",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName11",
+            "message": "Gravity's Gambit",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName12",
+            "message": "Haul and Drift",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName13",
+            "message": "Hubble's Heirloom",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName14",
+            "message": "Jupiter's Jewel",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName15",
+            "message": "Luminous Lark",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName16",
+            "message": "Merchant's Mirage",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName17",
+            "message": "Meteor Maverick",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName18",
+            "message": "Milky Whey",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName19",
+            "message": "Nebula Navigator",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName20",
+            "message": "Nomad's Haven",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName21",
+            "message": "Orion's Odyssey",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName22",
+            "message": "Pioneering Spirit",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName23",
+            "message": "Profit Pioneer",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName24",
+            "message": "Pulsar's Pursuit",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName25",
+            "message": "Quantum Quest",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName26",
+            "message": "Redshift Runner",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName27",
+            "message": "Relativity's Riddle",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName28",
+            "message": "Rogue Relic",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName29",
+            "message": "Rust and Stardust",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName30",
+            "message": "Solar Flare",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName31",
+            "message": "Solar Silhouette",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName32",
+            "message": "Solstice Sentinel",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName33",
+            "message": "Spacetime Shimmy",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName34",
+            "message": "Spectrum Seeker",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName35",
+            "message": "Star Steed",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName36",
+            "message": "Stardancer",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName37",
+            "message": "Starry McStarface",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName38",
+            "message": "Starry Night Sloop",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName39",
+            "message": "Starshade",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName40",
+            "message": "Supernova Sentinel",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName41",
+            "message": "Tranquil Tempest",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName42",
+            "message": "Venture's Veil",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName43",
+            "message": "Void Voyager",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "ShipName44",
+            "message": "Wanderlust",
+            "form_lists": [
+                "AstroneerShipNames"
+            ]
+        },
+        {
+            "id": "MissionTextFighter00",
+            "message": "Pilot with nerves of steel needed: Our fighter’s quick, but we need it to make hyperspace look slow. If you speak 'adrenaline', let's talk upgrades.",
+            "form_lists": [
+                "MissionTextsFighter"
+            ]
+        },
+        {
+            "id": "MissionTextFighter01",
+            "message": "Wanted: A maestro of mayhem to fine-tune a craft that's more than just a fighter—it's a silent whisper before the storm. Make it sing the sweet song of victory.",
+            "form_lists": [
+                "MissionTextsFighter"
+            ]
+        },
+        {
+            "id": "MissionTextFighter02",
+            "message": "Seeking a pilot who doesn’t just chase the horizon but races it—and wins. Give our latest fighter the edge to cut through competition like a hot knife through star butter.",
+            "form_lists": [
+                "MissionTextsFighter"
+            ]
+        },
+        {
+            "id": "MissionTextFighter03",
+            "message": "Got a penchant for speed and a disdain for second place? Our fighter needs a captain who can teach it the fine art of leaving others in the cosmic dust.",
+            "form_lists": [
+                "MissionTextsFighter"
+            ]
+        },
+        {
+            "id": "MissionTextFighter04",
+            "message": "Calling all daredevils: You don't need to outrun a black hole—just the competition. Elevate our fighter and become the next legend of the spaceways.",
+            "form_lists": [
+                "MissionTextsFighter"
+            ]
+        },
+        {
+            "id": "MissionTextFighter05",
+            "message": "Expert pilot wanted to revamp a stellar striker. Make it fast enough to outrun its own laser fire, and sleek enough to make a star go supernova with envy.",
+            "form_lists": [
+                "MissionTextsFighter"
+            ]
+        },
+        {
+            "id": "MissionTextFighter06",
+            "message": "Do you dream of dogfights and dance through asteroid fields? We have a fighter that needs your rhythm. Bring the thunder and let's show the galaxy what lightning looks like.",
+            "form_lists": [
+                "MissionTextsFighter"
+            ]
+        },
+        {
+            "id": "MissionTextFighter07",
+            "message": "Attention hotshots: Can you make a fighter move like a streak of light? We're looking for a pilot with the touch of Midas and the reflexes of Mercury.",
+            "form_lists": [
+                "MissionTextsFighter"
+            ]
+        },
+        {
+            "id": "MissionTextFighter08",
+            "message": "If you can make a fighter zip and zoom like a comet with an attitude, we want you. Give this bird the wings it deserves, and let's make space a little more thrilling.",
+            "form_lists": [
+                "MissionTextsFighter"
+            ]
+        },
+        {
+            "id": "MissionTextFighter09",
+            "message": "Seeking a pilot with a soft spot for hard fights. Our fighter’s decent, but we want it stellar. Bonus points if you can make it as intimidating as a supernova—but much, much closer.",
+            "form_lists": [
+                "MissionTextsFighter"
+            ]
+        },
+        {
+            "id": "MissionTextExplorer00",
+            "message": "Design Brief: Our explorer has the bones of a library but the soul of a starship. Can you merge these worlds? Seeking a visionary to craft the ultimate vessel of discovery.",
+            "form_lists": [
+                "MissionTextsExplorer"
+            ]
+        },
+        {
+            "id": "MissionTextExplorer01",
+            "message": "Wanted: A designer to transform a sturdy research vessel into a home away from home for our galaxy-trotting scholars. Comfort meets utility is the goal!",
+            "form_lists": [
+                "MissionTextsExplorer"
+            ]
+        },
+        {
+            "id": "MissionTextExplorer02",
+            "message": "Design Challenge: Take our capable explorer and make it a beacon of innovation. We're charting new stars—let's do it in style.",
+            "form_lists": [
+                "MissionTextsExplorer"
+            ]
+        },
+        {
+            "id": "MissionTextExplorer03",
+            "message": "Seeking a creative genius who believes every research vessel should tell a story. Help us narrate a tale of adventure and discovery with your design.",
+            "form_lists": [
+                "MissionTextsExplorer"
+            ]
+        },
+        {
+            "id": "MissionTextExplorer04",
+            "message": "Our explorer is ready to map the unknown, but it's looking a bit... terrestrial. We need a designer to bring a touch of the cosmos to its corridors.",
+            "form_lists": [
+                "MissionTextsExplorer"
+            ]
+        },
+        {
+            "id": "MissionTextExplorer05",
+            "message": "Calling all designers: Our research vessel needs to be a think tank and a sanctuary. If you can balance equations and aesthetics, we need you.",
+            "form_lists": [
+                "MissionTextsExplorer"
+            ]
+        },
+        {
+            "id": "MissionTextExplorer06",
+            "message": "Wanted: Someone who can design an explorer that's as sleek as a comet and as brainy as a supercomputer. Apply within to redefine space exploration.",
+            "form_lists": [
+                "MissionTextsExplorer"
+            ]
+        },
+        {
+            "id": "MissionTextExplorer07",
+            "message": "Can you design a vessel that's part lab, part luxury, and all adventure? Help us make our research ship the envy of every academic institution in the galaxy.",
+            "form_lists": [
+                "MissionTextsExplorer"
+            ]
+        },
+        {
+            "id": "MissionTextExplorer08",
+            "message": "Designers, assemble! Our exploration vessel needs a makeover that screams 'frontier of science!' Bring your wildest ideas to the drafting table.",
+            "form_lists": [
+                "MissionTextsExplorer"
+            ]
+        },
+        {
+            "id": "MissionTextExplorer09",
+            "message": "Explorer Redesign: We're looking for a touch of elegance in the endless expanse. If you can craft a research vessel that's both a mobile observatory and a work of art, beam us up your portfolio!",
+            "form_lists": [
+                "MissionTextsExplorer"
+            ]
+        },
+        {
+            "id": "MissionTextHauler00",
+            "message": "Design Opportunity: Our freighter’s got the charm of a space rock. It needs a visionary who can make cargo transport look sexy. Come give this hauler some flair!",
+            "form_lists": [
+                "MissionTextsHauler"
+            ]
+        },
+        {
+            "id": "MissionTextHauler01",
+            "message": "Wanted: A space-age stylist for our no-frills hauler. If you can turn a bulky freighter into the belle of the trade lanes, we want you on board—metaphorically speaking.",
+            "form_lists": [
+                "MissionTextsHauler"
+            ]
+        },
+        {
+            "id": "MissionTextHauler02",
+            "message": "Creative Thinkers Alert: Our hauler’s efficiency is unmatched, but it's as drab as a derelict. Can you inject some luxury into this workhorse?",
+            "form_lists": [
+                "MissionTextsHauler"
+            ]
+        },
+        {
+            "id": "MissionTextHauler03",
+            "message": "Seeking a designer who understands that 'hauler' and 'high fashion' can go hand-in-hand. Help us make our freighter the trendsetter of interstellar trade.",
+            "form_lists": [
+                "MissionTextsHauler"
+            ]
+        },
+        {
+            "id": "MissionTextHauler04",
+            "message": "Our freighter's so plain, it's camouflaged in the void. Calling all designers to bring some pizzazz to these metal bones.",
+            "form_lists": [
+                "MissionTextsHauler"
+            ]
+        },
+        {
+            "id": "MissionTextHauler05",
+            "message": "Join us in redefining the hauler's aesthetic. We're looking for someone who can translate 'robust and reliable' into 'sleek and sophisticated.'",
+            "form_lists": [
+                "MissionTextsHauler"
+            ]
+        },
+        {
+            "id": "MissionTextHauler06",
+            "message": "Design Challenge: Can you make a freighter look fast even when it’s parked? We’ve got a ship waiting for your revolutionary vision.",
+            "form_lists": [
+                "MissionTextsHauler"
+            ]
+        },
+        {
+            "id": "MissionTextHauler07",
+            "message": "We have a freighter that dreams of being on a spaceship poster. Seeking a designer to make that dream a reality and give it a glossy finish.",
+            "form_lists": [
+                "MissionTextsHauler"
+            ]
+        },
+        {
+            "id": "MissionTextHauler08",
+            "message": "Freighter facelift needed! If you can turn a spacious cargo bay into a selling point with style, you're the designer we're looking for.",
+            "form_lists": [
+                "MissionTextsHauler"
+            ]
+        },
+        {
+            "id": "MissionTextHauler09",
+            "message": "Wanted: A design maestro who can make space haulers the new black. Help us elevate our freighter from functional to fabulous.",
+            "form_lists": [
+                "MissionTextsHauler"
+            ]
+        },
+        {
+            "id": "MissionTextInterceptor00",
+            "message": "Designers with a need for speed, listen up! Our interceptor’s swift, but it lacks sass. Can you infuse some shock and awe into this bird?",
+            "form_lists": [
+                "MissionTextsInterceptor"
+            ]
+        },
+        {
+            "id": "MissionTextInterceptor01",
+            "message": "Wanted: A design whiz who can make our high-speed interceptor the sleekest shadow in the cosmos. Stealth and style should be in your DNA.",
+            "form_lists": [
+                "MissionTextsInterceptor"
+            ]
+        },
+        {
+            "id": "MissionTextInterceptor02",
+            "message": "Calling all adrenaline junkies with a design degree! Our interceptor needs to look as fast as it flies—without getting a speeding ticket from the space patrol.",
+            "form_lists": [
+                "MissionTextsInterceptor"
+            ]
+        },
+        {
+            "id": "MissionTextInterceptor03",
+            "message": "Got a flair for the dramatic and a penchant for pace? Give our interceptor a makeover that’ll make it the envy of every hotshot pilot.",
+            "form_lists": [
+                "MissionTextsInterceptor"
+            ]
+        },
+        {
+            "id": "MissionTextInterceptor04",
+            "message": "Speed is nothing without style. Can you give our high-speed craft an aesthetic that’s off the velocity charts? Make haste and show us your best!",
+            "form_lists": [
+                "MissionTextsInterceptor"
+            ]
+        },
+        {
+            "id": "MissionTextInterceptor05",
+            "message": "Interceptor Design Challenge: It should whisper danger and scream velocity all at once. If you’re up for it, let's see if you can make speed look good.",
+            "form_lists": [
+                "MissionTextsInterceptor"
+            ]
+        },
+        {
+            "id": "MissionTextInterceptor06",
+            "message": "We need someone who can design not just a ship, but a statement. Our interceptor should arrive on the scene before the news of its departure does.",
+            "form_lists": [
+                "MissionTextsInterceptor"
+            ]
+        },
+        {
+            "id": "MissionTextInterceptor07",
+            "message": "This interceptor doesn't just cut through space; it should cut a striking figure while doing it. We're seeking a designer with a swift pencil and an even swifter mind.",
+            "form_lists": [
+                "MissionTextsInterceptor"
+            ]
+        },
+        {
+            "id": "MissionTextInterceptor08",
+            "message": "Our high-speed interceptor is all business. Your mission, should you choose to accept it: bring the party to the design without slowing it down.",
+            "form_lists": [
+                "MissionTextsInterceptor"
+            ]
+        },
+        {
+            "id": "MissionTextInterceptor09",
+            "message": "Can you design at Mach speed? We've got an interceptor that's more than a blur on the radar—it should be a vision of the future. Apply within, and fast!",
+            "form_lists": [
+                "MissionTextsInterceptor"
+            ]
+        },
+        {
+            "id": "MissionTextLuxury00",
+            "message": "Design Call: Our luxury vessel is searching for a designer who can match its high standards. Must be fluent in opulence and extravagance.",
+            "form_lists": [
+                "MissionTextsLuxury"
+            ]
+        },
+        {
+            "id": "MissionTextLuxury01",
+            "message": "Wanted: A visionary capable of turning a luxury cruiser into the envy of every high-class traveler. If you can make space feel like a five-star hotel, we want you.",
+            "form_lists": [
+                "MissionTextsLuxury"
+            ]
+        },
+        {
+            "id": "MissionTextLuxury02",
+            "message": "If your designs are at the intersection of chic and space-time continuum, our luxury ship needs you. Help us make extravagance go faster than light.",
+            "form_lists": [
+                "MissionTextsLuxury"
+            ]
+        },
+        {
+            "id": "MissionTextLuxury03",
+            "message": "Seeking a designer with a PhD in posh. Give our luxury craft interiors that'll make celestial beings wish they were mortals.",
+            "form_lists": [
+                "MissionTextsLuxury"
+            ]
+        },
+        {
+            "id": "MissionTextLuxury04",
+            "message": "Our luxury vessel needs a makeover that screams 'elite' and whispers 'affluence'. If you dream in velvet and dine with diamonds, draft us a starship.",
+            "form_lists": [
+                "MissionTextsLuxury"
+            ]
+        },
+        {
+            "id": "MissionTextLuxury05",
+            "message": "Designer's Dream: A luxury ship that's already a palace, but needs to be a universe. If you can spell 'decadence', let's talk.",
+            "form_lists": [
+                "MissionTextsLuxury"
+            ]
+        },
+        {
+            "id": "MissionTextLuxury06",
+            "message": "Can you design a ship that would make a supernova look dim? We're aiming for opulent, not just shiny. Make our luxury liner a work of art.",
+            "form_lists": [
+                "MissionTextsLuxury"
+            ]
+        },
+        {
+            "id": "MissionTextLuxury07",
+            "message": "This luxury liner isn't just a vessel; it's a voyage into splendor. We need a designer who can craft an experience, not just a space.",
+            "form_lists": [
+                "MissionTextsLuxury"
+            ]
+        },
+        {
+            "id": "MissionTextLuxury08",
+            "message": "We have a luxury ship that's already a star. Can you make it a superstar? Bring your most indulgent ideas to the fore.",
+            "form_lists": [
+                "MissionTextsLuxury"
+            ]
+        },
+        {
+            "id": "MissionTextLuxury09",
+            "message": "Attention designers: Our luxury vessel should make passengers feel like they're not just traveling through space, but owning it. Can you rise to the occasion?",
+            "form_lists": [
+                "MissionTextsLuxury"
             ]
         }
     ]

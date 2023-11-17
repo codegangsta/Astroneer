@@ -2,6 +2,7 @@ package scenes
 
 scene_14_legacy: {
 	id:     "14_Legacy"
+	quest:  "ParentQuest"
 	name:   "Legacy and Impact"
 	actors: #consts.Actors
 	flags:  #consts.SceneFlags

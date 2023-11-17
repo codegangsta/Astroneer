@@ -2,6 +2,7 @@ package scenes
 
 scene_19_questions: {
 	id:     "19_Questions"
+	quest:  "ParentQuest"
 	name:   "Questions for Aria"
 	notes:  "This scene is a container for the standard questions that the player will ask Aria."
 	actors: #consts.Actors

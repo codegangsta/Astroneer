@@ -2,6 +2,7 @@ package scenes
 
 scene_19c_background_questions: {
 	id:     "19c_BackgroundQuestions"
+	quest:  "ParentQuest"
 	name:   "Background Questions for Aria"
 	actors: #consts.Actors
 	flags:  #consts.SceneFlags

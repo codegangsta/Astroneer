@@ -2,6 +2,7 @@ package scenes
 
 scene_09_work_satisfaction: {
 	id:     "09_WorkSatisfaction"
+	quest:  "ParentQuest"
 	name:   "Work Satisfaction"
 	notes:  "Aria talks about her work at Atlas and how she feels about it."
 	actors: #consts.Actors

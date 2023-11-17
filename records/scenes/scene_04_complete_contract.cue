@@ -2,6 +2,7 @@ package scenes
 
 scene_04_complete_contract: {
 	id:     "04_CompleteContract"
+	quest:  "ParentQuest"
 	name:   "Player Completes Contract"
 	notes:  "The player has finished building the ship according to the contract specs, and is ready to turn it in to Aria."
 	actors: #consts.Actors

@@ -2,6 +2,7 @@ package scenes
 
 scene_06_player_background: {
 	id:     "06_PlayerBackground"
+	quest:  "ParentQuest"
 	name:   "Player's Background"
 	actors: #consts.Actors
 	flags:  #consts.SceneFlags

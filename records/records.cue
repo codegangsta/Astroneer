@@ -2,6 +2,8 @@ package records
 
 import (
 	s "github.com/codegangsta/astroneer/records/scenes"
+	m "github.com/codegangsta/astroneer/records/messages"
+	"list"
 )
 
 scenes: [
@@ -31,3 +33,8 @@ scenes: [
 	s.scene_19c_background_questions,
 	s.scene_19d_personal_questions,
 ]
+
+messages: list.Concat([
+		m.ship_names,
+		m.mission_texts,
+])

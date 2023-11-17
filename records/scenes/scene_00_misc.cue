@@ -2,6 +2,7 @@ package scenes
 
 scene_00_misc: {
 	id:     "00_Misc"
+	quest:  "ParentQuest"
 	name:   "Miscellaneous"
 	notes:  "Miscellaneous topics to be used as filler or transitions between scenes."
 	actors: #consts.Actors

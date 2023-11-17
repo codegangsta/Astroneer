@@ -2,6 +2,7 @@ package scenes
 
 scene_12b_bad_news: {
 	id:     "12b_BadNews"
+	quest:  "ParentQuest"
 	name:   "Bad News followup scene"
 	actors: #consts.Actors
 	flags:  #consts.SceneFlags

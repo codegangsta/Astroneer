@@ -85,6 +85,8 @@ package records
 #Scene: {
 	// Editor ID of the scene to generate
 	id: string
+	// Editor ID of the quest to generate the scene on
+	quest: string
 	// Name of the scene, used for internal reference
 	name: string
 	// Flags to set on the scene
@@ -101,4 +103,11 @@ package records
 	topics?: [...#Topic]
 }
 
+#Message: {
+	id:      string
+	message: string
+	form_lists?: [...string]
+}
+
 scenes: [ ...#Scene]
+messages: [ ...#Message]

@@ -2,6 +2,7 @@ package scenes
 
 scene_12_bad_news: {
 	id:     "12_BadNews"
+	quest:  "ParentQuest"
 	name:   "Bad News from Home"
 	notes:  "Aria is subdued, and the player can sense something is wrong. Aria reveals that her sister is ill, and she's feeling the distance from home. The player can offer support and encouragement."
 	actors: #consts.Actors

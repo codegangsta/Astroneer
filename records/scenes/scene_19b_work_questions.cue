@@ -2,6 +2,7 @@ package scenes
 
 scene_19b_work_questions: {
 	id:     "19b_WorkQuestions"
+	quest:  "ParentQuest"
 	name:   "Work Questions for Aria"
 	actors: #consts.Actors
 	flags:  #consts.SceneFlags

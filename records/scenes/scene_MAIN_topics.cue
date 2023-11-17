@@ -2,6 +2,7 @@ package scenes
 
 scene_MAIN_topics: {
 	id:     "MAIN_topics"
+	quest:  "ParentQuest"
 	name:   "Main Topics"
 	notes:  "This is the main topics scene"
 	actors: #consts.Actors

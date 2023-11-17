@@ -2,6 +2,7 @@ package scenes
 
 scene_01_intro: {
 	id:     "01_Intro"
+	quest:  "ParentQuest"
 	name:   "Aria is Introduced to the Player"
 	actors: #consts.Actors
 	flags:  #consts.SceneFlags

@@ -2,6 +2,7 @@ package scenes
 
 scene_13_hidden_passions: {
 	id:     "13_HiddenPassions"
+	quest:  "ParentQuest"
 	name:   "Hidden Passions - Humble Revelations"
 	notes:  "Aria reveals her hobbies and the joy of learning for its own sake."
 	actors: #consts.Actors

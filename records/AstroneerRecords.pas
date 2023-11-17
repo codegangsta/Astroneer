@@ -52,6 +52,23 @@ begin
 	Result := rec;
 end;
 
+function GetGroup(signature: string): IInterface;
+var
+	i: Integer;
+	fileI: IInterface;
+begin
+	Result := nil;
+	for i := 0 to Pred(FileCount) do // Iterate through all files
+	begin
+		fileI := FileByIndex(i);
+		if GetFileName(fileI) = 'Astroneer.esm' then
+			Result := GroupBySignature(fileI, signature);
+		if Assigned(Result) then
+			Break; // Record found
+	end;
+end;
+
+
 function FindRecordByEditorID(const editorID, recordSignature: String): IInterface;
 var
 	i: Integer;
@@ -59,12 +76,12 @@ var
 begin
 	Result := nil;
 	for i := 0 to Pred(FileCount) do // Iterate through all files
-begin
-	fileI := FileByIndex(i);
-	Result := MainRecordByEditorID(GroupBySignature(fileI, recordSignature), editorID);
-	if Assigned(Result) then
-		Break; // Record found
-end;
+	begin
+		fileI := FileByIndex(i);
+		Result := MainRecordByEditorID(GroupBySignature(fileI, recordSignature), editorID);
+		if Assigned(Result) then
+			Break; // Record found
+	end;
 end;
 
 function AddInfoScript(infoRecord: IInterface; scriptName: string; onBegin: string; onEnd: string): IInterface;
@@ -118,10 +135,82 @@ function Initialize: Integer;
 begin
 	AddMessage('Loading json...');
 	LoadJSON;
+	HandleMessages;
+	HandleScenes;
 end;
 
 function Process(e: IInterface): Integer;
+begin
+end;
+
+procedure HandleMessages;
 var
+	messages: TJsonArray;
+	message: TJsonObject;
+	messageGroup: IInterface;
+	messageRecord: IInterface;
+	formLists: TJsonArray;
+	formListRecord: IInterface;
+	formListElement: IInterface;
+	formListEntry: IInterface;
+	found: IInterface;
+	formListGroup: IInterface;
+	i: Integer;
+	j: Integer;
+	k: Integer;
+begin
+	AddMessage('Processing messages...');
+	messages := RecordsFile.A['messages'];
+	messageGroup := GetGroup('MESG');
+	formListGroup := GetGroup('FLST');
+	for i := 0 to messages.Count -1 do begin
+		message := messages.O[i];
+		messageRecord := FindRecordByEditorID(message.S['id'], 'MESG');
+		if not Assigned(messageRecord) then begin
+			AddMessage('Creating MESG record: ' + message.S['id']);
+			messageRecord := Add(messageGroup, 'MESG', True);
+			SetElementEditValues(messageRecord, 'EDID', message.S['id']);
+		end;
+
+		SetElementEditValues(messageRecord, 'FULL', message.S['message']);
+
+		// Add form lists
+		formLists := message.A['form_lists'];
+		for j := 0 to formLists.Count -1 do begin
+			formListRecord := FindRecordByEditorID(formLists.S[j], 'FLST');
+			if not Assigned(formListRecord) then begin
+				AddMessage('Adding form list' + formLists.S[j]);
+				formListRecord := Add(formListGroup, 'FLST', True);
+				SetElementEditValues(formListRecord, 'EDID', formLists.S[j]);
+			end;
+
+			formListElement := ElementByPath(formListRecord, 'FormIDs');
+			if not Assigned(formListElement) then begin
+				AddMessage('Adding form list element');
+				formListElement := Add(formListRecord, 'FormIDs', True);
+			end;
+
+			for k := 0 to ElementCount(formListElement) -1 do begin
+				formListEntry := ElementByIndex(formListElement, k);
+				if GetEditValue(formListEntry) = GetEditValue(messageRecord) then begin
+					found := formListEntry;
+					Break;
+				end;
+			end;
+
+			if not Assigned(found) then begin
+				AddMessage('Adding form list entry');
+				formListEntry := Add(formListElement, 'LNAM - FormID', True);
+				SetEditValue(formListEntry, GetEditValue(messageRecord));
+			end;
+
+		end;
+	end;
+end;
+
+procedure HandleScenes;
+var
+	quest: IInterface;
 	scenes: TJsonArray;
 	scene: TJsonObject;
 	sceneRecord: IInterface;
@@ -162,19 +251,20 @@ var
 	j: Integer;
 	k: Integer;
 begin
-	if Signature(e) <> 'QUST' then
-		Exit;
-
-	file := GetFile(e);
-
+	AddMessage('Processing scenes...');
 	scenes := RecordsFile.A['scenes'];
 	// loop over scenes
 	for si := 0 to scenes.Count -1 do begin
 		scene := scenes.O[si];
-		sceneRecord := FindOrCreateChildRecord(e, 'SCEN', scene.S['id']);
+		quest := FindRecordByEditorID(scene.S['quest'], 'QUST');
+		if not Assigned(quest) then begin
+			AddMessage('Could not find quest: ' + scene.S['quest']);
+			Continue;
+		end;
+		sceneRecord := FindOrCreateChildRecord(quest, 'SCEN', scene.S['id']);
 		SetElementEditValues(sceneRecord, 'FULL', scene.S['name']);
 		SetElementEditValues(sceneRecord, 'NNAM', scene.S['notes']);
-		SetElementEditValues(sceneRecord, 'PNAM', GetEditValue(e));
+		SetElementEditValues(sceneRecord, 'PNAM', GetEditValue(quest));
 		if scene.S['flags'] <> '' then
 			SetElementEditValues(sceneRecord, 'FNAM', scene.S['flags']);
 
@@ -227,15 +317,15 @@ begin
 
 			// Dialogue
 			if action.I['type'] = 0 then begin
-				topicRecord := FindChildRecord(e, 'DIAL', action.S['topic']);
-				typeSpecificActionRecord := FindChildRecord(e, 'SCEN', 'RefScene');
+				topicRecord := FindChildRecord(quest, 'DIAL', action.S['topic']);
+				typeSpecificActionRecord := FindChildRecord(quest, 'SCEN', 'RefScene');
 				typeSpecificActionRecord := ElementByPath(typeSpecificActionRecord, 'Actions\[0]\Dialogue');
 				typeSpecificActionRecord := ElementAssign(actionRecord, 8, typeSpecificActionRecord, False);
 				SetElementEditValues(typeSpecificActionRecord, 'DATA', GetEditValue(topicRecord));
 			end;
 			// Player dialogue
 			if action.I['type'] = 3 then begin
-				typeSpecificActionRecord := FindChildRecord(e, 'SCEN', 'RefScene');
+				typeSpecificActionRecord := FindChildRecord(quest, 'SCEN', 'RefScene');
 				typeSpecificActionRecord := ElementByPath(typeSpecificActionRecord, 'Actions\[1]\Player Dialogue');
 				typeSpecificActionRecord := ElementAssign(actionRecord, 8, typeSpecificActionRecord, False);
 				dialogueListRecord := ElementByPath(typeSpecificActionRecord, 'Dialogue List');
@@ -243,10 +333,10 @@ begin
 
 				for j := 0 to playerDialogueChoices.Count - 1 do begin
 					dialogueListItemRecord := Add(dialogueListRecord, 'Item', True);
-					topicRecord := FindChildRecord(e, 'DIAL', playerDialogueChoices.O[j].S['topic']);
+					topicRecord := FindChildRecord(quest, 'DIAL', playerDialogueChoices.O[j].S['topic']);
 					SetElementEditValues(dialogueListItemRecord, 'ESCE', GetEditValue(topicRecord));
 					if playerDialogueChoices.O[j].S['response'] <> '' then begin
-						topicRecord := FindChildRecord(e, 'DIAL', playerDialogueChoices.O[j].S['response']);
+						topicRecord := FindChildRecord(quest, 'DIAL', playerDialogueChoices.O[j].S['response']);
 						SetElementEditValues(dialogueListItemRecord, 'ESCS', GetEditValue(topicRecord));
 					end;
 				end;
@@ -258,8 +348,8 @@ begin
 		topics := scene.A['topics'];
 		for i := 0 to topics.Count - 1 do begin
 			topic := topics.O[i];
-			topicRecord := FindOrCreateChildRecord(e, 'DIAL', topic.S['id']);
-			SetElementEditValues(topicRecord, 'QNAM', GetEditValue(e));
+			topicRecord := FindOrCreateChildRecord(quest, 'DIAL', topic.S['id']);
+			SetElementEditValues(topicRecord, 'QNAM', GetEditValue(quest));
 			SetElementEditValues(topicRecord, 'FULL', topic.S['notes']);
 			topicDataRecord := ElementBySignature(topicRecord, 'DATA');
 
@@ -290,7 +380,7 @@ begin
 
 				// Set Start Scene
 				if topic.S['startScene'] <> '' then begin
-					startSceneRecord := FindChildRecord(e, 'SCEN', topic.S['startScene']);
+					startSceneRecord := FindChildRecord(quest, 'SCEN', topic.S['startScene']);
 					if not Assigned(startSceneRecord) then begin
 						AddMessage('Could not find scene: ' + topic.S['startScene']);
 					end
