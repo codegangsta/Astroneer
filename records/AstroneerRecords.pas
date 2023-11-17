@@ -192,7 +192,7 @@ begin
 
 			for k := 0 to ElementCount(formListElement) -1 do begin
 				formListEntry := ElementByIndex(formListElement, k);
-				if GetEditValue(formListEntry) = GetEditValue(messageRecord) then begin
+				if GetNativeValue(formListEntry) = GetNativeValue(messageRecord) then begin
 					found := formListEntry;
 					Break;
 				end;
