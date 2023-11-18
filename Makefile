@@ -57,7 +57,8 @@ load_save::
 stop_game:
 	sfc "QuitGame"
 
-add_starship_design_perk:
+debug_research:
+	sfc "player.additem 0200118c 100"
 	sfc "player.addperk 002c59dc"
 
 ## SSH into windows
