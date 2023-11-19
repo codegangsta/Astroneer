@@ -58,8 +58,22 @@ stop_game:
 	sfc "QuitGame"
 
 debug_research:
+	sfc "player.additem 0200119a 100"
 	sfc "player.additem 0200118c 100"
+	sfc "player.additem 02001199 100"
+	sfc "player.additem 0200119b 100"
+	sfc "player.additem 0200119c 100"
 	sfc "player.addperk 002c59dc"
+	sfc "player.addperk 002c59dc"
+	sfc "player.addperk 002c59dc"
+	sfc "player.addperk 002c59dc"
+
+debug_perks:
+	sfc "player.addperk 020011ac"
+	sfc "player.addperk 020011ad"
+	sfc "player.addperk 020011ae"
+	sfc "player.addperk 020011af"
+	sfc "player.addperk 020011b0"
 
 ## SSH into windows
 ssh::
