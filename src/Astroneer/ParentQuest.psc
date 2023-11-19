@@ -357,7 +357,7 @@ Astroneer:Pack:Mission Function GenerateMission()
     mission.ShipTemplate = consts.ShipTemplateDefault
   endif
   if mission.Difficulty == None
-    mission.Difficulty = consts.DifficultyTier1
+    mission.Difficulty = consts.DifficultyClassA
   endif
   
   return mission

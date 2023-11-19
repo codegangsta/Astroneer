@@ -9,7 +9,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m1.ID = "MP01_Fighter01"
   m1.ShipTemplate = p.ShipTemplateFighter
   m1.ShipType = p.ShipTypeFighter
-  m1.Difficulty = p.DifficultyTier1
+  m1.Difficulty = p.DifficultyClassA
   m1.RewardCredits = 100000
   m1.Objective01 = p.ObjectiveMass
   m1.ObjectiveTarget01 = 2000
@@ -27,7 +27,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m2.ID = "MP01_Hauler01"
   m2.ShipTemplate = p.ShipTemplateHauler
   m2.ShipType = p.ShipTypeHauler
-  m2.Difficulty = p.DifficultyTier1
+  m2.Difficulty = p.DifficultyClassA
   m2.RewardCredits = 100000
   m2.Objective01 = p.ObjectiveCargo
   m2.ObjectiveTarget01 = 2000
@@ -43,7 +43,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m3.ID = "MP01_Luxury01"
   m3.ShipTemplate = p.ShipTemplateLuxury
   m3.ShipType = p.ShipTypeLuxury
-  m3.Difficulty = p.DifficultyTier1
+  m3.Difficulty = p.DifficultyClassA
   m3.RewardCredits = 100000
   m3.Objective01 = p.ObjectiveHabs
   m3.ObjectiveTarget01 = 4
@@ -59,7 +59,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m4.ID = "MP01_Explorer01"
   m4.ShipTemplate = p.ShipTemplateExplorer
   m4.ShipType = p.ShipTypeExplorer
-  m4.Difficulty = p.DifficultyTier1
+  m4.Difficulty = p.DifficultyClassA
   m4.RewardCredits = 100000
   m4.Objective01 = p.ObjectiveMass
   m4.ObjectiveTarget01 = 2000
@@ -77,7 +77,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m5.ID = "MP01_Interceptor01"
   m5.ShipTemplate = p.ShipTemplateInterceptor
   m5.ShipType = p.ShipTypeInterceptor
-  m5.Difficulty = p.DifficultyTier1
+  m5.Difficulty = p.DifficultyClassA
   m5.RewardCredits = 100000
   m5.Objective01 = p.ObjectiveMass
   m5.ObjectiveTarget01 = 1200

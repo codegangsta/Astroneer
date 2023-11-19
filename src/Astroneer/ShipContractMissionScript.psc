@@ -17,12 +17,28 @@ Group ObjectiveGlobals
 EndGroup
 
 Group ObjectiveIndexes
+  Int Property ShipObjective_ReactorClass = 10 Auto Const
   Int Property ShipObjective_01 = 11 Auto Const
   Int Property ShipObjective_02 = 12 Auto Const
   Int Property ShipObjective_03 = 13 Auto Const
   Int Property ShipObjective_04 = 14 Auto Const
   Int Property ShipObjective_05 = 15 Auto Const
   Int Property CompleteObjective = 100 Auto Const
+EndGroup
+
+Group Salvage
+  Form Property SalvageFighter Auto Const Mandatory
+  Form Property SalvageExplorer Auto Const Mandatory
+  Form Property SalvageHauler Auto Const Mandatory
+  Form Property SalvageInterceptor Auto Const Mandatory
+  Form Property SalvageLuxury Auto Const Mandatory
+EndGroup
+
+Group ShipModuleClass
+  Keyword Property ShipModuleClassA Auto Const Mandatory
+  Keyword Property ShipModuleClassB Auto Const Mandatory
+  Keyword Property ShipModuleClassC Auto Const Mandatory
+  Keyword Property ShipModuleClassM Auto Const Mandatory
 EndGroup
 
 Astroneer:ParentQuest Property AstroneerParent Auto Const Mandatory
@@ -112,6 +128,8 @@ Function StageDesign()
   Trace("StageDesign")
   Self.SetObjectiveCompleted(0, True)
 
+  Self.SetObjectiveDisplayed(ShipObjective_ReactorClass, True, False)
+
   if Mission.Objective01 != None
     Self.SetObjectiveDisplayed(ShipObjective_01, True, False)
   endif
@@ -192,6 +210,11 @@ EndEvent
 
 Bool Function AllShipObjectivesComplete()
   Trace("ShipObjectivesComplete")
+
+  if(!IsObjectiveCompleted(ShipObjective_ReactorClass))
+    return False
+  endif
+
   if(Mission.Objective01 != None && !IsObjectiveCompleted(ShipObjective_01))
     return False
   endif
@@ -236,11 +259,30 @@ Function UpdateObjectiveValues()
   AstroneerParent.SetAllPartPowers(ContractShip, 0)
   AstroneerParent.SetAllPartPowers(ContractShip, 1)
 
+  if ContractShip.GetReactorClassKeyword() == GetObjectiveReactorClass()
+    SetObjectiveCompleted(ShipObjective_ReactorClass, True)
+  else
+    SetObjectiveCompleted(ShipObjective_ReactorClass, False)
+  endif
+
   UpdateObjectiveValue(ObjectiveValue_01, Mission.Objective01, ShipObjective_01, Mission.ObjectiveTarget01)
   UpdateObjectiveValue(ObjectiveValue_02, Mission.Objective02, ShipObjective_02, Mission.ObjectiveTarget02)
   UpdateObjectiveValue(ObjectiveValue_03, Mission.Objective03, ShipObjective_03, Mission.ObjectiveTarget03)
   UpdateObjectiveValue(ObjectiveValue_04, Mission.Objective04, ShipObjective_04, Mission.ObjectiveTarget04)
   UpdateObjectiveValue(ObjectiveValue_05, Mission.Objective05, ShipObjective_05, Mission.ObjectiveTarget05)
+EndFunction
+
+Keyword Function GetObjectiveReactorClass()
+  Astroneer:Pack consts = (AstroneerParent as ScriptObject) as Astroneer:Pack
+  if Mission.Difficulty == consts.DifficultyClassA
+    return ShipModuleClassA
+  elseif Mission.Difficulty == consts.DifficultyClassB
+    return ShipModuleClassB
+  elseif Mission.Difficulty == consts.DifficultyClassC
+    return ShipModuleClassC
+  elseif Mission.Difficulty == consts.DifficultyClassM
+    return ShipModuleClassM
+  endif
 EndFunction
 
 Function UpdateObjectiveValue(GlobalVariable value, Message objectiveType, Int objective, Float target)

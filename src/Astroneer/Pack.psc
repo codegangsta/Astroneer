@@ -43,10 +43,10 @@ Mission Function Copy(Mission m) global
 EndFunction
 
 Group DifficultyTiers
-  Message Property DifficultyTier1 Auto Const Mandatory ; Novice
-  Message Property DifficultyTier2 Auto Const Mandatory ; Advanced
-  Message Property DifficultyTier3 Auto Const Mandatory ; Expert
-  Message Property DifficultyTier4 Auto Const Mandatory ; Master
+  Message Property DifficultyClassA Auto Const Mandatory ; Class A
+  Message Property DifficultyClassB Auto Const Mandatory ; Class B
+  Message Property DifficultyClassC Auto Const Mandatory ; Class C
+  Message Property DifficultyClassM Auto Const Mandatory ; Class M
 EndGroup
 
 Group MissionTexts
