@@ -1,0 +1,60 @@
+ScriptName Astroneer:ResearchProjects extends Quest
+
+Group ResearchProjects
+  researchproject Property StarshipResearchCargo1 Auto Const Mandatory
+  researchproject Property StarshipResearchCargo2 Auto Const Mandatory
+  researchproject Property StarshipResearchCargo3 Auto Const Mandatory
+  researchproject Property StarshipResearchCargo4 Auto Const Mandatory
+
+  researchproject Property StarshipResearchGrav1 Auto Const Mandatory
+  researchproject Property StarshipResearchGrav2 Auto Const Mandatory
+  researchproject Property StarshipResearchGrav3 Auto Const Mandatory
+  researchproject Property StarshipResearchGrav4 Auto Const Mandatory
+
+  researchproject Property StarshipResearchRepair1 Auto Const Mandatory
+  researchproject Property StarshipResearchRepair2 Auto Const Mandatory
+  researchproject Property StarshipResearchRepair3 Auto Const Mandatory
+  researchproject Property StarshipResearchRepair4 Auto Const Mandatory
+
+  researchproject Property StarshipResearchThrusters1 Auto Const Mandatory
+  researchproject Property StarshipResearchThrusters2 Auto Const Mandatory
+  researchproject Property StarshipResearchThrusters3 Auto Const Mandatory
+  researchproject Property StarshipResearchThrusters4 Auto Const Mandatory
+
+  researchproject Property StarshipResearchWeapons1 Auto Const Mandatory
+  researchproject Property StarshipResearchWeapons2 Auto Const Mandatory
+  researchproject Property StarshipResearchWeapons3 Auto Const Mandatory
+  researchproject Property StarshipResearchWeapons4 Auto Const Mandatory
+EndGroup
+
+Group Perks
+  Perk Property ResearchCargoBuff Auto Const Mandatory
+  Perk Property ResearchGravBuff Auto Const Mandatory
+  Perk Property ResearchRepairBuff Auto Const Mandatory
+  Perk Property ResearchThrustersBuff Auto Const Mandatory
+  Perk Property ResearchWeaponsBuff Auto Const Mandatory
+EndGroup
+
+Function RegisterEvents()
+  Self.UnregisterForAllRemoteEvents()
+  Self.RegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerCompleteResearch")
+EndFunction
+
+Event Actor.OnPlayerCompleteResearch(Actor akActor, ObjectReference akBench, Location akLocation, researchproject akProject)
+  Trace("OnPlayerCompleteResearch: " + akProject)
+  if akProject == StarshipResearchCargo1 || akProject == StarshipResearchCargo2 || akProject == StarshipResearchCargo3 || akProject == StarshipResearchCargo4
+    Game.GetPlayer().AddPerk(ResearchCargoBuff, True)
+  elseif akProject == StarshipResearchGrav1 || akProject == StarshipResearchGrav2 || akProject == StarshipResearchGrav3 || akProject == StarshipResearchGrav4
+    Game.GetPlayer().AddPerk(ResearchGravBuff, True)
+  elseif akProject == StarshipResearchRepair1 || akProject == StarshipResearchRepair2 || akProject == StarshipResearchRepair3 || akProject == StarshipResearchRepair4
+    Game.GetPlayer().AddPerk(ResearchRepairBuff, True)
+  elseif akProject == StarshipResearchThrusters1 || akProject == StarshipResearchThrusters2 || akProject == StarshipResearchThrusters3 || akProject == StarshipResearchThrusters4
+    Game.GetPlayer().AddPerk(ResearchThrustersBuff, True)
+  elseif akProject == StarshipResearchWeapons1 || akProject == StarshipResearchWeapons2 || akProject == StarshipResearchWeapons3 || akProject == StarshipResearchWeapons4
+    Game.GetPlayer().AddPerk(ResearchWeaponsBuff, True)
+  endif
+EndEvent
+
+Function Trace(string message)
+  Debug.Trace((Self as String) + " " + message, 0)
+EndFunction

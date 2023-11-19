@@ -118,6 +118,7 @@ Event Actor.OnPlayerLoadGame(Actor akActor)
   InitIntercom()
   Self.UnregisterForAllMenuOpenCloseEvents()
   Self.RegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
+  ((Self as ScriptObject) as Astroneer:ResearchProjects).RegisterEvents()
 EndEvent
 
 Function AddMissions()
@@ -369,7 +370,7 @@ ObjectReference Function GetLandingMarker()
 		Trace("GetLandingMarker Milestone A")
 		Return LandingMarkerA
 	EndIf
-	; a bit advanced
+	; a bit advanced as Actor as Actor
 	SpaceshipReference PlayerShipA = PlayerShipQuest.PlayerShip.GetShipReference()
 	ObjectReference LandingMarkerB = PlayerShipA.GetLinkedRef(PlayerShipQuest.LandingMarkerKeyword)
 	If (LandingMarkerB as Bool)
@@ -384,7 +385,7 @@ ObjectReference Function GetLandingMarker()
 		Trace("GetLandingMarker Milestone C")
 		Return LandingMarkerC
 	EndIf
-	; this should never happen
+	; this should never happen as String as String
 	Trace("GetLandingMarker Milestone D")
 	Return (Player as ObjectReference)
 EndFunction
