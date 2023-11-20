@@ -52,7 +52,7 @@ Group ShipPartsLists
 EndGroup
 
 Function RegisterEvents()
-  Self.UnregisterForAllRemoteEvents()
+  Self.UnRegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerCompleteResearch")
   Self.RegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerCompleteResearch")
 EndFunction
 

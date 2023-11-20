@@ -121,6 +121,7 @@ EndFunction
 
 Function StageAccepted()
   Trace("StageAccepted")
+  Self.SetActive(True)
   Self.SetObjectiveDisplayed(0, True, False)
 EndFunction
 

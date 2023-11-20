@@ -50,7 +50,8 @@ console::
 	@sfc
 
 load_save::
-	# sfc "LoadGame ref_save_1" # cleanish save
+	# sfc "LoadGame CleanMBSave" # cleanish save
+	#sfc "LoadGame ref_save_1" # cleanish save
 	sfc "LoadGame ref_save_2" # intercom
 	# sfc "LoadGame ref_save_3" # space
 	# sfc "LoadGame ref_save_4" # research

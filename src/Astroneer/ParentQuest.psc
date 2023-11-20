@@ -48,7 +48,7 @@ Event OnQuestInit()
   Actor PlayerREF = Game.GetPlayer()
   Trace("Registering for events...")
   Self.RegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerLoadGame")
-  Self.RegisterForRemoteEvent(PlayerREF as ObjectReference, "OnCellAttach")
+  Self.RegisterForRemoteEvent(PlayerREF as ObjectReference, "OnCellLoad")
   Self.RegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
 
   AddMissions()
@@ -61,7 +61,6 @@ Event OnMenuOpenCloseEvent(String menuName, Bool open)
   if menuName == "SpaceshipEditorMenu" && AtlasWorkshopMode && open
     Game.GetPlayer().AddPerk(AriaDiscountPerk, False)
   endif
-
 
   if menuName == "SpaceshipEditorMenu" && AtlasWorkshopMode && !open
     RefCollectionAlias ships = PlayerShipQuest.PlayerShips
@@ -81,31 +80,40 @@ Event OnMenuOpenCloseEvent(String menuName, Bool open)
   endif
 EndEvent
 
-Event ObjectReference.OnCellAttach(ObjectReference akRef)
-  Trace("OnCellAttach")
+Event ObjectReference.OnCellLoad(ObjectReference akRef)
+  Trace("OnCellLoad")
   InitIntercom()
 EndEvent
 
 Function InitIntercom()
+  Trace("InitIntercom")
   Cell spaceport = Game.GetForm(0x00014cb3) as Cell
   Activator intercomForm = Game.GetForm(0x02000843) as Activator
   ActorBase ariaForm = Game.GetForm(0x02000835) as ActorBase
 
-  if (spaceport.IsLoaded() && !AtlasIntercom.IsFilled())
-    ObjectReference intercom = Game.GetPlayer().PlaceAtMe(intercomForm, 1, True, False, False, None, None, True)
-    intercom.SetPosition(-828.62, 1603.28, -165.53)
-    intercom.SetAngle(-0.00, -0.00, -137.15)
-    Trace("Created intercom and setting ref " + intercom)
-    AtlasIntercom.ForceRefTo(intercom)
-  endif
+  if (spaceport != None)
+    if (spaceport.IsLoaded() && !AtlasIntercom.IsFilled())
+      ObjectReference intercom = Game.GetPlayer().PlaceAtMe(intercomForm, 1, True, False, False, None, None, True)
+      intercom.SetPosition(-828.62, 1603.28, -165.53)
+      intercom.SetAngle(-0.00, -0.00, -137.15)
+      Trace("Created intercom and setting ref " + intercom)
+      AtlasIntercom.ForceRefTo(intercom)
+    endif
 
-  if (spaceport.IsLoaded() && !Aria.IsFilled())
-    Actor ariaRef = AtlasIntercom.GetReference().PlaceActorAtMe(ariaForm, 1, None, True, False, False, None, True)
-    ariaRef.SetPosition(-828.62, 1603.28, -165.53)
-    ariaRef.SetAngle(-0.00, -0.00, -137.15)
-    Trace("Created aria and setting ref " + ariaRef)
-    Aria.ForceRefTo(ariaRef)
-    PlaceAria()
+    if (spaceport.IsLoaded() && Aria.GetActorReference() == None)
+      Actor ariaRef = AtlasIntercom.GetReference().PlaceActorAtMe(ariaForm, 1, None, True, False, False, None, True)
+      ariaRef.SetPosition(-828.8, 1603.2, -165.8)
+      ariaRef.SetAngle(0.00, 0.00, -137.15)
+      ariaRef.SetAlpha(0.0, False)
+      ariaRef.SetGhost(True)
+      Trace("Created aria and setting ref " + ariaRef)
+      Aria.ForceRefTo(ariaRef)
+    endif
+
+    ; Make sure aria is in the right place every time we load into the spaceport
+    if (spaceport.IsLoaded())
+      PlaceAria()
+    endif
   endif
 EndFunction
 
@@ -125,6 +133,8 @@ Event Actor.OnPlayerLoadGame(Actor akActor)
   InitIntercom()
   Self.UnregisterForAllMenuOpenCloseEvents()
   Self.RegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
+  Self.UnRegisterForRemoteEvent(Game.GetPlayer() as ObjectReference, "OnCellLoad")
+  Self.RegisterForRemoteEvent(Game.GetPlayer() as ObjectReference, "OnCellLoad")
   ((Self as ScriptObject) as Astroneer:ResearchProjects).RegisterEvents()
 EndEvent
 
