@@ -18,8 +18,10 @@ Function PrintCurrentShipObjectives() global
     playerShip = mission.ContractShip
   endif
 
+
   DebugTrace("Current Ship " + playerShip)
   DebugTrace("=Objectives==============================================")
+  DebugTrace("Reactor Class " + playerShip.GetReactorClassKeyword())
   DebugTrace("ObjectiveCargo " + pq.GetObjectiveValue(playerShip, consts.ObjectiveCargo))
   DebugTrace("ObjectiveCrewSlots " + pq.GetObjectiveValue(playerShip, consts.ObjectiveCrewSlots))
   DebugTrace("ObjectiveEnginePower " + pq.GetObjectiveValue(playerShip, consts.ObjectiveEnginePower))
@@ -65,7 +67,7 @@ Function DebugCompleteMission() global
   Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
   Astroneer:ShipContractMissionScript mission = pq.AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
 
-  mission.StageCompleted()
+  mission.SetStage(mission.TurnInStage)
 EndFunction
 
 Function DebugResetMissions() global

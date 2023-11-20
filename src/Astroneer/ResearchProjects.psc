@@ -25,6 +25,13 @@ Group ResearchProjects
   researchproject Property StarshipResearchWeapons2 Auto Const Mandatory
   researchproject Property StarshipResearchWeapons3 Auto Const Mandatory
   researchproject Property StarshipResearchWeapons4 Auto Const Mandatory
+
+  researchproject Property SupplyChainResearchDeimos Auto Const Mandatory
+  researchproject Property SupplyChainResearchHopeTech Auto Const Mandatory
+  researchproject Property SupplyChainResearchNova Auto Const Mandatory
+  researchproject Property SupplyChainResearchStroud Auto Const Mandatory
+  researchproject Property SupplyChainResearchTaiyo Auto Const Mandatory
+  researchproject Property SupplyChainResearchTrident Auto Const Mandatory
 EndGroup
 
 Group Perks
@@ -33,6 +40,15 @@ Group Perks
   Perk Property ResearchRepairBuff Auto Const Mandatory
   Perk Property ResearchThrustersBuff Auto Const Mandatory
   Perk Property ResearchWeaponsBuff Auto Const Mandatory
+EndGroup
+
+Group ShipPartsLists
+  FormList Property ShipPartsDeimos Auto Const Mandatory
+  FormList Property ShipPartsHopeTech Auto Const Mandatory
+  FormList Property ShipPartsNova Auto Const Mandatory
+  FormList Property ShipPartsStroud Auto Const Mandatory
+  FormList Property ShipPartsTaiyo Auto Const Mandatory
+  FormList Property ShipPartsTrident Auto Const Mandatory
 EndGroup
 
 Function RegisterEvents()
@@ -52,8 +68,32 @@ Event Actor.OnPlayerCompleteResearch(Actor akActor, ObjectReference akBench, Loc
     Game.GetPlayer().AddPerk(ResearchThrustersBuff, True)
   elseif akProject == StarshipResearchWeapons1 || akProject == StarshipResearchWeapons2 || akProject == StarshipResearchWeapons3 || akProject == StarshipResearchWeapons4
     Game.GetPlayer().AddPerk(ResearchWeaponsBuff, True)
+  elseif akProject == SupplyChainResearchDeimos
+    AddShipParts(ShipPartsDeimos)
+  elseif akProject == SupplyChainResearchHopeTech
+    AddShipParts(ShipPartsHopeTech)
+  elseif akProject == SupplyChainResearchNova
+    AddShipParts(ShipPartsNova)
+  elseif akProject == SupplyChainResearchStroud
+    AddShipParts(ShipPartsStroud)
+  elseif akProject == SupplyChainResearchTaiyo
+    AddShipParts(ShipPartsTaiyo)
+  elseif akProject == SupplyChainResearchTrident
+    AddShipParts(ShipPartsTrident)
   endif
+
 EndEvent
+
+Function AddShipParts(FormList shipParts)
+  Actor Aria = GetAria()
+  ForEach form part in shipParts
+    Aria.AddKeyword(part as Keyword)
+  EndForEach
+EndFunction
+
+Actor Function GetAria()
+  return (Self.GetAlias(0) as ReferenceAlias).GetActorReference()
+EndFunction
 
 Function Trace(string message)
   Debug.Trace((Self as String) + " " + message, 0)

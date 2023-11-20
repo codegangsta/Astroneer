@@ -30,6 +30,7 @@ Group QuestData
   ReferenceAlias Property AtlasIntercom Auto Const
   ReferenceAlias Property Aria Auto Const
   spaceshipreference[] Property ShipCollection Auto
+  Perk Property AriaDiscountPerk Auto Const Mandatory
 EndGroup
 
 Group DialogueData
@@ -40,7 +41,6 @@ Group DialogueData
 EndGroup
 
 Bool Property AtlasWorkshopMode = False auto
-
 Astroneer:Pack:Mission[] Missions = None
 
 Event OnQuestInit()
@@ -57,6 +57,12 @@ EndEvent
 
 Event OnMenuOpenCloseEvent(String menuName, Bool open)
   Trace("OnMenuOpenCloseEvent " + menuName + " " + open)
+
+  if menuName == "SpaceshipEditorMenu" && AtlasWorkshopMode && open
+    Game.GetPlayer().AddPerk(AriaDiscountPerk, False)
+  endif
+
+
   if menuName == "SpaceshipEditorMenu" && AtlasWorkshopMode && !open
     RefCollectionAlias ships = PlayerShipQuest.PlayerShips
     Keyword CannotBeModified = Game.GetForm(0x003413f3) as Keyword
@@ -70,6 +76,7 @@ Event OnMenuOpenCloseEvent(String menuName, Bool open)
       endif
       i += 1
     EndWhile
+    Game.GetPlayer().RemovePerk(AriaDiscountPerk)
     AtlasWorkshopMode = False
   endif
 EndEvent

@@ -51,23 +51,12 @@ console::
 
 load_save::
 	# sfc "LoadGame ref_save_1" # cleanish save
-	# sfc "LoadGame ref_save_2" # intercom
+	sfc "LoadGame ref_save_2" # intercom
 	# sfc "LoadGame ref_save_3" # space
-	sfc "LoadGame ref_save_4" # research
+	# sfc "LoadGame ref_save_4" # research
 
 stop_game:
 	sfc "QuitGame"
-
-debug_research:
-	sfc "player.additem 0200119a 100"
-	sfc "player.additem 0200118c 100"
-	sfc "player.additem 02001199 100"
-	sfc "player.additem 0200119b 100"
-	sfc "player.additem 0200119c 100"
-	sfc "player.addperk 002c59dc"
-	sfc "player.addperk 002c59dc"
-	sfc "player.addperk 002c59dc"
-	sfc "player.addperk 002c59dc"
 
 debug_perks:
 	sfc "player.addperk 020011ac"
@@ -75,6 +64,17 @@ debug_perks:
 	sfc "player.addperk 020011ae"
 	sfc "player.addperk 020011af"
 	sfc "player.addperk 020011b0"
+	sfc "player.addperk 002cfcac" # piloting
+	sfc "player.addperk 002cfcac"
+	sfc "player.addperk 002cfcac"
+	sfc "player.addperk 002cfcac"
+	sfc "player.addperk 002c59dc" # starship engineering
+	sfc "player.addperk 002c59dc"
+	sfc "player.addperk 002c59dc"
+	sfc "player.addperk 002c59dc"
+	sfc "player.addperk 002c555f" # negotiation
+	sfc "player.addperk 002c5559" # targeting control systems
+	sfc "player.additem 0200118c 10" # Salvage (fighter)
 
 ## SSH into windows
 ssh::

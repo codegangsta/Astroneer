@@ -126,39 +126,39 @@ EndFunction
 
 Function StageDesign()
   Trace("StageDesign")
-  Self.SetObjectiveCompleted(0, True)
-
-  Self.SetObjectiveDisplayed(ShipObjective_ReactorClass, True, False)
-
-  if Mission.Objective01 != None
-    Self.SetObjectiveDisplayed(ShipObjective_01, True, False)
-  endif
-  if Mission.Objective02 != None
-    Self.SetObjectiveDisplayed(ShipObjective_02, True, False)
-  endif
-  if Mission.Objective03 != None
-    Self.SetObjectiveDisplayed(ShipObjective_03, True, False)
-  endif
-  if Mission.Objective04 != None
-    Self.SetObjectiveDisplayed(ShipObjective_04, True, False)
-  endif
-  if Mission.Objective05 != None
-    Self.SetObjectiveDisplayed(ShipObjective_05, True, False)
-  endif
 
   Self.ContractShip = AstroneerParent.AddContractShip(Mission)
-
-  Actor PlayerREF = Game.GetPlayer() ; #DEBUG_LINE_NO:74
-  Self.RegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerModifiedShip")
+  Actor player = Game.GetPlayer()
+  Self.RegisterForRemoteEvent(player as ScriptObject, "OnPlayerModifiedShip")
 
   UpdateObjectiveValues()
+  Self.SetObjectiveDisplayed(ShipObjective_ReactorClass, True, True)
+
+  if Mission.Objective01 != None
+    Self.SetObjectiveDisplayed(ShipObjective_01, True, True)
+  endif
+  if Mission.Objective02 != None
+    Self.SetObjectiveDisplayed(ShipObjective_02, True, True)
+  endif
+  if Mission.Objective03 != None
+    Self.SetObjectiveDisplayed(ShipObjective_03, True, True)
+  endif
+  if Mission.Objective04 != None
+    Self.SetObjectiveDisplayed(ShipObjective_04, True, True)
+  endif
+  if Mission.Objective05 != None
+    Self.SetObjectiveDisplayed(ShipObjective_05, True, True)
+  endif
+
+  Self.SetObjectiveCompleted(0, True)
 EndFunction
 
 Function StageCompleted()
   Trace("StageCompleted")
 
-  Actor PlayerREF = Game.GetPlayer()
-  Self.UnRegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerModifiedShip")
+  Actor player = Game.GetPlayer()
+  Self.UnRegisterForRemoteEvent(player as ScriptObject, "OnPlayerModifiedShip")
+  Player.AddItem(GetSalvageForm(), GetSalvageRewardAmount(), False)
 
   AstroneerParent.RemoveContractShip(Self.ContractShip, True)
   Self.ContractShip = None
@@ -167,8 +167,8 @@ EndFunction
 Function StageFailed()
   Trace("StageFailed")
 
-  Actor PlayerREF = Game.GetPlayer()
-  Self.UnRegisterForRemoteEvent(PlayerREF as ScriptObject, "OnPlayerModifiedShip")
+  Actor player = Game.GetPlayer()
+  Self.UnRegisterForRemoteEvent(player as ScriptObject, "OnPlayerModifiedShip")
 
   AstroneerParent.RemoveContractShip(Self.ContractShip, False)
   Self.ContractShip = None
@@ -259,6 +259,7 @@ Function UpdateObjectiveValues()
   AstroneerParent.SetAllPartPowers(ContractShip, 0)
   AstroneerParent.SetAllPartPowers(ContractShip, 1)
 
+  Trace("Reactor Class Keyword " + ContractShip.GetReactorClassKeyword() + " " + GetObjectiveReactorClass())
   if ContractShip.GetReactorClassKeyword() == GetObjectiveReactorClass()
     SetObjectiveCompleted(ShipObjective_ReactorClass, True)
   else
@@ -270,19 +271,6 @@ Function UpdateObjectiveValues()
   UpdateObjectiveValue(ObjectiveValue_03, Mission.Objective03, ShipObjective_03, Mission.ObjectiveTarget03)
   UpdateObjectiveValue(ObjectiveValue_04, Mission.Objective04, ShipObjective_04, Mission.ObjectiveTarget04)
   UpdateObjectiveValue(ObjectiveValue_05, Mission.Objective05, ShipObjective_05, Mission.ObjectiveTarget05)
-EndFunction
-
-Keyword Function GetObjectiveReactorClass()
-  Astroneer:Pack consts = (AstroneerParent as ScriptObject) as Astroneer:Pack
-  if Mission.Difficulty == consts.DifficultyClassA
-    return ShipModuleClassA
-  elseif Mission.Difficulty == consts.DifficultyClassB
-    return ShipModuleClassB
-  elseif Mission.Difficulty == consts.DifficultyClassC
-    return ShipModuleClassC
-  elseif Mission.Difficulty == consts.DifficultyClassM
-    return ShipModuleClassM
-  endif
 EndFunction
 
 Function UpdateObjectiveValue(GlobalVariable value, Message objectiveType, Int objective, Float target)
@@ -301,9 +289,49 @@ Function UpdateObjectiveValue(GlobalVariable value, Message objectiveType, Int o
   endif
 EndFunction
 
+Keyword Function GetObjectiveReactorClass()
+  Astroneer:Pack consts = (AstroneerParent as ScriptObject) as Astroneer:Pack
+  if Mission.Difficulty == consts.DifficultyClassA
+    return ShipModuleClassA
+  elseif Mission.Difficulty == consts.DifficultyClassB
+    return ShipModuleClassB
+  elseif Mission.Difficulty == consts.DifficultyClassC
+    return ShipModuleClassC
+  elseif Mission.Difficulty == consts.DifficultyClassM
+    return ShipModuleClassM
+  endif
+EndFunction
+
+Int Function GetSalvageRewardAmount()
+  Astroneer:Pack consts = (AstroneerParent as ScriptObject) as Astroneer:Pack
+  if Mission.Difficulty == consts.DifficultyClassA
+    return 3
+  elseif Mission.Difficulty == consts.DifficultyClassB
+    return 5
+  elseif Mission.Difficulty == consts.DifficultyClassC
+    return 7
+  elseif Mission.Difficulty == consts.DifficultyClassM
+    return 11
+  endif
+EndFunction
+
+Form Function GetSalvageForm()
+  Astroneer:Pack consts = (AstroneerParent as ScriptObject) as Astroneer:Pack
+  if Mission.ShipType == consts.ShipTypeFighter
+    return SalvageFighter
+  elseif Mission.ShipType == consts.ShipTypeExplorer
+    return SalvageExplorer
+  elseif Mission.ShipType == consts.ShipTypeHauler
+    return SalvageHauler
+  elseif Mission.ShipType == consts.ShipTypeInterceptor
+    return SalvageInterceptor
+  elseif Mission.ShipType == consts.ShipTypeLuxury
+    return SalvageLuxury
+  endif
+EndFunction
+
 Int Function GetShipType()
   Astroneer:Pack consts = (AstroneerParent as ScriptObject) as Astroneer:Pack
-
   if(Mission.ShipType == consts.ShipTypeFighter)
     return 0
   elseif(Mission.ShipType == consts.ShipTypeExplorer)
