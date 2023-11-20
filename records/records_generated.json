@@ -25,6 +25,14 @@
                             "topic": "04_Player"
                         },
                         {
+                            "topic": "18_PlayerInquiryReset",
+                            "response": "18_AriaResponseReset"
+                        },
+                        {
+                            "topic": "MAIN_PlayerModifyContractShip",
+                            "response": "MAIN_AriaModifyContractShipResponse"
+                        },
+                        {
                             "topic": "MAIN_PlayerModifyShips",
                             "response": "MAIN_AriaModifyShipsResponse"
                         },
@@ -48,6 +56,71 @@
                             "responses": [
                                 {
                                     "text": "I'd like to modify my ships"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "MAIN_PlayerModifyContractShip",
+                    "speaker": "",
+                    "infos": [
+                        {
+                            "id": "MAIN_PlayerModifyContractShip01",
+                            "responses": [
+                                {
+                                    "text": "[Ship Builder] Let's get to work on that ship!"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 20.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "MAIN_AriaModifyContractShipResponse",
+                    "speaker": "",
+                    "script": "Astroneer:Dialogue",
+                    "onEnd": "ModifyContractShip",
+                    "infos": [
+                        {
+                            "id": "MAIN_AriaModifyContractShipResponse01",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Sure thing!"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "MAIN_AriaModifyContractShipResponse02",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "You got it!"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "MAIN_AriaModifyContractShipResponse03",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Absolutely!"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "MAIN_AriaModifyContractShipResponse04",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "Of course!"
                                 }
                             ]
                         }
@@ -5112,6 +5185,27 @@
                     ]
                 },
                 {
+                    "id": "18_PlayerInquiryReset",
+                    "speaker": "",
+                    "infos": [
+                        {
+                            "id": "18_PlayerInquiry01",
+                            "responses": [
+                                {
+                                    "text": "Nothing on the mission board is catching my eye. Can we switch it up?"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 5.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
                     "id": "18_AriaResponse",
                     "speaker": "AriaCollins",
                     "script": "Astroneer:Dialogue",
@@ -5150,6 +5244,24 @@
                             "responses": [
                                 {
                                     "text": "Keep your chin up. Space is vast, and there's always something else out there for you."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "18_AriaResponseReset",
+                    "speaker": "AriaCollins",
+                    "script": "Astroneer:Dialogue",
+                    "onBegin": "ResetMissions",
+                    "startScene": "MAIN_topics",
+                    "infos": [
+                        {
+                            "id": "18_AriaResponse01",
+                            "flags": "01",
+                            "responses": [
+                                {
+                                    "text": "I'm updating the mission board right now. Let's find you a project that's more your speed."
                                 }
                             ]
                         }

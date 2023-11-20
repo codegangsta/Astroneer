@@ -21,6 +21,16 @@ scene_MAIN_topics: {
 					topic: "04_Player"
 				},
 				{
+					// Resetting the mission board
+					topic:    "18_PlayerInquiryReset"
+					response: "18_AriaResponseReset"
+				},
+				{
+					// Modifying Contract Ship
+					topic:    "MAIN_PlayerModifyContractShip"
+					response: "MAIN_AriaModifyContractShipResponse"
+				},
+				{
 					// Modifying ships
 					topic:    "MAIN_PlayerModifyShips"
 					response: "MAIN_AriaModifyShipsResponse"
@@ -45,6 +55,32 @@ scene_MAIN_topics: {
 			infos:   (#SimpleInfos & {in: {
 				prefix: "MAIN_PlayerModifyShips"
 				texts: ["I'd like to modify my ships"]
+			}}).out
+		},
+		{
+			id:      "MAIN_PlayerModifyContractShip"
+			speaker: #consts.Player
+			infos:   (#SimpleInfos & {in: {
+				prefix: "MAIN_PlayerModifyContractShip"
+				conditions: [
+					{
+						function: "GetStage"
+						quest:    "ShipContractMission"
+						equals:   20.0
+					},
+				]
+				texts: ["[Ship Builder] Let's get to work on that ship!"]
+			}}).out
+		},
+		{
+			id:      "MAIN_AriaModifyContractShipResponse"
+			speaker: #consts.Player
+			script:  "Astroneer:Dialogue"
+			onEnd:   "ModifyContractShip"
+			infos:   (#SimpleInfos & {in: {
+				prefix: "MAIN_AriaModifyContractShipResponse"
+				flags:  #consts.InfoFlagsRandom
+				texts: ["Sure thing!", "You got it!", "Absolutely!", "Of course!"]
 			}}).out
 		},
 		{

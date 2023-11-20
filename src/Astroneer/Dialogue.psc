@@ -5,8 +5,8 @@ Function CompleteContract(ObjectReference speaker)
   mission.MissionComplete()
 EndFunction
 
-Function ModifyShips(ObjectReference speaker)
-  Trace("ModifyShips")
+Function ModifyContractShip(ObjectReference speaker)
+  Trace("ModifyContractShip")
   Astroneer:ParentQuest pq = GetOwningQuest() as Astroneer:ParentQuest
   Astroneer:ShipContractMissionScript mission = GetMission()
 
@@ -24,6 +24,11 @@ Function ModifyShips(ObjectReference speaker)
   EndWhile
 
   Game.GetPlayer().ShowHangarMenu(0, GetAria(), mission.ContractShip, False)
+EndFunction
+
+Function ModifyShips(ObjectReference speaker)
+  Trace("ModifyShips")
+  Game.GetPlayer().ShowHangarMenu(0, GetAria(), None, False)
 EndFunction
 
 Function CompleteIntro(ObjectReference speaker)
@@ -55,6 +60,10 @@ Function AbandonContract(ObjectReference speaker)
   GetMission().MissionFailed()
   GetMission().Stop()
   GetMission().Reset()
+  GetMission().MissionParent.DebugResetMissions()
+EndFunction
+
+Function ResetMissions(ObjectReference speaker)
   GetMission().MissionParent.DebugResetMissions()
 EndFunction
 
