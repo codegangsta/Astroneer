@@ -10,11 +10,11 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m1.ShipTemplate = p.ShipTemplateFighter
   m1.ShipType = p.ShipTypeFighter
   m1.Difficulty = p.DifficultyClassA
-  m1.RewardCredits = 100000
+  m1.RewardCredits = 4000
   m1.Objective01 = p.ObjectiveMass
   m1.ObjectiveTarget01 = 2000
   m1.Objective02 = p.ObjectiveShieldHealth
-  m1.ObjectiveTarget02 = 500
+  m1.ObjectiveTarget02 = 375
   m1.Objective03 = p.ObjectiveWeaponPowerEnergy
   m1.ObjectiveTarget03 = 6
   m1.Objective04 = p.ObjectiveWeaponPowerMissile
@@ -28,7 +28,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m2.ShipTemplate = p.ShipTemplateHauler
   m2.ShipType = p.ShipTypeHauler
   m2.Difficulty = p.DifficultyClassA
-  m2.RewardCredits = 100000
+  m2.RewardCredits = 4000
   m2.Objective01 = p.ObjectiveCargo
   m2.ObjectiveTarget01 = 2000
   m2.Objective02 = p.ObjectiveEnginePower
@@ -44,7 +44,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m3.ShipTemplate = p.ShipTemplateLuxury
   m3.ShipType = p.ShipTypeLuxury
   m3.Difficulty = p.DifficultyClassA
-  m3.RewardCredits = 100000
+  m3.RewardCredits = 4000
   m3.Objective01 = p.ObjectiveHabs
   m3.ObjectiveTarget01 = 4
   m3.Objective02 = p.ObjectiveWindows
@@ -60,7 +60,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m4.ShipTemplate = p.ShipTemplateExplorer
   m4.ShipType = p.ShipTypeExplorer
   m4.Difficulty = p.DifficultyClassA
-  m4.RewardCredits = 100000
+  m4.RewardCredits = 4000
   m4.Objective01 = p.ObjectiveMass
   m4.ObjectiveTarget01 = 2000
   m4.Objective02 = p.ObjectiveGravJumpRange
@@ -78,7 +78,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m5.ShipTemplate = p.ShipTemplateInterceptor
   m5.ShipType = p.ShipTypeInterceptor
   m5.Difficulty = p.DifficultyClassA
-  m5.RewardCredits = 100000
+  m5.RewardCredits = 4000
   m5.Objective01 = p.ObjectiveMass
   m5.ObjectiveTarget01 = 1200
   m5.Objective02 = p.ObjectiveTopSpeed
@@ -89,10 +89,10 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   m5.ObjectiveTarget04 = 8000
 
   missions.Add(m1)
-  missions.Add(m2)
-  missions.Add(m3)
-  missions.Add(m4)
-  missions.Add(m5)
+  ;missions.Add(m2)
+  ;missions.Add(m3)
+  ;missions.Add(m4)
+  ;missions.Add(m5)
 
   return missions
 

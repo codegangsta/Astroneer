@@ -30,7 +30,8 @@ Group QuestData
   ReferenceAlias Property AtlasIntercom Auto Const
   ReferenceAlias Property Aria Auto Const
   spaceshipreference[] Property ShipCollection Auto
-  Perk Property AriaDiscountPerk Auto Const Mandatory
+  Perk Property AriaFullDiscountPerk Auto Const Mandatory
+  Perk Property AriaStandardDiscountPerk Auto Const Mandatory
 EndGroup
 
 Group DialogueData
@@ -53,13 +54,14 @@ Event OnQuestInit()
 
   AddMissions()
   InitIntercom()
+  AddPerks()
 EndEvent
 
 Event OnMenuOpenCloseEvent(String menuName, Bool open)
   Trace("OnMenuOpenCloseEvent " + menuName + " " + open)
 
   if menuName == "SpaceshipEditorMenu" && AtlasWorkshopMode && open
-    Game.GetPlayer().AddPerk(AriaDiscountPerk, False)
+    Game.GetPlayer().AddPerk(AriaFullDiscountPerk, False)
   endif
 
   if menuName == "SpaceshipEditorMenu" && AtlasWorkshopMode && !open
@@ -75,7 +77,7 @@ Event OnMenuOpenCloseEvent(String menuName, Bool open)
       endif
       i += 1
     EndWhile
-    Game.GetPlayer().RemovePerk(AriaDiscountPerk)
+    Game.GetPlayer().RemovePerk(AriaFullDiscountPerk)
     AtlasWorkshopMode = False
   endif
 EndEvent
@@ -131,12 +133,21 @@ EndFunction
 Event Actor.OnPlayerLoadGame(Actor akActor)
   AddMissions()
   InitIntercom()
+  AddPerks()
   Self.UnregisterForAllMenuOpenCloseEvents()
   Self.RegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
   Self.UnRegisterForRemoteEvent(Game.GetPlayer() as ObjectReference, "OnCellLoad")
   Self.RegisterForRemoteEvent(Game.GetPlayer() as ObjectReference, "OnCellLoad")
   ((Self as ScriptObject) as Astroneer:ResearchProjects).RegisterEvents()
 EndEvent
+
+Function AddPerks()
+  Actor player = Game.GetPlayer()
+  if (!player.HasPerk(AriaStandardDiscountPerk))
+    Trace("Adding aria discount perk...")
+    player.AddPerk(AriaStandardDiscountPerk, False)
+  endif
+EndFunction
 
 Function AddMissions()
   Trace("Adding ship contract missions...")
@@ -370,8 +381,8 @@ Astroneer:Pack:Mission Function GenerateMission()
       mission.Text = consts.MissionTextsLuxury.GetAt(Utility.RandomInt(0, consts.MissionTextsLuxury.GetSize()-1)) as Message
     endif
   endif
-  if mission.ShipTemplate == 0
-    mission.ShipTemplate = consts.ShipTemplateDefault
+  if mission.ShipTemplate == None
+    mission.ShipTemplate = consts.ShipTemplateFighter
   endif
   if mission.Difficulty == None
     mission.Difficulty = consts.DifficultyClassA

@@ -86,7 +86,6 @@ EndGroup
 ; Ship templates must be IDs instead of forms because the game
 ; overrwrites the ship form when the player customizes a ship.
 Group ShipTemplates
-  Int Property ShipTemplateDefault = 0x0003e13e Auto Const
   Int Property ShipTemplateExplorer = 0x0005B554 Auto Const
   Int Property ShipTemplateFighter = 0x0003e13e Auto Const
   Int Property ShipTemplateHauler = 0x000FAFD8 Auto Const
