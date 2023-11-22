@@ -14,11 +14,16 @@ Function ModifyContractShip(ObjectReference speaker)
   Keyword CannotBeModified = Game.GetForm(0x003413f3) as Keyword
   pq.AtlasWorkshopMode = True
 
+  if pq.BuilderDisabledShips == None
+    pq.BuilderDisabledShips = new spaceshipreference[0]
+  endif
+
   Int i = 0
   While i < ships.GetCount()
     spaceshipreference ship = ships.GetAt(i) as spaceshipreference
-    if ship != mission.ContractShip
+    if ship != mission.ContractShip && ship.HasKeyword(CannotBeModified) == False
       ship.AddKeyword(CannotBeModified)
+      pq.BuilderDisabledShips.Add(ship)
     endif
     i += 1
   EndWhile

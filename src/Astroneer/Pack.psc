@@ -87,9 +87,9 @@ EndGroup
 ; overrwrites the ship form when the player customizes a ship.
 Group ShipTemplates
   Int Property ShipTemplateExplorer = 0x0005B554 Auto Const
-  Int Property ShipTemplateFighter = 0x0003e13e Auto Const
+  Int Property ShipTemplateFighter = 0x0033CA69 Auto Const
   Int Property ShipTemplateHauler = 0x000FAFD8 Auto Const
-  Int Property ShipTemplateInterceptor = 0x0033CA69 Auto Const
+  Int Property ShipTemplateInterceptor = 0x0033E765 Auto Const
   Int Property ShipTemplateLuxury = 0x001EB556 Auto Const
 EndGroup
 

@@ -41,6 +41,8 @@ Group DialogueData
   Int Property DialogueBackgroundComplete = 0 Auto Conditional
 EndGroup
 
+spaceshipreference[] Property BuilderDisabledShips Auto
+
 Bool Property AtlasWorkshopMode = False auto
 Astroneer:Pack:Mission[] Missions = None
 
@@ -65,18 +67,12 @@ Event OnMenuOpenCloseEvent(String menuName, Bool open)
   endif
 
   if menuName == "SpaceshipEditorMenu" && AtlasWorkshopMode && !open
-    RefCollectionAlias ships = PlayerShipQuest.PlayerShips
     Keyword CannotBeModified = Game.GetForm(0x003413f3) as Keyword
-    Astroneer:ShipContractMissionScript mission = AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
+    ForEach spaceshipreference ship in BuilderDisabledShips
+      ship.RemoveKeyword(CannotBeModified)
+    EndForEach
+    BuilderDisabledShips = new spaceshipreference[0]
 
-    Int i = 0
-    While i < ships.GetCount()
-      spaceshipreference ship = ships.GetAt(i) as spaceshipreference
-      if ship != mission.ContractShip
-        ship.RemoveKeyword(CannotBeModified)
-      endif
-      i += 1
-    EndWhile
     Game.GetPlayer().RemovePerk(AriaFullDiscountPerk)
     AtlasWorkshopMode = False
   endif
@@ -381,7 +377,7 @@ Astroneer:Pack:Mission Function GenerateMission()
       mission.Text = consts.MissionTextsLuxury.GetAt(Utility.RandomInt(0, consts.MissionTextsLuxury.GetSize()-1)) as Message
     endif
   endif
-  if mission.ShipTemplate == None
+  if mission.ShipTemplate == 0
     mission.ShipTemplate = consts.ShipTemplateFighter
   endif
   if mission.Difficulty == None
