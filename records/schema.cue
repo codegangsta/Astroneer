@@ -89,6 +89,8 @@ package records
 	quest: string
 	// Name of the scene, used for internal reference
 	name: string
+	// Current production status of the scene, see consts for possible values
+	status: int | *0
 	// Flags to set on the scene
 	flags?: string
 	// Optional notes for the scene

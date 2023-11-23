@@ -10,6 +10,10 @@ package scenes
 	ActionPlayerDialogue: 3
 	SceneFlags:           "0000100000001"
 	InfoFlagsRandom:      "01"
+	StatusNotReady:       0 // Not ready for recording
+	StatusReady:          1 // Ready for recording
+	StatusRecorded:       2 // Recorded
+	StatusInGame:         3 // In game
 }
 
 #ID: {

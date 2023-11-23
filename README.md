@@ -74,11 +74,12 @@ We're open to community suggestions for additional ship attributes to be include
 - **Grav Jump Range**: Max grav jump range
 - **Habs**: # of habs
 - **Hull**: Hull health
-- **Mass**: Total ship mass
+- **Mass**: Maximum total ship mass
 - **Reactor Power**: Reactor power capacity
-- **Shielded Cargo**: Shielded cargo capacity
 - **Shield Health**: Shield health
 - **Shield Power**: Shield max power
+- **Shielded Cargo**: Shielded cargo capacity
+- **Thrust:** Engine Thrust
 - **Top Speed**: Top ship speed
 - **Total Weapon Power**: Combined total weapon power
 - **Weapon Power Ballistic**: Max ballistic weapon power

@@ -4,6 +4,7 @@
             "id": "MAIN_topics",
             "quest": "ParentQuest",
             "name": "Main Topics",
+            "status": 0,
             "notes": "This is the main topics scene",
             "actors": [
                 -2
@@ -242,6 +243,7 @@
             "id": "00_Misc",
             "quest": "ParentQuest",
             "name": "Miscellaneous",
+            "status": 0,
             "notes": "Miscellaneous topics to be used as filler or transitions between scenes.",
             "actors": [
                 -2
@@ -667,6 +669,7 @@
             "id": "01_Intro",
             "quest": "ParentQuest",
             "name": "Aria is Introduced to the Player",
+            "status": 0,
             "actors": [
                 -2
             ],
@@ -706,19 +709,19 @@
                                     "text": "Whoa, an intercom call? That's a rare vintage. Aria here—your ship-building maestro and Atlas Astronautics' semi-official welcome wagon."
                                 },
                                 {
-                                    "text": "Let's talk ship. You're about to dive into the nuts and bolts of starship customization. I'll transfer the bare bones to your hangar, and you put the soul into the machine. Match the contract specs, and we're golden."
+                                    "text": "Here’s the deal: I supply ship parts, you make them awesome. Match the specs, dazzle me."
                                 },
                                 {
-                                    "text": "Once you're done, bring her back so we can give her the old spaceworthy stamp. Keep your sensors peeled out there—your handiwork will be zipping around the galaxy before you know it."
+                                    "text": "Starting out, our parts bin isn't exactly a treasure trove. But hey, do some research, and we'll get you the shiny stuff."
                                 },
                                 {
-                                    "text": "Got questions, or floating in confusion? Buzz me on this line. I'm like a walking, talking encyclopedia of space oddities, minus the boring parts."
+                                    "text": "Stuck or curious? Ping me. I'm like a shipbuilding oracle, but with more jokes and less cryptic mumbo jumbo."
                                 },
                                 {
-                                    "text": "I hear you're quite the pilot. So I'm calling you 'Cap' from here on out! Beats saying 'O Great Shipbuilder' every time, right?"
+                                    "text": "I'm dubbing you 'Cap'. Short, sweet, and saves time. I mean, 'Esteemed Shipwright' is a bit of a mouthful, right?"
                                 },
                                 {
-                                    "text": "Alright, Cap. Aria signing off—don't be a stranger, or do, but come back with stories!"
+                                    "text": "Okay, Cap, Aria out. Don't be a stranger, and keep your eyes on the prize - or, you know, the mission board."
                                 }
                             ]
                         }
@@ -730,6 +733,7 @@
             "id": "02_Greeting",
             "quest": "ParentQuest",
             "name": "Aria Greets the Player",
+            "status": 0,
             "notes": "The player has just accepted a mission from the mission board and has walked over to the Atlas Astronautics intercom to speak with Aria. Upon pushing the 'Call' button, Aria responds from the intercom. This response is typically played after the introductory quest, so Aria has already been introduced to the player.",
             "actors": [
                 -2
@@ -1103,6 +1107,7 @@
             "id": "03_AcceptContract",
             "quest": "ParentQuest",
             "name": "Player Accepts Contract",
+            "status": 0,
             "notes": "The player has accepted a mission from the mission board, and has walked over to the Atlas Astronautics intercom to speak with Aria. Aria greets the player, then the player chooses to ask about the contract they've just accepted. Based on the type of Ship contract, a randomly generated response from Aria will be chosen. The intent is to have enough dialog and variety that each mission feels fresh and new",
             "actors": [
                 -2
@@ -1763,6 +1768,7 @@
             "id": "04_CompleteContract",
             "quest": "ParentQuest",
             "name": "Player Completes Contract",
+            "status": 0,
             "notes": "The player has finished building the ship according to the contract specs, and is ready to turn it in to Aria.",
             "actors": [
                 -2
@@ -2527,6 +2533,7 @@
             "id": "05_Background",
             "quest": "ParentQuest",
             "name": "Aria's Background",
+            "status": 0,
             "actors": [
                 -2
             ],
@@ -2604,6 +2611,7 @@
             "id": "06_PlayerBackground",
             "quest": "ParentQuest",
             "name": "Player's Background",
+            "status": 0,
             "actors": [
                 -2
             ],
@@ -2749,6 +2757,7 @@
             "id": "07_ColonyLife",
             "quest": "ParentQuest",
             "name": "Colony Life",
+            "status": 0,
             "notes": "In this scene, Aria fondly recalls her upbringing in a space colony, subtly hinting at the contrast between her ambitious career path and the simpler life she left behind. Her responses subtly reflect her inner conflict, though she remains somewhat steadfast in her choices.",
             "actors": [
                 -2
@@ -2927,6 +2936,7 @@
             "id": "08_Startup",
             "quest": "ParentQuest",
             "name": "Startup vs Corporations",
+            "status": 0,
             "notes": "In this scene, Aria explains her choice of leaving a stable corporate job for a dynamic startup environment, subtly indicating her personal drive and aspiration despite the inherent risks.",
             "actors": [
                 -2
@@ -3124,6 +3134,7 @@
             "id": "09_WorkSatisfaction",
             "quest": "ParentQuest",
             "name": "Work Satisfaction",
+            "status": 0,
             "notes": "Aria talks about her work at Atlas and how she feels about it.",
             "actors": [
                 -2
@@ -3321,6 +3332,7 @@
             "id": "10_AlternatePaths",
             "quest": "ParentQuest",
             "name": "Alternate Paths",
+            "status": 0,
             "notes": "In this scene, Aria reflects on her career choices, showing a blend of confidence in her decision and awareness of what she's left behind. The player's responses probe deeper, revealing Aria's introspective side and her commitment to her path despite acknowledging the trade-offs.",
             "actors": [
                 -2
@@ -3518,6 +3530,7 @@
             "id": "11_Reflect",
             "quest": "ParentQuest",
             "name": "Reflecting on Personal Growth",
+            "status": 0,
             "notes": "In this scene, Aria starts off guarded, her usual self-assurance masking deeper uncertainties. As the player engages, she gradually reveals more of her introspective side.",
             "actors": [
                 -2
@@ -3725,6 +3738,7 @@
             "id": "12_BadNews",
             "quest": "ParentQuest",
             "name": "Bad News from Home",
+            "status": 0,
             "notes": "Aria is subdued, and the player can sense something is wrong. Aria reveals that her sister is ill, and she's feeling the distance from home. The player can offer support and encouragement.",
             "actors": [
                 -2
@@ -4232,6 +4246,7 @@
             "id": "12b_BadNews",
             "quest": "ParentQuest",
             "name": "Bad News followup scene",
+            "status": 0,
             "actors": [
                 -2
             ],
@@ -4279,6 +4294,7 @@
             "id": "13_HiddenPassions",
             "quest": "ParentQuest",
             "name": "Hidden Passions - Humble Revelations",
+            "status": 0,
             "notes": "Aria reveals her hobbies and the joy of learning for its own sake.",
             "actors": [
                 -2
@@ -4480,6 +4496,7 @@
             "id": "14_Legacy",
             "quest": "ParentQuest",
             "name": "Legacy and Impact",
+            "status": 0,
             "actors": [
                 -2
             ],
@@ -4681,6 +4698,7 @@
             "id": "15_Sacrifices",
             "quest": "ParentQuest",
             "name": "Sacrifices",
+            "status": 0,
             "notes": "This scene delves into the complex nature of Aria's career-driven life, challenging her to confront the personal costs and momentarily revealing the vulnerability behind her confident facade.",
             "actors": [
                 -2
@@ -4883,6 +4901,7 @@
             "id": "16_Regrets",
             "quest": "ParentQuest",
             "name": "Aria Reflects on Family and Regrets",
+            "status": 0,
             "notes": "This emotionally complex scene starts with Aria's rare moment of vulnerability about her family, which she either opens up more about or distances herself from, depending on the player's approach.",
             "actors": [
                 -2
@@ -5085,6 +5104,7 @@
             "id": "17_Intercom",
             "quest": "ParentQuest",
             "name": "Intercom",
+            "status": 0,
             "actors": [
                 -2
             ],
@@ -5146,6 +5166,7 @@
             "id": "18_AbandonContract",
             "quest": "ParentQuest",
             "name": "Abandon Contract",
+            "status": 0,
             "actors": [
                 -2
             ],
@@ -5273,6 +5294,7 @@
             "id": "19_Questions",
             "quest": "ParentQuest",
             "name": "Questions for Aria",
+            "status": 0,
             "notes": "This scene is a container for the standard questions that the player will ask Aria.",
             "actors": [
                 -2
@@ -5310,6 +5332,7 @@
             "id": "19b_WorkQuestions",
             "quest": "ParentQuest",
             "name": "Work Questions for Aria",
+            "status": 0,
             "actors": [
                 -2
             ],
@@ -5365,6 +5388,7 @@
             "id": "19c_BackgroundQuestions",
             "quest": "ParentQuest",
             "name": "Background Questions for Aria",
+            "status": 0,
             "actors": [
                 -2
             ],
@@ -5417,6 +5441,7 @@
             "id": "19d_PersonalQuestions",
             "quest": "ParentQuest",
             "name": "Personal Questions for Aria",
+            "status": 0,
             "actors": [
                 -2
             ],
