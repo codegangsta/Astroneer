@@ -19,6 +19,13 @@ Function PrintCurrentShipObjectives() global
   endif
 
   DebugTrace("Current Ship " + playerShip)
+  DebugTrace("=Interior==============================================")
+  Keyword interior = Game.GetForm(0x000055e9) as Keyword
+  DebugTrace("Linked Interior " + playerShip.GetRefsLinkedToMe(interior, None))
+
+  return
+
+  DebugTrace("Current Ship " + playerShip)
   DebugTrace("=Objectives==============================================")
   DebugTrace("Reactor Class " + playerShip.GetReactorClassKeyword())
   DebugTrace("ObjectiveCargo " + pq.GetObjectiveValue(playerShip, consts.ObjectiveCargo))

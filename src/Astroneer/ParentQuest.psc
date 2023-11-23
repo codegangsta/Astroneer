@@ -32,6 +32,7 @@ Group QuestData
   spaceshipreference[] Property ShipCollection Auto
   Perk Property AriaFullDiscountPerk Auto Const Mandatory
   Perk Property AriaStandardDiscountPerk Auto Const Mandatory
+  ObjectReference Property ContractShipLandingMarker Auto Const Mandatory
 EndGroup
 
 Group DialogueData
@@ -202,8 +203,11 @@ spaceshipreference Function AddContractShip(Astroneer:Pack:Mission m)
   ship.SetValue(SpaceshipRegistration, 1.0)
   ship.SetOverrideName(m.Title)
   PlayerShipQuest.AddPlayerOwnedShip(ship)
-  ship.SetLinkedRef(Game.GetForm(0x002CFDE8) as ObjectReference, PlayerShipQuest.LandingMarkerKeyword, False)
-  ship.Enable(True)
+
+  ; Land the ship in New Atlantis and unlock it
+  ship.SetLinkedRef(ContractShipLandingMarker, PlayerShipQuest.LandingMarkerKeyword, False)
+  ship.Enable(False)
+  ship.SetExteriorLoadDoorInaccessible(False)
 
   return ship
 EndFunction
@@ -215,6 +219,7 @@ Function RemoveContractShip(spaceshipreference ship, Bool addToCollection)
   ship.RemoveKeyword(CannotBeHomeShipKeyword)
   ship.RemoveKeyword(CannotBeCountedAgainstMaxShipsKeyword)
   ship.SetValue(SpaceshipRegistration, 0.0)
+  ship.Disable(False)
 
   if (addToCollection)
     if(ShipCollection == None)
