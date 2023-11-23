@@ -30,15 +30,15 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ma2.Difficulty = p.DifficultyClassA
   ma2.RewardCredits = 4500
   ma2.Objective01 = p.ObjectiveCargo
-  ma2.ObjectiveTarget01 = 1200
+  ma2.ObjectiveTarget01 = 2000
   ma2.Objective02 = p.ObjectiveEnginePower
-  ma2.ObjectiveTarget02 = 350
+  ma2.ObjectiveTarget02 = 8
   ma2.Objective03 = p.ObjectiveFuel
-  ma2.ObjectiveTarget03 = 2500
-  ma2.Objective04 = p.ObjectiveShieldedCargo
-  ma2.ObjectiveTarget04 = 800
+  ma2.ObjectiveTarget03 = 400
+  ma2.Objective04 = p.ObjectiveMass
+  ma2.ObjectiveTarget04 = 1100
   ma2.Objective05 = p.ObjectiveThrust
-  ma2.ObjectiveTarget05 = 300
+  ma2.ObjectiveTarget05 = 18000
 
   ;= Class A Luxury Mission ========================================
   Astroneer:Pack:Mission ma3 = new Astroneer:Pack:Mission
@@ -48,15 +48,15 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ma3.Difficulty = p.DifficultyClassA
   ma3.RewardCredits = 6000
   ma3.Objective01 = p.ObjectiveCrewSlots
-  ma3.ObjectiveTarget01 = 6
+  ma3.ObjectiveTarget01 = 8
   ma3.Objective02 = p.ObjectiveHabs
-  ma3.ObjectiveTarget02 = 3
+  ma3.ObjectiveTarget02 = 4
   ma3.Objective03 = p.ObjectiveShieldHealth
   ma3.ObjectiveTarget03 = 400
   ma3.Objective04 = p.ObjectiveWindows
-  ma3.ObjectiveTarget04 = 10
-  ma3.Objective05 = p.ObjectiveReactorPower
-  ma3.ObjectiveTarget05 = 300
+  ma3.ObjectiveTarget04 = 3
+  ma3.Objective05 = p.ObjectiveMass
+  ma3.ObjectiveTarget05 = 800
 
   ;= Class A Explorer Mission ======================================
   Astroneer:Pack:Mission ma4 = new Astroneer:Pack:Mission
@@ -239,21 +239,21 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   mc5.ObjectiveTarget03 = 91
 
 
-  missions.Add(ma1)
-  missions.Add(ma2)
+  ;missions.Add(ma1)
+  ;missions.Add(ma2)
   missions.Add(ma3)
-  missions.Add(ma4)
-  missions.Add(ma5)
-  missions.Add(mb1)
-  missions.Add(mb2)
-  missions.Add(mb3)
-  missions.Add(mb4)
-  missions.Add(mb5)
-  missions.Add(mc1)
-  missions.Add(mc2)
-  missions.Add(mc3)
-  missions.Add(mc4)
-  missions.Add(mc5)
+; missions.Add(ma4)
+; missions.Add(ma5)
+; missions.Add(mb1)
+; missions.Add(mb2)
+; missions.Add(mb3)
+; missions.Add(mb4)
+; missions.Add(mb5)
+; missions.Add(mc1)
+; missions.Add(mc2)
+; missions.Add(mc3)
+; missions.Add(mc4)
+; missions.Add(mc5)
 
   return missions
 EndFunction

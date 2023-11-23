@@ -202,6 +202,8 @@ spaceshipreference Function AddContractShip(Astroneer:Pack:Mission m)
   ship.SetValue(SpaceshipRegistration, 1.0)
   ship.SetOverrideName(m.Title)
   PlayerShipQuest.AddPlayerOwnedShip(ship)
+  ship.SetLinkedRef(Game.GetForm(0x002CFDE8) as ObjectReference, PlayerShipQuest.LandingMarkerKeyword, False)
+  ship.Enable(True)
 
   return ship
 EndFunction

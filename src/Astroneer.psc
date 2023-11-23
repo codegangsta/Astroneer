@@ -18,7 +18,6 @@ Function PrintCurrentShipObjectives() global
     playerShip = mission.ContractShip
   endif
 
-
   DebugTrace("Current Ship " + playerShip)
   DebugTrace("=Objectives==============================================")
   DebugTrace("Reactor Class " + playerShip.GetReactorClassKeyword())
