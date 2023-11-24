@@ -8,6 +8,7 @@ Group Keywords
   Keyword Property CannotBeHomeShipKeyword Auto Const Mandatory
   Keyword Property CannotBeCountedAgainstMaxShipsKeyword Auto Const Mandatory
   Keyword Property SBShip_Hab Auto Const Mandatory
+  Keyword Property CurrentContractShipKeyword Auto Const Mandatory
 EndGroup
 
 Group ActorValues
@@ -101,30 +102,23 @@ Function InitIntercom()
 
     if (spaceport.IsLoaded() && Aria.GetActorReference() == None)
       Actor ariaRef = AtlasIntercom.GetReference().PlaceActorAtMe(ariaForm, 1, None, True, False, False, None, True)
-      ariaRef.SetPosition(-828.8, 1603.2, -165.8)
-      ariaRef.SetAngle(0.00, 0.00, -137.15)
-      ariaRef.SetAlpha(0.0, False)
-      ariaRef.SetGhost(True)
+      ariaRef.SetPosition(-822.47, 1579.02, -161.57)
       Trace("Created aria and setting ref " + ariaRef)
       Aria.ForceRefTo(ariaRef)
     endif
 
     ; Make sure aria is in the right place every time we load into the spaceport
-    if (spaceport.IsLoaded())
-      PlaceAria()
-    endif
+    ;if (spaceport.IsLoaded())
+    ;  PlaceAria()
+    ;endif
   endif
 EndFunction
 
 ; Dirty hack to get aria to appear near the intercom
 Function PlaceAria()
   Actor ariaRef = Aria.GetActorReference()
-  ariaRef.SetMotionType(ariaRef.Motion_Keyframed, True)
   ariaRef.SetPosition(-828.8, 1603.2, -165.8)
-  ariaRef.SetAngle(0.00, 0.00, -137.15)
-  ariaRef.SetAlpha(0.0, False)
-  ariaRef.SetGhost(True)
-  ariaRef.SetMotionType(ariaRef.Motion_Dynamic, True)
+  ariaRef.SetAlpha(1.0, False)
 EndFunction
 
 Event Actor.OnPlayerLoadGame(Actor akActor)
@@ -169,7 +163,7 @@ Function AddMissions()
   Trace("Loading mission packs...")
   LoadMissionPacks()
 
-  MB_Parent.DebugResetMissions()
+  MB_Parent.ResetMissions(True, False, None, True)
 EndFunction
 
 Function LoadMissionPacks()
@@ -200,14 +194,10 @@ spaceshipreference Function AddContractShip(Astroneer:Pack:Mission m)
   ship.AddKeyword(CannotBeSoldShipKeyword)
   ship.AddKeyword(CannotBeHomeShipKeyword)
   ship.AddKeyword(CannotBeCountedAgainstMaxShipsKeyword)
+  ship.AddKeyword(CurrentContractShipKeyword)
   ship.SetValue(SpaceshipRegistration, 1.0)
   ship.SetOverrideName(m.Title)
   PlayerShipQuest.AddPlayerOwnedShip(ship)
-
-  ; Land the ship in New Atlantis and unlock it
-  ship.SetLinkedRef(ContractShipLandingMarker, PlayerShipQuest.LandingMarkerKeyword, False)
-  ship.Enable(False)
-  ship.SetExteriorLoadDoorInaccessible(False)
 
   return ship
 EndFunction
@@ -218,8 +208,9 @@ Function RemoveContractShip(spaceshipreference ship, Bool addToCollection)
   ship.RemoveKeyword(CannotBeSoldShipKeyword)
   ship.RemoveKeyword(CannotBeHomeShipKeyword)
   ship.RemoveKeyword(CannotBeCountedAgainstMaxShipsKeyword)
+  ship.RemoveKeyword(CurrentContractShipKeyword)
   ship.SetValue(SpaceshipRegistration, 0.0)
-  ship.Disable(False)
+  ship.DisableWithTakeoffOrLandingNoWait()
 
   if (addToCollection)
     if(ShipCollection == None)
@@ -248,9 +239,9 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
   if (objectiveType == consts.ObjectiveCargo)
     return ship.GetShipMaxCargoWeight()
 
-  elseif (objectiveType == consts.ObjectiveCrewSlots)
-    ActorValue crewSlotsAV = Game.GetForm(0x002CC9EA) as ActorValue
-    return ship.GetValue(crewSlotsAV)
+  elseif (objectiveType == consts.ObjectivePassengerSlots)
+    ActorValue passengerSlotsAV = Game.GetForm(0x0001e7de) as ActorValue
+    return ship.GetValue(passengerSlotsAV)
 
   elseif (objectiveType == consts.ObjectiveEnginePower)
     ActorValue engineAV = Game.GetForm(0x0000ACD9) as ActorValue

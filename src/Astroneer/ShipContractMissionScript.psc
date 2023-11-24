@@ -122,33 +122,41 @@ EndFunction
 Function StageAccepted()
   Trace("StageAccepted")
   Self.SetActive(True)
-  Self.SetObjectiveDisplayed(0, True, False)
+  Self.SetObjectiveDisplayedAtTop(0)
 EndFunction
 
 Function StageDesign()
   Trace("StageDesign")
 
   Self.ContractShip = AstroneerParent.AddContractShip(Mission)
+  (Self.GetAlias(20) as ReferenceAlias).ForceRefTo(ContractShip)
+  (Self.GetAlias(21) as LocationAlias).ClearAndRefillAlias()
+  (Self.GetAlias(22) as ReferenceAlias).ClearAndRefillAlias()
+
+  ; Block activation for the pilot seat
+  (Self.GetAlias(22) as ReferenceAlias).GetReference().BlockActivation(True, True)
+
   Actor player = Game.GetPlayer()
   Self.RegisterForRemoteEvent(player as ScriptObject, "OnPlayerModifiedShip")
 
   UpdateObjectiveValues()
-  Self.SetObjectiveDisplayed(ShipObjective_ReactorClass, True, True)
+
+  Self.SetObjectiveDisplayed(ShipObjective_ReactorClass, True, False)
 
   if Mission.Objective01 != None
-    Self.SetObjectiveDisplayed(ShipObjective_01, True, True)
+    Self.SetObjectiveDisplayed(ShipObjective_01, True, False)
   endif
   if Mission.Objective02 != None
-    Self.SetObjectiveDisplayed(ShipObjective_02, True, True)
+    Self.SetObjectiveDisplayed(ShipObjective_02, True, False)
   endif
   if Mission.Objective03 != None
-    Self.SetObjectiveDisplayed(ShipObjective_03, True, True)
+    Self.SetObjectiveDisplayed(ShipObjective_03, True, False)
   endif
   if Mission.Objective04 != None
-    Self.SetObjectiveDisplayed(ShipObjective_04, True, True)
+    Self.SetObjectiveDisplayed(ShipObjective_04, True, False)
   endif
   if Mission.Objective05 != None
-    Self.SetObjectiveDisplayed(ShipObjective_05, True, True)
+    Self.SetObjectiveDisplayed(ShipObjective_05, True, False)
   endif
 
   Self.SetObjectiveCompleted(0, True)
@@ -161,6 +169,11 @@ Function StageCompleted()
   Self.UnRegisterForRemoteEvent(player as ScriptObject, "OnPlayerModifiedShip")
   Player.AddItem(GetSalvageForm(), GetSalvageRewardAmount(), False)
 
+  ; Block activation for the pilot seat
+  (Self.GetAlias(22) as ReferenceAlias).GetReference().BlockActivation(False, False)
+  (Self.GetAlias(20) as ReferenceAlias).Clear()
+  (Self.GetAlias(21) as LocationAlias).Clear()
+  (Self.GetAlias(22) as ReferenceAlias).Clear()
   AstroneerParent.RemoveContractShip(Self.ContractShip, True)
   Self.ContractShip = None
 EndFunction
@@ -193,6 +206,7 @@ EndFunction
 
 Event Actor.OnPlayerModifiedShip(Actor akActor, spaceshipreference akShip)
   if(akShip == Self.ContractShip)
+    EnableShip()
     UpdateObjectiveValues()
 
     if AllShipObjectivesComplete()
@@ -208,6 +222,19 @@ Event Actor.OnPlayerModifiedShip(Actor akActor, spaceshipreference akShip)
     endif
   endif
 EndEvent
+
+Function EnableShip()
+  Trace("EnableShip")
+  (Self.GetAlias(20) as ReferenceAlias).ForceRefTo(ContractShip)
+  (Self.GetAlias(21) as LocationAlias).ClearAndRefillAlias()
+  (Self.GetAlias(22) as ReferenceAlias).ClearAndRefillAlias()
+  ; Block activation for the pilot seat
+  (Self.GetAlias(22) as ReferenceAlias).GetReference().BlockActivation(True, True)
+  ; Land the ship in New Atlantis and unlock it
+  ContractShip.SetLinkedRef(AstroneerParent.ContractShipLandingMarker, AstroneerParent.PlayerShipQuest.LandingMarkerKeyword, False)
+  ContractShip.Enable(False)
+  ContractShip.SetExteriorLoadDoorInaccessible(False)
+EndFunction
 
 Bool Function AllShipObjectivesComplete()
   Trace("ShipObjectivesComplete")
@@ -260,11 +287,14 @@ Function UpdateObjectiveValues()
   AstroneerParent.SetAllPartPowers(ContractShip, 0)
   AstroneerParent.SetAllPartPowers(ContractShip, 1)
 
-  Trace("Reactor Class Keyword " + ContractShip.GetReactorClassKeyword() + " " + GetObjectiveReactorClass())
   if ContractShip.GetReactorClassKeyword() == GetObjectiveReactorClass()
-    SetObjectiveCompleted(ShipObjective_ReactorClass, True)
+    if !IsObjectiveCompleted(ShipObjective_ReactorClass)
+      SetObjectiveCompleted(ShipObjective_ReactorClass, True)
+    endif
   else
-    SetObjectiveCompleted(ShipObjective_ReactorClass, False)
+    if IsObjectiveCompleted(ShipObjective_ReactorClass)
+      SetObjectiveCompleted(ShipObjective_ReactorClass, False)
+    endif
   endif
 
   UpdateObjectiveValue(ObjectiveValue_01, Mission.Objective01, ShipObjective_01, Mission.ObjectiveTarget01)
@@ -279,13 +309,15 @@ Function UpdateObjectiveValue(GlobalVariable value, Message objectiveType, Int o
   if(objectiveType != None)
     Astroneer:Pack consts = (AstroneerParent as ScriptObject) as Astroneer:Pack
 
-    value.SetValue(0) ;set to 0 since we are using mod
     Float val = AstroneerParent.GetObjectiveValue(ContractShip, objectiveType)
-    Trace("Updating objective " + objectiveType + " to " + val)
-    if objectiveType == consts.ObjectiveMass
-      ModObjectiveGlobal(val, value, objective, target, False, True, True, True)
-    else
-      ModObjectiveGlobal(val, value, objective, target, True, True, True, True)
+    if value.GetValue() != val
+      value.SetValue(0) ;set to 0 since we are using mod
+      Trace("Updating objective " + objectiveType + " to " + val)
+      if objectiveType == consts.ObjectiveMass
+        ModObjectiveGlobal(val, value, objective, target, False, True, False, True)
+      else
+        ModObjectiveGlobal(val, value, objective, target, True, True, False, True)
+      endif
     endif
   endif
 EndFunction

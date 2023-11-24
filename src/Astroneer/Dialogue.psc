@@ -14,6 +14,8 @@ Function ModifyContractShip(ObjectReference speaker)
   Keyword CannotBeModified = Game.GetForm(0x003413f3) as Keyword
   pq.AtlasWorkshopMode = True
 
+  mission.ContractShip.Disable(False)
+
   if pq.BuilderDisabledShips == None
     pq.BuilderDisabledShips = new spaceshipreference[0]
   endif
@@ -65,11 +67,12 @@ Function AbandonContract(ObjectReference speaker)
   GetMission().MissionFailed()
   GetMission().Stop()
   GetMission().Reset()
-  GetMission().MissionParent.DebugResetMissions()
+  GetMission().MissionParent.ResetMissions(True, False, None, True)
 EndFunction
 
 Function ResetMissions(ObjectReference speaker)
-  GetMission().MissionParent.DebugResetMissions()
+  Trace("ResetMissions")
+  GetMission().MissionParent.ResetMissions(True, False, None, True)
 EndFunction
 
 Actor Function GetAria()

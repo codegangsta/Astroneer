@@ -51,11 +51,11 @@ console::
 
 load_save::
 	# sfc "LoadGame CleanMBSave" # cleanish save
-	# sfc "LoadGame ref_save_1" # cleanish save
+	sfc "LoadGame ref_save_1" # cleanish save
 	# sfc "LoadGame ref_save_2" # intercom
 	# sfc "LoadGame ref_save_3" # space
 	# sfc "LoadGame ref_save_4" # research
-	sfc "LoadGame ref_save_5" # mission testing
+	# sfc "LoadGame ref_save_5" # mission testing
 	# sfc "LoadGame ref_save_6" # bugged luxury
 
 stop_game:

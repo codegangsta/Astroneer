@@ -19,17 +19,10 @@ Function PrintCurrentShipObjectives() global
   endif
 
   DebugTrace("Current Ship " + playerShip)
-  DebugTrace("=Interior==============================================")
-  Keyword interior = Game.GetForm(0x000055e9) as Keyword
-  DebugTrace("Linked Interior " + playerShip.GetRefsLinkedToMe(interior, None))
-
-  return
-
-  DebugTrace("Current Ship " + playerShip)
   DebugTrace("=Objectives==============================================")
   DebugTrace("Reactor Class " + playerShip.GetReactorClassKeyword())
   DebugTrace("ObjectiveCargo " + pq.GetObjectiveValue(playerShip, consts.ObjectiveCargo))
-  DebugTrace("ObjectiveCrewSlots " + pq.GetObjectiveValue(playerShip, consts.ObjectiveCrewSlots))
+  DebugTrace("ObjectivePassengerSlots " + pq.GetObjectiveValue(playerShip, consts.ObjectivePassengerSlots))
   DebugTrace("ObjectiveEnginePower " + pq.GetObjectiveValue(playerShip, consts.ObjectiveEnginePower))
   DebugTrace("ObjectiveFuel " + pq.GetObjectiveValue(playerShip, consts.ObjectiveFuel))
   DebugTrace("ObjectiveGravJumpRange " + pq.GetObjectiveValue(playerShip, consts.ObjectiveGravJumpRange))
@@ -62,7 +55,7 @@ Function DebugReadyMission() global
   MissionTypeShipContract.SendStoryEvent(None, None, None, 0, 0)
 EndFunction
 
-Function DebugAcceptMission() global
+Function DebugAcceptMiss0ion() global
   Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
   Astroneer:ShipContractMissionScript mission = pq.AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
 

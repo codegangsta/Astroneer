@@ -59,7 +59,7 @@ EndGroup
 
 Group Objectives
   Message Property ObjectiveCargo Auto Const Mandatory
-  Message Property ObjectiveCrewSlots Auto Const Mandatory
+  Message Property ObjectivePassengerSlots Auto Const Mandatory
   Message Property ObjectiveEnginePower Auto Const Mandatory
   Message Property ObjectiveFuel Auto Const Mandatory
   Message Property ObjectiveGravJumpRange Auto Const Mandatory

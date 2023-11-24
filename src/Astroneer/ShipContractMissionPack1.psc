@@ -12,7 +12,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ma1.Difficulty = p.DifficultyClassA
   ma1.RewardCredits = 4000
   ma1.Objective01 = p.ObjectiveMass
-  ma1.ObjectiveTarget01 = 700
+  ma1.ObjectiveTarget01 = 500
   ma1.Objective02 = p.ObjectiveShieldHealth
   ma1.ObjectiveTarget02 = 375
   ma1.Objective03 = p.ObjectiveWeaponPowerEnergy
@@ -47,16 +47,17 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ma3.ShipType = p.ShipTypeLuxury
   ma3.Difficulty = p.DifficultyClassA
   ma3.RewardCredits = 6000
-  ma3.Objective01 = p.ObjectiveCrewSlots
-  ma3.ObjectiveTarget01 = 8
+  ma3.Objective01 = p.ObjectivePassengerSlots
+  ma3.ObjectiveTarget01 = 4
   ma3.Objective02 = p.ObjectiveHabs
   ma3.ObjectiveTarget02 = 4
+  ;TODO:Figure out a better
   ma3.Objective03 = p.ObjectiveShieldHealth
-  ma3.ObjectiveTarget03 = 400
+  ma3.ObjectiveTarget03 = 375
   ma3.Objective04 = p.ObjectiveWindows
-  ma3.ObjectiveTarget04 = 3
+  ma3.ObjectiveTarget04 = 4
   ma3.Objective05 = p.ObjectiveMass
-  ma3.ObjectiveTarget05 = 800
+  ma3.ObjectiveTarget05 = 500
 
   ;= Class A Explorer Mission ======================================
   Astroneer:Pack:Mission ma4 = new Astroneer:Pack:Mission
@@ -145,7 +146,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   mb4.ShipType = p.ShipTypeLuxury
   mb4.Difficulty = p.DifficultyClassB
   mb4.RewardCredits = 7000
-  mb4.Objective01 = p.ObjectiveCrewSlots
+  mb4.Objective01 = p.ObjectivePassengerSlots
   mb4.ObjectiveTarget01 = 5
   mb4.Objective02 = p.ObjectiveHabs
   mb4.ObjectiveTarget02 = 2
@@ -217,7 +218,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   mc4.ShipType = p.ShipTypeLuxury
   mc4.Difficulty = p.DifficultyClassC
   mc4.RewardCredits = 9000
-  mc4.Objective01 = p.ObjectiveCrewSlots
+  mc4.Objective01 = p.ObjectivePassengerSlots
   mc4.ObjectiveTarget01 = 6
   mc4.Objective02 = p.ObjectiveHabs
   mc4.ObjectiveTarget02 = 3
