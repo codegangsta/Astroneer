@@ -12,26 +12,26 @@ scene_19_questions: {
 		{
 			type: #consts.ActionPlayerDialogue
 			choices: [
-				{
-					// Intercom
-					topic: "17_PlayerInquiry"
-				},
+				// {
+				// 	// Intercom
+				// 	topic: "17_PlayerInquiry"
+				// },
 				{
 					// Background
 					topic: "05_PlayerInquiry"
 				},
-				{
-					// About your work...
-					topic: "19b_PlayerInquiry"
-				},
-				{
-					// About your background...
-					topic: "19c_PlayerInquiry"
-				},
-				{
-					// About something personal...
-					topic: "19d_PlayerInquiry"
-				},
+				// {
+				// 	// About your work...
+				// 	topic: "19b_PlayerInquiry"
+				// },
+				// {
+				// 	// About your background...
+				// 	topic: "19c_PlayerInquiry"
+				// },
+				// {
+				// 	// About something personal...
+				// 	topic: "19d_PlayerInquiry"
+				// },
 			]
 		},
 	]
