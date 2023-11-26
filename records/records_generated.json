@@ -706,22 +706,22 @@
                             ],
                             "responses": [
                                 {
-                                    "text": "Whoa, an intercom call? That's a rare vintage. Aria here—your ship-building maestro and Atlas Astronautics' semi-official welcome wagon."
+                                    "text": "There's the captain everyone's been talking about! I'm Aria, I'll be your design lead for all ship contracts here at Atlas"
                                 },
                                 {
-                                    "text": "Here’s the deal: I supply ship parts, you make them awesome. Match the specs, dazzle me."
+                                    "text": "Let's talk ship. You're about to dive into the nuts and bolts of starship customization."
                                 },
                                 {
-                                    "text": "Starting out, our parts bin isn't exactly a treasure trove. But hey, do some research, and we'll get you the shiny stuff."
+                                    "text": "I'll pull the bare bones into the landing pad back there, and you put the soul into the machine. Match the client's requirements, and we're golden."
                                 },
                                 {
-                                    "text": "Stuck or curious? Ping me. I'm like a shipbuilding oracle, but with more jokes and less cryptic mumbo jumbo."
+                                    "text": "Currently, our parts bin isn't exactly a treasure trove. But hey, help us some research projects, and we'll get you the shiny stuff."
                                 },
                                 {
-                                    "text": "I'm dubbing you 'Cap'. Short, sweet, and saves time. I mean, 'Esteemed Shipwright' is a bit of a mouthful, right?"
+                                    "text": "I hear you're quite the pilot. So I'm calling you 'Cap' from here on out! Beats saying 'O Great Shipbuilder' every time, right?"
                                 },
                                 {
-                                    "text": "Okay, Cap, Aria out. Don't be a stranger, and keep your eyes on the prize - or, you know, the mission board."
+                                    "text": "Alright, Cap. Let's get to work!"
                                 }
                             ]
                         }
@@ -749,11 +749,6 @@
                     "name": "Intro Dialogue",
                     "type": 0,
                     "topic": "01_AriaIntro"
-                },
-                {
-                    "name": "Aria Funny Greetings",
-                    "type": 0,
-                    "topic": "02_AriaGreetingFunny"
                 },
                 {
                     "name": "Aria Greeting",
@@ -854,238 +849,6 @@
                             "responses": [
                                 {
                                     "text": "Great to see you! What's our design mission this time?"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "02_AriaGreetingFunny",
-                    "speaker": "AriaCollins",
-                    "startScene": "MAIN_topics",
-                    "infos": [
-                        {
-                            "id": "02_AriaGreetingFunny01",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Hello from Aria's isolation station! If I start making spaceship noises, just go with it."
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
-                                }
-                            ]
-                        },
-                        {
-                            "id": "02_AriaGreetingFunny02",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Atlas’s remote ship designer here, where my biggest debate is talking to the toaster or the TV. What’s your crisis?"
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
-                                }
-                            ]
-                        },
-                        {
-                            "id": "02_AriaGreetingFunny03",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Day 47 in the apartment wilderness, and I've started assigning starship roles to my furniture. What can I do for you?"
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
-                                }
-                            ]
-                        },
-                        {
-                            "id": "02_AriaGreetingFunny04",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Reporting from Fort Couch Cushion. If I don't design something soon, I might start crafting a spaceship out of pillows. Help?"
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
-                                }
-                            ]
-                        },
-                        {
-                            "id": "02_AriaGreetingFunny05",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Aria’s remote work hub, where the space adventures are imaginary, but the boredom is real. Got any projects to save me?"
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
-                                }
-                            ]
-                        },
-                        {
-                            "id": "02_AriaGreetingFunny06",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Hey, Cap! Ready to swap my solo monologue for some actual dialogue. What’s on the drawing board?"
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
-                                }
-                            ]
-                        },
-                        {
-                            "id": "02_AriaGreetingFunny07",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Greetings from my personal space dock – also known as the living room. Let's brainstorm before I start chatting with the ceiling fan."
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
-                                }
-                            ]
-                        },
-                        {
-                            "id": "02_AriaGreetingFunny08",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Stir-crazy ship designer Aria here, currently debating space ethics with my reflection. What's our mission?"
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
-                                }
-                            ]
-                        },
-                        {
-                            "id": "02_AriaGreetingFunny09",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Shuttle commander of the S.S. Sofa at your service. Shall we embark on a design journey today?"
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
-                                }
-                            ]
-                        },
-                        {
-                            "id": "02_AriaGreetingFunny10",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Aria, reporting from the homefront! I'm one cup of coffee away from teaching my plant astrophysics. What's on the agenda?"
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
-                                }
-                            ]
-                        },
-                        {
-                            "id": "02_AriaGreetingFunny11",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Your trusty starship engineer, now doubling as an apartment explorer. Found anything interesting out there in the real world?"
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
-                                }
-                            ]
-                        },
-                        {
-                            "id": "02_AriaGreetingFunny12",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Broadcasting live from Aria’s space station (aka my kitchen). Let's talk ships before I start making rocket ships out of cutlery."
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
-                                }
-                            ]
-                        },
-                        {
-                            "id": "02_AriaGreetingFunny13",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Who's there? Oh, just me, Aria, chatting with the door again. Let's focus on something productive, shall we?"
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
-                                }
-                            ]
-                        },
-                        {
-                            "id": "02_AriaGreetingFunny14",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Mission control (aka my window seat) to Cap. I'm ready for some actual work before I start mapping constellations in my coffee."
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
-                                }
-                            ]
-                        },
-                        {
-                            "id": "02_AriaGreetingFunny15",
-                            "flags": "01",
-                            "responses": [
-                                {
-                                    "text": "Welcome to Aria's interstellar talk show, where the guest list is... well, nonexistent. Let's make some spaceship magic!"
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetRandomPercent",
-                                    "lessThanOrEqualTo": 3.0
                                 }
                             ]
                         }
@@ -2430,7 +2193,7 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Credits transferred. Aria signing off."
+                                    "text": "Just transferred your credits. Great working with you, Cap."
                                 }
                             ]
                         },
@@ -2439,7 +2202,7 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Payment made. Until next time, Cap."
+                                    "text": "Credits are on their way to your account. Until we meet again."
                                 }
                             ]
                         },
@@ -2448,7 +2211,7 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Your reward's been sent. Aria out."
+                                    "text": "Payment's been sent out. Fantastic job on this one."
                                 }
                             ]
                         },
@@ -2457,7 +2220,7 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Job well done. Credits in your account. Catch you later."
+                                    "text": "Nice job! Your credits should be in your account any moment now."
                                 }
                             ]
                         },
@@ -2466,7 +2229,7 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Contract complete, payment processed. Nice doing business with you, Cap."
+                                    "text": "Contract's all wrapped up, and so is your payment. Looking forward to the next one."
                                 }
                             ]
                         },
@@ -2475,7 +2238,7 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Signing off with your credits on the way. Stay stellar, Cap."
+                                    "text": "Your credits are speeding your way. Thanks for the stellar work!"
                                 }
                             ]
                         },
@@ -2484,7 +2247,7 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "That's a wrap on this one. Your pay's been sorted. Out for now."
+                                    "text": "All done here. Your payment's been processed. Catch you on the next mission."
                                 }
                             ]
                         },
@@ -2493,7 +2256,7 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Mission accomplished, reward sent. Aria out until the next call."
+                                    "text": "Reward sent, mission accomplished. You did great, Cap."
                                 }
                             ]
                         },
@@ -2502,7 +2265,7 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Credits are en route. Good work, Cap. Signing off."
+                                    "text": "Credits are on the transfer. Thanks for your hard work."
                                 }
                             ]
                         },
@@ -2511,7 +2274,7 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Contract closed and paid. Keep an eye out for more. Aria out."
+                                    "text": "That's it for this contract. Your payment's in the pipeline. See you around, Cap."
                                 }
                             ]
                         }

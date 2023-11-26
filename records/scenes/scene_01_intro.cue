@@ -35,12 +35,12 @@ scene_01_intro: {
 						},
 					]
 					responses: [
-						{text: "Whoa, an intercom call? That's a rare vintage. Aria here—your ship-building maestro and Atlas Astronautics' semi-official welcome wagon."},
-						{text: "Here’s the deal: I supply ship parts, you make them awesome. Match the specs, dazzle me."},
-						{text: "Starting out, our parts bin isn't exactly a treasure trove. But hey, do some research, and we'll get you the shiny stuff."},
-						{text: "Stuck or curious? Ping me. I'm like a shipbuilding oracle, but with more jokes and less cryptic mumbo jumbo."},
-						{text: "I'm dubbing you 'Cap'. Short, sweet, and saves time. I mean, 'Esteemed Shipwright' is a bit of a mouthful, right?"},
-						{text: "Okay, Cap, Aria out. Don't be a stranger, and keep your eyes on the prize - or, you know, the mission board."},
+						{text: "There's the captain everyone's been talking about! I'm Aria, I'll be your design lead for all ship contracts here at Atlas"},
+						{text: "Let's talk ship. You're about to dive into the nuts and bolts of starship customization."},
+						{text: "I'll pull the bare bones into the landing pad back there, and you put the soul into the machine. Match the client's requirements, and we're golden."},
+						{text: "Currently, our parts bin isn't exactly a treasure trove. But hey, help us some research projects, and we'll get you the shiny stuff."},
+						{text: "I hear you're quite the pilot. So I'm calling you 'Cap' from here on out! Beats saying 'O Great Shipbuilder' every time, right?"},
+						{text: "Alright, Cap. Let's get to work!"},
 					]
 				},
 			]

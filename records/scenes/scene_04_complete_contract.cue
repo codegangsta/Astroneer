@@ -193,16 +193,16 @@ scene_04_complete_contract: {
 				prefix: "04_AriaClosing"
 				flags:  #consts.InfoFlagsRandom
 				texts: [
-					"Credits transferred. Aria signing off.",
-					"Payment made. Until next time, Cap.",
-					"Your reward's been sent. Aria out.",
-					"Job well done. Credits in your account. Catch you later.",
-					"Contract complete, payment processed. Nice doing business with you, Cap.",
-					"Signing off with your credits on the way. Stay stellar, Cap.",
-					"That's a wrap on this one. Your pay's been sorted. Out for now.",
-					"Mission accomplished, reward sent. Aria out until the next call.",
-					"Credits are en route. Good work, Cap. Signing off.",
-					"Contract closed and paid. Keep an eye out for more. Aria out.",
+					"Just transferred your credits. Great working with you, Cap.",
+					"Credits are on their way to your account. Until we meet again.",
+					"Payment's been sent out. Fantastic job on this one.",
+					"Nice job! Your credits should be in your account any moment now.",
+					"Contract's all wrapped up, and so is your payment. Looking forward to the next one.",
+					"Your credits are speeding your way. Thanks for the stellar work!",
+					"All done here. Your payment's been processed. Catch you on the next mission.",
+					"Reward sent, mission accomplished. You did great, Cap.",
+					"Credits are on the transfer. Thanks for your hard work.",
+					"That's it for this contract. Your payment's in the pipeline. See you around, Cap.",
 				]
 			}}).out
 		},
