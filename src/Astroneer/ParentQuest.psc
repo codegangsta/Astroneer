@@ -28,7 +28,7 @@ Group QuestData
   FormList Property AstroneerMBQuests Auto Const Mandatory
   FormList Property ShipNames Auto Const Mandatory
   Scene Property SceneMissionBoardIntro Auto Const Mandatory
-  ReferenceAlias Property AtlasIntercom Auto Const
+  ReferenceAlias Property AriaWall Auto Const
   ReferenceAlias Property Aria Auto Const
   spaceshipreference[] Property ShipCollection Auto
   Perk Property AriaFullDiscountPerk Auto Const Mandatory
@@ -88,37 +88,40 @@ EndEvent
 Function InitIntercom()
   Trace("InitIntercom")
   Cell spaceport = Game.GetForm(0x00014cb3) as Cell
-  Activator intercomForm = Game.GetForm(0x02000843) as Activator
+  Activator wallForm = Game.GetForm(0x00138911) as Activator
   ActorBase ariaForm = Game.GetForm(0x02000835) as ActorBase
 
   if (spaceport != None)
-    if (spaceport.IsLoaded() && !AtlasIntercom.IsFilled())
-      ObjectReference intercom = Game.GetPlayer().PlaceAtMe(intercomForm, 1, True, False, False, None, None, True)
-      intercom.SetPosition(-828.62, 1603.28, -165.53)
-      intercom.SetAngle(-0.00, -0.00, -137.15)
-      Trace("Created intercom and setting ref " + intercom)
-      AtlasIntercom.ForceRefTo(intercom)
+    if (spaceport.IsLoaded() && !AriaWall.IsFilled())
+      ObjectReference wall = Game.GetPlayer().PlaceAtMe(wallForm, 1, True, False, False, None, None, True)
+      ; TODO: Make this a marker
+      wall.SetPosition(-805.00, 1572.85, -163.54)
+      wall.SetAngle(0, 0, 0)
+      Trace("Created wall and setting ref " + wall)
+      AriaWall.ForceRefTo(wall)
+      ;ariaRef.SetPosition(-822.47, 1579.02, -161.57)
     endif
 
     if (spaceport.IsLoaded() && Aria.GetActorReference() == None)
-      Actor ariaRef = AtlasIntercom.GetReference().PlaceActorAtMe(ariaForm, 1, None, True, False, False, None, True)
-      ariaRef.SetPosition(-822.47, 1579.02, -161.57)
+      Actor ariaRef = AriaWall.GetReference().PlaceActorAtMe(ariaForm, 1, None, True, False, False, None, True)
       Trace("Created aria and setting ref " + ariaRef)
       Aria.ForceRefTo(ariaRef)
+      ariaRef.MoveToFurniture(AriaWall.GetReference())
     endif
 
-    ; Make sure aria is in the right place every time we load into the spaceport
-    ;if (spaceport.IsLoaded())
-    ;  PlaceAria()
-    ;endif
+    if (spaceport.IsLoaded())
+      PlaceAria()
+    endif
   endif
 EndFunction
 
 ; Dirty hack to get aria to appear near the intercom
 Function PlaceAria()
+  Trace("PlaceAria")
   Actor ariaRef = Aria.GetActorReference()
-  ariaRef.SetPosition(-828.8, 1603.2, -165.8)
-  ariaRef.SetAlpha(1.0, False)
+  AriaWall.GetReference().SetPosition(-805.00, 1572.85, -163.54)
+  AriaWall.GetReference().SetAngle(0, 0, 0)
+  ariaRef.MoveToFurniture(AriaWall.GetReference())
 EndFunction
 
 Event Actor.OnPlayerLoadGame(Actor akActor)
@@ -147,6 +150,13 @@ Function AddMissions()
   GlobalVariable MissionCompletedShipContract = Game.GetForm(0x02000802) as GlobalVariable
   Keyword MissionTypeShipContract = Game.GetForm(0x02000803) as Keyword
 
+  ForEach MissionParentScript:MissionType missionType in MB_Parent.MissionTypes
+    if missionType.missionTypeKeyword == MissionTypeShipContract
+      Trace("Mission Type already exists: " + missionType)
+      return
+    endif
+  EndForEach
+
   MissionParentScript:MissionType shipContract = new MissionParentScript:MissionType
   shipContract.missionTypeKeyword = MissionTypeShipContract
   shipContract.MissionCompletedCount = MissionCompletedShipContract
@@ -163,7 +173,7 @@ Function AddMissions()
   Trace("Loading mission packs...")
   LoadMissionPacks()
 
-  MB_Parent.ResetMissions(True, False, None, True)
+  ResetMissionBoard()
 EndFunction
 
 Function LoadMissionPacks()
@@ -203,8 +213,16 @@ spaceshipreference Function AddContractShip(Astroneer:Pack:Mission m)
 EndFunction
 
 Function RemoveContractShip(spaceshipreference ship, Bool addToCollection)
+  ; TODO: This needs to be a reference collection alias
+  if (addToCollection)
+    if(ShipCollection == None)
+      ShipCollection = new spaceshipreference[0]
+    endif
+    ShipCollection.Add(ship)
+  endif
+
   Trace("Removing ship " + ship)
-  PlayerShipQuest.RemovePlayerShip(ship)
+  Game.RemovePlayerOwnedShip(ship)
   ship.RemoveKeyword(CannotBeSoldShipKeyword)
   ship.RemoveKeyword(CannotBeHomeShipKeyword)
   ship.RemoveKeyword(CannotBeCountedAgainstMaxShipsKeyword)
@@ -212,12 +230,6 @@ Function RemoveContractShip(spaceshipreference ship, Bool addToCollection)
   ship.SetValue(SpaceshipRegistration, 0.0)
   ship.DisableWithTakeoffOrLandingNoWait()
 
-  if (addToCollection)
-    if(ShipCollection == None)
-      ShipCollection = new spaceshipreference[0]
-    endif
-    ShipCollection.Add(ship)
-  endif
 EndFunction
 
 Function SetAllPartPowers(spaceshipreference ship, Int power)
@@ -383,6 +395,24 @@ Astroneer:Pack:Mission Function GenerateMission()
   endif
   
   return mission
+EndFunction
+
+Function ResetMissionBoard()
+  Trace("ResetMissionBoard")
+  Keyword MissionTypeShipContract = Game.GetForm(0x02000803) as Keyword
+  Int i = 0
+  While i < AstroneerMBQuests.GetSize()
+    Quest mission = AstroneerMBQuests.GetAt(i) as Quest
+    if mission.GetStage() > 5
+      ; Return early if there is a mission that is in progress
+      return
+    endif
+    if mission.IsRunning()
+      mission.Stop()
+    endif
+    i += 1
+  EndWhile
+  MissionTypeShipContract.SendStoryEvent(None, None, None, 0, 0)
 EndFunction
 
 ObjectReference Function GetLandingMarker()

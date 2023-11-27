@@ -14,8 +14,6 @@ Function ModifyContractShip(ObjectReference speaker)
   Keyword CannotBeModified = Game.GetForm(0x003413f3) as Keyword
   pq.AtlasWorkshopMode = True
 
-  mission.ContractShip.Disable(False)
-
   if pq.BuilderDisabledShips == None
     pq.BuilderDisabledShips = new spaceshipreference[0]
   endif
@@ -67,12 +65,13 @@ Function AbandonContract(ObjectReference speaker)
   GetMission().MissionFailed()
   GetMission().Stop()
   GetMission().Reset()
-  GetMission().MissionParent.ResetMissions(True, False, None, True)
+  Astroneer:ParentQuest pq = GetOwningQuest() as Astroneer:ParentQuest
+  pq.ResetMissionBoard()
 EndFunction
 
 Function ResetMissions(ObjectReference speaker)
-  Trace("ResetMissions")
-  GetMission().MissionParent.ResetMissions(True, False, None, True)
+  Astroneer:ParentQuest pq = GetOwningQuest() as Astroneer:ParentQuest
+  pq.ResetMissionBoard()
 EndFunction
 
 Actor Function GetAria()

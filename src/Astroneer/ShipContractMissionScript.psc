@@ -129,12 +129,6 @@ Function StageDesign()
   Trace("StageDesign")
 
   Self.ContractShip = AstroneerParent.AddContractShip(Mission)
-  (Self.GetAlias(20) as ReferenceAlias).ForceRefTo(ContractShip)
-  (Self.GetAlias(21) as LocationAlias).ClearAndRefillAlias()
-  (Self.GetAlias(22) as ReferenceAlias).ClearAndRefillAlias()
-
-  ; Block activation for the pilot seat
-  (Self.GetAlias(22) as ReferenceAlias).GetReference().BlockActivation(True, True)
 
   Actor player = Game.GetPlayer()
   Self.RegisterForRemoteEvent(player as ScriptObject, "OnPlayerModifiedShip")
@@ -183,8 +177,13 @@ Function StageFailed()
 
   Actor player = Game.GetPlayer()
   Self.UnRegisterForRemoteEvent(player as ScriptObject, "OnPlayerModifiedShip")
+  Self.UnRegisterForRemoteEvent(ContractShip as ObjectReference, "OnUnload")
 
-  AstroneerParent.RemoveContractShip(Self.ContractShip, False)
+  (Self.GetAlias(22) as ReferenceAlias).GetReference().BlockActivation(False, False)
+  (Self.GetAlias(20) as ReferenceAlias).Clear()
+  (Self.GetAlias(21) as LocationAlias).Clear()
+  (Self.GetAlias(22) as ReferenceAlias).Clear()
+  AstroneerParent.RemoveContractShip(Self.ContractShip, True)
   Self.ContractShip = None
 EndFunction
 
@@ -193,6 +192,8 @@ EndFunction
 
 Function FillRef(ReferenceAlias akAlias, Message akMessage)
   Trace("FillRef " + akAlias + " " + akMessage)
+  akAlias.TryToDelete()
+
   ObjectReference item = Game.GetPlayer().PlaceAtMe(TextReplacementForm, 1, True, True, False, None, None, False)
   akAlias.ForceRefTo(item)
 
@@ -206,7 +207,8 @@ EndFunction
 
 Event Actor.OnPlayerModifiedShip(Actor akActor, spaceshipreference akShip)
   if(akShip == Self.ContractShip)
-    EnableShip()
+    DisableShip()
+    EnableShip(False)
     UpdateObjectiveValues()
 
     if AllShipObjectivesComplete()
@@ -223,7 +225,7 @@ Event Actor.OnPlayerModifiedShip(Actor akActor, spaceshipreference akShip)
   endif
 EndEvent
 
-Function EnableShip()
+Function EnableShip(Bool withLanding)
   Trace("EnableShip")
   (Self.GetAlias(20) as ReferenceAlias).ForceRefTo(ContractShip)
   (Self.GetAlias(21) as LocationAlias).ClearAndRefillAlias()
@@ -232,8 +234,18 @@ Function EnableShip()
   (Self.GetAlias(22) as ReferenceAlias).GetReference().BlockActivation(True, True)
   ; Land the ship in New Atlantis and unlock it
   ContractShip.SetLinkedRef(AstroneerParent.ContractShipLandingMarker, AstroneerParent.PlayerShipQuest.LandingMarkerKeyword, False)
-  ContractShip.Enable(False)
+  if(withLanding)
+    ContractShip.EnableWithLandingNoWait()
+  else
+    ContractShip.Enable(False)
+  endif
   ContractShip.SetExteriorLoadDoorInaccessible(False)
+EndFunction
+
+Function DisableShip()
+  if(ContractShip != None)
+    ContractShip.Disable(False)
+  endif
 EndFunction
 
 Bool Function AllShipObjectivesComplete()
