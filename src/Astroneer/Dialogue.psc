@@ -3,6 +3,8 @@ ScriptName Astroneer:Dialogue extends TopicInfo
 Function CompleteContract(ObjectReference speaker)
   Astroneer:ShipContractMissionScript mission = GetMission()
   mission.MissionComplete()
+  Astroneer:ParentQuest pq = GetOwningQuest() as Astroneer:ParentQuest
+  pq.ResetMissionBoard()
 EndFunction
 
 Function ModifyContractShip(ObjectReference speaker)
