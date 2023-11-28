@@ -2,7 +2,8 @@ ScriptName Astroneer
 
 Function DebugInit() global
   DebugTrace("=DebugInit==============================================")
-  DebugPlaceShip()
+  Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  pq.ResetMissionBoard()
 EndFunction
 
 Function PrintCurrentShipObjectives() global
@@ -47,32 +48,10 @@ Function PrintCurrentShipObjectives() global
 EndFunction
 
 Function DebugPlaceShip() global
-  Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
-  spaceshipreference playerShip = Game.GetPlayerHomeSpaceShip()
-  spaceshipreference ship = pq.ShipCollection[0]
-
-  ; reset ship
-  DebugTrace("Resetting Ship")
-  ship.Reset(None)
-  ship.MoveNear(playerShip, playerShip.CONST_NearPosition_Random, playerShip.CONST_NearDistance_Close, playerShip.CONST_NearFacing_TotallyRandom)
-
-  ship.EnableWithGravJump()
-  DebugTrace("Autopilot AI " + ship.GetSpaceshipAutopilotAI().GetBaseObject())
-  DebugTrace("AI Enabled: " + ship.IsAIEnabled())
-  ship.EvaluatePackage(True)
-  Form XMarker = Game.GetFormFromFile(59, "Starfield.esm") ; #DEBUG_LINE_NO:1574
-  ObjectReference targetMarker = playership.PlaceAtMe(XMarker, 1, False, False, True, None, None, True) ; #DEBUG_LINE_NO:1575
-  targetMarker.MoveNear(playership, playership.CONST_NearPosition_Random, playership.CONST_NearDistance_VeryLong, playership.CONST_NearFacing_TotallyRandom) ; #DEBUG_LINE_NO:1576
-  targetMarker.SetPosition(targetMarker.X + 1000.0, targetMarker.Y, targetMarker.Z) ; #DEBUG_LINE_NO:1577
-  ship.PathToReference(targetMarker, 0.25, 0.25, 1.0, 1.0)
-
-  ;ship.GetSpaceshipAutopilotAI().ForceMovementSpeed(-1.0)
-  ;ship.SetAttackShipOnSight(True)
-  ;ship.SetUnconscious(True)
-  ;ship.SetUnconscious(False)
-
+  Astroneer:TrafficManager tm = Game.GetForm(0x020011D6) as Astroneer:TrafficManager
+  tm.SpawnShip()
 EndFunction
 
 Function DebugTrace(String Text) Global
-	Debug.Trace("[astroneer] " + Text, 0);;
+	Debug.Trace("[astroneer] " + Text, 0)
 EndFunction

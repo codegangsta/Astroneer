@@ -9,6 +9,8 @@ Group Keywords
   Keyword Property CannotBeCountedAgainstMaxShipsKeyword Auto Const Mandatory
   Keyword Property SBShip_Hab Auto Const Mandatory
   Keyword Property CurrentContractShipKeyword Auto Const Mandatory
+  ;Keyword Property GenericNoSpaceVOKeyword Auto Const Mandatory
+  ;Keyword Property PlayerShipAliasKeyword Auto Const Mandatory
 EndGroup
 
 Group ActorValues
@@ -31,6 +33,7 @@ Group QuestData
   ReferenceAlias Property AriaWall Auto Const
   ReferenceAlias Property Aria Auto Const
   spaceshipreference[] Property ShipCollection Auto
+  RefCollectionAlias Property CompletedShips Auto const mandatory
   Perk Property AriaFullDiscountPerk Auto Const Mandatory
   Perk Property AriaStandardDiscountPerk Auto Const Mandatory
   ObjectReference Property ContractShipLandingMarker Auto Const Mandatory
@@ -41,6 +44,10 @@ Group DialogueData
   Int Property DialogueReflectComplete = 0 Auto Conditional
   Int Property DialogueBadNewsComplete = 0 Auto Conditional
   Int Property DialogueBackgroundComplete = 0 Auto Conditional
+EndGroup
+
+Group Factions
+  FormList Property ShipFactions Auto Const Mandatory
 EndGroup
 
 spaceshipreference[] Property BuilderDisabledShips Auto
@@ -57,7 +64,7 @@ Event OnQuestInit()
   Self.RegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")
 
   AddMissions()
-  InitIntercom()
+  InitAria()
   AddPerks()
 EndEvent
 
@@ -82,11 +89,11 @@ EndEvent
 
 Event ObjectReference.OnCellLoad(ObjectReference akRef)
   Trace("OnCellLoad")
-  InitIntercom()
+  InitAria()
 EndEvent
 
-Function InitIntercom()
-  Trace("InitIntercom")
+Function InitAria()
+  Trace("InitAria")
   Cell spaceport = Game.GetForm(0x00014cb3) as Cell
   Activator wallForm = Game.GetForm(0x00138911) as Activator
   ActorBase ariaForm = Game.GetForm(0x02000835) as ActorBase
@@ -213,23 +220,21 @@ spaceshipreference Function AddContractShip(Astroneer:Pack:Mission m)
 EndFunction
 
 Function RemoveContractShip(spaceshipreference ship, Bool addToCollection)
-  ; TODO: This needs to be a reference collection alias
-  if (addToCollection)
-    if(ShipCollection == None)
-      ShipCollection = new spaceshipreference[0]
-    endif
-    ShipCollection.Add(ship)
+  if addToCollection
+    CompletedShips.AddRef(ship)
   endif
 
-  Trace("Removing ship " + ship)
-  Game.RemovePlayerOwnedShip(ship)
   ship.RemoveKeyword(CannotBeSoldShipKeyword)
   ship.RemoveKeyword(CannotBeHomeShipKeyword)
   ship.RemoveKeyword(CannotBeCountedAgainstMaxShipsKeyword)
   ship.RemoveKeyword(CurrentContractShipKeyword)
   ship.SetValue(SpaceshipRegistration, 0.0)
   ship.DisableWithTakeoffOrLandingNoWait()
+  PlayerShipQuest.RemovePlayerShip(ship)
 
+  ; Add it to a random faction
+  Faction shipFaction = ShipFactions.GetAt(Utility.RandomInt(0, ShipFactions.GetSize()-1)) as Faction
+  ship.AddToFaction(shipFaction)
 EndFunction
 
 Function SetAllPartPowers(spaceshipreference ship, Int power)
@@ -403,13 +408,12 @@ Function ResetMissionBoard()
   Int i = 0
   While i < AstroneerMBQuests.GetSize()
     Quest mission = AstroneerMBQuests.GetAt(i) as Quest
-    if mission.GetStage() > 5
+    if mission.IsRunning() && mission.GetStage() > 5
       ; Return early if there is a mission that is in progress
       return
     endif
-    if mission.IsRunning()
-      mission.Stop()
-    endif
+    mission.Stop()
+    mission.Reset()
     i += 1
   EndWhile
   MissionTypeShipContract.SendStoryEvent(None, None, None, 0, 0)

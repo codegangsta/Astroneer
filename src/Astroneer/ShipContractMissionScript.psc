@@ -183,7 +183,7 @@ Function StageFailed()
   (Self.GetAlias(20) as ReferenceAlias).Clear()
   (Self.GetAlias(21) as LocationAlias).Clear()
   (Self.GetAlias(22) as ReferenceAlias).Clear()
-  AstroneerParent.RemoveContractShip(Self.ContractShip, True)
+  AstroneerParent.RemoveContractShip(Self.ContractShip, False)
   Self.ContractShip = None
 EndFunction
 

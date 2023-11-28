@@ -1,6 +1,6 @@
 include .env
 
-all: remote_sync remote_compile install reload_scripts
+all: remote_sync remote_compile install reload_scripts debug_init
 
 ## Perform an rsync to a running WSL instance on my windows computer
 remote_sync::
@@ -23,14 +23,18 @@ clean::
 # Reloads scripts in game
 reload_scripts::
 	sfc 'ReloadScript "Astroneer"'
-	# sfc 'ReloadScript "Astroneer:ParentQuest"'
-	# sfc 'ReloadScript "Astroneer:Pack"'
-	# sfc 'ReloadScript "Astroneer:ShipContractMissionScript"'
-	# sfc 'ReloadScript "Astroneer:ShipContractMissionPack1"'
-	# sfc 'ReloadScript "Astroneer:Dialogue"'
+	sfc 'ReloadScript "Astroneer:ParentQuest"'
+	sfc 'ReloadScript "Astroneer:Pack"'
+	sfc 'ReloadScript "Astroneer:ShipContractMissionScript"'
+	sfc 'ReloadScript "Astroneer:ShipContractMissionPack1"'
+	sfc 'ReloadScript "Astroneer:Dialogue"'
+	sfc 'ReloadScript "Astroneer:TrafficManager"'
 
 place_ship::
 	sfc 'cgf "Astroneer.DebugPlaceShip"'
+
+debug_init::
+	sfc 'cgf "Astroneer.DebugInit"'
 
 # Tail logs
 tail::
@@ -43,11 +47,9 @@ console::
 load_save::
 	# sfc "LoadGame CleanMBSave" # cleanish save
 	# sfc "LoadGame ref_save_1" # cleanish save
-	# sfc "LoadGame ref_save_2" # testing aria placement
-	sfc "LoadGame ref_save_3" # space
-	# sfc "LoadGame ref_save_4" # research  
-	# sfc "LoadGame ref_save_5" # mission testing
-	# sfc "LoadGame ref_save_6" # bugged luxury
+	sfc "LoadGame ref_save_2" # testing aria placement
+	# sfc "LoadGame ref_save_3" # space
+	# sfc "LoadGame ref_save_4" # more contracts
 
 stop_game:
 	sfc "QuitGame"
