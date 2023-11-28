@@ -81,6 +81,7 @@ Group Objectives
   Message Property ObjectiveWeaponPowerParticle Auto Const Mandatory
   Message Property ObjectiveWeaponPowerPlasma Auto Const Mandatory
   Message Property ObjectiveWindows Auto Const Mandatory
+  Message Property ObjectiveMobility Auto Const Mandatory
 EndGroup
 
 ; Ship templates must be IDs instead of forms because the game

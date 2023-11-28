@@ -344,6 +344,23 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
     ActorValue Thrust = Game.GetForm(0x0000ACDC) as ActorValue
     return ship.GetValue(Thrust)
 
+  elseif (objectiveType == consts.ObjectiveMobility)
+    ; Mobility=Round ( 11.9*(Maneuvering Thrust / Mass)-47.6)
+
+    ; Manueverint thrust per power
+    ActorValue ManeuveringThrustAV = Game.GetForm(0x0000ACDE) as ActorValue
+    ActorValue ThrustAV = Game.GetForm(0x0000ACDC) as ActorValue
+    ActorValue ThrustPerPowerAV = Game.GetForm(0x000FC913) as ActorValue
+    ActorValue engineAV = Game.GetForm(0x0000ACD9) as ActorValue
+
+    Float enginePower = 1.0 / ship.GetValue(engineAV)
+    Float mass = ship.GetValue(SpaceshipMass)
+    Float maneuveringThrust = ship.GetValue(ManeuveringThrustAV)
+    Float thrust = ship.GetValue(ThrustAV)
+    Float thrustPerPower = ship.GetValue(ThrustPerPowerAV)
+    Float enginePowerPer = (thrustPerPower*enginePower) / thrust
+
+    return Math.Clamp(Math.Ceiling((11.9 * ((maneuveringThrust*enginePowerPer) / mass)) - 47.6), 0.0, 100.0)
   else
     return -1
   endif

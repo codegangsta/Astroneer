@@ -2,8 +2,7 @@ ScriptName Astroneer
 
 Function DebugInit() global
   DebugTrace("=DebugInit==============================================")
-  Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
-  pq.ResetMissionBoard()
+  PrintCurrentShipObjectives()
 EndFunction
 
 Function PrintCurrentShipObjectives() global
@@ -45,6 +44,7 @@ Function PrintCurrentShipObjectives() global
   DebugTrace("ObjectiveWeaponPowerParticle " + pq.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerParticle))
   DebugTrace("ObjectiveWeaponPowerPlasma " + pq.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerPlasma))
   DebugTrace("ObjectiveWindows " + pq.GetObjectiveValue(playerShip, consts.ObjectiveWindows))
+  DebugTrace("ObjectiveMobility " + pq.GetObjectiveValue(playerShip, consts.ObjectiveMobility))
 EndFunction
 
 

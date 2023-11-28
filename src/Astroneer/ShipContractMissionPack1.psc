@@ -51,9 +51,8 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ma3.ObjectiveTarget01 = 4
   ma3.Objective02 = p.ObjectiveHabs
   ma3.ObjectiveTarget02 = 4
-  ;TODO:Figure out a better
-  ma3.Objective03 = p.ObjectiveShieldHealth
-  ma3.ObjectiveTarget03 = 375
+  ma3.Objective03 = p.ObjectiveMobility
+  ma3.ObjectiveTarget03 = 70
   ma3.Objective04 = p.ObjectiveWindows
   ma3.ObjectiveTarget04 = 4
   ma3.Objective05 = p.ObjectiveMass
