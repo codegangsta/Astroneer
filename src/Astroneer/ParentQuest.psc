@@ -106,14 +106,14 @@ Function InitAria()
       wall.SetAngle(0, 0, 0)
       Trace("Created wall and setting ref " + wall)
       AriaWall.ForceRefTo(wall)
-      ;ariaRef.SetPosition(-822.47, 1579.02, -161.57)
     endif
 
-    if (spaceport.IsLoaded() && Aria.GetActorReference() == None)
+    if (spaceport.IsLoaded() && !Aria.IsFilled())
       Actor ariaRef = AriaWall.GetReference().PlaceActorAtMe(ariaForm, 1, None, True, False, False, None, True)
       Trace("Created aria and setting ref " + ariaRef)
       Aria.ForceRefTo(ariaRef)
       ariaRef.MoveToFurniture(AriaWall.GetReference())
+      ResetMissionBoard()
     endif
 
     if (spaceport.IsLoaded())
@@ -133,7 +133,7 @@ EndFunction
 
 Event Actor.OnPlayerLoadGame(Actor akActor)
   AddMissions()
-  InitIntercom()
+  InitAria()
   AddPerks()
   Self.UnregisterForAllMenuOpenCloseEvents()
   Self.RegisterForMenuOpenCloseEvent("SpaceshipEditorMenu")

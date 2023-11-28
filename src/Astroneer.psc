@@ -47,6 +47,7 @@ Function PrintCurrentShipObjectives() global
   DebugTrace("ObjectiveWindows " + pq.GetObjectiveValue(playerShip, consts.ObjectiveWindows))
 EndFunction
 
+
 Function DebugPlaceShip() global
   Astroneer:TrafficManager tm = Game.GetForm(0x020011D6) as Astroneer:TrafficManager
   tm.SpawnShip()
