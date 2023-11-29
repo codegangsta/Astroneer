@@ -1,5 +1,10 @@
 ScriptName Astroneer:ShipContractMissionPack1
 
+Message Function GetRandomHabObjective(FormList objectives) global
+  int index = Utility.RandomInt(0, objectives.GetSize() - 1)
+  return objectives.GetAt(index) as Message
+EndFunction
+
 Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
 
   Astroneer:Pack:Mission[] missions = new Astroneer:Pack:Mission[0]
@@ -13,14 +18,14 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ma1.RewardCredits = 4000
   ma1.Objective01 = p.ObjectiveMass
   ma1.ObjectiveTarget01 = 500
-  ma1.Objective02 = p.ObjectiveShieldHealth
-  ma1.ObjectiveTarget02 = 375
+  ma1.Objective02 = p.ObjectiveWeaponPowerBallistic
+  ma1.ObjectiveTarget02 = 6
   ma1.Objective03 = p.ObjectiveWeaponPowerEnergy
   ma1.ObjectiveTarget03 = 6
   ma1.Objective04 = p.ObjectiveWeaponPowerMissile
   ma1.ObjectiveTarget04 = 6
-  ma1.Objective05 = p.ObjectiveWeaponPowerBallistic
-  ma1.ObjectiveTarget05 = 6
+  ma1.Objective05 = GetRandomHabObjective(p.HabObjectivesFighter)
+  ma1.ObjectiveTarget05 = 1
 
   ;= Class A Hauler Mission ========================================
   Astroneer:Pack:Mission ma2 = new Astroneer:Pack:Mission
@@ -37,8 +42,8 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ma2.ObjectiveTarget03 = 400
   ma2.Objective04 = p.ObjectiveMass
   ma2.ObjectiveTarget04 = 1100
-  ma2.Objective05 = p.ObjectiveThrust
-  ma2.ObjectiveTarget05 = 18000
+  ma2.Objective05 = GetRandomHabObjective(p.HabObjectivesHauler)
+  ma2.ObjectiveTarget05 = 1
 
   ;= Class A Luxury Mission ========================================
   Astroneer:Pack:Mission ma3 = new Astroneer:Pack:Mission
@@ -52,11 +57,11 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ma3.Objective02 = p.ObjectiveHabs
   ma3.ObjectiveTarget02 = 4
   ma3.Objective03 = p.ObjectiveMobility
-  ma3.ObjectiveTarget03 = 70
+  ma3.ObjectiveTarget03 = 100
   ma3.Objective04 = p.ObjectiveWindows
   ma3.ObjectiveTarget04 = 4
-  ma3.Objective05 = p.ObjectiveMass
-  ma3.ObjectiveTarget05 = 500
+  ma3.Objective05 = GetRandomHabObjective(p.HabObjectivesLuxury)
+  ma3.ObjectiveTarget05 = 1
 
   ;= Class A Explorer Mission ======================================
   Astroneer:Pack:Mission ma4 = new Astroneer:Pack:Mission
@@ -66,15 +71,15 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ma4.Difficulty = p.DifficultyClassA
   ma4.RewardCredits = 5000
   ma4.Objective01 = p.ObjectiveGravJumpRange
-  ma4.ObjectiveTarget01 = 15
+  ma4.ObjectiveTarget01 = 16
   ma4.Objective02 = p.ObjectiveFuel
-  ma4.ObjectiveTarget02 = 2000
+  ma4.ObjectiveTarget02 = 280
   ma4.Objective03 = p.ObjectiveHull
-  ma4.ObjectiveTarget03 = 500
+  ma4.ObjectiveTarget03 = 450
   ma4.Objective04 = p.ObjectiveReactorPower
-  ma4.ObjectiveTarget04 = 250
-  ma4.Objective05 = p.ObjectiveWindows
-  ma4.ObjectiveTarget05 = 4
+  ma4.ObjectiveTarget04 = 16
+  ma4.Objective05 = GetRandomHabObjective(p.HabObjectivesExplorer)
+  ma4.ObjectiveTarget05 = 1
 
   ;= Class A Interceptor Mission ===================================
   Astroneer:Pack:Mission ma5 = new Astroneer:Pack:Mission
@@ -84,15 +89,15 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ma5.Difficulty = p.DifficultyClassA
   ma5.RewardCredits = 4800
   ma5.Objective01 = p.ObjectiveTopSpeed
-  ma5.ObjectiveTarget01 = 800
+  ma5.ObjectiveTarget01 = 150
   ma5.Objective02 = p.ObjectiveThrust
-  ma5.ObjectiveTarget02 = 350
-  ma5.Objective03 = p.ObjectiveMass
-  ma5.ObjectiveTarget03 = 650
-  ma5.Objective04 = p.ObjectiveWeaponPowerEM
-  ma5.ObjectiveTarget04 = 5
-  ma5.Objective05 = p.ObjectiveShieldPower
-  ma5.ObjectiveTarget05 = 350
+  ma5.ObjectiveTarget02 = 5000
+  ma5.Objective03 = p.ObjectiveMobility
+  ma5.ObjectiveTarget03 = 100
+  ma5.Objective04 = p.ObjectiveWeaponPowerMissile
+  ma5.ObjectiveTarget04 = 6
+  ma5.Objective05 = p.ObjectiveHabEngineering
+  ma5.ObjectiveTarget05 = 1
 
     ;= Class B Explorer Mission ======================================
   Astroneer:Pack:Mission mb1 = new Astroneer:Pack:Mission
@@ -241,9 +246,9 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
 
   ;missions.Add(ma1)
   ;missions.Add(ma2)
-  missions.Add(ma3)
-; missions.Add(ma4)
-; missions.Add(ma5)
+  ;missions.Add(ma3)
+  ;missions.Add(ma4)
+missions.Add(ma5)
 ; missions.Add(mb1)
 ; missions.Add(mb2)
 ; missions.Add(mb3)

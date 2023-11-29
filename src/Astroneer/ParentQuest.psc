@@ -229,12 +229,14 @@ Function RemoveContractShip(spaceshipreference ship, Bool addToCollection)
   ship.RemoveKeyword(CannotBeCountedAgainstMaxShipsKeyword)
   ship.RemoveKeyword(CurrentContractShipKeyword)
   ship.SetValue(SpaceshipRegistration, 0.0)
-  ship.DisableWithTakeoffOrLandingNoWait()
   PlayerShipQuest.RemovePlayerShip(ship)
-
+  ; Remove landing marker ref
+  ship.SetLinkedRef(None, PlayerShipQuest.LandingMarkerKeyword, False)
   ; Add it to a random faction
   Faction shipFaction = ShipFactions.GetAt(Utility.RandomInt(0, ShipFactions.GetSize()-1)) as Faction
   ship.AddToFaction(shipFaction)
+
+  ship.DisableWithTakeoffOrLandingNoWait()
 EndFunction
 
 Function SetAllPartPowers(spaceshipreference ship, Int power)

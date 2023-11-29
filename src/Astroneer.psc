@@ -2,7 +2,7 @@ ScriptName Astroneer
 
 Function DebugInit() global
   DebugTrace("=DebugInit==============================================")
-  PrintCurrentShipObjectives()
+  DebugRemoveShip()
 EndFunction
 
 Function PrintCurrentShipObjectives() global
@@ -17,8 +17,6 @@ Function PrintCurrentShipObjectives() global
   if mission.ContractShip != None
     playerShip = mission.ContractShip
   endif
-
-  DebugTrace("Price? " + playership.GetBaseObject().GetGoldValue())
 
   DebugTrace("Current Ship " + playerShip)
   DebugTrace("=Objectives==============================================")
@@ -71,6 +69,15 @@ EndFunction
 Function DebugPlaceShip() global
   Astroneer:TrafficManager tm = Game.GetForm(0x020011D6) as Astroneer:TrafficManager
   tm.SpawnShip()
+EndFunction
+
+Function DebugRemoveShip() global
+  sq_playershipscript playerShip = Game.GetForm(95394) as sq_playershipscript
+  Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+
+  ObjectReference marker = pq.ContractShipLandingMarker
+  ;TODO: Use a more specific keyword
+  DebugTrace(marker.FindAllReferencesWithKeyword(Game.GetForm(0x0249fb3) as Keyword, 100))
 EndFunction
 
 Function DebugTrace(String Text) Global

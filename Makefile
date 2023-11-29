@@ -44,12 +44,23 @@ tail::
 console::
 	@sfc
 
-load_save::
-	# sfc "LoadGame CleanMBSave" # cleanish save
-	sfc "LoadGame ref_save_1" # cleanish save
-	# sfc "LoadGame ref_save_2" # testing aria placement
-	# sfc "LoadGame ref_save_3" # space
-	# sfc "LoadGame ref_save_4" # more contracts
+save_1::
+	sfc "SaveGame ref_save_1"
+
+save_2::
+	sfc "SaveGame ref_save_2"
+
+save_3::
+	sfc "SaveGame ref_save_2"
+
+load_save_1::
+	sfc "LoadGame ref_save_1"
+
+load_save_2::
+	sfc "LoadGame ref_save_2"
+
+load_save_3::
+	sfc "LoadGame ref_save_3"
 
 stop_game:
 	sfc "QuitGame"

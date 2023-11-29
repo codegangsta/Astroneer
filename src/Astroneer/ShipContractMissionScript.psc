@@ -121,7 +121,6 @@ EndFunction
 
 Function StageAccepted()
   Trace("StageAccepted")
-  Self.SetActive(True)
   Self.SetObjectiveDisplayedAtTop(0)
 EndFunction
 
@@ -207,7 +206,7 @@ EndFunction
 
 Event Actor.OnPlayerModifiedShip(Actor akActor, spaceshipreference akShip)
   if(akShip == Self.ContractShip)
-    DisableShip()
+    ;DisableShip()
     EnableShip(False)
     UpdateObjectiveValues()
 
@@ -322,14 +321,12 @@ Function UpdateObjectiveValue(GlobalVariable value, Message objectiveType, Int o
     Astroneer:Pack consts = (AstroneerParent as ScriptObject) as Astroneer:Pack
 
     Float val = AstroneerParent.GetObjectiveValue(ContractShip, objectiveType)
-    if value.GetValue() != val
-      value.SetValue(0) ;set to 0 since we are using mod
-      Trace("Updating objective " + objectiveType + " to " + val)
-      if objectiveType == consts.ObjectiveMass
-        ModObjectiveGlobal(val, value, objective, target, False, True, False, True)
-      else
-        ModObjectiveGlobal(val, value, objective, target, True, True, False, True)
-      endif
+    value.SetValue(0) ;set to 0 since we are using mod
+    Trace("Updating objective " + objectiveType + " to " + val)
+    if objectiveType == consts.ObjectiveMass
+      ModObjectiveGlobal(val, value, objective, target, False, True, False, True)
+    else
+      ModObjectiveGlobal(val, value, objective, target, True, True, False, True)
     endif
   endif
 EndFunction

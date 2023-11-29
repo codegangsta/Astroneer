@@ -98,6 +98,14 @@ Group Objectives
   Message Property ObjectiveHabWorkshop Auto Const Mandatory
 EndGroup
 
+Group HabObjectives
+  FormList Property HabObjectivesExplorer Auto Const Mandatory
+  FormList Property HabObjectivesFighter Auto Const Mandatory
+  FormList Property HabObjectivesHauler Auto Const Mandatory
+  FormList Property HabObjectivesInterceptor Auto Const Mandatory
+  FormList Property HabObjectivesLuxury Auto Const Mandatory
+EndGroup
+
 Group HabTypes
   FormList Property HabTypeArmory Auto Const Mandatory
   FormList Property HabTypeBattleStations Auto Const Mandatory
