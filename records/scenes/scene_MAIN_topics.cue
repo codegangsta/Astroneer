@@ -31,6 +31,11 @@ scene_MAIN_topics: {
 					response: "MAIN_AriaModifyContractShipResponse"
 				},
 				{
+					// Modifying Contract Ship (Requirements met)
+					topic:    "MAIN_PlayerModifyContractShipB"
+					response: "MAIN_AriaModifyContractShipResponse"
+				},
+				{
 					// Modifying ships
 					topic:    "MAIN_PlayerModifyShips"
 					response: "MAIN_AriaModifyShipsResponse"
@@ -70,6 +75,21 @@ scene_MAIN_topics: {
 					},
 				]
 				texts: ["[Ship Builder] Let's get to work on that ship!"]
+			}}).out
+		},
+		{
+			id:      "MAIN_PlayerModifyContractShipB"
+			speaker: #consts.Player
+			infos:   (#SimpleInfos & {in: {
+				prefix: "MAIN_PlayerModifyContractShipB"
+				conditions: [
+					{
+						function: "GetStage"
+						quest:    "ShipContractMission"
+						equals:   30.0
+					},
+				]
+				texts: ["[Ship Builder] There's still some work to do on that ship!"]
 			}}).out
 		},
 		{

@@ -30,6 +30,7 @@ Function ModifyContractShip(ObjectReference speaker)
     i += 1
   EndWhile
 
+  mission.ContractShip.Disable(False)
   Game.GetPlayer().ShowHangarMenu(0, GetAria(), mission.ContractShip, False)
 EndFunction
 

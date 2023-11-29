@@ -437,6 +437,10 @@ begin
 					if condition.S['function'] = 'GetStage' then begin
 						SetElementEditValues(conditionRecord, 'CTDA - CTDA\Comparison Value', condition.S['equals']);
 						SetElementEditValues(conditionRecord, 'CTDA - CTDA\Parameter #1', GetEditValue(FindRecordByEditorID(condition.S['quest'], 'QUST')));
+
+						if condition.B['or'] then begin
+							SetElementEditValues(conditionRecord, 'CTDA - CTDA\Type', '10010000');
+						end;
 					end;
 
 					if condition.S['function'] = 'GetVMQuestVariable' then begin

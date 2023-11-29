@@ -34,6 +34,10 @@
                             "response": "MAIN_AriaModifyContractShipResponse"
                         },
                         {
+                            "topic": "MAIN_PlayerModifyContractShipB",
+                            "response": "MAIN_AriaModifyContractShipResponse"
+                        },
+                        {
                             "topic": "MAIN_PlayerModifyShips",
                             "response": "MAIN_AriaModifyShipsResponse"
                         },
@@ -78,6 +82,27 @@
                                     "function": "GetStage",
                                     "quest": "ShipContractMission",
                                     "equals": 20.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "MAIN_PlayerModifyContractShipB",
+                    "speaker": "",
+                    "infos": [
+                        {
+                            "id": "MAIN_PlayerModifyContractShipB01",
+                            "responses": [
+                                {
+                                    "text": "[Ship Builder] There's still some work to do on that ship!"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "function": "GetStage",
+                                    "quest": "ShipContractMission",
+                                    "equals": 30.0
                                 }
                             ]
                         }

@@ -65,6 +65,7 @@ package records
 					if function == "GetStage" {
 						quest:  string
 						equals: float
+						or?:    bool
 					}
 
 					if function == "GetVMQuestVariable" {
