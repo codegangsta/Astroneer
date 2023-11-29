@@ -46,8 +46,8 @@ console::
 
 load_save::
 	# sfc "LoadGame CleanMBSave" # cleanish save
-	# sfc "LoadGame ref_save_1" # cleanish save
-	sfc "LoadGame ref_save_2" # testing aria placement
+	sfc "LoadGame ref_save_1" # cleanish save
+	# sfc "LoadGame ref_save_2" # testing aria placement
 	# sfc "LoadGame ref_save_3" # space
 	# sfc "LoadGame ref_save_4" # more contracts
 

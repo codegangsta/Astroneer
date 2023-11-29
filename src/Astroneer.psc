@@ -18,6 +18,8 @@ Function PrintCurrentShipObjectives() global
     playerShip = mission.ContractShip
   endif
 
+  DebugTrace("Price? " + playership.GetBaseObject().GetGoldValue())
+
   DebugTrace("Current Ship " + playerShip)
   DebugTrace("=Objectives==============================================")
   DebugTrace("Reactor Class " + playerShip.GetReactorClassKeyword())
@@ -45,6 +47,11 @@ Function PrintCurrentShipObjectives() global
   DebugTrace("ObjectiveWeaponPowerPlasma " + pq.GetObjectiveValue(playerShip, consts.ObjectiveWeaponPowerPlasma))
   DebugTrace("ObjectiveWindows " + pq.GetObjectiveValue(playerShip, consts.ObjectiveWindows))
   DebugTrace("ObjectiveMobility " + pq.GetObjectiveValue(playerShip, consts.ObjectiveMobility))
+  DebugTrace("ObjectiveHabScienceLab " + pq.GetObjectiveValue(playerShip, consts.ObjectiveHabScienceLab))
+
+  ; TODO: Add these in
+  DebugTrace("ObjectiveCrewRating: " + playerShip.GetValue(Game.GetForm(0x00019080) as ActorValue))
+  DebugTrace("ObjectiveCrewSlots: " + playerShip.GetValue(Game.GetForm(0x002cc9ea) as ActorValue))
 EndFunction
 
 

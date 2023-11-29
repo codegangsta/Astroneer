@@ -345,9 +345,6 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
     return ship.GetValue(Thrust)
 
   elseif (objectiveType == consts.ObjectiveMobility)
-    ; Mobility=Round ( 11.9*(Maneuvering Thrust / Mass)-47.6)
-
-    ; Manueverint thrust per power
     ActorValue ManeuveringThrustAV = Game.GetForm(0x0000ACDE) as ActorValue
     ActorValue ThrustAV = Game.GetForm(0x0000ACDC) as ActorValue
     ActorValue ThrustPerPowerAV = Game.GetForm(0x000FC913) as ActorValue
@@ -359,11 +356,23 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
     Float thrust = ship.GetValue(ThrustAV)
     Float thrustPerPower = ship.GetValue(ThrustPerPowerAV)
     Float enginePowerPer = (thrustPerPower*enginePower) / thrust
-
-    return Math.Clamp(Math.Ceiling((11.9 * ((maneuveringThrust*enginePowerPer) / mass)) - 47.6), 0.0, 100.0)
+    return Math.Clamp(Math.Round((11.9 * ((maneuveringThrust*enginePowerPer) / mass)) - 47.6), 0.0, 100.0)
+    
+  elseif (objectiveType == consts.ObjectiveHabScienceLab)
+    return GetNumHabsByType(ship, consts.HabTypeScienceLab)
   else
     return -1
   endif
+EndFunction
+
+Int Function GetNumHabsByType(spaceshipreference ship, FormList habType)
+  Int count = 0
+  ForEach ObjectReference hab in ship.GetExteriorRefs(SBShip_Hab)
+    if habType.HasForm(hab.GetBaseObject())
+      count += 1
+    endif
+  EndForEach
+  return count
 EndFunction
 
 Float Function GetWeaponTypePower(spaceshipreference ship, Keyword type)
