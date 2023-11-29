@@ -82,11 +82,37 @@ Group Objectives
   Message Property ObjectiveWeaponPowerPlasma Auto Const Mandatory
   Message Property ObjectiveWindows Auto Const Mandatory
   Message Property ObjectiveMobility Auto Const Mandatory
+  Message Property ObjectiveHabArmory Auto Const Mandatory
+  Message Property ObjectiveHabBattleStations Auto Const Mandatory
+  Message Property ObjectiveHabBrig Auto Const Mandatory
+  Message Property ObjectiveHabCaptainsQuarters Auto Const Mandatory
+  Message Property ObjectiveHabCargo Auto Const Mandatory
+  Message Property ObjectiveHabComputerCore Auto Const Mandatory
+  Message Property ObjectiveHabControl Auto Const Mandatory
+  Message Property ObjectiveHabEngineering Auto Const Mandatory
+  Message Property ObjectiveHabInfirmary Auto Const Mandatory
+  Message Property ObjectiveHabLivingSpace Auto Const Mandatory
+  Message Property ObjectiveHabMessHall Auto Const Mandatory
   Message Property ObjectiveHabScienceLab Auto Const Mandatory
+  Message Property ObjectiveHabStorage Auto Const Mandatory
+  Message Property ObjectiveHabWorkshop Auto Const Mandatory
 EndGroup
 
 Group HabTypes
+  FormList Property HabTypeArmory Auto Const Mandatory
+  FormList Property HabTypeBattleStations Auto Const Mandatory
+  FormList Property HabTypeBrig Auto Const Mandatory
+  FormList Property HabTypeCaptainsQuarters Auto Const Mandatory
+  FormList Property HabTypeCargo Auto Const Mandatory
+  FormList Property HabTypeComputerCore Auto Const Mandatory
+  FormList Property HabTypeControl Auto Const Mandatory
+  FormList Property HabTypeEngineering Auto Const Mandatory
+  FormList Property HabTypeInfirmary Auto Const Mandatory
+  FormList Property HabTypeLivingSpace Auto Const Mandatory
+  FormList Property HabTypeMessHall Auto Const Mandatory
   FormList Property HabTypeScienceLab Auto Const Mandatory
+  FormList Property HabTypeStorage Auto Const Mandatory
+  FormList Property HabTypeWorkshop Auto Const Mandatory
 EndGroup
 
 ; Ship templates must be IDs instead of forms because the game

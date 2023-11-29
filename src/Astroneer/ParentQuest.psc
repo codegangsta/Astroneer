@@ -357,9 +357,49 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
     Float thrustPerPower = ship.GetValue(ThrustPerPowerAV)
     Float enginePowerPer = (thrustPerPower*enginePower) / thrust
     return Math.Clamp(Math.Round((11.9 * ((maneuveringThrust*enginePowerPer) / mass)) - 47.6), 0.0, 100.0)
+
+  elseif (objectiveType == consts.ObjectiveHabArmory)
+    return GetNumHabsByType(ship, consts.HabTypeArmory)
+
+  elseif (objectiveType == consts.ObjectiveHabBattleStations)
+    return GetNumHabsByType(ship, consts.HabTypeBattleStations)
+
+  elseif (objectiveType == consts.ObjectiveHabBrig)
+    return GetNumHabsByType(ship, consts.HabTypeBrig)
+
+  elseif (objectiveType == consts.ObjectiveHabCaptainsQuarters)
+    return GetNumHabsByType(ship, consts.HabTypeCaptainsQuarters)
+
+  elseif (objectiveType == consts.ObjectiveHabCargo)
+    return GetNumHabsByType(ship, consts.HabTypeCargo)
+
+  elseif (objectiveType == consts.ObjectiveHabComputerCore)
+    return GetNumHabsByType(ship, consts.HabTypeComputerCore)
+
+  elseif (objectiveType == consts.ObjectiveHabControl)
+    return GetNumHabsByType(ship, consts.HabTypeControl)
+
+  elseif (objectiveType == consts.ObjectiveHabEngineering)
+    return GetNumHabsByType(ship, consts.HabTypeEngineering)
+
+  elseif (objectiveType == consts.ObjectiveHabInfirmary)
+    return GetNumHabsByType(ship, consts.HabTypeInfirmary)
+
+  elseif (objectiveType == consts.ObjectiveHabLivingSpace)
+    return GetNumHabsByType(ship, consts.HabTypeLivingSpace)
+
+  elseif (objectiveType == consts.ObjectiveHabMessHall)
+    return GetNumHabsByType(ship, consts.HabTypeMessHall)
     
   elseif (objectiveType == consts.ObjectiveHabScienceLab)
     return GetNumHabsByType(ship, consts.HabTypeScienceLab)
+
+  elseif (objectiveType == consts.ObjectiveHabStorage)
+    return GetNumHabsByType(ship, consts.HabTypeStorage)
+
+  elseif (objectiveType == consts.ObjectiveHabWorkshop)
+    return GetNumHabsByType(ship, consts.HabTypeWorkshop)
+
   else
     return -1
   endif
