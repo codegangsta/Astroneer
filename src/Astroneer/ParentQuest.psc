@@ -129,6 +129,8 @@ Function PlaceAria()
   AriaWall.GetReference().SetPosition(-805.00, 1572.85, -163.54)
   AriaWall.GetReference().SetAngle(0, 0, 0)
   ariaRef.MoveToFurniture(AriaWall.GetReference())
+  ariaRef.AllowPCDialogue(true)
+  Trace("Voice type: " + ariaRef.GetVoiceType())
 EndFunction
 
 Event Actor.OnPlayerLoadGame(Actor akActor)

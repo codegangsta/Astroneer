@@ -2,7 +2,9 @@ ScriptName Astroneer
 
 Function DebugInit() global
   DebugTrace("=DebugInit==============================================")
-  DebugRemoveShip()
+  Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  Topic testTopic = Game.GetForm(0x020011ff) as Topic
+  pq.Aria.GetActorReference().Say(testTopic, None, False, None)
 EndFunction
 
 Function PrintCurrentShipObjectives() global

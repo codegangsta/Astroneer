@@ -30,6 +30,7 @@ package scenes
 #SimpleInfos: {
 	in: {
 		prefix: string
+		voice:  bool | *false
 		texts: [...string]
 		flags?: string
 		conditions?: [
@@ -57,7 +58,10 @@ package scenes
 		for index, info in in.texts {
 			id: (#ID & {name: in.prefix, idx: index + 1}).out
 			responses: [
-				{text: info},
+				{
+					text:  info
+					voice: in.voice
+				},
 			]
 			if in.conditions != _|_ {
 				conditions: in.conditions

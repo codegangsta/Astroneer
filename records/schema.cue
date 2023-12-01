@@ -1,5 +1,11 @@
 package records
 
+import (
+	"crypto/sha1"
+	"encoding/hex"
+	"strings"
+)
+
 #Action: {
 	type:        0 | 3
 	name?:       string
@@ -55,7 +61,11 @@ package records
 			// List of responses in the INFO record
 			responses: [
 				...{
-					text: string
+					text:  string
+					voice: bool | *false
+					if voice == true {
+						wemfile: strings.SliceRunes(hex.Encode(sha1.Sum(text)), 0, 8)
+					}
 				},
 			]
 			conditions?: [

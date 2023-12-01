@@ -60,7 +60,8 @@
                             "id": "MAIN_PlayerModifyShips01",
                             "responses": [
                                 {
-                                    "text": "I'd like to modify my ships"
+                                    "text": "I'd like to modify my ships",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -74,7 +75,8 @@
                             "id": "MAIN_PlayerModifyContractShip01",
                             "responses": [
                                 {
-                                    "text": "[Ship Builder] Let's get to work on that ship!"
+                                    "text": "[Ship Builder] Let's get to work on that ship!",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -95,7 +97,8 @@
                             "id": "MAIN_PlayerModifyContractShipB01",
                             "responses": [
                                 {
-                                    "text": "[Ship Builder] There's still some work to do on that ship!"
+                                    "text": "[Ship Builder] There's still some work to do on that ship!",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -119,7 +122,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Sure thing!"
+                                    "text": "Sure thing!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -128,7 +132,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "You got it!"
+                                    "text": "You got it!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -137,7 +142,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Absolutely!"
+                                    "text": "Absolutely!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -146,7 +152,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Of course!"
+                                    "text": "Of course!",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -163,7 +170,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Sure thing!"
+                                    "text": "Sure thing!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -172,7 +180,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "You got it!"
+                                    "text": "You got it!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -181,7 +190,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Absolutely!"
+                                    "text": "Absolutely!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -190,7 +200,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Of course!"
+                                    "text": "Of course!",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -204,7 +215,8 @@
                             "id": "MAIN_PlayerQuestions01",
                             "responses": [
                                 {
-                                    "text": "Mind if I ask you a few questions?"
+                                    "text": "Mind if I ask you a few questions?",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -220,7 +232,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Don't mind at all!"
+                                    "text": "Don't mind at all!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -229,7 +242,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "What's on your mind, Cap?"
+                                    "text": "What's on your mind, Cap?",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -238,7 +252,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Sure, shoot!"
+                                    "text": "Sure, shoot!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -247,7 +262,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Go ahead!"
+                                    "text": "Go ahead!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -256,7 +272,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Ask away!"
+                                    "text": "Ask away!",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -282,7 +299,8 @@
                             "id": "00_AriaGreeting01",
                             "responses": [
                                 {
-                                    "text": "Hey, Cap!"
+                                    "text": "Hey, Cap!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -290,7 +308,8 @@
                             "id": "00_AriaGreeting02",
                             "responses": [
                                 {
-                                    "text": "Back again?"
+                                    "text": "Back again?",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -298,7 +317,8 @@
                             "id": "00_AriaGreeting03",
                             "responses": [
                                 {
-                                    "text": "What's up?"
+                                    "text": "What's up?",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -306,7 +326,8 @@
                             "id": "00_AriaGreeting04",
                             "responses": [
                                 {
-                                    "text": "You're here!"
+                                    "text": "You're here!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -314,7 +335,8 @@
                             "id": "00_AriaGreeting05",
                             "responses": [
                                 {
-                                    "text": "Hello!"
+                                    "text": "Hello!",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -328,7 +350,8 @@
                             "id": "00_AriaGoodbye01",
                             "responses": [
                                 {
-                                    "text": "Catch ya!"
+                                    "text": "Catch ya!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -336,7 +359,8 @@
                             "id": "00_AriaGoodbye02",
                             "responses": [
                                 {
-                                    "text": "Fly safe!"
+                                    "text": "Fly safe!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -344,7 +368,8 @@
                             "id": "00_AriaGoodbye03",
                             "responses": [
                                 {
-                                    "text": "Later!"
+                                    "text": "Later!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -352,7 +377,8 @@
                             "id": "00_AriaGoodbye04",
                             "responses": [
                                 {
-                                    "text": "Good luck!"
+                                    "text": "Good luck!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -360,7 +386,8 @@
                             "id": "00_AriaGoodbye05",
                             "responses": [
                                 {
-                                    "text": "Signing off!"
+                                    "text": "Signing off!",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -374,7 +401,8 @@
                             "id": "00_AriaNegative01",
                             "responses": [
                                 {
-                                    "text": "No go."
+                                    "text": "No go.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -382,7 +410,8 @@
                             "id": "00_AriaNegative02",
                             "responses": [
                                 {
-                                    "text": "That's a no."
+                                    "text": "That's a no.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -390,7 +419,8 @@
                             "id": "00_AriaNegative03",
                             "responses": [
                                 {
-                                    "text": "Won't work."
+                                    "text": "Won't work.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -398,7 +428,8 @@
                             "id": "00_AriaNegative04",
                             "responses": [
                                 {
-                                    "text": "Can't do it."
+                                    "text": "Can't do it.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -406,7 +437,8 @@
                             "id": "00_AriaNegative05",
                             "responses": [
                                 {
-                                    "text": "Nope."
+                                    "text": "Nope.",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -420,7 +452,8 @@
                             "id": "00_AriaAffirmative01",
                             "responses": [
                                 {
-                                    "text": "Sure thing!"
+                                    "text": "Sure thing!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -428,7 +461,8 @@
                             "id": "00_AriaAffirmative02",
                             "responses": [
                                 {
-                                    "text": "Yes!"
+                                    "text": "Yes!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -436,7 +470,8 @@
                             "id": "00_AriaAffirmative03",
                             "responses": [
                                 {
-                                    "text": "You got it!"
+                                    "text": "You got it!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -444,7 +479,8 @@
                             "id": "00_AriaAffirmative04",
                             "responses": [
                                 {
-                                    "text": "Absolutely!"
+                                    "text": "Absolutely!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -452,7 +488,8 @@
                             "id": "00_AriaAffirmative05",
                             "responses": [
                                 {
-                                    "text": "Of course!"
+                                    "text": "Of course!",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -466,7 +503,8 @@
                             "id": "00_AriaRedirection01",
                             "responses": [
                                 {
-                                    "text": "Let's switch gears."
+                                    "text": "Let's switch gears.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -474,7 +512,8 @@
                             "id": "00_AriaRedirection02",
                             "responses": [
                                 {
-                                    "text": "Moving on to the next topic."
+                                    "text": "Moving on to the next topic.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -482,7 +521,8 @@
                             "id": "00_AriaRedirection03",
                             "responses": [
                                 {
-                                    "text": "Changing course."
+                                    "text": "Changing course.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -490,7 +530,8 @@
                             "id": "00_AriaRedirection04",
                             "responses": [
                                 {
-                                    "text": "Let's pivot here."
+                                    "text": "Let's pivot here.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -498,7 +539,8 @@
                             "id": "00_AriaRedirection05",
                             "responses": [
                                 {
-                                    "text": "Time for a new direction."
+                                    "text": "Time for a new direction.",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -512,7 +554,8 @@
                             "id": "00_AriaGratitude01",
                             "responses": [
                                 {
-                                    "text": "Thanks, Cap!"
+                                    "text": "Thanks, Cap!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -520,7 +563,8 @@
                             "id": "00_AriaGratitude02",
                             "responses": [
                                 {
-                                    "text": "Appreciate it!"
+                                    "text": "Appreciate it!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -528,7 +572,8 @@
                             "id": "00_AriaGratitude03",
                             "responses": [
                                 {
-                                    "text": "Grateful for that."
+                                    "text": "Grateful for that.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -536,7 +581,8 @@
                             "id": "00_AriaGratitude04",
                             "responses": [
                                 {
-                                    "text": "Much obliged!"
+                                    "text": "Much obliged!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -544,7 +590,8 @@
                             "id": "00_AriaGratitude05",
                             "responses": [
                                 {
-                                    "text": "Cheers for that!"
+                                    "text": "Cheers for that!",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -558,7 +605,8 @@
                             "id": "00_AriaQuery01",
                             "responses": [
                                 {
-                                    "text": "What's up?"
+                                    "text": "What's up?",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -566,7 +614,8 @@
                             "id": "00_AriaQuery02",
                             "responses": [
                                 {
-                                    "text": "What's on your mind?"
+                                    "text": "What's on your mind?",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -574,7 +623,8 @@
                             "id": "00_AriaQuery03",
                             "responses": [
                                 {
-                                    "text": "What's the plan?"
+                                    "text": "What's the plan?",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -582,7 +632,8 @@
                             "id": "00_AriaQuery04",
                             "responses": [
                                 {
-                                    "text": "What's the word?"
+                                    "text": "What's the word?",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -590,7 +641,8 @@
                             "id": "00_AriaQuery05",
                             "responses": [
                                 {
-                                    "text": "What's the deal?"
+                                    "text": "What's the deal?",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -604,7 +656,8 @@
                             "id": "00_AriaConfirmation01",
                             "responses": [
                                 {
-                                    "text": "Got it."
+                                    "text": "Got it.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -612,7 +665,8 @@
                             "id": "00_AriaConfirmation02",
                             "responses": [
                                 {
-                                    "text": "Understood."
+                                    "text": "Understood.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -620,7 +674,8 @@
                             "id": "00_AriaConfirmation03",
                             "responses": [
                                 {
-                                    "text": "Roger that."
+                                    "text": "Roger that.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -628,7 +683,8 @@
                             "id": "00_AriaConfirmation04",
                             "responses": [
                                 {
-                                    "text": "Clear on that."
+                                    "text": "Clear on that.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -636,7 +692,8 @@
                             "id": "00_AriaConfirmation05",
                             "responses": [
                                 {
-                                    "text": "Acknowledged."
+                                    "text": "Acknowledged.",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -650,7 +707,8 @@
                             "id": "00_AriaInterest01",
                             "responses": [
                                 {
-                                    "text": "Tell me more."
+                                    "text": "Tell me more.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -658,7 +716,8 @@
                             "id": "00_AriaInterest02",
                             "responses": [
                                 {
-                                    "text": "Interesting..."
+                                    "text": "Interesting...",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -666,7 +725,8 @@
                             "id": "00_AriaInterest03",
                             "responses": [
                                 {
-                                    "text": "I'm intrigued."
+                                    "text": "I'm intrigued.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -674,7 +734,8 @@
                             "id": "00_AriaInterest04",
                             "responses": [
                                 {
-                                    "text": "Go on..."
+                                    "text": "Go on...",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -682,7 +743,8 @@
                             "id": "00_AriaInterest05",
                             "responses": [
                                 {
-                                    "text": "Keep talking."
+                                    "text": "Keep talking.",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -731,22 +793,28 @@
                             ],
                             "responses": [
                                 {
-                                    "text": "There's the captain everyone's been talking about! I'm Aria, I'll be your design lead for all ship contracts here at Atlas"
+                                    "text": "There's the captain everyone's been talking about! I'm Aria, I'll be your design lead for all ship contracts here at Atlas",
+                                    "voice": false
                                 },
                                 {
-                                    "text": "Let's talk ship. You're about to dive into the nuts and bolts of starship customization."
+                                    "text": "Let's talk ship. You're about to dive into the nuts and bolts of starship customization.",
+                                    "voice": false
                                 },
                                 {
-                                    "text": "I'll pull the bare bones into the landing pad back there, and you put the soul into the machine. Match the client's requirements, and we're golden."
+                                    "text": "I'll pull the bare bones into the landing pad back there, and you put the soul into the machine. Match the client's requirements, and we're golden.",
+                                    "voice": false
                                 },
                                 {
-                                    "text": "Currently, our parts bin isn't exactly a treasure trove. But hey, help us some research projects, and we'll get you the shiny stuff."
+                                    "text": "Currently, our parts bin isn't exactly a treasure trove. But hey, help us some research projects, and we'll get you the shiny stuff.",
+                                    "voice": false
                                 },
                                 {
-                                    "text": "I hear you're quite the pilot. So I'm calling you 'Cap' from here on out! Beats saying 'O Great Shipbuilder' every time, right?"
+                                    "text": "I hear you're quite the pilot. So I'm calling you 'Cap' from here on out! Beats saying 'O Great Shipbuilder' every time, right?",
+                                    "voice": false
                                 },
                                 {
-                                    "text": "Alright, Cap. Let's get to work!"
+                                    "text": "Alright, Cap. Let's get to work!",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -792,7 +860,9 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Hey there, Cap! What ship are we tackling today?"
+                                    "text": "Hey there, Cap! What ship are we tackling today?",
+                                    "wemfile": "64470a7e",
+                                    "voice": true
                                 }
                             ]
                         },
@@ -801,7 +871,9 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Back for more? Let's see what's on the docket."
+                                    "text": "Back for more? Let's see what's on the docket.",
+                                    "wemfile": "86c81735",
+                                    "voice": true
                                 }
                             ]
                         },
@@ -810,7 +882,9 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Hello again! Ready to jump into another design?"
+                                    "text": "Hello again! Ready to jump into another design?",
+                                    "wemfile": "56cd8700",
+                                    "voice": true
                                 }
                             ]
                         },
@@ -819,7 +893,9 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Got a new ship on your mind? Let's hear it."
+                                    "text": "Got a new ship on your mind? Let's hear it.",
+                                    "wemfile": "933acaa2",
+                                    "voice": true
                                 }
                             ]
                         },
@@ -828,7 +904,9 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Ah, the master shipwright returns. What's the plan?"
+                                    "text": "Ah, the master shipwright returns. What's the plan?",
+                                    "wemfile": "72509476",
+                                    "voice": true
                                 }
                             ]
                         },
@@ -837,7 +915,9 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Hey! What exciting project are we looking at today?"
+                                    "text": "Hey! What exciting project are we looking at today?",
+                                    "wemfile": "760a88ba",
+                                    "voice": true
                                 }
                             ]
                         },
@@ -846,7 +926,9 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Welcome back! Any new adventures in ship design?"
+                                    "text": "Welcome back! Any new adventures in ship design?",
+                                    "wemfile": "7a21a46a",
+                                    "voice": true
                                 }
                             ]
                         },
@@ -855,7 +937,9 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Hi there! What ship will we be shaping up today?"
+                                    "text": "Hi there! What ship will we be shaping up today?",
+                                    "wemfile": "875e423e",
+                                    "voice": true
                                 }
                             ]
                         },
@@ -864,7 +948,9 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Ready for another round of shipbuilding?"
+                                    "text": "Ready for another round of shipbuilding?",
+                                    "wemfile": "bbb3abc6",
+                                    "voice": true
                                 }
                             ]
                         },
@@ -873,7 +959,9 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Great to see you! What's our design mission this time?"
+                                    "text": "Great to see you! What's our design mission this time?",
+                                    "wemfile": "7bcb70bf",
+                                    "voice": true
                                 }
                             ]
                         }
@@ -929,7 +1017,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Any ships in need of a hand today?"
+                                    "text": "Any ships in need of a hand today?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -945,7 +1034,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Is there a new vessel for me to take under my wing?"
+                                    "text": "Is there a new vessel for me to take under my wing?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -961,7 +1051,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Got a ship that needs some love?"
+                                    "text": "Got a ship that needs some love?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -977,7 +1068,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "I'm here for that contract—what's the assignment?"
+                                    "text": "I'm here for that contract—what's the assignment?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -993,7 +1085,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "What's the latest ship on the roster?"
+                                    "text": "What's the latest ship on the roster?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1009,7 +1102,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Ready for a new project; what have you got?"
+                                    "text": "Ready for a new project; what have you got?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1025,7 +1119,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Looking for a ship that could use a tune-up?"
+                                    "text": "Looking for a ship that could use a tune-up?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1041,7 +1136,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Heard about a ship needing a fix, is it mine to take?"
+                                    "text": "Heard about a ship needing a fix, is it mine to take?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1057,7 +1153,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "What's the word on that new contract?"
+                                    "text": "What's the word on that new contract?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1082,7 +1179,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Got a fighter that's seen better days. Time to turn it from a zero to a hero."
+                                    "text": "Got a fighter that's seen better days. Time to turn it from a zero to a hero.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1099,7 +1197,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "There's a fighter itching for some speed. Think you can make it break the sound barrier... quietly?"
+                                    "text": "There's a fighter itching for some speed. Think you can make it break the sound barrier... quietly?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1116,7 +1215,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Here’s a fighter that's begging for some flair. Ready to spice it up?"
+                                    "text": "Here’s a fighter that's begging for some flair. Ready to spice it up?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1133,7 +1233,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "This one's a zippy fighter, but it's more mouse than lion right now. Fancy beefing it up?"
+                                    "text": "This one's a zippy fighter, but it's more mouse than lion right now. Fancy beefing it up?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1150,7 +1251,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Got a veteran fighter here. Fancy turning its old stories into new legends?"
+                                    "text": "Got a veteran fighter here. Fancy turning its old stories into new legends?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1176,7 +1278,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "An explorer's waiting. It's got more miles than my coffee machine and twice the untapped potential."
+                                    "text": "An explorer's waiting. It's got more miles than my coffee machine and twice the untapped potential.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1193,7 +1296,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "I’ve got an explorer that’s seen galaxies galore. Ready to turn it into a space legend?"
+                                    "text": "I’ve got an explorer that’s seen galaxies galore. Ready to turn it into a space legend?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1210,7 +1314,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "There's a research ship that's been flirting with black holes. Needs a bit of your charm now."
+                                    "text": "There's a research ship that's been flirting with black holes. Needs a bit of your charm now.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1227,7 +1332,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "This explorer's got wanderlust. Think you can make it the envy of the cosmos?"
+                                    "text": "This explorer's got wanderlust. Think you can make it the envy of the cosmos?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1244,7 +1350,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Here’s an explorer that's craving adventure. Ready to be its genie?"
+                                    "text": "Here’s an explorer that's craving adventure. Ready to be its genie?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1270,7 +1377,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Got a hauler that's been lugging more than cargo. Time to jazz up its routine."
+                                    "text": "Got a hauler that's been lugging more than cargo. Time to jazz up its routine.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1287,7 +1395,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "There's a sturdy hauler here. Could use a touch of pizzazz. Fancy giving it some sparkle?"
+                                    "text": "There's a sturdy hauler here. Could use a touch of pizzazz. Fancy giving it some sparkle?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1304,7 +1413,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Here's a freighter with dreams of being a starship. Think you can grant its wish?"
+                                    "text": "Here's a freighter with dreams of being a starship. Think you can grant its wish?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1321,7 +1431,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "This old freighter's solid but could use some fun. How about disco lights in the cargo bay?"
+                                    "text": "This old freighter's solid but could use some fun. How about disco lights in the cargo bay?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1338,7 +1449,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "There’s a hauler here with space to spare. Maybe add a bowling alley?"
+                                    "text": "There’s a hauler here with space to spare. Maybe add a bowling alley?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1364,7 +1476,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Interceptor in the bay is ready for some zing. Think you can make it zoom and boom?"
+                                    "text": "Interceptor in the bay is ready for some zing. Think you can make it zoom and boom?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1381,7 +1494,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Got an interceptor that’s quick but not slick. Fancy giving it a secret identity?"
+                                    "text": "Got an interceptor that’s quick but not slick. Fancy giving it a secret identity?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1398,7 +1512,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "There’s a need-for-speed ship here. Think you can make it go 'vroom' with style?"
+                                    "text": "There’s a need-for-speed ship here. Think you can make it go 'vroom' with style?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1415,7 +1530,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "An interceptor's lined up. It’s fast, but can you make it furious?"
+                                    "text": "An interceptor's lined up. It’s fast, but can you make it furious?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1432,7 +1548,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Here's a racer that's been dreaming of rocket boosters. Fancy turning it into a speed demon?"
+                                    "text": "Here's a racer that's been dreaming of rocket boosters. Fancy turning it into a speed demon?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1458,7 +1575,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "There's a luxury cruiser that's more plain Jane than star queen. Ready for a royal makeover?"
+                                    "text": "There's a luxury cruiser that's more plain Jane than star queen. Ready for a royal makeover?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1475,7 +1593,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Got a fancy vessel that's feeling a bit old-fashioned. Time to bring it into the space age?"
+                                    "text": "Got a fancy vessel that's feeling a bit old-fashioned. Time to bring it into the space age?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1492,7 +1611,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "There’s a floating five-star hotel here. Think you can add a sixth star?"
+                                    "text": "There’s a floating five-star hotel here. Think you can add a sixth star?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1509,7 +1629,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Ever fancied decking out a spaceship like a Hollywood mansion? Here’s your chance."
+                                    "text": "Ever fancied decking out a spaceship like a Hollywood mansion? Here’s your chance.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1526,7 +1647,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Got a luxury ship here that's secretly a diva. Ready to dress it for the red carpet?"
+                                    "text": "Got a luxury ship here that's secretly a diva. Ready to dress it for the red carpet?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1594,7 +1716,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Design's in. Does it capture what you were looking for?"
+                                    "text": "Design's in. Does it capture what you were looking for?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1610,7 +1733,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Finished with the ship. How does it measure up to our standards?"
+                                    "text": "Finished with the ship. How does it measure up to our standards?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1626,7 +1750,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Completed the contract. What's your take on the final product?"
+                                    "text": "Completed the contract. What's your take on the final product?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1642,7 +1767,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Just finished my design. Will it pass the Aria test?"
+                                    "text": "Just finished my design. Will it pass the Aria test?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1658,7 +1784,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Redesign's done. Does it have the Aria stamp of approval?"
+                                    "text": "Redesign's done. Does it have the Aria stamp of approval?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1674,7 +1801,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Contract's done. I'm eager to hear your thoughts."
+                                    "text": "Contract's done. I'm eager to hear your thoughts.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1690,7 +1818,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Wrapped up the ship. It should meet the mark."
+                                    "text": "Wrapped up the ship. It should meet the mark.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1706,7 +1835,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Finished the upgrade. It's ready for your review."
+                                    "text": "Finished the upgrade. It's ready for your review.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1722,7 +1852,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "The ship's reimagined, per your vision."
+                                    "text": "The ship's reimagined, per your vision.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1738,7 +1869,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Ship is done. It's a fresh take on an old classic."
+                                    "text": "Ship is done. It's a fresh take on an old classic.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1760,7 +1892,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Nice work! This fighter's gone from zero to hero."
+                                    "text": "Nice work! This fighter's gone from zero to hero.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1777,7 +1910,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Looks sharp! It’s got stealth and swagger in spades."
+                                    "text": "Looks sharp! It’s got stealth and swagger in spades.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1794,7 +1928,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "You've turned it tough! It's ready to rumble now."
+                                    "text": "You've turned it tough! It's ready to rumble now.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1811,7 +1946,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Sleek job! It's like a race car of the skies."
+                                    "text": "Sleek job! It's like a race car of the skies.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1828,7 +1964,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Stellar work! This fighter's ready for its own saga."
+                                    "text": "Stellar work! This fighter's ready for its own saga.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1851,7 +1988,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Great update! It's a real cosmic explorer now."
+                                    "text": "Great update! It's a real cosmic explorer now.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1868,7 +2006,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "It's a star-traveler's dream! Love the new look."
+                                    "text": "It's a star-traveler's dream! Love the new look.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1885,7 +2024,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Those sensors are top-notch. It's a galaxy whisperer now."
+                                    "text": "Those sensors are top-notch. It's a galaxy whisperer now.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1902,7 +2042,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "You've given it a real adventurous edge. Nice!"
+                                    "text": "You've given it a real adventurous edge. Nice!",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1919,7 +2060,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Love it! It's like a toolbox of space wonders."
+                                    "text": "Love it! It's like a toolbox of space wonders.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1942,7 +2084,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "This hauler's a real gem now. It's got style and space!"
+                                    "text": "This hauler's a real gem now. It's got style and space!",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1959,7 +2102,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "You turned it chic! It's a fashion-forward freighter."
+                                    "text": "You turned it chic! It's a fashion-forward freighter.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1976,7 +2120,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Massive upgrade! It's a cargo metropolis now."
+                                    "text": "Massive upgrade! It's a cargo metropolis now.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -1993,7 +2138,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "From sturdy to stunning! It's a cargo showstopper."
+                                    "text": "From sturdy to stunning! It's a cargo showstopper.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2010,7 +2156,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Wow, talk about an upgrade! It's a planet mover!"
+                                    "text": "Wow, talk about an upgrade! It's a planet mover!",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2033,7 +2180,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "This interceptor's slick and secretive now. Nice touch!"
+                                    "text": "This interceptor's slick and secretive now. Nice touch!",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2050,7 +2198,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "That's some speed! It's a real cosmic blur."
+                                    "text": "That's some speed! It's a real cosmic blur.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2067,7 +2216,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Super quick! It's got an extra dose of zoom."
+                                    "text": "Super quick! It's got an extra dose of zoom.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2084,7 +2234,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Instant action! This ship's redefining speed."
+                                    "text": "Instant action! This ship's redefining speed.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2101,7 +2252,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Sleek and fast! It's a racer's dream."
+                                    "text": "Sleek and fast! It's a racer's dream.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2124,7 +2276,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "It's like a floating palace. Absolutely luxurious!"
+                                    "text": "It's like a floating palace. Absolutely luxurious!",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2141,7 +2294,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "You've raised the bar! It's luxury cruising at its best."
+                                    "text": "You've raised the bar! It's luxury cruising at its best.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2158,7 +2312,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Pure elegance! Every inch whispers class."
+                                    "text": "Pure elegance! Every inch whispers class.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2175,7 +2330,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Opulent and grand! It's a journey in style."
+                                    "text": "Opulent and grand! It's a journey in style.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2192,7 +2348,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Cozy and lavish! It's a five-star trip through space."
+                                    "text": "Cozy and lavish! It's a five-star trip through space.",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2218,7 +2375,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Just transferred your credits. Great working with you, Cap."
+                                    "text": "Just transferred your credits. Great working with you, Cap.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -2227,7 +2385,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Credits are on their way to your account. Until we meet again."
+                                    "text": "Credits are on their way to your account. Until we meet again.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -2236,7 +2395,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Payment's been sent out. Fantastic job on this one."
+                                    "text": "Payment's been sent out. Fantastic job on this one.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -2245,7 +2405,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Nice job! Your credits should be in your account any moment now."
+                                    "text": "Nice job! Your credits should be in your account any moment now.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -2254,7 +2415,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Contract's all wrapped up, and so is your payment. Looking forward to the next one."
+                                    "text": "Contract's all wrapped up, and so is your payment. Looking forward to the next one.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -2263,7 +2425,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Your credits are speeding your way. Thanks for the stellar work!"
+                                    "text": "Your credits are speeding your way. Thanks for the stellar work!",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -2272,7 +2435,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "All done here. Your payment's been processed. Catch you on the next mission."
+                                    "text": "All done here. Your payment's been processed. Catch you on the next mission.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -2281,7 +2445,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Reward sent, mission accomplished. You did great, Cap."
+                                    "text": "Reward sent, mission accomplished. You did great, Cap.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -2290,7 +2455,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Credits are on the transfer. Thanks for your hard work."
+                                    "text": "Credits are on the transfer. Thanks for your hard work.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -2299,7 +2465,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "That's it for this contract. Your payment's in the pipeline. See you around, Cap."
+                                    "text": "That's it for this contract. Your payment's in the pipeline. See you around, Cap.",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -2337,7 +2504,8 @@
                             "id": "05_PlayerInquiry01",
                             "responses": [
                                 {
-                                    "text": "Can you tell me more about yourself?"
+                                    "text": "Can you tell me more about yourself?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2362,22 +2530,28 @@
                             "id": "05_AriaResponse01",
                             "responses": [
                                 {
-                                    "text": "More about me? Well, let's see... I'm a product of the colonies. A tiny speck on the edge of the frontier that you won't find on any tourist brochure. The scrapyard was my playground,"
+                                    "text": "More about me? Well, let's see... I'm a product of the colonies. A tiny speck on the edge of the frontier that you won't find on any tourist brochure. The scrapyard was my playground,",
+                                    "voice": false
                                 },
                                 {
-                                    "text": "I dreamt of one day inventing something big and important, something that would propel humanity forward. My folks figured I'd be a mechanic, but I had my eyes on the stars and my mind on the ships that could reach them."
+                                    "text": "I dreamt of one day inventing something big and important, something that would propel humanity forward. My folks figured I'd be a mechanic, but I had my eyes on the stars and my mind on the ships that could reach them.",
+                                    "voice": false
                                 },
                                 {
-                                    "text": "So, I made it off-world, thanks to a scholarship at the University here. It was my shot, my big break. I was going to build the future. But the corporate shipyards weren't buying what a starry-eyed colony kid was selling."
+                                    "text": "So, I made it off-world, thanks to a scholarship at the University here. It was my shot, my big break. I was going to build the future. But the corporate shipyards weren't buying what a starry-eyed colony kid was selling.",
+                                    "voice": false
                                 },
                                 {
-                                    "text": "But then, Atlas Astronautics happened. A startup with ambition and, more importantly, a willingness to gamble on a wildcard like me. They needed someone who could think outside the proverbial box—or ship, in this case. So I jumped ship—literally—and it's been a wild ride since."
+                                    "text": "But then, Atlas Astronautics happened. A startup with ambition and, more importantly, a willingness to gamble on a wildcard like me. They needed someone who could think outside the proverbial box—or ship, in this case. So I jumped ship—literally—and it's been a wild ride since.",
+                                    "voice": false
                                 },
                                 {
-                                    "text": "I'm not just building ships here. I'm building dreams—my dreams—into every hull, every thruster array. And yeah, I miss home sometimes, but this place... it's where I can make a real impact. It's where I belong."
+                                    "text": "I'm not just building ships here. I'm building dreams—my dreams—into every hull, every thruster array. And yeah, I miss home sometimes, but this place... it's where I can make a real impact. It's where I belong.",
+                                    "voice": false
                                 },
                                 {
-                                    "text": "And when things get too serious, I just remind myself that no matter how advanced our tech gets, we're still a bunch of primates trying to figure out how to not crash into the nearest celestial body. It's grounding, in an anti-gravity sort of way."
+                                    "text": "And when things get too serious, I just remind myself that no matter how advanced our tech gets, we're still a bunch of primates trying to figure out how to not crash into the nearest celestial body. It's grounding, in an anti-gravity sort of way.",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -2436,7 +2610,8 @@
                             "id": "06_AriaInquiry01",
                             "responses": [
                                 {
-                                    "text": "So, Cap, what's your story? Here for the thrill, the cash, or something more?"
+                                    "text": "So, Cap, what's your story? Here for the thrill, the cash, or something more?",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -2450,7 +2625,8 @@
                             "id": "06_PlayerResponseAmbition01",
                             "responses": [
                                 {
-                                    "text": "I'm all about the adventure. And hey, the money's a nice bonus."
+                                    "text": "I'm all about the adventure. And hey, the money's a nice bonus.",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -2464,7 +2640,8 @@
                             "id": "06_PlayerResponseKinship01",
                             "responses": [
                                 {
-                                    "text": "Got big dreams, like you. I want to leave my mark out here."
+                                    "text": "Got big dreams, like you. I want to leave my mark out here.",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -2478,7 +2655,8 @@
                             "id": "06_PlayerResponseHorizon01",
                             "responses": [
                                 {
-                                    "text": "I'm chasing what's beyond the horizon. Always looking further."
+                                    "text": "I'm chasing what's beyond the horizon. Always looking further.",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -2493,7 +2671,8 @@
                             "id": "06_AriaResponseToAmbition01",
                             "responses": [
                                 {
-                                    "text": "Thrills and bills, a classic mix. Just watch your back; adventure can be costly out here."
+                                    "text": "Thrills and bills, a classic mix. Just watch your back; adventure can be costly out here.",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -2508,7 +2687,8 @@
                             "id": "06_AriaResponseToKinship01",
                             "responses": [
                                 {
-                                    "text": "Another star chaser, huh? Good. The galaxy's vast, and there's plenty of room for names like ours."
+                                    "text": "Another star chaser, huh? Good. The galaxy's vast, and there's plenty of room for names like ours.",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -2523,7 +2703,8 @@
                             "id": "06_AriaResponseToHorizon01",
                             "responses": [
                                 {
-                                    "text": "The eternal explorer, huh? Good choice. There's more out there than we can imagine. Let's uncover it together."
+                                    "text": "The eternal explorer, huh? Good choice. There's more out there than we can imagine. Let's uncover it together.",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -2561,7 +2742,8 @@
                             "id": "18_PlayerInquiry01",
                             "responses": [
                                 {
-                                    "text": "I'm having trouble with this contract. Can we switch it up?"
+                                    "text": "I'm having trouble with this contract. Can we switch it up?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2582,7 +2764,8 @@
                             "id": "18_PlayerInquiry01",
                             "responses": [
                                 {
-                                    "text": "Nothing on the mission board is catching my eye. Can we switch it up?"
+                                    "text": "Nothing on the mission board is catching my eye. Can we switch it up?",
+                                    "voice": false
                                 }
                             ],
                             "conditions": [
@@ -2606,7 +2789,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "No problem, Cap! Not every ship is a perfect match. I'll find this one a new captain."
+                                    "text": "No problem, Cap! Not every ship is a perfect match. I'll find this one a new captain.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -2615,7 +2799,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "I'm updating the mission board right now. Let's find you a project that's more your speed."
+                                    "text": "I'm updating the mission board right now. Let's find you a project that's more your speed.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -2624,7 +2809,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Sometimes a detour is part of the journey. Let's get you on a path that feels right."
+                                    "text": "Sometimes a detour is part of the journey. Let's get you on a path that feels right.",
+                                    "voice": false
                                 }
                             ]
                         },
@@ -2633,7 +2819,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "Keep your chin up. Space is vast, and there's always something else out there for you."
+                                    "text": "Keep your chin up. Space is vast, and there's always something else out there for you.",
+                                    "voice": false
                                 }
                             ]
                         }
@@ -2651,7 +2838,8 @@
                             "flags": "01",
                             "responses": [
                                 {
-                                    "text": "I'm updating the mission board right now. Let's find you a project that's more your speed."
+                                    "text": "I'm updating the mission board right now. Let's find you a project that's more your speed.",
+                                    "voice": false
                                 }
                             ]
                         }

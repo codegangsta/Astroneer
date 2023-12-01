@@ -68,6 +68,21 @@ begin
 	end;
 end;
 
+function StringToFormID(const s: string): Cardinal;
+var
+	md5: TIdHashMessageDigest5;
+	hash: T4x4LongWordRecord;
+begin
+	md5 := TIdHashMessageDigest5.Create;
+	try
+		hash := md5.HashValue(s);
+		// Use only a part of the hash to fit the Form ID format
+		Result := (hash[0] xor hash[1] xor hash[2] xor hash[3]) and $00FFFFFF;
+		// You may need to add your mod's load order prefix to Result
+	finally
+		md5.Free;
+	end;
+end;
 
 function FindRecordByEditorID(const editorID, recordSignature: String): IInterface;
 var
@@ -246,6 +261,7 @@ var
 	speakerRecord: IInterface;
 	startSceneRecord: IInterface;
 	file: IInterface;
+	byteArray: TBytes;
 	si: Integer;
 	i: Integer;
 	j: Integer;
@@ -418,6 +434,10 @@ begin
 
 					// Set none for emotion for now, maybe this can be configurable later
 					SetElementEditValues(responseRecord, 'TRDA - Response Data\Emotion', 'FFFFFFFF');
+					if response.S['wemfile'] <> '' then begin
+						AddMessage('Adding wem file: ' + info.S['id'] + '_' + IntToStr(k) + ' ' + response.S['wemfile']);
+						SetElementEditValues(responseRecord, 'TRDA - Response Data\WEM File', response.S['wemfile']);
+					end;
 				end;
 				Remove(ElementByIndex(responsesRecord, 0));
 

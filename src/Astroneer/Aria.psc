@@ -4,7 +4,8 @@ ScriptName Astroneer:Aria extends Actor
 
 Event OnActivate(ObjectReference akActionRef)
   Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
-  pq.SceneMissionBoardIntro.Start()
+  Topic testTopic = Game.GetForm(0x020011ff) as Topic
+  Self.Say(testTopic, None, False, None)
 EndEvent
 
 Function Trace(string message)
