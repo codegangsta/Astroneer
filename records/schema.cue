@@ -64,7 +64,8 @@ import (
 					text:  string
 					voice: bool | *false
 					if voice == true {
-						wemfile: strings.SliceRunes(hex.Encode(sha1.Sum(text)), 0, 8)
+						// This is bullshit, but whatever
+						wemfile: strings.Join(["00", strings.SliceRunes(hex.Encode(sha1.Sum(text)), 0, 6)], "")
 					}
 				},
 			]

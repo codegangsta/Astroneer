@@ -39,7 +39,7 @@ scene_02_greeting: {
 			startScene: "MAIN_topics"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "02_AriaGreeting"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
 				voice:  true
 				texts: [
 					"Hey there, Cap! What ship are we tackling today?",
@@ -49,9 +49,9 @@ scene_02_greeting: {
 					"Ah, the master shipwright returns. What's the plan?",
 					"Hey! What exciting project are we looking at today?",
 					"Welcome back! Any new adventures in ship design?",
-					"Hi there! What ship will we be shaping up today?",
+					"Well hello there! What ship will we be shaping up today?",
 					"Ready for another round of shipbuilding?",
-					"Great to see you! What's our design mission this time?",
+					"What's our design mission this time?",
 				]
 			}}).out
 		},

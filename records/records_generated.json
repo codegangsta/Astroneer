@@ -857,110 +857,110 @@
                     "infos": [
                         {
                             "id": "02_AriaGreeting01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Hey there, Cap! What ship are we tackling today?",
-                                    "wemfile": "64470a7e",
+                                    "wemfile": "0064470a",
                                     "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "02_AriaGreeting02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Back for more? Let's see what's on the docket.",
-                                    "wemfile": "86c81735",
+                                    "wemfile": "0086c817",
                                     "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "02_AriaGreeting03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Hello again! Ready to jump into another design?",
-                                    "wemfile": "56cd8700",
+                                    "wemfile": "0056cd87",
                                     "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "02_AriaGreeting04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Got a new ship on your mind? Let's hear it.",
-                                    "wemfile": "933acaa2",
+                                    "wemfile": "00933aca",
                                     "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "02_AriaGreeting05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Ah, the master shipwright returns. What's the plan?",
-                                    "wemfile": "72509476",
+                                    "wemfile": "00725094",
                                     "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "02_AriaGreeting06",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Hey! What exciting project are we looking at today?",
-                                    "wemfile": "760a88ba",
+                                    "wemfile": "00760a88",
                                     "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "02_AriaGreeting07",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Welcome back! Any new adventures in ship design?",
-                                    "wemfile": "7a21a46a",
+                                    "wemfile": "007a21a4",
                                     "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "02_AriaGreeting08",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
-                                    "text": "Hi there! What ship will we be shaping up today?",
-                                    "wemfile": "875e423e",
+                                    "text": "Well hello there! What ship will we be shaping up today?",
+                                    "wemfile": "002c1b18",
                                     "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "02_AriaGreeting09",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Ready for another round of shipbuilding?",
-                                    "wemfile": "bbb3abc6",
+                                    "wemfile": "00bbb3ab",
                                     "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "02_AriaGreeting10",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
-                                    "text": "Great to see you! What's our design mission this time?",
-                                    "wemfile": "7bcb70bf",
+                                    "text": "What's our design mission this time?",
+                                    "wemfile": "00b4a5df",
                                     "voice": true
                                 }
                             ]
