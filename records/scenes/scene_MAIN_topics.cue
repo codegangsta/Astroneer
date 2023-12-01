@@ -99,7 +99,8 @@ scene_MAIN_topics: {
 			onEnd:   "ModifyContractShip"
 			infos:   (#SimpleInfos & {in: {
 				prefix: "MAIN_AriaModifyContractShipResponse"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				texts: ["Sure thing!", "You got it!", "Absolutely!", "Of course!"]
 			}}).out
 		},
@@ -110,7 +111,8 @@ scene_MAIN_topics: {
 			onEnd:   "ModifyShips"
 			infos:   (#SimpleInfos & {in: {
 				prefix: "MAIN_AriaModifyShipsResponse"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				texts: ["Sure thing!", "You got it!", "Absolutely!", "Of course!"]
 			}}).out
 		},
@@ -128,7 +130,8 @@ scene_MAIN_topics: {
 			startScene: "19_Questions"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "MAIN_AriaQuestionsResponse"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				texts: ["Don't mind at all!", "What's on your mind, Cap?", "Sure, shoot!", "Go ahead!", "Ask away!"]
 			}}).out
 		},

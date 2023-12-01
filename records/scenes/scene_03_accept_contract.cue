@@ -43,7 +43,8 @@ scene_03_accept_contract: {
 			startScene: "03_AcceptContract"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "03_Player"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				texts: [
 					"Any ships in need of a hand today?",
 					"Is there a new vessel for me to take under my wing?",
@@ -72,7 +73,8 @@ scene_03_accept_contract: {
 			onBegin:    "SetDesignStage"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaFighter"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				conditions: [
 					{
 						function: "GetVMQuestVariable"
@@ -98,7 +100,8 @@ scene_03_accept_contract: {
 			onBegin:    "SetDesignStage"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaExplorer"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				conditions: [
 					{
 						function: "GetVMQuestVariable"
@@ -124,7 +127,8 @@ scene_03_accept_contract: {
 			onBegin:    "SetDesignStage"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaHauler"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				conditions: [
 					{
 						function: "GetVMQuestVariable"
@@ -150,7 +154,8 @@ scene_03_accept_contract: {
 			onBegin:    "SetDesignStage"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaInterceptor"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				conditions: [
 					{
 						function: "GetVMQuestVariable"
@@ -176,7 +181,8 @@ scene_03_accept_contract: {
 			onBegin:    "SetDesignStage"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaLuxury"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				conditions: [
 					{
 						function: "GetVMQuestVariable"

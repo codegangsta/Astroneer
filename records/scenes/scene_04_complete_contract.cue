@@ -46,7 +46,8 @@ scene_04_complete_contract: {
 			startScene: "04_CompleteContract"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "04_Player"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				texts: [
 					"Design's in. Does it capture what you were looking for?",
 					"Finished with the ship. How does it measure up to our standards?",
@@ -73,7 +74,8 @@ scene_04_complete_contract: {
 			speaker: #consts.Aria
 			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaFighter"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				conditions: [
 					{
 						function: "GetVMQuestVariable"
@@ -96,7 +98,8 @@ scene_04_complete_contract: {
 			speaker: #consts.Aria
 			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaExplorer"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				conditions: [
 					{
 						function: "GetVMQuestVariable"
@@ -119,7 +122,8 @@ scene_04_complete_contract: {
 			speaker: #consts.Aria
 			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaHauler"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				conditions: [
 					{
 						function: "GetVMQuestVariable"
@@ -142,7 +146,8 @@ scene_04_complete_contract: {
 			speaker: #consts.Aria
 			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaInterceptor"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				conditions: [
 					{
 						function: "GetVMQuestVariable"
@@ -165,7 +170,8 @@ scene_04_complete_contract: {
 			speaker: #consts.Aria
 			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaLuxury"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				conditions: [
 					{
 						function: "GetVMQuestVariable"
@@ -191,7 +197,8 @@ scene_04_complete_contract: {
 			onBegin:    "CompleteContract"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "04_AriaClosing"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				texts: [
 					"Just transferred your credits. Great working with you, Cap.",
 					"Credits are on their way to your account. Until we meet again.",

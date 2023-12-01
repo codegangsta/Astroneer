@@ -119,41 +119,45 @@
                     "infos": [
                         {
                             "id": "MAIN_AriaModifyContractShipResponse01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Sure thing!",
-                                    "voice": false
+                                    "wemfile": "0055316c",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "MAIN_AriaModifyContractShipResponse02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "You got it!",
-                                    "voice": false
+                                    "wemfile": "00a29917",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "MAIN_AriaModifyContractShipResponse03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Absolutely!",
-                                    "voice": false
+                                    "wemfile": "0062717b",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "MAIN_AriaModifyContractShipResponse04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Of course!",
-                                    "voice": false
+                                    "wemfile": "007d6b19",
+                                    "voice": true
                                 }
                             ]
                         }
@@ -167,41 +171,45 @@
                     "infos": [
                         {
                             "id": "MAIN_AriaModifyShipsResponse01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Sure thing!",
-                                    "voice": false
+                                    "wemfile": "0055316c",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "MAIN_AriaModifyShipsResponse02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "You got it!",
-                                    "voice": false
+                                    "wemfile": "00a29917",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "MAIN_AriaModifyShipsResponse03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Absolutely!",
-                                    "voice": false
+                                    "wemfile": "0062717b",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "MAIN_AriaModifyShipsResponse04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Of course!",
-                                    "voice": false
+                                    "wemfile": "007d6b19",
+                                    "voice": true
                                 }
                             ]
                         }
@@ -229,51 +237,56 @@
                     "infos": [
                         {
                             "id": "MAIN_AriaQuestionsResponse01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Don't mind at all!",
-                                    "voice": false
+                                    "wemfile": "009c513b",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "MAIN_AriaQuestionsResponse02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "What's on your mind, Cap?",
-                                    "voice": false
+                                    "wemfile": "00e8bdb1",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "MAIN_AriaQuestionsResponse03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Sure, shoot!",
-                                    "voice": false
+                                    "wemfile": "00034d7c",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "MAIN_AriaQuestionsResponse04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Go ahead!",
-                                    "voice": false
+                                    "wemfile": "00857c90",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "MAIN_AriaQuestionsResponse05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Ask away!",
-                                    "voice": false
+                                    "wemfile": "002b09b9",
+                                    "voice": true
                                 }
                             ]
                         }
@@ -1014,11 +1027,12 @@
                     "infos": [
                         {
                             "id": "03_Player01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Any ships in need of a hand today?",
-                                    "voice": false
+                                    "wemfile": "009cdd20",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1031,11 +1045,12 @@
                         },
                         {
                             "id": "03_Player02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Is there a new vessel for me to take under my wing?",
-                                    "voice": false
+                                    "wemfile": "00284caf",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1048,11 +1063,12 @@
                         },
                         {
                             "id": "03_Player03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Got a ship that needs some love?",
-                                    "voice": false
+                                    "wemfile": "0058f3ee",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1065,11 +1081,12 @@
                         },
                         {
                             "id": "03_Player04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "I'm here for that contract—what's the assignment?",
-                                    "voice": false
+                                    "wemfile": "00603a00",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1082,11 +1099,12 @@
                         },
                         {
                             "id": "03_Player05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "What's the latest ship on the roster?",
-                                    "voice": false
+                                    "wemfile": "001ee635",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1099,11 +1117,12 @@
                         },
                         {
                             "id": "03_Player06",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Ready for a new project; what have you got?",
-                                    "voice": false
+                                    "wemfile": "00414100",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1116,11 +1135,12 @@
                         },
                         {
                             "id": "03_Player07",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Looking for a ship that could use a tune-up?",
-                                    "voice": false
+                                    "wemfile": "000fc5d1",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1133,11 +1153,12 @@
                         },
                         {
                             "id": "03_Player08",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Heard about a ship needing a fix, is it mine to take?",
-                                    "voice": false
+                                    "wemfile": "00a99cbe",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1150,11 +1171,12 @@
                         },
                         {
                             "id": "03_Player09",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "What's the word on that new contract?",
-                                    "voice": false
+                                    "wemfile": "00589a77",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1176,11 +1198,12 @@
                     "infos": [
                         {
                             "id": "03_AriaFighter01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Got a fighter that's seen better days. Time to turn it from a zero to a hero.",
-                                    "voice": false
+                                    "wemfile": "005248f1",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1194,11 +1217,12 @@
                         },
                         {
                             "id": "03_AriaFighter02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "There's a fighter itching for some speed. Think you can make it break the sound barrier... quietly?",
-                                    "voice": false
+                                    "wemfile": "00cec847",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1212,11 +1236,12 @@
                         },
                         {
                             "id": "03_AriaFighter03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Here’s a fighter that's begging for some flair. Ready to spice it up?",
-                                    "voice": false
+                                    "wemfile": "00937b33",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1230,11 +1255,12 @@
                         },
                         {
                             "id": "03_AriaFighter04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "This one's a zippy fighter, but it's more mouse than lion right now. Fancy beefing it up?",
-                                    "voice": false
+                                    "wemfile": "00b20f96",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1248,11 +1274,12 @@
                         },
                         {
                             "id": "03_AriaFighter05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Got a veteran fighter here. Fancy turning its old stories into new legends?",
-                                    "voice": false
+                                    "wemfile": "007dbf20",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1275,11 +1302,12 @@
                     "infos": [
                         {
                             "id": "03_AriaExplorer01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "An explorer's waiting. It's got more miles than my coffee machine and twice the untapped potential.",
-                                    "voice": false
+                                    "wemfile": "0022a06d",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1293,11 +1321,12 @@
                         },
                         {
                             "id": "03_AriaExplorer02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "I’ve got an explorer that’s seen galaxies galore. Ready to turn it into a space legend?",
-                                    "voice": false
+                                    "wemfile": "00ea44a6",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1311,11 +1340,12 @@
                         },
                         {
                             "id": "03_AriaExplorer03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "There's a research ship that's been flirting with black holes. Needs a bit of your charm now.",
-                                    "voice": false
+                                    "wemfile": "0075d99f",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1329,11 +1359,12 @@
                         },
                         {
                             "id": "03_AriaExplorer04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "This explorer's got wanderlust. Think you can make it the envy of the cosmos?",
-                                    "voice": false
+                                    "wemfile": "001c0e2c",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1347,11 +1378,12 @@
                         },
                         {
                             "id": "03_AriaExplorer05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Here’s an explorer that's craving adventure. Ready to be its genie?",
-                                    "voice": false
+                                    "wemfile": "00368355",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1374,11 +1406,12 @@
                     "infos": [
                         {
                             "id": "03_AriaHauler01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Got a hauler that's been lugging more than cargo. Time to jazz up its routine.",
-                                    "voice": false
+                                    "wemfile": "0032f08e",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1392,11 +1425,12 @@
                         },
                         {
                             "id": "03_AriaHauler02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "There's a sturdy hauler here. Could use a touch of pizzazz. Fancy giving it some sparkle?",
-                                    "voice": false
+                                    "wemfile": "003a5d0f",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1410,11 +1444,12 @@
                         },
                         {
                             "id": "03_AriaHauler03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Here's a freighter with dreams of being a starship. Think you can grant its wish?",
-                                    "voice": false
+                                    "wemfile": "0000c75e",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1428,11 +1463,12 @@
                         },
                         {
                             "id": "03_AriaHauler04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "This old freighter's solid but could use some fun. How about disco lights in the cargo bay?",
-                                    "voice": false
+                                    "wemfile": "00c7d650",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1446,11 +1482,12 @@
                         },
                         {
                             "id": "03_AriaHauler05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "There’s a hauler here with space to spare. Maybe add a bowling alley?",
-                                    "voice": false
+                                    "wemfile": "00372a0f",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1473,11 +1510,12 @@
                     "infos": [
                         {
                             "id": "03_AriaInterceptor01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Interceptor in the bay is ready for some zing. Think you can make it zoom and boom?",
-                                    "voice": false
+                                    "wemfile": "0059dfc6",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1491,11 +1529,12 @@
                         },
                         {
                             "id": "03_AriaInterceptor02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Got an interceptor that’s quick but not slick. Fancy giving it a secret identity?",
-                                    "voice": false
+                                    "wemfile": "00c87cba",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1509,11 +1548,12 @@
                         },
                         {
                             "id": "03_AriaInterceptor03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "There’s a need-for-speed ship here. Think you can make it go 'vroom' with style?",
-                                    "voice": false
+                                    "wemfile": "00022072",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1527,11 +1567,12 @@
                         },
                         {
                             "id": "03_AriaInterceptor04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "An interceptor's lined up. It’s fast, but can you make it furious?",
-                                    "voice": false
+                                    "wemfile": "00511b73",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1545,11 +1586,12 @@
                         },
                         {
                             "id": "03_AriaInterceptor05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Here's a racer that's been dreaming of rocket boosters. Fancy turning it into a speed demon?",
-                                    "voice": false
+                                    "wemfile": "00c61ade",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1572,11 +1614,12 @@
                     "infos": [
                         {
                             "id": "03_AriaLuxury01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "There's a luxury cruiser that's more plain Jane than star queen. Ready for a royal makeover?",
-                                    "voice": false
+                                    "wemfile": "00bad208",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1590,11 +1633,12 @@
                         },
                         {
                             "id": "03_AriaLuxury02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Got a fancy vessel that's feeling a bit old-fashioned. Time to bring it into the space age?",
-                                    "voice": false
+                                    "wemfile": "0084f510",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1608,11 +1652,12 @@
                         },
                         {
                             "id": "03_AriaLuxury03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "There’s a floating five-star hotel here. Think you can add a sixth star?",
-                                    "voice": false
+                                    "wemfile": "00bbfa9a",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1626,11 +1671,12 @@
                         },
                         {
                             "id": "03_AriaLuxury04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Ever fancied decking out a spaceship like a Hollywood mansion? Here’s your chance.",
-                                    "voice": false
+                                    "wemfile": "00107e3f",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1644,11 +1690,12 @@
                         },
                         {
                             "id": "03_AriaLuxury05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Got a luxury ship here that's secretly a diva. Ready to dress it for the red carpet?",
-                                    "voice": false
+                                    "wemfile": "0066babb",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1713,11 +1760,12 @@
                     "infos": [
                         {
                             "id": "04_Player01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Design's in. Does it capture what you were looking for?",
-                                    "voice": false
+                                    "wemfile": "005129d8",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1730,11 +1778,12 @@
                         },
                         {
                             "id": "04_Player02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Finished with the ship. How does it measure up to our standards?",
-                                    "voice": false
+                                    "wemfile": "00f67b86",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1747,11 +1796,12 @@
                         },
                         {
                             "id": "04_Player03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Completed the contract. What's your take on the final product?",
-                                    "voice": false
+                                    "wemfile": "00ff5eb7",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1764,11 +1814,12 @@
                         },
                         {
                             "id": "04_Player04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Just finished my design. Will it pass the Aria test?",
-                                    "voice": false
+                                    "wemfile": "00e45d73",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1781,11 +1832,12 @@
                         },
                         {
                             "id": "04_Player05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Redesign's done. Does it have the Aria stamp of approval?",
-                                    "voice": false
+                                    "wemfile": "00b09e57",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1798,11 +1850,12 @@
                         },
                         {
                             "id": "04_Player06",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Contract's done. I'm eager to hear your thoughts.",
-                                    "voice": false
+                                    "wemfile": "00ba2e10",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1815,11 +1868,12 @@
                         },
                         {
                             "id": "04_Player07",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Wrapped up the ship. It should meet the mark.",
-                                    "voice": false
+                                    "wemfile": "00939de2",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1832,11 +1886,12 @@
                         },
                         {
                             "id": "04_Player08",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Finished the upgrade. It's ready for your review.",
-                                    "voice": false
+                                    "wemfile": "00303a54",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1849,11 +1904,12 @@
                         },
                         {
                             "id": "04_Player09",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "The ship's reimagined, per your vision.",
-                                    "voice": false
+                                    "wemfile": "0016a719",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1866,11 +1922,12 @@
                         },
                         {
                             "id": "04_Player10",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Ship is done. It's a fresh take on an old classic.",
-                                    "voice": false
+                                    "wemfile": "00dc6134",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1889,11 +1946,12 @@
                     "infos": [
                         {
                             "id": "04_AriaFighter01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Nice work! This fighter's gone from zero to hero.",
-                                    "voice": false
+                                    "wemfile": "00c0fdfd",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1907,11 +1965,12 @@
                         },
                         {
                             "id": "04_AriaFighter02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Looks sharp! It’s got stealth and swagger in spades.",
-                                    "voice": false
+                                    "wemfile": "005ef79e",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1925,11 +1984,12 @@
                         },
                         {
                             "id": "04_AriaFighter03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "You've turned it tough! It's ready to rumble now.",
-                                    "voice": false
+                                    "wemfile": "0066f90d",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1943,11 +2003,12 @@
                         },
                         {
                             "id": "04_AriaFighter04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Sleek job! It's like a race car of the skies.",
-                                    "voice": false
+                                    "wemfile": "00813af6",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1961,11 +2022,12 @@
                         },
                         {
                             "id": "04_AriaFighter05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Stellar work! This fighter's ready for its own saga.",
-                                    "voice": false
+                                    "wemfile": "009b4475",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -1985,11 +2047,12 @@
                     "infos": [
                         {
                             "id": "04_AriaExplorer01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Great update! It's a real cosmic explorer now.",
-                                    "voice": false
+                                    "wemfile": "0028b358",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2003,11 +2066,12 @@
                         },
                         {
                             "id": "04_AriaExplorer02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "It's a star-traveler's dream! Love the new look.",
-                                    "voice": false
+                                    "wemfile": "00a8641d",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2021,11 +2085,12 @@
                         },
                         {
                             "id": "04_AriaExplorer03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Those sensors are top-notch. It's a galaxy whisperer now.",
-                                    "voice": false
+                                    "wemfile": "00df1e68",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2039,11 +2104,12 @@
                         },
                         {
                             "id": "04_AriaExplorer04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "You've given it a real adventurous edge. Nice!",
-                                    "voice": false
+                                    "wemfile": "0077f07e",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2057,11 +2123,12 @@
                         },
                         {
                             "id": "04_AriaExplorer05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Love it! It's like a toolbox of space wonders.",
-                                    "voice": false
+                                    "wemfile": "00f0ec3e",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2081,11 +2148,12 @@
                     "infos": [
                         {
                             "id": "04_AriaHauler01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "This hauler's a real gem now. It's got style and space!",
-                                    "voice": false
+                                    "wemfile": "002fdc71",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2099,11 +2167,12 @@
                         },
                         {
                             "id": "04_AriaHauler02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "You turned it chic! It's a fashion-forward freighter.",
-                                    "voice": false
+                                    "wemfile": "0000fe7b",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2117,11 +2186,12 @@
                         },
                         {
                             "id": "04_AriaHauler03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Massive upgrade! It's a cargo metropolis now.",
-                                    "voice": false
+                                    "wemfile": "0067ed37",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2135,11 +2205,12 @@
                         },
                         {
                             "id": "04_AriaHauler04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "From sturdy to stunning! It's a cargo showstopper.",
-                                    "voice": false
+                                    "wemfile": "00cb5cbf",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2153,11 +2224,12 @@
                         },
                         {
                             "id": "04_AriaHauler05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Wow, talk about an upgrade! It's a planet mover!",
-                                    "voice": false
+                                    "wemfile": "002988ad",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2177,11 +2249,12 @@
                     "infos": [
                         {
                             "id": "04_AriaInterceptor01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "This interceptor's slick and secretive now. Nice touch!",
-                                    "voice": false
+                                    "wemfile": "00842034",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2195,11 +2268,12 @@
                         },
                         {
                             "id": "04_AriaInterceptor02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "That's some speed! It's a real cosmic blur.",
-                                    "voice": false
+                                    "wemfile": "00f2a6cc",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2213,11 +2287,12 @@
                         },
                         {
                             "id": "04_AriaInterceptor03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Super quick! It's got an extra dose of zoom.",
-                                    "voice": false
+                                    "wemfile": "0002aa76",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2231,11 +2306,12 @@
                         },
                         {
                             "id": "04_AriaInterceptor04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Instant action! This ship's redefining speed.",
-                                    "voice": false
+                                    "wemfile": "00894f1a",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2249,11 +2325,12 @@
                         },
                         {
                             "id": "04_AriaInterceptor05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Sleek and fast! It's a racer's dream.",
-                                    "voice": false
+                                    "wemfile": "00f9b578",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2273,11 +2350,12 @@
                     "infos": [
                         {
                             "id": "04_AriaLuxury01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "It's like a floating palace. Absolutely luxurious!",
-                                    "voice": false
+                                    "wemfile": "00e822e3",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2291,11 +2369,12 @@
                         },
                         {
                             "id": "04_AriaLuxury02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "You've raised the bar! It's luxury cruising at its best.",
-                                    "voice": false
+                                    "wemfile": "0095c6ab",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2309,11 +2388,12 @@
                         },
                         {
                             "id": "04_AriaLuxury03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Pure elegance! Every inch whispers class.",
-                                    "voice": false
+                                    "wemfile": "000f5029",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2327,11 +2407,12 @@
                         },
                         {
                             "id": "04_AriaLuxury04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Opulent and grand! It's a journey in style.",
-                                    "voice": false
+                                    "wemfile": "00d55058",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2345,11 +2426,12 @@
                         },
                         {
                             "id": "04_AriaLuxury05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Cozy and lavish! It's a five-star trip through space.",
-                                    "voice": false
+                                    "wemfile": "00541910",
+                                    "voice": true
                                 }
                             ],
                             "conditions": [
@@ -2372,101 +2454,111 @@
                     "infos": [
                         {
                             "id": "04_AriaClosing01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Just transferred your credits. Great working with you, Cap.",
-                                    "voice": false
+                                    "wemfile": "00c74a8a",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaClosing02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Credits are on their way to your account. Until we meet again.",
-                                    "voice": false
+                                    "wemfile": "00819c26",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaClosing03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Payment's been sent out. Fantastic job on this one.",
-                                    "voice": false
+                                    "wemfile": "00140a96",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaClosing04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Nice job! Your credits should be in your account any moment now.",
-                                    "voice": false
+                                    "wemfile": "007909f7",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaClosing05",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Contract's all wrapped up, and so is your payment. Looking forward to the next one.",
-                                    "voice": false
+                                    "wemfile": "007aa316",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaClosing06",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Your credits are speeding your way. Thanks for the stellar work!",
-                                    "voice": false
+                                    "wemfile": "007ff19e",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaClosing07",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "All done here. Your payment's been processed. Catch you on the next mission.",
-                                    "voice": false
+                                    "wemfile": "000fcbd4",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaClosing08",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Reward sent, mission accomplished. You did great, Cap.",
-                                    "voice": false
+                                    "wemfile": "00d121d7",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaClosing09",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Credits are on the transfer. Thanks for your hard work.",
-                                    "voice": false
+                                    "wemfile": "00f73eed",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "04_AriaClosing10",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "That's it for this contract. Your payment's in the pipeline. See you around, Cap.",
-                                    "voice": false
+                                    "wemfile": "005e4e1f",
+                                    "voice": true
                                 }
                             ]
                         }
@@ -2528,30 +2620,37 @@
                     "infos": [
                         {
                             "id": "05_AriaResponse01",
+                            "flags": "000000000001",
                             "responses": [
                                 {
                                     "text": "More about me? Well, let's see... I'm a product of the colonies. A tiny speck on the edge of the frontier that you won't find on any tourist brochure. The scrapyard was my playground,",
-                                    "voice": false
+                                    "wemfile": "0061d54c",
+                                    "voice": true
                                 },
                                 {
                                     "text": "I dreamt of one day inventing something big and important, something that would propel humanity forward. My folks figured I'd be a mechanic, but I had my eyes on the stars and my mind on the ships that could reach them.",
-                                    "voice": false
+                                    "wemfile": "00b70f38",
+                                    "voice": true
                                 },
                                 {
                                     "text": "So, I made it off-world, thanks to a scholarship at the University here. It was my shot, my big break. I was going to build the future. But the corporate shipyards weren't buying what a starry-eyed colony kid was selling.",
-                                    "voice": false
+                                    "wemfile": "006936d4",
+                                    "voice": true
                                 },
                                 {
                                     "text": "But then, Atlas Astronautics happened. A startup with ambition and, more importantly, a willingness to gamble on a wildcard like me. They needed someone who could think outside the proverbial box—or ship, in this case. So I jumped ship—literally—and it's been a wild ride since.",
-                                    "voice": false
+                                    "wemfile": "00f7f33d",
+                                    "voice": true
                                 },
                                 {
                                     "text": "I'm not just building ships here. I'm building dreams—my dreams—into every hull, every thruster array. And yeah, I miss home sometimes, but this place... it's where I can make a real impact. It's where I belong.",
-                                    "voice": false
+                                    "wemfile": "00458870",
+                                    "voice": true
                                 },
                                 {
                                     "text": "And when things get too serious, I just remind myself that no matter how advanced our tech gets, we're still a bunch of primates trying to figure out how to not crash into the nearest celestial body. It's grounding, in an anti-gravity sort of way.",
-                                    "voice": false
+                                    "wemfile": "00351b47",
+                                    "voice": true
                                 }
                             ]
                         }
@@ -2608,10 +2707,12 @@
                     "infos": [
                         {
                             "id": "06_AriaInquiry01",
+                            "flags": "000000000001",
                             "responses": [
                                 {
                                     "text": "So, Cap, what's your story? Here for the thrill, the cash, or something more?",
-                                    "voice": false
+                                    "wemfile": "0097792e",
+                                    "voice": true
                                 }
                             ]
                         }
@@ -2669,10 +2770,12 @@
                     "infos": [
                         {
                             "id": "06_AriaResponseToAmbition01",
+                            "flags": "000000000001",
                             "responses": [
                                 {
                                     "text": "Thrills and bills, a classic mix. Just watch your back; adventure can be costly out here.",
-                                    "voice": false
+                                    "wemfile": "0011adfe",
+                                    "voice": true
                                 }
                             ]
                         }
@@ -2685,10 +2788,12 @@
                     "infos": [
                         {
                             "id": "06_AriaResponseToKinship01",
+                            "flags": "000000000001",
                             "responses": [
                                 {
                                     "text": "Another star chaser, huh? Good. The galaxy's vast, and there's plenty of room for names like ours.",
-                                    "voice": false
+                                    "wemfile": "00077782",
+                                    "voice": true
                                 }
                             ]
                         }
@@ -2701,10 +2806,12 @@
                     "infos": [
                         {
                             "id": "06_AriaResponseToHorizon01",
+                            "flags": "000000000001",
                             "responses": [
                                 {
                                     "text": "The eternal explorer, huh? Good choice. There's more out there than we can imagine. Let's uncover it together.",
-                                    "voice": false
+                                    "wemfile": "00be2168",
+                                    "voice": true
                                 }
                             ]
                         }
@@ -2786,41 +2893,45 @@
                     "infos": [
                         {
                             "id": "18_AriaResponse01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "No problem, Cap! Not every ship is a perfect match. I'll find this one a new captain.",
-                                    "voice": false
+                                    "wemfile": "00fe0f04",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "18_AriaResponse02",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "I'm updating the mission board right now. Let's find you a project that's more your speed.",
-                                    "voice": false
+                                    "wemfile": "00791f4b",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "18_AriaResponse03",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Sometimes a detour is part of the journey. Let's get you on a path that feels right.",
-                                    "voice": false
+                                    "wemfile": "008e1875",
+                                    "voice": true
                                 }
                             ]
                         },
                         {
                             "id": "18_AriaResponse04",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "Keep your chin up. Space is vast, and there's always something else out there for you.",
-                                    "voice": false
+                                    "wemfile": "00ec2bb5",
+                                    "voice": true
                                 }
                             ]
                         }
@@ -2835,11 +2946,12 @@
                     "infos": [
                         {
                             "id": "18_AriaResponse01",
-                            "flags": "01",
+                            "flags": "010000000001",
                             "responses": [
                                 {
                                     "text": "I'm updating the mission board right now. Let's find you a project that's more your speed.",
-                                    "voice": false
+                                    "wemfile": "00791f4b",
+                                    "voice": true
                                 }
                             ]
                         }

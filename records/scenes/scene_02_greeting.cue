@@ -11,16 +11,6 @@ scene_02_greeting: {
 		{name: "Greet"},
 	]
 	actions: [
-		// {
-		// 	name:  "Aria's Reflection"
-		// 	type:  #consts.ActionDialogue
-		// 	topic: "11_AriaInquiry"
-		// },
-		// {
-		// 	name:  "Bad news from home"
-		// 	type:  #consts.ActionDialogue
-		// 	topic: "12_AriaInquiry"
-		// },
 		{
 			name:  "Intro Dialogue"
 			type:  #consts.ActionDialogue

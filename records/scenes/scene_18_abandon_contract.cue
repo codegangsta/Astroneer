@@ -58,7 +58,8 @@ scene_18_abandon_contract: {
 			onBegin: "AbandonContract"
 			infos:   (#SimpleInfos & {in: {
 				prefix: "18_AriaResponse"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				texts: [
 					"No problem, Cap! Not every ship is a perfect match. I'll find this one a new captain.",
 					"I'm updating the mission board right now. Let's find you a project that's more your speed.",
@@ -75,7 +76,8 @@ scene_18_abandon_contract: {
 			startScene: "MAIN_topics"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "18_AriaResponse"
-				flags:  #consts.InfoFlagsRandom
+				flags:  #consts.InfoFlagsRandomNoLip
+				voice:  true
 				texts: [
 					"I'm updating the mission board right now. Let's find you a project that's more your speed.",
 				]

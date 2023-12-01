@@ -41,9 +41,9 @@ scene_06_player_background: {
 			speaker: #consts.Aria
 			infos:   (#SimpleInfos & {in: {
 				prefix: "06_AriaInquiry"
+				flags:  #consts.InfoFlagsNoLip
+				voice:  true
 				texts: [
-					// TODO: Maybe make this a bit more playful. She was just a bit vulnerable
-					// so maybe she tries to lighten the mood and redirect
 					"So, Cap, what's your story? Here for the thrill, the cash, or something more?",
 				]
 			}}).out
@@ -84,6 +84,8 @@ scene_06_player_background: {
 			startScene: "19_Questions"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "06_AriaResponseToAmbition"
+				flags:  #consts.InfoFlagsNoLip
+				voice:  true
 				texts: [
 					"Thrills and bills, a classic mix. Just watch your back; adventure can be costly out here.",
 				]
@@ -95,6 +97,8 @@ scene_06_player_background: {
 			startScene: "19_Questions"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "06_AriaResponseToKinship"
+				flags:  #consts.InfoFlagsNoLip
+				voice:  true
 				texts: [
 					"Another star chaser, huh? Good. The galaxy's vast, and there's plenty of room for names like ours.",
 				]
@@ -106,6 +110,8 @@ scene_06_player_background: {
 			startScene: "19_Questions"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "06_AriaResponseToHorizon"
+				flags:  #consts.InfoFlagsNoLip
+				voice:  true
 				texts: [
 					"The eternal explorer, huh? Good choice. There's more out there than we can imagine. Let's uncover it together.",
 				]
