@@ -244,10 +244,10 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   mc5.ObjectiveTarget03 = 91
 
 
-  ;missions.Add(ma1)
-  ;missions.Add(ma2)
-  ;missions.Add(ma3)
-  ;missions.Add(ma4)
+missions.Add(ma1)
+missions.Add(ma2)
+missions.Add(ma3)
+missions.Add(ma4)
 missions.Add(ma5)
 ; missions.Add(mb1)
 ; missions.Add(mb2)
