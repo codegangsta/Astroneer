@@ -16,6 +16,19 @@ Welcome to **Astroneer**, a mod for Starfield that puts you in the shoes of a fr
 
 **Ready to take the helm of your shipbuilding career?** Download Astroneer now and start forging the future of space travel in Starfield!
 
+## Installation
+This mod requires Plugins.txt Enabler which also requires SFSE or ASIL (GamePass) because it was made in xEdit and is packaged as .ESM﻿ plugin file.
+
+Please read detailed instructions provided by SFSE and Plugins.txt Enabler if you have not used any ESM mods yet! Open their respective pages and the instructions are all there!
+
+After you have requirements taken care of, please add the following lines to your Plugins.txt file, complete text file should look like this:
+﻿# This file is used by Starfield to keep track of your downloaded content.
+*Astroneer.esm
+
+Save the file and start the game using sfse_loader.exe. (Or for GamePass follow instructions provided by Plugins.txt Enabler)
+
+Note that this mod should work just fine with GamePass version as well, please just make sure to follow Plugin.txt Enabler instructions specific for the GamePass modding and ASIL. I only have Steam version so can't provide any support unless you get the Plugins.exe Enabler and ASI Loader to work on your installation, as I have no experience with GamePass version.
+
 ## Credits
 
 - @codegangsta - Game design, scripting, narrative crafting
