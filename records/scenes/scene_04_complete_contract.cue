@@ -44,6 +44,7 @@ scene_04_complete_contract: {
 			id:         "04_Player"
 			speaker:    #consts.Player
 			startScene: "04_CompleteContract"
+			flags:      #consts.TopicFlagsDoAllBeforeRepeating
 			infos:      (#SimpleInfos & {in: {
 				prefix: "04_Player"
 				flags:  #consts.InfoFlagsRandomNoLip
@@ -72,6 +73,7 @@ scene_04_complete_contract: {
 		{
 			id:      "04_AriaFighter"
 			speaker: #consts.Aria
+			flags:   #consts.TopicFlagsDoAllBeforeRepeating
 			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaFighter"
 				flags:  #consts.InfoFlagsRandomNoLip
@@ -96,6 +98,7 @@ scene_04_complete_contract: {
 		{
 			id:      "04_AriaExplorer"
 			speaker: #consts.Aria
+			flags:   #consts.TopicFlagsDoAllBeforeRepeating
 			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaExplorer"
 				flags:  #consts.InfoFlagsRandomNoLip
@@ -120,6 +123,7 @@ scene_04_complete_contract: {
 		{
 			id:      "04_AriaHauler"
 			speaker: #consts.Aria
+			flags:   #consts.TopicFlagsDoAllBeforeRepeating
 			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaHauler"
 				flags:  #consts.InfoFlagsRandomNoLip
@@ -144,6 +148,7 @@ scene_04_complete_contract: {
 		{
 			id:      "04_AriaInterceptor"
 			speaker: #consts.Aria
+			flags:   #consts.TopicFlagsDoAllBeforeRepeating
 			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaInterceptor"
 				flags:  #consts.InfoFlagsRandomNoLip
@@ -168,6 +173,7 @@ scene_04_complete_contract: {
 		{
 			id:      "04_AriaLuxury"
 			speaker: #consts.Aria
+			flags:   #consts.TopicFlagsDoAllBeforeRepeating
 			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaLuxury"
 				flags:  #consts.InfoFlagsRandomNoLip
@@ -195,6 +201,7 @@ scene_04_complete_contract: {
 			startScene: "MAIN_topics"
 			script:     "Astroneer:Dialogue"
 			onBegin:    "CompleteContract"
+			flags:      #consts.TopicFlagsDoAllBeforeRepeating
 			infos:      (#SimpleInfos & {in: {
 				prefix: "04_AriaClosing"
 				flags:  #consts.InfoFlagsRandomNoLip

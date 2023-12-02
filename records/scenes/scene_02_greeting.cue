@@ -27,6 +27,7 @@ scene_02_greeting: {
 			id:         "02_AriaGreeting"
 			speaker:    #consts.Aria
 			startScene: "MAIN_topics"
+			flags:      #consts.TopicFlagsDoAllBeforeRepeating
 			infos:      (#SimpleInfos & {in: {
 				prefix: "02_AriaGreeting"
 				flags:  #consts.InfoFlagsRandomNoLip

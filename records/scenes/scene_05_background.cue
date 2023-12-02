@@ -20,14 +20,14 @@ scene_05_background: {
 			startScene: "05_Background"
 			infos:      (#SimpleInfos & {in: {
 				prefix: "05_PlayerInquiry"
-				conditions: [
-					{
-						function: "GetVMQuestVariable"
-						quest:    "ParentQuest"
-						variable: "DialogueBackgroundComplete"
-						equals:   0.0
-					},
-				]
+				// conditions: [
+				// 	{
+				// 		function: "GetVMQuestVariable"
+				// 		quest:    "ParentQuest"
+				// 		variable: "DialogueBackgroundComplete"
+				// 		equals:   0.0
+				// 	},
+				// ]
 				texts: [
 					"Can you tell me more about yourself?",
 				]

@@ -136,22 +136,6 @@ Function StageDesign()
 
   Self.SetObjectiveDisplayed(ShipObjective_ReactorClass, True, False)
 
-  if Mission.Objective01 != None
-    Self.SetObjectiveDisplayed(ShipObjective_01, True, False)
-  endif
-  if Mission.Objective02 != None
-    Self.SetObjectiveDisplayed(ShipObjective_02, True, False)
-  endif
-  if Mission.Objective03 != None
-    Self.SetObjectiveDisplayed(ShipObjective_03, True, False)
-  endif
-  if Mission.Objective04 != None
-    Self.SetObjectiveDisplayed(ShipObjective_04, True, False)
-  endif
-  if Mission.Objective05 != None
-    Self.SetObjectiveDisplayed(ShipObjective_05, True, False)
-  endif
-
   Self.SetObjectiveCompleted(0, True)
 EndFunction
 

@@ -116,6 +116,8 @@
                     "speaker": "",
                     "script": "Astroneer:Dialogue",
                     "onEnd": "ModifyContractShip",
+                    "flags": "1",
+                    "startScene": "MAIN_topics",
                     "infos": [
                         {
                             "id": "MAIN_AriaModifyContractShipResponse01",
@@ -168,6 +170,8 @@
                     "speaker": "",
                     "script": "Astroneer:Dialogue",
                     "onEnd": "ModifyShips",
+                    "startScene": "MAIN_topics",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "MAIN_AriaModifyShipsResponse01",
@@ -234,6 +238,7 @@
                     "id": "MAIN_AriaQuestionsResponse",
                     "speaker": "",
                     "startScene": "19_Questions",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "MAIN_AriaQuestionsResponse01",
@@ -807,27 +812,28 @@
                             "responses": [
                                 {
                                     "text": "There's the captain everyone's been talking about! I'm Aria, I'll be your design lead for all ship contracts here at Atlas",
-                                    "voice": false
+                                    "wemfile": "00d99ddf",
+                                    "voice": true
                                 },
                                 {
                                     "text": "Let's talk ship. You're about to dive into the nuts and bolts of starship customization.",
-                                    "voice": false
+                                    "wemfile": "006144f4",
+                                    "voice": true
                                 },
                                 {
                                     "text": "I'll pull the bare bones into the landing pad back there, and you put the soul into the machine. Match the client's requirements, and we're golden.",
-                                    "voice": false
+                                    "wemfile": "007fd6bd",
+                                    "voice": true
                                 },
                                 {
                                     "text": "Currently, our parts bin isn't exactly a treasure trove. But hey, help us some research projects, and we'll get you the shiny stuff.",
-                                    "voice": false
-                                },
-                                {
-                                    "text": "I hear you're quite the pilot. So I'm calling you 'Cap' from here on out! Beats saying 'O Great Shipbuilder' every time, right?",
-                                    "voice": false
+                                    "wemfile": "00d14402",
+                                    "voice": true
                                 },
                                 {
                                     "text": "Alright, Cap. Let's get to work!",
-                                    "voice": false
+                                    "wemfile": "00a2f792",
+                                    "voice": true
                                 }
                             ]
                         }
@@ -867,6 +873,7 @@
                     "id": "02_AriaGreeting",
                     "speaker": "AriaCollins",
                     "startScene": "MAIN_topics",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "02_AriaGreeting01",
@@ -1024,6 +1031,7 @@
                     "id": "03_Player",
                     "speaker": "",
                     "startScene": "03_AcceptContract",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "03_Player01",
@@ -1195,6 +1203,7 @@
                     "startScene": "MAIN_topics",
                     "script": "Astroneer:Dialogue",
                     "onBegin": "SetDesignStage",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "03_AriaFighter01",
@@ -1299,6 +1308,7 @@
                     "startScene": "MAIN_topics",
                     "script": "Astroneer:Dialogue",
                     "onBegin": "SetDesignStage",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "03_AriaExplorer01",
@@ -1403,6 +1413,7 @@
                     "startScene": "MAIN_topics",
                     "script": "Astroneer:Dialogue",
                     "onBegin": "SetDesignStage",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "03_AriaHauler01",
@@ -1507,6 +1518,7 @@
                     "startScene": "MAIN_topics",
                     "script": "Astroneer:Dialogue",
                     "onBegin": "SetDesignStage",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "03_AriaInterceptor01",
@@ -1611,6 +1623,7 @@
                     "startScene": "MAIN_topics",
                     "script": "Astroneer:Dialogue",
                     "onBegin": "SetDesignStage",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "03_AriaLuxury01",
@@ -1757,6 +1770,7 @@
                     "id": "04_Player",
                     "speaker": "",
                     "startScene": "04_CompleteContract",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "04_Player01",
@@ -1943,6 +1957,7 @@
                 {
                     "id": "04_AriaFighter",
                     "speaker": "AriaCollins",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "04_AriaFighter01",
@@ -2044,6 +2059,7 @@
                 {
                     "id": "04_AriaExplorer",
                     "speaker": "AriaCollins",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "04_AriaExplorer01",
@@ -2145,6 +2161,7 @@
                 {
                     "id": "04_AriaHauler",
                     "speaker": "AriaCollins",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "04_AriaHauler01",
@@ -2246,6 +2263,7 @@
                 {
                     "id": "04_AriaInterceptor",
                     "speaker": "AriaCollins",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "04_AriaInterceptor01",
@@ -2347,6 +2365,7 @@
                 {
                     "id": "04_AriaLuxury",
                     "speaker": "AriaCollins",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "04_AriaLuxury01",
@@ -2451,6 +2470,7 @@
                     "startScene": "MAIN_topics",
                     "script": "Astroneer:Dialogue",
                     "onBegin": "CompleteContract",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "04_AriaClosing01",
@@ -2598,14 +2618,6 @@
                                 {
                                     "text": "Can you tell me more about yourself?",
                                     "voice": false
-                                }
-                            ],
-                            "conditions": [
-                                {
-                                    "function": "GetVMQuestVariable",
-                                    "quest": "ParentQuest",
-                                    "variable": "DialogueBackgroundComplete",
-                                    "equals": 0.0
                                 }
                             ]
                         }
@@ -2890,6 +2902,7 @@
                     "speaker": "AriaCollins",
                     "script": "Astroneer:Dialogue",
                     "onBegin": "AbandonContract",
+                    "flags": "1",
                     "infos": [
                         {
                             "id": "18_AriaResponse01",

@@ -41,6 +41,7 @@ scene_03_accept_contract: {
 			id:         "03_Player"
 			speaker:    #consts.Player
 			startScene: "03_AcceptContract"
+			flags:      #consts.TopicFlagsDoAllBeforeRepeating
 			infos:      (#SimpleInfos & {in: {
 				prefix: "03_Player"
 				flags:  #consts.InfoFlagsRandomNoLip
@@ -71,6 +72,7 @@ scene_03_accept_contract: {
 			startScene: "MAIN_topics"
 			script:     "Astroneer:Dialogue"
 			onBegin:    "SetDesignStage"
+			flags:      #consts.TopicFlagsDoAllBeforeRepeating
 			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaFighter"
 				flags:  #consts.InfoFlagsRandomNoLip
@@ -98,6 +100,7 @@ scene_03_accept_contract: {
 			startScene: "MAIN_topics"
 			script:     "Astroneer:Dialogue"
 			onBegin:    "SetDesignStage"
+			flags:      #consts.TopicFlagsDoAllBeforeRepeating
 			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaExplorer"
 				flags:  #consts.InfoFlagsRandomNoLip
@@ -125,6 +128,7 @@ scene_03_accept_contract: {
 			startScene: "MAIN_topics"
 			script:     "Astroneer:Dialogue"
 			onBegin:    "SetDesignStage"
+			flags:      #consts.TopicFlagsDoAllBeforeRepeating
 			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaHauler"
 				flags:  #consts.InfoFlagsRandomNoLip
@@ -152,6 +156,7 @@ scene_03_accept_contract: {
 			startScene: "MAIN_topics"
 			script:     "Astroneer:Dialogue"
 			onBegin:    "SetDesignStage"
+			flags:      #consts.TopicFlagsDoAllBeforeRepeating
 			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaInterceptor"
 				flags:  #consts.InfoFlagsRandomNoLip
@@ -179,6 +184,7 @@ scene_03_accept_contract: {
 			startScene: "MAIN_topics"
 			script:     "Astroneer:Dialogue"
 			onBegin:    "SetDesignStage"
+			flags:      #consts.TopicFlagsDoAllBeforeRepeating
 			infos:      (#SimpleInfos & {in: {
 				prefix: "03_AriaLuxury"
 				flags:  #consts.InfoFlagsRandomNoLip

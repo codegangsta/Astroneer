@@ -93,11 +93,13 @@ scene_MAIN_topics: {
 			}}).out
 		},
 		{
-			id:      "MAIN_AriaModifyContractShipResponse"
-			speaker: #consts.Player
-			script:  "Astroneer:Dialogue"
-			onEnd:   "ModifyContractShip"
-			infos:   (#SimpleInfos & {in: {
+			id:         "MAIN_AriaModifyContractShipResponse"
+			speaker:    #consts.Player
+			script:     "Astroneer:Dialogue"
+			onEnd:      "ModifyContractShip"
+			flags:      #consts.TopicFlagsDoAllBeforeRepeating
+			startScene: "MAIN_topics"
+			infos:      (#SimpleInfos & {in: {
 				prefix: "MAIN_AriaModifyContractShipResponse"
 				flags:  #consts.InfoFlagsRandomNoLip
 				voice:  true
@@ -105,11 +107,13 @@ scene_MAIN_topics: {
 			}}).out
 		},
 		{
-			id:      "MAIN_AriaModifyShipsResponse"
-			speaker: #consts.Player
-			script:  "Astroneer:Dialogue"
-			onEnd:   "ModifyShips"
-			infos:   (#SimpleInfos & {in: {
+			id:         "MAIN_AriaModifyShipsResponse"
+			speaker:    #consts.Player
+			script:     "Astroneer:Dialogue"
+			onEnd:      "ModifyShips"
+			startScene: "MAIN_topics"
+			flags:      #consts.TopicFlagsDoAllBeforeRepeating
+			infos:      (#SimpleInfos & {in: {
 				prefix: "MAIN_AriaModifyShipsResponse"
 				flags:  #consts.InfoFlagsRandomNoLip
 				voice:  true
@@ -128,6 +132,7 @@ scene_MAIN_topics: {
 			id:         "MAIN_AriaQuestionsResponse"
 			speaker:    #consts.Player
 			startScene: "19_Questions"
+			flags:      #consts.TopicFlagsDoAllBeforeRepeating
 			infos:      (#SimpleInfos & {in: {
 				prefix: "MAIN_AriaQuestionsResponse"
 				flags:  #consts.InfoFlagsRandomNoLip

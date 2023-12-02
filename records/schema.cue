@@ -36,6 +36,8 @@ import (
 #Topic: {
 	// Editor ID of the DIAL record to generate
 	id: string
+	// Flags to set on the DIAL record
+	flags?: string
 	// Optional notes for the topic
 	notes?: string
 	// Editor ID of the speaker

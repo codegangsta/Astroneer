@@ -56,6 +56,7 @@ scene_18_abandon_contract: {
 			speaker: #consts.Aria
 			script:  "Astroneer:Dialogue"
 			onBegin: "AbandonContract"
+			flags:   #consts.TopicFlagsDoAllBeforeRepeating
 			infos:   (#SimpleInfos & {in: {
 				prefix: "18_AriaResponse"
 				flags:  #consts.InfoFlagsRandomNoLip

@@ -116,8 +116,6 @@ begin
 	// Add script
 	script := ElementByPath(vmadSubrecord, 'Script Fragments\Script');
 	SetElementEditValues(script, 'ScriptName', scriptName);
-	script := ElementByPath(vmadSubrecord, 'Script Fragments\Flags');
-	SetEditValue(script, '11');
 
 	fragments := ElementByPath(vmadSubrecord, 'Script Fragments\Fragments');
 	// loop over fragments and remove them
@@ -129,6 +127,8 @@ begin
 	// Add fragments
 	if onBegin <> '' then
 	begin
+		script := ElementByPath(vmadSubrecord, 'Script Fragments\Flags');
+		SetEditValue(script, '10');
 		fragment := Add(fragments, 'Fragment', True);
 		SetElementEditValues(fragment, 'Unknown', '0');
 		SetElementEditValues(fragment, 'ScriptName', scriptName);
@@ -137,6 +137,8 @@ begin
 
 	if onEnd <> '' then
 	begin
+		script := ElementByPath(vmadSubrecord, 'Script Fragments\Flags');
+		SetEditValue(script, '01');
 		fragment := Add(fragments, 'Fragment', True);
 		SetElementEditValues(fragment, 'Unknown', '1');
 		SetElementEditValues(fragment, 'ScriptName', scriptName);
@@ -374,6 +376,8 @@ begin
 
 			SetElementEditValues(topicDataRecord, 'Category', 'Scene');
 			SetElementEditValues(topicDataRecord, 'Subtype', 'Custom Scene');
+			if topic.S['flags'] <> '' then
+				SetElementEditValues(topicDataRecord, 'Topic Flags', topic.S['flags']);
 
 			infos := topic.A['infos'];
 			for j := 0 to infos.Count - 1 do begin
