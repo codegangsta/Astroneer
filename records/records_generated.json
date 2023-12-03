@@ -4400,6 +4400,54 @@
             ]
         },
         {
+            "id": "12b_BadNews",
+            "quest": "ParentQuest",
+            "name": "Bad News followup scene",
+            "status": 0,
+            "actors": [
+                -2
+            ],
+            "flags": "0000100000001",
+            "phases": [
+                {
+                    "name": "Aria Response"
+                },
+                {
+                    "name": "Player Response"
+                }
+            ],
+            "actions": [
+                {
+                    "name": "Player Deeper Responses",
+                    "type": 3,
+                    "startPhase": 1,
+                    "endPhase": 1,
+                    "choices": [
+                        {
+                            "topic": "12_PlayerResponseEmpathy",
+                            "response": "12_AriaResponseToEmpathy"
+                        },
+                        {
+                            "topic": "12_PlayerResponsePracticalSupport",
+                            "response": "12_AriaResponseToPracticalSupport"
+                        },
+                        {
+                            "topic": "12_PlayerResponseSharedExperience",
+                            "response": "12_AriaResponseToSharedExperience"
+                        },
+                        {
+                            "topic": "12_PlayerResponseEncouragingOptimism",
+                            "response": "12_AriaResponseToEncouragingOptimism"
+                        },
+                        {
+                            "topic": "12_PlayerResponseOfferSpace",
+                            "response": "12_AriaResponseToOfferSpace"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": "13_HiddenPassions",
             "quest": "ParentQuest",
             "name": "Hidden Passions - Humble Revelations",
