@@ -48,6 +48,7 @@ EndGroup
 
 Group Factions
   FormList Property ShipFactions Auto Const Mandatory
+  FormList Property EnemyShipFactions Auto Const Mandatory
 EndGroup
 
 spaceshipreference[] Property BuilderDisabledShips Auto
@@ -234,9 +235,6 @@ Function RemoveContractShip(spaceshipreference ship, Bool addToCollection)
   PlayerShipQuest.RemovePlayerShip(ship)
   ; Remove landing marker ref
   ship.SetLinkedRef(None, PlayerShipQuest.LandingMarkerKeyword, False)
-  ; Add it to a random faction
-  Faction shipFaction = ShipFactions.GetAt(Utility.RandomInt(0, ShipFactions.GetSize()-1)) as Faction
-  ship.AddToFaction(shipFaction)
 
   ship.DisableWithTakeoffOrLandingNoWait()
 EndFunction

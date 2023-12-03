@@ -9,6 +9,7 @@ Int CheckStateTimerID = 1 Const
 Float TimerMin = 60.0 Const
 Float TimerMax = 300.0 Const
 Int SpawnPercentage = 10 Const
+Int EnemySpawnPercentage = 25 Const
 
 Event OnQuestInit()
   Trace("OnQuestInit")
@@ -45,14 +46,14 @@ Event OnTimer(Int timerID)
   Trace("Checking to spawn ship")
   If timerID == CheckStateTimerID
     if Utility.RandomInt(0, 100) <= SpawnPercentage
-      SpawnShip()
+      SpawnShip(Utility.RandomInt(0, 100) <= EnemySpawnPercentage)
     endif
 
     ResetTimer(TimerMin, TimerMax)
   EndIf
 EndEvent
 
-Function SpawnShip()
+Function SpawnShip(Bool enemy)
   Trace("SpawnShip")
   spaceshipreference pShip = PlayerShip.GetShipReference()
   spaceshipreference ship = None
@@ -74,18 +75,29 @@ Function SpawnShip()
   endif
   SpawnedShip = ship
 
+
   ; reset ship
   ship.Reset(None)
+  ship.RemoveFromAllFactions()
+  if enemy
+    Faction shipFaction = ParentQuest.EnemyShipFactions.GetAt(Utility.RandomInt(0, ParentQuest.EnemyShipFactions.GetSize()-1)) as Faction
+    ship.AddToFaction(shipFaction)
+  else
+    Faction shipFaction = ParentQuest.ShipFactions.GetAt(Utility.RandomInt(0, ParentQuest.ShipFactions.GetSize()-1)) as Faction
+    ship.AddToFaction(shipFaction)
+  endif
+
   ship.MoveNear(pShip, pShip.CONST_NearPosition_ForwardWide, pShip.CONST_NearDistance_Close, pShip.CONST_NearFacing_TotallyRandom)
 
   ship.EnableWithGravJump()
   Form XMarker = Game.GetFormFromFile(59, "Starfield.esm")
   ObjectReference targetMarker = pShip.PlaceAtMe(XMarker, 1, False, False, True, None, None, True)
   targetMarker.MoveNear(pShip, pShip.CONST_NearPosition_Random, pShip.CONST_NearDistance_VeryLong, pShip.CONST_NearFacing_TotallyRandom)
-  ship.SetLinkedRef(targetMarker, None, False)
-  ship.EvaluatePackage(True)
-  ship.SetForwardVelocity(0.1)
-  Trace("Package " + ship.GetCurrentPackage())
+  if enemy == false
+    ship.SetLinkedRef(targetMarker, None, False)
+    ship.EvaluatePackage(True)
+    ship.SetForwardVelocity(0.1)
+  endif
 EndFunction
 
 Function Trace(string message)

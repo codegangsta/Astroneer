@@ -70,7 +70,12 @@ EndFunction
 
 Function DebugPlaceShip() global
   Astroneer:TrafficManager tm = Game.GetForm(0x020011D6) as Astroneer:TrafficManager
-  tm.SpawnShip()
+  tm.SpawnShip(False)
+EndFunction
+
+Function DebugPlaceEnemyShip() global
+  Astroneer:TrafficManager tm = Game.GetForm(0x020011D6) as Astroneer:TrafficManager
+  tm.SpawnShip(True)
 EndFunction
 
 Function DebugRemoveShip() global

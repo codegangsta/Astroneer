@@ -34,6 +34,9 @@ reload_scripts::
 place_ship::
 	sfc 'cgf "Astroneer.DebugPlaceShip"'
 
+place_enemy_ship::
+	sfc 'cgf "Astroneer.DebugPlaceEnemyShip"'
+
 debug_init::
 	sfc 'cgf "Astroneer.DebugInit"'
 
