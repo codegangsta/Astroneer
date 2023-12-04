@@ -5,6 +5,18 @@ Message Function GetRandomHabObjective(FormList objectives) global
   return objectives.GetAt(index) as Message
 EndFunction
 
+Message Function GetRandomHabObjectiveExclude(FormList objectives, Message exclude) global
+  Message[] filtered = new Message[0]
+  foreach(Form m in objectives)
+    if(m != exclude)
+      filtered.Add(m as Message)
+    endif
+  endforeach
+
+  int index = Utility.RandomInt(0, filtered.Length - 1)
+  return filtered[index] as Message
+EndFunction
+
 Message Function GetRandomMessage(Message[] messages, Message exclude) global
   Message[] filtered = new Message[0]
   foreach(Message m in messages)
@@ -24,7 +36,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   weaponObjectivesBasic.Add(p.ObjectiveWeaponPowerEM)
   weaponObjectivesBasic.Add(p.ObjectiveWeaponPowerMissile)
   weaponObjectivesBasic.Add(p.ObjectiveWeaponPowerContinuousBeam)
-
 
   Message[] weaponObjectivesAdvanced = new Message[0]
   weaponObjectivesAdvanced.Add(p.ObjectiveWeaponPowerBallistic)
@@ -220,16 +231,20 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ;= Class C Explorer Mission ======================================
   Astroneer:Pack:Mission mc1 = new Astroneer:Pack:Mission
   mc1.ID = "MP01_ExplorerC"
-  mc1.ShipTemplate = p.ShipTemplateExplorer
+  mc1.ShipTemplate = p.ShipTemplateExplorerC
   mc1.ShipType = p.ShipTypeExplorer
   mc1.Difficulty = p.DifficultyClassC
-  mc1.RewardCredits = 8000
+  mc1.RewardCredits = 12000
   mc1.Objective01 = p.ObjectiveFuel
-  mc1.ObjectiveTarget01 = 25100
+  mc1.ObjectiveTarget01 = 3000
   mc1.Objective02 = p.ObjectiveGravJumpRange
-  mc1.ObjectiveTarget02 = 85
+  mc1.ObjectiveTarget02 = 22
   mc1.Objective03 = p.ObjectiveReactorPower
-  mc1.ObjectiveTarget03 = 680
+  mc1.ObjectiveTarget03 = 29
+  mc1.Objective04 = GetRandomHabObjective(p.HabObjectivesExplorer)
+  mc1.ObjectiveTarget04 = Utility.RandomInt(1, 2)
+  mc1.Objective05 = GetRandomHabObjectiveExclude(p.HabObjectivesExplorer, mc1.Objective04)
+  mc1.ObjectiveTarget05 = Utility.RandomInt(1, 2)
 
   ;= Class C Fighter Mission =======================================
   Astroneer:Pack:Mission mc2 = new Astroneer:Pack:Mission
@@ -298,8 +313,8 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
 ;missions.Add(mb2)
 ;missions.Add(mb3)
 ;missions.Add(mb4)
-missions.Add(mb5)
-;missions.Add(mc1)
+;missions.Add(mb5)
+missions.Add(mc1)
 ;missions.Add(mc2)
 ;missions.Add(mc3)
 ;missions.Add(mc4)
