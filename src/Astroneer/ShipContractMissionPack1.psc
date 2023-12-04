@@ -5,7 +5,24 @@ Message Function GetRandomHabObjective(FormList objectives) global
   return objectives.GetAt(index) as Message
 EndFunction
 
+Message Function GetRandomMessage(Message[] messages, Message exclude) global
+  Message[] filtered = new Message[0]
+  foreach(Message m in messages)
+    if(m != exclude)
+      filtered.Add(m)
+    endif
+  endforeach
+
+  int index = Utility.RandomInt(0, filtered.Length - 1)
+  return filtered[index] as Message
+EndFunction
+
 Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
+  Message[] weaponObjectivesBasic = new Message[0]
+  weaponObjectivesBasic.Add(p.ObjectiveWeaponPowerBallistic)
+  weaponObjectivesBasic.Add(p.ObjectiveWeaponPowerEnergy)
+  weaponObjectivesBasic.Add(p.ObjectiveWeaponPowerEM)
+  weaponObjectivesBasic.Add(p.ObjectiveWeaponPowerMissile)
 
   Astroneer:Pack:Mission[] missions = new Astroneer:Pack:Mission[0]
 
@@ -107,59 +124,71 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   mb1.Difficulty = p.DifficultyClassB
   mb1.RewardCredits = 8500
   mb1.Objective01 = p.ObjectiveFuel
-  mb1.ObjectiveTarget01 = 600
+  mb1.ObjectiveTarget01 = 820
   mb1.Objective02 = p.ObjectiveGravJumpRange
-  mb1.ObjectiveTarget02 = 20
-  mb1.Objective03 = p.ObjectiveReactorPower
-  mb1.ObjectiveTarget03 = 18
+  mb1.ObjectiveTarget02 = 23
+  mb1.Objective03 = p.ObjectiveWeaponPowerEM
+  mb1.ObjectiveTarget03 = 8
   mb1.Objective04 = p.ObjectiveMass
-  mb1.ObjectiveTarget04 = 1000
+  mb1.ObjectiveTarget04 = 600
   mb1.Objective05 = GetRandomHabObjective(p.HabObjectivesExplorer)
-  mb1.ObjectiveTarget05 = 2
+  mb1.ObjectiveTarget05 = Utility.RandomInt(1, 2)
 
   ;= Class B Fighter Mission =======================================
   Astroneer:Pack:Mission mb2 = new Astroneer:Pack:Mission
   mb2.ID = "MP01_FighterB"
-  mb2.ShipTemplate = p.ShipTemplateFighter
+  mb2.ShipTemplate = p.ShipTemplateFighterB
   mb2.ShipType = p.ShipTypeFighter
   mb2.Difficulty = p.DifficultyClassB
-  mb2.RewardCredits = 6500
+  mb2.RewardCredits = 8500
   mb2.Objective01 = p.ObjectiveShieldHealth
-  mb2.ObjectiveTarget01 = 610
+  mb2.ObjectiveTarget01 = 525
   mb2.Objective02 = p.ObjectiveTotalWeaponPower
-  mb2.ObjectiveTarget02 = 102
-  mb2.Objective03 = p.ObjectiveWeaponPowerEnergy
-  mb2.ObjectiveTarget03 = 7
-  mb2.Objective04 = p.ObjectiveWeaponPowerMissile
-  mb2.ObjectiveTarget04 = 7
+  mb2.ObjectiveTarget02 = 22
+  mb2.Objective03 = GetRandomMessage(weaponObjectivesBasic, None)
+  mb2.ObjectiveTarget03 = 8
+  mb2.Objective04 = p.ObjectiveWeaponPowerContinuousBeam
+  mb2.ObjectiveTarget04 = 8
+  mb2.Objective05 = GetRandomHabObjective(p.HabObjectivesFighter)
+  mb2.ObjectiveTarget05 = Utility.RandomInt(1, 2)
 
   ;= Class B Hauler Mission ========================================
   Astroneer:Pack:Mission mb3 = new Astroneer:Pack:Mission
   mb3.ID = "MP01_HaulerB"
-  mb3.ShipTemplate = p.ShipTemplateHauler
+  mb3.ShipTemplate = p.ShipTemplateHaulerB
   mb3.ShipType = p.ShipTypeHauler
   mb3.Difficulty = p.DifficultyClassB
-  mb3.RewardCredits = 6200
+  mb3.RewardCredits = 9000
   mb3.Objective01 = p.ObjectiveCargo
-  mb3.ObjectiveTarget01 = 13500
+  mb3.ObjectiveTarget01 = 3600
   mb3.Objective02 = p.ObjectiveEnginePower
-  mb3.ObjectiveTarget02 = 505
+  mb3.ObjectiveTarget02 = 10
   mb3.Objective03 = p.ObjectiveFuel
-  mb3.ObjectiveTarget03 = 13500
+  mb3.ObjectiveTarget03 = 780
+  mb3.Objective04 = p.ObjectiveMass
+  mb3.ObjectiveTarget04 = 1550
+  mb3.Objective05 = GetRandomHabObjective(p.HabObjectivesHauler)
+  mb3.ObjectiveTarget05 = Utility.RandomInt(1, 2)
 
   ;= Class B Luxury Mission ========================================
   Astroneer:Pack:Mission mb4 = new Astroneer:Pack:Mission
   mb4.ID = "MP01_LuxuryB"
-  mb4.ShipTemplate = p.ShipTemplateLuxury
+  mb4.ShipTemplate = p.ShipTemplateLuxuryB
   mb4.ShipType = p.ShipTypeLuxury
   mb4.Difficulty = p.DifficultyClassB
-  mb4.RewardCredits = 7000
+  mb4.RewardCredits = 8300
   mb4.Objective01 = p.ObjectivePassengerSlots
   mb4.ObjectiveTarget01 = 5
-  mb4.Objective02 = p.ObjectiveHabs
-  mb4.ObjectiveTarget02 = 2
+  mb4.Objective02 = GetRandomMessage(weaponObjectivesBasic, mb4.Objective02)
+  mb4.ObjectiveTarget02 = 8
+  mb4.Objective03 = GetRandomMessage(weaponObjectivesBasic, None)
+  mb4.ObjectiveTarget03 = 8
   mb4.Objective03 = p.ObjectiveShieldHealth
-  mb4.ObjectiveTarget03 = 505
+  mb4.ObjectiveTarget03 = 525
+  mb4.Objective04 = p.ObjectiveHull
+  mb4.ObjectiveTarget04 = 550
+  mb4.Objective05 = GetRandomHabObjective(p.HabObjectivesLuxury)
+  mb4.ObjectiveTarget05 = Utility.RandomInt(1, 2)
 
   ;= Class B Interceptor Mission ===================================
   Astroneer:Pack:Mission mb5 = new Astroneer:Pack:Mission
@@ -167,7 +196,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   mb5.ShipTemplate = p.ShipTemplateInterceptor
   mb5.ShipType = p.ShipTypeInterceptor
   mb5.Difficulty = p.DifficultyClassB
-  mb5.RewardCredits = 6300
+  mb5.RewardCredits = 9800
   mb5.Objective01 = p.ObjectiveTopSpeed
   mb5.ObjectiveTarget01 = 610
   mb5.Objective02 = p.ObjectiveThrust
@@ -247,16 +276,15 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   mc5.Objective03 = p.ObjectiveMass
   mc5.ObjectiveTarget03 = 91
 
-
 ;missions.Add(ma1)
 ;missions.Add(ma2)
 ;missions.Add(ma3)
 ;missions.Add(ma4)
 ;missions.Add(ma5)
-missions.Add(mb1)
+;missions.Add(mb1)
 ;missions.Add(mb2)
 ;missions.Add(mb3)
-;missions.Add(mb4)
+missions.Add(mb4)
 ;missions.Add(mb5)
 ;missions.Add(mc1)
 ;missions.Add(mc2)

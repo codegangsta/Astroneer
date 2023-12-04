@@ -134,11 +134,11 @@ Group ShipTemplates
   Int Property ShipTemplateInterceptor = 0x0033E765 Auto Const
   Int Property ShipTemplateLuxury = 0x001EB556 Auto Const
 
-  Int Property ShipTemplateExplorerB = 0x003a2e29 Auto Const
-  Int Property ShipTemplateFighterB = 0x0033CA69 Auto Const
-  Int Property ShipTemplateHaulerB = 0x000FAFD8 Auto Const
+  Int Property ShipTemplateExplorerB = 0x0018d3ea Auto Const
+  Int Property ShipTemplateFighterB = 0x00331347 Auto Const
+  Int Property ShipTemplateHaulerB = 0x0000fafda Auto Const
   Int Property ShipTemplateInterceptorB = 0x0033E765 Auto Const
-  Int Property ShipTemplateLuxuryB = 0x001EB556 Auto Const
+  Int Property ShipTemplateLuxuryB = 0x002371cb Auto Const
 
   Int Property ShipTemplateExplorerC = 0x0005B554 Auto Const
   Int Property ShipTemplateFighterC = 0x0033CA69 Auto Const
