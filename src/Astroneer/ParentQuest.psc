@@ -439,7 +439,13 @@ EndFunction
 
 Astroneer:Pack:Mission Function GenerateMission()
   Astroneer:Pack consts = (Self as ScriptObject) as Astroneer:Pack
-  Astroneer:Pack:Mission mission = Astroneer:Pack.Copy(missions[Utility.RandomInt(0, missions.Length-1)]) 
+  Astroneer:Pack:Mission[] filteredMissions = new Astroneer:Pack:Mission[0]
+  ForEach Astroneer:Pack:Mission m in missions
+    if m.MinLevel <= Game.GetPlayer().GetLevel()
+      filteredMissions.Add(m)
+    endif
+  EndForEach
+  Astroneer:Pack:Mission mission = Astroneer:Pack.Copy(filteredMissions[Utility.RandomInt(0, filteredMissions.Length-1)]) 
 
   if mission.Title == None
     mission.Title = ShipNames.GetAt(Utility.RandomInt(0, ShipNames.GetSize()-1)) as Message

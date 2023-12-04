@@ -5,6 +5,7 @@ Struct Mission
   Message Title
   Message Text
   Int ShipTemplate
+  Int MinLevel
   Message ShipType
   Message Difficulty
   Int RewardCredits
@@ -26,6 +27,7 @@ Mission Function Copy(Mission m) global
   newMission.Title = m.Title
   newMission.Text = m.Text
   newMission.ShipTemplate = m.ShipTemplate
+  newMission.MinLevel = m.MinLevel
   newMission.ShipType = m.ShipType
   newMission.Difficulty = m.Difficulty
   newMission.RewardCredits = m.RewardCredits
@@ -131,6 +133,18 @@ Group ShipTemplates
   Int Property ShipTemplateHauler = 0x000FAFD8 Auto Const
   Int Property ShipTemplateInterceptor = 0x0033E765 Auto Const
   Int Property ShipTemplateLuxury = 0x001EB556 Auto Const
+
+  Int Property ShipTemplateExplorerB = 0x003a2e29 Auto Const
+  Int Property ShipTemplateFighterB = 0x0033CA69 Auto Const
+  Int Property ShipTemplateHaulerB = 0x000FAFD8 Auto Const
+  Int Property ShipTemplateInterceptorB = 0x0033E765 Auto Const
+  Int Property ShipTemplateLuxuryB = 0x001EB556 Auto Const
+
+  Int Property ShipTemplateExplorerC = 0x0005B554 Auto Const
+  Int Property ShipTemplateFighterC = 0x0033CA69 Auto Const
+  Int Property ShipTemplateHaulerC = 0x000FAFD8 Auto Const
+  Int Property ShipTemplateInterceptorC = 0x0033E765 Auto Const
+  Int Property ShipTemplateLuxuryC = 0x001EB556 Auto Const
 EndGroup
 
 Group ShipTypes
