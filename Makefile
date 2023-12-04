@@ -40,6 +40,9 @@ place_enemy_ship::
 debug_init::
 	sfc 'cgf "Astroneer.DebugInit"'
 
+reset_missions:
+	sfc 'cgf "Astroneer.DebugResetMissions"'
+
 # Tail logs
 tail::
 	ssh jerem@pc 'Get-Content -Path ".\Documents\My Games\Starfield\Logs\Script\Papyrus.0.log" -Tail 1000 -Wait'

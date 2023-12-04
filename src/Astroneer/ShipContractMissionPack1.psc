@@ -35,16 +35,6 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   weaponObjectivesBasic.Add(p.ObjectiveWeaponPowerEnergy)
   weaponObjectivesBasic.Add(p.ObjectiveWeaponPowerEM)
   weaponObjectivesBasic.Add(p.ObjectiveWeaponPowerMissile)
-  weaponObjectivesBasic.Add(p.ObjectiveWeaponPowerContinuousBeam)
-
-  Message[] weaponObjectivesAdvanced = new Message[0]
-  weaponObjectivesAdvanced.Add(p.ObjectiveWeaponPowerBallistic)
-  weaponObjectivesAdvanced.Add(p.ObjectiveWeaponPowerEnergy)
-  weaponObjectivesAdvanced.Add(p.ObjectiveWeaponPowerEM)
-  weaponObjectivesAdvanced.Add(p.ObjectiveWeaponPowerMissile)
-  weaponObjectivesAdvanced.Add(p.ObjectiveWeaponPowerContinuousBeam)
-  weaponObjectivesAdvanced.Add(p.ObjectiveWeaponPowerParticle)
-  weaponObjectivesAdvanced.Add(p.ObjectiveWeaponPowerPlasma)
 
   Astroneer:Pack:Mission[] missions = new Astroneer:Pack:Mission[0]
 
@@ -141,6 +131,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
     ;= Class B Explorer Mission ======================================
   Astroneer:Pack:Mission mb1 = new Astroneer:Pack:Mission
   mb1.ID = "MP01_ExplorerB"
+  mb1.MinLevel = 15
   mb1.ShipTemplate = p.ShipTemplateExplorerB
   mb1.ShipType = p.ShipTypeExplorer
   mb1.Difficulty = p.DifficultyClassB
@@ -159,6 +150,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ;= Class B Fighter Mission =======================================
   Astroneer:Pack:Mission mb2 = new Astroneer:Pack:Mission
   mb2.ID = "MP01_FighterB"
+  mb2.MinLevel = 15
   mb2.ShipTemplate = p.ShipTemplateFighterB
   mb2.ShipType = p.ShipTypeFighter
   mb2.Difficulty = p.DifficultyClassB
@@ -177,6 +169,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ;= Class B Hauler Mission ========================================
   Astroneer:Pack:Mission mb3 = new Astroneer:Pack:Mission
   mb3.ID = "MP01_HaulerB"
+  mb3.MinLevel = 15
   mb3.ShipTemplate = p.ShipTemplateHaulerB
   mb3.ShipType = p.ShipTypeHauler
   mb3.Difficulty = p.DifficultyClassB
@@ -195,6 +188,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ;= Class B Luxury Mission ========================================
   Astroneer:Pack:Mission mb4 = new Astroneer:Pack:Mission
   mb4.ID = "MP01_LuxuryB"
+  mb4.MinLevel = 15
   mb4.ShipTemplate = p.ShipTemplateLuxuryB
   mb4.ShipType = p.ShipTypeLuxury
   mb4.Difficulty = p.DifficultyClassB
@@ -213,6 +207,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ;= Class B Interceptor Mission ===================================
   Astroneer:Pack:Mission mb5 = new Astroneer:Pack:Mission
   mb5.ID = "MP01_InterceptorB"
+  mb5.MinLevel = 15
   mb5.ShipTemplate = p.ShipTemplateInterceptorB
   mb5.ShipType = p.ShipTypeInterceptor
   mb5.Difficulty = p.DifficultyClassB
@@ -231,10 +226,11 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ;= Class C Explorer Mission ======================================
   Astroneer:Pack:Mission mc1 = new Astroneer:Pack:Mission
   mc1.ID = "MP01_ExplorerC"
+  mc1.MinLevel = 30
   mc1.ShipTemplate = p.ShipTemplateExplorerC
   mc1.ShipType = p.ShipTypeExplorer
   mc1.Difficulty = p.DifficultyClassC
-  mc1.RewardCredits = 12000
+  mc1.RewardCredits = 13750
   mc1.Objective01 = p.ObjectiveFuel
   mc1.ObjectiveTarget01 = 3000
   mc1.Objective02 = p.ObjectiveGravJumpRange
@@ -249,76 +245,94 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ;= Class C Fighter Mission =======================================
   Astroneer:Pack:Mission mc2 = new Astroneer:Pack:Mission
   mc2.ID = "MP01_FighterC"
-  mc2.ShipTemplate = p.ShipTemplateFighter
+  mc2.MinLevel = 30
+  mc2.ShipTemplate = p.ShipTemplateFighterC
   mc2.ShipType = p.ShipTypeFighter
   mc2.Difficulty = p.DifficultyClassC
-  mc2.RewardCredits = 8500
+  mc2.RewardCredits = 15000
   mc2.Objective01 = p.ObjectiveShieldHealth
-  mc2.ObjectiveTarget01 = 680
-  mc2.Objective02 = p.ObjectiveTotalWeaponPower
-  mc2.ObjectiveTarget02 = 113
-  mc2.Objective03 = p.ObjectiveWeaponPowerEnergy
-  mc2.ObjectiveTarget03 = 8
-  mc2.Objective04 = p.ObjectiveWeaponPowerMissile
-  mc2.ObjectiveTarget04 = 8
+  mc2.ObjectiveTarget01 = 1600
+  mc2.Objective02 = p.ObjectiveWeaponPowerParticle
+  mc2.ObjectiveTarget02 = 12
+  mc2.Objective03 = GetRandomMessage(weaponObjectivesBasic, None)
+  mc2.ObjectiveTarget03 = 12
+  mc2.Objective04 = GetRandomMessage(weaponObjectivesBasic, mc2.Objective03)
+  mc2.ObjectiveTarget04 = 12
+  mc2.Objective05 = GetRandomHabObjective(p.HabObjectivesFighter)
+  mc2.ObjectiveTarget05 = 2
 
   ;= Class C Hauler Mission ========================================
   Astroneer:Pack:Mission mc3 = new Astroneer:Pack:Mission
   mc3.ID = "MP01_HaulerC"
-  mc3.ShipTemplate = p.ShipTemplateHauler
+  mc3.MinLevel = 30
+  mc3.ShipTemplate = p.ShipTemplateHaulerC
   mc3.ShipType = p.ShipTypeHauler
   mc3.Difficulty = p.DifficultyClassC
-  mc3.RewardCredits = 8200
+  mc3.RewardCredits = 13300
   mc3.Objective01 = p.ObjectiveCargo
-  mc3.ObjectiveTarget01 = 25100
-  mc3.Objective02 = p.ObjectiveEnginePower
-  mc3.ObjectiveTarget02 = 680
+  mc3.ObjectiveTarget01 = 11000
+  mc3.Objective02 = p.ObjectiveThrust
+  mc3.ObjectiveTarget02 = 20000
   mc3.Objective03 = p.ObjectiveFuel
-  mc3.ObjectiveTarget03 = 25100
+  mc3.ObjectiveTarget03 = 1500
+  mc3.Objective04 = p.ObjectiveReactorPower
+  mc3.ObjectiveTarget04 = 29
+  mc3.Objective05 = GetRandomHabObjective(p.HabObjectivesHauler)
+  mc3.ObjectiveTarget05 = 2
 
   ;= Class C Luxury Mission ========================================
   Astroneer:Pack:Mission mc4 = new Astroneer:Pack:Mission
   mc4.ID = "MP01_LuxuryC"
-  mc4.ShipTemplate = p.ShipTemplateLuxury
+  mc4.MinLevel = 30
+  mc4.ShipTemplate = p.ShipTemplateLuxuryC
   mc4.ShipType = p.ShipTypeLuxury
   mc4.Difficulty = p.DifficultyClassC
-  mc4.RewardCredits = 9000
+  mc4.RewardCredits = 15500
   mc4.Objective01 = p.ObjectivePassengerSlots
-  mc4.ObjectiveTarget01 = 6
-  mc4.Objective02 = p.ObjectiveHabs
-  mc4.ObjectiveTarget02 = 3
-  mc4.Objective03 = p.ObjectiveShieldHealth
-  mc4.ObjectiveTarget03 = 680
+  mc4.ObjectiveTarget01 = 22
+  mc4.Objective02 = p.ObjectiveWindows
+  mc4.ObjectiveTarget02 = 16
+  mc4.Objective03 = p.ObjectiveMobility
+  mc4.ObjectiveTarget03 = 100
+  mc4.Objective04 = GetRandomHabObjective(p.HabObjectivesLuxury)
+  mc4.ObjectiveTarget04 = Utility.RandomInt(2, 3)
+  mc4.Objective05 = GetRandomHabObjectiveExclude(p.HabObjectivesLuxury, mc4.Objective04)
+  mc4.ObjectiveTarget05 = Utility.RandomInt(2, 3)
 
   ;= Class C Interceptor Mission ===================================
   Astroneer:Pack:Mission mc5 = new Astroneer:Pack:Mission
   mc5.ID = "MP01_InterceptorC"
-  mc5.ShipTemplate = p.ShipTemplateInterceptor
+  mc5.MinLevel = 30
+  mc5.ShipTemplate = p.ShipTemplateInterceptorC
   mc5.ShipType = p.ShipTypeInterceptor
   mc5.Difficulty = p.DifficultyClassC
-  mc5.RewardCredits = 8300
-  mc5.Objective01 = p.ObjectiveTopSpeed
-  mc5.ObjectiveTarget01 = 850
-  mc5.Objective02 = p.ObjectiveThrust
-  mc5.ObjectiveTarget02 = 850
-  mc5.Objective03 = p.ObjectiveMass
-  mc5.ObjectiveTarget03 = 91
+  mc5.RewardCredits = 14400
+  mc5.Objective01 = p.ObjectiveThrust
+  mc5.ObjectiveTarget01 = 23000
+  mc5.Objective02 = p.ObjectiveMobility
+  mc5.ObjectiveTarget02 = 100
+  mc5.Objective03 = p.ObjectiveHull
+  mc5.ObjectiveTarget03 = 900
+  mc5.Objective04 = p.ObjectiveHabBrig
+  mc5.ObjectiveTarget04 = 2
+  mc5.Objective05 = GetRandomHabObjectiveExclude(p.HabObjectivesInterceptor, mc5.Objective04)
+  mc5.ObjectiveTarget05 = Utility.RandomInt(2, 3)
 
-;missions.Add(ma1)
-;missions.Add(ma2)
-;missions.Add(ma3)
-;missions.Add(ma4)
-;missions.Add(ma5)
-;missions.Add(mb1)
-;missions.Add(mb2)
-;missions.Add(mb3)
-;missions.Add(mb4)
-;missions.Add(mb5)
-missions.Add(mc1)
-;missions.Add(mc2)
-;missions.Add(mc3)
-;missions.Add(mc4)
-;missions.Add(mc5)
+  missions.Add(ma1)
+  missions.Add(ma2)
+  missions.Add(ma3)
+  missions.Add(ma4)
+  missions.Add(ma5)
+  missions.Add(mb1)
+  missions.Add(mb2)
+  missions.Add(mb3)
+  missions.Add(mb4)
+  missions.Add(mb5)
+  missions.Add(mc1)
+  missions.Add(mc2)
+  missions.Add(mc3)
+  missions.Add(mc4)
+  missions.Add(mc5)
 
   return missions
 EndFunction

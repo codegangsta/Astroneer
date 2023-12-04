@@ -141,10 +141,10 @@ Group ShipTemplates
   Int Property ShipTemplateLuxuryB = 0x002371cb Auto Const
 
   Int Property ShipTemplateExplorerC = 0x00322bf7 Auto Const
-  Int Property ShipTemplateFighterC = 0x0033CA69 Auto Const
-  Int Property ShipTemplateHaulerC = 0x000FAFD8 Auto Const
+  Int Property ShipTemplateFighterC = 0x0018d3d7 Auto Const
+  Int Property ShipTemplateHaulerC = 0x0002c22a Auto Const
   Int Property ShipTemplateInterceptorC = 0x000D059D Auto Const
-  Int Property ShipTemplateLuxuryC = 0x001EB556 Auto Const
+  Int Property ShipTemplateLuxuryC = 0x002e7530 Auto Const
 EndGroup
 
 Group ShipTypes

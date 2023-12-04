@@ -208,7 +208,7 @@ spaceshipreference Function AddContractShip(Astroneer:Pack:Mission m)
   ; HACK: This is a hack to get around the fact that the ship builder
   ; mutates the form it is given.
   Form ShipTemplate = Game.GetForm(m.ShipTemplate)
-  spaceshipreference ship = GetLandingMarker().PlaceShipAtMe(ShipTemplate, 1, True, True, True, False, None, None, None, True)
+  spaceshipreference ship = GetLandingMarker().PlaceShipAtMe(ShipTemplate, Game.GetPlayerLevel(), True, True, True, False, None, None, None, True)
   Trace("Created ship " + ship + " from template " + m.ShipTemplate)
 
   ship.AddKeyword(CannotBeSoldShipKeyword)
@@ -441,7 +441,7 @@ Astroneer:Pack:Mission Function GenerateMission()
   Astroneer:Pack consts = (Self as ScriptObject) as Astroneer:Pack
   Astroneer:Pack:Mission[] filteredMissions = new Astroneer:Pack:Mission[0]
   ForEach Astroneer:Pack:Mission m in missions
-    if m.MinLevel <= Game.GetPlayer().GetLevel()
+    if m.MinLevel <= Game.GetPlayerLevel()
       filteredMissions.Add(m)
     endif
   EndForEach

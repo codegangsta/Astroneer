@@ -84,6 +84,11 @@ Function DebugRemoveShip() global
   DebugTrace(marker.FindAllReferencesWithKeyword(Game.GetForm(0x0249fb3) as Keyword, 100))
 EndFunction
 
+Function DebugResetMissions() global
+  Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  pq.ResetMissionBoard()
+EndFunction
+
 Function DebugTrace(String Text) Global
 	Debug.Trace("[astroneer] " + Text, 0)
 EndFunction
