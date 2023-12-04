@@ -96,22 +96,26 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ma5.ObjectiveTarget03 = 100
   ma5.Objective04 = p.ObjectiveWeaponPowerMissile
   ma5.ObjectiveTarget04 = 6
-  ma5.Objective05 = p.ObjectiveHabEngineering
+  ma5.Objective05 = GetRandomHabObjective(p.HabObjectivesInterceptor)
   ma5.ObjectiveTarget05 = 1
 
     ;= Class B Explorer Mission ======================================
   Astroneer:Pack:Mission mb1 = new Astroneer:Pack:Mission
   mb1.ID = "MP01_ExplorerB"
-  mb1.ShipTemplate = p.ShipTemplateExplorer
+  mb1.ShipTemplate = p.ShipTemplateExplorerB
   mb1.ShipType = p.ShipTypeExplorer
   mb1.Difficulty = p.DifficultyClassB
-  mb1.RewardCredits = 6000
+  mb1.RewardCredits = 8500
   mb1.Objective01 = p.ObjectiveFuel
-  mb1.ObjectiveTarget01 = 13500
+  mb1.ObjectiveTarget01 = 600
   mb1.Objective02 = p.ObjectiveGravJumpRange
-  mb1.ObjectiveTarget02 = 49
+  mb1.ObjectiveTarget02 = 20
   mb1.Objective03 = p.ObjectiveReactorPower
-  mb1.ObjectiveTarget03 = 505
+  mb1.ObjectiveTarget03 = 18
+  mb1.Objective04 = p.ObjectiveMass
+  mb1.ObjectiveTarget04 = 1000
+  mb1.Objective05 = GetRandomHabObjective(p.HabObjectivesExplorer)
+  mb1.ObjectiveTarget05 = 2
 
   ;= Class B Fighter Mission =======================================
   Astroneer:Pack:Mission mb2 = new Astroneer:Pack:Mission
@@ -244,21 +248,21 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   mc5.ObjectiveTarget03 = 91
 
 
-missions.Add(ma1)
-missions.Add(ma2)
-missions.Add(ma3)
-missions.Add(ma4)
-missions.Add(ma5)
-; missions.Add(mb1)
-; missions.Add(mb2)
-; missions.Add(mb3)
-; missions.Add(mb4)
-; missions.Add(mb5)
-; missions.Add(mc1)
-; missions.Add(mc2)
-; missions.Add(mc3)
-; missions.Add(mc4)
-; missions.Add(mc5)
+;missions.Add(ma1)
+;missions.Add(ma2)
+;missions.Add(ma3)
+;missions.Add(ma4)
+;missions.Add(ma5)
+missions.Add(mb1)
+;missions.Add(mb2)
+;missions.Add(mb3)
+;missions.Add(mb4)
+;missions.Add(mb5)
+;missions.Add(mc1)
+;missions.Add(mc2)
+;missions.Add(mc3)
+;missions.Add(mc4)
+;missions.Add(mc5)
 
   return missions
 EndFunction

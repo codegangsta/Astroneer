@@ -69,6 +69,15 @@ load_save_3::
 stop_game:
 	sfc "QuitGame"
 
+debug_class_b: debug_perks set_level_15
+debug_class_c: debug_perks set_level_30
+
+set_level_15:
+	sfc "player.setlevel 15"
+
+set_level_30:
+	sfc "player.setlevel 30"
+
 debug_starship_design:
 	sfc "player.addperk 002c59dc" # starship design
 
