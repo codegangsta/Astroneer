@@ -122,6 +122,23 @@ EndFunction
 Function StageAccepted()
   Trace("StageAccepted")
   Self.SetObjectiveDisplayedAtTop(0)
+
+  Self.SetObjectiveDisplayed(ShipObjective_ReactorClass, True, False)
+  if mission.Objective01 != None
+    Self.SetObjectiveDisplayed(ShipObjective_01, True, False)
+  endif
+  if mission.Objective02 != None
+    Self.SetObjectiveDisplayed(ShipObjective_02, True, False)
+  endif
+  if mission.Objective03 != None
+    Self.SetObjectiveDisplayed(ShipObjective_03, True, False)
+  endif
+  if mission.Objective04 != None
+    Self.SetObjectiveDisplayed(ShipObjective_04, True, False)
+  endif
+  if mission.Objective05 != None
+    Self.SetObjectiveDisplayed(ShipObjective_05, True, False)
+  endif
 EndFunction
 
 Function StageDesign()
