@@ -325,9 +325,9 @@ Function UpdateObjectiveValue(GlobalVariable value, Message objectiveType, Int o
     value.SetValue(0) ;set to 0 since we are using mod
     Trace("Updating objective " + objectiveType + " to " + val)
     if objectiveType == consts.ObjectiveMass
-      ModObjectiveGlobal(val, value, objective, target, False, True, False, True)
+      ModObjectiveGlobal(val, value, objective, target, False, True, True, True)
     else
-      ModObjectiveGlobal(val, value, objective, target, True, True, False, True)
+      ModObjectiveGlobal(val, value, objective, target, True, True, True, True)
     endif
   endif
 EndFunction

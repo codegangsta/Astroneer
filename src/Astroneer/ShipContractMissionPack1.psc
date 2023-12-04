@@ -120,7 +120,7 @@ Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
   ma5.Objective01 = p.ObjectiveTopSpeed
   ma5.ObjectiveTarget01 = 150
   ma5.Objective02 = p.ObjectiveThrust
-  ma5.ObjectiveTarget02 = 5000
+  ma5.ObjectiveTarget02 = 10000
   ma5.Objective03 = p.ObjectiveMobility
   ma5.ObjectiveTarget03 = 100
   ma5.Objective04 = p.ObjectiveWeaponPowerMissile
