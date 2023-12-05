@@ -109,7 +109,9 @@ Function InitAria()
       AriaWall.ForceRefTo(wall)
     endif
 
-    if (spaceport.IsLoaded() && !Aria.IsFilled())
+    Bool fillAria = !Aria.IsFilled() || Aria.GetActorReference().GetBaseObject() != ariaForm
+
+    if (spaceport.IsLoaded() && fillAria)
       Actor ariaRef = AriaWall.GetReference().PlaceActorAtMe(ariaForm, 1, None, True, False, False, None, True)
       Trace("Created aria and setting ref " + ariaRef)
       Aria.ForceRefTo(ariaRef)

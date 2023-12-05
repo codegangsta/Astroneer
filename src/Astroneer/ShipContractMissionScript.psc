@@ -105,6 +105,19 @@ Event OnStageSet(Int stageId, Int itemId)
   endif
 EndEvent
 
+Function ResetAliases()
+  Trace("ResetAliases")
+  FillRef(Self.GetAlias(9) as ReferenceAlias, BlankMessage)
+  FillRef(Self.GetAlias(10) as ReferenceAlias, BlankMessage)
+  FillRef(Self.GetAlias(11) as ReferenceAlias, BlankMessage)
+  FillRef(Self.GetAlias(12) as ReferenceAlias, BlankMessage)
+  FillRef(Self.GetAlias(13) as ReferenceAlias, BlankMessage)
+  FillRef(Self.GetAlias(14) as ReferenceAlias, BlankMessage)
+  FillRef(Self.GetAlias(15) as ReferenceAlias, BlankMessage)
+  FillRef(Self.GetAlias(16) as ReferenceAlias, BlankMessage)
+  FillRef(Self.GetAlias(17) as ReferenceAlias, BlankMessage)
+EndFunction
+
 Function StageReady()
     FillRef(Self.GetAlias(9) as ReferenceAlias, Mission.Text)
     FillRef(Self.GetAlias(10) as ReferenceAlias, Mission.Title)
@@ -192,7 +205,10 @@ EndFunction
 
 Function FillRef(ReferenceAlias akAlias, Message akMessage)
   Trace("FillRef " + akAlias + " " + akMessage)
-  akAlias.TryToDelete()
+
+  if akAlias.isFilled() && akAlias.GetReference().GetBaseObject() == TextReplacementForm
+    akAlias.TryToDelete()
+  endif
 
   ObjectReference item = Game.GetPlayer().PlaceAtMe(TextReplacementForm, 1, True, True, False, None, None, False)
   akAlias.ForceRefTo(item)

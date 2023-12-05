@@ -86,7 +86,11 @@ EndFunction
 
 Function DebugResetMissions() global
   Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  ForEach Form mission in pq.AstroneerMBQuests
+    (mission as Astroneer:ShipContractMissionScript).ResetAliases()
+  EndForEach
   pq.ResetMissionBoard()
+  pq.MB_Parent.DebugResetMissions()
 EndFunction
 
 Function DebugTrace(String Text) Global
