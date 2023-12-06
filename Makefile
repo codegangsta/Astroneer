@@ -9,6 +9,9 @@ remote_sync::
 sync_esm::
 	rsync -avz -e ssh jeremy@pc-wsl:/mnt/d/SteamLibrary/steamapps/common/Starfield/Data/Astroneer.esm ./records
 
+sync_sound::
+	rsync -avz -e ssh jeremy@pc-wsl:/mnt/d/SteamLibrary/steamapps/common/Starfield/Data/Sound/Voice/ ./sound/voice/
+
 ## Perform compilation on Windows. No WSL here as it's super slow
 remote_compile::
 	ssh jerem@pc 'cd C:\Users\jerem\Documents\Code\astroneer; ..\Caprica.exe --enable-language-extensions=1 -R --import ..\starfield-src\script\ --output ./out src'
