@@ -119,22 +119,33 @@ Function ResetAliases()
 EndFunction
 
 Function StageReady()
-    FillRef(Self.GetAlias(9) as ReferenceAlias, Mission.Text)
-    FillRef(Self.GetAlias(10) as ReferenceAlias, Mission.Title)
-    FillRef(Self.GetAlias(11) as ReferenceAlias, Mission.Difficulty)
-    FillRef(Self.GetAlias(12) as ReferenceAlias, Mission.Objective01)
-    FillRef(Self.GetAlias(13) as ReferenceAlias, Mission.Objective02)
-    FillRef(Self.GetAlias(14) as ReferenceAlias, Mission.Objective03)
-    FillRef(Self.GetAlias(15) as ReferenceAlias, Mission.Objective04)
-    FillRef(Self.GetAlias(16) as ReferenceAlias, Mission.Objective05)
-    FillRef(Self.GetAlias(17) as ReferenceAlias, Mission.ShipType)
+  FillRef(Self.GetAlias(9) as ReferenceAlias, Mission.Text)
+  FillRef(Self.GetAlias(10) as ReferenceAlias, Mission.Title)
+  FillRef(Self.GetAlias(11) as ReferenceAlias, Mission.Difficulty)
+  FillRef(Self.GetAlias(12) as ReferenceAlias, Mission.Objective01)
+  FillRef(Self.GetAlias(13) as ReferenceAlias, Mission.Objective02)
+  FillRef(Self.GetAlias(14) as ReferenceAlias, Mission.Objective03)
+  FillRef(Self.GetAlias(15) as ReferenceAlias, Mission.Objective04)
+  FillRef(Self.GetAlias(16) as ReferenceAlias, Mission.Objective05)
+  FillRef(Self.GetAlias(17) as ReferenceAlias, Mission.ShipType)
 
-    UpdateObjectiveTargets()
+  UpdateObjectiveTargets()
 EndFunction
 
 Function StageAccepted()
   Trace("StageAccepted")
   Self.SetObjectiveDisplayedAtTop(0)
+
+  ObjectiveValue_01.SetValue(0.0)
+  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_01)
+  ObjectiveValue_02.SetValue(0.0)
+  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_02)
+  ObjectiveValue_03.SetValue(0.0)
+  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_03)
+  ObjectiveValue_04.SetValue(0.0)
+  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_04)
+  ObjectiveValue_05.SetValue(0.0)
+  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_05)
 
   Self.SetObjectiveDisplayed(ShipObjective_ReactorClass, True, False)
   if mission.Objective01 != None
@@ -223,7 +234,6 @@ EndFunction
 
 Event Actor.OnPlayerModifiedShip(Actor akActor, spaceshipreference akShip)
   if(akShip == Self.ContractShip)
-    ;DisableShip()
     EnableShip(False)
     UpdateObjectiveValues()
 
@@ -249,7 +259,7 @@ Function EnableShip(Bool withLanding)
   ; Block activation for the pilot seat
   (Self.GetAlias(22) as ReferenceAlias).GetReference().BlockActivation(True, True)
   ; Land the ship in New Atlantis and unlock it
-  ContractShip.SetLinkedRef(AstroneerParent.ContractShipLandingMarker, AstroneerParent.PlayerShipQuest.LandingMarkerKeyword, False)
+  ContractShip.SetLinkedRef(AstroneerParent.ShipMarker.GetReference(), AstroneerParent.PlayerShipQuest.LandingMarkerKeyword, False)
   if(withLanding)
     ContractShip.EnableWithLandingNoWait()
   else

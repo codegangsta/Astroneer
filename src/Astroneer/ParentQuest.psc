@@ -9,8 +9,6 @@ Group Keywords
   Keyword Property CannotBeCountedAgainstMaxShipsKeyword Auto Const Mandatory
   Keyword Property SBShip_Hab Auto Const Mandatory
   Keyword Property CurrentContractShipKeyword Auto Const Mandatory
-  ;Keyword Property GenericNoSpaceVOKeyword Auto Const Mandatory
-  ;Keyword Property PlayerShipAliasKeyword Auto Const Mandatory
 EndGroup
 
 Group ActorValues
@@ -37,6 +35,8 @@ Group QuestData
   Perk Property AriaFullDiscountPerk Auto Const Mandatory
   Perk Property AriaStandardDiscountPerk Auto Const Mandatory
   ObjectReference Property ContractShipLandingMarker Auto Const Mandatory
+  Form Property ShipMarkerForm Auto Const Mandatory
+  ReferenceAlias Property ShipMarker Auto Const
 EndGroup
 
 Group DialogueData
@@ -52,6 +52,7 @@ Group Factions
 EndGroup
 
 spaceshipreference[] Property BuilderDisabledShips Auto
+
 
 Bool Property AtlasWorkshopMode = False auto
 Astroneer:Pack:Mission[] Missions = None
@@ -117,6 +118,10 @@ Function InitAria()
       Aria.ForceRefTo(ariaRef)
       ariaRef.MoveToFurniture(AriaWall.GetReference())
       ResetMissionBoard()
+    endif
+
+    if (spaceport.IsLoaded() && !ShipMarker.isFilled())
+      ResetLandingMarker()
     endif
 
     if (spaceport.IsLoaded())
@@ -234,11 +239,20 @@ Function RemoveContractShip(spaceshipreference ship, Bool addToCollection)
   ship.RemoveKeyword(CannotBeCountedAgainstMaxShipsKeyword)
   ship.RemoveKeyword(CurrentContractShipKeyword)
   ship.SetValue(SpaceshipRegistration, 0.0)
-  PlayerShipQuest.RemovePlayerShip(ship)
   ; Remove landing marker ref
-  ship.SetLinkedRef(None, PlayerShipQuest.LandingMarkerKeyword, False)
 
   ship.DisableWithTakeoffOrLandingNoWait()
+  ship.SetLinkedRef(None, PlayerShipQuest.LandingMarkerKeyword, False)
+  PlayerShipQuest.RemovePlayerShip(ship)
+
+  ResetLandingMarker()
+EndFunction
+
+Function ResetLandingMarker()
+  ShipMarker.TryToDelete()
+  ObjectReference marker = ContractShipLandingMarker.PlaceAtMe(ShipMarkerForm, 1, True, False, False, None, None, True)
+  Trace("Created marker and setting ref " + marker)
+  ShipMarker.ForceRefTo(marker)
 EndFunction
 
 Function SetAllPartPowers(spaceshipreference ship, Int power)
@@ -496,30 +510,7 @@ Function ResetMissionBoard()
 EndFunction
 
 ObjectReference Function GetLandingMarker()
-	; easy way
-	ObjectReference LandingMarkerA = PlayerShipQuest.PlayerShipLandingMarker.GetReference()
-	If (LandingMarkerA as Bool)
-		Trace("GetLandingMarker Milestone A")
-		Return LandingMarkerA
-	EndIf
-	; a bit advanced as Actor as Actor
-	SpaceshipReference PlayerShipA = PlayerShipQuest.PlayerShip.GetShipReference()
-	ObjectReference LandingMarkerB = PlayerShipA.GetLinkedRef(PlayerShipQuest.LandingMarkerKeyword)
-	If (LandingMarkerB as Bool)
-		Trace("GetLandingMarker Milestone B")
-		Return LandingMarkerB
-	EndIf
-	; alias issue?
-	Actor Player = Game.GetForm(0x14) as Actor
-	SpaceshipReference PlayerShipB = Player.GetCurrentShipRef()
-	ObjectReference LandingMarkerC = PlayerShipB.GetLinkedRef(Game.GetForm(0x1940B) as Keyword)
-	If (LandingMarkerC as Bool)
-		Trace("GetLandingMarker Milestone C")
-		Return LandingMarkerC
-	EndIf
-	; this should never happen as String as String
-	Trace("GetLandingMarker Milestone D")
-	Return (Player as ObjectReference)
+  return ShipMarker.GetReference()
 EndFunction
 
 Function Trace(string message)

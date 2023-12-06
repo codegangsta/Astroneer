@@ -81,7 +81,7 @@ Function DebugRemoveShip() global
 
   ObjectReference marker = pq.ContractShipLandingMarker
   ;TODO: Use a more specific keyword
-  DebugTrace(marker.FindAllReferencesWithKeyword(Game.GetForm(0x0249fb3) as Keyword, 100))
+  DebugTrace(marker.GetRefsLinkedToMe(playerShip.LandingMarkerKeyword, None))
 EndFunction
 
 Function DebugResetMissions() global
