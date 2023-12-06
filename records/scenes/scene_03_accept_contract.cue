@@ -50,7 +50,7 @@ scene_03_accept_contract: {
 					"Any ships in need of a hand today?",
 					"Is there a new vessel for me to take under my wing?",
 					"Got a ship that needs some love?",
-					"I'm here for that contract—what's the assignment?",
+					"I'm here for that contract-what's the assignment?",
 					"What's the latest ship on the roster?",
 					"Ready for a new project; what have you got?",
 					"Looking for a ship that could use a tune-up?",

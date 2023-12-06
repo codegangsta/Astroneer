@@ -9,13 +9,13 @@ mission_texts: list.Concat([
 		messages: [
 			"Pilot with nerves of steel needed: Our fighter’s quick, but we need it to make hyperspace look slow. If you speak 'adrenaline', let's talk upgrades.",
 
-			"Wanted: A maestro of mayhem to fine-tune a craft that's more than just a fighter—it's a silent whisper before the storm. Make it sing the sweet song of victory.",
+			"Wanted: A maestro of mayhem to fine-tune a craft that's more than just a fighter-it's a silent whisper before the storm. Make it sing the sweet song of victory.",
 
-			"Seeking a pilot who doesn’t just chase the horizon but races it—and wins. Give our latest fighter the edge to cut through competition like a hot knife through star butter.",
+			"Seeking a pilot who doesn’t just chase the horizon but races it-and wins. Give our latest fighter the edge to cut through competition like a hot knife through star butter.",
 
 			"Got a penchant for speed and a disdain for second place? Our fighter needs a captain who can teach it the fine art of leaving others in the cosmic dust.",
 
-			"Calling all daredevils: You don't need to outrun a black hole—just the competition. Elevate our fighter and become the next legend of the spaceways.",
+			"Calling all daredevils: You don't need to outrun a black hole-just the competition. Elevate our fighter and become the next legend of the spaceways.",
 
 			"Expert pilot wanted to revamp a stellar striker. Make it fast enough to outrun its own laser fire, and sleek enough to make a star go supernova with envy.",
 
@@ -25,7 +25,7 @@ mission_texts: list.Concat([
 
 			"If you can make a fighter zip and zoom like a comet with an attitude, we want you. Give this bird the wings it deserves, and let's make space a little more thrilling.",
 
-			"Seeking a pilot with a soft spot for hard fights. Our fighter’s decent, but we want it stellar. Bonus points if you can make it as intimidating as a supernova—but much, much closer.",
+			"Seeking a pilot with a soft spot for hard fights. Our fighter’s decent, but we want it stellar. Bonus points if you can make it as intimidating as a supernova-but much, much closer.",
 		]
 	}}).out,
 
@@ -37,7 +37,7 @@ mission_texts: list.Concat([
 
 			"Wanted: A designer to transform a sturdy research vessel into a home away from home for our galaxy-trotting scholars. Comfort meets utility is the goal!",
 
-			"Design Challenge: Take our capable explorer and make it a beacon of innovation. We're charting new stars—let's do it in style.",
+			"Design Challenge: Take our capable explorer and make it a beacon of innovation. We're charting new stars-let's do it in style.",
 
 			"Seeking a creative genius who believes every research vessel should tell a story. Help us narrate a tale of adventure and discovery with your design.",
 
@@ -61,7 +61,7 @@ mission_texts: list.Concat([
 		messages: [
 			"Design Opportunity: Our freighter’s got the charm of a space rock. It needs a visionary who can make cargo transport look sexy. Come give this hauler some flair!",
 
-			"Wanted: A space-age stylist for our no-frills hauler. If you can turn a bulky freighter into the belle of the trade lanes, we want you on board—metaphorically speaking.",
+			"Wanted: A space-age stylist for our no-frills hauler. If you can turn a bulky freighter into the belle of the trade lanes, we want you on board-metaphorically speaking.",
 
 			"Creative Thinkers Alert: Our hauler’s efficiency is unmatched, but it's as drab as a derelict. Can you inject some luxury into this workhorse?",
 
@@ -89,7 +89,7 @@ mission_texts: list.Concat([
 
 			"Wanted: A design whiz who can make our high-speed interceptor the sleekest shadow in the cosmos. Stealth and style should be in your DNA.",
 
-			"Calling all adrenaline junkies with a design degree! Our interceptor needs to look as fast as it flies—without getting a speeding ticket from the space patrol.",
+			"Calling all adrenaline junkies with a design degree! Our interceptor needs to look as fast as it flies-without getting a speeding ticket from the space patrol.",
 
 			"Got a flair for the dramatic and a penchant for pace? Give our interceptor a makeover that’ll make it the envy of every hotshot pilot.",
 
@@ -103,7 +103,7 @@ mission_texts: list.Concat([
 
 			"Our high-speed interceptor is all business. Your mission, should you choose to accept it: bring the party to the design without slowing it down.",
 
-			"Can you design at Mach speed? We've got an interceptor that's more than a blur on the radar—it should be a vision of the future. Apply within, and fast!",
+			"Can you design at Mach speed? We've got an interceptor that's more than a blur on the radar-it should be a vision of the future. Apply within, and fast!",
 		]
 	}}).out,
 
