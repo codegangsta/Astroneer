@@ -8,18 +8,41 @@ Group Keywords
   Keyword Property CannotBeHomeShipKeyword Auto Const Mandatory
   Keyword Property CannotBeCountedAgainstMaxShipsKeyword Auto Const Mandatory
   Keyword Property SBShip_Hab Auto Const Mandatory
+  Keyword Property SBShip_Window Auto Const Mandatory
   Keyword Property CurrentContractShipKeyword Auto Const Mandatory
+  Keyword Property CannotBeModifiedShipKeyword Auto Const Mandatory
+  Keyword Property MissionTypeShipContract Auto Const Mandatory
+  Keyword Property SpaceshipBallisticWeapon Auto Const Mandatory
+  Keyword Property SpaceshipContinuousBeamWeapon Auto Const Mandatory
+  Keyword Property SpaceshipEMWeapon Auto Const Mandatory
+  Keyword Property SpaceshipEnergyWeapon Auto Const Mandatory
+  Keyword Property SpaceshipMissileWeapon Auto Const Mandatory
+  Keyword Property SpaceshipParticleWeapon Auto Const Mandatory
+  Keyword Property SpaceshipPlasmaWeapon Auto Const Mandatory
 EndGroup
 
 Group ActorValues
-  ActorValue Property SpaceshipRegistration Auto Const Mandatory
-  ActorValue Property SpaceshipMass Auto Const Mandatory
-  ActorValue Property SpaceshipMaxPower Auto Const Mandatory
-  ActorValue Property SpaceshipEnginePower Auto Const Mandatory
-  ActorValue Property SpaceshipTopSpeed Auto Const Mandatory
   ActorValue Property ShipWeaponSystemGroup1Health Auto Const Mandatory
   ActorValue Property ShipWeaponSystemGroup2Health Auto Const Mandatory
   ActorValue Property ShipWeaponSystemGroup3Health Auto Const Mandatory
+  ActorValue Property SpaceshipBuildableEnginePower Auto Const Mandatory
+  ActorValue Property SpaceshipBuildableShieldPower Auto Const Mandatory
+  ActorValue Property SpaceshipEnginePower Auto Const Mandatory
+  ActorValue Property SpaceshipEngineThrust Auto Const Mandatory
+  ActorValue Property SpaceshipGravJumpFuel Auto Const Mandatory
+  ActorValue Property SpaceshipHealth Auto Const Mandatory
+  ActorValue Property SpaceshipManeuveringThrust Auto Const Mandatory
+  ActorValue Property SpaceshipMass Auto Const Mandatory
+  ActorValue Property SpaceshipMaxPower Auto Const Mandatory
+  ActorValue Property SpaceshipPassengerSlots Auto Const Mandatory
+  ActorValue Property SpaceshipRegistration Auto Const Mandatory
+  ActorValue Property SpaceshipShieldedCargo Auto Const Mandatory
+  ActorValue Property SpaceshipShieldedHealth Auto Const Mandatory
+  ActorValue Property SpaceshipThrustPerPower Auto Const Mandatory
+  ActorValue Property SpaceshipTopSpeed Auto Const Mandatory
+  ActorValue Property SpaceshipWeaponPowerGroup1 Auto Const Mandatory
+  ActorValue Property SpaceshipWeaponPowerGroup2 Auto Const Mandatory
+  ActorValue Property SpaceshipWeaponPowerGroup3 Auto Const Mandatory
 EndGroup
 
 Group QuestData
@@ -35,8 +58,17 @@ Group QuestData
   Perk Property AriaFullDiscountPerk Auto Const Mandatory
   Perk Property AriaStandardDiscountPerk Auto Const Mandatory
   ObjectReference Property ContractShipLandingMarker Auto Const Mandatory
-  Form Property ShipMarkerForm Auto Const Mandatory
   ReferenceAlias Property ShipMarker Auto Const
+EndGroup
+
+Group Globals
+  GlobalVariable Property MissionCompletedShipContract Auto Const Mandatory
+EndGroup
+
+Group Forms
+  Form Property AriaForm Auto Const Mandatory
+  Form Property WallForm Auto Const Mandatory
+  Form Property ShipMarkerForm Auto Const Mandatory
 EndGroup
 
 Group DialogueData
@@ -52,7 +84,6 @@ Group Factions
 EndGroup
 
 spaceshipreference[] Property BuilderDisabledShips Auto
-
 
 Bool Property AtlasWorkshopMode = False auto
 Astroneer:Pack:Mission[] Missions = None
@@ -78,9 +109,8 @@ Event OnMenuOpenCloseEvent(String menuName, Bool open)
   endif
 
   if menuName == "SpaceshipEditorMenu" && AtlasWorkshopMode && !open
-    Keyword CannotBeModified = Game.GetForm(0x003413f3) as Keyword
     ForEach spaceshipreference ship in BuilderDisabledShips
-      ship.RemoveKeyword(CannotBeModified)
+      ship.RemoveKeyword(CannotBeModifiedShipKeyword)
     EndForEach
     BuilderDisabledShips = new spaceshipreference[0]
 
@@ -97,23 +127,20 @@ EndEvent
 Function InitAria()
   Trace("InitAria")
   Cell spaceport = Game.GetForm(0x00014cb3) as Cell
-  Activator wallForm = Game.GetForm(0x00138911) as Activator
-  ActorBase ariaForm = Game.GetForm(0x02000835) as ActorBase
 
   if (spaceport != None)
     if (spaceport.IsLoaded() && !AriaWall.IsFilled())
       ObjectReference wall = Game.GetPlayer().PlaceAtMe(wallForm, 1, True, False, False, None, None, True)
-      ; TODO: Make this a marker
       wall.SetPosition(-805.00, 1572.85, -163.54)
       wall.SetAngle(0, 0, 0)
       Trace("Created wall and setting ref " + wall)
       AriaWall.ForceRefTo(wall)
     endif
 
-    Bool fillAria = !Aria.IsFilled() || Aria.GetActorReference().GetBaseObject() != ariaForm
+    Bool fillAria = !Aria.IsFilled() || Aria.GetActorReference().GetBaseObject() != AriaForm
 
     if (spaceport.IsLoaded() && fillAria)
-      Actor ariaRef = AriaWall.GetReference().PlaceActorAtMe(ariaForm, 1, None, True, False, False, None, True)
+      Actor ariaRef = AriaWall.GetReference().PlaceActorAtMe(AriaForm as ActorBase, 1, None, True, False, False, None, True)
       Trace("Created aria and setting ref " + ariaRef)
       Aria.ForceRefTo(ariaRef)
       ariaRef.MoveToFurniture(AriaWall.GetReference())
@@ -162,11 +189,6 @@ EndFunction
 
 Function AddMissions()
   Trace("Adding ship contract missions...")
-
-  ; FIXME: Bind these to the script
-  GlobalVariable MissionCompletedShipContract = Game.GetForm(0x02000802) as GlobalVariable
-  Keyword MissionTypeShipContract = Game.GetForm(0x02000803) as Keyword
-
   ForEach MissionParentScript:MissionType missionType in MB_Parent.MissionTypes
     if missionType.missionTypeKeyword == MissionTypeShipContract
       Trace("Mission Type already exists: " + missionType)
@@ -275,16 +297,13 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
     return ship.GetShipMaxCargoWeight()
 
   elseif (objectiveType == consts.ObjectivePassengerSlots)
-    ActorValue passengerSlotsAV = Game.GetForm(0x0001e7de) as ActorValue
-    return ship.GetValue(passengerSlotsAV)
+    return ship.GetValue(SpaceshipPassengerSlots)
 
   elseif (objectiveType == consts.ObjectiveEnginePower)
-    ActorValue engineAV = Game.GetForm(0x0000ACD9) as ActorValue
-    return Math.Round(1.0 / ship.GetValue(engineAV))
+    return Math.Round(1.0 / ship.GetValue(SpaceshipBuildableEnginePower))
 
   elseif (objectiveType == consts.ObjectiveFuel)
-    ActorValue fuelAV = Game.GetForm(0x0000854f) as ActorValue
-    return ship.GetBaseValue(fuelAV)
+    return ship.GetBaseValue(SpaceshipGravJumpFuel)
 
   elseif (objectiveType == consts.ObjectiveGravJumpRange)
     return ship.GetGravJumpRange()
@@ -293,86 +312,63 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
     return ship.GetExteriorRefs(SBShip_Hab).length
 
   elseif (objectiveType == consts.ObjectiveHull)
-    ActorValue hullAV = Game.GetForm(0x000002d4) as ActorValue
-    return ship.GetValue(hullAV)
+    return ship.GetValue(SpaceshipHealth)
 
   elseif (objectiveType == consts.ObjectiveMass)
     return ship.GetValue(SpaceshipMass)
 
   elseif (objectiveType == consts.ObjectiveReactorPower)
-    ActorValue reactorAV = Game.GetForm(0x00001018) as ActorValue
-    return ship.GetValue(reactorAV)
+    return ship.GetValue(SpaceshipMaxPower)
 
   elseif (objectiveType == consts.ObjectiveShieldedCargo)
-    ActorValue shieldedCargoAV = Game.GetForm(0x0002b344) as ActorValue
-    return ship.GetValue(shieldedCargoAV)
+    return ship.GetValue(SpaceshipShieldedCargo)
 
   elseif (objectiveType == consts.ObjectiveShieldHealth)
-    ActorValue shieldHealthAV = Game.GetForm(0x0005bfa8) as ActorValue
-    return ship.GetValue(shieldHealthAV)
+    return ship.GetValue(SpaceshipShieldedHealth)
 
   elseif (objectiveType == consts.ObjectiveShieldpower)
-    ActorValue shieldAV = Game.GetForm(0x0001ecce) as ActorValue
-    return Math.Round(1.0 / ship.GetValue(shieldAV))
+    return Math.Round(1.0 / ship.GetValue(SpaceshipBuildableShieldPower))
 
   elseif (objectiveType == consts.ObjectiveTopSpeed)
-    ActorValue speedAV = Game.GetForm(0x00278988) as ActorValue
-    return ship.GetValue(speedAV)
+    return ship.GetValue(SpaceshipTopSpeed)
 
   elseif (objectiveType == consts.ObjectiveTotalWeaponPower)
-    ActorValue wg1AV = Game.GetForm(0x00219625) as ActorValue
-    ActorValue wg2AV = Game.GetForm(0x00219624) as ActorValue
-    ActorValue wg3AV = Game.GetForm(0x00219623) as ActorValue
     ; TODO: fix divide by zero bug here
-    return Math.Round((1.0/ship.GetValue(wg1AV)) + (1.0/ship.GetValue(wg2AV)) + (1.0/ship.GetValue(wg3AV)))
+    return Math.Round((1.0/ship.GetValue(SpaceshipWeaponPowerGroup1)) + (1.0/ship.GetValue(SpaceshipWeaponPowerGroup2)) + (1.0/ship.GetValue(SpaceshipWeaponPowerGroup3)))
 
   elseif (objectiveType == consts.ObjectiveWeaponPowerBallistic)
-    Keyword WeaponTypeBallistic = Game.GetForm(0x00022269) as Keyword
-    return GetWeaponTypePower(ship, WeaponTypeBallistic)
+    return GetWeaponTypePower(ship, SpaceshipBallisticWeapon)
 
   elseif (objectiveType == consts.ObjectiveWeaponPowerContinuousBeam)
-    Keyword WeaponTypeContinuousBeam = Game.GetForm(0x00146b11) as Keyword
-    return GetWeaponTypePower(ship, WeaponTypeContinuousBeam)
+    return GetWeaponTypePower(ship, SpaceshipContinuousBeamWeapon)
 
   elseif (objectiveType == consts.ObjectiveWeaponPowerEM)
-    Keyword WeaponTypeEM = Game.GetForm(0x0002226b) as Keyword
-    return GetWeaponTypePower(ship, WeaponTypeEM)
+    return GetWeaponTypePower(ship, SpaceshipEMWeapon)
 
   elseif (objectiveType == consts.ObjectiveWeaponPowerEnergy)
-    Keyword WeaponTypeEnergy = Game.GetForm(0x0002226a) as Keyword
-    return GetWeaponTypePower(ship, WeaponTypeEnergy)
+    return GetWeaponTypePower(ship, SpaceshipEnergyWeapon)
 
   elseif (objectiveType == consts.ObjectiveWeaponPowerMissile)
-    Keyword WeaponTypeMissile = Game.GetForm(0x00155c6c) as Keyword
-    return GetWeaponTypePower(ship, WeaponTypeMissile)
+    return GetWeaponTypePower(ship, SpaceshipMissileWeapon)
 
   elseif (objectiveType == consts.ObjectiveWeaponPowerParticle)
-    Keyword WeaponTypeParticle = Game.GetForm(0x001557aa) as Keyword
-    return GetWeaponTypePower(ship, WeaponTypeParticle)
+    return GetWeaponTypePower(ship, SpaceshipParticleWeapon)
 
   elseif (objectiveType == consts.ObjectiveWeaponPowerPlasma)
-    Keyword WeaponTypePlasma = Game.GetForm(0x00146b38) as Keyword
-    return GetWeaponTypePower(ship, WeaponTypePlasma)
+    return GetWeaponTypePower(ship, SpaceshipPlasmaWeapon)
 
   elseif (objectiveType == consts.ObjectiveWindows)
-    Keyword SbShip_Window = Game.GetForm(0x00143b37) as Keyword
     return ship.GetExteriorRefs(SBShip_Window).length
 
   elseif (objectiveType == consts.ObjectiveThrust)
-    ActorValue Thrust = Game.GetForm(0x0000ACDC) as ActorValue
-    return ship.GetValue(Thrust)
+    return ship.GetValue(SpaceshipEngineThrust)
 
   elseif (objectiveType == consts.ObjectiveMobility)
-    ActorValue ManeuveringThrustAV = Game.GetForm(0x0000ACDE) as ActorValue
-    ActorValue ThrustAV = Game.GetForm(0x0000ACDC) as ActorValue
-    ActorValue ThrustPerPowerAV = Game.GetForm(0x000FC913) as ActorValue
-    ActorValue engineAV = Game.GetForm(0x0000ACD9) as ActorValue
-
-    Float enginePower = 1.0 / ship.GetValue(engineAV)
+    Float enginePower = 1.0 / ship.GetValue(SpaceshipBuildableEnginePower)
     Float mass = ship.GetValue(SpaceshipMass)
-    Float maneuveringThrust = ship.GetValue(ManeuveringThrustAV)
-    Float thrust = ship.GetValue(ThrustAV)
-    Float thrustPerPower = ship.GetValue(ThrustPerPowerAV)
+    Float maneuveringThrust = ship.GetValue(SpaceshipManeuveringThrust)
+    Float thrust = ship.GetValue(SpaceshipEngineThrust)
+    Float thrustPerPower = ship.GetValue(SpaceshipThrustPerPower)
     Float enginePowerPer = (thrustPerPower*enginePower) / thrust
     return Math.Clamp(Math.Round((11.9 * ((maneuveringThrust*enginePowerPer) / mass)) - 47.6), 0.0, 100.0)
 
@@ -434,20 +430,16 @@ Int Function GetNumHabsByType(spaceshipreference ship, FormList habType)
 EndFunction
 
 Float Function GetWeaponTypePower(spaceshipreference ship, Keyword type)
-  ActorValue wg1AV = Game.GetForm(0x00219625) as ActorValue
-  ActorValue wg2AV = Game.GetForm(0x00219624) as ActorValue
-  ActorValue wg3AV = Game.GetForm(0x00219623) as ActorValue
-
   Weapon group1 = ship.GetWeaponGroupBaseObject(ShipWeaponSystemGroup1Health)
   Weapon group2 = ship.GetWeaponGroupBaseObject(ShipWeaponSystemGroup2Health)
   Weapon group3 = ship.GetWeaponGroupBaseObject(ShipWeaponSystemGroup3Health)
 
   if group1 != None && group1.HasKeyword(type)
-    return 1.0 / ship.GetValue(wg1AV)
+    return 1.0 / ship.GetValue(SpaceshipWeaponPowerGroup1)
   elseif group2 != None && group2.HasKeyword(type)
-    return 1.0 / ship.GetValue(wg2AV)
+    return 1.0 / ship.GetValue(SpaceshipWeaponPowerGroup2)
   elseif group3 != None && group3.HasKeyword(type)
-    return 1.0 / ship.GetValue(wg3AV)
+    return 1.0 / ship.GetValue(SpaceshipWeaponPowerGroup3)
   else
     return 0
   endif
@@ -494,7 +486,6 @@ EndFunction
 
 Function ResetMissionBoard()
   Trace("ResetMissionBoard")
-  Keyword MissionTypeShipContract = Game.GetForm(0x02000803) as Keyword
   Int i = 0
   While i < AstroneerMBQuests.GetSize()
     Quest mission = AstroneerMBQuests.GetAt(i) as Quest

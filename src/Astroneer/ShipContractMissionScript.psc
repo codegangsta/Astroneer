@@ -118,6 +118,19 @@ Function ResetAliases()
   FillRef(Self.GetAlias(17) as ReferenceAlias, BlankMessage)
 EndFunction
 
+Function ResetGlobals()
+  ObjectiveValue_01.SetValue(0.0)
+  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_01)
+  ObjectiveValue_02.SetValue(0.0)
+  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_02)
+  ObjectiveValue_03.SetValue(0.0)
+  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_03)
+  ObjectiveValue_04.SetValue(0.0)
+  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_04)
+  ObjectiveValue_05.SetValue(0.0)
+  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_05)
+EndFunction
+
 Function StageReady()
   FillRef(Self.GetAlias(9) as ReferenceAlias, Mission.Text)
   FillRef(Self.GetAlias(10) as ReferenceAlias, Mission.Title)
@@ -135,17 +148,6 @@ EndFunction
 Function StageAccepted()
   Trace("StageAccepted")
   Self.SetObjectiveDisplayedAtTop(0)
-
-  ObjectiveValue_01.SetValue(0.0)
-  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_01)
-  ObjectiveValue_02.SetValue(0.0)
-  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_02)
-  ObjectiveValue_03.SetValue(0.0)
-  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_03)
-  ObjectiveValue_04.SetValue(0.0)
-  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_04)
-  ObjectiveValue_05.SetValue(0.0)
-  Self.UpdateCurrentInstanceGlobal(ObjectiveValue_05)
 
   Self.SetObjectiveDisplayed(ShipObjective_ReactorClass, True, False)
   if mission.Objective01 != None
@@ -194,6 +196,7 @@ Function StageCompleted()
   (Self.GetAlias(22) as ReferenceAlias).Clear()
   AstroneerParent.RemoveContractShip(Self.ContractShip, True)
   Self.ContractShip = None
+  ResetGlobals()
 EndFunction
 
 Function StageFailed()
@@ -209,6 +212,7 @@ Function StageFailed()
   (Self.GetAlias(22) as ReferenceAlias).Clear()
   AstroneerParent.RemoveContractShip(Self.ContractShip, False)
   Self.ContractShip = None
+  ResetGlobals()
 EndFunction
 
 Function StageTurnIn()
@@ -351,9 +355,9 @@ Function UpdateObjectiveValue(GlobalVariable value, Message objectiveType, Int o
     value.SetValue(0) ;set to 0 since we are using mod
     Trace("Updating objective " + objectiveType + " to " + val)
     if objectiveType == consts.ObjectiveMass
-      ModObjectiveGlobal(val, value, objective, target, False, True, True, True)
+      ModObjectiveGlobal(val, value, objective, target, False, True, False, True)
     else
-      ModObjectiveGlobal(val, value, objective, target, True, True, True, True)
+      ModObjectiveGlobal(val, value, objective, target, True, True, False, True)
     endif
   endif
 EndFunction

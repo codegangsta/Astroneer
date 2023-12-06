@@ -13,7 +13,6 @@ Function ModifyContractShip(ObjectReference speaker)
   Astroneer:ShipContractMissionScript mission = GetMission()
 
   RefCollectionAlias ships = pq.PlayerShipQuest.PlayerShips
-  Keyword CannotBeModified = Game.GetForm(0x003413f3) as Keyword
   pq.AtlasWorkshopMode = True
 
   if pq.BuilderDisabledShips == None
@@ -23,8 +22,8 @@ Function ModifyContractShip(ObjectReference speaker)
   Int i = 0
   While i < ships.GetCount()
     spaceshipreference ship = ships.GetAt(i) as spaceshipreference
-    if ship != mission.ContractShip && ship.HasKeyword(CannotBeModified) == False
-      ship.AddKeyword(CannotBeModified)
+    if ship != mission.ContractShip && ship.HasKeyword(pq.CannotBeModifiedShipKeyword) == False
+      ship.AddKeyword(pq.CannotBeModifiedShipKeyword)
       pq.BuilderDisabledShips.Add(ship)
     endif
     i += 1

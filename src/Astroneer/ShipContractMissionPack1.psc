@@ -14,7 +14,7 @@ Message Function GetRandomHabObjectiveExclude(FormList objectives, Message exclu
   endforeach
 
   int index = Utility.RandomInt(0, filtered.Length - 1)
-  return filtered[index] as Message
+  return filtered[index]
 EndFunction
 
 Message Function GetRandomMessage(Message[] messages, Message exclude) global
@@ -26,7 +26,7 @@ Message Function GetRandomMessage(Message[] messages, Message exclude) global
   endforeach
 
   int index = Utility.RandomInt(0, filtered.Length - 1)
-  return filtered[index] as Message
+  return filtered[index]
 EndFunction
 
 Astroneer:Pack:Mission[] Function Missions(Astroneer:Pack p) global
