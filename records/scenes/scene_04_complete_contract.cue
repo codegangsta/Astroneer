@@ -196,13 +196,12 @@ scene_04_complete_contract: {
 			}}).out
 		},
 		{
-			id:         "04_AriaClosing"
-			speaker:    #consts.Aria
-			startScene: "MAIN_topics"
-			script:     "Astroneer:Dialogue"
-			onBegin:    "CompleteContract"
-			flags:      #consts.TopicFlagsDoAllBeforeRepeating
-			infos:      (#SimpleInfos & {in: {
+			id:      "04_AriaClosing"
+			speaker: #consts.Aria
+			script:  "Astroneer:Dialogue"
+			onBegin: "CompleteContract"
+			flags:   #consts.TopicFlagsDoAllBeforeRepeating
+			infos:   (#SimpleInfos & {in: {
 				prefix: "04_AriaClosing"
 				flags:  #consts.InfoFlagsRandomNoLip
 				voice:  true

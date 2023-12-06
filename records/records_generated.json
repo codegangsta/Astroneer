@@ -2467,7 +2467,6 @@
                 {
                     "id": "04_AriaClosing",
                     "speaker": "AriaCollins",
-                    "startScene": "MAIN_topics",
                     "script": "Astroneer:Dialogue",
                     "onBegin": "CompleteContract",
                     "flags": "1",
