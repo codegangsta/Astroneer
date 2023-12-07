@@ -99,6 +99,7 @@ Event OnQuestInit()
   AddMissions()
   InitAria()
   AddPerks()
+  ((Self as ScriptObject) as Astroneer:ResearchProjects).RegisterEvents()
 EndEvent
 
 Event OnMenuOpenCloseEvent(String menuName, Bool open)
