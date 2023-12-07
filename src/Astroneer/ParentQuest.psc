@@ -37,7 +37,7 @@ Group ActorValues
   ActorValue Property SpaceshipPassengerSlots Auto Const Mandatory
   ActorValue Property SpaceshipRegistration Auto Const Mandatory
   ActorValue Property SpaceshipShieldedCargo Auto Const Mandatory
-  ActorValue Property SpaceshipShieldedHealth Auto Const Mandatory
+  ActorValue Property SpaceshipShieldHealth Auto Const Mandatory
   ActorValue Property SpaceshipThrustPerPower Auto Const Mandatory
   ActorValue Property SpaceshipTopSpeed Auto Const Mandatory
   ActorValue Property SpaceshipWeaponPowerGroup1 Auto Const Mandatory
@@ -324,7 +324,7 @@ Float Function GetObjectiveValue(spaceshipreference ship, Form objectiveType)
     return ship.GetValue(SpaceshipShieldedCargo)
 
   elseif (objectiveType == consts.ObjectiveShieldHealth)
-    return ship.GetValue(SpaceshipShieldedHealth)
+    return ship.GetValue(SpaceshipShieldHealth)
 
   elseif (objectiveType == consts.ObjectiveShieldpower)
     return Math.Round(1.0 / ship.GetValue(SpaceshipBuildableShieldPower))
