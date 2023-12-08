@@ -51,7 +51,13 @@ Group ShipPartsLists
   FormList Property ShipPartsTrident Auto Const Mandatory
 EndGroup
 
+Event OnQuestInit()
+  Trace("OnQuestInit")
+  RegisterEvents()
+EndEvent
+
 Function RegisterEvents()
+  Trace("RegisterEvents")
   Self.UnRegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerCompleteResearch")
   Self.RegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerCompleteResearch")
 EndFunction
