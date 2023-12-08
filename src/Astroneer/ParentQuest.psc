@@ -148,6 +148,11 @@ Function InitAria()
       ResetMissionBoard()
     endif
 
+    if(!spaceport.IsLoaded() && fillAria)
+      Trace("Forcing Arias to none")
+      Aria.ForceRefTo(None)
+    endif
+
     if (spaceport.IsLoaded() && !ShipMarker.isFilled())
       ResetLandingMarker()
     endif
