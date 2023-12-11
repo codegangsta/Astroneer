@@ -29,6 +29,37 @@ Save the file and start the game using sfse_loader.exe. (Or for GamePass follow 
 
 Note that this mod should work just fine with GamePass version as well, please just make sure to follow Plugin.txt Enabler instructions specific for the GamePass modding and ASIL. I only have Steam version so can't provide any support unless you get the Plugins.exe Enabler and ASI Loader to work on your installation, as I have no experience with GamePass version.
 
+
+## Common issues
+
+This mod is still in its infancy, and naturally there will be some bugs or conflicts with other mods that may crop up, here are some common issues and some ways to fix them:
+
+### Reactor Class Requirement not working properly
+If the reactor class is not being calculated properly, it is likely due to another mod that modifies the reactors in a certain way. Astroneer uses a Native Papyrus function to get the reactor class keyword, and if it doesn't return the proper keyword it is likey due to a mod changing it.
+
+To fix this issue, and still keep using all your mods, you can disable the reactor class requirement via the console command:
+
+```
+cgf "Astroneer.DisableReactorClass"
+```
+
+To enable it again, you can simply call:
+
+```
+cgf "Astroneer.DisableReactorClass"
+```
+
+### Aria not spawned/spawning in my ship.
+Aria should always be in New Atlantis, but if for some reason she isn't, you can try and force reset here location with the following command:
+
+```
+cgf "Astroneer.DebugResetAria"
+```
+
+### Hab Calculations not working properly
+Any mods that add new habs or completely replace existing habs may cause problems with detecting the type of hab that it is. To fix this, there must be a patch for your mod and Astroneer. Feel free to give a detailed report of the mods in use and I can investigate the feasibility of adding a patch.
+
+
 ## Credits
 
 - @codegangsta - Game design, scripting, narrative crafting
