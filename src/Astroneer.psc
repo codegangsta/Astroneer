@@ -4,8 +4,48 @@ Function DebugInit() global
   DebugTrace("=DebugInit==============================================")
 EndFunction
 
+Function PrintReactorClass() global
+  Astroneer:ParentQuest pq = Game.GetFormFromFile(33556493, "Astroneer.esm") as Astroneer:ParentQuest
+  Astroneer:ShipContractMissionScript mission = pq.AstroneerMBQuests.GetAt(0) as Astroneer:ShipContractMissionScript
+  Debug.Notification("Reactor Class " + mission.ContractShip.GetReactorClassKeyword())
+EndFunction
+
+Function EnableReactorClass() global
+  Astroneer:ParentQuest pq = Game.GetFormFromFile(33556493, "Astroneer.esm") as Astroneer:ParentQuest
+  pq.DisableReactorClass = False
+  Debug.Notification("Reactor Class Requirement Enabled")
+EndFunction
+
+Function DisableReactorClass() global
+  Astroneer:ParentQuest pq = Game.GetFormFromFile(33556493, "Astroneer.esm") as Astroneer:ParentQuest
+  pq.DisableReactorClass = True
+  Debug.Notification("Reactor Class Requirement Disabled")
+EndFunction
+
+Function DebugPlaceAria() global
+  Astroneer:ParentQuest pq = Game.GetFormFromFile(33556493, "Astroneer.esm") as Astroneer:ParentQuest
+  pq.PlaceAria()
+EndFunction
+
+Function DebugInitAria() global
+  Astroneer:ParentQuest pq = Game.GetFormFromFile(33556493, "Astroneer.esm") as Astroneer:ParentQuest
+  pq.InitAria()
+EndFunction
+
+Function DebugResetAria() global
+  Astroneer:ParentQuest pq = Game.GetFormFromFile(33556493, "Astroneer.esm") as Astroneer:ParentQuest
+  pq.DeleteAria()
+  pq.InitAria()
+  Debug.Notification("Aria Reset")
+EndFunction
+
+Function DebugDeleteAria() global
+  Astroneer:ParentQuest pq = Game.GetFormFromFile(33556493, "Astroneer.esm") as Astroneer:ParentQuest
+  pq.DeleteAria()
+EndFunction
+
 Function PrintCurrentShipObjectives() global
-  Astroneer:ParentQuest pq = Game.GetForm(0x0200080d) as Astroneer:ParentQuest
+  Astroneer:ParentQuest pq = Game.GetFormFromFile(33556493, "Astroneer.esm") as Astroneer:ParentQuest
   Astroneer:Pack consts = (pq as ScriptObject) as Astroneer:Pack
   spaceshipreference playerShip = Game.GetPlayerHomeSpaceShip()
 

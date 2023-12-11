@@ -69,6 +69,7 @@ Group Forms
   Form Property AriaForm Auto Const Mandatory
   Form Property WallForm Auto Const Mandatory
   Form Property ShipMarkerForm Auto Const Mandatory
+  ObjectReference Property AriaLocation Auto Mandatory
 EndGroup
 
 Group DialogueData
@@ -87,6 +88,7 @@ spaceshipreference[] Property BuilderDisabledShips Auto
 
 Bool Property AtlasWorkshopMode = False auto
 Astroneer:Pack:Mission[] Missions = None
+Bool Property DisableReactorClass = False Auto
 
 Event OnQuestInit()
   Trace("OnQuestInit")
@@ -124,13 +126,21 @@ Event ObjectReference.OnCellLoad(ObjectReference akRef)
   InitAria()
 EndEvent
 
+Function DeleteAria()
+  Trace("DeleteAria")
+  Aria.GetActorReference().Delete()
+  Aria.ForceRefTo(None)
+  AriaWall.GetReference().Delete()
+  AriaWall.ForceRefTo(None)
+EndFunction
+
 Function InitAria()
   Trace("InitAria")
   Cell spaceport = Game.GetForm(0x00014cb3) as Cell
 
   if (spaceport != None)
     if (spaceport.IsLoaded() && !AriaWall.IsFilled())
-      ObjectReference wall = Game.GetPlayer().PlaceAtMe(wallForm, 1, True, False, False, None, None, True)
+      ObjectReference wall = AriaLocation.PlaceAtMe(wallForm, 1, True, False, False, None, None, True)
       wall.SetPosition(-805.00, 1572.85, -163.54)
       wall.SetAngle(0, 0, 0)
       Trace("Created wall and setting ref " + wall)
@@ -169,8 +179,6 @@ Function PlaceAria()
   AriaWall.GetReference().SetPosition(-805.00, 1572.85, -163.54)
   AriaWall.GetReference().SetAngle(0, 0, 0)
   ariaRef.MoveToFurniture(AriaWall.GetReference())
-  ariaRef.AllowPCDialogue(true)
-  Trace("Voice type: " + ariaRef.GetVoiceType())
 EndFunction
 
 Event Actor.OnPlayerLoadGame(Actor akActor)

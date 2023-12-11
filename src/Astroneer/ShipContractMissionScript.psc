@@ -149,7 +149,10 @@ Function StageAccepted()
   Trace("StageAccepted")
   Self.SetObjectiveDisplayedAtTop(0)
 
-  Self.SetObjectiveDisplayed(ShipObjective_ReactorClass, True, False)
+  if UseReactorClass()
+    Self.SetObjectiveDisplayed(ShipObjective_ReactorClass, True, False)
+  endif
+
   if mission.Objective01 != None
     Self.SetObjectiveDisplayed(ShipObjective_01, True, False)
   endif
@@ -177,7 +180,9 @@ Function StageDesign()
 
   UpdateObjectiveValues()
 
-  Self.SetObjectiveDisplayed(ShipObjective_ReactorClass, True, False)
+  if UseReactorClass()
+    Self.SetObjectiveDisplayed(ShipObjective_ReactorClass, True, False)
+  endif
 
   Self.SetObjectiveCompleted(0, True)
 EndFunction
@@ -263,7 +268,7 @@ Function EnableShip(Bool withLanding)
   ; Block activation for the pilot seat
   (Self.GetAlias(22) as ReferenceAlias).GetReference().BlockActivation(True, True)
   ; Land the ship in New Atlantis and unlock it
-  ContractShip.SetLinkedRef(AstroneerParent.ShipMarker.GetReference(), AstroneerParent.PlayerShipQuest.LandingMarkerKeyword, False)
+  ContractShip.SetLinkedRef(AstroneerParent.ShipMarker.GetReference(), AstroneerParent.PlayerShipQuest.LandingMarkerKeyword, True)
   if(withLanding)
     ContractShip.EnableWithLandingNoWait()
   else
@@ -281,7 +286,7 @@ EndFunction
 Bool Function AllShipObjectivesComplete()
   Trace("ShipObjectivesComplete")
 
-  if(!IsObjectiveCompleted(ShipObjective_ReactorClass))
+  if(UseReactorClass() && !IsObjectiveCompleted(ShipObjective_ReactorClass))
     return False
   endif
 
@@ -329,13 +334,15 @@ Function UpdateObjectiveValues()
   AstroneerParent.SetAllPartPowers(ContractShip, 0)
   AstroneerParent.SetAllPartPowers(ContractShip, 1)
 
-  if ContractShip.GetReactorClassKeyword() == GetObjectiveReactorClass()
-    if !IsObjectiveCompleted(ShipObjective_ReactorClass)
-      SetObjectiveCompleted(ShipObjective_ReactorClass, True)
-    endif
-  else
-    if IsObjectiveCompleted(ShipObjective_ReactorClass)
-      SetObjectiveCompleted(ShipObjective_ReactorClass, False)
+  if UseReactorClass()
+    if ContractShip.GetReactorClassKeyword() == GetObjectiveReactorClass()
+      if !IsObjectiveCompleted(ShipObjective_ReactorClass)
+        SetObjectiveCompleted(ShipObjective_ReactorClass, True)
+      endif
+    else
+      if IsObjectiveCompleted(ShipObjective_ReactorClass)
+        SetObjectiveCompleted(ShipObjective_ReactorClass, False)
+      endif
     endif
   endif
 
@@ -416,6 +423,10 @@ Int Function GetShipType()
   elseif(Mission.ShipType == consts.ShipTypeLuxury)
     return 4
   endif
+EndFunction
+
+Bool Function UseReactorClass()
+  return !AstroneerParent.DisableReactorClass
 EndFunction
 
 Function Trace(string message)
